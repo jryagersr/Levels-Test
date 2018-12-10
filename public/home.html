@@ -11,7 +11,7 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
         crossorigin="anonymous">
-    <link href="/assets/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="/static/assets/css/main.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -30,33 +30,39 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/">Levels</a>
                 </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact</a>
+                    </li>
             </ul>
         </div>
     </nav>
 
     <div class="container text-center">
         <br>
-        <h2>Select your state below to see lakes in your area!</h2>
+        <h2>Select a lake below to see it's level:</h2>
+        <p>Don't see the lake you want? Make a request for us to add it <a href="/contact">here</a>.</p>
         <hr>
         <div class="row">
-            <div class="col">
-                <button class="btn" id="refresh">Refresh Data</button>
+            <div class="col-sm-12 col-md-6">
+                <h1>Kerr Lake</h1>
+                <a href="/lakes/kerr"><img class="img-fluid" src="/static/assets/img/kerr-lake.jpg"></a>
+                <br>
             </div>
-            <div class="col">
-                <div class="dropdown">
-                    <a class="btn btn-secondary btn-success dropdown-toggle" href="#" role="button" id="dropdownStates"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Select your state
-                    </a>
-
-                    <div class="dropdown-menu" id="allStates" aria-labelledby="dropdownStates">
-                        <button class="dropdown-item" data-id="NC">North Carolina</button>
-                    </div>
-                </div>
+            <div class="col-sm-12 col-md-6">
+                <h1>Falls Lake</h1>
+                <a href="/lakes/falls"><img class="img-fluid" src="/static/assets/img/falls-lake.jpg"></a>
+                <br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <h1>Jordan Lake</h1>
+                <a href="/lakes/jordan"><img class="img-fluid" src="/static/assets/img/jordan-lake.jpg"></a>
+                <br>
             </div>
         </div>
 
-        <div id="allLakes" class="container"></div>
+        <!-- <div id="allLakes" class="container"></div> -->
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="

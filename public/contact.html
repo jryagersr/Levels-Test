@@ -11,7 +11,7 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
         crossorigin="anonymous">
-    <link href="/static/assets/css/main.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/static/assets/css/contact.css" type="text/css">
 </head>
 
 <body>
@@ -30,25 +30,39 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/">Levels</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact</a>
+                </li>
             </ul>
         </div>
     </nav>
 
     <div class="container text-center">
         <br>
-        <h2>Select your state below to see lakes in your area!</h2>
+        <h2>Thanks for visiting BassSavvy</h2>
+        <p>Please use the contact form below to make requests or provide us feedback. We're actively working to build
+            BassSavvy into the best it can be and would love to hear your feedback!</p>
         <hr>
-        <div class="dropdown">
-            <a class="btn btn-secondary btn-success dropdown-toggle" href="#" role="button" id="dropdownStates"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Select your state
-            </a>
+        <br>
 
-            <div class="dropdown-menu" aria-labelledby="dropdownStates">
-                <a class="dropdown-item" data-id="NC">North Carolina</a>
+        <form action="https://formspree.io/joshmyager@gmail.com" method="POST">
+            <div class="form-group">
+                <label for="name"><b>Full Name</b></label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="John Smith">
             </div>
-        </div>
-        <div id="allLakes" class="container"></div>
+            <div class="form-group">
+                <label for="exampleInputEmail1"><b>Email address</b></label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                name="email"placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+                    <label for="textBox"><b>What would you like us to know? (Put lake requests or feedback here)</b></label>
+                    <textarea class="form-control" id="textBox" rows="3" name="textBox"></textarea>
+                  </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -57,7 +71,7 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="/static/assets/js/states.js"></script>
+    <script type="text/javascript" src="/static/assets/js/main.js"></script>
 </body>
 
 </html>

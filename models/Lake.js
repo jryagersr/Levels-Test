@@ -11,6 +11,9 @@ module.exports = function (connection) {
       type: String,
       required: true
     },
+    usgsID: {
+      type: String
+    },
     current: {
       level: Number,
       date: String,
