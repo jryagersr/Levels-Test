@@ -1,9 +1,11 @@
 const mongoose = require("mongoose");
 var express = require("express"),
-    app = express(),
-    request = require("request"),
-    _ = require("underscore");
+  app = express(),
+  request = require("request"),
+  _ = require("underscore"),
+  fs = require('fs');
 
+var txData = [];
 
 // Require all models
 var db = require("../models")();
@@ -67,19 +69,19 @@ module.exports = function (app) {
       }
     });
 
-   // Function to pull data
-function getData(col, lakeName, indexes, newUrl, callback) {
-  var request = require("request");
-  var data = [];
+    // Function to pull data
+    function getData(col, lakeName, indexes, newUrl, callback) {
+      var request = require("request");
+      var data = [];
 
-  var options = {
-      url: newUrl
-  }
-  request(options, function (error, response, body) {
-      if (error) {
-          callback(error);
+      var options = {
+        url: newUrl
       }
-      _.each(body.split("\r\n"), function (line) {
+      request(options, function (error, response, body) {
+        if (error) {
+          callback(error);
+        }
+        _.each(body.split("\r\n"), function (line) {
           // Split the text body into readable lines
           var splitLine;
           line = line.trim();
@@ -87,24 +89,54 @@ function getData(col, lakeName, indexes, newUrl, callback) {
           // Check to see if this is a data line
           // Column length and first two characters must match
           if (splitLine.length === col && !isNaN(parseInt(line.substring(0, 2)))) {
-              // Loop through each cell and check for missing data
-              for (var i = 0; i < splitLine.length; i++) {
-                  if(splitLine[i].substring(0,1) === "?" || splitLine[i] == -99) {
-                      splitLine[i] = "N/A";
-                  }
+            // Loop through each cell and check for missing data
+            for (var i = 0; i < splitLine.length; i++) {
+              if (splitLine[i].substring(0, 1) === "?" || splitLine[i] == -99) {
+                splitLine[i] = "N/A";
               }
-              // Formulate the date to remove Month
-              let cleanDate = splitLine[indexes[0]].substring(0,2) + " " + splitLine[indexes[0]].substring(2,5);
-              // Push each line into data object
-              data.push(splitLine[indexes[3]]);
+            }
+            // Formulate the date to remove Month
+            let cleanDate = splitLine[indexes[0]].substring(0, 2) + " " + splitLine[indexes[0]].substring(2, 5);
+            // Push each line into data object
+            data.push(splitLine[indexes[3]]);
           }
+        });
+        callback(null, data);
       });
-      callback(null, data);
-  });
-}
+    }
 
 
   });
+
+  app.get("/api/tournaments", function (request, response) {
+
+    var contents = fs.readFileSync('data/tournamentList.txt', 'ascii');
+
+    var indexes = [0, 1, 2, 3, 4]
+
+    _.each(contents.split("\n"), function (line) {
+      // Split the text body into readable lines
+      var splitLine;
+      line = line.trim();
+      splitLine = line.split(/[\t]+/);
+
+      // Push each line into txData object
+      txData.push({
+        organizer: splitLine[indexes[0]],
+        trail: splitLine[indexes[1]],
+        date: splitLine[indexes[2]],
+        lake: splitLine[indexes[3]],
+        ramp: splitLine[indexes[4]],
+        state: splitLine[indexes[5]],
+        txDetail: splitLine[indexes[6]],
+        results: splitLine[indexes[7]],
+      });
+    });
+
+      response.json(txData);
+    
+  });
+
 
   // API POST Requests
   // ---------------------------------------------------------------------------
