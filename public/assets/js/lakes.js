@@ -1,3 +1,6 @@
+let lakePool = 0;
+
+
 
 // Function to capitalize first letter of string
 function capitalizeFirstLetter(string) {
@@ -40,18 +43,44 @@ function elevUSGS() {
             // Reverse the order of our data so most recent date is first
             dataValues.reverse();
             // Get current Date, Time and Elev
-            let currentElev = parseFloat(dataValues[0].value).toFixed(2);
+            var currentElev = dataValues[0].value;
             let splitTimeDate = dataValues[0].dateTime.split("T");
             let currentDate = splitTimeDate[0];
             let currentTime = splitTimeDate[1].substring(0, 5);
+            let currentDelta = (currentElev - lakePool).toFixed(2);
             // Set date, time and elev on page
             $("#currentTime").append(currentTime);
             $("#currentDate").append(currentDate);
             $("#currentLevel").append(currentElev);
+            $("#currentDelta").append(currentDelta);
+
+            // Find first time value that is at the top of the hour
+            switch (dataValues[0].dateTime.substring(14, 16)) {
+
+                case "00":
+                    var j = 0;
+                    break;
+
+                case "15":
+                    var j = 1;
+                    break;
+
+                case "30":
+                    var j = 2
+                    break;
+
+                case "45":
+                    var j = 3
+                    break;
+
+                default:
+                    alert("Lake name does not exists");
+            }
             // Create our increment and loop through each value
             // For each value create our associated table html
             let i = 0;
-            dataValues.forEach(function (element) {
+            for (j; j < dataValues.length; j += 4) {
+                let element = dataValues[j];
                 let elev = element.value;
                 let splitTimeDate = element.dateTime.split("T");
                 let date = splitTimeDate[0];
@@ -69,7 +98,7 @@ function elevUSGS() {
                 $("#lakeWell-" + i + 1).append("<td>" + elev + "</td>");
                 i++;
 
-            })
+            }
             flowUSGS();
         })
 }
@@ -87,8 +116,6 @@ function flowUSGS() {
             let dataValues = data.value.timeSeries[0].values[0].value
             // Reverse the order of our data so most recent date is first
             dataValues.reverse();
-            // Set current flow on page
-            $("#currentLevel").append(dataValues[0].value);
             // Create our increment and loop through the data
             // For each loop append the flow html into the table that already exists
             let i = 0;
@@ -153,14 +180,43 @@ function kerrElevFlow() {
             let splitTimeDate = dataValues[0].dateTime.split("T");
             let currentDate = splitTimeDate[0];
             let currentTime = splitTimeDate[1].substring(0, 5);
+            let currentDelta = (currentElev - lakePool).toFixed(2);
+
             // Set date, time and elev on page
             $("#currentTime").append(currentTime);
             $("#currentDate").append(currentDate);
             $("#currentLevel").append(currentElev);
+            $("#currentDelta").append(currentDelta);
+
+
+            // Find first time value that is at the top of the hour
+            switch (dataValues[0].dateTime.substring(14, 16)) {
+
+                case "00":
+                    var j = 0;
+                    break;
+
+                case "15":
+                    var j = 1;
+                    break;
+
+                case "30":
+                    var j = 2
+                    break;
+
+                case "45":
+                    var j = 3
+                    break;
+
+                default:
+                    alert("Lake name does not exists");
+            }
+
             // Create our increment and loop through each value
             // For each value create our associated table html
             let i = 0;
-            dataValues.forEach(function (element) {
+            for (j; j < dataValues.length; j += 4) {
+                let element = dataValues[j];
                 let elev = element.value;
                 let splitTimeDate = element.dateTime.split("T");
                 let date = splitTimeDate[0];
@@ -178,35 +234,34 @@ function kerrElevFlow() {
                 $("#lakeWell-" + i + 1).append("<td>" + time + "</td>");
                 $("#lakeWell-" + i + 1).append("<td>" + elev + "</td>");
                 i++;
-            })
+            }
             kerrFlowACE();
         })
 }
 
 
-function getData() {
-    if (elevUSGSCheck === "true") {
-        elevUSGS();
-    }
+// function getData() {
+//     if (elevUSGSCheck === "true") {
+//         elevUSGS();
+//     }
 
-    if (flowUSGSCheck === "true") {
-        flowUSGS();
-    }
+//     if (flowUSGSCheck === "true") {
+//         flowUSGS();
+//     }
 
-    if (flowACECheck === "true") {
-        kerrElevFlow();
-    }
+//     if (flowACECheck === "true") {
+//         kerrElevFlow();
+//     }
 
 
-    // if USGS elev is needed
-    // run elevUSGS()
-    // if USGS flow is needed
-    // run flowUSGS()
-    // if ACE flow is needed
-    // run ACE flow
-    // once all complete
-    // run display data
-};
+// if USGS elev is needed
+// run elevUSGS()
+// if USGS flow is needed
+// run flowUSGS()
+// if ACE flow is needed
+// run ACE flow
+// once all complete
+// run display data
 
 
 
@@ -215,17 +270,20 @@ function getData() {
 switch (lakeName) {
 
     case "kerr":
+        lakePool = 300;
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02079490&period=PT72H&parameterCd=62614&siteType=LK&siteStatus=all";
         kerrElevFlow();
         break;
 
     case "falls":
+        lakePool = 252;
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02087182&period=PT72H&parameterCd=00065&siteType=LK&siteStatus=all";
         flowURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02087183&period=PT72H&parameterCd=00060&siteType=ST&siteStatus=all";
         elevUSGS();
         break;
 
     case "jordan":
+        lakePool = 216.5;
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02098197&period=PT72H&parameterCd=62614&siteType=LK&siteStatus=all";
         flowURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02098206&period=PT72H&parameterCd=00060&siteType=ST&siteStatus=all";
         elevUSGS();
