@@ -1,7 +1,5 @@
 let lakePool = 0;
 
-
-
 // Function to capitalize first letter of string
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -152,9 +150,11 @@ function kerrFlowACE() {
     })
         .then(function (data) {
             console.log(data);
+            // Check if date matches 
+
             let i = 0;
             data.forEach(function (element) {
-                $("#lakeWell-" + i + 1).append("<td>" + element + "</td>");
+                $("#lakeWell-" + i + 1).append("<td>" + element.outflow + "</td>");
                 i++;
             })
         });

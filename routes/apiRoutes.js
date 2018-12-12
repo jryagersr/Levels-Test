@@ -98,7 +98,14 @@ module.exports = function (app) {
             // Formulate the date to remove Month
             let cleanDate = splitLine[indexes[0]].substring(0, 2) + " " + splitLine[indexes[0]].substring(2, 5);
             // Push each line into data object
-            data.push(splitLine[indexes[3]]);
+            data.push({
+              lakeName: lakeName,
+              date: cleanDate,
+              time: splitLine[indexes[1]],
+              inflow: splitLine[indexes[2]],
+              outflow: splitLine[indexes[3]],
+              level: splitLine[indexes[4]]
+          });
           }
         });
         callback(null, data);
