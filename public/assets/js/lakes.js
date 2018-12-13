@@ -33,7 +33,6 @@ function elevUSGS() {
             method: "GET",
         })
         .then(function (data) {
-            console.log(data);
             // Set lake title on page
             $("#lakeTitle").append(capitalizeFirstLetter(lakeName));
             // Parse the json data return to find the values we want
@@ -97,6 +96,7 @@ function elevUSGS() {
                 i++;
 
             }
+            if (flowURL !== "none")
             flowUSGS();
         })
 }
@@ -109,7 +109,6 @@ function flowUSGS() {
             method: "GET",
         })
         .then(function (data) {
-            console.log(data);
             // Parse through the json data to find the values we want
             let dataValues = data.value.timeSeries[0].values[0].value
             // Reverse the order of our data so most recent date is first
@@ -145,7 +144,7 @@ function flowUSGS() {
 // Function to make ACE flow data call
 function flowACE(dataTables) {
     $.ajax({
-            url: "/api/"+lakeName,
+            url: "/api/" + lakeName,
             method: "GET"
         })
         .then(function (data) {
@@ -192,10 +191,10 @@ function flowACE(dataTables) {
             //(only an issue when site down as time goes by midnight last day of month)
 
             for (j; j < dataTables.length; j += 4) {
-                data[i].time = data[i].time.substr(0,2).concat("00")
+                data[i].time = data[i].time.substr(0, 2).concat("00")
                 if (data[i].time === '2400') { // ACE represents midnight as 2400 of passing day, Jordan Lake on "0031"
                     aceTime = '0000' // USGS represents midnight as 0000 of next day (Dates are different)
-                } else aceTime = data[i].time.replace("31",'00');
+                } else aceTime = data[i].time.replace("31", '00');
 
                 usgsTime = dataTables[j].dateTime.substring(11, 16).replace(':', ''); // Pulls the USGS time from the line and removes the : (ACE does not have a colon)
 
@@ -229,7 +228,7 @@ function flowACE(dataTables) {
         });
 }
 
-// Function to make flow USGS call
+// Function to make elev ACE call
 function elevAce() {
     // API call for flow
     $.ajax({
@@ -237,6 +236,7 @@ function elevAce() {
             method: "GET",
         })
         .then(function (data) {
+            console.log(lakeName)
             // Set lake title on page
             $("#lakeTitle").append(capitalizeFirstLetter(lakeName));
             // Parse the json data return to find the values we want
@@ -356,10 +356,27 @@ switch (lakeName) {
         elevAce();
         break;
 
-    case "murray":
-        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02168500&period=PT96H&parameterCd=00060&siteType=LK&siteStatus=all";
+    //case "murray":
+      //  lakePool = 360.0;
+      //  elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02168500&period=PT96H&parameterCd=00062&siteType=ST&siteStatus=all";
+      //  flowURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02168504&period=PT96H&parameterCd=00060&siteType=ST&siteStatus=all";
+      //  elevUSGS();
+      //  break;
 
-        break;
+    //case "hartwell":
+      //  lakePool = 360.0;
+      //  elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02187010&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
+      //  flowURL = "none"
+      //  elevUSGS();
+      //  break;
+
+    //case "clarkshill":
+      //  lakePool = 330.0;
+      //  elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02193900&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
+      //  flowURL = "none"
+      //  elevUSGS();
+      //  break;
+
 
     default:
         alert("Lake name does not exists");
