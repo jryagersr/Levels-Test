@@ -103,6 +103,11 @@ $('#headerRow').on('click', 'th', function () {
 
 // Filter data Code Below
 
+$("#refreshBtn").on("click", function() {
+    currentBatch = txBatch;
+    displayData(currentBatch);
+})
+
 // Define generic filter function
 function filterData(batch, category, val, callback) {
     let filteredBatch = batch.filter(e => e[category] === val);
