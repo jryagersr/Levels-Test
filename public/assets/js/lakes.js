@@ -142,10 +142,10 @@ function flowUSGS() {
 // }
 
 
-// Function to make Kerr ACE call
-function kerrFlowACE(dataTables) {
+// Function to make ACE flow data call
+function flowACE(dataTables) {
     $.ajax({
-            url: "/api/kerr",
+            url: "/api/"+lakeName,
             method: "GET"
         })
         .then(function (data) {
@@ -177,12 +177,12 @@ function kerrFlowACE(dataTables) {
 
             let i = 0;
             let k = 0;
-            let aceTime = 0; // Time on current ACE line
-            let usgsTime = 0; // Time on current USGS line
+            let aceTime = '0000'; // Time on current ACE line
+            let usgsTime = '0'; // Time on current USGS line
 
             // Code readability, will be set to comparison of times in loop
             let timesAreNotEqual = false;
-            let aceTimeGreater = 0;
+            let aceTimeGreater = false;
             let monthsAreEqual = false;
             let dataIsLinedUpByDate = false;
 
@@ -190,10 +190,12 @@ function kerrFlowACE(dataTables) {
             // (don't care about month right now)
             // Can fix the month problem later 
             //(only an issue when site down as time goes by midnight last day of month)
+
             for (j; j < dataTables.length; j += 4) {
-                if (data[i].time === '2400') { // ACE represents midnight as 2400 of passing day
+                data[i].time = data[i].time.substr(0,2).concat("00")
+                if (data[i].time === '2400') { // ACE represents midnight as 2400 of passing day, Jordan Lake on "0031"
                     aceTime = '0000' // USGS represents midnight as 0000 of next day (Dates are different)
-                } else aceTime = data[i].time;
+                } else aceTime = data[i].time.replace("31",'00');
 
                 usgsTime = dataTables[j].dateTime.substring(11, 16).replace(':', ''); // Pulls the USGS time from the line and removes the : (ACE does not have a colon)
 
@@ -201,7 +203,6 @@ function kerrFlowACE(dataTables) {
                 timesAreNotEqual = dataTables[j].dateTime.substring(11, 16).replace(':', '') !== aceTime;
                 aceTimeGreater = parseInt(dataTables[j].dateTime.substring(11, 16).replace(':', ''), 10) < parseInt(aceTime, 10);
                 monthsAreEqual = (data[i].date.substring(0, 2) == dataTables[j].dateTime.substring(8, 10)) || aceTime == '0000';
-
                 let element = data[i]; // define element for template updates below.
 
                 if (monthsAreEqual || dataIsLinedUpByDate) {
@@ -229,7 +230,7 @@ function kerrFlowACE(dataTables) {
 }
 
 // Function to make flow USGS call
-function kerrElevFlow() {
+function elevAce() {
     // API call for flow
     $.ajax({
             url: elevURL,
@@ -302,7 +303,7 @@ function kerrElevFlow() {
                 $("#lakeWell-" + i + 1).append("<td>" + elev + "</td>");
                 i++;
             }
-            kerrFlowACE(dataValues);
+            flowACE(dataValues);
         })
 }
 
@@ -338,26 +339,25 @@ switch (lakeName) {
 
     case "kerr":
         lakePool = 300;
-        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02079490&period=PT72H&parameterCd=62614&siteType=LK&siteStatus=all";
-        kerrElevFlow();
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02079490&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
+        elevAce();
         break;
 
     case "falls":
         lakePool = 252;
-        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02087182&period=PT72H&parameterCd=00065&siteType=LK&siteStatus=all";
-        flowURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02087183&period=PT72H&parameterCd=00060&siteType=ST&siteStatus=all";
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02087182&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all";
+        flowURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02087183&period=PT96H&parameterCd=00060&siteType=ST&siteStatus=all";
         elevUSGS();
         break;
 
     case "jordan":
         lakePool = 216.5;
-        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02098197&period=PT72H&parameterCd=62614&siteType=LK&siteStatus=all";
-        flowURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02098206&period=PT72H&parameterCd=00060&siteType=ST&siteStatus=all";
-        elevUSGS();
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02098197&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
+        elevAce();
         break;
 
     case "murray":
-        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02168500&period=PT72H&parameterCd=00060&siteType=LK&siteStatus=all";
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02168500&period=PT96H&parameterCd=00060&siteType=LK&siteStatus=all";
 
         break;
 

@@ -115,6 +115,67 @@ module.exports = function (app) {
 
   });
 
+  // Route to retrieve ACE data for Jordan Lake
+  app.get("/api/jordan", function (request, response) {
+    var url = "http://epec.saw.usace.army.mil/dssjord.txt";
+    var indexes = [0, 1, 8, 9, 10]
+    getData(11, "Jordan", indexes, url, function (error, data) {
+      if (error) {
+        response.send(error);
+        return;
+      }
+      else {
+        response.json(data.reverse());
+      }
+    });
+
+    // Function to pull data
+    function getData(col, lakeName, indexes, newUrl, callback) {
+      var request = require("request");
+      var data = [];
+
+      var options = {
+        url: newUrl
+      }
+      request(options, function (error, response, body) {
+        if (error) {
+          callback(error);
+        }
+        _.each(body.split("\r\n"), function (line) {
+          // Split the text body into readable lines
+          var splitLine;
+          line = line.trim();
+          splitLine = line.split(/[ ]+/);
+          // Check to see if this is a data line
+          // Column length and first two characters must match
+          
+          if (splitLine.length === col && !isNaN(parseInt(line.substring(0, 2)))) {
+            // Loop through each cell and check for missing data
+            for (var i = 0; i < splitLine.length; i++) {
+              if (splitLine[i].substring(0, 1) === "?" || splitLine[i] == -99) {
+                splitLine[i] = "N/A";
+              }
+            }
+            // Formulate the date to remove Month
+            let cleanDate = splitLine[indexes[0]].substring(0, 2) + " " + splitLine[indexes[0]].substring(2, 5);
+            // Push each line into data object
+            data.push({
+              lakeName: lakeName,
+              date: cleanDate,
+              time: splitLine[indexes[1]],
+              inflow: splitLine[indexes[2]],
+              outflow: splitLine[indexes[3]],
+              level: splitLine[indexes[4]]
+          });
+          }
+        });
+        callback(null, data);
+      });
+    }
+
+
+  });
+
   app.get("/api/tournaments", function (request, response) {
 
     var contents = fs.readFileSync('data/tournamentList.txt', 'ascii');
