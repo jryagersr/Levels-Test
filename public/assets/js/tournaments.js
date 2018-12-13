@@ -1,4 +1,5 @@
 var txBatch = [];
+var currentBatch = [];
 let orgSort = false;
 let trailSort = false;
 let dateSort = false;
@@ -46,7 +47,8 @@ $.ajax({
     .then(function (data) {
         console.log(data);
         txBatch = data;
-        displayData(txBatch);
+        currentBatch = txBatch;
+        displayData(currentBatch);
     });
 
 
@@ -62,31 +64,31 @@ $('#headerRow').on('click', 'th', function () {
         // If case is org, then run the sort function and create a newBatch, then display using the newBath
         // Change our sort boolean to keep track of asc/desc
         case "organization":
-            var newBatch = txBatch.sort(sort_by('organizer', orgSort, function (a) { return a.toUpperCase() }));
+            var newBatch = currentBatch.sort(sort_by('organizer', orgSort, function (a) { return a.toUpperCase() }));
             displayData(newBatch);
             orgSort ^= true;
             break;
 
         case "trail":
-            var newBatch = txBatch.sort(sort_by('trail', trailSort, function (a) { return a.toUpperCase() }));
+            var newBatch = currentBatch.sort(sort_by('trail', trailSort, function (a) { return a.toUpperCase() }));
             displayData(newBatch);
             trailSort ^= true;
             break;
 
         case "date":
-            var newBatch = txBatch.sort(sort_by('date', dateSort, function (a) { return a.toUpperCase() }));
+            var newBatch = currentBatch.sort(sort_by('date', dateSort, function (a) { return a.toUpperCase() }));
             displayData(newBatch);
             dateSort ^= true;
             break;
 
         case "location":
-            var newBatch = txBatch.sort(sort_by('lake', locSort, function (a) { return a.toUpperCase() }));
+            var newBatch = currentBatch.sort(sort_by('lake', locSort, function (a) { return a.toUpperCase() }));
             displayData(newBatch);
             locSort ^= true;
             break;
 
         case "ramp":
-            var newBatch = txBatch.sort(sort_by('ramp', rampSort, function (a) { return a.toUpperCase() }));
+            var newBatch = currentBatch.sort(sort_by('ramp', rampSort, function (a) { return a.toUpperCase() }));
             displayData(newBatch);
             rampSort ^= true;
             break;
@@ -94,4 +96,64 @@ $('#headerRow').on('click', 'th', function () {
         default:
             alert("error");
     }
+});
+
+
+//========================================================================================
+
+// Filter data Code Below
+
+// Define generic filter function
+function filterData(batch, category, val, callback) {
+    let filteredBatch = batch.filter(e => e[category] === val);
+    callback(filteredBatch);
+}
+
+// Show or hide filter form
+$("#filterWrapper").hide();
+$("#filterBtn").on("click", function () {
+    $("#filterWrapper").toggle();
+})
+
+
+// Form submit capture
+$("#filterSubmit").on("click", function (e) {
+    e.preventDefault();
+    let orgSelect = $("#orgSelect").val();
+    let locSelect = $("#locSelect").val();
+    let trailSelect = $("#trailSelect").val();
+    let rampSelect = $("#rampSelect").val();
+    let filteredBatch = txBatch;
+
+    console.log(orgSelect);
+    console.log(locSelect);
+
+    // Run the necessary filter functions
+    if (orgSelect !== "Select Org") {
+        filterData(filteredBatch, "organizer", orgSelect, function (newFilteredBatch) {
+            filteredBatch = newFilteredBatch;
+        });
+    }
+
+    if (locSelect !== "Select Location") {
+        filterData(filteredBatch, "lake", locSelect, function (newFilteredBatch) {
+            filteredBatch = newFilteredBatch;
+        });
+    }
+
+    if (trailSelect !== "Select Trail") {
+        filterData(filteredBatch, "trail", trailSelect, function (newFilteredBatch) {
+            filteredBatch = newFilteredBatch;
+        });
+    }
+
+    if (rampSelect !== "Select Ramp") {
+        filterData(filteredBatch, "ramp", rampSelect, function (newFilteredBatch) {
+            filteredBatch = newFilteredBatch;
+        });
+    }
+
+    // Change our working batch holder and display the new filtered data;
+    currentBatch = filteredBatch;
+    displayData(filteredBatch);
 });

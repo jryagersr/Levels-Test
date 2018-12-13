@@ -150,8 +150,8 @@ function kerrFlowACE() {
     })
         .then(function (data) {
             console.log(data);
-            // Check if date matches 
-
+            // Check if date matches
+            
             let i = 0;
             data.forEach(function (element) {
                 $("#lakeWell-" + i + 1).append("<td>" + element.outflow + "</td>");
