@@ -46,6 +46,7 @@ CATT		Wateree			19-03/02		Wateree			Clearwater		SC	Qualifier 3
 CATT		Sparkleberry		19-03/03		Swamp			Packs			SC	Qualifier 4
 CATT		Old North		19-03/09		Kerr			Flemington		NC	Gold 1
 CATT		Yadkin			19-03/02		Badin			Alcoa			NC	Qualifier 2
+ABA		VA Area 8		19-03/02		Kerr			Nutbush			NC	T1
 PBC		Cashion			19-03/09		Falls			Ledge Rock		NC	Piedmont Bass Classic
 CATT		Wateree			19-03/09		Wateree			Clearwater		SC	Qualifier 4
 CATT		Wateree Open		19-03/09		Wateree			Clearwater		SC	Open 3
@@ -69,6 +70,7 @@ CATT		Wateree Open		19-03/23		Wateree			Clearwater		SC	Open 4
 CATT		East (NC)		19-03/23		Albemarle		Lighthouse Landing	NC	Gold 1
 CATT		James River		19-03/23		James Rvr		Riverfront		VA	Gold
 CATT		Cooper River		19-03/23		Cooper Rvr		Cypress Gardens		SC	Qualifier 3
+ABA		VA Area 8		19-03/23		Gaston			Holly Grove		NC	T2
 Collins 	BFCS			19-03/30		Jordan			Farrington		NC	Bass For Cash Series
 PBC		Spring Team		19-03/30		Harris			Crosspointe		NC	Piedmont Bass Classic
 CATT		Lake Wylie		19-03/30		Wylie			Buster Boyd		SC	Qualifier 3
@@ -131,6 +133,7 @@ CATT		Old North		19-05/18		Jordan			Farrington		NC	Gold 5
 CATT		Yadkin			19-05/18		High Rock		Tamarac			NC	Qualifier 5
 CATT		Waccamaw		19-05/18		Waccamaw Rvr		Bucksport		SC	Qualifier 1
 BFL		S Carolina		19-05/18		Wylie			Buster Boyds		SC	FLW
+ABA		VA Area 8		19-05/18		Kerr			Nutbush			NC	T3
 CATT		Yadkin			19-05/25		Tuckertown		Flat Rock		NC	Qualifier 6
 CATT		Norman			19-05/25		Norman			Pinnacle		NC	Qualifier 8
 CATT		Wateree Open		19-05/25		Wateree			Clearwater		SC	Open 9
@@ -154,6 +157,7 @@ CATT		Waccamaw		19-06/22		Waccamaw Rvr		G-CC Landing		SC	Qualifier 2
 BFL		Piedmont		19-06/22		High Rock		Tamarac			NC	FLW
 CATT		Old North		19-06/29		Jordan			Farrington		NC	Final
 BFL		Shenandoah		19-06/29		Smith Mountain		Parkway			VA	FLW
+ABA		VA Area 8		19-06/29		Gaston			Holly Grove		NC	T4
 CATT		Hickory			19-07/13		Hickory			Whittenburg		NC	Qualifier 6
 CATT		East (NC)		19-07/13		Albemarle		Lighthouse 		NC	Gold 5
 CATT		James River		19-07/13		James Rvr		Riverfront		VA	Gold
@@ -182,6 +186,7 @@ BFL		Shenandoah		19-09/14		James River		Osborne			VA	FLW
 CATT		East (NC)		19-09/21		Albemarle		Lighthouse		NC	Gold 7
 CATT		Wateree Open		19-09/28		Wateree			Clearwater		SC	Open 16
 BFL		S Carolina		19-09/28		Hartwell		Green Pond		SC	FLW
+ABA		VA Area 8		19-03/02		Kerr			Nutbush			NC	Final
 CATT		James River		19-10/05		James Rvr		Osborne			VA	Final 2-Day
 Anglers		Team Trail		19-10/12		Kerr			Occonneechee		VA	2-Day Classic
 CATT		Wateree Open		19-10/12		Wateree			Clearwater		SC	Open 17
