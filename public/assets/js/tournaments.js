@@ -124,6 +124,7 @@ $("#filterBtn").on("click", function () {
 // Form submit capture
 $("#filterSubmit").on("click", function (e) {
     e.preventDefault();
+    $("#filterWrapper").toggle();
     let orgSelect = $("#orgSelect").val();
     let locSelect = $("#locSelect").val();
     let trailSelect = $("#trailSelect").val();

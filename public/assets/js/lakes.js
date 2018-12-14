@@ -222,17 +222,8 @@ function flowACE(dataTables) {
                         dataIsLinedUpByDate = true;
                     }
                 }
-
                 i++; // Increment loop counter ACE data and LakeWell template
             }
-            console.log(data);
-            // Check if date matches
-            
-            let i = 0;
-            data.forEach(function (element) {
-                $("#lakeWell-" + i + 1).append("<td>" + element.outflow + "</td>");
-                i++;
-            })
         });
 }
 
@@ -364,26 +355,26 @@ switch (lakeName) {
         elevAce();
         break;
 
-    //case "murray":
-      //  lakePool = 360.0;
-      //  elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02168500&period=PT96H&parameterCd=00062&siteType=ST&siteStatus=all";
-      //  flowURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02168504&period=PT96H&parameterCd=00060&siteType=ST&siteStatus=all";
-      //  elevUSGS();
-      //  break;
+    case "murray":
+       lakePool = 360.0;
+       elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02168500&period=PT96H&parameterCd=00062&siteType=ST&siteStatus=all";
+       flowURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02168504&period=PT96H&parameterCd=00060&siteType=ST&siteStatus=all";
+       elevUSGS();
+       break;
 
-    //case "hartwell":
-      //  lakePool = 360.0;
-      //  elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02187010&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
-      //  flowURL = "none"
-      //  elevUSGS();
-      //  break;
+    case "hartwell":
+       lakePool = 360.0;
+       elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02187010&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
+       flowURL = "none"
+       elevUSGS();
+       break;
 
-    //case "clarkshill":
-      //  lakePool = 330.0;
-      //  elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02193900&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
-      //  flowURL = "none"
-      //  elevUSGS();
-      //  break;
+    case "clarkshill":
+       lakePool = 330.0;
+       elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02193900&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
+       flowURL = "none"
+       elevUSGS();
+       break;
 
 
     default:
