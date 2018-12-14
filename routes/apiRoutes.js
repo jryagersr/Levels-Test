@@ -106,6 +106,7 @@ module.exports = function (app) {
               outflow: splitLine[indexes[3]],
               level: splitLine[indexes[4]]
           });
+
           }
         });
         callback(null, data);
@@ -167,6 +168,7 @@ module.exports = function (app) {
               outflow: splitLine[indexes[3]],
               level: splitLine[indexes[4]]
           });
+
           }
         });
         callback(null, data);

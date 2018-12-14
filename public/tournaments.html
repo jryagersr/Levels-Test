@@ -41,8 +41,140 @@
         <h1>Tournaments</h1>
 
         <br>
+                <button class="btn btn-success" id="filterBtn">Filter</button>
+                <button class="btn" id="refreshBtn">Refresh</button>
+        <div id="filterWrapper">
+            <form>
+                <p class="text-left">Filter the table view:</p>
+                <div class="form-group">
+                    <select class="form-control col" id="orgSelect">
+                        <option>Select Org</option>
+                        <option>Anglers</option>
+                        <option>BFL</option>
+                        <option>CATT</option>
+                        <option>CBC</option>
+                        <option>Collins</option>
+                        <option>PBC</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="form-control col" id="locSelect">
+                        <option>Select Location</option>
+                        <option>Albemarle</option>
+                        <option>Badin</option>
+                        <option>Clarks Hill</option>
+                        <option>Cooper Rvr</option>
+                        <option>Cypress Landing </option>
+                        <option>Falls</option>
+                        <option>Gaston</option>
+                        <option>Harris</option>
+                        <option>Hartwell</option>
+                        <option>Hickory</option>
+                        <option>High Rock</option>
+                        <option>James</option>
+                        <option>James River</option>
+                        <option>James Rvr</option>
+                        <option>Jordan</option>
+                        <option>Kerr</option>
+                        <option>Murray</option>
+                        <option>Norman</option>
+                        <option>Potomac</option>
+                        <option>Roanoke</option>
+                        <option>Robinson</option>
+                        <option>Santee Cooper</option>
+                        <option>Savannah Rvr</option>
+                        <option>Smith Mountain</option>
+                        <option>Swamp</option>
+                        <option>TBD</option>
+                        <option>Tillery</option>
+                        <option>Tuckertown</option>
+                        <option>Waccamaw Rvr</option>
+                        <option>Wateree</option>
+                        <option>Wylie</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="form-control col" id="trailSelect">
+                        <option>Select Trail</option>
+                        <option>BFCS</option>
+                        <option>Cashion</option>
+                        <option>Clarks Hill</option>
+                        <option>Coastal (SC)</option>
+                        <option>Cooper River</option>
+                        <option>East (NC)</option>
+                        <option>Hickory</option>
+                        <option>James River</option>
+                        <option>Kerr Lake</option>
+                        <option>Lake Hartwell</option>
+                        <option>Lake Wylie</option>
+                        <option>NC</option>
+                        <option>NC/SC Championship</option>
+                        <option>Norman</option>
+                        <option>Old North</option>
+                        <option>Piedmont</option>
+                        <option>Robinson</option>
+                        <option>S Carolina</option>
+                        <option>Santee Cooper</option>
+                        <option>Savannah River</option>
+                        <option>SC</option>
+                        <option>Shenandoah</option>
+                        <option>Sparkleberry</option>
+                        <option>Spring Team</option>
+                        <option>Team Trail</option>
+                        <option>Waccamaw</option>
+                        <option>Wateree</option>
+                        <option>Wateree Open</option>
+                        <option>Yadkin</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="form-control col" id="rampSelect">
+                        <option>Select Ramp</option>
+                        <option>Alcoa</option>
+                        <option>Black Bear</option>
+                        <option>Broyles</option>
+                        <option>Bucksport</option>
+                        <option>Buster Boyd</option>
+                        <option>Clearwater</option>
+                        <option>Crosspointe</option>
+                        <option>Cypress Gardens</option>
+                        <option>Dreher Island</option>
+                        <option>Easterling</option>
+                        <option>Farrington</option>
+                        <option>Flat Rock</option>
+                        <option>Flemington</option>
+                        <option>G-CC Landing</option>
+                        <option>Green Pond</option>
+                        <option>Hardeeville</option>
+                        <option>John C Land</option>
+                        <option>Ledge Rock</option>
+                        <option>Lighthouse</option>
+                        <option>Lighthouse Landing</option>
+                        <option>Nutbush</option>
+                        <option>Occonneechee</option>
+                        <option>Osborne</option>
+                        <option>Packs</option>
+                        <option>Parkway</option>
+                        <option>Pembroke</option>
+                        <option>Pinnacle</option>
+                        <option>Pinnacle?</option>
+                        <option>Plymouth</option>
+                        <option>Roverfront</option>
+                        <option>Smallwood</option>
+                        <option>Stokes Bluff</option>
+                        <option>Summit</option>
+                        <option>Swift Island</option>
+                        <option>Tamarac</option>
+                        <option>TBD</option>
+                        <option>Whittenburg</option>
+                        <option>Wildwood</option>
+                    </select>
+                </div>
+                <button type="submit" class="col btn btn-success" id="filterSubmit">Filter</button>
+            </form>
+        </div>
 
-<p>* Click on a table header to sort</p>
+        <p>* Click on a table header to sort</p>
         <div class="table-responsive text-center">
             <table id="txTable" class="table table-fixed">
                 <thead class="sticky-top">

@@ -225,6 +225,14 @@ function flowACE(dataTables) {
 
                 i++; // Increment loop counter ACE data and LakeWell template
             }
+            console.log(data);
+            // Check if date matches
+            
+            let i = 0;
+            data.forEach(function (element) {
+                $("#lakeWell-" + i + 1).append("<td>" + element.outflow + "</td>");
+                i++;
+            })
         });
 }
 
