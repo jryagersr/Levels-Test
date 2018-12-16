@@ -28,11 +28,13 @@ let flowCheck = false;
 // Function to make elevation USGS call
 function elevUSGS() {
     // API call for flow
+    console.log("here", elevURL)
     $.ajax({
             url: elevURL,
             method: "GET",
         })
-        .then(function (data) {            console.log('data', data);
+        .then(function (data) {
+            console.log('USGS Elev Data', data);
             // Set lake title on page
             $("#lakeTitle").append(capitalizeFirstLetter(lakeName));
             // Parse the json data return to find the values we want
@@ -97,7 +99,7 @@ function elevUSGS() {
 
             }
             if (flowURL !== "none")
-            flowUSGS();
+                flowUSGS();
         })
 }
 
@@ -227,8 +229,8 @@ function flowACE(dataTables) {
             }
             console.log(data);
             // Check if date matches
-            
-            
+
+
         });
 }
 
@@ -381,6 +383,26 @@ switch (lakeName) {
         elevUSGS();
         break;
 
+    case "santee1":
+        lakePool = 79.0;
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02171000&period=PT96H&parameterCd=00062&siteType=ST&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+        case "santee2":
+        lakePool = 79.0;
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02172000&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "roanoke":
+        lakePool = 0.0;
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=0208114150&period=PT96H&parameterCd=00065&siteType=ST&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
 
     default:
         alert("Lake name does not exists");
