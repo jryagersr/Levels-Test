@@ -182,7 +182,8 @@ module.exports = function (app) {
 
     var contents = fs.readFileSync('data/tournamentList.txt', 'ascii');
 
-    var indexes = [0, 1, 2, 3, 4]
+    var indexes = [0, 1, 2, 3, 4, 5, 6, 7]
+    txData = [];
 
     _.each(contents.split("\n"), function (line) {
       // Split the text body into readable lines
