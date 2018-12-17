@@ -226,11 +226,12 @@ function flowACE(dataTables) {
                         dataIsLinedUpByDate = true;
                     }
                 }
-
                 i++; // Increment loop counter ACE data and LakeWell template
             }
+
             console.log(data);
             // Check if date matches
+
 
 
         });
@@ -381,6 +382,7 @@ switch (lakeName) {
         flowURL = "//waterservices.usgs.gov/nwis/iv/?format=json&sites=02168504&period=PT96H&parameterCd=00060&siteType=ST&siteStatus=all";
         elevUSGS();
         break;
+
 
     case "hartwell":
         bodyOfWaterName = "Lake Hartwell"
