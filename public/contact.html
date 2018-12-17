@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>BassSavvy Test</title>
+    <title>BassSavvy</title>
 
     <!-- Latest compiled and minified CSS -->
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -11,13 +11,14 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/assets/css/main.css" type="text/css">
     <link rel="stylesheet" href="/static/assets/css/contact.css" type="text/css">
 </head>
 
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-        <a class="navbar-brand" href="/">BassSavvy Test</a>
+        <a class="navbar-brand" href="/">Bass<span class="brand-savvy">Savvy</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -42,33 +43,36 @@
 
     <div class="container text-center">
         <br>
-        <h2>Thanks for visiting BassSavvy</h2>
+        <h2>Thanks for visiting Bass<span class="brand-savvy">Savvy</h2>
+        <br>
         <p>Please use the contact form below to make requests or provide us feedback. We're actively working to build
             BassSavvy into the best it can be and would love to hear your feedback!</p>
         <hr>
-        <br>
-        <br>
 
         <form action="https://formspree.io/joshmyager@gmail.com" method="POST">
             <div class="form-group">
-                <label for="name"><b>Full Name</b></label>
+                <label for="name"><h3><b>Full Name</b></h3></label>
                 <input type="text" class="form-control" id="name" name="name" placeholder="John Smith">
             </div>
+            <br>
             <div class="form-group">
-                <label for="exampleInputEmail1"><b>Email address</b></label>
+                <label for="exampleInputEmail1"><h3><b>Email address</b></h3></label>
                 <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email"
                     placeholder="Enter email">
                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
+            <br>
             <div class="form-group">
-                <label for="textBox"><b>What would you like us to know? (Put lake or tournament requests or feedback here)</b></label>
+                <label for="textBox"><h3><b>What would you like us to know?</b></h3> 
+                    <p>(Put lake, tournament requests, or feedback here)</p></label>
                 <textarea class="form-control" id="textBox" rows="3" name="textBox"></textarea>
             </div>
+            <br>
             <div class="form-group">
-                    <label for="text"><b>Where do you find that data now?</b></label>
+                    <label for="text"><h3><b>Where do you find that data now?</b></h3></label>
                     <input type="text" class="form-control" id="data" name="data" placeholder="www.website.com">
                 </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-success">Submit</button>
         </form>
         <br>
 
