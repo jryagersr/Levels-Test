@@ -191,8 +191,7 @@ module.exports = function (app) {
       var splitLine;
       line = line.trim();
       splitLine = line.split(/[\t]+/);
-      console.log("HEre in TX2")
-
+      
       // Push each line into txData object
       txData.push({
         organizer: splitLine[indexes[0]],
