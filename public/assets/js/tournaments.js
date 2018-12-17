@@ -5,6 +5,7 @@ let trailSort = false;
 let dateSort = false;
 let locSort = false;
 let rampSort = false;
+let stateSort = false;
 
 function displayData(data) {
     $("#txSection").empty();
@@ -30,8 +31,12 @@ function displayData(data) {
 // Function to sort data by asc/desc
 var sort_by = function (field, reverse, primer) {
     var key = primer ?
-        function (x) { return primer(x[field]) } :
-        function (x) { return x[field] };
+        function (x) {
+            return primer(x[field])
+        } :
+        function (x) {
+            return x[field]
+        };
     reverse = !reverse ? 1 : -1;
     return function (a, b) {
         return a = key(a), b = key(b), reverse * ((a > b) - (b > a));
@@ -39,11 +44,11 @@ var sort_by = function (field, reverse, primer) {
 }
 
 
-// API call for tx data
+// API call for tx data for Filtering Tournaments
 $.ajax({
-    url: "/api/tournaments",
-    method: "GET",
-})
+        url: "/api/tournaments",
+        method: "GET",
+    })
     .then(function (data) {
         console.log(data);
         txBatch = data;
@@ -57,40 +62,57 @@ $.ajax({
 $('#headerRow').on('click', 'th', function () {
     // Pull data value
     var headerSelect = $(this).attr("data-header");
-    console.log(headerSelect);
 
     switch (headerSelect) {
 
         // If case is org, then run the sort function and create a newBatch, then display using the newBath
         // Change our sort boolean to keep track of asc/desc
         case "organization":
-            var newBatch = currentBatch.sort(sort_by('organizer', orgSort, function (a) { return a.toUpperCase() }));
+            var newBatch = currentBatch.sort(sort_by('organizer', orgSort, function (a) {
+                return a.toUpperCase()
+            }));
             displayData(newBatch);
             orgSort ^= true;
             break;
 
         case "trail":
-            var newBatch = currentBatch.sort(sort_by('trail', trailSort, function (a) { return a.toUpperCase() }));
+            var newBatch = currentBatch.sort(sort_by('trail', trailSort, function (a) {
+                return a.toUpperCase()
+            }));
             displayData(newBatch);
             trailSort ^= true;
             break;
 
         case "date":
-            var newBatch = currentBatch.sort(sort_by('date', dateSort, function (a) { return a.toUpperCase() }));
+            var newBatch = currentBatch.sort(sort_by('date', dateSort, function (a) {
+                return a.toUpperCase()
+            }));
             displayData(newBatch);
             dateSort ^= true;
             break;
 
         case "location":
-            var newBatch = currentBatch.sort(sort_by('lake', locSort, function (a) { return a.toUpperCase() }));
+            var newBatch = currentBatch.sort(sort_by('lake', locSort, function (a) {
+                return a.toUpperCase()
+            }));
             displayData(newBatch);
             locSort ^= true;
             break;
 
         case "ramp":
-            var newBatch = currentBatch.sort(sort_by('ramp', rampSort, function (a) { return a.toUpperCase() }));
+            var newBatch = currentBatch.sort(sort_by('ramp', rampSort, function (a) {
+                return a.toUpperCase()
+            }));
             displayData(newBatch);
             rampSort ^= true;
+            break;
+
+        case "state":
+            var newBatch = currentBatch.sort(sort_by('state', stateSort, function (a) {
+                return a.toUpperCase()
+            }));
+            displayData(newBatch);
+            stateSort ^= true;
             break;
 
         default:
@@ -103,7 +125,7 @@ $('#headerRow').on('click', 'th', function () {
 
 // Filter data Code Below
 
-$("#refreshBtn").on("click", function() {
+$("#refreshBtn").on("click", function () {
     currentBatch = txBatch;
     displayData(currentBatch);
 })
@@ -131,9 +153,8 @@ $("#filterSubmit").on("click", function (e) {
     let rampSelect = $("#rampSelect").val();
     let filteredBatch = txBatch;
 
-    console.log(orgSelect);
-    console.log(locSelect);
-
+    console.log('orgSelect', orgSelect);
+    console.log('locSelect', locSelect);
     // Run the necessary filter functions
     if (orgSelect !== "Select Org") {
         filterData(filteredBatch, "organizer", orgSelect, function (newFilteredBatch) {
@@ -158,6 +179,13 @@ $("#filterSubmit").on("click", function (e) {
             filteredBatch = newFilteredBatch;
         });
     }
+  //  if (stateSelect !== "Select State") {
+    //    console.log('stateSelect', stateSelect);
+    //    filterData(filteredBatch, "state", stateSelect, function (newFilteredBatch) {
+    //        filteredBatch = newFilteredBatch;
+    //        console.log('State', filteredBatch);
+    //    });
+    //}
 
     // Change our working batch holder and display the new filtered data;
     currentBatch = filteredBatch;

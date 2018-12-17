@@ -178,17 +178,20 @@ module.exports = function (app) {
 
   });
 
+  // This reads the tournament file for the Tournaments Page
   app.get("/api/tournaments", function (request, response) {
 
     var contents = fs.readFileSync('data/tournamentList.txt', 'ascii');
 
-    var indexes = [0, 1, 2, 3, 4]
+    var indexes = [0, 1, 2, 3, 4, 5, 6, 7]
+    txData = [];
 
     _.each(contents.split("\n"), function (line) {
       // Split the text body into readable lines
       var splitLine;
       line = line.trim();
       splitLine = line.split(/[\t]+/);
+      console.log("HEre in TX2")
 
       // Push each line into txData object
       txData.push({

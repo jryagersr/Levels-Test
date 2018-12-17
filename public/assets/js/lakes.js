@@ -1,4 +1,5 @@
 let lakePool = 0;
+let bodyOfWaterName = '';
 
 // Function to capitalize first letter of string
 function capitalizeFirstLetter(string) {
@@ -33,8 +34,11 @@ function elevUSGS() {
             method: "GET",
         })
         .then(function (data) {
+            console.log('USGS Elev Data', data);
             // Set lake title on page
-            $("#lakeTitle").append(capitalizeFirstLetter(lakeName));
+            $("#lakeTitle").append(bodyOfWaterName);
+            $("#lakeSponsor").append(bodyOfWaterName );
+            $("#lakeFeaturedTournament").append(bodyOfWaterName );
             // Parse the json data return to find the values we want
             let dataValues = data.value.timeSeries[0].values[0].value
             // Reverse the order of our data so most recent date is first
@@ -97,7 +101,7 @@ function elevUSGS() {
 
             }
             if (flowURL !== "none")
-            flowUSGS();
+                flowUSGS();
         })
 }
 
@@ -224,6 +228,12 @@ function flowACE(dataTables) {
                 }
                 i++; // Increment loop counter ACE data and LakeWell template
             }
+
+            console.log(data);
+            // Check if date matches
+
+
+
         });
 }
 
@@ -237,7 +247,10 @@ function elevAce() {
         .then(function (data) {
             console.log(lakeName)
             // Set lake title on page
-            $("#lakeTitle").append(capitalizeFirstLetter(lakeName));
+            $("#lakeTitle").append(bodyOfWaterName);
+            $("#lakeSponsor20").append(bodyOfWaterName );
+
+            $("#lakeSponsor10").append(bodyOfWaterName );
             // Parse the json data return to find the values we want
             let dataValues = data.value.timeSeries[0].values[0].value
             // Reverse the order of our data so most recent date is first
@@ -330,52 +343,142 @@ function elevAce() {
 // once all complete
 // run display data
 
+// User clicked on Tournaments Button on Lake page
+// display tournaments filtered by lake
+$("#lakeTournaments").on("click", function (e) {console.log("Made it to function lakesTournament")})
 
 
 // Switch to set our api urls based on lake name
 // Run corresponding api calls
-switch (lakeName) {
 
+console.log('lakeName', lakeName);
+switch (lakeName) {
     case "kerr":
         lakePool = 300;
-        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02079490&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
+        bodyOfWaterName = "Kerr Lake"
+        elevURL = "//waterservices.usgs.gov/nwis/iv/?format=json&sites=02079490&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
         elevAce();
         break;
 
     case "falls":
+        bodyOfWaterName = "Falls Lake"
         lakePool = 252;
-        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02087182&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all";
-        flowURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02087183&period=PT96H&parameterCd=00060&siteType=ST&siteStatus=all";
+        elevURL = "//waterservices.usgs.gov/nwis/iv/?format=json&sites=02087182&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all";
+        flowURL = "//waterservices.usgs.gov/nwis/iv/?format=json&sites=02087183&period=PT96H&parameterCd=00060&siteType=ST&siteStatus=all";
         elevUSGS();
         break;
 
     case "jordan":
+        bodyOfWaterName = "Jordan Lake"
         lakePool = 216.5;
-        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02098197&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
+        elevURL = "//waterservices.usgs.gov/nwis/iv/?format=json&sites=02098197&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
         elevAce();
         break;
 
     case "murray":
-       lakePool = 360.0;
-       elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02168500&period=PT96H&parameterCd=00062&siteType=ST&siteStatus=all";
-       flowURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02168504&period=PT96H&parameterCd=00060&siteType=ST&siteStatus=all";
-       elevUSGS();
-       break;
+        lakePool = 360.0;
+        bodyOfWaterName = "Lake Murray"
+        elevURL = "//waterservices.usgs.gov/nwis/iv/?format=json&sites=02168500&period=PT96H&parameterCd=00062&siteType=ST&siteStatus=all";
+        flowURL = "//waterservices.usgs.gov/nwis/iv/?format=json&sites=02168504&period=PT96H&parameterCd=00060&siteType=ST&siteStatus=all";
+        elevUSGS();
+        break;
+
 
     case "hartwell":
-       lakePool = 360.0;
-       elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02187010&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
-       flowURL = "none"
-       elevUSGS();
-       break;
+        bodyOfWaterName = "Lake Hartwell"
+        lakePool = 660.0;
+        elevURL = "//waterservices.usgs.gov/nwis/iv/?format=json&sites=02187010&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
 
     case "clarkshill":
-       lakePool = 330.0;
-       elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02193900&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
-       flowURL = "none"
-       elevUSGS();
-       break;
+        lakePool = 330.0;
+        bodyOfWaterName = "Clarks Hill"
+        elevURL = "//waterservices.usgs.gov/nwis/iv/?format=json&sites=02193900&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
 
+    case "santee1":
+        lakePool = 79.0;
+        bodyOfWaterName = "Santee (Marion)"
+        elevURL = "//waterservices.usgs.gov/nwis/iv/?format=json&sites=02171000&period=PT96H&parameterCd=00062&siteType=ST&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "santee2":
+        bodyOfWaterName = "Santee (Moultrie)"
+        lakePool = 79.0;
+        elevURL = "//waterservices.usgs.gov/nwis/iv/?format=json&sites=02172000&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "roanoke":
+        lakePool = 0.0;
+        bodyOfWaterName = "Roanoke River"
+        elevURL = "//waterservices.usgs.gov/nwis/iv/?format=json&sites=0208114150&period=PT96H&parameterCd=00065&siteType=ST&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "james":
+        lakePool = 0.0;
+        bodyOfWaterName = "James River"
+        elevURL = "//waterservices.usgs.gov/nwis/iv/?format=json&sites=02042770&period=PT96H&parameterCd=62620&siteType=ST&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "potomac":
+        lakePool = 0.0;
+        bodyOfWaterName = "Potomac River (Alexandria)"
+        elevURL = "//waterservices.usgs.gov/nwis/iv/?format=json&sites=0165258890&period=PT96H&parameterCd=62620&siteType=ST&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "lanier":
+        lakePool = 1071.0;
+        bodyOfWaterName = "Lake Lanier"
+        elevURL = "//waterservices.usgs.gov/nwis/iv/?format=json&sites=02334400&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "westpoint":
+        lakePool = 635.0;
+        bodyOfWaterName = "West Point"
+        elevURL = "//waterservices.usgs.gov/nwis/iv/?format=json&sites=02339400&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "fork":
+        lakePool = 403.0;
+        bodyOfWaterName = "Lake Fork"
+        elevURL = "//waterservices.usgs.gov/nwis/iv/?format=json&sites=08018800&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "toledobend":
+        lakePool = 172.0;
+        bodyOfWaterName = "Toledo Bend"
+        elevURL = "//waterservices.usgs.gov/nwis/iv/?format=json&sites=08025350&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "rayburn":
+        lakePool = 164.4;
+        bodyOfWaterName = "Sam Rayburn"
+        elevURL = "//waterservices.usgs.gov/nwis/iv/?format=json&sites=08039300&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
 
     default:
         alert("Lake name does not exists");
