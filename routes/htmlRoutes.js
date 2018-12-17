@@ -26,8 +26,12 @@ module.exports = function(app) {
 
   app.get("/lakes/:lakeName", function(req, res) {
     let lakeName = req.params.lakeName;
-    res.sendFile(path.join(__dirname, "../public/lakes.html"));
+    res.sendFile(path.join(__dirname, "../public/thisLake.html"));
   });
+
+  app.get("/lakes", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/lakes.html"));
+  })
 
   app.get("/tournaments", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/tournaments.html"));
