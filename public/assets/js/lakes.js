@@ -247,7 +247,9 @@ function flowACE(dataTables) {
 
                 aceIndex++; // Increment loop counter ACE data and LakeWell template
             }
+
             console.log(data);
+
 
 
         });
@@ -399,6 +401,7 @@ switch (lakeName) {
         flowURL = "//waterservices.usgs.gov/nwis/iv/?format=json&sites=02168504&period=PT96H&parameterCd=00060&siteType=ST&siteStatus=all";
         elevUSGS();
         break;
+
 
     case "hartwell":
         bodyOfWaterName = "Lake Hartwell"
