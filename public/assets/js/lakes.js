@@ -37,8 +37,8 @@ function elevUSGS() {
             console.log('USGS Elev Data', data);
             // Set lake title on page
             $("#lakeTitle").append(bodyOfWaterName);
-            $("#lakeSponsor").append(bodyOfWaterName );
-            $("#lakeFeaturedTournament").append(bodyOfWaterName );
+            $("#lakeSponsor").append(bodyOfWaterName);
+            $("#lakeFeaturedTournament").append(bodyOfWaterName);
             // Parse the json data return to find the values we want
             let dataValues = data.value.timeSeries[0].values[0].value
             // Reverse the order of our data so most recent date is first
@@ -158,79 +158,96 @@ function flowACE(dataTables) {
             switch (dataTables[0].dateTime.substring(14, 16)) {
 
                 case "00":
-                    var j = 0;
+                    var usgsIndex = 0;
                     break;
 
                 case "15":
-                    var j = 1;
+                    var usgsIndex = 1;
                     break;
 
                 case "30":
-                    var j = 2
+                    var usgsIndex = 2
                     break;
 
                 case "45":
-                    var j = 3
+                    var usgsIndex = 3
                     break;
 
                 default:
-                    alert("Lake name does not exists");
+                    alert("Lake name does not exists HeHeHeHe");
             }
 
-
-            let i = 0;
-            let k = 0;
+            let aceIndex = 0;
+            let lakewellIndex = 0;
             let aceTime = '0000'; // Time on current ACE line
             let usgsTime = '0'; // Time on current USGS line
 
             // Code readability, will be set to comparison of times in loop
             let timesAreNotEqual = false;
             let aceTimeGreater = false;
-            let monthsAreEqual = false;
-            let dataIsLinedUpByDate = false;
+            let daysAreEqual = false;
+            let dataIsLinedUpByTime = false;
 
             // Check to see if the first ACE flow data line is same time as USGS first line time and the same day 
             // (don't care about month right now)
             // Can fix the month problem later 
             //(only an issue when site down as time goes by midnight last day of month)
 
-            for (j; j < dataTables.length; j += 4) {
-                data[i].time = data[i].time.substr(0, 2).concat("00")
-                if (data[i].time === '2400') { // ACE represents midnight as 2400 of passing day, Jordan Lake on "0031"
+            for (usgsIndex; usgsIndex < dataTables.length; usgsIndex += 4) {
+                data[aceIndex].time = data[aceIndex].time.substr(0, 2).concat("00");
+                if (data[aceIndex].time === '2400') { // ACE represents midnight as 2400 of passing day, Jordan Lake on "0031"
                     aceTime = '0000' // USGS represents midnight as 0000 of next day (Dates are different)
-                } else aceTime = data[i].time.replace("31", '00');
+                } else aceTime = data[aceIndex].time.replace("31", '00');
 
-                usgsTime = dataTables[j].dateTime.substring(11, 16).replace(':', ''); // Pulls the USGS time from the line and removes the : (ACE does not have a colon)
+                usgsTime = dataTables[usgsIndex].dateTime.substring(11, 16).replace(':', ''); // Pulls the USGS time from the line and removes the : (ACE does not have a colon)
 
-                // Set Booleans for conditionals below, months have OR due to difference in representation of midnight
-                timesAreNotEqual = dataTables[j].dateTime.substring(11, 16).replace(':', '') !== aceTime;
-                aceTimeGreater = parseInt(dataTables[j].dateTime.substring(11, 16).replace(':', ''), 10) < parseInt(aceTime, 10);
-                monthsAreEqual = (data[i].date.substring(0, 2) == dataTables[j].dateTime.substring(8, 10)) || aceTime == '0000';
-                let element = data[i]; // define element for template updates below.
+                // Set Booleans for conditionals below, days have OR due to difference in representation of midnight
+                timesAreNotEqual = usgsTime !== aceTime;
+                aceTimeGreater = parseInt(dataTables[usgsIndex].dateTime.substring(11, 16).replace(':', ''), 10) < parseInt(aceTime, 10);
+                if (!daysAreEqual)
+                    daysAreEqual = (data[aceIndex].date.substring(0, 2) == dataTables[usgsIndex].dateTime.substring(8, 10)) || aceTime == '0000';
 
-                if (monthsAreEqual || dataIsLinedUpByDate) {
-                    if (timesAreNotEqual) {
-                        if (aceTimeGreater) { // is ACE Time newer than USGS (ACE has newer data?)
-                            j = j - 4; // Stay on current USGS line by decrementing loop counter
-                            k++; // Stay on current LakeWell Template line
-                        } else { // ACE Time is less than USGS Time (ACE site down)
+                // PLEASE LEAVE THIS SWITCH COMMENTED OUT, I'll need it to fix when the month changes.
+                //switch (data[aceIndex].date.substring(2, 6)) {
 
+                // If case is org, then run the sort function and create a newBatch, then display using the newBath
+                // Change our sort boolean to keep track of asc/desc
+                //    case "'DEC":
+                //        if (dataTables[usgsIndex].dateTime.substring(5, 7) == 12)
+                //            monthsAreEqual = true
+                //        break;
 
-                            $("#lakeWell-" + (i - k) + 1).append("<td>" + "N/A" + "</td>"); //Append N/A as the Flow Value to the row for the missing data
-                            i--; // Stay on current ACE line by decrementing index
-                            k--; //Move to next Lakewell Template line
+                // }
+
+                let element = data[aceIndex]; // define element for template updates below.
+
+                if (daysAreEqual && !timesAreNotEqual) {
+                    if (!timesAreNotEqual) {
+                        //if (aceTimeGreater) { // is ACE Time newer than USGS (ACE has newer data?)
+                        //    usgsIndex = usgsIndex - 4; // Stay on current USGS line by decrementing loop counter
+                        //} else { // ACE Time is less than USGS Time (ACE site down)
+
+                        //    console.log('lakewellIndex1', lakewellIndex);
+                        //    $("#lakeWell-" + (lakewellIndex) + 1).append("<td>" + "N/A1" + "</td>"); //Append N/A as the Flow Value to the row for the missing data
+                        //    lakewellIndex++; //Move to next Lakewell Template line
+                        // }
+                        //} else { // Times are equal, post data to Lakewell template
+                        $("#lakeWell-" + lakewellIndex + 1).append("<td>" + element.outflow + "</td>");
+                        lakewellIndex++;
+
+                        if (!timesAreNotEqual) {
+                            dataIsLinedUpByTime = true;
                         }
-                    } else { // Times are equal, post data to Lakewell template
-
-                        $("#lakeWell-" + (i - k) + 1).append("<td>" + element.outflow + "</td>");
-                        dataIsLinedUpByDate = true;
                     }
+                } else {
+                    $("#lakeWell-" + lakewellIndex + 1).append("<td>" + "N/A" + "</td>"); //Append N/A as the Flow Value to the row for the missing data
+                    lakewellIndex++;
+                    aceIndex--;
                 }
 
-                i++; // Increment loop counter ACE data and LakeWell template
+                aceIndex++; // Increment loop counter ACE data and LakeWell template
             }
             console.log(data);
-            // Check if date matches
 
 
         });
@@ -247,9 +264,8 @@ function elevAce() {
             console.log(lakeName)
             // Set lake title on page
             $("#lakeTitle").append(bodyOfWaterName);
-            $("#lakeSponsor20").append(bodyOfWaterName );
-
-            $("#lakeSponsor10").append(bodyOfWaterName );
+            $("#lakeSponsor").append(bodyOfWaterName);
+            $("#lakeFeaturedTournament").append(bodyOfWaterName);
             // Parse the json data return to find the values we want
             let dataValues = data.value.timeSeries[0].values[0].value
             // Reverse the order of our data so most recent date is first
@@ -344,7 +360,9 @@ function elevAce() {
 
 // User clicked on Tournaments Button on Lake page
 // display tournaments filtered by lake
-$("#lakeTournaments").on("click", function (e) {console.log("Made it to function lakesTournament")})
+$("#lakeTournaments").on("click", function (e) {
+    console.log("Made it to function lakesTournament")
+})
 
 
 // Switch to set our api urls based on lake name
