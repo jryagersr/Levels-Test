@@ -37,6 +37,8 @@ function elevUSGS() {
             console.log('USGS Elev Data', data);
             // Set lake title on page
             $("#lakeTitle").append(bodyOfWaterName);
+            $("#lakeSponsor").append(bodyOfWaterName );
+            $("#lakeFeaturedTournament").append(bodyOfWaterName );
             // Parse the json data return to find the values we want
             let dataValues = data.value.timeSeries[0].values[0].value
             // Reverse the order of our data so most recent date is first
@@ -244,7 +246,10 @@ function elevAce() {
         .then(function (data) {
             console.log(lakeName)
             // Set lake title on page
-            $("#lakeTitle").append(capitalizeFirstLetter(lakeName));
+            $("#lakeTitle").append(bodyOfWaterName);
+            $("#lakeSponsor20").append(bodyOfWaterName );
+
+            $("#lakeSponsor10").append(bodyOfWaterName );
             // Parse the json data return to find the values we want
             let dataValues = data.value.timeSeries[0].values[0].value
             // Reverse the order of our data so most recent date is first
@@ -337,6 +342,9 @@ function elevAce() {
 // once all complete
 // run display data
 
+// User clicked on Tournaments Button on Lake page
+// display tournaments filtered by lake
+$("#lakeTournaments").on("click", function (e) {console.log("Made it to function lakesTournament")})
 
 
 // Switch to set our api urls based on lake name

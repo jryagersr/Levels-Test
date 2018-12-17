@@ -44,7 +44,7 @@ var sort_by = function (field, reverse, primer) {
 }
 
 
-// API call for tx data
+// API call for tx data for Filtering Tournaments
 $.ajax({
         url: "/api/tournaments",
         method: "GET",
@@ -178,11 +178,13 @@ $("#filterSubmit").on("click", function (e) {
             filteredBatch = newFilteredBatch;
         });
     }
-    if (stateSelect !== "Select State") {
-        filterData(filteredBatch, "state", stateSelect, function (newFilteredBatch) {
-            filteredBatch = newFilteredBatch;
-        });
-    }
+  //  if (stateSelect !== "Select State") {
+    //    console.log('stateSelect', stateSelect);
+    //    filterData(filteredBatch, "state", stateSelect, function (newFilteredBatch) {
+    //        filteredBatch = newFilteredBatch;
+    //        console.log('State', filteredBatch);
+    //    });
+    //}
 
     // Change our working batch holder and display the new filtered data;
     currentBatch = filteredBatch;
