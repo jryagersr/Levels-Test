@@ -3,10 +3,11 @@
 }
 
 a {
-    color: inherit;
+    color: black;
 }
 
 h1 {
+    font-weight: bold;
     margin-top: 5px;
     margin-bottom: 2px;
 }
@@ -22,12 +23,6 @@ h2 {
 
 .active {
     color: green;
-}
-
-/* Image CSS */
-
-.lake-thumb {
-    margin: 0 0 10%;
 }
 
 
@@ -92,19 +87,34 @@ h2 {
 
 .lake-table a {
     margin-bottom: 0;
+    display: block;
+    text-decoration: none;
+}
+
+.lake-table a:hover {
+    color: black;
+}
+
+.lake-table h5 {
+    margin: 0;
 }
 
 
-/* Front Page Images w/ Banners */
-
-.img-home {
-    position: relative;
+/* Cards on Home Page */
+.card-home {
     margin-bottom: 20px;
+    box-shadow: 1px 1px 1px rgb(0,0,0,0.3);
 }
 
-.img-banner {
-    position: absolute;
-    width: 100%;
-    top: 45%;
-    background-color: rgba(255, 255, 255, 0.5);
+.card-home:hover {
+    box-shadow: none;
+}
+
+.card-link {
+    text-decoration: none;
+    color: black;
+}
+
+.card-link:hover {
+    color: black;
 }

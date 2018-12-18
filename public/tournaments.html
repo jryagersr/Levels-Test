@@ -2,7 +2,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>BassSavvy</title>
+    <title>BassSavvy - Tournaments</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
     <link href="static/assets/css/main.css" rel="stylesheet" type="text/css" />
@@ -46,6 +46,15 @@
         <div id="filterWrapper">
             <form>
                 <p class="text-left">Filter the table view:</p>
+                <div class="form-group">
+                        <select class="form-control col" id="stateSelect">
+                            <option>Select State</option>
+                            <option>GA</option>
+                            <option>NC</option>
+                            <option>SC</option>
+                            <option>VA</option>
+                        </select>
+                    </div>
                 <div class="form-group">
                     <select class="form-control col" id="orgSelect">
                         <option>Select Org</option>
@@ -167,17 +176,6 @@
                         <option>Wildwood</option>
                     </select>
                 </div>
-                <!-- <div class="form-group">
-                    <select class="form-control col" id="stateSelect">
-                        <option>Select State</option>
-                        <option>NC</option>
-                        <option>NC-SC</option>
-                        <option>NC-VA</option>
-                        <option>SC</option>
-                        <option>SC-GA</option>
-                        <option>SC-VA</option>
-                    </select>
-                </div> -->
                 <button type="submit" class="col btn btn-success" id="filterSubmit">Filter</button>
             </form>
         </div>

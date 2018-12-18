@@ -46,9 +46,9 @@ var sort_by = function (field, reverse, primer) {
 
 // API call for tx data for Filtering Tournaments
 $.ajax({
-        url: "/api/tournaments",
-        method: "GET",
-    })
+    url: "/api/tournaments",
+    method: "GET",
+})
     .then(function (data) {
         console.log(data);
         txBatch = data;
@@ -132,7 +132,11 @@ $("#refreshBtn").on("click", function () {
 
 // Define generic filter function
 function filterData(batch, category, val, callback) {
-    let filteredBatch = batch.filter(e => e[category] === val);
+    // let filteredBatch = batch.filter(e => e[category] === val);
+    console.log(category);
+    console.log(val);
+    console.log(batch[0].category);
+    let filteredBatch = batch.filter(e => e[category].indexOf(val) !== -1);
     callback(filteredBatch);
 }
 
@@ -151,10 +155,9 @@ $("#filterSubmit").on("click", function (e) {
     let locSelect = $("#locSelect").val();
     let trailSelect = $("#trailSelect").val();
     let rampSelect = $("#rampSelect").val();
+    let stateSelect = $("#stateSelect").val();
     let filteredBatch = txBatch;
 
-    console.log('orgSelect', orgSelect);
-    console.log('locSelect', locSelect);
     // Run the necessary filter functions
     if (orgSelect !== "Select Org") {
         filterData(filteredBatch, "organizer", orgSelect, function (newFilteredBatch) {
@@ -179,13 +182,14 @@ $("#filterSubmit").on("click", function (e) {
             filteredBatch = newFilteredBatch;
         });
     }
-  //  if (stateSelect !== "Select State") {
-    //    console.log('stateSelect', stateSelect);
-    //    filterData(filteredBatch, "state", stateSelect, function (newFilteredBatch) {
-    //        filteredBatch = newFilteredBatch;
-    //        console.log('State', filteredBatch);
-    //    });
-    //}
+
+    if (stateSelect !== "Select State") {
+        console.log('stateSelect', stateSelect);
+        filterData(filteredBatch, "state", stateSelect, function (newFilteredBatch) {
+            filteredBatch = newFilteredBatch;
+            console.log('State', filteredBatch);
+        });
+    }
 
     // Change our working batch holder and display the new filtered data;
     currentBatch = filteredBatch;
