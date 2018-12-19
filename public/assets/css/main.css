@@ -138,3 +138,9 @@ h2 {
 .card-link:hover {
     color: black;
 }
+
+/* @media screen and (max-width: 506px) {
+    .card-img-top {
+            background: url("/static/assets/img/lakes-widescreen.jpg") left top no-repeat;
+          }
+  } */
