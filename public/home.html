@@ -5,6 +5,17 @@
     <meta charset="UTF-8">
     <title>BassSavvy - Home</title>
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-77195420-4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-77195420-4');
+    </script>
+
+
     <!-- Latest compiled and minified CSS -->
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
@@ -17,7 +28,9 @@
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-        <a class="navbar-brand" href="/">Bass<span class="brand-savvy">Savvy</span></a>
+        <a class="navbar-brand" href="/">
+            <h2>Bass<span class="brand-savvy">Savvy</span></h2>
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -41,7 +54,7 @@
     </nav>
 
     <div class="container text-center">
-        <h1>Welcome to Bass<span class="brand-savvy">Savvy!</span></h1>
+        <h1 class="header-title">Welcome to Bass<span class="brand-savvy">Savvy!</span></h1>
         <hr>
 
         <!-- Cards -->
@@ -49,7 +62,7 @@
             <div class="col-md-6 col-sm-12">
                 <a class="card-link" href="/lakes">
                     <div class="card card-home">
-                        <img class="card-img-top" src="static/assets/img/kerr-lake.jpg" alt="Image for Lake Levels">
+                        <img class="card-img-top" src="static/assets/img/lakes.jpg" alt="Image for Lake Levels">
                         <div class="card-body">
                             <h4>Lake Levels</h2>
                         </div>
@@ -73,8 +86,8 @@
                     <div class="card card-home">
                         <img class="card-img-top" src="static/assets/img/contact.jpg" alt="Image for Contact Us">
                         <div class="card-body">
-                            <h4>Contact Us</h2>                       
-                         </div>
+                            <h4>Contact Us</h2>
+                        </div>
                     </div>
                 </a>
             </div>

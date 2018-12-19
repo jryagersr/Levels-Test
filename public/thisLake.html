@@ -5,8 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>BassSavvy</title>
-  <!-- Latest compiled and minified CSS -->
 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-77195420-4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-77195420-4');
+  </script>
+
+
+  <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
@@ -17,7 +28,9 @@
 <body>
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-    <a class="navbar-brand" href="/">Bass<span class="brand-savvy">Savvy</span></a>
+    <a class="navbar-brand" href="/">
+      <h2>Bass<span class="brand-savvy">Savvy</span></h2>
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
       aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -43,16 +56,18 @@
 
   <div class="container-fluid text-center">
     <br>
-    <p id="sponsoredLake" class=data-old> SPONSOR THE  <span class="active"><span class="lakeName" id="lakeSponsor"></span><span class=data-old> Page and get YOUR LOGO HERE! </span></span></p>
+    <p id="sponsoredLake" class=data-old> SPONSOR THE <span class="active"><span class="lakeName" id="lakeSponsor"></span><span
+          class=data-old> Page and get YOUR LOGO HERE! </span></span></p>
     <div class="current-wrapper">
-      <h1><span id="lakeTitle"></span></h1>
-      <br>
-      <h2><span id="currentLevel"></span> ft. <span class="delta">(<span class="delta" id="currentDelta"></span> ft.)</span></h2>
-      <p>as of <span id="currentDate"></span> at <span id="currentTime"></span></p>
+      <h1 class="header-title"><span id="lakeTitle"></span></h1>
+      <h1><span id="currentLevel"></span> ft.</h1>
+      <p class="current-subtext"><span class="delta">(<span class="delta" id="currentDelta"></span> ft.)</span></p>
+      <p class="current-subtext">as of <span id="currentDate"></span> at <span id="currentTime"></span></p>
     </div>
     <br>
-    <h3><span id="lakeTournaments" >Featured Tournament</h3>
-    <p id="sponsoredTx" class=data-old> GET YOUR <span class="active"><span class="lakeName" id="lakeFeaturedTournament"></span><span class=data-old> TOURNAMENT LISTED HERE! </span></span></p>
+    <!-- <h3><span id="lakeTournaments" >Featured Tournament</h3> -->
+    <p id="sponsoredTx" class=data-old> GET YOUR <span class="active"><span class="lakeName" id="lakeFeaturedTournament"></span><span
+          class=data-old> TOURNAMENT LISTED HERE! </span></span></p>
     <br>
     <table class="table thead-dark table-striped mx-auto">
       <thead>

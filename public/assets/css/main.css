@@ -1,15 +1,22 @@
 * {
     font-family: 'Roboto', sans-serif;
 }
+/* 
+hr {
+    height: 1px;
+    color: #28a745;
+    background-color: #28a745;
+    border: none;
+    } */
 
-a {
-    color: black;
-}
-
-h1 {
+.header-title {
     font-weight: bold;
     margin-top: 5px;
     margin-bottom: 2px;
+}
+
+.container {
+    padding-top: 10px;
 }
 
 h2 {
@@ -22,7 +29,7 @@ h2 {
 }
 
 .active {
-    color: green;
+    color: #28a745;
 }
 
 
@@ -46,7 +53,7 @@ h2 {
     font-size: 18px;
 }
 
-/* Page Styles */
+/* thisLake Styles */
 
 .lakeName {
     font-size: 24px;
@@ -66,6 +73,11 @@ h2 {
     width: 90%;
 }
 
+.current-subtext {
+    margin-bottom: 0px;
+
+}
+
 /* @media only screen and (max-width: 400px) {
     .current-wrapper {
       padding-top: 70px;
@@ -76,6 +88,14 @@ h2 {
 
 
 /* Lake Table */
+
+.lake-link {
+    color: black;
+}
+
+.lake-hr {
+    color: #28a745;
+}
 
 .lake-table {
     margin-bottom: 30px;

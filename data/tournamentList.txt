@@ -71,7 +71,7 @@ CATT		East (NC)		19-03/23		Albemarle		Lighthouse Landing	NC	Gold 1
 CATT		James River		19-03/23		James Rvr		Riverfront		VA	Gold
 CATT		Cooper River		19-03/23		Cooper Rvr		Cypress Gardens		SC	Qualifier 3
 ABA		VA Area 8		19-03/23		Gaston			Holly Grove		NC-VA	T2
-Collins	BFCS			19-03/20		Jordan			Farrington			NC	Bass For Cash Series
+Collins	BFCS			19-03/30		Jordan			Farrington			NC	Bass For Cash Series
 PBC		Spring Team		19-03/30		Harris			Crosspointe		NC	Piedmont Bass Classic
 CATT		Lake Wylie		19-03/30		Wylie			Buster Boyd		NC-SC	Qualifier 3
 CBC		SC			19-03/30		Murray			Dreher Island		SC	CBC NC
