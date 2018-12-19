@@ -18,6 +18,7 @@
         crossorigin="anonymous">
     <link href="static/assets/css/main.css" rel="stylesheet" type="text/css" />
     <link href="static/assets/css/data.css" rel="stylesheet" type="text/css" />
+    <link href="static/assets/css/tournament.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -55,10 +56,10 @@
 
         <br>
         <button class="btn btn-success" id="filterBtn">Filter</button>
-        <button class="btn" id="refreshBtn">Refresh</button>
         <div id="filterWrapper">
             <form>
-                <p class="text-left">Filter the table view:</p>
+                <br>
+                <p class="text-left">Select the parameters to filter:</p>
                 <div class="form-group">
                     <select class="form-control col" id="stateSelect">
                         <option>Select State</option>
@@ -189,7 +190,12 @@
                         <option>Wildwood</option>
                     </select>
                 </div>
-                <button type="submit" class="col btn btn-success" id="filterSubmit">Filter</button>
+                <div class="form-group">
+                        <button type="submit" class="col btn btn-success" id="filterSubmit">Filter</button>
+                </div>
+                <div class="form-group">
+                        <button type="submit" class="col btn btn-outline-success" id="clearSubmit">Clear</button>
+                </div>
             </form>
         </div>
 

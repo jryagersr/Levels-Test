@@ -1,0 +1,19 @@
+.parameter-well {
+    width: 90%;
+    height: auto;
+    border: 1px solid #28a745;
+    margin: 0px auto 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.parameter {
+    font-size: 16px;
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px;
+}
