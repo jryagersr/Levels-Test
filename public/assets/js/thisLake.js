@@ -75,7 +75,9 @@ function elevUSGS() {
                     break;
 
                 default:
-                    alert("Lake name does not exists");
+                    if (lakeName == "Jordan" || lakeName == "Kerr") {
+                        alert("Check USGS Elev Time");
+                    } else j = 0;
             }
             // Create our increment and loop through each value
             // For each value create our associated table html
@@ -174,7 +176,10 @@ function flowACE(dataTables) {
                     break;
 
                 default:
-                    alert("Lake name does not exists HeHeHeHe");
+                    if (lakeName == "Jordan" || lakeName == "Kerr") {
+                        alert("Check ACE Flow Time");
+                    } else j = 0;
+
             }
 
             let aceIndex = 0;
@@ -239,7 +244,7 @@ function flowACE(dataTables) {
                             dataIsLinedUpByTime = true;
                         }
                     }
-                } else {
+                } else if (!aceTimeGreater){
                     $("#lakeWell-" + lakewellIndex + 1).append("<td>" + "N/A" + "</td>"); //Append N/A as the Flow Value to the row for the missing data
                     lakewellIndex++;
                     aceIndex--;
@@ -306,7 +311,9 @@ function elevAce() {
                     break;
 
                 default:
-                    alert("Lake name does not exists");
+                    if (lakeName == "Jordan" || lakeName == "Kerr") {
+                        alert("Check Ace Elev Time ")
+                    } else j = 0;
             }
 
             // Create our increment and loop through each value
@@ -499,6 +506,22 @@ switch (lakeName) {
         elevUSGS();
         break;
 
+    case "monroe":
+        lakePool = 538.0;
+        bodyOfWaterName = "Monroe"
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03372400&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "patoka":
+        lakePool = 536.0;
+        bodyOfWaterName = "Patoka"
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03374498&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
     default:
-        alert("Lake name does not exists");
+        alert("Lake name does not exist");
 }

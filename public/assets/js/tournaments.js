@@ -48,9 +48,9 @@ var sort_by = function (field, reverse, primer) {
 
 // API call for tx data for Filtering Tournaments
 $.ajax({
-    url: "/api/tournaments",
-    method: "GET",
-})
+        url: "/api/tournaments",
+        method: "GET",
+    })
     .then(function (data) {
         console.log(data);
         txBatch = data;
@@ -156,7 +156,7 @@ $("#filterBtn").on("click", function () {
 $("#addFilterSubmit").hide();
 $("#newFilterSubmit").hide();
 
-$("#newFilterSubmit").on("click", function(e) {
+$("#newFilterSubmit").on("click", function (e) {
     e.preventDefault();
     filtered = false;
     currentBatch = [];
@@ -216,11 +216,10 @@ $(".btn-filter").on("click", function (e) {
             currentBatch.push(filteredBatch[i]);
         }
         displayData(currentBatch);
-    }
-    else {
-    displayData(filteredBatch);
-    currentBatch = filteredBatch;
-    filtered = true;
+    } else {
+        displayData(filteredBatch);
+        currentBatch = filteredBatch;
+        filtered = true;
     }
 });
 
