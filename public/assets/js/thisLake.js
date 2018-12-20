@@ -546,13 +546,62 @@ switch (lakeName) {
         elevUSGS();
         break;
 
-        case "champlain":
-            lakePool = 95.5;
-            bodyOfWaterName = "Champlain"
-            elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04294413&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
-            flowURL = "none"
-            elevUSGS();
-            break;
+    case "champlain":
+        lakePool = 95.5;
+        bodyOfWaterName = "Champlain"
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04294413&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "winnebago":
+        lakePool = 0.0; // 746ft but data reported as a delta to 0.
+        bodyOfWaterName = "Winnebago"
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04082500&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "geneva":
+        lakePool = 0.0; // 746ft but data reported as a delta to 0.
+        bodyOfWaterName = "Geneva"
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04082500&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "havasu":
+        lakePool = 0.0; // 7448ft but data reported as a delta to 0.
+        bodyOfWaterName = "Havasu"
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=09427500&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "clear":
+        lakePool = 0.0; // 1329ft but data reported as a delta to 0.
+        bodyOfWaterName = "Clear"
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=11450000&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "mojave":
+        lakePool = 0.0; // 647ft but data reported as a delta to 0.
+        bodyOfWaterName = "Mojave"
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=09422500&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "wildhorse":
+        lakePool = 6208.0;
+        bodyOfWaterName = "Wild Horse"
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=09422500&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
 
     default:
         alert("Lake name does not exist");
