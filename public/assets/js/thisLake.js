@@ -597,10 +597,26 @@ switch (lakeName) {
     case "wildhorse":
         lakePool = 6208.0;
         bodyOfWaterName = "Wild Horse"
-        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=09422500&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all";
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=13174000&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
         flowURL = "none"
         elevUSGS();
         break;
+
+        case "trinidad":
+            lakePool = 0.0; // 647ft but data reported as a delta to 0.
+            bodyOfWaterName = "Trinidad"
+            elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07124400&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
+            flowURL = "none"
+            elevUSGS();
+            break;
+    
+        case "riflegap":
+            lakePool = 6208.0;
+            bodyOfWaterName = "Rifle Gap"
+            elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=09091900&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
+            flowURL = "none"
+            elevUSGS();
+            break;    
 
 
     default:
