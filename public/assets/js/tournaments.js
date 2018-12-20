@@ -7,6 +7,7 @@ let dateSort = false;
 let locSort = false;
 let rampSort = false;
 let stateSort = false;
+let filtered = false;
 
 function displayData(data) {
     $("#txSection").empty();
@@ -127,9 +128,15 @@ $('#headerRow').on('click', 'th', function () {
 
 $("#clearSubmit").on("click", function (e) {
     e.preventDefault();
+    // Reset the page and data
+    $("#filterSubmit").show();
+    $("#addFilterSubmit").hide();
+    $("#newFilterSubmit").hide();
     currentBatch = [];
-    displayData(currentBatch);
+    displayData(txBatch);
     $("#filterWrapper").toggle();
+    filtered = false;
+    filteredTags = [];
 })
 
 // Define generic filter function
@@ -145,11 +152,25 @@ $("#filterBtn").on("click", function () {
     $("#filterWrapper").toggle();
 })
 
+// Hide additional buttons until first filter has occurred
+$("#addFilterSubmit").hide();
+$("#newFilterSubmit").hide();
+
+$("#newFilterSubmit").on("click", function(e) {
+    e.preventDefault();
+    filtered = false;
+    currentBatch = [];
+    filteredTags = [];
+})
+
 
 // Form submit capture
-$("#filterSubmit").on("click", function (e) {
+$(".btn-filter").on("click", function (e) {
     e.preventDefault();
     $("#filterWrapper").toggle();
+    $("#filterSubmit").hide();
+    $("#addFilterSubmit").show();
+    $("#newFilterSubmit").show();
     let orgSelect = $("#orgSelect").val();
     let locSelect = $("#locSelect").val();
     let trailSelect = $("#trailSelect").val();
@@ -188,12 +209,19 @@ $("#filterSubmit").on("click", function (e) {
         });
     }
 
-    // Change our working batch holder and display the new filtered data;
-    for (var i = 0; i < filteredBatch.length; i ++) {
-        currentBatch.push(filteredBatch[i]);
+    if (filtered === true) {
+        console.log("true fired");
+        // Change our working batch holder and display the new filtered data;
+        for (var i = 0; i < filteredBatch.length; i++) {
+            currentBatch.push(filteredBatch[i]);
+        }
+        displayData(currentBatch);
     }
-    console.log(currentBatch);
-    displayData(currentBatch);
+    else {
+    displayData(filteredBatch);
+    currentBatch = filteredBatch;
+    filtered = true;
+    }
 });
 
 // // Function to create Parameter buttons inside parameter-well. Function is called after Add button function
