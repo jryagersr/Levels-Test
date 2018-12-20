@@ -221,6 +221,8 @@ $(".btn-filter").on("click", function (e) {
         currentBatch = filteredBatch;
         filtered = true;
     }
+    // Reset the option field to the default (ex: "Select Org")
+    $(".default-option").prop({selected: true});
 });
 
 // // Function to create Parameter buttons inside parameter-well. Function is called after Add button function
