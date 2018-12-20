@@ -244,7 +244,7 @@ function flowACE(dataTables) {
                             dataIsLinedUpByTime = true;
                         }
                     }
-                } else if (!aceTimeGreater){
+                } else if (!aceTimeGreater) {
                     $("#lakeWell-" + lakewellIndex + 1).append("<td>" + "N/A" + "</td>"); //Append N/A as the Flow Value to the row for the missing data
                     lakewellIndex++;
                     aceIndex--;
@@ -521,6 +521,38 @@ switch (lakeName) {
         flowURL = "none"
         elevUSGS();
         break;
+
+    case "shenango":
+        lakePool = 894.67;
+        bodyOfWaterName = "Shenango"
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03103400&period=PT96H&parameterCd=62615&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "curwensville":
+        lakePool = 1162.0;
+        bodyOfWaterName = "Curwensville"
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=01541180&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "raystown":
+        lakePool = 786.0;
+        bodyOfWaterName = "Raystown"
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=01563100&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+        case "champlain":
+            lakePool = 95.5;
+            bodyOfWaterName = "Champlain"
+            elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04294413&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
+            flowURL = "none"
+            elevUSGS();
+            break;
 
     default:
         alert("Lake name does not exist");
