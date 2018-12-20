@@ -75,7 +75,9 @@ function elevUSGS() {
                     break;
 
                 default:
-                    alert("Lake name does not exists");
+                    if (lakeName == "Jordan" || lakeName == "Kerr") {
+                        alert("Check USGS Elev Time");
+                    } else j = 0;
             }
             // Create our increment and loop through each value
             // For each value create our associated table html
@@ -174,7 +176,10 @@ function flowACE(dataTables) {
                     break;
 
                 default:
-                    alert("Lake name does not exists HeHeHeHe");
+                    if (lakeName == "Jordan" || lakeName == "Kerr") {
+                        alert("Check ACE Flow Time");
+                    } else j = 0;
+
             }
 
             let aceIndex = 0;
@@ -239,7 +244,7 @@ function flowACE(dataTables) {
                             dataIsLinedUpByTime = true;
                         }
                     }
-                } else {
+                } else if (!aceTimeGreater) {
                     $("#lakeWell-" + lakewellIndex + 1).append("<td>" + "N/A" + "</td>"); //Append N/A as the Flow Value to the row for the missing data
                     lakewellIndex++;
                     aceIndex--;
@@ -306,7 +311,9 @@ function elevAce() {
                     break;
 
                 default:
-                    alert("Lake name does not exists");
+                    if (lakeName == "Jordan" || lakeName == "Kerr") {
+                        alert("Check Ace Elev Time ")
+                    } else j = 0;
             }
 
             // Create our increment and loop through each value
@@ -499,6 +506,136 @@ switch (lakeName) {
         elevUSGS();
         break;
 
+    case "monroe":
+        lakePool = 538.0;
+        bodyOfWaterName = "Monroe"
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03372400&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "patoka":
+        lakePool = 536.0;
+        bodyOfWaterName = "Patoka"
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03374498&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "shenango":
+        lakePool = 894.67;
+        bodyOfWaterName = "Shenango"
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03103400&period=PT96H&parameterCd=62615&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "curwensville":
+        lakePool = 1162.0;
+        bodyOfWaterName = "Curwensville"
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=01541180&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "raystown":
+        lakePool = 786.0;
+        bodyOfWaterName = "Raystown"
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=01563100&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "champlain":
+        lakePool = 95.5;
+        bodyOfWaterName = "Champlain"
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04294413&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "winnebago":
+        lakePool = 0.0; // 746ft but data reported as a delta to 0.
+        bodyOfWaterName = "Winnebago"
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04082500&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "geneva":
+        lakePool = 0.0; // 746ft but data reported as a delta to 0.
+        bodyOfWaterName = "Geneva"
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04082500&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "havasu":
+        lakePool = 0.0; // 7448ft but data reported as a delta to 0.
+        bodyOfWaterName = "Havasu"
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=09427500&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "clear":
+        lakePool = 0.0; // 1329ft but data reported as a delta to 0.
+        bodyOfWaterName = "Clear"
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=11450000&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "mojave":
+        lakePool = 0.0; // 647ft but data reported as a delta to 0.
+        bodyOfWaterName = "Mojave"
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=09422500&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "wildhorse":
+        lakePool = 6208.0;
+        bodyOfWaterName = "Wild Horse"
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=13174000&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "trinidad":
+        lakePool = 0.0; // 647ft but data reported as a delta to 0.
+        bodyOfWaterName = "Trinidad"
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07124400&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "riflegap":
+        lakePool = 6208.0;
+        bodyOfWaterName = "Rifle Gap"
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=09091900&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "minnetonka":
+        lakePool = 929.0;
+        bodyOfWaterName = "Minnetonka"
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=05289000&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "millelacs":
+        lakePool = 0.0; //1251ft reported as a delta to 0
+        bodyOfWaterName = "Mille Lacs"
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=05284000&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+
+
     default:
-        alert("Lake name does not exists");
+        alert("Lake name does not exist");
 }

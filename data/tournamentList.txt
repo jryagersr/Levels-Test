@@ -77,9 +77,9 @@ CATT		Lake Wylie		19-03/30		Wylie			Buster Boyd		NC-SC	Qualifier 3
 CBC		SC			19-03/30		Murray			Dreher Island		SC	CBC NC
 CATT		Santee Cooper		19-03/30		Santee Cooper		John C Land		SC	Qualifier 5
 BFL		S Carolina		19-03/30		Clarks Hill		Wildwood		SC-GA	FLW
-CATT		Kerr Lake		19-03/31		Kerr			Occonneechee		NC-VA	Gold 4
 CATT		Wateree			19-03/30		Wateree			Clearwater		SC	Qualifier 7
 CATT		Wateree Open		19-03/30		Wateree			Clearwater		SC	Open 5
+CATT		Kerr Lake		19-03/31		Kerr			Occonneechee		NC-VA	Gold 4
 CATT		Norman			19-03/??		Norman			Pinnacle		NC	Qualifier 3
 CATT		Norman			19-03/??		Norman			Pinnacle		NC	Qualifier 4
 CATT		Hickory			19-03/??		Hickory			Whittenburg		NC	Qualifier 2
