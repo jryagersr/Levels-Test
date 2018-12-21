@@ -634,6 +634,95 @@ switch (lakeName) {
         elevUSGS();
         break;
 
+    case "clinton":
+        lakePool = 875.50;
+        bodyOfWaterName = "Clinton"
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06891478&period=PT95H&parameterCd=62614&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "perry":
+        lakePool = 891.50;
+        bodyOfWaterName = "Perry"
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06890898&period=PT95H&parameterCd=62614&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "pomona":
+        lakePool = 974.0;
+        bodyOfWaterName = "Pomona"
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06912490&period=PT95H&parameterCd=62614&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "malvern":
+        lakePool = 1039.67;
+        bodyOfWaterName = "Malvern"
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06910997&period=PT95H&parameterCd=62614&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "ellsworth":
+        lakePool = 1232.5;
+        bodyOfWaterName = "ellsworth"
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07308990&period=PT95H&parameterCd=00065&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "hudson":
+        lakePool = 619.0;
+        bodyOfWaterName = "Hudson"
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07191400&period=PT95H&parameterCd=00065&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "lawtonka":
+        lakePool = 1343.6;
+        bodyOfWaterName = "Lawtonka"
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07309500&period=PT95H&parameterCd=00065&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "cherokees":
+        lakePool = 739.0;
+        bodyOfWaterName = "Lake O' the Cherokees"
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07190000&period=PT95H&parameterCd=00065&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "eucha":
+        lakePool = 778.0;
+        bodyOfWaterName = "Eucha"
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07191285&period=PT95H&parameterCd=00065&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "mcghee":
+        lakePool = 577.0;
+        bodyOfWaterName = "McGhee Creek"
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07333900&period=PT95H&parameterCd=00065&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+    case "texoma":
+        lakePool = 619.41;
+        bodyOfWaterName = "Texoma"
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07331455&period=PT95H&parameterCd=00065&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
+
+
 
 
     default:

@@ -5,7 +5,7 @@ var express = require("express"),
   _ = require("underscore"),
   fs = require('fs');
 
-var txData = [];
+ var txData = [];
 
 // Require all models
 var db = require("../models")();
@@ -45,7 +45,9 @@ module.exports = function (app) {
   //Route to retrieve lakes in a specific state
   app.get("/api/states/:stateInitial", function (req, res) {
     let stateInitial = req.params.stateInitial;
-    db.model("Lake").find({ state: stateInitial })
+    db.model("Lake").find({
+        state: stateInitial
+      })
       .exec(function (err, data) {
         if (err) {
           res.send("No data found for " + state);
@@ -63,8 +65,7 @@ module.exports = function (app) {
       if (error) {
         response.send(error);
         return;
-      }
-      else {
+      } else {
         response.json(data.reverse());
       }
     });
@@ -105,7 +106,7 @@ module.exports = function (app) {
               inflow: splitLine[indexes[2]],
               outflow: splitLine[indexes[3]],
               level: splitLine[indexes[4]]
-          });
+            });
 
           }
         });
@@ -124,8 +125,7 @@ module.exports = function (app) {
       if (error) {
         response.send(error);
         return;
-      }
-      else {
+      } else {
         response.json(data.reverse());
       }
     });
@@ -149,7 +149,7 @@ module.exports = function (app) {
           splitLine = line.split(/[ ]+/);
           // Check to see if this is a data line
           // Column length and first two characters must match
-          
+
           if (splitLine.length === col && !isNaN(parseInt(line.substring(0, 2)))) {
             // Loop through each cell and check for missing data
             for (var i = 0; i < splitLine.length; i++) {
@@ -167,7 +167,7 @@ module.exports = function (app) {
               inflow: splitLine[indexes[2]],
               outflow: splitLine[indexes[3]],
               level: splitLine[indexes[4]]
-          });
+            });
 
           }
         });
@@ -191,7 +191,7 @@ module.exports = function (app) {
       var splitLine;
       line = line.trim();
       splitLine = line.split(/[\t]+/);
-      
+
       // Push each line into txData object
       txData.push({
         organizer: splitLine[indexes[0]],
@@ -203,10 +203,52 @@ module.exports = function (app) {
         txDetail: splitLine[indexes[6]],
         results: splitLine[indexes[7]],
       });
+
     });
 
-      response.json(txData);
+
+    // This for loop was used to write out the tournament data that was read from a txt file
+    /*for (i = 0; i < 196; i++) {
+      if (txData[i].organizer == "CATT" && txData[i].trail == "NC/SC Championship") {
+        fs.appendFile('mynewfile2.txt', "{organizer: \"" + txData[i].organizer + "\",\r\n", function (err, file) {
+          if (err) throw err;
+          console.log("Slow me down")
+        });
+        fs.appendFile('mynewfile2.txt', "trail: \"" + txData[i].trail + "\",\r\n", function (err, file) {
+          if (err) throw err;
+          console.log("Slow me down")
+        });
+        fs.appendFile('mynewfile2.txt', "date: \"" + txData[i].date + "\",\r\n", function (err, file) {
+          if (err) throw err;
+          console.log("Slow me down")
+        });
+        fs.appendFile('mynewfile2.txt', "lake: \"" + txData[i].lake + "\",\r\n", function (err, file) {
+          if (err) throw err;
+          console.log("Slow me down")
+        });
+        fs.appendFile('mynewfile2.txt', "ramp: \"" + txData[i].ramp + "\",\r\n", function (err, file) {
+          if (err) throw err;
+          console.log("Slow me down")
+        });
+        fs.appendFile('mynewfile2.txt', "txDetail: \"" + txData[i].txDetail + "\",\r\n", function (err, file) {
+          if (err) throw err;
+          console.log("Slow me down")
+        });
+        fs.appendFile('mynewfile2.txt', "resultsLink: \"" + txData[i].results + "\",\r\n", function (err, file) {
+          if (err) throw err;
+          console.log("Slow me down")
+        });
+        fs.appendFile('mynewfile2.txt', "entryLink: \"" + "\"}\r\n", function (err, file) {
+          if (err) throw err;
+          console.log("Slow me down")
+        });
+      }
+    } */
+
+
     
+    response.json(txData);
+
   });
 
 
@@ -217,9 +259,14 @@ module.exports = function (app) {
   app.post("/api/usgs", (req, res) => {
     console.log("nameID: " + req.body.nameID)
     req.body.newBatch.forEach(function (e) {
-      db.model('Lake').updateOne(
-        { _id: ObjectId(req.body.nameID), data: [{ level: e.value, date: e.date, time: e.time }] }
-      )
+      db.model('Lake').updateOne({
+          _id: ObjectId(req.body.nameID),
+          data: [{
+            level: e.value,
+            date: e.date,
+            time: e.time
+          }]
+        })
         .then(function (data) {
           res.json(data);
         })
