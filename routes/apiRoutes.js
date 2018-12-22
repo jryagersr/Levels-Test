@@ -105,7 +105,7 @@ module.exports = function (app) {
               inflow: splitLine[indexes[2]],
               outflow: splitLine[indexes[3]],
               level: splitLine[indexes[4]]
-          });
+            });
 
           }
         });
@@ -149,7 +149,7 @@ module.exports = function (app) {
           splitLine = line.split(/[ ]+/);
           // Check to see if this is a data line
           // Column length and first two characters must match
-          
+
           if (splitLine.length === col && !isNaN(parseInt(line.substring(0, 2)))) {
             // Loop through each cell and check for missing data
             for (var i = 0; i < splitLine.length; i++) {
@@ -167,16 +167,43 @@ module.exports = function (app) {
               inflow: splitLine[indexes[2]],
               outflow: splitLine[indexes[3]],
               level: splitLine[indexes[4]]
-          });
+            });
 
           }
         });
         callback(null, data);
       });
     }
-
-
   });
+
+  app.get("/api/cube", function (request, response) {
+    console.log("/api/cube fired");
+    // Parses our HTML and helps us find elements
+    var cheerio = require("cheerio");
+    // Makes HTTP request for HTML page
+    var request = require("request");
+
+    // Make request for cub carolinas site, returns html
+    request("http://cubecarolinas.com/lake-levels/", function (error, response, html) {
+
+      // Load the HTML into cheerio and save it to a variable
+      // '$' becomes a shorthand for cheerio's selector commands, much like jQuery's '$'
+      var $ = cheerio.load(html);
+
+      var data = [];
+
+      // With cheerio, find each <td> on the page
+      // (i: iterator. element: the current element)
+      $("<td>").each(function (i, element) {
+
+        // Save the text of each <td>
+        var value = $(element).children().text();
+
+        data.push(value);
+        console.log(data);
+      });
+    });
+  })
 
   // This reads the tournament file for the Tournaments Page
   app.get("/api/tournaments", function (request, response) {
@@ -191,7 +218,7 @@ module.exports = function (app) {
       var splitLine;
       line = line.trim();
       splitLine = line.split(/[\t]+/);
-      
+
       // Push each line into txData object
       txData.push({
         organizer: splitLine[indexes[0]],
@@ -205,8 +232,8 @@ module.exports = function (app) {
       });
     });
 
-      response.json(txData);
-    
+    response.json(txData);
+
   });
 
 

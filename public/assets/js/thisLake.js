@@ -344,6 +344,19 @@ function elevAce() {
 }
 
 
+// Function to make elev CUBE call
+function elevCUBE() {
+    // API call for flow
+    $.ajax({
+            url: "/api/cube",
+            method: "GET",
+        })
+        .then(function (data) {
+            console.log(data);
+        })
+}
+
+
 // function getData() {
 //     if (elevUSGSCheck === "true") {
 //         elevUSGS();
@@ -634,7 +647,10 @@ switch (lakeName) {
         elevUSGS();
         break;
 
-
+    case "highrock":
+        bodyOfWaterName = "High Rock"
+        elevCUBE();
+        break;
 
     default:
         alert("Lake name does not exist");
