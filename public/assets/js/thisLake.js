@@ -348,8 +348,8 @@ function elevAce() {
 // Function to make elev TVA call
 function dataTVA(dataTables) {
     $.ajax({
-            url: elevURL,
-            dataType:"XML"
+            url: "/api/tva",
+            method: "GET"
         })
         .then(function (data) {
             console.log(lakeName)
@@ -889,7 +889,6 @@ switch (lakeName) {
         flowURL = "none"
         dataTVA();
         break;
-
 
 
     default:

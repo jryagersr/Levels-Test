@@ -5,7 +5,7 @@ var express = require("express"),
   _ = require("underscore"),
   fs = require('fs');
 
- var txData = [];
+var txData = [];
 
 // Require all models
 var db = require("../models")();
@@ -24,6 +24,7 @@ var db = require("../models")();
 // ===============================================================================
 
 module.exports = function (app) {
+  var $ = require("jquery");
   var request = require("request");
   // API GET Requests
   // ---------------------------------------------------------------------------
@@ -46,8 +47,8 @@ module.exports = function (app) {
   app.get("/api/states/:stateInitial", function (req, res) {
     let stateInitial = req.params.stateInitial;
     db.model("Lake").find({
-        state: stateInitial
-      })
+      state: stateInitial
+    })
       .exec(function (err, data) {
         if (err) {
           res.send("No data found for " + state);
@@ -142,7 +143,7 @@ module.exports = function (app) {
         if (error) {
           callback(error);
         }
-        
+
         _.each(body.split("\r\n"), function (line) {
           // Split the text body into readable lines
           var splitLine;
@@ -274,42 +275,16 @@ module.exports = function (app) {
     } */
 
 
-    
+
     response.json(txData);
 
   });
 
 
-  // API POST Requests
-  // ---------------------------------------------------------------------------
-
-  // Route to update database with new lake data
-  app.post("/api/usgs", (req, res) => {
-    console.log("nameID: " + req.body.nameID)
-    req.body.newBatch.forEach(function (e) {
-      db.model('Lake').updateOne({
-          _id: ObjectId(req.body.nameID),
-          data: [{
-            level: e.value,
-            date: e.date,
-            time: e.time
-          }]
-        })
-        .then(function (data) {
-          res.json(data);
-        })
-        .catch(function (err) {
-          res.json(err);
-        });
-    })
-  });
-};
-
   // Route to retrieve TVA data
   app.get("/api/tva", function (request, response) {
     var url = "http://r7j8v4x4.map2.ssl.hwcdn.net/GUH_O.xml?1545499372503";
     var indexes = [0, 1, 8, 9, 10]
-    console.log(body);
     getData(11, "Jordan", indexes, url, function (error, data) {
       if (error) {
         response.send(error);
@@ -323,14 +298,15 @@ module.exports = function (app) {
     function getData(col, lakeName, indexes, newUrl, callback) {
       var request = require("request");
       var data = [];
-
       var options = {
-        url: newUrl
+        url: newUrl,
+        type: "xml"
       }
       request(options, function (error, response, body) {
         if (error) {
           callback(error);
         }
+        console.log(body);
         _.each(body.split("\r\n"), function (line) {
           // Split the text body into readable lines
           var splitLine;
@@ -338,7 +314,6 @@ module.exports = function (app) {
           splitLine = line.split(/[ ]+/);
           // Check to see if this is a data line
           // Column length and first two characters must match
-
           if (splitLine.length === col && !isNaN(parseInt(line.substring(0, 2)))) {
             // Loop through each cell and check for missing data
             for (var i = 0; i < splitLine.length; i++) {
@@ -357,12 +332,38 @@ module.exports = function (app) {
               outflow: splitLine[indexes[3]],
               level: splitLine[indexes[4]]
             });
-
           }
         });
         callback(null, data);
       });
     }
-
-
   });
+
+
+
+
+  // API POST Requests
+  // ---------------------------------------------------------------------------
+
+  // Route to update database with new lake data
+  app.post("/api/usgs", (req, res) => {
+    console.log("nameID: " + req.body.nameID)
+    req.body.newBatch.forEach(function (e) {
+      db.model('Lake').updateOne({
+        _id: ObjectId(req.body.nameID),
+        data: [{
+          level: e.value,
+          date: e.date,
+          time: e.time
+        }]
+      })
+        .then(function (data) {
+          res.json(data);
+        })
+        .catch(function (err) {
+          res.json(err);
+        });
+    })
+  });
+};
+
