@@ -345,6 +345,87 @@ function elevAce() {
             flowACE(dataValues);
         })
 }
+// Function to make elev TVA call
+function dataTVA(dataTables) {
+    $.ajax({
+            url: elevURL,
+            dataType:"XML"
+        })
+        .then(function (data) {
+            console.log(lakeName)
+            // Set lake title on page
+            $("#lakeTitle").append(bodyOfWaterName);
+            $("#lakeSponsor").append(bodyOfWaterName);
+            $("#lakeFeaturedTournament").append(bodyOfWaterName);
+            // Parse the json data return to find the values we want
+            let dataValues = data.value.timeSeries[0].values[0].value
+            // Reverse the order of our data so most recent date is first
+            dataValues.reverse();
+            // Get current Date, Time and Elev
+            let currentElev = parseFloat(dataValues[0].value).toFixed(2);
+            let splitTimeDate = dataValues[0].dateTime.split("T");
+            let currentDate = splitTimeDate[0];
+            let currentTime = splitTimeDate[1].substring(0, 5);
+            let currentDelta = (currentElev - lakePool).toFixed(2);
+
+            // Set date, time and elev on page
+            $("#currentTime").append(currentTime);
+            $("#currentDate").append(currentDate);
+            $("#currentLevel").append(currentElev);
+            $("#currentDelta").append(currentDelta);
+            $("#currentNormal").append(normalPool);
+
+
+            // Find first element in USGS data in which the time value that is at the top of the hour
+            switch (dataValues[0].dateTime.substring(14, 16)) {
+
+                case "00":
+                    var j = 0;
+                    break;
+
+                case "15":
+                    var j = 1;
+                    break;
+
+                case "30":
+                    var j = 2
+                    break;
+
+                case "45":
+                    var j = 3
+                    break;
+
+                default:
+                    if (lakeName == "Jordan" || lakeName == "Kerr") {
+                        alert("Check Ace Elev Time ")
+                    } else j = 0;
+            }
+
+            // Create our increment and loop through each value
+            // For each value create our associated table html
+            let i = 0;
+            for (j; j < dataValues.length; j += 4) {
+                let element = dataValues[j];
+                let elev = element.value;
+
+                let date = element.dateTime.substring(2, 10).replace('-', ' ');
+                let time = element.dateTime.substring(11, 16);
+
+                // Create the HTML Well (Section) and Add the table content for each reserved table
+                var lakeSection = $("<tr>");
+                lakeSection.addClass("well");
+                lakeSection.attr("id", "lakeWell-" + i + 1);
+                $("#lakeSection").append(lakeSection);
+
+                // Append the data values to the table row
+
+                $("#lakeWell-" + i + 1).append("<td>" + date + "</td>");
+                $("#lakeWell-" + i + 1).append("<td>" + time + "</td>");
+                $("#lakeWell-" + i + 1).append("<td>" + elev + "</td>");
+                i++;
+            }
+        })
+}
 
 
 // function getData() {
@@ -778,15 +859,23 @@ switch (lakeName) {
         elevUSGS();
         break;
 
-        case "seminole":
-            lakePool = 78.0; 
-            normalPool = " (normal pool=" + lakePool + ")"
-            bodyOfWaterName = "Seminole"
-            elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02357500&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
-            flowURL = "none"
-            elevUSGS();
-            break;
+    case "seminole":
+        lakePool = 78.0;
+        normalPool = " (normal pool=" + lakePool + ")"
+        bodyOfWaterName = "Seminole"
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02357500&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
+        break;
 
+    case "guntersville":
+        lakePool = 594.0;
+        normalPool = " (normal pool=" + lakePool + ")"
+        bodyOfWaterName = "Guntersville"
+        elevURL = "http://r7j8v4x4.map2.ssl.hwcdn.net/GUH_O.xml?1545499372503";
+        flowURL = "none"
+        dataTVA();
+        break;
 
 
 
