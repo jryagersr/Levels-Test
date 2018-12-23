@@ -142,6 +142,7 @@ module.exports = function (app) {
         if (error) {
           callback(error);
         }
+        
         _.each(body.split("\r\n"), function (line) {
           // Split the text body into readable lines
           var splitLine;
@@ -174,9 +175,36 @@ module.exports = function (app) {
         callback(null, data);
       });
     }
-
-
   });
+
+  app.get("/api/cube", function (request, response) {
+    console.log("/api/cube fired");
+    // Parses our HTML and helps us find elements
+    var cheerio = require("cheerio");
+    // Makes HTTP request for HTML page
+    var request = require("request");
+
+    // Make request for cub carolinas site, returns html
+    request("http://cubecarolinas.com/lake-levels/", function (error, response, html) {
+
+      // Load the HTML into cheerio and save it to a variable
+      // '$' becomes a shorthand for cheerio's selector commands, much like jQuery's '$'
+      var $ = cheerio.load(html);
+
+      var data = [];
+
+      // With cheerio, find each <td> on the page
+      // (i: iterator. element: the current element)
+      $("<td>").each(function (i, element) {
+
+        // Save the text of each <td>
+        var value = $(element).children().text();
+
+        data.push(value);
+        console.log(data);
+      });
+    });
+  })
 
   // This reads the tournament file for the Tournaments Page
   app.get("/api/tournaments", function (request, response) {
