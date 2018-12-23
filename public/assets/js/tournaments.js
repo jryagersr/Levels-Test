@@ -54,6 +54,7 @@ $.ajax({
     .then(function (data) {
         console.log(data);
         txBatch = data;
+        currentBatch = txBatch;
         displayData(txBatch);
     });
 

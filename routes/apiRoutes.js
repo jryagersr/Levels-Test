@@ -142,6 +142,7 @@ module.exports = function (app) {
         if (error) {
           callback(error);
         }
+        
         _.each(body.split("\r\n"), function (line) {
           // Split the text body into readable lines
           var splitLine;
