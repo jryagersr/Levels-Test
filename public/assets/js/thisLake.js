@@ -21,9 +21,9 @@ $("#lakeSection").empty();
 // Pull the lake name from the end of the current URL
 let currentURL = window.location.href;
 let parsedURL = window.location.href.split("/");
-let lakeName = parsedURL[parsedURL.length - 1];
+let lakeRoute = parsedURL[parsedURL.length - 1];
 parsedURL = parsedURL.slice(0, parsedURL.length - 2);
-let newURL = parsedURL.join("/") + "/api/lakes/" + lakeName
+let newURL = parsedURL.join("/") + "/api/lakes/" + lakeRoute
 const batch = [];
 let elevCheck = false;
 let flowCheck = false;
@@ -48,7 +48,7 @@ function elevUSGS() {
             else {
                 if (lakePool !== 0)
                     elevationAdjust = dataValues[0].value;
-                    else elevationAdjust = dataValues[0].value;
+                else elevationAdjust = dataValues[0].value;
                 seaLevelDelta = lakePool;
             }
 
@@ -90,7 +90,7 @@ function elevUSGS() {
                     break;
 
                 default:
-                    if (lakeName == "Jordan" || lakeName == "Kerr") {
+                    if (lakeRoute == "jordan" || lakeRoute == "kerr" || lakeRoute == "buggsisland") {
                         alert("Check USGS Elev Time");
                     } else j = 0;
             }
@@ -169,7 +169,7 @@ function flowUSGS() {
 // Function to make ACE flow data call
 function flowACE(dataTables) {
     $.ajax({
-            url: "/api/" + lakeName,
+            url: "/api/" + lakeRoute,
             method: "GET"
         })
         .then(function (data) {
@@ -195,7 +195,7 @@ function flowACE(dataTables) {
                     break;
 
                 default:
-                    if (lakeName == "Jordan" || lakeName == "Kerr") {
+                if (lakeRoute == "jordan" || lakeRoute == "kerr" || lakeRoute == "buggsisland") {
                         alert("Check ACE Flow Time");
                     } else j = 0;
 
@@ -287,7 +287,7 @@ function elevAce() {
             method: "GET",
         })
         .then(function (data) {
-            console.log(lakeName);
+            console.log(lakeRoute);
             seaLevelDelta = lakePool;
             // Set lake title on page
             $("#lakeTitle").append(bodyOfWaterName);
@@ -332,7 +332,7 @@ function elevAce() {
                     break;
 
                 default:
-                    if (lakeName == "Jordan" || lakeName == "Kerr") {
+                if (lakeRoute == "jordan" || lakeRoute == "kerr" || lakeRoute == "buggsisland") {
                         alert("Check Ace Elev Time ")
                     } else j = 0;
             }
@@ -360,6 +360,8 @@ function elevAce() {
                 $("#lakeWell-" + i + 1).append("<td>" + elev + "</td>");
                 i++;
             }
+            if (lakeRoute == "buggsisland")
+                lakeRoute = "kerr"; // Same data as Kerr
             flowACE(dataValues);
         })
 }
@@ -374,7 +376,7 @@ function dataTVA(data) {
             }
         })
         .then(function (data) {
-            console.log(lakeName)
+            console.log(lakeRoute)
 
             if (seaLevelDelta !== 0)
                 elevationAdjust = (parseFloat(data[0].Average) + seaLevelDelta).toFixed(2);
@@ -442,9 +444,9 @@ function dataDuke(data) {
             }
         })
         .then(function (data) {
-            console.log(lakeName)
+            console.log(lakeRoute)
             // adjust the elev for lakes with data relative to full pool (not from sealevel))
-            
+
             let skipToValidData = 0;
 
             while (isNaN(data[skipToValidData].Average)) {
@@ -552,9 +554,9 @@ $("#lakeTournaments").on("click", function (e) {
 // Switch to set our api urls based on lake name
 // Run corresponding api calls
 
-console.log('lakeName', lakeName);
-switch (lakeName) {
-    case "kerr":
+console.log('lakeRoute', lakeRoute);
+switch (lakeRoute) {
+    case "kerr": //North Carolina
         lakePool = 300;
         seaLevelDelta = 0;
         bodyOfWaterName = "Kerr Lake"
@@ -562,7 +564,16 @@ switch (lakeName) {
         elevAce();
         break;
 
-    case "falls":
+    case "buggsisland": // Virginia (same as Kerr Lake, different name in VA)
+        lakePool = 300;
+        seaLevelDelta = 0;
+        bodyOfWaterName = "Buggs Island"
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02079490&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
+        elevAce();
+        break;
+
+
+    case "falls": //North Carolina
         lakePool = 252;
         seaLevelDelta = 0;
         bodyOfWaterName = "Falls Lake"
@@ -571,7 +582,7 @@ switch (lakeName) {
         elevUSGS();
         break;
 
-    case "jordan":
+    case "jordan": //North Carolina
         lakePool = 216.5;
         seaLevelDelta = 0;
         bodyOfWaterName = "Jordan Lake"
@@ -579,7 +590,7 @@ switch (lakeName) {
         elevAce();
         break;
 
-    case "roanoke":
+    case "roanoke": // North Carolina
         lakePool = 0.0;
         seaLevelDelta = 0;
         bodyOfWaterName = "Roanoke River"
@@ -588,7 +599,7 @@ switch (lakeName) {
         elevUSGS();
         break;
 
-    case "murray":
+    case "murray": //South Carolina
         lakePool = 360.0;
         seaLevelDelta = 0;
         bodyOfWaterName = "Lake Murray"
@@ -598,7 +609,7 @@ switch (lakeName) {
         break;
 
 
-    case "hartwell":
+    case "hartwell": //South Carolina
         lakePool = 660.0;
         seaLevelDelta = 0;
         bodyOfWaterName = "Lake Hartwell"
@@ -607,7 +618,7 @@ switch (lakeName) {
         elevUSGS();
         break;
 
-    case "clarkshill":
+    case "clarkshill": //South Carolina
         lakePool = 330.0;
         seaLevelDelta = 0;
         bodyOfWaterName = "Clarks Hill"
@@ -616,7 +627,7 @@ switch (lakeName) {
         elevUSGS();
         break;
 
-    case "santee1":
+    case "santee1": //South Carolina
         lakePool = 79.0;
         seaLevelDelta = 0;
         bodyOfWaterName = "Santee (Marion)"
@@ -625,7 +636,7 @@ switch (lakeName) {
         elevUSGS();
         break;
 
-    case "santee2":
+    case "santee2": //South Carolina
         lakePool = 79.0;
         seaLevelDelta = 0;
         bodyOfWaterName = "Santee (Moultrie)"
@@ -634,7 +645,7 @@ switch (lakeName) {
         elevUSGS();
         break;
 
-    case "james":
+    case "james": //Virgina - River
         lakePool = 0.0;
         seaLevelDelta = 0;
         bodyOfWaterName = "James River"
@@ -643,7 +654,7 @@ switch (lakeName) {
         elevUSGS();
         break;
 
-    case "potomac":
+    case "potomac": //Virgina - River
         lakePool = 0.0;
         seaLevelDelta = 0;
         bodyOfWaterName = "Potomac River (Alexandria)"
@@ -653,6 +664,7 @@ switch (lakeName) {
         break;
 
     case "lanier":
+        Georgia
         lakePool = 1071.0;
         seaLevelDelta = 0;
         bodyOfWaterName = "Lake Lanier"
@@ -661,7 +673,7 @@ switch (lakeName) {
         elevUSGS();
         break;
 
-    case "westpoint":
+    case "westpoint": //Georgia
         lakePool = 635.0;
         seaLevelDelta = 0;
         bodyOfWaterName = "West Point"
@@ -670,7 +682,7 @@ switch (lakeName) {
         elevUSGS();
         break;
 
-    case "fork":
+    case "fork": //Texas
         lakePool = 403.0;
         seaLevelDelta = 0;
         bodyOfWaterName = "Lake Fork"
@@ -679,7 +691,7 @@ switch (lakeName) {
         elevUSGS();
         break;
 
-    case "toledobend":
+    case "toledobend": //Texas
         lakePool = 172.0;
         seaLevelDelta = 0;
         bodyOfWaterName = "Toledo Bend"
@@ -688,7 +700,7 @@ switch (lakeName) {
         elevUSGS();
         break;
 
-    case "rayburn":
+    case "rayburn": //Texas
         lakePool = 164.4;
         seaLevelDelta = 0;
         bodyOfWaterName = "Sam Rayburn"
@@ -697,7 +709,7 @@ switch (lakeName) {
         elevUSGS();
         break;
 
-    case "monroe":
+    case "monroe": //Indiana
         lakePool = 538.0;
         seaLevelDelta = 0;
         bodyOfWaterName = "Monroe"
@@ -706,7 +718,7 @@ switch (lakeName) {
         elevUSGS();
         break;
 
-    case "patoka":
+    case "patoka": //Indiana
         lakePool = 536.0;
         seaLevelDelta = 0;
         bodyOfWaterName = "Patoka"
@@ -715,7 +727,7 @@ switch (lakeName) {
         elevUSGS();
         break;
 
-    case "shenango":
+    case "shenango": //Pennsylvania
         lakePool = 894.67;
         seaLevelDelta = 0;
         bodyOfWaterName = "Shenango"
@@ -724,7 +736,7 @@ switch (lakeName) {
         elevUSGS();
         break;
 
-    case "curwensville":
+    case "curwensville": //Pennsylvania
         lakePool = 1162.0;
         seaLevelDelta = 0;
         bodyOfWaterName = "Curwensville"
@@ -733,7 +745,7 @@ switch (lakeName) {
         elevUSGS();
         break;
 
-    case "raystown":
+    case "raystown": //Pennsylvania
         lakePool = 786.0;
         seaLevelDelta = 0;
         bodyOfWaterName = "Raystown"
@@ -742,7 +754,7 @@ switch (lakeName) {
         elevUSGS();
         break;
 
-    case "champlain":
+    case "champlain": //New York
         lakePool = 95.5;
         seaLevelDelta = 0;
         bodyOfWaterName = "Champlain"
@@ -751,7 +763,7 @@ switch (lakeName) {
         elevUSGS();
         break;
 
-    case "winnebago":
+    case "winnebago": //Wisconsin
         lakePool = 746.0; // 746ft but data reported as a delta to full pool.
         seaLevelDelta = 746.0;
         bodyOfWaterName = "Winnebago"
@@ -760,7 +772,7 @@ switch (lakeName) {
         elevUSGS();
         break;
 
-    case "geneva":
+    case "geneva": // Wisconsin
         lakePool = 879.0; // 879ft but data reported as a delta to full pool.
         seaLevelDelta = 879.0;
         bodyOfWaterName = "Geneva"
@@ -769,7 +781,7 @@ switch (lakeName) {
         elevUSGS();
         break;
 
-    case "havasu":
+    case "havasu": //California
         lakePool = 445.0; // 445ft but data reported as a delta to full pool.
         seaLevelDelta = 445.0;
         bodyOfWaterName = "Havasu"
@@ -778,7 +790,7 @@ switch (lakeName) {
         elevUSGS();
         break;
 
-    case "clear":
+    case "clear": //California
         lakePool = 1329.0; // 1329ft but data reported as a delta to full pool
         seaLevelDelta = 1329.0;
         bodyOfWaterName = "Clear"
@@ -787,7 +799,7 @@ switch (lakeName) {
         elevUSGS();
         break;
 
-    case "mojave":
+    case "mojave": //Nevada
         lakePool = 647.0; // 647ft but data reported as a delta to 0.
         seaLevelDelta = 547;
         bodyOfWaterName = "Mojave"
@@ -796,7 +808,7 @@ switch (lakeName) {
         elevUSGS();
         break;
 
-    case "wildhorse":
+    case "wildhorse": //Nevada
         lakePool = 6208.0;
         seaLevelDelta = 0;
         bodyOfWaterName = "Wild Horse"
@@ -805,7 +817,7 @@ switch (lakeName) {
         elevUSGS();
         break;
 
-    case "trinidad":
+    case "trinidad": //Colorado
         lakePool = 6300.0;
         seaLevelDelta = 0;
         bodyOfWaterName = "Trinidad"
@@ -814,7 +826,7 @@ switch (lakeName) {
         elevUSGS();
         break;
 
-    case "riflegap":
+    case "riflegap": //Colorado
         lakePool = 6000.0;
         seaLevelDelta = 0;
         bodyOfWaterName = "Rifle Gap"
@@ -823,7 +835,7 @@ switch (lakeName) {
         elevUSGS();
         break;
 
-    case "minnetonka":
+    case "minnetonka": //Minnesota
         lakePool = 929.0;
         seaLevelDelta = 0;
         bodyOfWaterName = "Minnetonka"
@@ -832,7 +844,7 @@ switch (lakeName) {
         elevUSGS();
         break;
 
-    case "millelacs":
+    case "millelacs": //Minnesota
         lakePool = 1251.0; //1251ft reported as a delta to 0
         seaLevelDelta = 1151.0;
         bodyOfWaterName = "Mille Lacs"
@@ -841,7 +853,7 @@ switch (lakeName) {
         elevUSGS();
         break;
 
-    case "clinton":
+    case "clinton": //Kansas
         lakePool = 875.50;
         seaLevelDelta = 0;
         bodyOfWaterName = "Clinton"
@@ -850,7 +862,7 @@ switch (lakeName) {
         elevUSGS();
         break;
 
-    case "perry":
+    case "perry": //Kansas
         lakePool = 891.50;
         seaLevelDelta = 0;
         bodyOfWaterName = "Perry"
@@ -859,7 +871,7 @@ switch (lakeName) {
         elevUSGS();
         break;
 
-    case "pomona":
+    case "pomona": //Kansas
         lakePool = 974.0;
         seaLevelDelta = 0;
         bodyOfWaterName = "Pomona"
@@ -868,7 +880,7 @@ switch (lakeName) {
         elevUSGS();
         break;
 
-    case "malvern":
+    case "malvern": //Kansas
         lakePool = 1039.67;
         seaLevelDelta = 0;
         bodyOfWaterName = "Malvern"
@@ -877,7 +889,7 @@ switch (lakeName) {
         elevUSGS();
         break;
 
-    case "ellsworth":
+    case "ellsworth": //Oklahoma
         lakePool = 1232.5;
         seaLevelDelta = 0;
         bodyOfWaterName = "ellsworth"
@@ -886,7 +898,7 @@ switch (lakeName) {
         elevUSGS();
         break;
 
-    case "hudson":
+    case "hudson": //Oklahoma
         lakePool = 619.0;
         seaLevelDelta = 0;
         bodyOfWaterName = "Hudson"
@@ -895,7 +907,7 @@ switch (lakeName) {
         elevUSGS();
         break;
 
-    case "lawtonka":
+    case "lawtonka": //Oklahoma
         lakePool = 1343.6;
         seaLevelDelta = 0;
         bodyOfWaterName = "Lawtonka"
@@ -904,7 +916,7 @@ switch (lakeName) {
         elevUSGS();
         break;
 
-    case "cherokees":
+    case "cherokees": //Oklahoma
         lakePool = 739.0;
         seaLevelDelta = 0;
         bodyOfWaterName = "Lake O' the Cherokees"
@@ -913,7 +925,7 @@ switch (lakeName) {
         elevUSGS();
         break;
 
-    case "eucha":
+    case "eucha": //Oklahoma
         lakePool = 778.0;
         seaLevelDelta = 0;
         bodyOfWaterName = "Eucha"
@@ -922,7 +934,7 @@ switch (lakeName) {
         elevUSGS();
         break;
 
-    case "mcghee":
+    case "mcghee": //Oklahoma
         lakePool = 577.0;
         seaLevelDelta = 0;
         bodyOfWaterName = "McGhee Creek"
@@ -932,7 +944,7 @@ switch (lakeName) {
         break;
 
     case "texoma":
-        lakePool = 619.41;
+        lakePool = 619.41; //Oklahoma
         seaLevelDelta = 0;
         bodyOfWaterName = "Texoma"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07331455&period=PT95H&parameterCd=00065&siteType=LK&siteStatus=all";
@@ -949,7 +961,7 @@ switch (lakeName) {
         elevUSGS();
         break;
 
-    case "seminole":
+    case "seminole": // Florida
         lakePool = 78.0;
         seaLevelDelta = 0;
         bodyOfWaterName = "Seminole"
@@ -1067,7 +1079,7 @@ switch (lakeName) {
         break;
 
     case "norman": // North Carolina
-        lakePool = 1398.0; // 1398.0ft Level reported as a delta to 0 by Duke Energy
+        lakePool = 1398.0; // 1398.0ft Level reported as a delta to full pool -100 by Duke Energy
         seaLevelDelta = 1298.0
         bodyOfWaterName = "Norman"
         elevURL = "https://lakes.duke-energy.com/Data/Detail/3_Month/4.txt";
@@ -1076,7 +1088,7 @@ switch (lakeName) {
         break;
 
     case "wylie": // North Carolina
-        lakePool = 500.0; // 600.0ft Level reported as a delta to 0 by Duke Energy
+        lakePool = 500.0; // 600.0ft Level reported as a delta to full pool -100 by Duke Energy
         seaLevelDelta = 400.0;
         bodyOfWaterName = "Wylie"
         elevURL = "https://lakes.duke-energy.com/Data/Detail/3_Month/18.txt";
@@ -1085,7 +1097,7 @@ switch (lakeName) {
         break;
 
     case "rhodhiss": // North Carolina
-        lakePool = 985.0; // 995.1.0ft Level reported as a delta to 0 by Duke Energy
+        lakePool = 985.0; // 995.1.0ft Level reported as a delta to full pool -100 by Duke Energy
         seaLevelDelta = 885.0;
         bodyOfWaterName = "Rhodhiss"
         elevURL = "https://lakes.duke-energy.com/Data/Detail/3_Month/14.txt";
@@ -1094,7 +1106,7 @@ switch (lakeName) {
         break;
 
     case "jameslake": // North Carolina
-        lakePool = 1200.0; // 1200.0ft Level reported as a delta to 0 by Duke Energy
+        lakePool = 1200.0; // 1200.0ft Level reported as a delta to full pool -100 by Duke Energy
         seaLevelDelta = 1100;
         bodyOfWaterName = "James"
         elevURL = "https://lakes.duke-energy.com/Data/Detail/3_Month/2.txt";
@@ -1103,7 +1115,7 @@ switch (lakeName) {
         break;
 
     case "hickory": // North Carolina
-        lakePool = 935.0; // 935.0ft Level reported as a delta to 0 by Duke Energy
+        lakePool = 935.0; // 935.0ft Level reported as a delta to full pool -100 by Duke Energy
         seaLevelDelta = 835.0;
         bodyOfWaterName = "Hickory"
         elevURL = "https://lakes.duke-energy.com/Data/Detail/3_Month/13.txt";
@@ -1111,8 +1123,8 @@ switch (lakeName) {
         dataDuke();
         break;
 
-    case "wateree": // North Carolina
-        lakePool = 225.0; // 225.0ft Level reported as a delta to 0 by Duke Energy
+    case "wateree": // South Carolina
+        lakePool = 225.0; // 225.0ft Level reported as a delta to full pool -100 by Duke Energy
         seaLevelDelta = 125.0
         bodyOfWaterName = "Wateree"
         elevURL = "https://lakes.duke-energy.com/Data/Detail/3_Month/17.txt";
