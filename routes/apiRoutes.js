@@ -47,8 +47,8 @@ module.exports = function (app) {
   app.get("/api/states/:stateInitial", function (req, res) {
     let stateInitial = req.params.stateInitial;
     db.model("Lake").find({
-      state: stateInitial
-    })
+        state: stateInitial
+      })
       .exec(function (err, data) {
         if (err) {
           res.send("No data found for " + state);
@@ -283,9 +283,10 @@ module.exports = function (app) {
 
   // Route to retrieve TVA data
   app.get("/api/tva", function (request, response) {
-    var url = "http://r7j8v4x4.map2.ssl.hwcdn.net/GUH_O.xml?1545499372503";
-    var indexes = [0, 1, 8, 9, 10]
-    getData(11, "Jordan", indexes, url, function (error, data) {
+    let tvaURL = request.query.tvaDataURL;
+    let tvaLakeName = request.query.tvaLakeName;
+
+    getData(tvaLakeName, tvaURL, function (error, data) {
       if (error) {
         response.send(error);
         return;
@@ -295,7 +296,7 @@ module.exports = function (app) {
     });
 
     // Function to pull data
-    function getData(col, lakeName, indexes, newUrl, callback) {
+    function getData(lakeName, newUrl, callback) {
       var request = require("request");
       var data = [];
       var options = {
@@ -306,31 +307,49 @@ module.exports = function (app) {
         if (error) {
           callback(error);
         }
-        console.log(body);
+        let tvaDate = "";
+        let tvaTime = "";
+        let tvaElev = "";
+        let tvaOutFlow = "";
+        let tvaOutFlowStart = 0
+
         _.each(body.split("\r\n"), function (line) {
           // Split the text body into readable lines
           var splitLine;
           line = line.trim();
           splitLine = line.split(/[ ]+/);
-          // Check to see if this is a data line
-          // Column length and first two characters must match
-          if (splitLine.length === col && !isNaN(parseInt(line.substring(0, 2)))) {
-            // Loop through each cell and check for missing data
-            for (var i = 0; i < splitLine.length; i++) {
-              if (splitLine[i].substring(0, 1) === "?" || splitLine[i] == -99) {
-                splitLine[i] = "N/A";
-              }
-            }
-            // Formulate the date to remove Month
-            let cleanDate = splitLine[indexes[0]].substring(0, 2) + " " + splitLine[indexes[0]].substring(2, 5);
+
+          // Check to see if this is a data line by checking for keywords
+          if (line.substring(1, 6) == "LOCAL") {
+            // It's a date time line, save the date and time
+            // Formulate the date 
+            tvaDate = line.substring(15, 25);
+            // Formulate the time
+            if (line[34] == "<")
+              tvaTime = line.substring(25, 34);
+            else
+              tvaTime = line.substring(25, 35);
+          }
+          if (line.substring(1, 6) == "UPSTR") {
+            // It's an elevation level line, save the elevation
+            tvaElev = line.substring(18, 24)
+          }
+          if (line.substring(1, 4) == "AVG") {
+            // Last Data item
+            // Set the outFlowStart to 25 (5 char outFlow
+            tvaOutFlowStart = 25;
+            if (line.substring(24, 25) != " " && line.substring(23, 24) != " ")
+              tvaOutFlowStart = 23;
+            else if (line.substring(24, 25) != " ")
+              tvaOutFlowStart = 24;
+            tvaOutFlow = line.substring(tvaOutFlowStart, 30)
             // Push each line into data object
             data.push({
               lakeName: lakeName,
-              date: cleanDate,
-              time: splitLine[indexes[1]],
-              inflow: splitLine[indexes[2]],
-              outflow: splitLine[indexes[3]],
-              level: splitLine[indexes[4]]
+              date: tvaDate,
+              time: tvaTime,
+              outflow: tvaOutFlow,
+              level: tvaElev
             });
           }
         });
@@ -350,13 +369,13 @@ module.exports = function (app) {
     console.log("nameID: " + req.body.nameID)
     req.body.newBatch.forEach(function (e) {
       db.model('Lake').updateOne({
-        _id: ObjectId(req.body.nameID),
-        data: [{
-          level: e.value,
-          date: e.date,
-          time: e.time
-        }]
-      })
+          _id: ObjectId(req.body.nameID),
+          data: [{
+            level: e.value,
+            date: e.date,
+            time: e.time
+          }]
+        })
         .then(function (data) {
           res.json(data);
         })
@@ -365,5 +384,39 @@ module.exports = function (app) {
         });
     })
   });
-};
+  //Start of dukeData
+  // Route to retrieve DUKE data
+  app.get("/api/duke", function (request, response) {
+    let dukeURL = request.query.dukeDataURL;
+    let dukeLakeName = request.query.dukeLakeName;
 
+    getData(dukeLakeName, dukeURL, function (error, data) {
+      if (error) {
+        response.send(error);
+        return;
+      } else {
+        response.json(data.reverse());
+      }
+    });
+
+    // Function to pull data
+    function getData(lakeName, newUrl, callback) {
+      var request = require("request");
+      var data = [];
+      var options = {
+        url: newUrl,
+        type: "xml"
+      }
+      request(options, function (error, response, body) {
+        if (error) {
+          callback(error);
+        }
+        let dukeLakes = JSON.parse(body);
+
+        callback(null, dukeLakes);
+      });
+    }
+  });
+
+  //End of dukeData
+}; // End of module.exports
