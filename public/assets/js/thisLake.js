@@ -310,7 +310,7 @@ function elevAce() {
             $("#currentDate").append(currentDate);
             $("#currentLevel").append(currentElev);
             $("#currentDelta").append(currentDelta);
-            $("#currentNormal").append("normal pool " + seaLevelDelta);
+            $("#currentNormal").append("normal pool " + lakePool);
 
 
             // Find first element in USGS data in which the time value that is at the top of the hour
