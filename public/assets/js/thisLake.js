@@ -1,5 +1,7 @@
 let lakePool = 0;
+let seaLevelDelta = 0;
 let bodyOfWaterName = '';
+let elevationAdjust = 0;
 
 // Function to capitalize first letter of string
 function capitalizeFirstLetter(string) {
@@ -35,16 +37,27 @@ function elevUSGS() {
         })
         .then(function (data) {
             console.log('USGS Elev Data', data);
-            // Set lake title on page
-            $("#lakeTitle").append(bodyOfWaterName);
-            $("#lakeSponsor").append(bodyOfWaterName);
-            $("#lakeFeaturedTournament").append(bodyOfWaterName);
             // Parse the json data return to find the values we want
             let dataValues = data.value.timeSeries[0].values[0].value
             // Reverse the order of our data so most recent date is first
             dataValues.reverse();
+            //seaLevelDelta = lakePool;
+
+            if (seaLevelDelta !== 0)
+                elevationAdjust = (parseFloat(dataValues[0].value) + seaLevelDelta).toFixed(2);
+            else {
+                if (lakePool !== 0)
+                    elevationAdjust = dataValues[0].value;
+                    else elevationAdjust = dataValues[0].value;
+                seaLevelDelta = lakePool;
+            }
+
+            // Set lake title on page
+            $("#lakeTitle").append(bodyOfWaterName);
+            $("#lakeSponsor").append(bodyOfWaterName);
+            $("#lakeFeaturedTournament").append(bodyOfWaterName);
             // Get current Date, Time and Elev
-            var currentElev = dataValues[0].value;
+            var currentElev = elevationAdjust;
             let splitTimeDate = dataValues[0].dateTime.split("T");
             let currentDate = splitTimeDate[0];
             let currentTime = splitTimeDate[1].substring(0, 5);
@@ -55,7 +68,7 @@ function elevUSGS() {
             $("#currentDate").append(currentDate);
             $("#currentLevel").append(currentElev);
             $("#currentDelta").append(currentDelta);
-            $("#currentNormal").append(normalPool);
+            $("#currentNormal").append("normal pool " + seaLevelDelta);
 
             // Find first time value that is at the top of the hour
             switch (dataValues[0].dateTime.substring(14, 16)) {
@@ -90,6 +103,10 @@ function elevUSGS() {
                 let splitTimeDate = element.dateTime.split("T");
                 let date = splitTimeDate[0].substring(2, 10).replace('-', ' ');
                 let time = splitTimeDate[1].substring(0, 5);
+                // adjust the elev for lakes with data relative to full pool (not from sealevel))
+                if (seaLevelDelta !== 0)
+                    elev = (parseFloat(dataValues[j].value) + seaLevelDelta).toFixed(2);
+
 
                 // Create the HTML Well (Section) and Add the table content for each reserved table
                 var lakeSection = $("<tr>");
@@ -270,7 +287,8 @@ function elevAce() {
             method: "GET",
         })
         .then(function (data) {
-            console.log(lakeName)
+            console.log(lakeName);
+            seaLevelDelta = lakePool;
             // Set lake title on page
             $("#lakeTitle").append(bodyOfWaterName);
             $("#lakeSponsor").append(bodyOfWaterName);
@@ -291,7 +309,7 @@ function elevAce() {
             $("#currentDate").append(currentDate);
             $("#currentLevel").append(currentElev);
             $("#currentDelta").append(currentDelta);
-            $("#currentNormal").append(normalPool);
+            $("#currentNormal").append("normal pool " + seaLevelDelta);
 
 
             // Find first element in USGS data in which the time value that is at the top of the hour
@@ -357,19 +375,28 @@ function dataTVA(data) {
         })
         .then(function (data) {
             console.log(lakeName)
+
+            if (seaLevelDelta !== 0)
+                elevationAdjust = (parseFloat(data[0].Average) + seaLevelDelta).toFixed(2);
+            else {
+                if (lakePool == 0)
+                    seaLevelDelta = lakePool;
+                elevationAdjust = data[0].level;
+            }
             // Set lake title on page
             $("#lakeTitle").append(bodyOfWaterName);
             $("#lakeSponsor").append(bodyOfWaterName);
             $("#lakeFeaturedTournament").append(bodyOfWaterName);
 
-            let currentDelta = (data[0].level - lakePool).toFixed(2);
+            //let currentDelta = (data[0].level - lakePool).toFixed(2);
+            let currentDelta = (elevationAdjust - lakePool).toFixed(2);
 
             // Set date, time and elev on page
             $("#currentTime").append(data[0].date);
             $("#currentDate").append(data[0].time);
-            $("#currentLevel").append(data[0].level);
+            $("#currentLevel").append(elevationAdjust);
             $("#currentDelta").append(currentDelta);
-            $("#currentNormal").append(normalPool);
+            $("#currentNormal").append("normal pool " + lakePool);
 
 
             // Create our increment and loop through each value
@@ -382,6 +409,10 @@ function dataTVA(data) {
                 let date = element.date;
                 let time = element.time;
                 let flow = element.outflow;
+
+                // adjust the elev for lakes with data relative to full pool (not from sealevel))
+                if (seaLevelDelta !== 0)
+                    elev = (parseFloat(data[j].Average) + seaLevelDelta).toFixed(2);
 
                 // Create the HTML Well (Section) and Add the table content for each reserved table
                 var lakeSection = $("<tr>");
@@ -400,7 +431,7 @@ function dataTVA(data) {
         })
 }
 
-// Function to make elev TVA call
+// Function to make elev Duke call
 function dataDuke(data) {
     $.ajax({
             url: "/api/duke",
@@ -412,31 +443,50 @@ function dataDuke(data) {
         })
         .then(function (data) {
             console.log(lakeName)
+            // adjust the elev for lakes with data relative to full pool (not from sealevel))
+            
+            let skipToValidData = 0;
+
+            while (isNaN(data[skipToValidData].Average)) {
+                skipToValidData++;
+            }
+            if (seaLevelDelta !== 0)
+                elevationAdjust = (parseFloat(data[skipToValidData].Average) + seaLevelDelta).toFixed(2);
+            else {
+                if (lakePool == 0)
+                    seaLevelDelta = lakePool;
+                elevationAdjust = data[skipToValidData].level
+            }
             // Set lake title on page
             $("#lakeTitle").append(bodyOfWaterName);
             $("#lakeSponsor").append(bodyOfWaterName);
             $("#lakeFeaturedTournament").append(bodyOfWaterName);
 
-            let currentDelta = (data[0].Average - lakePool).toFixed(2);
+            //let currentDelta = (data[0].Average - lakePool).toFixed(2);
+            let currentDelta = (elevationAdjust - lakePool).toFixed(2);
 
             // Set date, time and elev on page
-            $("#currentTime").append(data[0].Date);
-            $("#currentDate").append(data[0].time);
-            $("#currentLevel").append(data[0].Average);
+            $("#currentTime").append(data[skipToValidData].Date);
+            $("#currentDate").append(data[skipToValidData].time);
+            $("#currentLevel").append(elevationAdjust);
             $("#currentDelta").append(currentDelta);
-            $("#currentNormal").append(normalPool);
+            $("#currentNormal").append("normal pool " + lakePool);
 
 
             // Create our increment and loop through each value
             // For each value create our associated table html
             let i = 0;
-            for (j = 1; j < data.length; j++) {
+            for (j = skipToValidData; j < data.length; j++) {
                 let element = data[j];
                 let elev = element.Average;
 
                 let date = element.Date;
                 let time = "";
                 let flow = "";
+
+                // adjust the elev for lakes with data relative to full pool (not from sealevel))
+                if (seaLevelDelta !== 0)
+                    elev = (parseFloat(data[j].Average) + seaLevelDelta).toFixed(2);
 
                 // Create the HTML Well (Section) and Add the table content for each reserved table
                 var lakeSection = $("<tr>");
@@ -506,7 +556,7 @@ console.log('lakeName', lakeName);
 switch (lakeName) {
     case "kerr":
         lakePool = 300;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Kerr Lake"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02079490&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
         elevAce();
@@ -514,7 +564,7 @@ switch (lakeName) {
 
     case "falls":
         lakePool = 252;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Falls Lake"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02087182&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all";
         flowURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02087183&period=PT96H&parameterCd=00060&siteType=ST&siteStatus=all";
@@ -523,7 +573,7 @@ switch (lakeName) {
 
     case "jordan":
         lakePool = 216.5;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Jordan Lake"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02098197&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
         elevAce();
@@ -531,8 +581,7 @@ switch (lakeName) {
 
     case "roanoke":
         lakePool = 0.0;
-        normalPool = " (normal pool " + lakePool + ")"
-        normalPool = " (sealevel)"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Roanoke River"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=0208114150&period=PT96H&parameterCd=00065&siteType=ST&siteStatus=all";
         flowURL = "none"
@@ -541,7 +590,7 @@ switch (lakeName) {
 
     case "murray":
         lakePool = 360.0;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Lake Murray"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02168500&period=PT96H&parameterCd=00062&siteType=ST&siteStatus=all";
         flowURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02168504&period=PT96H&parameterCd=00060&siteType=ST&siteStatus=all";
@@ -551,7 +600,7 @@ switch (lakeName) {
 
     case "hartwell":
         lakePool = 660.0;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Lake Hartwell"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02187010&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
         flowURL = "none"
@@ -560,7 +609,7 @@ switch (lakeName) {
 
     case "clarkshill":
         lakePool = 330.0;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Clarks Hill"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02193900&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
         flowURL = "none"
@@ -569,7 +618,7 @@ switch (lakeName) {
 
     case "santee1":
         lakePool = 79.0;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Santee (Marion)"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02171000&period=PT96H&parameterCd=00062&siteType=ST&siteStatus=all";
         flowURL = "none"
@@ -578,7 +627,7 @@ switch (lakeName) {
 
     case "santee2":
         lakePool = 79.0;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Santee (Moultrie)"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02172000&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
         flowURL = "none"
@@ -587,7 +636,7 @@ switch (lakeName) {
 
     case "james":
         lakePool = 0.0;
-        normalPool = " (sealevel)"
+        seaLevelDelta = 0;
         bodyOfWaterName = "James River"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02042770&period=PT96H&parameterCd=62620&siteType=ST&siteStatus=all";
         flowURL = "none"
@@ -596,7 +645,7 @@ switch (lakeName) {
 
     case "potomac":
         lakePool = 0.0;
-        normalPool = " (sealevel)"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Potomac River (Alexandria)"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=0165258890&period=PT96H&parameterCd=62620&siteType=ST&siteStatus=all";
         flowURL = "none"
@@ -605,7 +654,7 @@ switch (lakeName) {
 
     case "lanier":
         lakePool = 1071.0;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Lake Lanier"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02334400&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
         flowURL = "none"
@@ -614,7 +663,7 @@ switch (lakeName) {
 
     case "westpoint":
         lakePool = 635.0;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "West Point"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02339400&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
         flowURL = "none"
@@ -623,7 +672,7 @@ switch (lakeName) {
 
     case "fork":
         lakePool = 403.0;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Lake Fork"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08018800&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
         flowURL = "none"
@@ -632,7 +681,7 @@ switch (lakeName) {
 
     case "toledobend":
         lakePool = 172.0;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Toledo Bend"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08025350&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
         flowURL = "none"
@@ -641,7 +690,7 @@ switch (lakeName) {
 
     case "rayburn":
         lakePool = 164.4;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Sam Rayburn"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08039300&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
         flowURL = "none"
@@ -650,7 +699,7 @@ switch (lakeName) {
 
     case "monroe":
         lakePool = 538.0;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Monroe"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03372400&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
         flowURL = "none"
@@ -659,7 +708,7 @@ switch (lakeName) {
 
     case "patoka":
         lakePool = 536.0;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Patoka"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03374498&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
         flowURL = "none"
@@ -668,7 +717,7 @@ switch (lakeName) {
 
     case "shenango":
         lakePool = 894.67;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Shenango"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03103400&period=PT96H&parameterCd=62615&siteType=LK&siteStatus=all";
         flowURL = "none"
@@ -677,7 +726,7 @@ switch (lakeName) {
 
     case "curwensville":
         lakePool = 1162.0;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Curwensville"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=01541180&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
         flowURL = "none"
@@ -686,7 +735,7 @@ switch (lakeName) {
 
     case "raystown":
         lakePool = 786.0;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Raystown"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=01563100&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
         flowURL = "none"
@@ -695,7 +744,7 @@ switch (lakeName) {
 
     case "champlain":
         lakePool = 95.5;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Champlain"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04294413&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
         flowURL = "none"
@@ -703,8 +752,8 @@ switch (lakeName) {
         break;
 
     case "winnebago":
-        lakePool = 0.0; // 746ft but data reported as a delta to 0.
-        normalPool = " (746.0)"
+        lakePool = 746.0; // 746ft but data reported as a delta to full pool.
+        seaLevelDelta = 746.0;
         bodyOfWaterName = "Winnebago"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04082500&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all";
         flowURL = "none"
@@ -712,26 +761,26 @@ switch (lakeName) {
         break;
 
     case "geneva":
-        lakePool = 0.0; // 879ft but data reported as a delta to 0.
-        normalPool = " (normal pool 879.0)"
+        lakePool = 879.0; // 879ft but data reported as a delta to full pool.
+        seaLevelDelta = 879.0;
         bodyOfWaterName = "Geneva"
-        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04082500&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all";
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=423525088260400period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all";
         flowURL = "none"
         elevUSGS();
         break;
 
     case "havasu":
-        lakePool = 0.0; // 445ft but data reported as a delta to 0.
-        normalPool = " (normal pool 445.0)"
+        lakePool = 445.0; // 445ft but data reported as a delta to full pool.
+        seaLevelDelta = 445.0;
         bodyOfWaterName = "Havasu"
-        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=09427500&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all";
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=423525088260400&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all";
         flowURL = "none"
         elevUSGS();
         break;
 
     case "clear":
-        lakePool = 0.0; // 1329ft but data reported as a delta to 0.
-        normalPool = " (normal pool 1329.0)"
+        lakePool = 1329.0; // 1329ft but data reported as a delta to full pool
+        seaLevelDelta = 1329.0;
         bodyOfWaterName = "Clear"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=11450000&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all";
         flowURL = "none"
@@ -739,8 +788,8 @@ switch (lakeName) {
         break;
 
     case "mojave":
-        lakePool = 0.0; // 647ft but data reported as a delta to 0.
-        normalPool = " (normal pool 647.0)"
+        lakePool = 647.0; // 647ft but data reported as a delta to 0.
+        seaLevelDelta = 547;
         bodyOfWaterName = "Mojave"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=09422500&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all";
         flowURL = "none"
@@ -749,7 +798,7 @@ switch (lakeName) {
 
     case "wildhorse":
         lakePool = 6208.0;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Wild Horse"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=13174000&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
         flowURL = "none"
@@ -758,7 +807,7 @@ switch (lakeName) {
 
     case "trinidad":
         lakePool = 6300.0;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Trinidad"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07124400&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
         flowURL = "none"
@@ -767,7 +816,7 @@ switch (lakeName) {
 
     case "riflegap":
         lakePool = 6000.0;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Rifle Gap"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=09091900&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
         flowURL = "none"
@@ -776,7 +825,7 @@ switch (lakeName) {
 
     case "minnetonka":
         lakePool = 929.0;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Minnetonka"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=05289000&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all";
         flowURL = "none"
@@ -784,8 +833,8 @@ switch (lakeName) {
         break;
 
     case "millelacs":
-        lakePool = 0.0; //1251ft reported as a delta to 0
-        normalPool = " (normal pool 1251.0)"
+        lakePool = 1251.0; //1251ft reported as a delta to 0
+        seaLevelDelta = 1151.0;
         bodyOfWaterName = "Mille Lacs"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=05284000&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all";
         flowURL = "none"
@@ -794,7 +843,7 @@ switch (lakeName) {
 
     case "clinton":
         lakePool = 875.50;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Clinton"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06891478&period=PT95H&parameterCd=62614&siteType=LK&siteStatus=all";
         flowURL = "none"
@@ -803,7 +852,7 @@ switch (lakeName) {
 
     case "perry":
         lakePool = 891.50;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Perry"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06890898&period=PT95H&parameterCd=62614&siteType=LK&siteStatus=all";
         flowURL = "none"
@@ -812,7 +861,7 @@ switch (lakeName) {
 
     case "pomona":
         lakePool = 974.0;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Pomona"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06912490&period=PT95H&parameterCd=62614&siteType=LK&siteStatus=all";
         flowURL = "none"
@@ -821,7 +870,7 @@ switch (lakeName) {
 
     case "malvern":
         lakePool = 1039.67;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Malvern"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06910997&period=PT95H&parameterCd=62614&siteType=LK&siteStatus=all";
         flowURL = "none"
@@ -830,7 +879,7 @@ switch (lakeName) {
 
     case "ellsworth":
         lakePool = 1232.5;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "ellsworth"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07308990&period=PT95H&parameterCd=00065&siteType=LK&siteStatus=all";
         flowURL = "none"
@@ -839,7 +888,7 @@ switch (lakeName) {
 
     case "hudson":
         lakePool = 619.0;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Hudson"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07191400&period=PT95H&parameterCd=00065&siteType=LK&siteStatus=all";
         flowURL = "none"
@@ -848,7 +897,7 @@ switch (lakeName) {
 
     case "lawtonka":
         lakePool = 1343.6;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Lawtonka"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07309500&period=PT95H&parameterCd=00065&siteType=LK&siteStatus=all";
         flowURL = "none"
@@ -857,7 +906,7 @@ switch (lakeName) {
 
     case "cherokees":
         lakePool = 739.0;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Lake O' the Cherokees"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07190000&period=PT95H&parameterCd=00065&siteType=LK&siteStatus=all";
         flowURL = "none"
@@ -866,7 +915,7 @@ switch (lakeName) {
 
     case "eucha":
         lakePool = 778.0;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Eucha"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07191285&period=PT95H&parameterCd=00065&siteType=LK&siteStatus=all";
         flowURL = "none"
@@ -875,7 +924,7 @@ switch (lakeName) {
 
     case "mcghee":
         lakePool = 577.0;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "McGhee Creek"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07333900&period=PT95H&parameterCd=00065&siteType=LK&siteStatus=all";
         flowURL = "none"
@@ -884,7 +933,7 @@ switch (lakeName) {
 
     case "texoma":
         lakePool = 619.41;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Texoma"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07331455&period=PT95H&parameterCd=00065&siteType=LK&siteStatus=all";
         flowURL = "none"
@@ -892,8 +941,8 @@ switch (lakeName) {
         break;
 
     case "westokoboji":
-        lakePool = 0.0; // 1398.0ft Level reported as a delta to 0 by USGS
-        normalPool = " (normal pool 1398.0)"
+        lakePool = 1398.0; // 1398.0ft Level reported as a delta to full pool by USGS
+        seaLevelDelta = 1398.0;
         bodyOfWaterName = "West Okoboji"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06604200&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all";
         flowURL = "none"
@@ -902,7 +951,7 @@ switch (lakeName) {
 
     case "seminole":
         lakePool = 78.0;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Seminole"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02357500&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
         flowURL = "none"
@@ -911,7 +960,7 @@ switch (lakeName) {
 
     case "guntersville": // Alabama
         lakePool = 594.0;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Guntersville"
         elevURL = "http://r7j8v4x4.map2.ssl.hwcdn.net/GUH_O.xml?1545499372503";
         flowURL = "none"
@@ -920,7 +969,7 @@ switch (lakeName) {
 
     case "chickamauga": // Tennessee
         lakePool = 682.0;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Chickamauga"
         elevURL = "http://r7j8v4x4.map2.ssl.hwcdn.net/CHH_O.xml?1545581570023";
         flowURL = "none"
@@ -929,7 +978,7 @@ switch (lakeName) {
 
     case "pickwick": // Alabama
         lakePool = 414.0;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Pickwick"
         elevURL = "http://r7j8v4x4.map2.ssl.hwcdn.net/PKH_O.xml?1545582182415";
         flowURL = "none"
@@ -938,7 +987,7 @@ switch (lakeName) {
 
     case "dalehollow": // Tennessee
         lakePool = 651.0;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Dale Hollow"
         elevURL = "http://r7j8v4x4.map2.ssl.hwcdn.net/DHH_O.xml?1545582944732";
         flowURL = "none"
@@ -947,7 +996,7 @@ switch (lakeName) {
 
     case "kentucky": // Kentucky
         lakePool = 359.0;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Kentucky"
         elevURL = "http://r7j8v4x4.map2.ssl.hwcdn.net/KYH_O.xml?1545580918909";
         flowURL = "none"
@@ -956,7 +1005,7 @@ switch (lakeName) {
 
     case "percypriest": // Tennessee
         lakePool = 489.0;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Percy Priest"
         elevURL = "http://r7j8v4x4.map2.ssl.hwcdn.net/JPH_O.xml?1545583512033";
         flowURL = "none"
@@ -965,7 +1014,7 @@ switch (lakeName) {
 
     case "barkley": // Kentucky
         lakePool = 358.0;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Barkley"
         elevURL = "http://r7j8v4x4.map2.ssl.hwcdn.net/BAH_O.xml?1545583937120";
         flowURL = "none"
@@ -974,7 +1023,7 @@ switch (lakeName) {
 
     case "nickajack": // Tennessee
         lakePool = 692.0;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Nickajack"
         elevURL = "http://r7j8v4x4.map2.ssl.hwcdn.net/NJH_O.xml?1545584741938";
         flowURL = "none"
@@ -983,88 +1032,88 @@ switch (lakeName) {
 
     case "wheeler": // Alabama
         lakePool = 552.28;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Wheeler"
         elevURL = "http://r7j8v4x4.map2.ssl.hwcdn.net/WEH_O.xml?1545585488936";
         flowURL = "none"
         dataTVA();
         break;
 
-        case "wilson": // Alabama
+    case "wilson": // Alabama
         lakePool = 509.0;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Wilson"
         elevURL = "http://r7j8v4x4.map2.ssl.hwcdn.net/WLH_O.xml?1545585733788";
         flowURL = "none"
         dataTVA();
         break;
 
-        case "wattsbar": // Alabama
+    case "wattsbar": // Alabama
         lakePool = 741.0;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Watts Bar"
         elevURL = "http://r7j8v4x4.map2.ssl.hwcdn.net/WBH_O.xml?1545586001367";
         flowURL = "none"
         dataTVA();
         break;
 
-        case "douglas": // Tennessee
+    case "douglas": // Tennessee
         lakePool = 990.0;
-        normalPool = " (normal pool " + lakePool + ")"
+        seaLevelDelta = 0;
         bodyOfWaterName = "Douglas"
         elevURL = "http://r7j8v4x4.map2.ssl.hwcdn.net/DGH_O.xml?1545588002667";
         flowURL = "none"
         dataTVA();
         break;
 
-        case "norman": // North Carolina
-        lakePool = 0.0;   // 1398.0ft Level reported as a delta to 0 by Duke Energy
-        normalPool = " (normal pool " + lakePool + ")"
+    case "norman": // North Carolina
+        lakePool = 1398.0; // 1398.0ft Level reported as a delta to 0 by Duke Energy
+        seaLevelDelta = 1298.0
         bodyOfWaterName = "Norman"
         elevURL = "https://lakes.duke-energy.com/Data/Detail/3_Month/4.txt";
         flowURL = "none"
         dataDuke();
         break;
 
-        case "wylie": // North Carolina
-        lakePool = 0.0;   // 600.0ft Level reported as a delta to 0 by Duke Energy
-        normalPool = " (normal pool " + lakePool + ")"
+    case "wylie": // North Carolina
+        lakePool = 500.0; // 600.0ft Level reported as a delta to 0 by Duke Energy
+        seaLevelDelta = 400.0;
         bodyOfWaterName = "Wylie"
         elevURL = "https://lakes.duke-energy.com/Data/Detail/3_Month/18.txt";
         flowURL = "none"
         dataDuke();
         break;
 
-        case "rhodhiss": // North Carolina
-        lakePool = 0.0;   // 995.1.0ft Level reported as a delta to 0 by Duke Energy
-        normalPool = " (normal pool " + lakePool + ")"
+    case "rhodhiss": // North Carolina
+        lakePool = 985.0; // 995.1.0ft Level reported as a delta to 0 by Duke Energy
+        seaLevelDelta = 885.0;
         bodyOfWaterName = "Rhodhiss"
         elevURL = "https://lakes.duke-energy.com/Data/Detail/3_Month/14.txt";
         flowURL = "none"
         dataDuke();
         break;
 
-        case "jameslake": // North Carolina
-        lakePool = 0.0;   // 1200.0ft Level reported as a delta to 0 by Duke Energy
-        normalPool = " (normal pool " + lakePool + ")"
+    case "jameslake": // North Carolina
+        lakePool = 1200.0; // 1200.0ft Level reported as a delta to 0 by Duke Energy
+        seaLevelDelta = 1100;
         bodyOfWaterName = "James"
         elevURL = "https://lakes.duke-energy.com/Data/Detail/3_Month/2.txt";
         flowURL = "none"
         dataDuke();
         break;
 
-        case "hickory": // North Carolina
-        lakePool = 0.0;   // 935.0ft Level reported as a delta to 0 by Duke Energy
-        normalPool = " (normal pool " + lakePool + ")"
+    case "hickory": // North Carolina
+        lakePool = 935.0; // 935.0ft Level reported as a delta to 0 by Duke Energy
+        seaLevelDelta = 835.0;
         bodyOfWaterName = "Hickory"
         elevURL = "https://lakes.duke-energy.com/Data/Detail/3_Month/13.txt";
         flowURL = "none"
         dataDuke();
         break;
 
-        case "wateree": // North Carolina
-        lakePool = 0.0;   // 1200.0ft Level reported as a delta to 0 by Duke Energy
-        normalPool = " (normal pool " + lakePool + ")"
+    case "wateree": // North Carolina
+        lakePool = 225.0; // 225.0ft Level reported as a delta to 0 by Duke Energy
+        seaLevelDelta = 125.0
         bodyOfWaterName = "Wateree"
         elevURL = "https://lakes.duke-energy.com/Data/Detail/3_Month/17.txt";
         flowURL = "none"
