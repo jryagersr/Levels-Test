@@ -122,7 +122,7 @@ Anglers		Team Trail		19-05/04		Smith Mountain		Parkway			VA	Anglers Choice
 CATT		Santee Cooper		19-05/04		Santee Cooper		John C Land		SC	Qualifier 7
 CATT		Cooper River		19-05/04		Cooper Rvr		Cypress Gardens		SC	Final
 PBC		Spring Team		19-05/11		Jordan			Farrington		NC	Piedmont Bass Classic
-CATT		Lake Wylie		19-05/11		Wylie			Buster Boyd		NC-VA	Final
+CATT		Lake Wylie		19-05/11		Wylie			Buster Boyd		NC-SC	Final
 CATT		Santee Cooper		19-05/11		Santee Cooper		John C Land		SC	Final
 CATT		Wateree Open		19-05/11		Wateree			Clearwater		SC	Open 8
 CATT		Hickory			19-05/11		Hickory			Whittenburg		NC	Qualifier 4
@@ -132,7 +132,7 @@ BFL		Piedmont		19-05/11		Smith Mountain		Parkway			VA	FLW
 CATT		Old North		19-05/18		Jordan			Farrington		NC	Gold 5
 CATT		Yadkin			19-05/18		High Rock		Tamarac			NC	Qualifier 5
 CATT		Waccamaw		19-05/18		Waccamaw Rvr		Bucksport		SC	Qualifier 1
-BFL		S Carolina		19-05/18		Wylie			Buster Boyds		NC-VA	FLW
+BFL		S Carolina		19-05/18		Wylie			Buster Boyds		NC-SC	FLW
 ABA		VA Area 8		19-05/18		Kerr			NutBush			NC	T3
 CATT		Yadkin			19-05/25		Tuckertown		Flat Rock		NC	Qualifier 6
 CATT		Norman			19-05/25		Norman			Pinnacle		NC	Qualifier 8
