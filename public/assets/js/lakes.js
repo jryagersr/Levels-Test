@@ -91,7 +91,6 @@ for (var i = 0; i < states.length; i++) {
     stateOption.attr("id", "option-" + i + 1);
     $("#optionWell").append(stateOption);
     $("#option-" + i + 1).append(states[i].state);
-    i++;
 };
 
 // When an option is selected and user presses view button
