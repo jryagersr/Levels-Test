@@ -133,7 +133,7 @@ $("#clearSubmit").on("click", function (e) {
     $("#filterSubmit").show();
     $("#addFilterSubmit").hide();
     $("#newFilterSubmit").hide();
-    currentBatch = [];
+    currentBatch = txBatch;
     displayData(txBatch);
     $("#filterWrapper").toggle();
     filtered = false;

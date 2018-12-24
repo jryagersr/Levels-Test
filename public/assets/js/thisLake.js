@@ -589,6 +589,10 @@ switch (lakeRoute) {
         elevAce();
         break;
 
+    case "highrock": // North Carolina
+        elevCUBE(); 
+        break;
+
     case "roanoke": // North Carolina
         lakePool = 0.0;
         seaLevelDelta = 0;
