@@ -17,7 +17,6 @@ $("#currentLevel").empty();
 $("#currentDateTime").empty();
 $("#lakeSection").empty();
 
-
 // Pull the lake name from the end of the current URL
 let currentURL = window.location.href;
 let parsedURL = window.location.href.split("/");

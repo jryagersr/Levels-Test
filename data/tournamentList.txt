@@ -91,7 +91,7 @@ CATT		Wateree			19-04/06		Wateree			Clearwater		SC	Qualifier 8
 CATT		Wateree Open		19-04/06		Wateree			Clearwater		SC	Open 6
 CATT		Cooper River		19-04/06		Cooper Rvr		Cypress Gardens		SC	Qualifier 4
 BFL		Shenandoah		19-04/06		Kerr			Nutbush			NC-VA	FLW
-CATT		Lake Wylie		19-04/13		Wylie			Buster Boyd		NC-VA	Qualifier 4
+CATT		Lake Wylie		19-04/13		Wylie			Buster Boyd		NC-SC	Qualifier 4
 CATT		Savannah River		19-04/20		Savannah Rvr		Stokes Bluff		SC	Final
 Anglers		Team Trail		19-04/07		Kerr			Occonneechee		NC-VA	Anglers Choice
 PBC		Spring Team		19-04/13		Jordan			Farrington		NC	Piedmont Bass Classic
