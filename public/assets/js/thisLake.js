@@ -49,7 +49,8 @@ function elevUSGS() {
                 if (lakePool !== 0)
                     elevationAdjust = dataValues[0].value;
                 else elevationAdjust = dataValues[0].value;
-                seaLevelDelta = lakePool;
+                //if (!(lakeRoute == "jordan" || lakeRoute == "kerr" || lakeRoute == "buggsisland") )
+                // seaLevelDelta = lakePool;
             }
 
             // Set lake title on page
@@ -68,7 +69,7 @@ function elevUSGS() {
             $("#currentDate").append(currentDate);
             $("#currentLevel").append(currentElev);
             $("#currentDelta").append(currentDelta);
-            $("#currentNormal").append("normal pool " + seaLevelDelta);
+            $("#currentNormal").append("normal pool " + lakePool);
 
             // Find first time value that is at the top of the hour
             switch (dataValues[0].dateTime.substring(14, 16)) {
@@ -195,7 +196,7 @@ function flowACE(dataTables) {
                     break;
 
                 default:
-                if (lakeRoute == "jordan" || lakeRoute == "kerr" || lakeRoute == "buggsisland") {
+                    if (lakeRoute == "jordan" || lakeRoute == "kerr" || lakeRoute == "buggsisland") {
                         alert("Check ACE Flow Time");
                     } else j = 0;
 
@@ -263,7 +264,7 @@ function flowACE(dataTables) {
                             dataIsLinedUpByTime = true;
                         }
                     }
-                } else if (!aceTimeGreater) {
+                } else if (aceTimeGreater) {
                     $("#lakeWell-" + lakewellIndex + 1).append("<td>" + "N/A" + "</td>"); //Append N/A as the Flow Value to the row for the missing data
                     lakewellIndex++;
                     aceIndex--;
@@ -332,7 +333,7 @@ function elevAce() {
                     break;
 
                 default:
-                if (lakeRoute == "jordan" || lakeRoute == "kerr" || lakeRoute == "buggsisland") {
+                    if (lakeRoute == "jordan" || lakeRoute == "kerr" || lakeRoute == "buggsisland") {
                         alert("Check Ace Elev Time ")
                     } else j = 0;
             }
@@ -663,8 +664,7 @@ switch (lakeRoute) {
         elevUSGS();
         break;
 
-    case "lanier":
-        Georgia
+    case "lanier": //Georgia
         lakePool = 1071.0;
         seaLevelDelta = 0;
         bodyOfWaterName = "Lake Lanier"
@@ -776,7 +776,7 @@ switch (lakeRoute) {
         lakePool = 879.0; // 879ft but data reported as a delta to full pool.
         seaLevelDelta = 879.0;
         bodyOfWaterName = "Geneva"
-        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=423525088260400period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all";
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=423525088260400&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all";
         flowURL = "none"
         elevUSGS();
         break;
