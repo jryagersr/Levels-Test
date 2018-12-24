@@ -400,6 +400,61 @@ function dataTVA(data) {
         })
 }
 
+// Function to make elev TVA call
+function dataDuke(data) {
+    $.ajax({
+            url: "/api/duke",
+            method: "GET",
+            data: {
+                dukeDataURL: elevURL,
+                dukeLakeName: bodyOfWaterName
+            }
+        })
+        .then(function (data) {
+            console.log(lakeName)
+            // Set lake title on page
+            $("#lakeTitle").append(bodyOfWaterName);
+            $("#lakeSponsor").append(bodyOfWaterName);
+            $("#lakeFeaturedTournament").append(bodyOfWaterName);
+
+            let currentDelta = (data[0].Average - lakePool).toFixed(2);
+
+            // Set date, time and elev on page
+            $("#currentTime").append(data[0].Date);
+            $("#currentDate").append(data[0].time);
+            $("#currentLevel").append(data[0].Average);
+            $("#currentDelta").append(currentDelta);
+            $("#currentNormal").append(normalPool);
+
+
+            // Create our increment and loop through each value
+            // For each value create our associated table html
+            let i = 0;
+            for (j = 1; j < data.length; j++) {
+                let element = data[j];
+                let elev = element.Average;
+
+                let date = element.Date;
+                let time = "";
+                let flow = "";
+
+                // Create the HTML Well (Section) and Add the table content for each reserved table
+                var lakeSection = $("<tr>");
+                lakeSection.addClass("well");
+                lakeSection.attr("id", "lakeWell-" + i + 1);
+                $("#lakeSection").append(lakeSection);
+
+                // Append the data values to the table row
+
+                $("#lakeWell-" + i + 1).append("<td>" + date + "</td>");
+                $("#lakeWell-" + i + 1).append("<td>" + time + "</td>");
+                $("#lakeWell-" + i + 1).append("<td>" + elev + "</td>");
+                $("#lakeWell-" + i + 1).append("<td>" + flow + "</td>");
+                i++;
+            }
+        })
+}
+
 
 // Function to make elev CUBE call
 function elevCUBE() {
@@ -960,6 +1015,60 @@ switch (lakeName) {
         elevURL = "http://r7j8v4x4.map2.ssl.hwcdn.net/DGH_O.xml?1545588002667";
         flowURL = "none"
         dataTVA();
+        break;
+
+        case "norman": // North Carolina
+        lakePool = 0.0;   // 1398.0ft Level reported as a delta to 0 by Duke Energy
+        normalPool = " (normal pool " + lakePool + ")"
+        bodyOfWaterName = "Norman"
+        elevURL = "https://lakes.duke-energy.com/Data/Detail/3_Month/4.txt";
+        flowURL = "none"
+        dataDuke();
+        break;
+
+        case "wylie": // North Carolina
+        lakePool = 0.0;   // 600.0ft Level reported as a delta to 0 by Duke Energy
+        normalPool = " (normal pool " + lakePool + ")"
+        bodyOfWaterName = "Wylie"
+        elevURL = "https://lakes.duke-energy.com/Data/Detail/3_Month/18.txt";
+        flowURL = "none"
+        dataDuke();
+        break;
+
+        case "rhodhiss": // North Carolina
+        lakePool = 0.0;   // 995.1.0ft Level reported as a delta to 0 by Duke Energy
+        normalPool = " (normal pool " + lakePool + ")"
+        bodyOfWaterName = "Rhodhiss"
+        elevURL = "https://lakes.duke-energy.com/Data/Detail/3_Month/14.txt";
+        flowURL = "none"
+        dataDuke();
+        break;
+
+        case "jameslake": // North Carolina
+        lakePool = 0.0;   // 1200.0ft Level reported as a delta to 0 by Duke Energy
+        normalPool = " (normal pool " + lakePool + ")"
+        bodyOfWaterName = "James"
+        elevURL = "https://lakes.duke-energy.com/Data/Detail/3_Month/2.txt";
+        flowURL = "none"
+        dataDuke();
+        break;
+
+        case "hickory": // North Carolina
+        lakePool = 0.0;   // 935.0ft Level reported as a delta to 0 by Duke Energy
+        normalPool = " (normal pool " + lakePool + ")"
+        bodyOfWaterName = "Hickory"
+        elevURL = "https://lakes.duke-energy.com/Data/Detail/3_Month/13.txt";
+        flowURL = "none"
+        dataDuke();
+        break;
+
+        case "wateree": // North Carolina
+        lakePool = 0.0;   // 1200.0ft Level reported as a delta to 0 by Duke Energy
+        normalPool = " (normal pool " + lakePool + ")"
+        bodyOfWaterName = "Wateree"
+        elevURL = "https://lakes.duke-energy.com/Data/Detail/3_Month/17.txt";
+        flowURL = "none"
+        dataDuke();
         break;
 
 

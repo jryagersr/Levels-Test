@@ -384,4 +384,39 @@ module.exports = function (app) {
         });
     })
   });
-};
+  //Start of dukeData
+  // Route to retrieve DUKE data
+  app.get("/api/duke", function (request, response) {
+    let dukeURL = request.query.dukeDataURL;
+    let dukeLakeName = request.query.dukeLakeName;
+
+    getData(dukeLakeName, dukeURL, function (error, data) {
+      if (error) {
+        response.send(error);
+        return;
+      } else {
+        response.json(data.reverse());
+      }
+    });
+
+    // Function to pull data
+    function getData(lakeName, newUrl, callback) {
+      var request = require("request");
+      var data = [];
+      var options = {
+        url: newUrl,
+        type: "xml"
+      }
+      request(options, function (error, response, body) {
+        if (error) {
+          callback(error);
+        }
+        let dukeLakes = JSON.parse(body);
+
+        callback(null, dukeLakes);
+      });
+    }
+  });
+
+  //End of dukeData
+}; // End of module.exports
