@@ -186,7 +186,7 @@ module.exports = function (app) {
     var request = require("request");
 
     // Make request for cub carolinas site, returns html
-    request("http://cubecarolinas.com/lake-levels/", function (error, response, html) {
+    request("http://ww2.cubecarolinas.com/lake/tabs.php", function (error, response, html) {
 
       // Load the HTML into cheerio and save it to a variable
       // '$' becomes a shorthand for cheerio's selector commands, much like jQuery's '$'
@@ -196,11 +196,9 @@ module.exports = function (app) {
 
       // With cheerio, find each <td> on the page
       // (i: iterator. element: the current element)
-      $("<td>").each(function (i, element) {
-
-        // Save the text of each <td>
-        var value = $(element).children().text();
-
+      $('td').each(function() {
+        console.log($(this).text())
+        var value = $(this).text();
         data.push(value);
         console.log(data);
       });

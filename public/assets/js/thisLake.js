@@ -17,7 +17,6 @@ $("#currentLevel").empty();
 $("#currentDateTime").empty();
 $("#lakeSection").empty();
 
-
 // Pull the lake name from the end of the current URL
 let currentURL = window.location.href;
 let parsedURL = window.location.href.split("/");
@@ -311,6 +310,7 @@ function elevAce() {
             $("#currentLevel").append(currentElev);
             $("#currentDelta").append(currentDelta);
             $("#currentNormal").append("normal pool " + seaLevelDelta);
+            $("#currentNormal").append("normal pool " + lakePool);
 
 
             // Find first element in USGS data in which the time value that is at the top of the hour
@@ -498,7 +498,6 @@ function dataDuke(data) {
                 $("#lakeSection").append(lakeSection);
 
                 // Append the data values to the table row
-
                 $("#lakeWell-" + i + 1).append("<td>" + date + "</td>");
                 $("#lakeWell-" + i + 1).append("<td>" + time + "</td>");
                 $("#lakeWell-" + i + 1).append("<td>" + elev + "</td>");
@@ -589,6 +588,10 @@ switch (lakeRoute) {
         bodyOfWaterName = "Jordan Lake"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02098197&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
         elevAce();
+        break;
+
+    case "highrock": // North Carolina
+        elevCUBE(); 
         break;
 
     case "roanoke": // North Carolina

@@ -312,7 +312,7 @@ var txData = [
                 txDetail: "Qualifier 4",
                 resultsLink: "undefined",
                 entryLink: ""
-            } {
+            }, {
                 organizer: "CATT",
                 trail: "Coastal (SC)",
                 date: "19-04/27",
@@ -1258,7 +1258,7 @@ var txData = [
                 txDetail: "Open 13",
                 resultsLink: "undefined",
                 entryLink: ""
-            } {
+            }, {
                 organizer: "CATT",
                 trail: "Wateree Open",
                 date: "19-07/20",
@@ -1620,7 +1620,8 @@ var txData = [
                 txDetail: "Bass For Cash Series",
                 resultsLink: "undefined",
                 entryLink: ""
-
+            },
+            {
                 organizer: "Collins",
                 trail: "BFCS",
                 date: "19-04/20",
@@ -1629,7 +1630,8 @@ var txData = [
                 txDetail: "Combined Boys & Girls Club",
                 resultsLink: "undefined",
                 entryLink: ""
-            
+            },
+            {
                 organizer: "Collins",
                 trail: "BFCS",
                 date: "19-05/04",
