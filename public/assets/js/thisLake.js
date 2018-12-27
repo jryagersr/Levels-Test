@@ -48,8 +48,6 @@ function elevUSGS() {
                 if (lakePool !== 0)
                     elevationAdjust = dataValues[0].value;
                 else elevationAdjust = dataValues[0].value;
-                //if (!(lakeRoute == "jordan" || lakeRoute == "kerr" || lakeRoute == "buggsisland") )
-                // seaLevelDelta = lakePool;
             }
 
             // Set lake title on page
@@ -279,29 +277,30 @@ function flowACE(dataTables) {
         });
 }
 
-// Function to make elev ACE call
-function elevAce() {
+
+
+
+ // Function to make elev ACE call
+function dataACE() {
     // API call for flow
     $.ajax({
             url: elevURL,
             method: "GET",
         })
         .then(function (data) {
-            console.log(lakeRoute);
             seaLevelDelta = lakePool;
             // Set lake title on page
             $("#lakeTitle").append(bodyOfWaterName);
             $("#lakeSponsor").append(bodyOfWaterName);
             $("#lakeFeaturedTournament").append(bodyOfWaterName);
             // Parse the json data return to find the values we want
-            let dataValues = data.value.timeSeries[0].values[0].value
-            // Reverse the order of our data so most recent date is first
-            dataValues.reverse();
+          
             // Get current Date, Time and Elev
-            let currentElev = parseFloat(dataValues[0].value).toFixed(2);
-            let splitTimeDate = dataValues[0].dateTime.split("T");
-            let currentDate = splitTimeDate[0];
-            let currentTime = splitTimeDate[1].substring(0, 5);
+            lastElevIndex = data[0].Elev.length - 1;
+            lastFlowIndex = data[1].Outflow.length - 1;
+            let currentElev = parseFloat(data[0].Elev[lastElevIndex].value).toFixed(2);
+            let currentDate = data[0].Elev[lastElevIndex].time.substring(0,7)+data[0].Elev[lastElevIndex].time.substring(9,12);
+            let currentTime = data[0].Elev[lastElevIndex].time.substring(11,17);
             let currentDelta = (currentElev - lakePool).toFixed(2);
 
             // Set date, time and elev on page
@@ -309,63 +308,38 @@ function elevAce() {
             $("#currentDate").append(currentDate);
             $("#currentLevel").append(currentElev);
             $("#currentDelta").append(currentDelta);
-            $("#currentNormal").append("normal pool " + seaLevelDelta);
             $("#currentNormal").append("normal pool " + lakePool);
 
 
-            // Find first element in USGS data in which the time value that is at the top of the hour
-            switch (dataValues[0].dateTime.substring(14, 16)) {
-
-                case "00":
-                    var j = 0;
-                    break;
-
-                case "15":
-                    var j = 1;
-                    break;
-
-                case "30":
-                    var j = 2
-                    break;
-
-                case "45":
-                    var j = 3
-                    break;
-
-                default:
-                    if (lakeRoute == "jordan" || lakeRoute == "kerr" || lakeRoute == "buggsisland") {
-                        alert("Check Ace Elev Time ")
-                    } else j = 0;
-            }
-
             // Create our increment and loop through each value
             // For each value create our associated table html
-            let i = 0;
-            for (j; j < dataValues.length; j += 4) {
-                let element = dataValues[j];
-                let elev = element.value;
+            i = lastFlowIndex;
+            for (j=lastElevIndex; j >= 0; j= j-4) {
+                let elev = data[0].Elev[j].value.toFixed(2);
 
-                let date = element.dateTime.substring(2, 10).replace('-', ' ');
-                let time = element.dateTime.substring(11, 16);
+                let date = data[0].Elev[j].time.substring(0,7 )+data[0].Elev[0].time.substring(9,11);
+                let time = data[0].Elev[j].time.substring(11,17);
+                let flow = data[1].Outflow[i].value;
 
                 // Create the HTML Well (Section) and Add the table content for each reserved table
                 var lakeSection = $("<tr>");
                 lakeSection.addClass("well");
-                lakeSection.attr("id", "lakeWell-" + i + 1);
+                lakeSection.attr("id", "lakeWell-" + j + 1);
                 $("#lakeSection").append(lakeSection);
 
                 // Append the data values to the table row
 
-                $("#lakeWell-" + i + 1).append("<td>" + date + "</td>");
-                $("#lakeWell-" + i + 1).append("<td>" + time + "</td>");
-                $("#lakeWell-" + i + 1).append("<td>" + elev + "</td>");
-                i++;
+                $("#lakeWell-" + j + 1).append("<td>" + date + "</td>");
+                $("#lakeWell-" + j + 1).append("<td>" + time + "</td>");
+                $("#lakeWell-" + j + 1).append("<td>" + elev + "</td>");
+                $("#lakeWell-" + j + 1).append("<td>" + flow + "</td>");
+                
+                i--;
             }
-            if (lakeRoute == "buggsisland")
-                lakeRoute = "kerr"; // Same data as Kerr
-            flowACE(dataValues);
+                        //flowACE(dataValues);
         })
 }
+
 // Function to make elev TVA call
 function dataTVA(data) {
     $.ajax({
@@ -554,14 +528,14 @@ $("#lakeTournaments").on("click", function (e) {
 // Switch to set our api urls based on lake name
 // Run corresponding api calls
 
-console.log('lakeRoute', lakeRoute);
 switch (lakeRoute) {
     case "kerr": //North Carolina
         lakePool = 300;
         seaLevelDelta = 0;
         bodyOfWaterName = "Kerr Lake"
-        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02079490&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
-        elevAce();
+        // elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02079490&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
+        elevURL = "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1749041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON";
+        dataACE();
         break;
 
     case "buggsisland": // Virginia (same as Kerr Lake, different name in VA)
@@ -586,8 +560,8 @@ switch (lakeRoute) {
         lakePool = 216.5;
         seaLevelDelta = 0;
         bodyOfWaterName = "Jordan Lake"
-        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02098197&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
-        elevAce();
+        elevURL = "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1743041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON";
+        dataACE();
         break;
 
     case "highrock": // North Carolina
@@ -1133,6 +1107,15 @@ switch (lakeRoute) {
         elevURL = "https://lakes.duke-energy.com/Data/Detail/3_Month/17.txt";
         flowURL = "none"
         dataDuke();
+        break;
+
+        case "minnehaha": // South Carolina
+        lakePool = 225.0; // 225.0ft Level reported as a delta to full pool -100 by Duke Energy
+        seaLevelDelta = 125.0
+        bodyOfWaterName = "Minnehaha"
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02236840&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS();
         break;
 
 
