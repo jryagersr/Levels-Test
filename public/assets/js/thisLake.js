@@ -313,8 +313,10 @@ function dataACE() {
 
             // Create our increment and loop through each value
             // For each value create our associated table html
-            i = lastFlowIndex;
-            for (j=lastElevIndex; j >= 0; j= j-4) {
+            let i = lastFlowIndex;
+            if (dailyACEData) jIncrement=1;
+            else jIncrement=4;
+            for (j=lastElevIndex; j >= 0; j= j-jIncrement) {
                 let elev = data[0].Elev[j].value.toFixed(2);
 
                 let date = data[0].Elev[j].time.substring(0,7 )+data[0].Elev[0].time.substring(9,11);
@@ -532,33 +534,28 @@ switch (lakeRoute) {
     case "kerr": //North Carolina
         lakePool = 300;
         seaLevelDelta = 0;
+        dailyACEData = false;
         bodyOfWaterName = "Kerr Lake"
         // elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02079490&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
         elevURL = "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1749041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON";
         dataACE();
         break;
 
-    case "buggsisland": // Virginia (same as Kerr Lake, different name in VA)
-        lakePool = 300;
-        seaLevelDelta = 0;
-        bodyOfWaterName = "Buggs Island"
-        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02079490&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
-        elevAce();
-        break;
-
-
     case "falls": //North Carolina
         lakePool = 252;
         seaLevelDelta = 0;
+        dailyACEData = false;
         bodyOfWaterName = "Falls Lake"
-        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02087182&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all";
-        flowURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02087183&period=PT96H&parameterCd=00060&siteType=ST&siteStatus=all";
-        elevUSGS();
+        //elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02087182&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all";
+        //flowURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02087183&period=PT96H&parameterCd=00060&siteType=ST&siteStatus=all";
+        elevURL = "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1745041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON";
+        dataACE();
         break;
 
     case "jordan": //North Carolina
         lakePool = 216.5;
         seaLevelDelta = 0;
+        dailyACEData = false;
         bodyOfWaterName = "Jordan Lake"
         elevURL = "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1743041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON";
         dataACE();
@@ -929,7 +926,7 @@ switch (lakeRoute) {
         elevUSGS();
         break;
 
-    case "westokoboji":
+    case "westokoboji": // Iowa
         lakePool = 1398.0; // 1398.0ft Level reported as a delta to full pool by USGS
         seaLevelDelta = 1398.0;
         bodyOfWaterName = "West Okoboji"
@@ -1116,6 +1113,24 @@ switch (lakeRoute) {
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02236840&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
         flowURL = "none"
         elevUSGS();
+        break;
+
+        case "tablerock": //Missouri
+        lakePool = 915.0;
+        seaLevelDelta = 0;
+        dailyACEData = false;
+        bodyOfWaterName = "Table Rock"
+        elevURL = "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1884150&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON";
+        dataACE();
+        break;
+
+        case "lakeoftheozarks": //Missouri
+        lakePool = 659.0;
+        seaLevelDelta = 0;
+        bodyOfWaterName = "Table Rock"
+        dailyACEData = true;
+        elevURL = "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=5043030&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON";
+        dataACE();
         break;
 
 
