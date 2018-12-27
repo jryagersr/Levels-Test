@@ -280,7 +280,7 @@ function flowACE(dataTables) {
 
 
 
- // Function to make elev ACE call
+// Function to make elev ACE call
 function dataACE() {
     // API call for flow
     $.ajax({
@@ -293,14 +293,22 @@ function dataACE() {
             $("#lakeTitle").append(bodyOfWaterName);
             $("#lakeSponsor").append(bodyOfWaterName);
             $("#lakeFeaturedTournament").append(bodyOfWaterName);
-            // Parse the json data return to find the values we want
-          
             // Get current Date, Time and Elev
+            // Convert ACE date to javascript Date format "12/24/2016 02:00:00"
+
+            // Indexes into data for the first entry
             lastElevIndex = data[0].Elev.length - 1;
             lastFlowIndex = data[1].Outflow.length - 1;
+
+            // Convert UTC date to local time
+            let localTime = convertStringToUTC(data[0].Elev[lastElevIndex].time)
+            let currentDate = localTime.substring(4, 10) + " " + localTime.substring(13, 15);
+            let currentTime = localTime.substring(16, 21);
+
             let currentElev = parseFloat(data[0].Elev[lastElevIndex].value).toFixed(2);
-            let currentDate = data[0].Elev[lastElevIndex].time.substring(0,7)+data[0].Elev[lastElevIndex].time.substring(9,12);
-            let currentTime = data[0].Elev[lastElevIndex].time.substring(11,17);
+            //let currentDate = data[0].Elev[lastElevIndex].time.substring(0, 7) + data[0].Elev[lastElevIndex].time.substring(9, 12);
+
+            //let currentTime = data[0].Elev[lastElevIndex].time.substring(11, 17);
             let currentDelta = (currentElev - lakePool).toFixed(2);
 
             // Set date, time and elev on page
@@ -314,13 +322,13 @@ function dataACE() {
             // Create our increment and loop through each value
             // For each value create our associated table html
             let i = lastFlowIndex;
-            if (dailyACEData) jIncrement=1;
-            else jIncrement=4;
-            for (j=lastElevIndex; j >= 0; j= j-jIncrement) {
+            let jIncrement = 1;
+            if (dailyACEData) jIncrement = 4;
+            for (j = lastElevIndex; j >= 0; j = j - jIncrement) {
                 let elev = data[0].Elev[j].value.toFixed(2);
-
-                let date = data[0].Elev[j].time.substring(0,7 )+data[0].Elev[0].time.substring(9,11);
-                let time = data[0].Elev[j].time.substring(11,17);
+                localTime = convertStringToUTC(data[0].Elev[j].time)
+                let date =  localTime.substring(4, 10) + " " + localTime.substring(13, 15);
+                let time = localTime.substring(16, 21);
                 let flow = data[1].Outflow[i].value;
 
                 // Create the HTML Well (Section) and Add the table content for each reserved table
@@ -335,12 +343,69 @@ function dataACE() {
                 $("#lakeWell-" + j + 1).append("<td>" + time + "</td>");
                 $("#lakeWell-" + j + 1).append("<td>" + elev + "</td>");
                 $("#lakeWell-" + j + 1).append("<td>" + flow + "</td>");
-                
+
                 i--;
             }
-                        //flowACE(dataValues);
         })
 }
+
+function getMonthNumberFromString(mon) {
+
+    var d = Date.parse(mon + "1, 2012");
+    if (!isNaN(d)) {
+        return new Date(d).getMonth() + 1;
+    }
+    return -1;
+}
+
+function convertStringToUTC(convertedTime) {
+    // Convert UTC date to local time
+    // Convert to ISO format first. '2011-04-11T10:20:30Z'
+    convertedTime = convertedTime.trim();
+    let convertedMonth = convertedTime.substring(3, 6);
+    convertMonth = getMonthFromString(convertedMonth);
+    //Convert the string to UTC (GTM)
+    convertedTime = convertedMonth + "/" + convertedTime.substring(0, 2) + "/" + convertedTime.substring(7, 11) + " " + convertedTime.substring(12, 21) + " UTC";
+    //Convert the string to a Date
+    convertedTime = new Date(convertedTime);
+    //Might need this call in ater
+    //convertUTCDate(convertedTime);
+    //Convert the Date to local time (client)
+    convertedTime = convertedTime.toString(convertedTime);
+    // Time now looks like "Thu Dec 27 2018 11:15:00 GMT-0500 (Eastern Standard Time)"
+    // Substring the pieces we want to display
+    return (convertedTime)
+}
+
+function getMonthFromString(mon) {
+    return new Date(Date.parse(mon + " 1, 2012")).getMonth() + 1
+}
+
+function convertUTCDate(timestamp) {
+    // Multiply by 1000 because JS works in milliseconds instead of the UNIX seconds
+    var date = new Date(timestamp * 1000);
+
+    var year = date.getUTCFullYear();
+    var month = date.getUTCMonth() + 1; // getMonth() is zero-indexed, so we'll increment to get the correct month number
+    var day = date.getUTCDate();
+    var hours = date.getUTCHours();
+    var minutes = date.getUTCMinutes();
+    var seconds = date.getUTCSeconds();
+
+    month = (month < 10) ? '0' + month : month;
+    day = (day < 10) ? '0' + day : day;
+    hours = (hours < 10) ? '0' + hours : hours;
+    minutes = (minutes < 10) ? '0' + minutes : minutes;
+    seconds = (seconds < 10) ? '0' + seconds : seconds;
+
+    return year + '-' + month + '-' + day + ' ' + hours + ':' + minutes;
+}
+
+
+
+
+
+
 
 // Function to make elev TVA call
 function dataTVA(data) {
@@ -530,11 +595,12 @@ $("#lakeTournaments").on("click", function (e) {
 // Switch to set our api urls based on lake name
 // Run corresponding api calls
 
+let dailyACEData = false; // default value is false
+
 switch (lakeRoute) {
     case "kerr": //North Carolina
         lakePool = 300;
         seaLevelDelta = 0;
-        dailyACEData = false;
         bodyOfWaterName = "Kerr Lake"
         // elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02079490&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
         elevURL = "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1749041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON";
@@ -544,7 +610,6 @@ switch (lakeRoute) {
     case "falls": //North Carolina
         lakePool = 252;
         seaLevelDelta = 0;
-        dailyACEData = false;
         bodyOfWaterName = "Falls Lake"
         //elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02087182&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all";
         //flowURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02087183&period=PT96H&parameterCd=00060&siteType=ST&siteStatus=all";
@@ -555,14 +620,13 @@ switch (lakeRoute) {
     case "jordan": //North Carolina
         lakePool = 216.5;
         seaLevelDelta = 0;
-        dailyACEData = false;
         bodyOfWaterName = "Jordan Lake"
         elevURL = "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1743041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON";
         dataACE();
         break;
 
     case "highrock": // North Carolina
-        elevCUBE(); 
+        elevCUBE();
         break;
 
     case "roanoke": // North Carolina
@@ -1016,10 +1080,20 @@ switch (lakeRoute) {
         dataTVA();
         break;
 
+        case "eufaula": // Alabama
+            lakePool = 585.0;
+            seaLevelDelta = 0;
+            bodyOfWaterName = "Eufaula";
+            flowURL = "none"
+            elevURL = "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1882051&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON";
+            dataACE();
+            break;
+    
+
     case "wheeler": // Alabama
         lakePool = 552.28;
         seaLevelDelta = 0;
-        bodyOfWaterName = "Wheeler"
+        bodyOfWaterName = "Wheeler";
         elevURL = "http://r7j8v4x4.map2.ssl.hwcdn.net/WEH_O.xml?1545585488936";
         flowURL = "none"
         dataTVA();
@@ -1106,7 +1180,7 @@ switch (lakeRoute) {
         dataDuke();
         break;
 
-        case "minnehaha": // South Carolina
+    case "minnehaha": // South Carolina
         lakePool = 225.0; // 225.0ft Level reported as a delta to full pool -100 by Duke Energy
         seaLevelDelta = 125.0
         bodyOfWaterName = "Minnehaha"
@@ -1115,16 +1189,15 @@ switch (lakeRoute) {
         elevUSGS();
         break;
 
-        case "tablerock": //Missouri
+    case "tablerock": //Missouri
         lakePool = 915.0;
         seaLevelDelta = 0;
-        dailyACEData = false;
         bodyOfWaterName = "Table Rock"
         elevURL = "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1884150&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON";
         dataACE();
         break;
 
-        case "lakeoftheozarks": //Missouri
+    case "lakeoftheozarks": //Missouri
         lakePool = 659.0;
         seaLevelDelta = 0;
         bodyOfWaterName = "Table Rock"
