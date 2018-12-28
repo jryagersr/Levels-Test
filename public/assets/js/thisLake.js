@@ -40,7 +40,6 @@ function elevUSGS() {
             let dataValues = data.value.timeSeries[0].values[0].value
             // Reverse the order of our data so most recent date is first
             dataValues.reverse();
-            //seaLevelDelta = lakePool;
 
             if (seaLevelDelta !== 0)
                 elevationAdjust = (parseFloat(dataValues[0].value) + seaLevelDelta).toFixed(2);
@@ -164,119 +163,6 @@ function flowUSGS() {
 // }
 
 
-// Function to make ACE flow data call
-function flowACE(dataTables) {
-    $.ajax({
-            url: "/api/" + lakeRoute,
-            method: "GET"
-        })
-        .then(function (data) {
-
-            // Check if date matches 
-            // Find first element in USGS data in which the time value that is at the top of the hour
-            switch (dataTables[0].dateTime.substring(14, 16)) {
-
-                case "00":
-                    var usgsIndex = 0;
-                    break;
-
-                case "15":
-                    var usgsIndex = 1;
-                    break;
-
-                case "30":
-                    var usgsIndex = 2
-                    break;
-
-                case "45":
-                    var usgsIndex = 3
-                    break;
-
-                default:
-                    if (lakeRoute == "jordan" || lakeRoute == "kerr" || lakeRoute == "buggsisland") {
-                        alert("Check ACE Flow Time");
-                    } else j = 0;
-
-            }
-
-            let aceIndex = 0;
-            let lakewellIndex = 0;
-            let aceTime = '0000'; // Time on current ACE line
-            let usgsTime = '0'; // Time on current USGS line
-
-            // Code readability, will be set to comparison of times in loop
-            let timesAreNotEqual = false;
-            let aceTimeGreater = false;
-            let daysAreEqual = false;
-            let dataIsLinedUpByTime = false;
-
-            // Check to see if the first ACE flow data line is same time as USGS first line time and the same day 
-            // (don't care about month right now)
-            // Can fix the month problem later 
-            //(only an issue when site down as time goes by midnight last day of month)
-
-            for (usgsIndex; usgsIndex < dataTables.length; usgsIndex += 4) {
-                data[aceIndex].time = data[aceIndex].time.substr(0, 2).concat("00");
-                if (data[aceIndex].time === '2400') { // ACE represents midnight as 2400 of passing day, Jordan Lake on "0031"
-                    aceTime = '0000' // USGS represents midnight as 0000 of next day (Dates are different)
-                } else aceTime = data[aceIndex].time.replace("31", '00');
-
-                usgsTime = dataTables[usgsIndex].dateTime.substring(11, 16).replace(':', ''); // Pulls the USGS time from the line and removes the : (ACE does not have a colon)
-
-                // Set Booleans for conditionals below, days have OR due to difference in representation of midnight
-                timesAreNotEqual = usgsTime !== aceTime;
-                aceTimeGreater = parseInt(dataTables[usgsIndex].dateTime.substring(11, 16).replace(':', ''), 10) < parseInt(aceTime, 10);
-                if (!daysAreEqual)
-                    daysAreEqual = (data[aceIndex].date.substring(0, 2) == dataTables[usgsIndex].dateTime.substring(8, 10)) || aceTime == '0000';
-
-                // PLEASE LEAVE THIS SWITCH COMMENTED OUT, I'll need it to fix when the month changes.
-                //switch (data[aceIndex].date.substring(2, 6)) {
-
-                // If case is org, then run the sort function and create a newBatch, then display using the newBath
-                // Change our sort boolean to keep track of asc/desc
-                //    case "'DEC":
-                //        if (dataTables[usgsIndex].dateTime.substring(5, 7) == 12)
-                //            monthsAreEqual = true
-                //        break;
-
-                // }
-
-                let element = data[aceIndex]; // define element for template updates below.
-
-                if (daysAreEqual && !timesAreNotEqual) {
-                    if (!timesAreNotEqual) {
-                        //if (aceTimeGreater) { // is ACE Time newer than USGS (ACE has newer data?)
-                        //    usgsIndex = usgsIndex - 4; // Stay on current USGS line by decrementing loop counter
-                        //} else { // ACE Time is less than USGS Time (ACE site down)
-
-                        //    console.log('lakewellIndex1', lakewellIndex);
-                        //    $("#lakeWell-" + (lakewellIndex) + 1).append("<td>" + "N/A1" + "</td>"); //Append N/A as the Flow Value to the row for the missing data
-                        //    lakewellIndex++; //Move to next Lakewell Template line
-                        // }
-                        //} else { // Times are equal, post data to Lakewell template
-                        $("#lakeWell-" + lakewellIndex + 1).append("<td>" + element.outflow + "</td>");
-                        lakewellIndex++;
-
-                        if (!timesAreNotEqual) {
-                            dataIsLinedUpByTime = true;
-                        }
-                    }
-                } else if (aceTimeGreater) {
-                    $("#lakeWell-" + lakewellIndex + 1).append("<td>" + "N/A" + "</td>"); //Append N/A as the Flow Value to the row for the missing data
-                    lakewellIndex++;
-                    aceIndex--;
-                }
-
-                aceIndex++; // Increment loop counter ACE data and LakeWell template
-            }
-
-            console.log(data);
-
-
-
-        });
-}
-
 
 
 
@@ -288,9 +174,8 @@ function dataACE() {
             method: "GET",
         })
         .then(function (data) {
-            seaLevelDelta = lakePool;
             // Set lake title on page
-            $("#lakeTitle").append(bodyOfWaterName);
+            $("#lakeTitle").append(bodyOfWaterName); 
             $("#lakeSponsor").append(bodyOfWaterName);
             $("#lakeFeaturedTournament").append(bodyOfWaterName);
             // Get current Date, Time and Elev
@@ -298,7 +183,8 @@ function dataACE() {
 
             // Indexes into data for the first entry
             lastElevIndex = data[0].Elev.length - 1;
-            lastFlowIndex = data[1].Outflow.length - 1;
+            if (!noACEFlow)
+                lastFlowIndex = data[1].Outflow.length - 1;
 
             // Convert UTC date to local time
             let localTime = convertStringToUTC(data[0].Elev[lastElevIndex].time)
@@ -321,29 +207,45 @@ function dataACE() {
 
             // Create our increment and loop through each value
             // For each value create our associated table html
-            let i = lastFlowIndex;
+            let i = 0;
+            let flow = 0;
+            let lastHourDisplayed = -1;
+            let displayFlowData = true; // This is for this loop, some lakes we have to sort through the times (Istokpoga, FL)
+            if (!noACEFlow)
+                i = lastFlowIndex;
             let jIncrement = 1;
-            if (dailyACEData) jIncrement = 4;
+            if (dailyACEData || moreElevThanFlow)
+                jIncrement = 4;
             for (j = lastElevIndex; j >= 0; j = j - jIncrement) {
                 let elev = data[0].Elev[j].value.toFixed(2);
                 localTime = convertStringToUTC(data[0].Elev[j].time)
-                let date =  localTime.substring(4, 10) + " " + localTime.substring(13, 15);
+                let date = localTime.substring(4, 10) + " " + localTime.substring(13, 15);
                 let time = localTime.substring(16, 21);
-                let flow = data[1].Outflow[i].value;
+                if (!noACEFlow)
+                    flow = data[1].Outflow[i].value;
 
                 // Create the HTML Well (Section) and Add the table content for each reserved table
                 var lakeSection = $("<tr>");
                 lakeSection.addClass("well");
                 lakeSection.attr("id", "lakeWell-" + j + 1);
-                $("#lakeSection").append(lakeSection);
+                if (dataFromACEIsFucked == true && localTime.substring(16, 18) == lastHourDisplayed) {
+                    displayFlowData = false;
+                } else {
+                    lastHourDisplayed = localTime.substring(16, 18);
+                    displayFlowData = true;
+                }
+                if (displayFlowData) {
+                    $("#lakeSection").append(lakeSection);
 
-                // Append the data values to the table row
+                    // Append the data values to the table row
 
-                $("#lakeWell-" + j + 1).append("<td>" + date + "</td>");
-                $("#lakeWell-" + j + 1).append("<td>" + time + "</td>");
-                $("#lakeWell-" + j + 1).append("<td>" + elev + "</td>");
-                $("#lakeWell-" + j + 1).append("<td>" + flow + "</td>");
+                    $("#lakeWell-" + j + 1).append("<td>" + date + "</td>");
+                    $("#lakeWell-" + j + 1).append("<td>" + time + "</td>");
+                    $("#lakeWell-" + j + 1).append("<td>" + elev + "</td>");
+                    if (!noACEFlow)
+                        $("#lakeWell-" + j + 1).append("<td>" + flow + "</td>");
 
+                }
                 i--;
             }
         })
@@ -595,12 +497,16 @@ $("#lakeTournaments").on("click", function (e) {
 // Switch to set our api urls based on lake name
 // Run corresponding api calls
 
-let dailyACEData = false; // default value is false
+let dailyACEData = false; // default value, this is for when ACE only returns daily readings vs hourly
+let noACEFlow = false; // default value, this is when ACE has no Flow Data included
+let moreElevThanFlow = false; // default value, this is when ACE returns elev data in 15 min intervals and flow data in hourly intervals. Loop j variable increment set to 1 or 4 by this flag
+let dataFromACEIsFucked = false; // default value, this is when the ACE data is Fucked Up like Istokpoga in Florida, Damn...
 
 switch (lakeRoute) {
     case "kerr": //North Carolina
         lakePool = 300;
         seaLevelDelta = 0;
+        moreElevThanFlow = true;
         bodyOfWaterName = "Kerr Lake"
         // elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02079490&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
         elevURL = "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1749041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON";
@@ -610,6 +516,7 @@ switch (lakeRoute) {
     case "falls": //North Carolina
         lakePool = 252;
         seaLevelDelta = 0;
+        moreElevThanFlow = true;
         bodyOfWaterName = "Falls Lake"
         //elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02087182&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all";
         //flowURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02087183&period=PT96H&parameterCd=00060&siteType=ST&siteStatus=all";
@@ -620,6 +527,7 @@ switch (lakeRoute) {
     case "jordan": //North Carolina
         lakePool = 216.5;
         seaLevelDelta = 0;
+        moreElevThanFlow = true;
         bodyOfWaterName = "Jordan Lake"
         elevURL = "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1743041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON";
         dataACE();
@@ -976,18 +884,18 @@ switch (lakeRoute) {
         lakePool = 577.0;
         seaLevelDelta = 0;
         bodyOfWaterName = "McGhee Creek"
-        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07333900&period=PT95H&parameterCd=00065&siteType=LK&siteStatus=all";
+        elevURL = "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1550051&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON";
         flowURL = "none"
-        elevUSGS();
+        dataACE();
         break;
 
     case "texoma":
         lakePool = 619.41; //Oklahoma
         seaLevelDelta = 0;
         bodyOfWaterName = "Texoma"
-        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07331455&period=PT95H&parameterCd=00065&siteType=LK&siteStatus=all";
+        elevURL = "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=2063051&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON";
         flowURL = "none"
-        elevUSGS();
+        dataACE();
         break;
 
     case "westokoboji": // Iowa
@@ -1080,15 +988,15 @@ switch (lakeRoute) {
         dataTVA();
         break;
 
-        case "eufaula": // Alabama
-            lakePool = 585.0;
-            seaLevelDelta = 0;
-            bodyOfWaterName = "Eufaula";
-            flowURL = "none"
-            elevURL = "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1882051&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON";
-            dataACE();
-            break;
-    
+    case "eufaula": // Alabama
+        lakePool = 585.0;
+        seaLevelDelta = 0;
+        bodyOfWaterName = "Eufaula";
+        flowURL = "none"
+        elevURL = "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1882051&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON";
+        dataACE();
+        break;
+
 
     case "wheeler": // Alabama
         lakePool = 552.28;
@@ -1205,6 +1113,26 @@ switch (lakeRoute) {
         elevURL = "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=5043030&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON";
         dataACE();
         break;
+
+    case "tohopekaliga": //Missouri
+        lakePool = 58.0;
+        seaLevelDelta = 0;
+        noACEFlow = true; // ACE HQ json call does not contain any flow data
+        bodyOfWaterName = "Tohopekaliga"
+        elevURL = "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1074038&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON";
+        dataACE();
+        break;
+
+    case "istokpoga": //Missouri
+        lakePool = 39.4;
+        seaLevelDelta = 0;
+        noACEFlow = true; // ACE HQ json call does not contain any flow data
+        dataFromACEIsFucked = true;
+        bodyOfWaterName = "Istokpoga"
+        elevURL = "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=4069038&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON";
+        dataACE();
+        break;
+
 
 
     default:
