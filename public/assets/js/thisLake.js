@@ -26,14 +26,16 @@ let newURL = parsedURL.join("/") + "/api/lakes/" + lakeRoute
 const batch = [];
 let elevCheck = false;
 let flowCheck = false;
+// Variable to determine which of the cube lakes was selected (so we know which data to display)
+let cubeCheck = "";
 
 // Function to make elevation USGS call
 function elevUSGS() {
     // API call for flow
     $.ajax({
-            url: elevURL,
-            method: "GET",
-        })
+        url: elevURL,
+        method: "GET",
+    })
         .then(function (data) {
             console.log('USGS Elev Data', data);
             // Parse the json data return to find the values we want
@@ -130,9 +132,9 @@ function elevUSGS() {
 function flowUSGS() {
     // API call for flow
     $.ajax({
-            url: flowURL,
-            method: "GET",
-        })
+        url: flowURL,
+        method: "GET",
+    })
         .then(function (data) {
             // Parse through the json data to find the values we want
             let dataValues = data.value.timeSeries[0].values[0].value
@@ -148,30 +150,12 @@ function flowUSGS() {
         });
 }
 
-// function displayData() {
-
-//     batch.forEach(function (element) {
-//         // Create the HTML Well (Section) and Add the table content for each reserved table
-//         var lakeSection = $("<tr>");
-//         lakeSection.addClass("well");
-//         lakeSection.attr("id", "lakeWell-" + i + 1);
-//         $("#lakeSection").append(lakeSection);
-
-//         // Append the data values to the table row
-//         $("#lakeWell-" + i + 1).append("<td>" + element.date + "</td>");
-//         $("#lakeWell-" + i + 1).append("<td>" + element.time + "</td>");
-//         $("#lakeWell-" + i + 1).append("<td>" + element.elev + "</td>");
-//         $("#lakeWell-" + i + 1).append("<td>" + element.flow + "</td>");
-//     })
-// }
-
-
 // Function to make ACE flow data call
 function flowACE(dataTables) {
     $.ajax({
-            url: "/api/" + lakeRoute,
-            method: "GET"
-        })
+        url: "/api/" + lakeRoute,
+        method: "GET"
+    })
         .then(function (data) {
 
             // Check if date matches 
@@ -283,9 +267,9 @@ function flowACE(dataTables) {
 function elevAce() {
     // API call for flow
     $.ajax({
-            url: elevURL,
-            method: "GET",
-        })
+        url: elevURL,
+        method: "GET",
+    })
         .then(function (data) {
             console.log(lakeRoute);
             seaLevelDelta = lakePool;
@@ -368,13 +352,13 @@ function elevAce() {
 // Function to make elev TVA call
 function dataTVA(data) {
     $.ajax({
-            url: "/api/tva",
-            method: "GET",
-            data: {
-                tvaDataURL: elevURL,
-                tvaLakeName: bodyOfWaterName
-            }
-        })
+        url: "/api/tva",
+        method: "GET",
+        data: {
+            tvaDataURL: elevURL,
+            tvaLakeName: bodyOfWaterName
+        }
+    })
         .then(function (data) {
             console.log(lakeRoute)
 
@@ -436,13 +420,13 @@ function dataTVA(data) {
 // Function to make elev Duke call
 function dataDuke(data) {
     $.ajax({
-            url: "/api/duke",
-            method: "GET",
-            data: {
-                dukeDataURL: elevURL,
-                dukeLakeName: bodyOfWaterName
-            }
-        })
+        url: "/api/duke",
+        method: "GET",
+        data: {
+            dukeDataURL: elevURL,
+            dukeLakeName: bodyOfWaterName
+        }
+    })
         .then(function (data) {
             console.log(lakeRoute)
             // adjust the elev for lakes with data relative to full pool (not from sealevel))
@@ -511,11 +495,52 @@ function dataDuke(data) {
 function elevCUBE() {
     // API call for flow
     $.ajax({
-            url: "/api/cube",
-            method: "GET",
-        })
+        url: "/api/cube",
+        method: "GET",
+    })
         .then(function (data) {
-            console.log(data);
+            // Determine which lake has been selected of the three cube lakes
+            var batch = [];
+            if (cubeCheck === "highrock") {
+                batch = data[0].data;
+            }
+            else if (cubeCheck === "badin") {
+                batch = data[1].data;
+            }
+            else if (cubeCheck === "tuckertown") {
+                batch = data[2].data;
+            }
+
+            // Set lake title on page
+            $("#lakeTitle").append(bodyOfWaterName);
+            $("#lakeSponsor").append(bodyOfWaterName);
+            $("#lakeFeaturedTournament").append(bodyOfWaterName);
+            // Get current Date, Time and Elev
+            var currentElev = batch[0].elev;
+            let currentDate = batch[0].date;
+            let currentTime = "1200";
+            let currentDelta = (currentElev - lakePool).toFixed(2);
+
+            // Set date, time and elev on page
+            $("#currentTime").append(currentTime);
+            $("#currentDate").append(currentDate);
+            $("#currentLevel").append(currentElev);
+            $("#currentDelta").append(currentDelta);
+            $("#currentNormal").append("normal pool " + lakePool);
+
+            for (var i = 0; i < batch.length; i++) {
+                // Create the HTML Well (Section) and Add the table content for each reserved table
+                var lakeSection = $("<tr>");
+                lakeSection.addClass("well");
+                lakeSection.attr("id", "lakeWell-" + i + 1);
+                $("#lakeSection").append(lakeSection);
+
+                // Append the data values to the table row
+                $("#lakeWell-" + i + 1).append("<td>" + batch[i].date + "</td>");
+                $("#lakeWell-" + i + 1).append("<td>" + "N/a" + "</td>");
+                $("#lakeWell-" + i + 1).append("<td>" + batch[i].elev + "</td>");
+                $("#lakeWell-" + i + 1).append("<td>" + "N/a" + "</td>");
+            }
         })
 }
 
@@ -590,7 +615,24 @@ switch (lakeRoute) {
         break;
 
     case "highrock": // North Carolina
-        elevCUBE(); 
+        lakePool = 655.2;
+        bodyOfWaterName = "High Rock";
+        cubeCheck = "highrock";
+        elevCUBE();
+        break;
+
+    case "badin": // North Carolina
+        lakePool = 541.1;
+        bodyOfWaterName = "Badin";
+        cubeCheck = "badin";
+        elevCUBE();
+        break;
+
+    case "tuckertown": // North Carolina
+        lakePool = 596;
+        bodyOfWaterName = "Tuckertown";
+        cubeCheck = "tuckertown";
+        elevCUBE();
         break;
 
     case "roanoke": // North Carolina
