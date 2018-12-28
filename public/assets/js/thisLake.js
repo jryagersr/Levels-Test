@@ -28,6 +28,9 @@ let elevCheck = false;
 let flowCheck = false;
 // Variable to determine which of the cube lakes was selected (so we know which data to display)
 let cubeCheck = "";
+// Variables to hold our ad images and urls
+let adLogoSrc = "";
+let adLogoUrl = "";
 
 // Function to make elevation USGS call
 function elevUSGS() {
@@ -349,6 +352,7 @@ function elevAce() {
             flowACE(dataValues);
         })
 }
+
 // Function to make elev TVA call
 function dataTVA(data) {
     $.ajax({
@@ -490,7 +494,6 @@ function dataDuke(data) {
         })
 }
 
-
 // Function to make elev CUBE call
 function elevCUBE() {
     // API call for flow
@@ -544,6 +547,10 @@ function elevCUBE() {
         })
 }
 
+// Function to dynamically place advertisement on thisLake.html page
+function placeLogoAd() {
+    $("#adLogoWell").append("<a href='" + adLogoUrl + "' target='_blank'><img class='ad-logo' src='" + adLogoSrc + "'/></a>");
+}
 
 // function getData() {
 //     if (elevUSGSCheck === "true") {
@@ -585,7 +592,10 @@ switch (lakeRoute) {
         seaLevelDelta = 0;
         bodyOfWaterName = "Kerr Lake"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02079490&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
+        adLogoSrc = "/static/assets/img/jse.png"
+        adLogoUrl = "http://jacksonsuperiorelectric.com/"
         elevAce();
+        placeLogoAd();
         break;
 
     case "buggsisland": // Virginia (same as Kerr Lake, different name in VA)
