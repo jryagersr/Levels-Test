@@ -47,8 +47,8 @@ module.exports = function (app) {
   app.get("/api/states/:stateInitial", function (req, res) {
     let stateInitial = req.params.stateInitial;
     db.model("Lake").find({
-        state: stateInitial
-      })
+      state: stateInitial
+    })
       .exec(function (err, data) {
         if (err) {
           res.send("No data found for " + state);
@@ -179,30 +179,73 @@ module.exports = function (app) {
   });
 
   app.get("/api/cube", function (request, response) {
-    console.log("/api/cube fired");
     // Parses our HTML and helps us find elements
     var cheerio = require("cheerio");
     // Makes HTTP request for HTML page
     var request = require("request");
 
-    // Make request for cub carolinas site, returns html
-    request("http://ww2.cubecarolinas.com/lake/tabs.php", function (error, response, html) {
-
-      // Load the HTML into cheerio and save it to a variable
-      // '$' becomes a shorthand for cheerio's selector commands, much like jQuery's '$'
-      var $ = cheerio.load(html);
-
-      var data = [];
-
-      // With cheerio, find each <td> on the page
-      // (i: iterator. element: the current element)
-      $('td').each(function() {
-        console.log($(this).text())
-        var value = $(this).text();
-        data.push(value);
-        console.log(data);
-      });
+    scrapeCubeData(function (error, data) {
+      if (error) {
+        response.send(error);
+        return;
+      } else {
+        response.json(data);
+      }
     });
+
+    function scrapeCubeData(callback) {
+      // Define our data template
+      var data = [
+        {
+          lakeName: "High Rock",
+          data: []
+        }, {
+          lakeName: "Badin",
+          data: []
+        }, {
+          lakeName: "Tuckertown",
+          data: []
+        }
+      ];
+
+      // Make request for cub carolinas site, returns html
+      request("http://ww2.cubecarolinas.com/lake/tabs.php", function (error, response, html) {
+
+        // Load the HTML into cheerio and save it to a variable
+        // '$' becomes a shorthand for cheerio's selector commands, much like jQuery's '$'
+        var $ = cheerio.load(html);
+
+        // With cheerio, find each <td> on the page
+        // (i: iterator. element: the current element)
+        $('tr').each(function (i, element) {
+          // var value = $(this).text();
+          var value = $(element).children().text();
+
+          // Skip over the first few sections of data to get to the stuff we need
+          if (i > 7) {
+            // If the current value is high rock
+            if (value.substring(0, 1) === "H") {
+              date = value.substring(9, 19);
+              elev = value.substring(19, 25);
+              data[0].data.push({ date: date, elev: elev });
+            }
+            // If the current value is Badin
+            if (value.substring(0, 1) === "B") {
+              date = value.substring(15, 25);
+              elev = value.substring(25, 31);
+              data[1].data.push({ date: date, elev: elev });
+            }
+            // If Tuckertown
+            if (value.substring(0, 1) === "T") {
+              date = value.substring(10, 20);
+              elev = value.substring(20, 26);
+              data[2].data.push({ date: date, elev: elev });
+            }
+          }
+        });
+        callback(null, data);
+      });
+    }
   })
 
   // This reads the tournament file for the Tournaments Page
@@ -230,7 +273,6 @@ module.exports = function (app) {
         txDetail: splitLine[indexes[6]],
         results: splitLine[indexes[7]],
       });
-
     });
 
 
@@ -271,11 +313,7 @@ module.exports = function (app) {
         });
       }
     } */
-
-
-
     response.json(txData);
-
   });
 
 
@@ -363,25 +401,27 @@ module.exports = function (app) {
   // ---------------------------------------------------------------------------
 
   // Route to update database with new lake data
-  app.post("/api/usgs", (req, res) => {
-    console.log("nameID: " + req.body.nameID)
-    req.body.newBatch.forEach(function (e) {
-      db.model('Lake').updateOne({
-          _id: ObjectId(req.body.nameID),
-          data: [{
-            level: e.value,
-            date: e.date,
-            time: e.time
-          }]
-        })
-        .then(function (data) {
-          res.json(data);
-        })
-        .catch(function (err) {
-          res.json(err);
-        });
-    })
-  });
+  // app.post("/api/usgs", (req, res) => {
+  //   console.log("nameID: " + req.body.nameID)
+  //   req.body.newBatch.forEach(function (e) {
+  //     db.model('Lake').updateOne({
+  //       _id: ObjectId(req.body.nameID),
+  //       data: [{
+  //         level: e.value,
+  //         date: e.date,
+  //         time: e.time
+  //       }]
+  //     })
+  //       .then(function (data) {
+  //         res.json(data);
+  //       })
+  //       .catch(function (err) {
+  //         res.json(err);
+  //       });
+  //   })
+  // });
+
+
   //Start of dukeData
   // Route to retrieve DUKE data
   app.get("/api/duke", function (request, response) {
