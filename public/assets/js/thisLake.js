@@ -452,9 +452,9 @@ function dataDuke(data) {
                 $("#lakeWell-" + i + 1).append("<td>" + elev + "</td>");
                 $("#lakeWell-" + i + 1).append("<td>" + flow + "</td>");
                 i++;
-            }
-        })
-}
+            };
+        });
+}; // End of dataDuke
 
 // Function to make elev CUBE call
 function elevCUBE() {
@@ -605,7 +605,7 @@ switch (lakeRoute) {
     case "roanoke": // North Carolina
         lakePool = 0.0;
         seaLevelDelta = 0;
-        bodyOfWaterName = "Roanoke River";
+        bodyOfWaterName = "Roanoke River (Hwy 45)";
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=0208114150&period=PT96H&parameterCd=00065&siteType=ST&siteStatus=all";
         flowURL = "none";
         elevUSGS();
@@ -725,6 +725,15 @@ switch (lakeRoute) {
         seaLevelDelta = 0;
         bodyOfWaterName = "Monroe";
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03372400&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
+        flowURL = "none";
+        elevUSGS();
+        break;
+
+    case "ohioriverin": //Indiana - River
+        lakePool = 0.0;
+        seaLevelDelta = 0;
+        bodyOfWaterName = "Ohio River Evansville";
+        elevURL = "http://waterservices.usgs.gov/nwis/iv/?format=json&sites=03322000&period=PT96H&parameterCd=00065&siteType=ST&siteStatus=all";
         flowURL = "none";
         elevUSGS();
         break;
@@ -918,7 +927,7 @@ switch (lakeRoute) {
         elevUSGS();
         break;
 
-        case "lawtonka": //Oklahoma
+    case "lawtonka": //Oklahoma
         lakePool = 1343.6;
         seaLevelDelta = 0;
         bodyOfWaterName = "Lawtonka"
@@ -1153,7 +1162,7 @@ switch (lakeRoute) {
         dataDuke();
         break;
 
-    case "minnehaha": // South Carolina
+    case "minnehaha": // Florida
         lakePool = 225.0; // 225.0ft Level reported as a delta to full pool -100 by Duke Energy
         seaLevelDelta = 125.0
         bodyOfWaterName = "Minnehaha"
@@ -1181,22 +1190,31 @@ switch (lakeRoute) {
         //dataACE();
         break;
 
-    case "tohopekaliga": //Missouri
-        lakePool = 58.0;
-        seaLevelDelta = 0;
-        noACEFlow = true; // ACE HQ json call does not contain any flow data
-        bodyOfWaterName = "Tohopekaliga"
-        elevURL = "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1074038&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON";
-        dataACE();
-        break;
-
-    case "istokpoga": //Missouri
+    case "istokpoga": // Florida
         lakePool = 39.4;
         seaLevelDelta = 0;
         noACEFlow = true; // ACE HQ json call does not contain any flow data
         dataFromACEIsFucked = true;
         bodyOfWaterName = "Istokpoga"
         elevURL = "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=4069038&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON";
+        dataACE();
+        break;
+
+    case "talquin": // Florida
+        lakePool = 70.0;
+        seaLevelDelta = 0;
+        noACEFlow = true; // ACE HQ json call does not contain any flow data
+        bodyOfWaterName = "Talquin"
+        elevURL = "http://waterservices.usgs.gov/nwis/iv/?format=json&sites=02329900&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
+        elevUSGS();
+        break;
+
+    case "tohopekaliga": // Florida
+        lakePool = 58.0;
+        seaLevelDelta = 0;
+        noACEFlow = true; // ACE HQ json call does not contain any flow data
+        bodyOfWaterName = "Tohopekaliga"
+        elevURL = "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1074038&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON";
         dataACE();
         break;
 
