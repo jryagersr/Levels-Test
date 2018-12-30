@@ -120,6 +120,7 @@ function elevUSGS() {
                 $("#lakeWell-" + i + 1).append("<td>" + date + "</td>");
                 $("#lakeWell-" + i + 1).append("<td>" + time + "</td>");
                 $("#lakeWell-" + i + 1).append("<td>" + elev + "</td>");
+                $("#lakeWell-" + i + 1).append("<td>N/A</td>");
                 i++;
 
             }
@@ -144,7 +145,8 @@ function flowUSGS() {
             // For each loop append the flow html into the table that already exists
             let i = 0;
             dataValues.forEach(function (element) {
-                $("#lakeWell-" + i + 1).append("<td>" + element.value + "</td>");
+                if (element.value !== "-99")
+                    $("#lakeWell-" + i + 1).append("<td>" + element.value + "</td>");
                 i++;
             })
         });
@@ -227,8 +229,10 @@ function dataACE() {
                 localTime = convertStringToUTC(data[0].Elev[j].time)
                 let date = localTime.substring(4, 10) + " " + localTime.substring(13, 15);
                 let time = localTime.substring(16, 21);
+                flow = 'N/A'; // default value
                 if (!noACEFlow)
-                    flow = data[1].Outflow[i].value;
+                    if (data[1].Outflow[i].value !== -99)
+                        flow = data[1].Outflow[i].value;
 
                 // Create the HTML Well (Section) and Add the table content for each reserved table
                 var lakeSection = $("<tr>");
@@ -581,6 +585,24 @@ switch (lakeRoute) {
         dataACE();
         break;
 
+    case "neuse": // North Carolina
+        lakePool = 0.0;
+        seaLevelDelta = 0;
+        bodyOfWaterName = "Neuse River (Kinston)";
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02089500&period=PT96H&parameterCd=00065&siteType=ST&siteStatus=all";
+        flowURL = "none";
+        elevUSGS();
+        break;
+
+    case "hyco": //North Carolina
+        lakePool = 360.0;
+        seaLevelDelta = 0;
+        bodyOfWaterName = "Hyco";
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02168500&period=PT96H&parameterCd=00062&siteType=ST&siteStatus=all";
+        flowURL = "none";
+        elevUSGS();
+        break;
+
     case "highrock": // North Carolina
         lakePool = 655.2;
         bodyOfWaterName = "High Rock";
@@ -689,6 +711,15 @@ switch (lakeRoute) {
         seaLevelDelta = 0;
         bodyOfWaterName = "West Point";
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02339400&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
+        flowURL = "none";
+        elevUSGS();
+        break;
+
+    case "conroe": //Texas
+        lakePool = 201.0;
+        seaLevelDelta = 0;
+        bodyOfWaterName = "Conroe";
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08067600&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
         flowURL = "none";
         elevUSGS();
         break;
@@ -1217,6 +1248,16 @@ switch (lakeRoute) {
         elevURL = "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1074038&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON";
         dataACE();
         break;
+
+        /* case "santarosa": //New Mexico
+            lakePool = 360.0;
+            seaLevelDelta = 0;
+            bodyOfWaterName = "Santa Rosa";
+            elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08382810&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
+            flowURL = "none";
+            elevUSGS();
+            break; */
+
 
 
 }
