@@ -5,7 +5,7 @@ var express = require("express"),
   _ = require("underscore"),
   fs = require('fs');
 
-var txData = [];
+// var txData = [];
 
 // Require all models
 var db = require("../models")();
@@ -250,70 +250,30 @@ module.exports = function (app) {
 
   // This reads the tournament file for the Tournaments Page
   app.get("/api/tournaments", function (request, response) {
-
-    var contents = fs.readFileSync('data/tournamentList.txt', 'ascii');
-
-    var indexes = [0, 1, 2, 3, 4, 5, 6, 7]
-    txData = [];
-
-    _.each(contents.split("\n"), function (line) {
-      // Split the text body into readable lines
-      var splitLine;
-      line = line.trim();
-      splitLine = line.split(/[\t]+/);
-
-      // Push each line into txData object
-      txData.push({
-        organizer: splitLine[indexes[0]],
-        trail: splitLine[indexes[1]],
-        date: splitLine[indexes[2]],
-        lake: splitLine[indexes[3]],
-        ramp: splitLine[indexes[4]],
-        state: splitLine[indexes[5]],
-        txDetail: splitLine[indexes[6]],
-        results: splitLine[indexes[7]],
-      });
-    });
-
-
-    // This for loop was used to write out the tournament data that was read from a txt file
-    /*for (i = 0; i < 196; i++) {
-      if (txData[i].organizer == "CATT" && txData[i].trail == "NC/SC Championship") {
-        fs.appendFile('mynewfile2.txt', "{organizer: \"" + txData[i].organizer + "\",\r\n", function (err, file) {
-          if (err) throw err;
-          console.log("Slow me down")
-        });
-        fs.appendFile('mynewfile2.txt', "trail: \"" + txData[i].trail + "\",\r\n", function (err, file) {
-          if (err) throw err;
-          console.log("Slow me down")
-        });
-        fs.appendFile('mynewfile2.txt', "date: \"" + txData[i].date + "\",\r\n", function (err, file) {
-          if (err) throw err;
-          console.log("Slow me down")
-        });
-        fs.appendFile('mynewfile2.txt', "lake: \"" + txData[i].lake + "\",\r\n", function (err, file) {
-          if (err) throw err;
-          console.log("Slow me down")
-        });
-        fs.appendFile('mynewfile2.txt', "ramp: \"" + txData[i].ramp + "\",\r\n", function (err, file) {
-          if (err) throw err;
-          console.log("Slow me down")
-        });
-        fs.appendFile('mynewfile2.txt', "txDetail: \"" + txData[i].txDetail + "\",\r\n", function (err, file) {
-          if (err) throw err;
-          console.log("Slow me down")
-        });
-        fs.appendFile('mynewfile2.txt', "resultsLink: \"" + txData[i].results + "\",\r\n", function (err, file) {
-          if (err) throw err;
-          console.log("Slow me down")
-        });
-        fs.appendFile('mynewfile2.txt', "entryLink: \"" + "\"}\r\n", function (err, file) {
-          if (err) throw err;
-          console.log("Slow me down")
+    // Import our txData from tournamentData.js file
+    var txData = require("../data/tournamentData");
+    // Declare array to hold our data to send back to the client
+    let data = [];
+    // Loop through the high level organizations in our data
+    for (var i = 0; i < txData.length; i++) {
+      var org = txData[i];
+      // Loop through the tournaments within each organization
+      for (var k = 0; k < org.tournaments.length; k++) {
+        var e = org.tournaments[k];
+        // Push each line into output data object
+        data.push({
+          organizer: e.organizer,
+          trail: e.trail,
+          date: e.date,
+          lake: e.lake,
+          ramp: e.ramp,
+          // state: e.state,
+          txDetail: e.txDetail,
+          results: e.resultsLink
         });
       }
-    } */
-    response.json(txData);
+    }
+    response.json(data);
   });
 
 
