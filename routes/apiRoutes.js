@@ -274,6 +274,45 @@ module.exports = function (app) {
       }
     }
     response.json(data);
+
+    // This for loop was used to write out the tournament data that was read from a txt file
+    /*for (i = 0; i < 196; i++) {
+      if (txData[i].organizer == "CATT" && txData[i].trail == "NC/SC Championship") {
+        fs.appendFile('mynewfile2.txt', "{organizer: \"" + txData[i].organizer + "\",\r\n", function (err, file) {
+          if (err) throw err;
+          console.log("Slow me down")
+        });
+        fs.appendFile('mynewfile2.txt', "trail: \"" + txData[i].trail + "\",\r\n", function (err, file) {
+          if (err) throw err;
+          console.log("Slow me down")
+        });
+        fs.appendFile('mynewfile2.txt', "date: \"" + txData[i].date + "\",\r\n", function (err, file) {
+          if (err) throw err;
+          console.log("Slow me down")
+        });
+        fs.appendFile('mynewfile2.txt', "lake: \"" + txData[i].lake + "\",\r\n", function (err, file) {
+          if (err) throw err;
+          console.log("Slow me down")
+        });
+        fs.appendFile('mynewfile2.txt', "ramp: \"" + txData[i].ramp + "\",\r\n", function (err, file) {
+          if (err) throw err;
+          console.log("Slow me down")
+        });
+        fs.appendFile('mynewfile2.txt', "txDetail: \"" + txData[i].txDetail + "\",\r\n", function (err, file) {
+          if (err) throw err;
+          console.log("Slow me down")
+        });
+        fs.appendFile('mynewfile2.txt', "resultsLink: \"" + txData[i].results + "\",\r\n", function (err, file) {
+          if (err) throw err;
+          console.log("Slow me down")
+        });
+        fs.appendFile('mynewfile2.txt', "entryLink: \"" + "\"}\r\n", function (err, file) {
+          if (err) throw err;
+          console.log("Slow me down")
+        });
+      }
+    } */
+
   });
 
 
