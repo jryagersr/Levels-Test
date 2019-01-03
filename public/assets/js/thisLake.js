@@ -22,8 +22,6 @@ let displayBatch = [];
 
 let elevCheck = false;
 let flowCheck = false;
-// Variable to determine which of the cube lakes was selected (so we know which data to display)
-let cubeCheck = "";
 // Variables to hold our ad images and urls
 let adLogoSrc = "";
 let adLogoUrl = "";
@@ -288,10 +286,6 @@ function dataACE() {
             method: "GET",
         })
         .then(function (data) {
-            // Set lake title on page
-            $("#lakeTitle").append(bodyOfWaterName);
-            $("#lakeSponsor").append(bodyOfWaterName);
-            $("#lakeFeaturedTournament").append(bodyOfWaterName);
             // Get current Date, Time and Elev
             // Convert ACE date to javascript Date format "12/24/2016 02:00:00"
 
@@ -302,22 +296,17 @@ function dataACE() {
 
             // Convert UTC date to local time
             let localTime = convertStringToUTC(data[0].Elev[lastElevIndex].time)
-            let currentDate = localTime.substring(4, 10) + " " + localTime.substring(13, 15);
-            let currentTime = localTime.substring(16, 21);
+            currentDate = localTime.substring(4, 10) + " " + localTime.substring(13, 15);
+            currentTime = localTime.substring(16, 21);
 
-            let currentElev = parseFloat(data[0].Elev[lastElevIndex].value).toFixed(2);
+            currentElev = parseFloat(data[0].Elev[lastElevIndex].value).toFixed(2);
             //let currentDate = data[0].Elev[lastElevIndex].time.substring(0, 7) + data[0].Elev[lastElevIndex].time.substring(9, 12);
 
             //let currentTime = data[0].Elev[lastElevIndex].time.substring(11, 17);
-            let currentDelta = (currentElev - lakePool).toFixed(2);
+            currentDelta = (currentElev - lakePool).toFixed(2);
 
-            // Set date, time and elev on page
-            $("#currentTime").append(currentTime);
-            $("#currentDate").append(currentDate);
-            $("#currentLevel").append(currentElev);
-            $("#currentDelta").append(currentDelta);
-            $("#currentNormal").append("normal pool " + lakePool);
-
+            // Run function to display all current values
+            displayCurrentPageValues();
 
             // Create our increment and loop through each value
             // For each value create our associated table html
@@ -360,7 +349,6 @@ function dataACE() {
                     $("#lakeWell-" + j + 1).append("<td>" + elev + "</td>");
                     if (!noACEFlow)
                         $("#lakeWell-" + j + 1).append("<td>" + flow + "</td>");
-
                 }
                 i--;
             }
@@ -570,13 +558,13 @@ function elevCUBE() {
         .then(function (data) {
             displayBatch = data;
             // Determine which lake has been selected of the three cube lakes
-            if (cubeCheck === "highrock") {
+            if (lakeRoute === "highrock") {
                 displayBatch = data[0].data;
             }
-            else if (cubeCheck === "badin") {
+            else if (lakeRoute === "badin") {
                 displayBatch = data[1].data;
             }
-            else if (cubeCheck === "tuckertown") {
+            else if (lakeRoute === "tuckertown") {
                 displayBatch = data[2].data;
             }
 
@@ -654,17 +642,8 @@ switch (lakeRoute) {
         seaLevelDelta = 0;
         moreElevThanFlow = true;
         bodyOfWaterName = "Falls Lake";
-        // elevURL = "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1745041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON";
-        // dataACE()
-        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02087182&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all";
-        // When merging the flowURL got messed up. Data says from Neuse. Commented it to "none" for now.
-        flowURL = "none"
-        // flowURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02087183&period=PT96H&parameterCd=00060&siteType=ST&siteStatus=all";
-        elevUSGS(function () {
-            flowUSGS(function () {
-                buildTable(displayBatch);
-            });
-        });
+        elevURL = "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1745041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON";
+        dataACE()
         break;
 
     case "jordan": //North Carolina
@@ -697,7 +676,6 @@ switch (lakeRoute) {
     case "highrock": // North Carolina
         lakePool = 655.2;
         bodyOfWaterName = "High Rock";
-        cubeCheck = "highrock";
         url = "/api/cube";
         elevCUBE(url);
         break;
@@ -705,14 +683,12 @@ switch (lakeRoute) {
     case "badin": // North Carolina
         lakePool = 541.1;
         bodyOfWaterName = "Badin";
-        cubeCheck = "badin";
         elevCUBE();
         break;
 
     case "tuckertown": // North Carolina
         lakePool = 596;
         bodyOfWaterName = "Tuckertown";
-        cubeCheck = "tuckertown";
         elevCUBE();
         break;
 
