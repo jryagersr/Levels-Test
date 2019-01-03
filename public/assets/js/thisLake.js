@@ -630,7 +630,7 @@ switch (lakeRoute) {
         seaLevelDelta = 0;
         moreElevThanFlow = true;
         bodyOfWaterName = "Kerr Lake"
-        elevURL = "https://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1749041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON";
+        elevURL = "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1749041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON";
         dataACE()
         adLogoSrc = "/static/assets/img/jse.png";
         adLogoUrl = "http://jacksonsuperiorelectric.com/";
@@ -642,7 +642,7 @@ switch (lakeRoute) {
         seaLevelDelta = 0;
         moreElevThanFlow = true;
         bodyOfWaterName = "Falls Lake";
-        elevURL = "https://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1745041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON";
+        elevURL = "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1745041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON";
         dataACE()
         break;
 
@@ -651,7 +651,7 @@ switch (lakeRoute) {
         seaLevelDelta = 0;
         moreElevThanFlow = true;
         bodyOfWaterName = "Jordan Lake";
-        elevURL = "https://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1743041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON";
+        elevURL = "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1743041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON";
         dataACE();
         break;
 
