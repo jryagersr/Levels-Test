@@ -315,6 +315,35 @@ module.exports = function (app) {
 
   });
 
+  // Route to retrieve ACE data from A2W
+  app.get("/api/a2w", function (request, response) {
+    let a2wURL = request.query.a2wURL;
+
+    getData(a2wURL, function(error, data) {
+      if (error) {
+        response.send(error);
+        return;
+      } else {
+        response.json(data);
+      }
+    });
+
+    function getData(a2wURL, callback) {
+      var request = require("request");
+      var data = [];
+      // var options = {
+      //   url: a2wURL,
+      //   type: "json"
+      // }var request = require('request');
+      request(a2wURL, function (error, response, body) {
+        if (error) {
+          callback(error);
+        }
+        data = JSON.parse(body);
+        callback(null, data);
+      })
+    }
+  })
 
   // Route to retrieve TVA data
   app.get("/api/tva", function (request, response) {
