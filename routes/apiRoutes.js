@@ -331,10 +331,6 @@ module.exports = function (app) {
     function getData(a2wURL, callback) {
       var request = require("request");
       var data = [];
-      // var options = {
-      //   url: a2wURL,
-      //   type: "json"
-      // }var request = require('request');
       request(a2wURL, function (error, response, body) {
         if (error) {
           callback(error);

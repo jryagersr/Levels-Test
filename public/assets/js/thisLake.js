@@ -289,7 +289,7 @@ function dataACE() {
             }
         })
         .then(function (data) {
-            console.log(data[0].Elev);
+            console.log(data);
             // Get current Date, Time and Elev
             // Convert ACE date to javascript Date format "12/24/2016 02:00:00"
 
@@ -354,7 +354,11 @@ function dataACE() {
                     if (!noACEFlow)
                         $("#lakeWell-" + j + 1).append("<td>" + flow + "</td>");
                 }
-                i--;
+                if (i === 0) {
+                    j = 0
+                } else {
+                    i--;
+                }
             }
         })
 }
@@ -575,7 +579,7 @@ function elevCUBE() {
             // Set current Date, Time and Elev
             currentElev = displayBatch[0].elev;
             currentDate = displayBatch[0].date;
-            currentTime = "1200";
+            currentTime = "600";
             currentDelta = (currentElev - lakePool).toFixed(2);
 
             // Function to display bodyofWaterName and current values
@@ -628,20 +632,26 @@ let noACEFlow = false; // default value, this is when ACE has no Flow Data inclu
 let moreElevThanFlow = false; // default value, this is when ACE returns elev data in 15 min intervals and flow data in hourly intervals. Loop j variable increment set to 1 or 4 by this flag
 let dataFromACEIsFucked = false; // default value, this is when the ACE data is Fucked Up like Istokpoga in Florida, Damn...
 
-// let lakes =[{
-//     lake: "kerr",
-//     options: [{
-//         lakePool: 300,
-//         seaLevelDelta: 0,
-//         moreElevThanFlow: true,
-//         bodyOfWaterName: "Kerr Lake",
-//         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1749041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-//         elevSource: "ACE",
-//         ads: true,
-//         adLogoSrc: "/static/assets/img/jse.png",
-//         adLogoUrl: "http://jacksonsuperiorelectric.com/"
-//     }]
-// }]
+let lakes =[{
+    lake: "kerr",
+    options: [{
+        lakePool: 300,
+        seaLevelDelta: 0,
+        moreElevThanFlow: true,
+        bodyOfWaterName: "Kerr Lake",
+        elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1749041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+        elevSource: "ACE",
+        flowURL: "none",
+        flowSource: "none",
+        ads: true,
+        adLogoSrc: "/static/assets/img/jse.png",
+        adLogoUrl: "http://jacksonsuperiorelectric.com/",
+        timeLastPulled: "",
+        interval: ""
+    }]
+}]
+
+// console.log("if: " + lakes[lakeRoute]);
 
 switch (lakeRoute) {
     case "kerr": //North Carolina
@@ -651,7 +661,7 @@ switch (lakeRoute) {
         bodyOfWaterName = "Kerr Lake"
         elevURL = "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1749041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON";
         dataACE()
-        adLogoSrc = "/static/assets/img/jse.png";
+        adLogoSrc = "/assets/img/jse.png";
         adLogoUrl = "http://jacksonsuperiorelectric.com/";
         placeLogoAd();
         break;
