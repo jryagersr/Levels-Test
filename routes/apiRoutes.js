@@ -267,7 +267,7 @@ module.exports = function (app) {
           date: e.date,
           lake: e.lake,
           ramp: e.ramp,
-          // state: e.state,
+          state: e.state,
           txDetail: e.txDetail,
           results: e.resultsLink
         });
