@@ -679,7 +679,7 @@ switch (lakeRoute) {
         elevUSGS();
         break;
 
-    case "james": //Virgina - River
+    case "james": //Virginia - River
         lakePool = 0.0;
         seaLevelDelta = 0;
         bodyOfWaterName = "James River";
@@ -688,7 +688,7 @@ switch (lakeRoute) {
         elevUSGS();
         break;
 
-    case "potomac": //Virgina - River
+    case "potomac": //Virginia - River
         lakePool = 0.0;
         seaLevelDelta = 0;
         bodyOfWaterName = "Potomac River (Alexandria)";
@@ -710,7 +710,7 @@ switch (lakeRoute) {
         lakePool = 635.0;
         seaLevelDelta = 0;
         bodyOfWaterName = "West Point";
-        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02339400&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02334400&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
         flowURL = "none";
         elevUSGS();
         break;
@@ -1121,7 +1121,7 @@ switch (lakeRoute) {
         dataTVA();
         break;
 
-    case "wattsbar": // Alabama
+    case "wattsbar": // Tennessee
         lakePool = 741.0;
         seaLevelDelta = 0;
         bodyOfWaterName = "Watts Bar"

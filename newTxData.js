@@ -1,321 +1,369 @@
 var txData = [
 
+
     {
-
         organization: "ABA",
-
         tournaments: [
 
+            ,
             {
                 organizer: "ABA",
                 trail: "VA Area 8",
                 date: "19-03/02",
                 lake: "Kerr",
                 ramp: "NutBush",
+                state: "NC-VA",
                 txDetail: "T1",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "ABA",
                 trail: "VA Area 8",
                 date: "19-03/23",
                 lake: "Gaston",
                 ramp: "Holly Grove",
+                state: "NC-VA",
                 txDetail: "T2",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "ABA",
                 trail: "VA Area 8",
                 date: "19-05/18",
                 lake: "Kerr",
                 ramp: "NutBush",
+                state: "NC",
                 txDetail: "T3",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "ABA",
                 trail: "VA Area 8",
                 date: "19-06/29",
                 lake: "Gaston",
                 ramp: "Holly Grove",
+                state: "NC-VA",
                 txDetail: "T4",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "ABA",
                 trail: "VA Area 8",
                 date: "19-09/28",
                 lake: "Kerr",
                 ramp: "NutBush",
+                state: "NC-VA",
                 txDetail: "2-Day Championship",
                 resultsLink: "undefined",
                 entryLink: ""
             }
-
         ]
-
     },
     {
-
         organization: "Anglers",
+        tournaments: [
 
-        tournaments: [{
+            ,
+            {
                 organizer: "Anglers",
                 trail: "Team Trail",
                 date: "19-03/16",
                 lake: "Smith Mountain",
                 ramp: "Parkway",
+                state: "VA",
                 txDetail: "Anglers Choice",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "Anglers",
                 trail: "Team Trail",
                 date: "19-04/06",
                 lake: "Kerr",
                 ramp: "Occonneechee",
+                state: "NC-VA",
                 txDetail: "Anglers Choice",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "Anglers",
                 trail: "Team Trail",
                 date: "19-04/07",
                 lake: "Kerr",
                 ramp: "Occonneechee",
+                state: "NC-VA",
                 txDetail: "Anglers Choice",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "Anglers",
                 trail: "Team Trail",
                 date: "19-05/04",
                 lake: "Smith Mountain",
                 ramp: "Parkway",
+                state: "VA",
                 txDetail: "Anglers Choice",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "Anglers",
                 trail: "Team Trail",
                 date: "19-06/08",
                 lake: "Kerr",
                 ramp: "Occonneechee",
+                state: "NC-VA",
                 txDetail: "Anglers Choice",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "Anglers",
                 trail: "Team Trail",
                 date: "19-10/12",
                 lake: "Kerr",
                 ramp: "Occonneechee",
+                state: "NC-VA",
                 txDetail: "2-Day Classic",
                 resultsLink: "undefined",
                 entryLink: ""
             }
-
-
-
         ]
     },
     {
-
         organization: "BFL",
-
         tournaments: [
 
+            ,
             {
                 organizer: "BFL",
                 trail: "Piedmont",
                 date: "19-04/13",
                 lake: "Kerr",
                 ramp: "Nutbush",
+                state: "NC-VA",
                 txDetail: "FLW",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "BFL",
                 trail: "Piedmont",
                 date: "19-05/11",
                 lake: "Smith Mountain",
                 ramp: "Parkway",
+                state: "VA",
                 txDetail: "FLW",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "BFL",
                 trail: "Piedmont",
                 date: "19-06/22",
                 lake: "High Rock",
                 ramp: "Tamarac",
+                state: "NC",
                 txDetail: "FLW",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "BFL",
                 trail: "Piedmont",
                 date: "19-07/13",
                 lake: "James River",
                 ramp: "Osborne",
+                state: "VA",
                 txDetail: "FLW",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "BFL",
                 trail: "Piedmont",
                 date: "19-09/07",
                 lake: "Smith Mountain",
                 ramp: "Parkway",
+                state: "VA",
                 txDetail: "Bass For Cash Series",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "BFL",
                 trail: "Shenandoah",
                 date: "19-04/06",
                 lake: "Kerr",
                 ramp: "Nutbush",
+                state: "NC-VA",
                 txDetail: "FLW",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "BFL",
                 trail: "Shenandoah",
                 date: "19-06/29",
                 lake: "Smith Mountain",
                 ramp: "Parkway",
+                state: "VA",
                 txDetail: "FLW",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "BFL",
                 trail: "Shenandoah",
                 date: "19-07/27",
                 lake: "Potomac",
                 ramp: "Smallwood",
+                state: "VA",
                 txDetail: "FLW",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "BFL",
                 trail: "Shenandoah",
                 date: "19-08/17",
                 lake: "Potomac",
                 ramp: "Smallwood",
+                state: "VA",
                 txDetail: "FLW",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "BFL",
                 trail: "Shenandoah",
                 date: "19-09/14",
                 lake: "James River",
                 ramp: "Osborne",
+                state: "VA",
                 txDetail: "FLW",
                 resultsLink: "undefined",
                 entryLink: ""
             }
-
-
         ]
-
     },
     {
         organization: "CATT",
-
         tournaments: [
 
+            ,
             {
                 organizer: "CATT",
                 trail: "Clarks Hill",
                 date: "18-11/18",
                 lake: "Clarks Hill",
                 ramp: "Wildwood",
+                state: "SC",
                 txDetail: "Qualifier 1",
                 resultsLink: "https://www.cattteamtrail.com/divisions/catt-clarks-hill/",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Clarks Hill",
                 date: "18-12/09",
                 lake: "Clarks Hill",
                 ramp: "Wildwood",
+                state: "SC",
                 txDetail: "Qualifier 2",
                 resultsLink: "https://www.cattteamtrail.com/divisions/catt-clarks-hill/",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Clarks Hill",
                 date: "19-01/13",
                 lake: "Clarks Hill",
                 ramp: "Wildwood",
+                state: "SC",
                 txDetail: "Qualifier 3",
                 resultsLink: "https://www.cattteamtrail.com/divisions/catt-clarks-hill/",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Clarks Hill",
                 date: "19-01/27",
                 lake: "Clarks Hill",
                 ramp: "Wildwood",
+                state: "SC",
                 txDetail: "Qualifier 4",
                 resultsLink: "https://www.cattteamtrail.com/divisions/catt-clarks-hill/",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Clarks Hill",
                 date: "19-02/10",
                 lake: "Clarks Hill",
                 ramp: "Wildwood",
+                state: "SC-GA",
                 txDetail: "Final",
                 resultsLink: "https://www.cattteamtrail.com/divisions/catt-clarks-hill/",
                 entryLink: ""
             },
-
             {
                 organizer: "CATT",
                 trail: "Coastal (SC)",
                 date: "19-01/26",
                 lake: "Waccamaw Rvr",
                 ramp: "Bucksport",
+                state: "SC",
                 txDetail: "Qualifier 1",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Coastal (SC)",
                 date: "19-02/16",
                 lake: "Cooper Rvr",
                 ramp: "Cypress Gardens",
+                state: "SC",
                 txDetail: "Qualifier 2",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Coastal (SC)",
                 date: "19-03/16",
                 lake: "Waccamaw Rvr",
                 ramp: "Bucksport",
+                state: "SC",
                 txDetail: "Qualifier 3",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Coastal (SC)",
                 date: "19-04/20",
                 lake: "Waccamaw Rvr",
                 ramp: "Bucksport",
+                state: "SC",
                 txDetail: "Qualifier 4",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Coastal (SC)",
                 date: "19-04/27",
                 lake: "Waccamaw Rvr",
                 ramp: "Bucksport",
+                state: "SC",
                 txDetail: "Final",
                 resultsLink: "undefined",
                 entryLink: ""
@@ -326,123 +374,150 @@ var txData = [
                 date: "19-02/23",
                 lake: "Cooper Rvr",
                 ramp: "Cypress Gardens",
+                state: "SC",
                 txDetail: "Qualifier 1",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Cooper River",
                 date: "19-03/09",
                 lake: "Cooper Rvr",
                 ramp: "Cypress Gardens",
+                state: "SC",
                 txDetail: "Qualifier 2",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Cooper River",
                 date: "19-03/23",
                 lake: "Cooper Rvr",
                 ramp: "Cypress Gardens",
+                state: "SC",
                 txDetail: "Qualifier 3",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Cooper River",
                 date: "19-04/06",
                 lake: "Cooper Rvr",
                 ramp: "Cypress Gardens",
+                state: "SC",
                 txDetail: "Qualifier 4",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Cooper River",
                 date: "19-04/20",
                 lake: "Cooper Rvr",
                 ramp: "Cypress Gardens",
+                state: "SC",
                 txDetail: "Qualifier 5",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Cooper River",
                 date: "19-05/04",
                 lake: "Cooper Rvr",
                 ramp: "Cypress Gardens",
+                state: "SC",
                 txDetail: "Final",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "East (NC)",
                 date: "19-03/23",
                 lake: "Albemarle",
                 ramp: "Lighthouse Landing",
+                state: "NC",
                 txDetail: "Gold 1",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "East (NC)",
                 date: "19-04/13",
                 lake: "Albemarle",
                 ramp: "Lighthouse Landing",
+                state: "NC",
                 txDetail: "Gold 2",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "East (NC)",
                 date: "19-05/11",
                 lake: "Albemarle",
                 ramp: "Lighthouse Landing",
+                state: "NC",
                 txDetail: "Gold 3",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "East (NC)",
                 date: "19-06/08",
                 lake: "Albemarle",
                 ramp: "Lighthouse",
+                state: "NC",
                 txDetail: "Gold 4",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "East (NC)",
                 date: "19-07/13",
                 lake: "Albemarle",
                 ramp: "Lighthouse ",
+                state: "NC",
                 txDetail: "Gold 5",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "East (NC)",
                 date: "19-08/24",
                 lake: "Albemarle",
+                state: "NC",
                 ramp: "Lighthouse",
                 txDetail: "Gold 6",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "East (NC)",
                 date: "19-09/21",
                 lake: "Albemarle",
                 ramp: "Lighthouse",
+                state: "NC",
                 txDetail: "Gold 7",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "East (NC)",
                 date: "19-10/19",
                 lake: "Albemarle",
                 ramp: "Lighthouse",
+                state: "NC",
                 txDetail: "Final",
                 resultsLink: "undefined",
                 entryLink: ""
@@ -453,116 +528,139 @@ var txData = [
                 date: "18-11/03",
                 lake: "Hartwell",
                 ramp: "Broyles",
+                state: "SC",
                 txDetail: "Qualifier 1",
                 resultsLink: "https://www.CATTteamtrail.com/news/tournament-results-hartwell-nov-3-2018-king-bloomfield-win/",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Lake Hartwell",
                 date: "18-12/01",
                 lake: "Hartwell",
                 ramp: "Broyles",
+                state: "SC",
                 txDetail: "Qualifier 2",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Lake Hartwell",
                 date: "18-12/22",
                 lake: "Hartwell",
                 ramp: "Broyles",
+                state: "SC",
                 txDetail: "Qualifier 3",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Lake Hartwell",
                 date: "19-01/05",
                 lake: "Hartwell",
                 ramp: "Broyles",
+                state: "SC",
                 txDetail: "Qualifier 4",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Lake Hartwell",
                 date: "19-01/26",
                 lake: "Hartwell",
                 ramp: "Broyles",
+                state: "SC",
                 txDetail: "Final",
                 resultsLink: "undefined",
                 entryLink: ""
             },
-
             {
                 organizer: "CATT",
                 trail: "Hickory",
                 date: "19-01/19",
                 lake: "Hickory",
                 ramp: "Whittenburg",
+                state: "NC",
                 txDetail: "Qualifier 1",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Hickory",
                 date: "19-03/??",
                 lake: "Hickory",
                 ramp: "Whittenburg",
+                state: "NC",
                 txDetail: "Qualifier 2",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Hickory",
                 date: "19-04/??",
                 lake: "Hickory",
                 ramp: "Whittenburg",
+                state: "NC",
                 txDetail: "Qualifier 3",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Hickory",
                 date: "19-05/11",
                 lake: "Hickory",
                 ramp: "Whittenburg",
+                state: "NC",
                 txDetail: "Qualifier 4",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Hickory",
                 date: "19-06/01",
                 lake: "Hickory",
                 ramp: "Whittenburg",
+                state: "NC",
                 txDetail: "Qualifier 5",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Hickory",
                 date: "19-07/13",
                 lake: "Hickory",
                 ramp: "Whittenburg",
+                state: "NC",
                 txDetail: "Qualifier 6",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Hickory",
                 date: "19-08/17",
                 lake: "Hickory",
                 ramp: "Whittenburg",
+                state: "NC",
                 txDetail: "Qualifier 7",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Hickory",
                 date: "19-09/14",
                 lake: "Hickory",
                 ramp: "Whittenburg",
+                state: "NC",
                 txDetail: "Final",
                 resultsLink: "undefined",
                 entryLink: ""
@@ -573,125 +671,150 @@ var txData = [
                 date: "19-03/23",
                 lake: "James Rvr",
                 ramp: "Riverfront",
+                state: "VA",
                 txDetail: "Gold",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "James River",
                 date: "19-04/27",
                 lake: "James Rvr",
                 ramp: "Osborne",
+                state: "VA",
                 txDetail: "Gold",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "James River",
                 date: "19-05/11",
                 lake: "James Rvr",
                 ramp: "Riverfront",
+                state: "VA",
                 txDetail: "Gold",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "James River",
                 date: "19-06/08",
                 lake: "James Rvr",
                 ramp: "Riverfront",
+                state: "VA",
                 txDetail: "Gold",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "James River",
                 date: "19-07/13",
                 lake: "James Rvr",
                 ramp: "Riverfront",
+                state: "VA",
                 txDetail: "Gold",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "James River",
                 date: "19-08/10",
                 lake: "James Rvr",
                 ramp: "Riverfront",
+                state: "VA",
                 txDetail: "Gold",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "James River",
                 date: "19-09/14",
                 lake: "James River",
                 ramp: "Riverfront",
+                state: "VA",
                 txDetail: "Gold",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "James River",
                 date: "19-10/05",
                 lake: "James Rvr",
                 ramp: "Osborne",
+                state: "VA",
                 txDetail: "Final 2-Day",
                 resultsLink: "undefined",
                 entryLink: ""
             },
-
             {
                 organizer: "CATT",
                 trail: "Kerr Lake",
                 date: "19-02/09",
                 lake: "Kerr",
                 ramp: "Occonneechee",
+                state: "NC-VA",
                 txDetail: "Qualifier 1",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Kerr Lake",
                 date: "19-02/24",
                 lake: "Kerr",
                 ramp: "Occonneechee",
+                state: "NC",
                 txDetail: "Qualifier 2",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Kerr Lake",
                 date: "19-03/17",
                 lake: "Kerr",
                 ramp: "Occonneechee",
+                state: "NC-VA",
                 txDetail: "Gold 3",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Kerr Lake",
                 date: "19-03/31",
                 lake: "Kerr",
                 ramp: "Occonneechee",
+                state: "NC-VA",
                 txDetail: "Gold 4",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Kerr Lake",
                 date: "19-04/14",
                 lake: "Kerr",
                 ramp: "Occonneechee",
+                state: "NC-VA",
                 txDetail: "Qualifier 5",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Kerr Lake",
                 date: "19-04/28",
                 lake: "Kerr",
                 ramp: "Occonneechee",
+                state: "NC",
                 txDetail: "Final",
                 resultsLink: "undefined",
                 entryLink: ""
@@ -702,105 +825,128 @@ var txData = [
                 date: "19-02/09",
                 lake: "Norman",
                 ramp: "Pinnacle",
+                state: "NC",
                 txDetail: "Qualifier 1",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Norman",
                 date: "19-02/??",
                 lake: "Norman",
                 ramp: "Pinnacle",
+                state: "NC",
                 txDetail: "Qualifier 2",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Norman",
                 date: "19-03/??",
                 lake: "Norman",
                 ramp: "Pinnacle",
+                state: "NC",
                 txDetail: "Qualifier 3",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Norman",
                 date: "19-03/??",
                 lake: "Norman",
                 ramp: "Pinnacle",
+                state: "NC",
                 txDetail: "Qualifier 4",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Norman",
                 date: "19-04/??",
                 lake: "Norman",
                 ramp: "Pinnacle",
+                state: "NC",
                 txDetail: "Qualifier 5",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Norman",
                 date: "19-04/??",
                 lake: "Norman",
                 ramp: "Pinnacle",
+                state: "NC",
                 txDetail: "Qualifier 6",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Norman",
                 date: "19-05/25",
                 lake: "Norman",
                 ramp: "Pinnacle",
+                state: "NC",
                 txDetail: "Qualifier 8",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Norman",
                 date: "19-05/??",
                 lake: "Norman",
                 ramp: "Pinnacle",
+                state: "NC",
                 txDetail: "Qualifier 7",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Norman",
                 date: "19-06/22",
                 lake: "Norman",
                 ramp: "Pinnacle",
+                state: "NC",
                 txDetail: "Qualifier 9",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Norman",
                 date: "19-07/20",
                 lake: "Norman",
                 ramp: "Pinnacle",
+                state: "NC",
                 txDetail: "Qualifier 10",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Norman",
                 date: "19-08/31",
                 lake: "Norman",
                 ramp: "Pinnacle",
+                state: "NC",
                 txDetail: "Qualifier 11",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Norman",
                 date: "19-09/21",
                 lake: "Norman",
                 ramp: "Pinnacle",
+                state: "NC",
                 txDetail: "Final",
                 resultsLink: "undefined",
                 entryLink: ""
@@ -811,60 +957,73 @@ var txData = [
                 date: "19-03/09",
                 lake: "Kerr",
                 ramp: "Flemington",
+                state: "NC-VA",
                 txDetail: "Gold 1",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Old North",
                 date: "19-03/23",
                 lake: "Falls",
                 ramp: "Ledge Rock",
+                state: "NC",
                 txDetail: "Gold 2",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Old North",
                 date: "19-04/06",
                 lake: "Harris",
                 ramp: "Crosspointe",
+                state: "NC",
                 txDetail: "Gold 3",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Old North",
                 date: "19-04/28",
                 lake: "Jordan",
                 ramp: "Farrington",
+                state: "NC",
                 txDetail: "Gold 4",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Old North",
                 date: "19-05/18",
                 lake: "Jordan",
                 ramp: "Farrington",
+                state: "NC",
                 txDetail: "Gold 5",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Old North",
                 date: "19-06/08",
                 lake: "Kerr",
                 ramp: "Flemington",
+                state: "NC-VA",
                 txDetail: "Gold 6",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Old North",
                 date: "19-06/29",
                 lake: "Jordan",
                 ramp: "Farrington",
+                state: "NC",
                 txDetail: "Final",
                 resultsLink: "undefined",
                 entryLink: ""
@@ -875,447 +1034,480 @@ var txData = [
                 date: "18-12/15",
                 lake: "Robinson",
                 ramp: "Easterling",
+                state: "SC",
                 txDetail: "Qualifier 1",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Robinson",
                 date: "19-01/05",
                 lake: "Robinson",
                 ramp: "Easterling",
+                state: "SC",
                 txDetail: "Qualifier 2",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Robinson",
                 date: "19-01/12",
                 lake: "Robinson",
                 ramp: "Easterling",
+                state: "SC",
                 txDetail: "Qualifier 3",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Robinson",
                 date: "19-01/19",
                 lake: "Robinson",
                 ramp: "Easterling",
+                state: "SC",
                 txDetail: "Qualifier 4",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Robinson",
                 date: "19-01/26",
                 lake: "Robinson",
                 ramp: "Easterling",
+                state: "SC",
                 txDetail: "Final",
                 resultsLink: "undefined",
                 entryLink: ""
             },
-
             {
                 organizer: "CATT",
                 trail: "Santee Cooper",
                 date: "19-02/09",
                 lake: "Santee Cooper",
                 ramp: "John C Land",
+                state: "SC",
                 txDetail: "Qualifier 1",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Santee Cooper",
                 date: "19-02/16",
                 lake: "Santee Cooper",
                 ramp: "John C Land",
+                state: "SC",
                 txDetail: "Qualifier 2",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Santee Cooper",
                 date: "19-02/23",
                 lake: "Santee Cooper",
                 ramp: "John C Land",
+                state: "SC",
                 txDetail: "Gold 3",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Santee Cooper",
                 date: "19-03/23",
                 lake: "Santee Cooper",
                 ramp: "John C Land",
+                state: "SC",
                 txDetail: "Gold 4",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Santee Cooper",
                 date: "19-03/30",
                 lake: "Santee Cooper",
                 ramp: "John C Land",
+                state: "SC",
                 txDetail: "Qualifier 5",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Santee Cooper",
                 date: "19-04/13",
                 lake: "Santee Cooper",
                 ramp: "John C Land",
+                state: "SC",
                 txDetail: "Qualifier 6",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Santee Cooper",
                 date: "19-05/04",
                 lake: "Santee Cooper",
                 ramp: "John C Land",
+                state: "SC",
                 txDetail: "Qualifier 7",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Santee Cooper",
                 date: "19-05/11",
                 lake: "Santee Cooper",
                 ramp: "John C Land",
+                state: "SC",
                 txDetail: "Final",
                 resultsLink: "undefined",
                 entryLink: ""
             },
             {
                 organizer: "CATT",
-                trail: "Savannah River",
+                trail: "Sparkleberry",
                 date: "18-12/29",
-                lake: "Savannah Rvr",
-                ramp: "Hardeeville",
+                lake: "Swamp",
+                ramp: "Packs",
+                state: "SC",
                 txDetail: "Qualifier 1",
-                resultsLink: "undefined",
-                entryLink: ""
-            }, {
-                organizer: "CATT",
-                trail: "Savannah River",
-                date: "19-01/19",
-                lake: "Savannah Rvr",
-                ramp: "Stokes Bluff",
-                txDetail: "Qualifier 2",
-                resultsLink: "undefined",
-                entryLink: ""
-            }, {
-                organizer: "CATT",
-                trail: "Savannah River",
-                date: "19-02/16",
-                lake: "Savannah Rvr",
-                ramp: "Hardeeville",
-                txDetail: "Qualifier 3",
-                resultsLink: "undefined",
-                entryLink: ""
-            }, {
-                organizer: "CATT",
-                trail: "Savannah River",
-                date: "19-03/09",
-                lake: "Savannah Rvr",
-                ramp: "Hardeeville",
-                txDetail: "Qualifier 4",
-                resultsLink: "undefined",
-                entryLink: ""
-            }, {
-                organizer: "CATT",
-                trail: "Savannah River",
-                date: "19-04/20",
-                lake: "Savannah Rvr",
-                ramp: "Stokes Bluff",
-                txDetail: "Final",
                 resultsLink: "undefined",
                 entryLink: ""
             },
-
             {
-                organizer: "CATT",
-                trail: "Sparkleberry",
-                date: "18-12/29",
-                lake: "Swamp",
-                ramp: "Packs",
-                txDetail: "Qualifier 1",
-                resultsLink: "undefined",
-                entryLink: ""
-            }, {
                 organizer: "CATT",
                 trail: "Sparkleberry",
                 date: "19-01/19",
                 lake: "Swamp",
                 ramp: "Packs",
+                state: "SC",
                 txDetail: "Qualifier 2",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Sparkleberry",
                 date: "19-02/17",
                 lake: "Swamp",
                 ramp: "Packs",
+                state: "SC",
                 txDetail: "Qualifier 3",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Sparkleberry",
                 date: "19-03/03",
                 lake: "Swamp",
                 ramp: "Packs",
+                state: "SC",
                 txDetail: "Qualifier 4",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Sparkleberry",
                 date: "19-03/16",
                 lake: "Swamp",
                 ramp: "Packs",
+                state: "SC",
                 txDetail: "Final",
                 resultsLink: "undefined",
                 entryLink: ""
             },
-
             {
                 organizer: "CATT",
                 trail: "Waccamaw",
                 date: "19-05/18",
                 lake: "Waccamaw Rvr",
                 ramp: "Bucksport",
+                state: "SC",
                 txDetail: "Qualifier 1",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Waccamaw",
                 date: "19-06/22",
                 lake: "Waccamaw Rvr",
                 ramp: "G-CC Landing",
+                state: "SC",
                 txDetail: "Qualifier 2",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Waccamaw",
                 date: "19-07/13",
                 lake: "Waccamaw Rvr",
                 ramp: "Bucksport",
+                state: "SC",
                 txDetail: "Gold 3",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Waccamaw",
                 date: "19-07/20",
                 lake: "Waccamaw Rvr",
                 ramp: "Bucksport",
+                state: "SC",
                 txDetail: "Gold 4",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Waccamaw",
                 date: "19-08/03",
                 lake: "Waccamaw Rvr",
                 ramp: "Bucksport",
+                state: "SC",
                 txDetail: "Qualifier 5",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Waccamaw",
                 date: "19-08/17",
                 lake: "Waccamaw Rvr",
                 ramp: "Bucksport",
+                state: "SC",
                 txDetail: "Final",
                 resultsLink: "undefined",
                 entryLink: ""
             },
-
             {
                 organizer: "CATT",
                 trail: "Wateree Open",
                 date: "19-02/09",
                 lake: "Wateree",
                 ramp: "Clearwater",
+                state: "SC",
                 txDetail: "Open 1",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Wateree Open",
                 date: "19-02/23",
                 lake: "Wateree",
                 ramp: "Clearwater",
+                state: "SC",
                 txDetail: "Open 2",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Wateree Open",
                 date: "19-03/09",
                 lake: "Wateree",
                 ramp: "Clearwater",
+                state: "SC",
                 txDetail: "Open 3",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Wateree Open",
                 date: "19-03/23",
                 lake: "Wateree",
                 ramp: "Clearwater",
+                state: "SC",
                 txDetail: "Open 4",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Wateree Open",
                 date: "19-03/30",
                 lake: "Wateree",
                 ramp: "Clearwater",
+                state: "SC",
                 txDetail: "Open 5",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Wateree Open",
                 date: "19-04/06",
                 lake: "Wateree",
                 ramp: "Clearwater",
+                state: "SC",
                 txDetail: "Open 6",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Wateree Open",
                 date: "19-04/13",
                 lake: "Wateree",
                 ramp: "Clearwater",
+                state: "SC",
                 txDetail: "Open 7",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Wateree Open",
                 date: "19-05/11",
                 lake: "Wateree",
                 ramp: "Clearwater",
+                state: "SC",
                 txDetail: "Open 8",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Wateree Open",
                 date: "19-05/25",
                 lake: "Wateree",
                 ramp: "Clearwater",
+                state: "SC",
                 txDetail: "Open 9",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Wateree Open",
                 date: "19-06/01",
                 lake: "Wateree",
                 ramp: "Clearwater",
+                state: "SC",
                 txDetail: "Open 10",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Wateree Open",
                 date: "19-06/08",
                 lake: "Wateree",
                 ramp: "Clearwater",
+                state: "SC",
                 txDetail: "Open 11",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Wateree Open",
                 date: "19-06/15",
                 lake: "Wateree",
                 ramp: "Clearwater",
+                state: "SC",
                 txDetail: "Open 12",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Wateree Open",
                 date: "19-06/22",
                 lake: "Wateree",
                 ramp: "Clearwater",
+                state: "SC",
                 txDetail: "Open 13",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Wateree Open",
                 date: "19-07/20",
                 lake: "Wateree",
                 ramp: "Clearwater",
+                state: "SC",
                 txDetail: "Open 14",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Wateree Open",
                 date: "19-08/10",
                 lake: "Wateree",
                 ramp: "Clearwater",
+                state: "SC",
                 txDetail: "Open 15",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Wateree Open",
                 date: "19-09/28",
                 lake: "Wateree",
                 ramp: "Clearwater",
+                state: "SC",
                 txDetail: "Open 16",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Wateree Open",
                 date: "19-10/12",
                 lake: "Wateree",
                 ramp: "Clearwater",
+                state: "SC",
                 txDetail: "Open 17",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Wateree Open",
                 date: "19-10/19",
                 lake: "Wateree",
                 ramp: "Clearwater",
+                state: "SC",
                 txDetail: "Open 18",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Wateree Open",
                 date: "19-11/09",
                 lake: "Wateree",
                 ramp: "Clearwater",
+                state: "SC",
                 txDetail: "Open 19",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Wateree Open",
                 date: "19-11/16",
                 lake: "Wateree",
                 ramp: "Clearwater",
+                state: "SC",
                 txDetail: "Final",
                 resultsLink: "undefined",
                 entryLink: ""
@@ -1326,78 +1518,95 @@ var txData = [
                 date: "19-02/16",
                 lake: "Wateree",
                 ramp: "Clearwater",
+                state: "SC",
                 txDetail: "Qualifier 1",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Wateree",
                 date: "19-02/23",
                 lake: "Wateree",
                 ramp: "Clearwater",
+                state: "SC",
                 txDetail: "Qualifier 2",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Wateree",
                 date: "19-03/02",
                 lake: "Wateree",
                 ramp: "Clearwater",
+                state: "SC",
                 txDetail: "Qualifier 3",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Wateree",
                 date: "19-03/09",
                 lake: "Wateree",
                 ramp: "Clearwater",
+                state: "SC",
                 txDetail: "Qualifier 4",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Wateree",
                 date: "19-03/16",
                 lake: "Wateree",
                 ramp: "Clearwater",
+                state: "SC",
                 txDetail: "Qualifier 5",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Wateree",
                 date: "19-03/23",
                 lake: "Wateree",
                 ramp: "Clearwater",
+                state: "SC",
                 txDetail: "Qualifier 6",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Wateree",
                 date: "19-03/30",
                 lake: "Wateree",
                 ramp: "Clearwater",
+                state: "SC",
                 txDetail: "Qualifier 7",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Wateree",
                 date: "19-04/06",
                 lake: "Wateree",
                 ramp: "Clearwater",
+                state: "SC",
                 txDetail: "Qualifier 8",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Wateree",
                 date: "19-04/13",
                 lake: "Wateree",
                 ramp: "Clearwater",
+                state: "SC",
                 txDetail: "Final",
                 resultsLink: "undefined",
                 entryLink: ""
@@ -1408,51 +1617,62 @@ var txData = [
                 date: "19-02/02",
                 lake: "Wylie",
                 ramp: "Buster Boyd",
+                state: "SC",
                 txDetail: "Qualifier 1",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Lake Wylie",
                 date: "19-03/16",
                 lake: "Wylie",
                 ramp: "Buster Boyd",
+                state: "NC-SC",
                 txDetail: "Qualifier 2",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Lake Wylie",
                 date: "19-03/30",
                 lake: "Wylie",
                 ramp: "Buster Boyd",
+                state: "NC-SC",
                 txDetail: "Qualifier 3",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Lake Wylie",
                 date: "19-04/13",
                 lake: "Wylie",
                 ramp: "Buster Boyd",
+                state: "NC-SC",
                 txDetail: "Qualifier 4",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Lake Wylie",
                 date: "19-04/27",
                 lake: "Wylie",
                 ramp: "Buster Boyd",
+                state: "NC-SC",
                 txDetail: "Qualifier 5",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Lake Wylie",
                 date: "19-05/11",
                 lake: "Wylie",
                 ramp: "Buster Boyd",
+                state: "NC-SC",
                 txDetail: "Final",
                 resultsLink: "undefined",
                 entryLink: ""
@@ -1463,158 +1683,186 @@ var txData = [
                 date: "19-02/09",
                 lake: "Tillery",
                 ramp: "Swift Island",
+                state: "NC",
                 txDetail: "Qualifier 1",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Yadkin",
                 date: "19-03/02",
                 lake: "Badin",
                 ramp: "Alcoa",
+                state: "NC",
                 txDetail: "Qualifier 2",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Yadkin",
                 date: "19-03/23",
                 lake: "High Rock",
                 ramp: "Tamarac",
+                state: "NC",
                 txDetail: "Qualifier 3",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Yadkin",
                 date: "19-04/06",
                 lake: "Tuckertown",
                 ramp: "Flat Rock",
+                state: "NC",
                 txDetail: "Qualifier 4",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Yadkin",
                 date: "19-05/18",
                 lake: "High Rock",
                 ramp: "Tamarac",
+                state: "NC",
                 txDetail: "Qualifier 5",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Yadkin",
                 date: "19-05/25",
                 lake: "Tuckertown",
                 ramp: "Flat Rock",
+                state: "NC",
                 txDetail: "Qualifier 6",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CATT",
                 trail: "Yadkin",
                 date: "19-06/01",
                 lake: "High Rock",
                 ramp: "Tamarac",
+                state: "NC",
                 txDetail: "Final",
                 resultsLink: "undefined",
                 entryLink: ""
             }
-
         ]
     },
     {
-
         organization: "CBC",
+        tournaments: [
 
-        tournaments: [{
+            ,
+            {
                 organizer: "CBC",
                 trail: "SC",
                 date: "19-02/02",
                 lake: "Waccamaw Rvr",
                 ramp: "Bucksport",
+                state: "SC",
                 txDetail: "CBC",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
-                organizer: "CBC",
-                trail: "NC",
-                date: "19-02/16",
-                lake: "Norman",
-                ramp: "Pinnacle?",
-                txDetail: "CBC NC",
-                resultsLink: "undefined",
-                entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CBC",
                 trail: "SC",
                 date: "19-03/02",
                 lake: "Santee Cooper",
                 ramp: "John C Land",
+                state: "SC",
                 txDetail: "CBC SC",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
-                organizer: "CBC",
-                trail: "NC",
-                date: "19-03/16",
-                lake: "James",
-                ramp: "Black Bear",
-                txDetail: "CBC NC",
-                resultsLink: "undefined",
-                entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CBC",
                 trail: "SC",
                 date: "19-03/30",
                 lake: "Murray",
                 ramp: "Dreher Island",
+                state: "SC",
                 txDetail: "CBC NC",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
-                organizer: "CBC",
-                trail: "NC",
-                date: "19-04/20",
-                lake: "Hickory",
-                ramp: "Whittenburg",
-                txDetail: "Bass For Cash Series",
-                resultsLink: "undefined",
-                entryLink: ""
-            }, {
+            },
+            {
                 organizer: "CBC",
                 trail: "SC",
                 date: "19-04/27",
                 lake: "Wateree",
                 ramp: "Clearwater",
+                state: "SC",
                 txDetail: "CBC SC",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
+                organizer: "CBC",
+                trail: "NC",
+                date: "19-02/16",
+                lake: "Norman",
+                ramp: "Pinnacle?",
+                state: "NC",
+                txDetail: "CBC NC",
+                resultsLink: "undefined",
+                entryLink: ""
+            },
+            {
+                organizer: "CBC",
+                trail: "NC",
+                date: "19-03/16",
+                lake: "James",
+                ramp: "Black Bear",
+                state: "NC",
+                txDetail: "CBC NC",
+                resultsLink: "undefined",
+                entryLink: ""
+            },
+            {
+                organizer: "CBC",
+                trail: "NC",
+                date: "19-04/20",
+                lake: "Hickory",
+                ramp: "Whittenburg",
+                state: "NC",
+                txDetail: "Bass For Cash Series",
+                resultsLink: "undefined",
+                entryLink: ""
+            },
+            {
                 organizer: "CBC",
                 trail: "NC",
                 date: "19-05/04",
                 lake: "Kerr",
                 ramp: "Nutbush",
+                state: "NC-VA",
                 txDetail: "CBC NC",
                 resultsLink: "undefined",
                 entryLink: ""
             }
-
         ]
-
     },
     {
-
         organization: "Collins",
+        tournaments: [
 
-        tournaments: [{
+            ,
+            {
                 organizer: "Collins",
                 trail: "BFCS",
                 date: "19-03/30",
                 lake: "Jordan",
                 ramp: "Farrington",
+                state: "NC",
                 txDetail: "Bass For Cash Series",
                 resultsLink: "undefined",
                 entryLink: ""
@@ -1625,6 +1873,7 @@ var txData = [
                 date: "19-04/20",
                 lake: "Kerr",
                 ramp: "Nutbush",
+                state: "NC-VA",
                 txDetail: "Combined Boys & Girls Club",
                 resultsLink: "undefined",
                 entryLink: ""
@@ -1635,177 +1884,205 @@ var txData = [
                 date: "19-05/04",
                 lake: "Gaston",
                 ramp: "Summit",
+                state: "NC-VA",
                 txDetail: "Bass For Cash Series",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "Collins",
                 trail: "BFCS",
                 date: "19-06/22",
                 lake: "Falls",
                 ramp: "Ledge Rock",
+                state: "NC",
                 txDetail: "Bass For Cash Series",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "Collins",
                 trail: "BFCS",
                 date: "19-07/27",
                 lake: "Roanoke ",
                 ramp: "Plymouth",
+                state: "NC",
                 txDetail: "Bass For Cash Series",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "Collins",
                 trail: "BFCS",
                 date: "19-08/10",
                 lake: "Cypress Landing",
                 ramp: "Pembroke",
+                state: "NC",
                 txDetail: "Bass For Cash Series",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "Collins",
                 trail: "BFCS",
                 date: "19-09/14",
                 lake: "TBD",
                 ramp: "TBD",
+                state: "NC",
                 txDetail: "Super 2-Day",
                 resultsLink: "undefined",
                 entryLink: ""
             }
-
-
         ]
-
     },
     {
-
         organization: "PBC",
+        tournaments: [
 
-        tournaments: [{
+            ,
+            {
                 organizer: "PBC",
                 trail: "Spring Team",
                 date: "19-03/02",
                 lake: "Jordan",
                 ramp: "Farrington",
+                state: "NC",
                 txDetail: "Piedmont Bass Classic",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "PBC",
                 trail: "Spring Team",
                 date: "19-03/16",
                 lake: "Falls",
                 ramp: "Ledge Rock",
+                state: "NC",
                 txDetail: "Piedmont Bass Classic",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "PBC",
                 trail: "Spring Team",
                 date: "19-03/30",
                 lake: "Harris",
                 ramp: "Crosspointe",
+                state: "NC",
                 txDetail: "Piedmont Bass Classic",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "PBC",
                 trail: "Spring Team",
                 date: "19-04/13",
                 lake: "Jordan",
                 ramp: "Farrington",
+                state: "NC",
                 txDetail: "Piedmont Bass Classic",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "PBC",
                 trail: "Spring Team",
                 date: "19-04/27",
                 lake: "Kerr",
                 ramp: "Flemington",
+                state: "NC-VA",
                 txDetail: "Piedmont Bass Classic",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "PBC",
                 trail: "Spring Team",
                 date: "19-05/11",
                 lake: "Jordan",
                 ramp: "Farrington",
+                state: "NC",
                 txDetail: "Piedmont Bass Classic",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "PBC",
                 trail: "Spring Team",
                 date: "19-06/01",
                 lake: "Falls",
                 ramp: "Ledge Rock",
+                state: "NC",
                 txDetail: "Piedmont Bass Classic",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "PBC",
                 trail: "Spring Team",
                 date: "19-06/15",
                 lake: "Jordan",
                 ramp: "Farrington",
+                state: "NC",
                 txDetail: "Championship",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "PBC",
                 trail: "Cashion",
                 date: "19-02/23",
                 lake: "Jordan",
                 ramp: "Farrington",
+                state: "NC",
                 txDetail: "Piedmont Bass Classic",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "PBC",
                 trail: "Cashion",
                 date: "19-03/09",
                 lake: "Falls",
                 ramp: "Ledge Rock",
+                state: "NC",
                 txDetail: "Piedmont Bass Classic",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "PBC",
                 trail: "Cashion",
                 date: "19-03/23",
                 lake: "Harris",
                 ramp: "Crosspointe",
+                state: "NC",
                 txDetail: "Piedmont Bass Classic",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "PBC",
                 trail: "Cashion",
                 date: "19-04/06",
                 lake: "Jordan",
                 ramp: "Farrington",
+                state: "NC",
                 txDetail: "Piedmont Bass Classic",
                 resultsLink: "undefined",
                 entryLink: ""
-            }, {
+            },
+            {
                 organizer: "PBC",
                 trail: "Cashion",
                 date: "19-05/04",
                 lake: "Kerr",
                 ramp: "Flemington",
+                state: "NC-VA",
                 txDetail: "Piedmont Bass Classic",
                 resultsLink: "undefined",
                 entryLink: ""
             }
-
-
         ]
-
     }
-
-];
+]
