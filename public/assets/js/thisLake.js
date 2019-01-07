@@ -1,44 +1,88 @@
-let lakePool = 0;
-let seaLevelDelta = 0;
-let bodyOfWaterName = '';
-let elevationAdjust = 0;
-
-// Function to capitalize first letter of string
-function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-};
-
-// Set variable to handle lake name we passed through cookie
-// let lakeSelect = getCookie("lakeSelect");
-
-// Clear old page data if it exists
-$("#lakeTitle").empty();
-$("#currentLevel").empty();
-$("#currentDateTime").empty();
-$("#lakeSection").empty();
-
 // Pull the lake name from the end of the current URL
-let currentURL = window.location.href;
 let parsedURL = window.location.href.split("/");
 let lakeRoute = parsedURL[parsedURL.length - 1];
-parsedURL = parsedURL.slice(0, parsedURL.length - 2);
-let newURL = parsedURL.join("/") + "/api/lakes/" + lakeRoute;
-const batch = [];
+
+// Clear old page data if it exists
+$("#lakeTitle #currentLevel #currentDateTime #lakeSection").empty();
+// Variable to display for current lake
+// Get current Date, Time and Elev
+let bodyOfWaterName = "";
+let currentElev = "";
+let currentDate = "";
+let currentTime = "";
+let currentDelta = "";
+
+// Variable to calculate and display current pool level
+let lakePool = 0;
+let seaLevelDelta = 0;
+let elevationAdjust = 0;
+
+// Holds our display data to send into buildTable function
+let displayBatch = [];
+
 let elevCheck = false;
 let flowCheck = false;
-// Variable to determine which of the cube lakes was selected (so we know which data to display)
-let cubeCheck = "";
 // Variables to hold our ad images and urls
 let adLogoSrc = "";
 let adLogoUrl = "";
 
+// Function to set current values on page
+function displayCurrentPageValues() {
+    // Set lake title on page
+    $("#lakeTitle").append(bodyOfWaterName);
+    $("#lakeSponsor").append(bodyOfWaterName);
+    $("#lakeFeaturedTournament").append(bodyOfWaterName);
+    // Set current date, time elev, and pool on page
+    $("#currentTime").append(currentTime);
+    $("#currentDate").append(currentDate);
+    $("#currentLevel").append(currentElev);
+    $("#currentDelta").append(currentDelta);
+    $("#currentNormal").append("normal pool " + lakePool);
+}
+
+// Function to build table on page
+function buildTable(data) {
+    for (var i = 0; i < data.length; i++) {
+        var date = "N/A";
+        var time = "N/A";
+        var elev = "N/A";
+        var flow = "N/A";
+        // Check to see if data contains date, time, elev, or flow. If not it will stay as "N/A"
+        if (data[i].date) {
+            date = data[i].date;
+        }
+        if (data[i].time) {
+            time = data[i].time;
+        }
+        if (data[i].elev) {
+            elev = data[i].elev;
+        }
+        if (data[i].flow) {
+            flow = data[i].flow;
+        }
+
+        // Create the HTML Well (Section) and Add the table content for each reserved table
+        var lakeSection = $("<tr>");
+        lakeSection.addClass("well");
+        lakeSection.attr("id", "lakeWell-" + i + 1);
+        $("#lakeSection").append(lakeSection);
+
+        // Append the data values to the table row
+        $("#lakeWell-" + i + 1).append("<td>" + date + "</td>");
+        $("#lakeWell-" + i + 1).append("<td>" + time + "</td>");
+        $("#lakeWell-" + i + 1).append("<td>" + elev + "</td>");
+        $("#lakeWell-" + i + 1).append("<td>" + flow + "</td>");
+    }
+}
+
 // Function to make elevation USGS call
-function elevUSGS() {
+let k = 0; // Counter variable for flowUSGS to use to sync time with elevUSGS
+function elevUSGS(callback) {
     // API call for flow
     $.ajax({
-            url: elevURL,
-            method: "GET",
-        })
+        url: elevURL,
+        method: "GET",
+    })
         .then(function (data) {
             console.log('USGS Elev Data', data);
             // Parse the json data return to find the values we want
@@ -54,23 +98,15 @@ function elevUSGS() {
                 else elevationAdjust = dataValues[0].value;
             }
 
-            // Set lake title on page
-            $("#lakeTitle").append(bodyOfWaterName);
-            $("#lakeSponsor").append(bodyOfWaterName);
-            $("#lakeFeaturedTournament").append(bodyOfWaterName);
-            // Get current Date, Time and Elev
-            var currentElev = elevationAdjust;
+            // Set current Date, Time and Elev
+            currentElev = elevationAdjust;
             let splitTimeDate = dataValues[0].dateTime.split("T");
-            let currentDate = splitTimeDate[0];
-            let currentTime = splitTimeDate[1].substring(0, 5);
-            let currentDelta = (currentElev - lakePool).toFixed(2);
+            currentDate = splitTimeDate[0];
+            currentTime = splitTimeDate[1].substring(0, 5);
+            currentDelta = (currentElev - lakePool).toFixed(2);
 
-            // Set date, time and elev on page
-            $("#currentTime").append(currentTime);
-            $("#currentDate").append(currentDate);
-            $("#currentLevel").append(currentElev);
-            $("#currentDelta").append(currentDelta);
-            $("#currentNormal").append("normal pool " + lakePool);
+            // Function to display our current page values
+            displayCurrentPageValues();
 
             // Find first time value that is at the top of the hour
             switch (dataValues[0].dateTime.substring(14, 16)) {
@@ -94,11 +130,14 @@ function elevUSGS() {
                 default:
                     if (lakeRoute == "jordan" || lakeRoute == "kerr" || lakeRoute == "buggsisland") {
                         alert("Check USGS Elev Time");
-                    } else j = 0;
+                    } else {
+                        var j = 0;
+                    }
             }
             // Create our increment and loop through each value
-            // For each value create our associated table html
-            let i = 0;
+            // For each value push an object into displayBatch
+            // Set our counter K variable before incrementing for flowUSGS to use
+            k = j;
             for (j; j < dataValues.length; j += 4) {
                 let element = dataValues[j];
                 let elev = element.value;
@@ -106,71 +145,136 @@ function elevUSGS() {
                 let date = splitTimeDate[0].substring(2, 10).replace('-', ' ');
                 let time = splitTimeDate[1].substring(0, 5);
                 // adjust the elev for lakes with data relative to full pool (not from sealevel))
-                if (seaLevelDelta !== 0)
+                if (seaLevelDelta !== 0) {
                     elev = (parseFloat(dataValues[j].value) + seaLevelDelta).toFixed(2);
+                }
 
-
-                // Create the HTML Well (Section) and Add the table content for each reserved table
-                var lakeSection = $("<tr>");
-                lakeSection.addClass("well");
-                lakeSection.attr("id", "lakeWell-" + i + 1);
-                $("#lakeSection").append(lakeSection);
-
-                // Append the data values to the table row
-                $("#lakeWell-" + i + 1).append("<td>" + date + "</td>");
-                $("#lakeWell-" + i + 1).append("<td>" + time + "</td>");
-                $("#lakeWell-" + i + 1).append("<td>" + elev + "</td>");
-                $("#lakeWell-" + i + 1).append("<td>N/A</td>");
-                i++;
-
+                displayBatch.push({
+                    date: date,
+                    time: time,
+                    elev: elev
+                });
             }
-            if (flowURL !== "none")
-                flowUSGS();
+            callback(null, displayBatch);
         })
 }
 
 // Function to make flow USGS call
-function flowUSGS() {
-    // API call for flow
-    $.ajax({
+function flowUSGS(callback) {
+    if (flowURL !== "none") {
+        // API call for flow
+        $.ajax({
             url: flowURL,
             method: "GET",
         })
-        .then(function (data) {
-            // Parse through the json data to find the values we want
-            let dataValues = data.value.timeSeries[0].values[0].value
-            // Reverse the order of our data so most recent date is first
-            dataValues.reverse();
-            // Create our increment and loop through the data
-            // For each loop append the flow html into the table that already exists
-            let i = 0;
-            dataValues.forEach(function (element) {
-                if (element.value !== "-99")
-                    $("#lakeWell-" + i + 1).append("<td>" + element.value + "</td>");
-                i++;
-            })
-        });
+            .then(function (data) {
+                console.log("flowUSGS data ", data);
+                // Parse through the json data to find the values we want
+                let dataValues = data.value.timeSeries[0].values[0].value
+                // Reverse the order of our data so most recent date is first
+                dataValues.reverse();
+                // Loop through the flow data, and match it to displayBatch (which already holds the elevation data)
+                for (var i = 0; i < displayBatch.length; i++) {
+                    displayBatch[i].flow = dataValues[k].value;
+                    k += 4;
+                }
+                callback(null, displayBatch);
+            });
+    }
+    // Callback empty data without Ajax if flowURL = "none"
+    callback(null, displayBatch);
 }
 
-// function displayData() {
 
-//     batch.forEach(function (element) {
-//         // Create the HTML Well (Section) and Add the table content for each reserved table
-//         var lakeSection = $("<tr>");
-//         lakeSection.addClass("well");
-//         lakeSection.attr("id", "lakeWell-" + i + 1);
-//         $("#lakeSection").append(lakeSection);
+//==========================================================================================================
 
-//         // Append the data values to the table row
-//         $("#lakeWell-" + i + 1).append("<td>" + element.date + "</td>");
-//         $("#lakeWell-" + i + 1).append("<td>" + element.time + "</td>");
-//         $("#lakeWell-" + i + 1).append("<td>" + element.elev + "</td>");
-//         $("#lakeWell-" + i + 1).append("<td>" + element.flow + "</td>");
-//     })
+// Code from John that got out of place when merging. I think it belongs in the aceFlow function
+
+//                 case "45":
+//                     var usgsIndex = 3
+//                     break;
+
+//                 default:
+//                     if (lakeRoute == "jordan" || lakeRoute == "kerr" || lakeRoute == "buggsisland") {
+//                         alert("Check ACE Flow Time");
+//                     } else j = 0;
+
+//             }
+
+//             let aceIndex = 0;
+//             let lakewellIndex = 0;
+//             let aceTime = '0000'; // Time on current ACE line
+//             let usgsTime = '0'; // Time on current USGS line
+
+//             // Code readability, will be set to comparison of times in loop
+//             let timesAreNotEqual = false;
+//             let aceTimeGreater = false;
+//             let daysAreEqual = false;
+//             let dataIsLinedUpByTime = false;
+
+//             // Check to see if the first ACE flow data line is same time as USGS first line time and the same day 
+//             // (don't care about month right now)
+//             // Can fix the month problem later 
+//             //(only an issue when site down as time goes by midnight last day of month)
+
+//             for (usgsIndex; usgsIndex < dataTables.length; usgsIndex += 4) {
+//                 data[aceIndex].time = data[aceIndex].time.substr(0, 2).concat("00");
+//                 if (data[aceIndex].time === '2400') { // ACE represents midnight as 2400 of passing day, Jordan Lake on "0031"
+//                     aceTime = '0000' // USGS represents midnight as 0000 of next day (Dates are different)
+//                 } else aceTime = data[aceIndex].time.replace("31", '00');
+
+//                 usgsTime = dataTables[usgsIndex].dateTime.substring(11, 16).replace(':', ''); // Pulls the USGS time from the line and removes the : (ACE does not have a colon)
+
+//                 // Set Booleans for conditionals below, days have OR due to difference in representation of midnight
+//                 timesAreNotEqual = usgsTime !== aceTime;
+//                 aceTimeGreater = parseInt(dataTables[usgsIndex].dateTime.substring(11, 16).replace(':', ''), 10) < parseInt(aceTime, 10);
+//                 if (!daysAreEqual)
+//                     daysAreEqual = (data[aceIndex].date.substring(0, 2) == dataTables[usgsIndex].dateTime.substring(8, 10)) || aceTime == '0000';
+
+//                 // PLEASE LEAVE THIS SWITCH COMMENTED OUT, I'll need it to fix when the month changes.
+//                 //switch (data[aceIndex].date.substring(2, 6)) {
+
+//                 // If case is org, then run the sort function and create a newBatch, then display using the newBath
+//                 // Change our sort boolean to keep track of asc/desc
+//                 //    case "'DEC":
+//                 //        if (dataTables[usgsIndex].dateTime.substring(5, 7) == 12)
+//                 //            monthsAreEqual = true
+//                 //        break;
+
+//                 // }
+
+//                 let element = data[aceIndex]; // define element for template updates below.
+
+//                 if (daysAreEqual && !timesAreNotEqual) {
+//                     if (!timesAreNotEqual) {
+//                         //if (aceTimeGreater) { // is ACE Time newer than USGS (ACE has newer data?)
+//                         //    usgsIndex = usgsIndex - 4; // Stay on current USGS line by decrementing loop counter
+//                         //} else { // ACE Time is less than USGS Time (ACE site down)
+
+//                         //    console.log('lakewellIndex1', lakewellIndex);
+//                         //    $("#lakeWell-" + (lakewellIndex) + 1).append("<td>" + "N/A1" + "</td>"); //Append N/A as the Flow Value to the row for the missing data
+//                         //    lakewellIndex++; //Move to next Lakewell Template line
+//                         // }
+//                         //} else { // Times are equal, post data to Lakewell template
+//                         $("#lakeWell-" + lakewellIndex + 1).append("<td>" + element.outflow + "</td>");
+//                         lakewellIndex++;
+
+//                         if (!timesAreNotEqual) {
+//                             dataIsLinedUpByTime = true;
+//                         }
+//                     }
+//                 } else if (aceTimeGreater) {
+//                     $("#lakeWell-" + lakewellIndex + 1).append("<td>" + "N/A" + "</td>"); //Append N/A as the Flow Value to the row for the missing data
+//                     lakewellIndex++;
+//                     aceIndex--;
+//                 }
+//                 aceIndex++; // Increment loop counter ACE data and LakeWell template
+//             }
+//             console.log(data);
+//         });
 // }
 
-
-
+// ===========================================================================================================
 
 
 
@@ -178,14 +282,14 @@ function flowUSGS() {
 function dataACE() {
     // API call for flow
     $.ajax({
-            url: elevURL,
-            method: "GET",
-        })
+        url: "/api/a2w",
+        method: "GET",
+        data: {
+            a2wURL: elevURL,
+        }
+    })
         .then(function (data) {
-            // Set lake title on page
-            $("#lakeTitle").append(bodyOfWaterName);
-            $("#lakeSponsor").append(bodyOfWaterName);
-            $("#lakeFeaturedTournament").append(bodyOfWaterName);
+            console.log(data);
             // Get current Date, Time and Elev
             // Convert ACE date to javascript Date format "12/24/2016 02:00:00"
 
@@ -196,22 +300,17 @@ function dataACE() {
 
             // Convert UTC date to local time
             let localTime = convertStringToUTC(data[0].Elev[lastElevIndex].time)
-            let currentDate = localTime.substring(4, 10) + " " + localTime.substring(13, 15);
-            let currentTime = localTime.substring(16, 21);
+            currentDate = localTime.substring(4, 10) + " " + localTime.substring(13, 15);
+            currentTime = localTime.substring(16, 21);
 
-            let currentElev = parseFloat(data[0].Elev[lastElevIndex].value).toFixed(2);
+            currentElev = parseFloat(data[0].Elev[lastElevIndex].value).toFixed(2);
             //let currentDate = data[0].Elev[lastElevIndex].time.substring(0, 7) + data[0].Elev[lastElevIndex].time.substring(9, 12);
 
             //let currentTime = data[0].Elev[lastElevIndex].time.substring(11, 17);
-            let currentDelta = (currentElev - lakePool).toFixed(2);
+            currentDelta = (currentElev - lakePool).toFixed(2);
 
-            // Set date, time and elev on page
-            $("#currentTime").append(currentTime);
-            $("#currentDate").append(currentDate);
-            $("#currentLevel").append(currentElev);
-            $("#currentDelta").append(currentDelta);
-            $("#currentNormal").append("normal pool " + lakePool);
-
+            // Run function to display all current values
+            displayCurrentPageValues();
 
             // Create our increment and loop through each value
             // For each value create our associated table html
@@ -254,9 +353,12 @@ function dataACE() {
                     $("#lakeWell-" + j + 1).append("<td>" + elev + "</td>");
                     if (!noACEFlow)
                         $("#lakeWell-" + j + 1).append("<td>" + flow + "</td>");
-
                 }
-                i--;
+                if (i === 0) {
+                    j = 0
+                } else {
+                    i--;
+                }
             }
         })
 }
@@ -313,22 +415,16 @@ function convertUTCDate(timestamp) {
     return year + '-' + month + '-' + day + ' ' + hours + ':' + minutes;
 }
 
-
-
-
-
-
-
 // Function to make elev TVA call
 function dataTVA(data) {
     $.ajax({
-            url: "/api/tva",
-            method: "GET",
-            data: {
-                tvaDataURL: elevURL,
-                tvaLakeName: bodyOfWaterName
-            }
-        })
+        url: "/api/tva",
+        method: "GET",
+        data: {
+            tvaDataURL: elevURL,
+            tvaLakeName: bodyOfWaterName
+        }
+    })
         .then(function (data) {
             console.log(lakeRoute)
 
@@ -390,22 +486,30 @@ function dataTVA(data) {
 // Function to make elev Duke call
 function dataDuke(data) {
     $.ajax({
-            url: "/api/duke",
-            method: "GET",
-            data: {
-                dukeDataURL: elevURL,
-                dukeLakeName: bodyOfWaterName
-            }
-        })
+        url: "/api/duke",
+        method: "GET",
+        data: {
+            dukeDataURL: elevURL,
+            dukeLakeName: bodyOfWaterName
+        }
+    })
         .then(function (data) {
-            console.log(lakeRoute)
+            console.log(data);
             // adjust the elev for lakes with data relative to full pool (not from sealevel))
 
             let skipToValidData = 0;
 
-            while (isNaN(data[skipToValidData].Average)) {
+            // Duke updates their text file with future datas sometimes
+            // While date is ahead of today's date, continue to loop forward
+            var now = new Date();
+            var dataDate = new Date(data[skipToValidData].Date);
+            while (dataDate > now) {
                 skipToValidData++;
+                dataDate = new Date(data[skipToValidData].Date);
+                console.log(dataDate);
             }
+            console.log(skipToValidData);
+
             if (seaLevelDelta !== 0)
                 elevationAdjust = (parseFloat(data[skipToValidData].Average) + seaLevelDelta).toFixed(2);
             else {
@@ -464,50 +568,61 @@ function dataDuke(data) {
 function elevCUBE() {
     // API call for flow
     $.ajax({
-            url: "/api/cube",
-            method: "GET",
-        })
+        url: "/api/cube",
+        method: "GET",
+    })
         .then(function (data) {
+            displayBatch = data;
             // Determine which lake has been selected of the three cube lakes
-            var batch = [];
-            if (cubeCheck === "highrock") {
-                batch = data[0].data;
-            } else if (cubeCheck === "badin") {
-                batch = data[1].data;
-            } else if (cubeCheck === "tuckertown") {
-                batch = data[2].data;
+            if (lakeRoute === "highrock") {
+                displayBatch = data[0].data;
+            }
+            else if (lakeRoute === "badin") {
+                displayBatch = data[1].data;
+            }
+            else if (lakeRoute === "tuckertown") {
+                displayBatch = data[2].data;
             }
 
-            // Set lake title on page
-            $("#lakeTitle").append(bodyOfWaterName);
-            $("#lakeSponsor").append(bodyOfWaterName);
-            $("#lakeFeaturedTournament").append(bodyOfWaterName);
-            // Get current Date, Time and Elev
-            var currentElev = batch[0].elev;
-            let currentDate = batch[0].date;
-            let currentTime = "1200";
-            let currentDelta = (currentElev - lakePool).toFixed(2);
+            // Set current Date, Time and Elev
+            currentElev = displayBatch[0].elev;
+            currentDate = displayBatch[0].date;
+            currentTime = "600";
+            currentDelta = (currentElev - lakePool).toFixed(2);
 
-            // Set date, time and elev on page
-            $("#currentTime").append(currentTime);
-            $("#currentDate").append(currentDate);
-            $("#currentLevel").append(currentElev);
-            $("#currentDelta").append(currentDelta);
-            $("#currentNormal").append("normal pool " + lakePool);
+            // Function to display bodyofWaterName and current values
+            displayCurrentPageValues();
 
-            for (var i = 0; i < batch.length; i++) {
-                // Create the HTML Well (Section) and Add the table content for each reserved table
-                var lakeSection = $("<tr>");
-                lakeSection.addClass("well");
-                lakeSection.attr("id", "lakeWell-" + i + 1);
-                $("#lakeSection").append(lakeSection);
-
-                // Append the data values to the table row
-                $("#lakeWell-" + i + 1).append("<td>" + batch[i].date + "</td>");
-                $("#lakeWell-" + i + 1).append("<td>" + "N/a" + "</td>");
-                $("#lakeWell-" + i + 1).append("<td>" + batch[i].elev + "</td>");
-                $("#lakeWell-" + i + 1).append("<td>" + "N/a" + "</td>");
+            // Loop through and plug in "6:00" as time for each since data is daily only
+            for (var i = 0; i < displayBatch.length; i++) {
+                displayBatch[i].time = "6:00";
             }
+            // Function to build table with new data newBatch
+            buildTable(displayBatch);
+        })
+}
+
+// Function to make alabama calls
+function elevAlab() {
+    // API call for flow
+    $.ajax({
+        url: "/api/alabama",
+        method: "GET",
+        data: ({ lakeRoute: lakeRoute })
+    })
+        .then(function (data) {
+
+            // Set current Date, Time and Elev
+            currentElev = data[0].elev;
+            currentDate = data[0].date;
+            currentTime = data[0].time;
+            currentDelta = (currentElev - lakePool).toFixed(2);
+
+            // Function to display bodyofWaterName and current values
+            displayCurrentPageValues();
+
+            // Function to build table with new data newBatch
+            buildTable(data);
         })
 }
 
@@ -518,7 +633,7 @@ function placeLogoAd() {
 
 // function getData() {
 //     if (elevUSGSCheck === "true") {
-//         elevUSGS();
+//         elevUSGS(function() {             flowUSGS(function() {                 buildTable(displayBatch);             });         });
 //     }
 
 //     if (flowUSGSCheck === "true") {
@@ -545,15 +660,15 @@ $("#lakeTournaments").on("click", function (e) {
     console.log("Made it to function lakesTournament")
 })
 
-
-// Switch to set our api urls based on lake name
-// Run corresponding api calls
-
 let dailyACEData = false; // default value, this is for when ACE only returns daily readings vs hourly
 let noACEFlow = false; // default value, this is when ACE has no Flow Data included
 let moreElevThanFlow = false; // default value, this is when ACE returns elev data in 15 min intervals and flow data in hourly intervals. Loop j variable increment set to 1 or 4 by this flag
 let dataFromACEIsFucked = false; // default value, this is when the ACE data is Fucked Up like Istokpoga in Florida, Damn...
 
+// console.log("if: " + lakes[lakeRoute]);
+
+// Switch to set our api urls based on lake name
+// Run corresponding api calls
 switch (lakeRoute) {
     case "kerr": //North Carolina
         lakePool = 300;
@@ -562,7 +677,7 @@ switch (lakeRoute) {
         bodyOfWaterName = "Kerr Lake"
         elevURL = "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1749041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON";
         dataACE()
-        adLogoSrc = "/static/assets/img/jse.png";
+        adLogoSrc = "/assets/img/jse.png";
         adLogoUrl = "http://jacksonsuperiorelectric.com/";
         placeLogoAd();
         break;
@@ -573,7 +688,7 @@ switch (lakeRoute) {
         moreElevThanFlow = true;
         bodyOfWaterName = "Falls Lake";
         elevURL = "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1745041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON";
-        dataACE();
+        dataACE()
         break;
 
     case "jordan": //North Carolina
@@ -606,21 +721,19 @@ switch (lakeRoute) {
     case "highrock": // North Carolina
         lakePool = 655.2;
         bodyOfWaterName = "High Rock";
-        cubeCheck = "highrock";
-        elevCUBE();
+        url = "/api/cube";
+        elevCUBE(url);
         break;
 
     case "badin": // North Carolina
         lakePool = 541.1;
         bodyOfWaterName = "Badin";
-        cubeCheck = "badin";
         elevCUBE();
         break;
 
     case "tuckertown": // North Carolina
         lakePool = 596;
         bodyOfWaterName = "Tuckertown";
-        cubeCheck = "tuckertown";
         elevCUBE();
         break;
 
@@ -629,8 +742,8 @@ switch (lakeRoute) {
         seaLevelDelta = 0;
         bodyOfWaterName = "Roanoke River (Hwy 45)";
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=0208114150&period=PT96H&parameterCd=00065&siteType=ST&siteStatus=all";
-        flowURL = "none";
-        elevUSGS();
+        flowURL = "none"
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
         break;
 
     case "murray": //South Carolina
@@ -639,7 +752,7 @@ switch (lakeRoute) {
         bodyOfWaterName = "Lake Murray";
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02168500&period=PT96H&parameterCd=00062&siteType=ST&siteStatus=all";
         flowURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02168504&period=PT96H&parameterCd=00060&siteType=ST&siteStatus=all";
-        elevUSGS();
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
         break;
 
 
@@ -648,8 +761,8 @@ switch (lakeRoute) {
         seaLevelDelta = 0;
         bodyOfWaterName = "Lake Hartwell";
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02187010&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
-        flowURL = "none";
-        elevUSGS();
+        flowURL = "none"
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
         break;
 
     case "clarkshill": //South Carolina
@@ -657,8 +770,8 @@ switch (lakeRoute) {
         seaLevelDelta = 0;
         bodyOfWaterName = "Clarks Hill";
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02193900&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
-        flowURL = "none";
-        elevUSGS();
+        flowURL = "none"
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
         break;
 
     case "santee1": //South Carolina
@@ -666,8 +779,8 @@ switch (lakeRoute) {
         seaLevelDelta = 0;
         bodyOfWaterName = "Santee (Marion)";
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02171000&period=PT96H&parameterCd=00062&siteType=ST&siteStatus=all";
-        flowURL = "none";
-        elevUSGS();
+        flowURL = "none"
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
         break;
 
     case "santee2": //South Carolina
@@ -675,8 +788,8 @@ switch (lakeRoute) {
         seaLevelDelta = 0;
         bodyOfWaterName = "Santee (Moultrie)";
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02172000&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
-        flowURL = "none";
-        elevUSGS();
+        flowURL = "none"
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
         break;
 
     case "james": //Virginia - River
@@ -684,8 +797,8 @@ switch (lakeRoute) {
         seaLevelDelta = 0;
         bodyOfWaterName = "James River";
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02042770&period=PT96H&parameterCd=62620&siteType=ST&siteStatus=all";
-        flowURL = "none";
-        elevUSGS();
+        flowURL = "none"
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
         break;
 
     case "potomac": //Virginia - River
@@ -693,8 +806,8 @@ switch (lakeRoute) {
         seaLevelDelta = 0;
         bodyOfWaterName = "Potomac River (Alexandria)";
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=0165258890&period=PT96H&parameterCd=62620&siteType=ST&siteStatus=all";
-        flowURL = "none";
-        elevUSGS();
+        flowURL = "none"
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
         break;
 
     case "lanier": //Georgia
@@ -702,17 +815,23 @@ switch (lakeRoute) {
         seaLevelDelta = 0;
         bodyOfWaterName = "Lake Lanier";
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02334400&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
-        flowURL = "none";
-        elevUSGS();
+        flowURL = "none"
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
         break;
 
     case "westpoint": //Georgia
         lakePool = 635.0;
         seaLevelDelta = 0;
         bodyOfWaterName = "West Point";
+<<<<<<< HEAD
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02334400&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
         flowURL = "none";
         elevUSGS();
+=======
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02339400&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
+        flowURL = "none"
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
+>>>>>>> upstream/master
         break;
 
     case "conroe": //Texas
@@ -721,7 +840,7 @@ switch (lakeRoute) {
         bodyOfWaterName = "Conroe";
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08067600&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
         flowURL = "none";
-        elevUSGS();
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
         break;
 
     case "fork": //Texas
@@ -729,8 +848,8 @@ switch (lakeRoute) {
         seaLevelDelta = 0;
         bodyOfWaterName = "Lake Fork";
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08018800&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
-        flowURL = "none";
-        elevUSGS();
+        flowURL = "none"
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
         break;
 
     case "toledobend": //Texas
@@ -738,8 +857,8 @@ switch (lakeRoute) {
         seaLevelDelta = 0;
         bodyOfWaterName = "Toledo Bend";
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08025350&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
-        flowURL = "none";
-        elevUSGS();
+        flowURL = "none"
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
         break;
 
     case "rayburn": //Texas
@@ -747,8 +866,8 @@ switch (lakeRoute) {
         seaLevelDelta = 0;
         bodyOfWaterName = "Sam Rayburn";
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08039300&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
-        flowURL = "none";
-        elevUSGS();
+        flowURL = "none"
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
         break;
 
     case "monroe": //Indiana
@@ -756,8 +875,8 @@ switch (lakeRoute) {
         seaLevelDelta = 0;
         bodyOfWaterName = "Monroe";
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03372400&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
-        flowURL = "none";
-        elevUSGS();
+        flowURL = "none"
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
         break;
 
     case "ohioriverin": //Indiana - River
@@ -766,7 +885,7 @@ switch (lakeRoute) {
         bodyOfWaterName = "Ohio River Evansville";
         elevURL = "http://waterservices.usgs.gov/nwis/iv/?format=json&sites=03322000&period=PT96H&parameterCd=00065&siteType=ST&siteStatus=all";
         flowURL = "none";
-        elevUSGS();
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
         break;
 
     case "patoka": //Indiana
@@ -774,8 +893,8 @@ switch (lakeRoute) {
         seaLevelDelta = 0;
         bodyOfWaterName = "Patoka";
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03374498&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
-        flowURL = "none";
-        elevUSGS();
+        flowURL = "none"
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
         break;
 
     case "shenango": //Pennsylvania
@@ -783,8 +902,8 @@ switch (lakeRoute) {
         seaLevelDelta = 0;
         bodyOfWaterName = "Shenango";
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03103400&period=PT96H&parameterCd=62615&siteType=LK&siteStatus=all";
-        flowURL = "none";
-        elevUSGS();
+        flowURL = "none"
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
         break;
 
     case "curwensville": //Pennsylvania
@@ -792,8 +911,8 @@ switch (lakeRoute) {
         seaLevelDelta = 0;
         bodyOfWaterName = "Curwensville";
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=01541180&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
-        flowURL = "none";
-        elevUSGS();
+        flowURL = "none"
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
         break;
 
     case "raystown": //Pennsylvania
@@ -801,8 +920,8 @@ switch (lakeRoute) {
         seaLevelDelta = 0;
         bodyOfWaterName = "Raystown";
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=01563100&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
-        flowURL = "none";
-        elevUSGS();
+        flowURL = "none"
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
         break;
 
     case "champlain": //New York
@@ -810,8 +929,8 @@ switch (lakeRoute) {
         seaLevelDelta = 0;
         bodyOfWaterName = "Champlain";
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04294413&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
-        flowURL = "none";
-        elevUSGS();
+        flowURL = "none"
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
         break;
 
     case "winnebago": //Wisconsin
@@ -819,8 +938,8 @@ switch (lakeRoute) {
         seaLevelDelta = 746.0;
         bodyOfWaterName = "Winnebago";
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04082500&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all";
-        flowURL = "none";
-        elevUSGS();
+        flowURL = "none"
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
         break;
 
     case "geneva": // Wisconsin
@@ -828,8 +947,8 @@ switch (lakeRoute) {
         seaLevelDelta = 879.0;
         bodyOfWaterName = "Geneva";
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=423525088260400&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all";
-        flowURL = "none";
-        elevUSGS();
+        flowURL = "none"
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
         break;
 
     case "havasu": //California
@@ -837,8 +956,8 @@ switch (lakeRoute) {
         seaLevelDelta = 445.0;
         bodyOfWaterName = "Havasu";
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=423525088260400&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all";
-        flowURL = "none";
-        elevUSGS();
+        flowURL = "none"
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
         break;
 
     case "clear": //California
@@ -846,8 +965,8 @@ switch (lakeRoute) {
         seaLevelDelta = 1329.0;
         bodyOfWaterName = "Clear";
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=11450000&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all";
-        flowURL = "none";
-        elevUSGS();
+        flowURL = "none"
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
         break;
 
     case "mojave": //Nevada
@@ -855,8 +974,8 @@ switch (lakeRoute) {
         seaLevelDelta = 547;
         bodyOfWaterName = "Mojave";
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=09422500&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all";
-        flowURL = "none";
-        elevUSGS();
+        flowURL = "none"
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
         break;
 
     case "wildhorse": //Nevada
@@ -864,8 +983,8 @@ switch (lakeRoute) {
         seaLevelDelta = 0;
         bodyOfWaterName = "Wild Horse";
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=13174000&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
-        flowURL = "none";
-        elevUSGS();
+        flowURL = "none"
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
         break;
 
     case "trinidad": //Colorado
@@ -873,8 +992,8 @@ switch (lakeRoute) {
         seaLevelDelta = 0;
         bodyOfWaterName = "Trinidad";
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07124400&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
-        flowURL = "none";
-        elevUSGS();
+        flowURL = "none"
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
         break;
 
     case "riflegap": //Colorado
@@ -882,8 +1001,8 @@ switch (lakeRoute) {
         seaLevelDelta = 0;
         bodyOfWaterName = "Rifle Gap";
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=09091900&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
-        flowURL = "none";
-        elevUSGS();
+        flowURL = "none"
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
         break;
 
     case "minnetonka": //Minnesota
@@ -891,8 +1010,8 @@ switch (lakeRoute) {
         seaLevelDelta = 0;
         bodyOfWaterName = "Minnetonka";
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=05289000&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all";
-        flowURL = "none";
-        elevUSGS();
+        flowURL = "none"
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
         break;
 
     case "millelacs": //Minnesota
@@ -900,8 +1019,8 @@ switch (lakeRoute) {
         seaLevelDelta = 1151.0;
         bodyOfWaterName = "Mille Lacs";
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=05284000&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all";
-        flowURL = "none";
-        elevUSGS();
+        flowURL = "none"
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
         break;
 
     case "clinton": //Kansas
@@ -909,8 +1028,8 @@ switch (lakeRoute) {
         seaLevelDelta = 0;
         bodyOfWaterName = "Clinton";
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06891478&period=PT95H&parameterCd=62614&siteType=LK&siteStatus=all";
-        flowURL = "none";
-        elevUSGS();
+        flowURL = "none"
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
         break;
 
     case "perry": //Kansas
@@ -919,7 +1038,7 @@ switch (lakeRoute) {
         bodyOfWaterName = "Perry"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06890898&period=PT95H&parameterCd=62614&siteType=LK&siteStatus=all";
         flowURL = "none"
-        elevUSGS();
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
         break;
 
     case "pomona": //Kansas
@@ -927,8 +1046,8 @@ switch (lakeRoute) {
         seaLevelDelta = 0;
         bodyOfWaterName = "Pomona";
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06912490&period=PT95H&parameterCd=62614&siteType=LK&siteStatus=all";
-        flowURL = "none";
-        elevUSGS();
+        flowURL = "none"
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
         break;
 
     case "malvern": //Kansas
@@ -936,8 +1055,8 @@ switch (lakeRoute) {
         seaLevelDelta = 0;
         bodyOfWaterName = "Malvern";
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06910997&period=PT95H&parameterCd=62614&siteType=LK&siteStatus=all";
-        flowURL = "none";
-        elevUSGS();
+        flowURL = "none"
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
         break;
 
     case "ellsworth": //Oklahoma
@@ -945,8 +1064,8 @@ switch (lakeRoute) {
         seaLevelDelta = 0;
         bodyOfWaterName = "ellsworth";
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07308990&period=PT95H&parameterCd=00065&siteType=LK&siteStatus=all";
-        flowURL = "none";
-        elevUSGS();
+        flowURL = "none"
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
         break;
 
     case "hudson": //Oklahoma
@@ -954,8 +1073,8 @@ switch (lakeRoute) {
         seaLevelDelta = 0;
         bodyOfWaterName = "Hudson";
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07191400&period=PT95H&parameterCd=00065&siteType=LK&siteStatus=all";
-        flowURL = "none";
-        elevUSGS();
+        flowURL = "none"
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
         break;
 
     case "lawtonka": //Oklahoma
@@ -964,7 +1083,7 @@ switch (lakeRoute) {
         bodyOfWaterName = "Lawtonka"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07309500&period=PT95H&parameterCd=00065&siteType=LK&siteStatus=all";
         flowURL = "none"
-        elevUSGS();
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
         break;
 
     case "cherokees": //Oklahoma
@@ -973,7 +1092,7 @@ switch (lakeRoute) {
         bodyOfWaterName = "Lake O' the Cherokees"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07190000&period=PT95H&parameterCd=00065&siteType=LK&siteStatus=all";
         flowURL = "none"
-        elevUSGS();
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
         break;
 
     case "eucha": //Oklahoma
@@ -982,7 +1101,7 @@ switch (lakeRoute) {
         bodyOfWaterName = "Eucha"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07191285&period=PT95H&parameterCd=00065&siteType=LK&siteStatus=all";
         flowURL = "none"
-        elevUSGS();
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
         break;
 
     case "mcghee": //Oklahoma
@@ -991,7 +1110,8 @@ switch (lakeRoute) {
         bodyOfWaterName = "McGhee Creek"
         elevURL = "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1550051&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON";
         flowURL = "none"
-        dataACE();
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
+        // dataACE();
         break;
 
     case "texoma":
@@ -1000,7 +1120,8 @@ switch (lakeRoute) {
         bodyOfWaterName = "Texoma"
         elevURL = "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=2063051&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON";
         flowURL = "none"
-        dataACE();
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
+        // dataACE();
         break;
 
     case "westokoboji": // Iowa
@@ -1009,7 +1130,7 @@ switch (lakeRoute) {
         bodyOfWaterName = "West Okoboji"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06604200&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all";
         flowURL = "none"
-        elevUSGS();
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
         break;
 
     case "seminole": // Florida
@@ -1018,7 +1139,7 @@ switch (lakeRoute) {
         bodyOfWaterName = "Seminole"
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02357500&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
         flowURL = "none"
-        elevUSGS();
+        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
         break;
 
     case "guntersville": // Alabama
@@ -1249,15 +1370,53 @@ switch (lakeRoute) {
         dataACE();
         break;
 
-        /* case "santarosa": //New Mexico
-            lakePool = 360.0;
-            seaLevelDelta = 0;
-            bodyOfWaterName = "Santa Rosa";
-            elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08382810&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
-            flowURL = "none";
-            elevUSGS();
-            break; */
+    /* case "santarosa": //New Mexico
+        lakePool = 360.0;
+        seaLevelDelta = 0;
+        bodyOfWaterName = "Santa Rosa";
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08382810&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
+        flowURL = "none";
+        elevUSGS();
+        break; */
 
+    case "smith": // Alabama
+        lakePool = 510.0;
+        seaLevelDelta = 0;
+        bodyOfWaterName = "Smith Lake"
+        elevURL = "/api/alabama";
+        elevAlab();
+        break;
+    
+        case "neelyhenry": // Alabama
+        lakePool = 508.0;
+        seaLevelDelta = 0;
+        bodyOfWaterName = "Lake Neely Henry"
+        elevURL = "/api/alabama";
+        elevAlab();
+        break;
 
+        case "loganmartin": // Alabama
+        lakePool = 465.0;
+        seaLevelDelta = 0;
+        bodyOfWaterName = "Logan Martin Lake"
+        elevURL = "/api/alabama";
+        elevAlab();
+        break;
+
+        case "lay": // Alabama
+        lakePool = 396.0;
+        seaLevelDelta = 0;
+        bodyOfWaterName = "Lay Lake"
+        elevURL = "/api/alabama";
+        elevAlab();
+        break;
+
+        case "weiss": // Alabama
+        lakePool = 564.0;
+        seaLevelDelta = 0;
+        bodyOfWaterName = "Weiss Lake"
+        elevURL = "/api/alabama";
+        elevAlab();
+        break;
 
 }

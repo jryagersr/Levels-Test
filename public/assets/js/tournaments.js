@@ -9,6 +9,41 @@ let rampSort = false;
 let stateSort = false;
 let filtered = false;
 
+function populateFilter(data) {
+    $("#stateSelect").empty().append("<option class='default-option'>Select State</option>");
+    $("#orgSelect").empty().append("<option class='default-option'>Select Org</option>");
+    $("#trailSelect").empty().append("<option class='default-option'>Select Trail</option>");
+    $("#locSelect").empty().append("<option class='default-option'>Select Location</option>");
+    $("#rampSelect").empty().append("<option class='default-option'>Select Ramp</option>");
+
+    // Array to hold our duplicates so none appear inside filter
+    var dupeArray = [];
+    data.forEach(function (element) {
+        // Only append a new state option to page if it doesn't already exist
+        if ($.inArray(element.state, dupeArray) === -1) {
+            $("#stateSelect").append("<option>" + element.state + "</option>");
+            // Track the new option in dupeArray
+            dupeArray.push(element.state);
+        }
+        if ($.inArray(element.organizer, dupeArray) === -1) {
+            $("#orgSelect").append("<option>" + element.organizer + "</option>");
+            dupeArray.push(element.organizer);
+        }
+        if ($.inArray(element.trail, dupeArray) === -1) {
+            $("#trailSelect").append("<option>" + element.trail + "</option>");
+            dupeArray.push(element.trail);
+        }
+        if ($.inArray(element.lake, dupeArray) === -1) {
+            $("#locSelect").append("<option>" + element.lake + "</option>");
+            dupeArray.push(element.lake);
+        }
+        if ($.inArray(element.ramp, dupeArray) === -1) {
+            $("#rampSelect").append("<option>" + element.ramp + "</option>");
+            dupeArray.push(element.ramp);
+        }
+    });
+}
+
 function displayData(data) {
     $("#txSection").empty();
     let i = 0;
@@ -52,10 +87,10 @@ $.ajax({
         method: "GET",
     })
     .then(function (data) {
-        console.log(data);
         txBatch = data;
         currentBatch = txBatch;
         displayData(txBatch);
+        populateFilter(data);
     });
 
 
@@ -211,7 +246,6 @@ $(".btn-filter").on("click", function (e) {
     }
 
     if (filtered === true) {
-        console.log("true fired");
         // Change our working batch holder and display the new filtered data;
         for (var i = 0; i < filteredBatch.length; i++) {
             currentBatch.push(filteredBatch[i]);

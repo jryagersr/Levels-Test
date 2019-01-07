@@ -5,7 +5,7 @@ var express = require("express"),
   _ = require("underscore"),
   fs = require('fs');
 
-var txData = [];
+// var txData = [];
 
 // Require all models
 var db = require("../models")();
@@ -256,31 +256,30 @@ module.exports = function (app) {
 
   // This reads the tournament file for the Tournaments Page
   app.get("/api/tournaments", function (request, response) {
-
-    var contents = fs.readFileSync('data/tournamentList.txt', 'ascii');
-
-    var indexes = [0, 1, 2, 3, 4, 5, 6, 7]
-    txData = [];
-
-    _.each(contents.split("\n"), function (line) {
-      // Split the text body into readable lines
-      var splitLine;
-      line = line.trim();
-      splitLine = line.split(/[\t]+/);
-
-      // Push each line into txData object
-      txData.push({
-        organizer: splitLine[indexes[0]],
-        trail: splitLine[indexes[1]],
-        date: splitLine[indexes[2]],
-        lake: splitLine[indexes[3]],
-        ramp: splitLine[indexes[4]],
-        state: splitLine[indexes[5]],
-        txDetail: splitLine[indexes[6]],
-        results: splitLine[indexes[7]],
-      });
-    });
-
+    // Import our txData from tournamentData.js file
+    var txData = require("../data/tournamentData");
+    // Declare array to hold our data to send back to the client
+    let data = [];
+    // Loop through the high level organizations in our data
+    for (var i = 0; i < txData.length; i++) {
+      var org = txData[i];
+      // Loop through the tournaments within each organization
+      for (var k = 0; k < org.tournaments.length; k++) {
+        var e = org.tournaments[k];
+        // Push each line into output data object
+        data.push({
+          organizer: e.organizer,
+          trail: e.trail,
+          date: e.date,
+          lake: e.lake,
+          ramp: e.ramp,
+          state: e.state,
+          txDetail: e.txDetail,
+          results: e.resultsLink
+        });
+      }
+    }
+    response.json(data);
 
     // This for loop was used to write out the tournament data that was read from a txt file
     /*for (i = 0; i < 196; i++) {
@@ -319,14 +318,34 @@ module.exports = function (app) {
         });
       }
     } */
-    response.json(txData);
-
-
-
-    // writeTxListJSON() Writes txData to a file. Function at bottom of this file.
 
   });
 
+  // Route to retrieve ACE data from A2W
+  app.get("/api/a2w", function (request, response) {
+    let a2wURL = request.query.a2wURL;
+
+    getData(a2wURL, function (error, data) {
+      if (error) {
+        response.send(error);
+        return;
+      } else {
+        response.json(data);
+      }
+    });
+
+    function getData(a2wURL, callback) {
+      var request = require("request");
+      var data = [];
+      request(a2wURL, function (error, response, body) {
+        if (error) {
+          callback(error);
+        }
+        data = JSON.parse(body);
+        callback(null, data);
+      })
+    }
+  })
 
   // Route to retrieve TVA data
   app.get("/api/tva", function (request, response) {
@@ -404,6 +423,118 @@ module.exports = function (app) {
       });
     }
   });
+
+  app.get("/api/alabama", function (request, response) {
+    var lakeRoute = request.query.lakeRoute;
+    // Parses our HTML and helps us find elements
+    var cheerio = require("cheerio");
+    // Makes HTTP request for HTML page
+    var request = require("request");
+
+    scrapeAlabData(lakeRoute, function (error, data) {
+      if (error) {
+        response.send(error);
+        return;
+      } else {
+        response.json(data);
+      }
+    });
+
+    function scrapeAlabData(lakeRoute, callback) {
+      // Set the base of the request depending on which lake we want
+      var url = "";
+      switch(lakeRoute) {
+        case "smith":
+        url = "http://www.smithlake.info/Level/Calendar"
+        break;
+
+        case "neelyhenry":
+        url = "http://www.neelyhenry.uslakes.info/Level/Calendar"
+        break;
+
+        case "loganmartin":
+        url = "http://www.loganmartin.info/Level/Calendar"
+        break;
+
+        case "lay":
+        url = "http://www.laylake.info/Level/Calendar"
+        break;
+
+        case "weiss":
+        url = "http://www.lakeweiss.info/Level/Calendar"
+        break;
+      }
+
+      // Get today's date to build request url
+      var today = new Date();
+      var mm = ((today.getMonth() + 1) < 10 ? '0' : '') + (today.getMonth() + 1); //Fancy conversion because .getMonth() will return numbers 0-12, but we need two digits months to build url
+      var yyyy = today.getFullYear();
+      var date = "/" + yyyy + "/" + mm;
+
+      // Define and build previous month's date for second scrape
+      var yyyy2 = "";
+      var mm2 = "";
+      if (mm === "01") {
+        mm2 = "12"
+        yyyy2 = today.getFullYear() - 1;
+        date2 = "/" + yyyy2 + "/" + mm2;
+      } else {
+        yyyy2 = today.getFullYear();
+        var mm2 = (((today.getMonth() + 1) < 10 ? '0' : '') + (today.getMonth() + 1) - 1); // Same fancy conversion except -1 added on the end to get previous month
+        var date2 = "/" + yyyy2 + "/" + mm2;
+      }
+
+      // Define our data template
+      var data = []
+
+      // Make request for previous months lakelevels.info site, returns html
+      request(url + date2, function (error, response, html) {
+
+        // Load the HTML into cheerio and save it to a variable
+        var $ = cheerio.load(html);
+        // Simple day increment counter to build date later
+        var dd = 1;
+        // With cheerio, find each <td> on the page
+        // (i: iterator. element: the current element)
+        $("font").each(function (i, element) {
+          var value = $(element).text();
+          if (!isNaN(value) && value.length === 5) {
+            data.unshift({
+              date: dd + "/" + mm2 + "/" + yyyy2,
+              time: "6:00",
+              elev: value,
+              flow: "N/A"
+            });
+            dd++;
+          }
+        })
+
+        // Make second request for current month's lakelevels.info site
+        request(url + date, function (error, response, html) {
+
+          // Load the HTML into cheerio and save it to a variable
+          var $ = cheerio.load(html);
+          // Simple day increment counter to build date later
+          var dd = 1;
+          // With cheerio, find each <td> on the page
+          // (i: iterator. element: the current element)
+          $("font").each(function (i, element) {
+            var value = $(element).text();
+            if (!isNaN(value) && value.length === 5) {
+              data.unshift({
+                date: dd + "/" + mm + "/" + yyyy,
+                time: "6:00",
+                elev: value,
+                flow: "N/A"
+              });
+              dd++;
+            }
+          })
+          callback(null, data);
+        });
+      });
+    }
+  })
 
 
 
