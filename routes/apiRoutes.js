@@ -319,7 +319,7 @@ module.exports = function (app) {
   app.get("/api/a2w", function (request, response) {
     let a2wURL = request.query.a2wURL;
 
-    getData(a2wURL, function(error, data) {
+    getData(a2wURL, function (error, data) {
       if (error) {
         response.send(error);
         return;
@@ -417,6 +417,118 @@ module.exports = function (app) {
       });
     }
   });
+
+  app.get("/api/alabama", function (request, response) {
+    var lakeRoute = request.query.lakeRoute;
+    // Parses our HTML and helps us find elements
+    var cheerio = require("cheerio");
+    // Makes HTTP request for HTML page
+    var request = require("request");
+
+    scrapeAlabData(lakeRoute, function (error, data) {
+      if (error) {
+        response.send(error);
+        return;
+      } else {
+        response.json(data);
+      }
+    });
+
+    function scrapeAlabData(lakeRoute, callback) {
+      // Set the base of the request depending on which lake we want
+      var url = "";
+      switch(lakeRoute) {
+        case "smith":
+        url = "http://www.smithlake.info/Level/Calendar"
+        break;
+
+        case "neelyhenry":
+        url = "http://www.neelyhenry.uslakes.info/Level/Calendar"
+        break;
+
+        case "loganmartin":
+        url = "http://www.loganmartin.info/Level/Calendar"
+        break;
+
+        case "lay":
+        url = "http://www.laylake.info/Level/Calendar"
+        break;
+
+        case "weiss":
+        url = "http://www.lakeweiss.info/Level/Calendar"
+        break;
+      }
+
+      // Get today's date to build request url
+      var today = new Date();
+      var mm = ((today.getMonth() + 1) < 10 ? '0' : '') + (today.getMonth() + 1); //Fancy conversion because .getMonth() will return numbers 0-12, but we need two digits months to build url
+      var yyyy = today.getFullYear();
+      var date = "/" + yyyy + "/" + mm;
+
+      // Define and build previous month's date for second scrape
+      var yyyy2 = "";
+      var mm2 = "";
+      if (mm === "01") {
+        mm2 = "12"
+        yyyy2 = today.getFullYear() - 1;
+        date2 = "/" + yyyy2 + "/" + mm2;
+      } else {
+        yyyy2 = today.getFullYear();
+        var mm2 = (((today.getMonth() + 1) < 10 ? '0' : '') + (today.getMonth() + 1) - 1); // Same fancy conversion except -1 added on the end to get previous month
+        var date2 = "/" + yyyy2 + "/" + mm2;
+      }
+
+      // Define our data template
+      var data = []
+
+      // Make request for previous months lakelevels.info site, returns html
+      request(url + date2, function (error, response, html) {
+
+        // Load the HTML into cheerio and save it to a variable
+        var $ = cheerio.load(html);
+        // Simple day increment counter to build date later
+        var dd = 1;
+        // With cheerio, find each <td> on the page
+        // (i: iterator. element: the current element)
+        $("font").each(function (i, element) {
+          var value = $(element).text();
+          if (!isNaN(value) && value.length === 5) {
+            data.unshift({
+              date: dd + "/" + mm2 + "/" + yyyy2,
+              time: "6:00",
+              elev: value,
+              flow: "N/A"
+            });
+            dd++;
+          }
+        })
+
+        // Make second request for current month's lakelevels.info site
+        request(url + date, function (error, response, html) {
+
+          // Load the HTML into cheerio and save it to a variable
+          var $ = cheerio.load(html);
+          // Simple day increment counter to build date later
+          var dd = 1;
+          // With cheerio, find each <td> on the page
+          // (i: iterator. element: the current element)
+          $("font").each(function (i, element) {
+            var value = $(element).text();
+            if (!isNaN(value) && value.length === 5) {
+              data.unshift({
+                date: dd + "/" + mm + "/" + yyyy,
+                time: "6:00",
+                elev: value,
+                flow: "N/A"
+              });
+              dd++;
+            }
+          })
+          callback(null, data);
+        });
+      });
+    }
+  })
 
 
 

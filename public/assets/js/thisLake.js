@@ -80,9 +80,9 @@ let k = 0; // Counter variable for flowUSGS to use to sync time with elevUSGS
 function elevUSGS(callback) {
     // API call for flow
     $.ajax({
-            url: elevURL,
-            method: "GET",
-        })
+        url: elevURL,
+        method: "GET",
+    })
         .then(function (data) {
             console.log('USGS Elev Data', data);
             // Parse the json data return to find the values we want
@@ -162,24 +162,24 @@ function elevUSGS(callback) {
 // Function to make flow USGS call
 function flowUSGS(callback) {
     if (flowURL !== "none") {
-    // API call for flow
-    $.ajax({
+        // API call for flow
+        $.ajax({
             url: flowURL,
             method: "GET",
         })
-        .then(function (data) {
-            console.log("flowUSGS data ", data);
-            // Parse through the json data to find the values we want
-            let dataValues = data.value.timeSeries[0].values[0].value
-            // Reverse the order of our data so most recent date is first
-            dataValues.reverse();
-            // Loop through the flow data, and match it to displayBatch (which already holds the elevation data)
-            for (var i = 0; i < displayBatch.length; i++) {
-                displayBatch[i].flow = dataValues[k].value;
-                k += 4;
-            }
-            callback(null, displayBatch);
-        });
+            .then(function (data) {
+                console.log("flowUSGS data ", data);
+                // Parse through the json data to find the values we want
+                let dataValues = data.value.timeSeries[0].values[0].value
+                // Reverse the order of our data so most recent date is first
+                dataValues.reverse();
+                // Loop through the flow data, and match it to displayBatch (which already holds the elevation data)
+                for (var i = 0; i < displayBatch.length; i++) {
+                    displayBatch[i].flow = dataValues[k].value;
+                    k += 4;
+                }
+                callback(null, displayBatch);
+            });
     }
     // Callback empty data without Ajax if flowURL = "none"
     callback(null, displayBatch);
@@ -282,12 +282,12 @@ function flowUSGS(callback) {
 function dataACE() {
     // API call for flow
     $.ajax({
-            url: "/api/a2w",
-            method: "GET",
-            data: {
-                a2wURL: elevURL,
-            }
-        })
+        url: "/api/a2w",
+        method: "GET",
+        data: {
+            a2wURL: elevURL,
+        }
+    })
         .then(function (data) {
             console.log(data);
             // Get current Date, Time and Elev
@@ -418,13 +418,13 @@ function convertUTCDate(timestamp) {
 // Function to make elev TVA call
 function dataTVA(data) {
     $.ajax({
-            url: "/api/tva",
-            method: "GET",
-            data: {
-                tvaDataURL: elevURL,
-                tvaLakeName: bodyOfWaterName
-            }
-        })
+        url: "/api/tva",
+        method: "GET",
+        data: {
+            tvaDataURL: elevURL,
+            tvaLakeName: bodyOfWaterName
+        }
+    })
         .then(function (data) {
             console.log(lakeRoute)
 
@@ -486,22 +486,30 @@ function dataTVA(data) {
 // Function to make elev Duke call
 function dataDuke(data) {
     $.ajax({
-            url: "/api/duke",
-            method: "GET",
-            data: {
-                dukeDataURL: elevURL,
-                dukeLakeName: bodyOfWaterName
-            }
-        })
+        url: "/api/duke",
+        method: "GET",
+        data: {
+            dukeDataURL: elevURL,
+            dukeLakeName: bodyOfWaterName
+        }
+    })
         .then(function (data) {
-            console.log(lakeRoute)
+            console.log(data);
             // adjust the elev for lakes with data relative to full pool (not from sealevel))
 
             let skipToValidData = 0;
 
-            while (isNaN(data[skipToValidData].Average)) {
+            // Duke updates their text file with future datas sometimes
+            // While date is ahead of today's date, continue to loop forward
+            var now = new Date();
+            var dataDate = new Date(data[skipToValidData].Date);
+            while (dataDate > now) {
                 skipToValidData++;
+                dataDate = new Date(data[skipToValidData].Date);
+                console.log(dataDate);
             }
+            console.log(skipToValidData);
+
             if (seaLevelDelta !== 0)
                 elevationAdjust = (parseFloat(data[skipToValidData].Average) + seaLevelDelta).toFixed(2);
             else {
@@ -560,9 +568,9 @@ function dataDuke(data) {
 function elevCUBE() {
     // API call for flow
     $.ajax({
-            url: "/api/cube",
-            method: "GET",
-        })
+        url: "/api/cube",
+        method: "GET",
+    })
         .then(function (data) {
             displayBatch = data;
             // Determine which lake has been selected of the three cube lakes
@@ -585,8 +593,36 @@ function elevCUBE() {
             // Function to display bodyofWaterName and current values
             displayCurrentPageValues();
 
+            // Loop through and plug in "6:00" as time for each since data is daily only
+            for (var i = 0; i < displayBatch.length; i++) {
+                displayBatch[i].time = "6:00";
+            }
             // Function to build table with new data newBatch
             buildTable(displayBatch);
+        })
+}
+
+// Function to make alabama calls
+function elevAlab() {
+    // API call for flow
+    $.ajax({
+        url: "/api/alabama",
+        method: "GET",
+        data: ({ lakeRoute: lakeRoute })
+    })
+        .then(function (data) {
+
+            // Set current Date, Time and Elev
+            currentElev = data[0].elev;
+            currentDate = data[0].date;
+            currentTime = data[0].time;
+            currentDelta = (currentElev - lakePool).toFixed(2);
+
+            // Function to display bodyofWaterName and current values
+            displayCurrentPageValues();
+
+            // Function to build table with new data newBatch
+            buildTable(data);
         })
 }
 
@@ -624,35 +660,15 @@ $("#lakeTournaments").on("click", function (e) {
     console.log("Made it to function lakesTournament")
 })
 
-// Switch to set our api urls based on lake name
-// Run corresponding api calls
-
 let dailyACEData = false; // default value, this is for when ACE only returns daily readings vs hourly
 let noACEFlow = false; // default value, this is when ACE has no Flow Data included
 let moreElevThanFlow = false; // default value, this is when ACE returns elev data in 15 min intervals and flow data in hourly intervals. Loop j variable increment set to 1 or 4 by this flag
 let dataFromACEIsFucked = false; // default value, this is when the ACE data is Fucked Up like Istokpoga in Florida, Damn...
 
-let lakes =[{
-    lake: "kerr",
-    options: [{
-        lakePool: 300,
-        seaLevelDelta: 0,
-        moreElevThanFlow: true,
-        bodyOfWaterName: "Kerr Lake",
-        elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1749041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        elevSource: "ACE",
-        flowURL: "none",
-        flowSource: "none",
-        ads: true,
-        adLogoSrc: "/static/assets/img/jse.png",
-        adLogoUrl: "http://jacksonsuperiorelectric.com/",
-        timeLastPulled: "",
-        interval: ""
-    }]
-}]
-
 // console.log("if: " + lakes[lakeRoute]);
 
+// Switch to set our api urls based on lake name
+// Run corresponding api calls
 switch (lakeRoute) {
     case "kerr": //North Carolina
         lakePool = 300;
@@ -1348,15 +1364,53 @@ switch (lakeRoute) {
         dataACE();
         break;
 
-        /* case "santarosa": //New Mexico
-            lakePool = 360.0;
-            seaLevelDelta = 0;
-            bodyOfWaterName = "Santa Rosa";
-            elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08382810&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
-            flowURL = "none";
-            elevUSGS();
-            break; */
+    /* case "santarosa": //New Mexico
+        lakePool = 360.0;
+        seaLevelDelta = 0;
+        bodyOfWaterName = "Santa Rosa";
+        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08382810&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all";
+        flowURL = "none";
+        elevUSGS();
+        break; */
 
+    case "smith": // Alabama
+        lakePool = 510.0;
+        seaLevelDelta = 0;
+        bodyOfWaterName = "Smith Lake"
+        elevURL = "/api/alabama";
+        elevAlab();
+        break;
+    
+        case "neelyhenry": // Alabama
+        lakePool = 508.0;
+        seaLevelDelta = 0;
+        bodyOfWaterName = "Lake Neely Henry"
+        elevURL = "/api/alabama";
+        elevAlab();
+        break;
 
+        case "loganmartin": // Alabama
+        lakePool = 465.0;
+        seaLevelDelta = 0;
+        bodyOfWaterName = "Logan Martin Lake"
+        elevURL = "/api/alabama";
+        elevAlab();
+        break;
+
+        case "lay": // Alabama
+        lakePool = 396.0;
+        seaLevelDelta = 0;
+        bodyOfWaterName = "Lay Lake"
+        elevURL = "/api/alabama";
+        elevAlab();
+        break;
+
+        case "weiss": // Alabama
+        lakePool = 564.0;
+        seaLevelDelta = 0;
+        bodyOfWaterName = "Weiss Lake"
+        elevURL = "/api/alabama";
+        elevAlab();
+        break;
 
 }
