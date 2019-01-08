@@ -44,18 +44,17 @@ module.exports = function (app) {
 
 
   //Route to retrieve lakes in a specific state
-  app.get("/api/states/:stateInitial", function (req, res) {
-    let stateInitial = req.params.stateInitial;
-    db.model("Lake").find({
-      state: stateInitial
-    })
-      .exec(function (err, data) {
-        if (err) {
-          res.send("No data found for " + state);
-        } else {
-          res.json(data);
-        }
-      })
+  app.get("/api/states/:state", function (req, res) {
+    var data = require("../data/lakeData");
+    let state = req.query.state;
+    var stateObj = data.find(e => e.state === state);
+    res.send(stateObj);
+  })
+
+  app.get("/api/lake-data", function(req,res) {
+    // Import lake data from lakeData.js
+    var data = require("../data/lakeData");
+    res.json(data);
   })
 
   // Route to retrieve ACE data for Kerr Lake

@@ -1,3 +1,23 @@
+
+// Get all lake data from lakeData.js
+// Declare variable to hold currentLake object
+var currentLake = {};
+$.ajax({
+    url: "/api/lake-data",
+    method: "GET",
+})
+    .then(function (data) {
+        console.log(data);
+        for (var i = 0; i < data.length; i++) {
+            result = data[i].lakes.find(obj => obj.href === "/lakes/" + lakeRoute);
+            if (typeof result !== 'undefined') {
+                currentLake =  result;
+                break;
+            }
+        }
+    })
+
+
 // Pull the lake name from the end of the current URL
 let parsedURL = window.location.href.split("/");
 let lakeRoute = parsedURL[parsedURL.length - 1];

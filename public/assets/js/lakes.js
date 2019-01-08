@@ -102,11 +102,13 @@ for (var i = 0; i < states.length; i++) {
     $("#option-" + i + 1).append(states[i].state);
 };
 
+// Hide all states on main page
+$(".stateContainer").hide();
+
 // When an option is selected and user presses view button
 // Hide all states, except the one user has selected
 $("button").on("click", function () {
-    $(".stateContainer").hide();
     var stateSelected = $('#optionWell option').filter(':selected').text();
-    var stateObj = states.find(e => e.state === stateSelected);
-    $('#' + stateObj.id).show();
+    window.location.href = window.location.origin + "/states/" + stateSelected;
+    $(".stateContainer").hide();
 })
