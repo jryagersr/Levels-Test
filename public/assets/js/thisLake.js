@@ -823,15 +823,9 @@ switch (lakeRoute) {
         lakePool = 635.0;
         seaLevelDelta = 0;
         bodyOfWaterName = "West Point";
-<<<<<<< HEAD
         elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02334400&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
         flowURL = "none";
         elevUSGS();
-=======
-        elevURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02339400&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all";
-        flowURL = "none"
-        elevUSGS(function () { flowUSGS(function () { buildTable(displayBatch); }); });
->>>>>>> upstream/master
         break;
 
     case "conroe": //Texas

@@ -389,17 +389,16 @@ module.exports = function (app) {
           if (line.substring(1, 6) == "LOCAL") {
             // It's a date time line, save the date and time
             // Formulate the date 
-            tvaDate = line.substring(15, 25);
+            tvaDate = splitLine[0].substr(15, 9);
             // Formulate the time
-            if (line[34] == "<")
-              tvaTime = line.substring(25, 34);
-            else
-              tvaTime = line.substring(25, 35);
+            tvaTime = splitLine[1] + " " + splitLine[2] + " " + splitLine[3].substr(0, 3);
           }
+
           if (line.substring(1, 6) == "UPSTR") {
             // It's an elevation level line, save the elevation
             tvaElev = line.substring(18, 24)
           }
+          
           if (line.substring(1, 4) == "AVG") {
             // Last Data item
             // Set the outFlowStart to 25 (5 char outFlow
@@ -443,26 +442,26 @@ module.exports = function (app) {
     function scrapeAlabData(lakeRoute, callback) {
       // Set the base of the request depending on which lake we want
       var url = "";
-      switch(lakeRoute) {
+      switch (lakeRoute) {
         case "smith":
-        url = "http://www.smithlake.info/Level/Calendar"
-        break;
+          url = "http://www.smithlake.info/Level/Calendar"
+          break;
 
         case "neelyhenry":
-        url = "http://www.neelyhenry.uslakes.info/Level/Calendar"
-        break;
+          url = "http://www.neelyhenry.uslakes.info/Level/Calendar"
+          break;
 
         case "loganmartin":
-        url = "http://www.loganmartin.info/Level/Calendar"
-        break;
+          url = "http://www.loganmartin.info/Level/Calendar"
+          break;
 
         case "lay":
-        url = "http://www.laylake.info/Level/Calendar"
-        break;
+          url = "http://www.laylake.info/Level/Calendar"
+          break;
 
         case "weiss":
-        url = "http://www.lakeweiss.info/Level/Calendar"
-        break;
+          url = "http://www.lakeweiss.info/Level/Calendar"
+          break;
       }
 
       // Get today's date to build request url
