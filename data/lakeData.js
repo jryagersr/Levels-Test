@@ -14,8 +14,8 @@ module.exports = [
                 time: ["time"], //arrat if elevation times
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: "0",
-                normalPool: "585.0",
+                seaLevelDelta: 0,
+                normalPool: 585.0,
                 elevURL:"http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1882051&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
                 flowURL: "none",
                 href: "/lakes/eufaula",
@@ -38,7 +38,7 @@ module.exports = [
                 elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/GUH_O.xml?1545499372503",
                 flowURL: "none",
                 href: "/lakes/guntersville",
-                dataSource: ["TCA"], // array of calls to make to retrieve data
+                dataSource: ["TVA"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
                 adLogoSrc: "",
@@ -57,7 +57,7 @@ module.exports = [
                 elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/PKH_O.xml?1545582182415",
                 flowURL: "none",
                 href: "/lakes/pickwick",
-                dataSource: ["TVAWheelerr"], // array of calls to make to retrieve data
+                dataSource: ["TVA"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
                 adLogoSrc: "",
@@ -93,7 +93,7 @@ module.exports = [
                 seaLevelDelta: "0",
                 normalPool: "509.0",
                 elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/WLH_O.xml?1545585733788",
-                flowURL: "",
+                flowURL: "none",
                 href: "/lakes/wilson",
                 dataSource: ["TVA"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
@@ -117,8 +117,8 @@ module.exports = [
                 time: ["time"], //arrat if elevation times
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: "1329.0",// 1329ft but data reported as a delta to full pool
-                normalPool: "1329.0",
+                seaLevelDelta: 1329.0,// 1329ft but data reported as a delta to full pool
+                normalPool: 1329.0,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=11450000&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/clear",
@@ -138,8 +138,8 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: "445.0", // 445ft but data reported as a delta to full pool.
                 normalPool: "445.0",
-                elevURL: "",
-                flowURL: "",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=423525088260400&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all",
+                flowURL: "none",
                 href: "/lakes/havasu",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
@@ -184,7 +184,7 @@ module.exports = [
                 seaLevelDelta: "0",
                 normalPool: "6300.0",
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07124400&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all",
-                flowURL: "",
+                flowURL: "none",
                 href: "/lakes/trinidad",
                 dataSource: ["ACE"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
@@ -309,7 +309,7 @@ module.exports = [
                 seaLevelDelta: "0",
                 normalPool: "1071.0",
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02334400&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all",
-                flowURL: "",
+                flowURL: "none",
                 href: "/lakes/lanier",
                 dataSource: ["ACE"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
@@ -746,11 +746,11 @@ module.exports = [
                 time: ["time"], //arrat if elevation times
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: "0",
-                normalPool: "541.1",
+                seaLevelDelta: 0,
+                normalPool: 541.1,
                 cubeCheck: "badin",
                 elevURL: "",
-                flowURL: "",
+                flowURL: "none",
                 href: "/lakes/badin",
                 dataSource: ["CUBE"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
@@ -766,8 +766,8 @@ module.exports = [
                 time: ["time"], //arrat if elevation times
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: "835.0",
-                normalPool: "935.0",
+                seaLevelDelta: 835.0,
+                normalPool: 935.0,
                 elevURL: "https://lakes.duke-energy.com/Data/Detail/3_Month/13.txt",
                 flowURL: "none",
                 href: "/lakes/hickory",
@@ -941,7 +941,7 @@ module.exports = [
                 seaLevelDelta: "0",
                 normalPool: "596.0",
                 elevURL: "",
-                flowURL: "",
+                flowURL: "none",
                 href: "/lakes/tuckertown",
                 dataSource: ["CUBE"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
@@ -1004,7 +1004,7 @@ module.exports = [
                 seaLevelDelta: "0",
                 normalPool: "778.0",
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07190000&period=PT95H&parameterCd=00065&siteType=LK&siteStatus=all",
-                flowURL: "",
+                flowURL: "none",
                 href: "/lakes/eucha",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
@@ -1304,8 +1304,8 @@ module.exports = [
                 time: ["time"], //arrat if elevation times
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: "0",
-                normalPool: "682.0",
+                seaLevelDelta: 0,
+                normalPool: 682.0,
                 elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/GUH_O.xml?1545499372503",
                 flowURL: "none",
                 href: "/lakes/chickamauga",

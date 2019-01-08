@@ -104,7 +104,7 @@ for (var i = 0; i < states.length; i++) {
 
 // Pull the state initials from the end of the current URL
 let currentURL = window.location.href;
-let state = currentURL.split("/")[4].replace(/%20/g, " "); // Reduce the string to just our state name
+let state = decodeURI(currentURL.split("/")[4]); // Reduce the string to just our state name
 let url = window.location.origin + "/api/states/" + state; // Build url for ajax call
 
 $.ajax({
