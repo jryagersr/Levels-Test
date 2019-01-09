@@ -112,3 +112,23 @@ $("button").on("click", function () {
     window.location.href = window.location.origin + "/states/" + stateSelected;
     $(".stateContainer").hide();
 })
+
+
+// Advertisements
+// ===============================================================
+
+// When user clicks "x" on advertisement it is hidden
+$(".fa-window-close").on("click", function() {
+    $("#ad").hide();
+})
+
+// Hardcoded for now but will need to be dynamic
+var href="http://jacksonsuperiorelectric.com/"
+var src = "/static/assets/img/jse-footer.jpg";
+// Create a tag, append to page, and append img tag after
+var a = $("<a target='_blank'>");
+a.attr("href", href);
+var adImg = $("<img class='ad-footer-img'>");
+adImg.attr("src", src);
+$("#ad").append(a);
+$(a).append(adImg);
