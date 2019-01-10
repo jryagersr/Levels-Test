@@ -22,9 +22,9 @@ function populateFilter(data) {
     data.forEach(function (element) {
         // Only append a new state option to page if it doesn't already exist
         if ($.inArray(element.state, dupeArray) === -1) {
-        $("#stateSelect").append("<option>" + element.state + "</option>");
-        // Track the new option in dupeArray
-        dupeArray.push(element.state);
+            $("#stateSelect").append("<option>" + element.state + "</option>");
+            // Track the new option in dupeArray
+            dupeArray.push(element.state);
         }
         if ($.inArray(element.organizer, dupeArray) === -1) {
             $("#orgSelect").append("<option>" + element.organizer + "</option>");
@@ -84,9 +84,9 @@ var sort_by = function (field, reverse, primer) {
 
 // API call for tx data for Filtering Tournaments
 $.ajax({
-    url: "/api/tournaments",
-    method: "GET",
-})
+        url: "/api/tournaments",
+        method: "GET",
+    })
     .then(function (data) {
         txBatch = data;
         currentBatch = txBatch;
@@ -258,7 +258,9 @@ $(".btn-filter").on("click", function (e) {
         filtered = true;
     }
     // Reset the option field to the default (ex: "Select Org")
-    $(".default-option").prop({ selected: true });
+    $(".default-option").prop({
+        selected: true
+    });
 });
 
 // // Function to create Parameter buttons inside parameter-well. Function is called after Add button function
