@@ -3,123 +3,135 @@ module.exports = [
 
     {
         organization: "ABA",
-        trails: [{
-            trail: "Open Series VA",
-            tournaments: [{
-                    date: "19-03/02",
-                    lake: "Kerr",
-                    ramp: "NutBush",
-                    state: "NC-VA",
-                    txDetail: "T1",
-                    resultsLink: "undefined",
-                    entryLink: ""
-                },
-                {
-                    date: "19-03/23",
-                    lake: "Gaston",
-                    ramp: "Holly Grove",
-                    state: "NC-VA",
-                    txDetail: "T2",
-                    resultsLink: "undefined",
-                    entryLink: ""
-                },
-                {
-                    date: "19-05/18",
-                    lake: "Kerr",
-                    ramp: "NutBush",
-                    state: "NC",
-                    txDetail: "T3",
-                    resultsLink: "undefined",
-                    entryLink: ""
-                },
-                {
-                    date: "19-06/29",
-                    lake: "Gaston",
-                    ramp: "Holly Grove",
-                    state: "NC-VA",
-                    txDetail: "T4",
-                    resultsLink: "undefined",
-                    entryLink: ""
-                },
-                {
-                    date: "19-09/28",
-                    lake: "Kerr",
-                    ramp: "NutBush",
-                    state: "NC-VA",
-                    txDetail: "2-Day Championship",
-                    resultsLink: "undefined",
-                    entryLink: ""
-                }
-            ]
-        }, ]
+        tournaments: [{
+                organizer: "ABA",
+                trail: "Open Series VA",
+                date: "19-03/02",
+                lake: "Kerr",
+                ramp: "NutBush",
+                state: "NC-VA",
+                txDetail: "T1",
+                resultsLink: "undefined",
+                entryLink: ""
+            },
+            {
+                organizer: "ABA",
+                trail: "Open Series VA",
+                date: "19-03/23",
+                lake: "Gaston",
+                ramp: "Holly Grove",
+                state: "NC-VA",
+                txDetail: "T2",
+                resultsLink: "undefined",
+                entryLink: ""
+            },
+            {
+                organizer: "ABA",
+                trail: "Open Series VA",
+                date: "19-05/18",
+                lake: "Kerr",
+                ramp: "NutBush",
+                state: "NC",
+                txDetail: "T3",
+                resultsLink: "undefined",
+                entryLink: ""
+            },
+            {
+                organizer: "ABA",
+                trail: "Open Series VA",
+                date: "19-06/29",
+                lake: "Gaston",
+                ramp: "Holly Grove",
+                state: "NC-VA",
+                txDetail: "T4",
+                resultsLink: "undefined",
+                entryLink: ""
+            },
+            {
+                organizer: "ABA",
+                trail: "Open Series VA",
+                date: "19-09/28",
+                lake: "Kerr",
+                ramp: "NutBush",
+                state: "NC-VA",
+                txDetail: "2-Day Championship",
+                resultsLink: "undefined",
+                entryLink: ""
+            }
+        ]
+
     }, {
         organization: "Anglers",
-        trails: [{
-            trail: "Team Trail",
-            tournaments: [
+        tournaments: [
 
-                {
-                    date: "19-03/16",
-                    lake: "Smith Mountain",
-                    ramp: "Parkway",
-                    state: "VA",
-                    txDetail: "Anglers Choice",
-                    resultsLink: "undefined",
-                    entryLink: ""
-                },
-                {
-                    date: "19-04/06",
-                    lake: "Kerr",
-                    ramp: "Occonneechee",
-                    state: "NC-VA",
-                    txDetail: "Anglers Choice",
-                    resultsLink: "undefined",
-                    entryLink: ""
-                },
-                {
-                    date: "19-04/07",
-                    lake: "Kerr",
-                    ramp: "Occonneechee",
-                    state: "NC-VA",
-                    txDetail: "Anglers Choice",
-                    resultsLink: "undefined",
-                    entryLink: ""
-                },
-                {
-                    date: "19-05/04",
-                    lake: "Smith Mountain",
-                    ramp: "Parkway",
-                    state: "VA",
-                    txDetail: "Anglers Choice",
-                    resultsLink: "undefined",
-                    entryLink: ""
-                },
-                {
-                    organizer: "Anglers",
-                    trail: "Team Trail",
-                    date: "19-06/08",
-                    lake: "Kerr",
-                    ramp: "Occonneechee",
-                    state: "NC-VA",
-                    txDetail: "Anglers Choice",
-                    resultsLink: "undefined",
-                    entryLink: ""
-                },
-                {
-                    organizer: "Anglers",
-                    trail: "Team Trail",
-                    date: "19-10/12",
-                    lake: "Kerr",
-                    ramp: "Occonneechee",
-                    state: "NC-VA",
-                    txDetail: "2-Day Classic",
-                    resultsLink: "undefined",
-                    entryLink: ""
-                }
-            ]
-        }]
-    },
-    {
+            {
+                organizer: "Anglers",
+                trail: "Team Trail",
+                date: "19-03/16",
+                lake: "Smith Mountain",
+                ramp: "Parkway",
+                state: "VA",
+                txDetail: "Anglers Choice",
+                resultsLink: "undefined",
+                entryLink: ""
+            },
+            {
+                organizer: "Anglers",
+                trail: "Team Trail",
+                date: "19-04/06",
+                lake: "Kerr",
+                ramp: "Occonneechee",
+                state: "NC-VA",
+                txDetail: "Anglers Choice",
+                resultsLink: "undefined",
+                entryLink: ""
+            },
+            {
+                organizer: "Anglers",
+                trail: "Team Trail",
+                date: "19-04/07",
+                lake: "Kerr",
+                ramp: "Occonneechee",
+                state: "NC-VA",
+                txDetail: "Anglers Choice",
+                resultsLink: "undefined",
+                entryLink: ""
+            },
+            {
+                organizer: "Anglers",
+                trail: "Team Trail",
+                date: "19-05/04",
+                lake: "Smith Mountain",
+                ramp: "Parkway",
+                state: "VA",
+                txDetail: "Anglers Choice",
+                resultsLink: "undefined",
+                entryLink: ""
+            },
+            {
+                organizer: "Anglers",
+                trail: "Team Trail",
+                date: "19-06/08",
+                lake: "Kerr",
+                ramp: "Occonneechee",
+                state: "NC-VA",
+                txDetail: "Anglers Choice",
+                resultsLink: "undefined",
+                entryLink: ""
+            },
+            {
+                organizer: "Anglers",
+                trail: "Team Trail",
+                date: "19-10/12",
+                lake: "Kerr",
+                ramp: "Occonneechee",
+                state: "NC-VA",
+                txDetail: "2-Day Classic",
+                resultsLink: "undefined",
+                entryLink: ""
+            }
+        ]
+    }, {
         organization: "FLW",
         tournaments: [{
                 organizer: "BFL",
@@ -232,8 +244,7 @@ module.exports = [
                 entryLink: ""
             }
         ]
-    },
-    {
+    }, {
         organization: "CATT",
         tournaments: [{
                 organizer: "CATT",
@@ -1732,8 +1743,7 @@ module.exports = [
                 entryLink: ""
             }
         ]
-    },
-    {
+    }, {
         organization: "CBC",
         tournaments: [{
                 organizer: "CBC",
@@ -1824,8 +1834,7 @@ module.exports = [
                 entryLink: ""
             }
         ]
-    },
-    {
+    }, {
         organization: "Collins",
         tournaments: [{
                 organizer: "Collins",
@@ -1905,8 +1914,7 @@ module.exports = [
                 entryLink: ""
             }
         ]
-    },
-    {
+    }, {
         organization: "PBC",
         tournaments: [{
                 organizer: "PBC",
