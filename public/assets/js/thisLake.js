@@ -25,6 +25,9 @@ let displayBatch = [];
 let adLogoSrc = "";
 let adLogoUrl = "";
 
+// Counter variable for flowUSGS to use to sync time with elevUSGS
+let k = 0;
+
 // Function to set current values on page
 function displayCurrentPageValues() {
     // Set lake title on page
@@ -75,7 +78,6 @@ function buildTable(data) {
 }
 
 // Function to make elevation USGS call
-let k = 0; // Counter variable for flowUSGS to use to sync time with elevUSGS
 function elevUSGS(callback) {
     // API call for flow
     $.ajax({
@@ -190,12 +192,27 @@ function dataACE(callback) {
     })
         .then(function (data) {
             console.log(data);
+
+            let ACEFlow = data[1].Outflow === null;  // default value, this is when ACE has no Flow Data included
+            let dailyACEData = false; // default value, this is for when ACE only returns daily readings vs hourly
+            let firstDate = data[0].Elev[0].time.split(" ");
+            let secondDate = data[0].Elev[1].time.split(" ");
+            if (firstDate[0] === secondDate[0]) {
+                dailyACEData = false;
+            }
+            // This is NOT WORKING right now
+            if (firstDate[1] === secondDate[1]) {
+                dailyAceData = true;
+            }
+            // let moreElevThanFlow = false; // default value, this is when ACE returns elev data in 15 min intervals and flow data in hourly intervals. Loop j variable increment set to 1 or 4 by this flag
+            let dataFromACEIsFucked = false; // default value, this is when the ACE data is Fucked Up like Istokpoga in Florida, Damn...
+
             // Get current Date, Time and Elev
             // Convert ACE date to javascript Date format "12/24/2016 02:00:00"
 
             // Indexes into data for the first entry
             lastElevIndex = data[0].Elev.length - 1;
-            if (!noACEFlow)
+            if (ACEFlow)
                 lastFlowIndex = data[1].Outflow.length - 1;
 
             // Convert UTC date to local time
@@ -209,16 +226,13 @@ function dataACE(callback) {
             //let currentTime = data[0].Elev[lastElevIndex].time.substring(11, 17);
             currentDelta = (currentElev - lakePool).toFixed(2);
 
-            // // Run function to display all current values
-            // displayCurrentPageValues();
-
             // Create our increment and loop through each value
             // For each value create our associated table html
             let i = 0;
             let flow = 0;
             let lastHourDisplayed = -1;
             let displayFlowData = true; // This is for this loop, some lakes we have to sort through the times (Istokpoga, FL)
-            if (!noACEFlow)
+            if (ACEFlow)
                 i = lastFlowIndex;
             let jIncrement = 1;
             if (!dailyACEData || moreElevThanFlow)
@@ -229,7 +243,7 @@ function dataACE(callback) {
                 let date = localTime.substring(4, 10) + " " + localTime.substring(13, 15);
                 let time = localTime.substring(16, 21);
                 flow = 'N/A'; // default value
-                if (!noACEFlow)
+                if (ACEFlow)
                     if (data[1].Outflow[i].value !== -99)
                         flow = data[1].Outflow[i].value;
 
@@ -244,7 +258,7 @@ function dataACE(callback) {
                     displayFlowData = true;
                 }
                 if (displayFlowData) {
-                    if (!noACEFlow) {
+                    if (ACEFlow) {
                         displayBatch.push({
                             date: date,
                             time: time,
@@ -259,15 +273,6 @@ function dataACE(callback) {
                             flow: "N/A"
                         });
                     }
-                    // $("#lakeSection").append(lakeSection);
-
-                    // // Append the data values to the table row
-
-                    // $("#lakeWell-" + j + 1).append("<td>" + date + "</td>");
-                    // $("#lakeWell-" + j + 1).append("<td>" + time + "</td>");
-                    // $("#lakeWell-" + j + 1).append("<td>" + elev + "</td>");
-                    // if (!noACEFlow)
-                    //     $("#lakeWell-" + j + 1).append("<td>" + flow + "</td>");
                 }
                 if (i === 0) {
                     j = 0
@@ -517,12 +522,6 @@ function placeLogoAd() {
 $("#lakeTournaments").on("click", function (e) {
     console.log("Made it to function lakesTournament")
 })
-
-let dailyACEData = false; // default value, this is for when ACE only returns daily readings vs hourly
-let noACEFlow = false; // default value, this is when ACE has no Flow Data included
-let moreElevThanFlow = false; // default value, this is when ACE returns elev data in 15 min intervals and flow data in hourly intervals. Loop j variable increment set to 1 or 4 by this flag
-let dataFromACEIsFucked = false; // default value, this is when the ACE data is Fucked Up like Istokpoga in Florida, Damn...
-
 
 // Get all lake data from lakeData.js
 // Declare variable to hold currentLake object
