@@ -131,9 +131,11 @@ module.exports = [
                 entryLink: ""
             }
         ]
-    }, {
-        organization: "FLW",
-        tournaments: [{
+    },
+    {
+        organization: "BFL",
+        tournaments: [
+            {
                 organizer: "BFL",
                 trail: "Piedmont",
                 date: "19-04/13",
@@ -246,7 +248,8 @@ module.exports = [
         ]
     }, {
         organization: "CATT",
-        tournaments: [{
+        tournaments: [
+            {
                 organizer: "CATT",
                 trail: "Clarks Hill",
                 date: "18-11/18",
@@ -1745,7 +1748,8 @@ module.exports = [
         ]
     }, {
         organization: "CBC",
-        tournaments: [{
+        tournaments: [
+            {
                 organizer: "CBC",
                 trail: "SC",
                 date: "19-02/02",
@@ -1836,7 +1840,8 @@ module.exports = [
         ]
     }, {
         organization: "Collins",
-        tournaments: [{
+        tournaments: [
+            {
                 organizer: "Collins",
                 trail: "BFCS",
                 date: "19-03/30",
@@ -1916,7 +1921,8 @@ module.exports = [
         ]
     }, {
         organization: "PBC",
-        tournaments: [{
+        tournaments: [
+            {
                 organizer: "PBC",
                 trail: "Spring Team",
                 date: "19-03/02",

@@ -119,12 +119,16 @@ h2 {
     margin: 0;
 }
 
+.lake-table h5:hover {
+    background-color: rgba(204, 204, 204, 0.2);
+}
+
 
 /* Cards on Home Page */
 .card-home {
     margin-bottom: 20px;
     box-shadow: 1px 1px rgb(0,0,0,0.3);
-    -webkit-box-shadow: 1px 1px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 1px 1px rgba(199, 197, 197, 0.1);
 }
 
 .card-home:hover {
@@ -147,14 +151,45 @@ h2 {
     margin: 5px auto;
 }
 
+
+/* Advertisements */
+/* ======================================================= */
 .ad-logo {
     width: 75%;
     height: auto;
     margin-bottom: 10px;
 }
 
+.banner {
+    background-color: rgba(199, 199, 199, 0.3);
+    width: 70%;
+    height: auto;
+    position: fixed;
+    bottom: 5px;
+    left: 15%;
+}
+
+.fa-window-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    color: white;
+}
+
+.ad-footer-img {
+    width: 100%;
+    height: auto;
+}
+
  @media only screen and (max-width: 400px) {
-     .ad-logo {
-         width: 100%;
+     .ad-logo, .banner {
+         width: 90%;
+     }
+
+     .banner {
+         left: 5%;
      }
  }
+
+

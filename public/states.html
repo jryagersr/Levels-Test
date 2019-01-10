@@ -49,20 +49,16 @@
     </nav>
 
     <div class="container text-center">
+        <h3>View another State:</h3>
+        <select class="form-control form-control-lg" id="optionWell">
+        </select>
+        <button class="btn btn-success" id="stateSubmit" style="width:100%; margin-top: 2px">View</button>
         <br>
-        <h2>Select your state below to see lakes in your area!</h2>
-        <hr>
-        <div class="dropdown">
-            <a class="btn btn-secondary btn-success dropdown-toggle" href="#" role="button" id="dropdownStates"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Select your state
-            </a>
-
-            <div class="dropdown-menu" aria-labelledby="dropdownStates">
-                <a class="dropdown-item" data-id="NC">North Carolina</a>
-            </div>
+        <br>
+        <div class="container">
+            <table class="table lake-table table-hover" id="lakeTable">
+            </table>
         </div>
-        <div id="allLakes" class="container"></div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="

@@ -9,6 +9,7 @@ let rampSort = false;
 let stateSort = false;
 let filtered = false;
 
+// Function to populate filter with options using tournamentData.js
 function populateFilter(data) {
     $("#stateSelect").empty().append("<option class='default-option'>Select State</option>");
     $("#orgSelect").empty().append("<option class='default-option'>Select Org</option>");

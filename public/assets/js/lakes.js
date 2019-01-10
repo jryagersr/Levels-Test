@@ -102,11 +102,33 @@ for (var i = 0; i < states.length; i++) {
     $("#option-" + i + 1).append(states[i].state);
 };
 
+// Hide all states on main page
+$(".stateContainer").hide();
+
 // When an option is selected and user presses view button
 // Hide all states, except the one user has selected
 $("button").on("click", function () {
-    $(".stateContainer").hide();
     var stateSelected = $('#optionWell option').filter(':selected').text();
-    var stateObj = states.find(e => e.state === stateSelected);
-    $('#' + stateObj.id).show();
+    window.location.href = window.location.origin + "/states/" + stateSelected;
+    $(".stateContainer").hide();
 })
+
+
+// Advertisements
+// ===============================================================
+
+// When user clicks "x" on advertisement it is hidden
+$(".fa-window-close").on("click", function() {
+    $("#ad").hide();
+})
+
+// Hardcoded for now but will need to be dynamic
+var href="http://jacksonsuperiorelectric.com/"
+var src = "/static/assets/img/jsebanner.jpg";
+// Create a tag, append to page, and append img tag after
+var a = $("<a target='_blank'>");
+a.attr("href", href);
+var adImg = $("<img class='ad-footer-img'>");
+adImg.attr("src", src);
+$("#ad").append(a);
+$(a).append(adImg);
