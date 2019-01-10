@@ -349,7 +349,7 @@ module.exports = [
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07124400&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/trinidad",
-                dataSource: ["ACE"], // array of calls to make to retrieve data
+                dataSource: ["USGS"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
                 adLogoSrc: "",
@@ -397,7 +397,7 @@ module.exports = [
                 ],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: "125.0",
+                seaLevelDelta: 125.0,
                 normalPool: 225.0,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02236840&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all",
                 flowURL: "none",
@@ -469,9 +469,9 @@ module.exports = [
                 ],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: "0",
-                normalPool: "70.0",
-                elevURL: "http://waterservices.usgs.gov/nwis/iv/?format=json&sites=02329900&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all",
+                seaLevelDelta: 0,
+                normalPool: 70.0,
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02329900&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/talquin",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -526,7 +526,7 @@ module.exports = [
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02334400&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/lanier",
-                dataSource: ["ACE"], // array of calls to make to retrieve data
+                dataSource: ["USGS"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
                 adLogoSrc: "",
@@ -574,7 +574,7 @@ module.exports = [
                 ],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: 0,
+                seaLevelDelta: 538.0,
                 normalPool: 0,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03372400&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all",
                 flowURL: "none",
@@ -600,7 +600,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 0,
-                elevURL: "http://waterservices.usgs.gov/nwis/iv/?format=json&sites=03322000&period=PT96H&parameterCd=00065&siteType=ST&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03322000&period=PT96H&parameterCd=00065&siteType=ST&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/ohioriverin",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -623,7 +623,7 @@ module.exports = [
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
-                normalPool: 0,
+                normalPool: 536.0,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03374498&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/patoka",
@@ -709,7 +709,7 @@ module.exports = [
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06910997&period=PT95H&parameterCd=62614&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/malvern",
-                dataSource: ["ACE"], // array of calls to make to retrieve data
+                dataSource: ["USGS"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
                 adLogoSrc: "",
@@ -733,7 +733,7 @@ module.exports = [
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06890898&period=PT95H&parameterCd=62614&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/perry",
-                dataSource: ["ACE"], // array of calls to make to retrieve data
+                dataSource: ["USGS"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
                 adLogoSrc: "",
@@ -752,12 +752,12 @@ module.exports = [
                 ],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: 974.0,
-                normalPool: 0,
+                seaLevelDelta: 0,
+                normalPool: 974.0,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06912490&period=PT95H&parameterCd=62614&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/pomona",
-                dataSource: ["ACE"], // array of calls to make to retrieve data
+                dataSource: ["USGS"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
                 adLogoSrc: "",
@@ -786,7 +786,7 @@ module.exports = [
                 elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/BAH_O.xml?1545583937120",
                 flowURL: "none",
                 href: "/lakes/barkley",
-                dataSource: ["ACE"], // array of calls to make to retrieve data
+                dataSource: ["TVA"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
                 adLogoSrc: "",
@@ -835,11 +835,11 @@ module.exports = [
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
-                normalPool: 0,
+                normalPool: 172.0,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08025350&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/toledobend",
-                dataSource: ["ACE"], // array of calls to make to retrieve data
+                dataSource: ["USGS"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
                 adLogoSrc: "",
@@ -1128,7 +1128,7 @@ module.exports = [
                 seaLevelDelta: 0,
                 normalPool: 655.2,
                 elevURL: "",
-                flowURL: "",
+                flowURL: "none",
                 href: "/lakes/highrock",
                 dataSource: ["CUBE", "placeLogoAd"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
@@ -1596,7 +1596,7 @@ module.exports = [
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=01563100&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/raystown",
-                dataSource: ["ACE"], // array of calls to make to retrieve data
+                dataSource: ["USGS"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
                 adLogoSrc: "",
@@ -1740,7 +1740,7 @@ module.exports = [
                 ],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: 0,
+                seaLevelDelta: 125,
                 normalPool: 225.0,
                 elevURL: "https://lakes.duke-energy.com/Data/Detail/3_Month/17.txt",
                 flowURL: "none",

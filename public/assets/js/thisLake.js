@@ -157,28 +157,25 @@ function elevUSGS(callback) {
 
 // Function to make flow USGS call
 function flowUSGS(callback) {
-    if (flowURL !== "none") {
-        // API call for flow
-        $.ajax({
-            url: flowURL,
-            method: "GET",
-        })
-            .then(function (data) {
-                console.log("flowUSGS data ", data);
-                // Parse through the json data to find the values we want
-                let dataValues = data.value.timeSeries[0].values[0].value
-                // Reverse the order of our data so most recent date is first
-                dataValues.reverse();
-                // Loop through the flow data, and match it to displayBatch (which already holds the elevation data)
-                for (var i = 0; i < displayBatch.length; i++) {
-                    displayBatch[i].flow = dataValues[k].value;
-                    k += 4;
-                }
-                callback(null, displayBatch);
-            });
-    }
-    // Callback empty data without Ajax if flowURL = "none"
-    callback(null, displayBatch);
+    // API call for flow
+    $.ajax({
+        url: flowURL,
+        method: "GET",
+    })
+        .then(function (data) {
+            console.log("flowUSGS data ", data);
+            // Parse through the json data to find the values we want
+            let dataValues = data.value.timeSeries[0].values[0].value
+            // Reverse the order of our data so most recent date is first
+            dataValues.reverse();
+            // Loop through the flow data, and match it to displayBatch (which already holds the elevation data)
+            for (var i = 0; i < displayBatch.length; i++) {
+                displayBatch[i].flow = dataValues[k].value;
+                k += 4;
+            }
+            console.log(displayBatch)
+            callback(null, displayBatch);
+        });
 }
 
 // Function to make elev ACE call
@@ -485,7 +482,7 @@ function elevCUBE(callback) {
             for (var i = 0; i < displayBatch.length; i++) {
                 displayBatch[i].time = "6:00";
             }
-        callback(null, displayBatch);
+            callback(null, displayBatch);
         })
 }
 
@@ -564,10 +561,15 @@ $.ajax({
             }
             else if (source === "USGS") {
                 elevUSGS(function () {
-                    flowUSGS(function () {
+                    if (flowURL !== "none") {
+                        flowUSGS(function () {
+                            displayCurrentPageValues();
+                            buildTable(displayBatch);
+                        });
+                    } else {
                         displayCurrentPageValues();
                         buildTable(displayBatch);
-                    });
+                    }
                 });
             }
             else if (source === "TVA") {
