@@ -1,4 +1,3 @@
-
 // Pull the lake name from the end of the current URL
 let parsedURL = window.location.href.split("/");
 let lakeRoute = parsedURL[parsedURL.length - 1];
@@ -81,9 +80,9 @@ function buildTable(data) {
 function elevUSGS(callback) {
     // API call for flow
     $.ajax({
-        url: elevURL,
-        method: "GET",
-    })
+            url: elevURL,
+            method: "GET",
+        })
         .then(function (data) {
             console.log('USGS Elev Data', data);
             // Parse the json data return to find the values we want
@@ -161,9 +160,9 @@ function elevUSGS(callback) {
 function flowUSGS(callback) {
     // API call for flow
     $.ajax({
-        url: flowURL,
-        method: "GET",
-    })
+            url: flowURL,
+            method: "GET",
+        })
         .then(function (data) {
             console.log("flowUSGS data ", data);
             // Parse through the json data to find the values we want
@@ -184,28 +183,35 @@ function flowUSGS(callback) {
 function dataACE(callback) {
     // API call for flow
     $.ajax({
-        url: "/api/a2w",
-        method: "GET",
-        data: {
-            a2wURL: elevURL,
-        }
-    })
+            url: "/api/a2w",
+            method: "GET",
+            data: {
+                a2wURL: elevURL,
+            }
+        })
         .then(function (data) {
             console.log(data);
 
-            let ACEFlow = data[1].Outflow === null;  // default value, this is when ACE has no Flow Data included
-            let dailyACEData = false; // default value, this is for when ACE only returns daily readings vs hourly
+            let ACEFlow = typeof data[1].Outflow !== 'undefined'; // default value, this is when ACE has no Flow Data included
+            let z = 0; // int to adjust for ACE data mismatch below
+            let dataFlowElevEqual = false; // declare boolean
             let firstDate = data[0].Elev[0].time.split(" ");
             let secondDate = data[0].Elev[1].time.split(" ");
-            if (firstDate[0] === secondDate[0]) {
-                dailyACEData = false;
-            }
-            // This is NOT WORKING right now
-            if (firstDate[1] === secondDate[1]) {
-                dailyAceData = true;
-            }
-            // let moreElevThanFlow = false; // default value, this is when ACE returns elev data in 15 min intervals and flow data in hourly intervals. Loop j variable increment set to 1 or 4 by this flag
-            let dataFromACEIsFucked = false; // default value, this is when the ACE data is Fucked Up like Istokpoga in Florida, Damn...
+            let dailyACEData = firstDate[1] === secondDate[1]; // default value, this is for when ACE only returns daily readings vs hourly
+            let isLakeIstokpoga = currentLake.bodyOfWater == 'Istokpoga'; // default value, this is when the ACE data is Fucked Up like Istokpoga in Florida, Damn...
+            let lastFlowIndex = -1; // -1 rather than zero so that an i = 0 in for loop below does not set j = 0
+            let lastElevIndex = 0;
+
+            if (currentLake.bodyOfWater == "Table Rock" || currentLake.bodyOfWater == "Eufaula" || currentLake.bodyOfWater == "McGhee Creek" || currentLake.bodyOfWater == "Texoma")
+                z = 0;
+            else z = 1;
+            if (ACEFlow)
+                // This has to follow the declarations or Outflow might be undefined
+            // This should not be -z, need to adjust to ACE data mismatch but ACE is returning more Flow data than Elev data. smh
+            // For all lakes but Table Rock, MO, McGhee Creek, OK, Texoma, OK and Eufaula, AL, elev.length is 477 and flow.length is 121, for Table Rock, it is 121 and 121.
+            // Flow.length should either equal Elev.length or be some multiple of Elev.length. ACE has chosen not to do so. 
+                dataFlowElevEqual = (data[0].Elev.length === (data[1].Outflow.length - z));
+
 
             // Get current Date, Time and Elev
             // Convert ACE date to javascript Date format "12/24/2016 02:00:00"
@@ -213,7 +219,8 @@ function dataACE(callback) {
             // Indexes into data for the first entry
             lastElevIndex = data[0].Elev.length - 1;
             if (ACEFlow)
-                lastFlowIndex = data[1].Outflow.length - 1;
+                // This should be simply -1 to get the length of the data array, but ACE returns more flow than Elev. smh
+                lastFlowIndex = data[1].Outflow.length - 2;
 
             // Convert UTC date to local time
             let localTime = convertStringToUTC(data[0].Elev[lastElevIndex].time)
@@ -228,21 +235,23 @@ function dataACE(callback) {
 
             // Create our increment and loop through each value
             // For each value create our associated table html
-            let i = 0;
+            let i = lastFlowIndex;
             let flow = 0;
-            let lastHourDisplayed = -1;
+            let lastHourDisplayed = -1; // for Istokpoga
             let displayFlowData = true; // This is for this loop, some lakes we have to sort through the times (Istokpoga, FL)
-            if (ACEFlow)
+            let jIncrement = 1; // default
+            if (ACEFlow && !dataFlowElevEqual) {
                 i = lastFlowIndex;
-            let jIncrement = 1;
-            if (!dailyACEData || moreElevThanFlow)
                 jIncrement = 4;
+            }
+            if (dailyACEData)
+                jIncrement = 1;
             for (j = lastElevIndex; j >= 0; j = j - jIncrement) {
                 let elev = data[0].Elev[j].value.toFixed(2);
                 localTime = convertStringToUTC(data[0].Elev[j].time)
                 let date = localTime.substring(4, 10) + " " + localTime.substring(13, 15);
                 let time = localTime.substring(16, 21);
-                flow = 'N/A'; // default value
+                flow = 'No data'; // default value, this differentiates no reported data from no data available (N/A)
                 if (ACEFlow)
                     if (data[1].Outflow[i].value !== -99)
                         flow = data[1].Outflow[i].value;
@@ -251,7 +260,7 @@ function dataACE(callback) {
                 var lakeSection = $("<tr>");
                 lakeSection.addClass("well");
                 lakeSection.attr("id", "lakeWell-" + j + 1);
-                if (dataFromACEIsFucked == true && localTime.substring(16, 18) == lastHourDisplayed) {
+                if (isLakeIstokpoga == true && localTime.substring(16, 18) == lastHourDisplayed) {
                     displayFlowData = false;
                 } else {
                     lastHourDisplayed = localTime.substring(16, 18);
@@ -270,7 +279,7 @@ function dataACE(callback) {
                             date: date,
                             time: time,
                             elev: elev,
-                            flow: "N/A"
+                            flow: "N/A" // no data available
                         });
                     }
                 }
@@ -339,13 +348,13 @@ function convertUTCDate(timestamp) {
 // Function to make elev TVA call
 function dataTVA(callback) {
     $.ajax({
-        url: "/api/tva",
-        method: "GET",
-        data: {
-            tvaDataURL: elevURL,
-            tvaLakeName: bodyOfWaterName
-        }
-    })
+            url: "/api/tva",
+            method: "GET",
+            data: {
+                tvaDataURL: elevURL,
+                tvaLakeName: bodyOfWaterName
+            }
+        })
         .then(function (data) {
             console.log(data);
 
@@ -394,13 +403,13 @@ function dataTVA(callback) {
 // Function to make elev Duke call
 function dataDuke(callback) {
     $.ajax({
-        url: "/api/duke",
-        method: "GET",
-        data: {
-            dukeDataURL: elevURL,
-            dukeLakeName: bodyOfWaterName
-        }
-    })
+            url: "/api/duke",
+            method: "GET",
+            data: {
+                dukeDataURL: elevURL,
+                dukeLakeName: bodyOfWaterName
+            }
+        })
         .then(function (data) {
             console.log(data);
             // adjust the elev for lakes with data relative to full pool (not from sealevel))
@@ -461,19 +470,17 @@ function dataDuke(callback) {
 function elevCUBE(callback) {
     // API call for flow
     $.ajax({
-        url: "/api/cube",
-        method: "GET",
-    })
+            url: "/api/cube",
+            method: "GET",
+        })
         .then(function (data) {
             displayBatch = data;
             // Determine which lake has been selected of the three cube lakes
             if (lakeRoute === "highrock") {
                 displayBatch = data[0].data;
-            }
-            else if (lakeRoute === "badin") {
+            } else if (lakeRoute === "badin") {
                 displayBatch = data[1].data;
-            }
-            else if (lakeRoute === "tuckertown") {
+            } else if (lakeRoute === "tuckertown") {
                 displayBatch = data[2].data;
             }
 
@@ -495,10 +502,12 @@ function elevCUBE(callback) {
 function elevAlab(callback) {
     // API call for flow
     $.ajax({
-        url: "/api/alabama",
-        method: "GET",
-        data: ({ lakeRoute: lakeRoute })
-    })
+            url: "/api/alabama",
+            method: "GET",
+            data: ({
+                lakeRoute: lakeRoute
+            })
+        })
         .then(function (data) {
 
             // Set current Date, Time and Elev
@@ -527,9 +536,9 @@ $("#lakeTournaments").on("click", function (e) {
 // Declare variable to hold currentLake object
 var currentLake = {};
 $.ajax({
-    url: "/api/lake-data",
-    method: "GET",
-})
+        url: "/api/lake-data",
+        method: "GET",
+    })
     .then(function (data) {
         console.log(data);
         for (var i = 0; i < data.length; i++) {
@@ -557,8 +566,7 @@ $.ajax({
                     displayCurrentPageValues();
                     buildTable(displayBatch);
                 });
-            }
-            else if (source === "USGS") {
+            } else if (source === "USGS") {
                 elevUSGS(function () {
                     if (flowURL !== "none") {
                         flowUSGS(function () {
@@ -570,32 +578,27 @@ $.ajax({
                         buildTable(displayBatch);
                     }
                 });
-            }
-            else if (source === "TVA") {
+            } else if (source === "TVA") {
                 dataTVA(function () {
                     displayCurrentPageValues();
                     buildTable(displayBatch);
                 });
-            }
-            else if (source === "CUBE") {
+            } else if (source === "CUBE") {
                 elevCUBE(function () {
                     displayCurrentPageValues();
                     buildTable(displayBatch);
                 });
-            }
-            else if (source === "ALAB") {
+            } else if (source === "ALAB") {
                 elevAlab(function () {
                     displayCurrentPageValues();
                     buildTable(displayBatch);
                 });
-            }
-            else if (source === "DUKE") {
+            } else if (source === "DUKE") {
                 dataDuke(function () {
                     displayCurrentPageValues();
                     buildTable(displayBatch);
                 });
-            }
-            else if (source === "placeLogoAd") {
+            } else if (source === "placeLogoAd") {
                 placeLogoAd();
             }
         }

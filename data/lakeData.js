@@ -2094,10 +2094,10 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 0,
-                elevURL: "",
+                elevURL: "http://waterservices.usgs.gov/nwis/iv/?format=json&sites=0165258890&period=PT96H&parameterCd=62620&siteType=ST&siteStatus=all",
                 flowURL: "",
                 href: "/lakes/potomac",
-                dataSource: ["ACE"], // array of calls to make to retrieve data
+                dataSource: ["USGS"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
                 adLogoSrc: "",
