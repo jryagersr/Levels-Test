@@ -124,7 +124,7 @@ $(".fa-window-close").on("click", function() {
 
 // Hardcoded for now but will need to be dynamic
 var href="http://jacksonsuperiorelectric.com/"
-var src = "/static/assets/img/jse-footer.jpg";
+var src = "/static/assets/img/jsebanner.jpg";
 // Create a tag, append to page, and append img tag after
 var a = $("<a target='_blank'>");
 a.attr("href", href);
