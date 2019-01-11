@@ -21,7 +21,7 @@ function populateFilter(data) {
     var dupeArray = [];
     data.forEach(function (element) {
         // Only append a new state option to page if it doesn't already exist
-        if ($.inArray(element.state, dupeArray) === -1) {
+        if ($.inArray(element.state, dupeArray) === -1 && element.state.length == 2) {
             $("#stateSelect").append("<option>" + element.state + "</option>");
             // Track the new option in dupeArray
             dupeArray.push(element.state);
