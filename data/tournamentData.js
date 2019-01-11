@@ -1920,6 +1920,98 @@ module.exports = [
             }
         ]
     }, {
+        organization: "FOM",
+        tournaments: [{
+                organizer: "FOM",
+                trail: "Legacy",
+                date: "19-04/20",
+                lake: "Harris",
+                ramp: "Holleman's",
+                state: "NC",
+                txDetail: "T1",
+                resultsLink: "undefined",
+                entryLink: ""
+            },
+            {
+                organizer: "FOM",
+                trail: "Legacy",
+                date: "19-05/11",
+                lake: "Kerr",
+                ramp: "Henderson",
+                state: "NC-VA",
+                txDetail: "T2",
+                resultsLink: "undefined",
+                entryLink: ""
+            },
+            {
+                organizer: "FOM",
+                trail: "Legacy",
+                date: "19-06/15",
+                lake: "Falls",
+                ramp: "Upper Barton's",
+                state: "NC",
+                txDetail: "T3",
+                resultsLink: "undefined",
+                entryLink: ""
+            },
+            {
+                organizer: "FOM",
+                trail: "NC Central",
+                date: "19-03/23",
+                lake: "Kerr",
+                ramp: "Henderson",
+                state: "NC-VA",
+                txDetail: "T1",
+                resultsLink: "undefined",
+                entryLink: ""
+            },
+            {
+                organizer: "FOM",
+                trail: "NC Central",
+                date: "19-04/06",
+                lake: "Gaston",
+                ramp: "Summit",
+                state: "NC-VA",
+                txDetail: "T2",
+                resultsLink: "undefined",
+                entryLink: ""
+            },
+            {
+                organizer: "FOM",
+                trail: "NC Central",
+                date: "19-04/27",
+                lake: "Mayo",
+                ramp: "Triple Springs",
+                state: "NC",
+                txDetail: "T3",
+                resultsLink: "undefined",
+                entryLink: ""
+            },
+            {
+                organizer: "FOM",
+                trail: "NC Central",
+                date: "19-05/18",
+                lake: "Jordan",
+                ramp: "Ebemezer",
+                state: "NC",
+                txDetail: "T4",
+                resultsLink: "undefined",
+                entryLink: ""
+            },
+            {
+                organizer: "FOM",
+                trail: "NC Central",
+                date: "19-06/15",
+                lake: "Falls",
+                ramp: "Ledgerock",
+                state: "NC",
+                txDetail: "T5",
+                resultsLink: "undefined",
+                entryLink: ""
+            }
+        ]
+
+    }, {
         organization: "PBC",
         tournaments: [
             {
