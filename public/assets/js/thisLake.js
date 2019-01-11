@@ -86,6 +86,7 @@ function elevUSGS(callback) {
         .then(function (data) {
             console.log('USGS Elev Data', data);
             // Parse the json data return to find the values we want
+            let jIncrement = 1;
             let dataValues = data.value.timeSeries[0].values[0].value;
             // Reverse the order of our data so most recent date is first
             dataValues.reverse();
@@ -104,38 +105,41 @@ function elevUSGS(callback) {
             currentDate = splitTimeDate[0];
             currentTime = splitTimeDate[1].substring(0, 5);
             currentDelta = (currentElev - lakePool).toFixed(2);
+            /* I think this switch was only used to line up USGS elev data with ACE flow data by time in the old code. I think it can be deleted
+                        // Find first time value that is at the top of the hour
+                        switch (dataValues[0].dateTime.substring(14, 16)) {
 
-            // Find first time value that is at the top of the hour
-            switch (dataValues[0].dateTime.substring(14, 16)) {
+                            case "00":
+                                var j = 0;
+                                break;
 
-                case "00":
-                    var j = 0;
-                    break;
+                            case "15":
+                                var j = 1;
+                                break;
 
-                case "15":
-                    var j = 1;
-                    break;
+                            case "30":
+                                var j = 2;
+                                break;
 
-                case "30":
-                    var j = 2;
-                    break;
+                            case "45":
+                                var j = 3;
+                                break;
 
-                case "45":
-                    var j = 3;
-                    break;
-
-                default:
-                    if (lakeRoute == "jordan" || lakeRoute == "kerr" || lakeRoute == "buggsisland") {
-                        alert("Check USGS Elev Time");
-                    } else {
-                        var j = 0;
-                    }
-            }
+                            default:
+                                if (lakeRoute == "jordan" || lakeRoute == "kerr" || lakeRoute == "buggsisland") {
+                                    alert("Check USGS Elev Time");
+                                } else {
+                                    var j = 0;
+                                }
+                        } */
             // Create our increment and loop through each value
             // For each value push an object into displayBatch
             // Set our counter K variable before incrementing for flowUSGS to use
-            k = j;
-            for (j; j < dataValues.length; j += 4) {
+            // k = j;
+            if (dataValues.length <= 100) // If we only get 93 data values when we requested 96 hours, then it's hourly
+                jIncrement = 1;
+            else jIncrement = 4;
+            for (j = 0; j < dataValues.length; j += jIncrement) {
                 let element = dataValues[j];
                 let elev = element.value;
                 let splitTimeDate = element.dateTime.split("T");
@@ -207,9 +211,9 @@ function dataACE(callback) {
             else z = 1;
             if (ACEFlow)
                 // This has to follow the declarations or Outflow might be undefined
-            // This should not be -z, need to adjust to ACE data mismatch but ACE is returning more Flow data than Elev data. smh
-            // For all lakes but Table Rock, MO, McGhee Creek, OK, Texoma, OK and Eufaula, AL, elev.length is 477 and flow.length is 121, for Table Rock, it is 121 and 121.
-            // Flow.length should either equal Elev.length or be some multiple of Elev.length. ACE has chosen not to do so. 
+                // This should not be -z, need to adjust to ACE data mismatch but ACE is returning more Flow data than Elev data. smh
+                // For all lakes but Table Rock, MO, McGhee Creek, OK, Texoma, OK and Eufaula, AL, elev.length is 477 and flow.length is 121, for Table Rock, it is 121 and 121.
+                // Flow.length should either equal Elev.length or be some multiple of Elev.length. ACE has chosen not to do so. 
                 dataFlowElevEqual = (data[0].Elev.length === (data[1].Outflow.length - z));
 
 

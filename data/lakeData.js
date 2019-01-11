@@ -1270,7 +1270,7 @@ module.exports = [
                 ],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: 0,
+                seaLevelDelta: 885.0,
                 normalPool: 985.0,
                 elevURL: "https://lakes.duke-energy.com/Data/Detail/3_Month/14.txt",
                 flowURL: "none",
@@ -1820,7 +1820,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 651.0,
-                elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/DGH_O.xml?1545588002667",
+                elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/DHH_O.xml?1545582944732",
                 flowURL: "none",
                 href: "/lakes/dalehollow",
                 dataSource: ["TVA"], // array of calls to make to retrieve data
@@ -2121,7 +2121,7 @@ module.exports = [
                 ],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: 0,
+                seaLevelDelta: 879.0,
                 normalPool: 879.0,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=423525088260400&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all",
                 flowURL: "none",
@@ -2145,7 +2145,7 @@ module.exports = [
                 ],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: 0,
+                seaLevelDelta: 746.0,
                 normalPool: 746.0,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04082500&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all",
                 flowURL: "none",
