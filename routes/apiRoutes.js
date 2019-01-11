@@ -253,72 +253,6 @@ module.exports = function (app) {
     }
   })
 
-  // This reads the tournament file for the Tournaments Page
-  app.get("/api/tournaments", function (request, response) {
-    // Import our txData from tournamentData.js file
-    var txData = require("../data/tournamentData");
-    // Declare array to hold our data to send back to the client
-    let data = [];
-    // Loop through the high level organizations in our data
-    for (var i = 0; i < txData.length; i++) {
-      var org = txData[i];
-      // Loop through the tournaments within each organization
-      for (var k = 0; k < org.tournaments.length; k++) {
-        var e = org.tournaments[k];
-        // Push each line into output data object
-        data.push({
-          organizer: e.organizer,
-          trail: e.trail,
-          date: e.date,
-          lake: e.lake,
-          ramp: e.ramp,
-          state: e.state,
-          txDetail: e.txDetail,
-          results: e.resultsLink
-        });
-      }
-    }
-    response.json(data);
-
-    // This for loop was used to write out the tournament data that was read from a txt file
-    /*for (i = 0; i < 196; i++) {
-      if (txData[i].organizer == "CATT" && txData[i].trail == "NC/SC Championship") {
-        fs.appendFile('newTxData.js', "{organizer: \"" + txData[i].organizer + "\",\r\n", function (err, file) {
-          if (err) throw err;
-          console.log("Slow me down")
-        });
-        fs.appendFile('newTxData.js', "trail: \"" + txData[i].trail + "\",\r\n", function (err, file) {
-          if (err) throw err;
-          console.log("Slow me down")
-        });
-        fs.appendFile('newTxData.js', "date: \"" + txData[i].date + "\",\r\n", function (err, file) {
-          if (err) throw err;
-          console.log("Slow me down")
-        });
-        fs.appendFile('newTxData.js', "lake: \"" + txData[i].lake + "\",\r\n", function (err, file) {
-          if (err) throw err;
-          console.log("Slow me down")
-        });
-        fs.appendFile('newTxData.js', "ramp: \"" + txData[i].ramp + "\",\r\n", function (err, file) {
-          if (err) throw err;
-          console.log("Slow me down")
-        });
-        fs.appendFile('newTxData.js', "txDetail: \"" + txData[i].txDetail + "\",\r\n", function (err, file) {
-          if (err) throw err;
-          console.log("Slow me down")
-        });
-        fs.appendFile('newTxData.js', "resultsLink: \"" + txData[i].results + "\",\r\n", function (err, file) {
-          if (err) throw err;
-          console.log("Slow me down")
-        });
-        fs.appendFile('newTxData.js', "entryLink: \"" + "\"}\r\n", function (err, file) {
-          if (err) throw err;
-          console.log("Slow me down")
-        });
-      }
-    } */
-
-  });
 
   // Route to retrieve ACE data from A2W
   app.get("/api/a2w", function (request, response) {
@@ -599,256 +533,34 @@ module.exports = function (app) {
   //End of dukeData
 
 
-
-  function writeTxListJSON() {
-
-    var txJSONList = [
-
-      {
-
-        organization: "ABA",
-
-        tournaments: [
-
-          {
-            trail: "VA Area 8"
-          }
-
-        ]
-
-      },
-      {
-
-        organization: "Anglers",
-
-        tournaments: [{
-            trail: "Team Trail"
-          }
-
-        ]
-      },
-      {
-
-        organization: "BFL",
-
-        tournaments: [
-
-          {
-            trail: "Piedmont"
-          },
-          {
-            trail: "Shenandoah"
-          }
-
-        ]
-
-      },
-      {
-        organization: "CATT",
-
-        tournaments: [
-
-          {
-            trail: "Clarks Hill"
-          },
-
-          {
-            trail: "Coastal (SC)"
-          },
-          {
-            trail: "Cooper River"
-          },
-          {
-
-            trail: "East (NC)"
-          },
-          {
-            trail: "Lake Hartwell"
-          },
-
-          {
-            trail: "Hickory"
-          },
-          {
-            trail: "James River"
-          },
-
-          {
-            trail: "Kerr Lake"
-          },
-          {
-            trail: "Norman"
-          },
-          {
-            trail: "NC/SC Championship"
-          },
-          {
-            trail: "Old North"
-          },
-          {
-            trail: "Robinson"
-          },
-
-          {
-            trail: "Santee Cooper"
-          },
-          {
-            organizer: "CATT"
-          },
-
-          {
-            trail: "Sparkleberry"
-          },
-
-          {
-            trail: "Waccamaw"
-          },
-
-          {
-            trail: "Wateree Open"
-          },
-          {
-            trail: "Wateree"
-          },
-          {
-            trail: "Lake Wylie"
-          },
-          {
-            trail: "Yadkin"
-          }
-
-        ]
-      },
-      {
-
-        organization: "CBC",
-
-        tournaments: [{
-            trail: "SC",
-          },
-          {
-            trail: "NC"
-          }
-
-        ]
-
-      },
-      {
-
-        organization: "Collins",
-
-        tournaments: [{
-            trail: "BFCS"
-          }
-
-        ]
-
-      },
-      {
-
-        organization: "PBC",
-
-        tournaments: [{
-            trail: "Spring Team"
-          }, {
-            trail: "Cashion"
-          }
-
-        ]
-
-      }
-
-    ]; // End of TxJSONList
-
-
-
-    // This for loop was used to write out the tournament data that was read from a txt file
-
-    fs.open('newTxData.js', 'w', function (err, file) {
-      if (err) throw err;
-      console.log('Saved!');
-    });
-    fs.appendFile('newTxData.js', "var txData = [  \r\n\r\n\r\n", function (err, file) {
-      if (err) throw err;
-    });
-    for (j = 0; j < txJSONList.length; j++) {
-      if (j !== 0)
-        fs.appendFile('newTxData.js', ",\r\n", function (err, file) {
-          if (err) throw err;
-          console.log("Slow me down");
+  // This reads the tournament file for the Tournaments Page
+  app.get("/api/tournaments", function (request, response) {
+    // Import our txData from tournamentData.js file
+    var txData = require("../data/tournamentData");
+    // Declare array to hold our data to send back to the client
+    let data = [];
+    // Loop through the high level organizations in our data
+    for (var i = 0; i < txData.length; i++) {
+      var org = txData[i];
+      // Loop through the tournaments within each organization
+      for (var k = 0; k < org.tournaments.length; k++) {
+        var e = org.tournaments[k];
+        // Push each line into output data object
+        data.push({
+          organizer: e.organizer,
+          trail: e.trail,
+          date: e.date,
+          lake: e.lake,
+          ramp: e.ramp,
+          state: e.state,
+          txDetail: e.txDetail,
+          results: e.resultsLink
         });
-      fs.appendFile('newTxData.js', "{organization: \"" + txJSONList[j].organization + "\",\r\n", function (err, file) {
-        if (err) throw err;
-      });
-      fs.appendFile('newTxData.js', "tournaments: [ \r\n\r\n", function (err, file) {
-        if (err) throw err;
-      });
-      for (k = 0; k < txJSONList[j].tournaments.length; k++) {
-        for (i = 0; i < 196; i++) {
-          if (txData[i].organizer == txJSONList[j].organization)
-            if (txData[i].trail == txJSONList[j].tournaments[k].trail) {
-              fs.appendFile('newTxData.js', ",\r\n{organizer: \"" + txData[i].organizer + "\",\r\n", function (err, file) {
-                if (err) throw err;
-                console.log("Slow me down");
-                console.log("Slow me down");
-              });
-              fs.appendFile('newTxData.js', "trail: \"" + txData[i].trail + "\",\r\n", function (err, file) {
-                if (err) throw err;
-                console.log("Slow me down");
-                console.log("Slow me down");
-              });
-              fs.appendFile('newTxData.js', "date: \"" + txData[i].date + "\",\r\n", function (err, file) {
-                if (err) throw err;
-                console.log("Slow me down");
-                console.log("Slow me down");
-              });
-              fs.appendFile('newTxData.js', "lake: \"" + txData[i].lake + "\",\r\n", function (err, file) {
-                if (err) throw err;
-                console.log("Slow me down");
-                console.log("Slow me down");
-              });
-              fs.appendFile('newTxData.js', "ramp: \"" + txData[i].ramp + "\",\r\n", function (err, file) {
-                if (err) throw err;
-                console.log("Slow me down");
-                console.log("Slow me down");
-              });
-              fs.appendFile('newTxData.js', "state: \"" + txData[i].state + "\",\r\n", function (err, file) {
-                if (err) throw err;
-                console.log("Slow me down");
-                console.log("Slow me down");
-              });
-              fs.appendFile('newTxData.js', "txDetail: \"" + txData[i].txDetail + "\",\r\n", function (err, file) {
-                if (err) throw err;
-                console.log("Slow me down");
-                console.log("Slow me down");
-              });
-              fs.appendFile('newTxData.js', "resultsLink: \"" + txData[i].results + "\",\r\n", function (err, file) {
-                if (err) throw err;
-                console.log("Slow me down");
-                console.log("Slow me down");
-              });
-              fs.appendFile('newTxData.js', "entryLink: \"" + "\"}\r\n", function (err, file) {
-                if (err) throw err;
-                console.log("Slow me down");
-                console.log("Slow me down");
-              });
-            }
-        }; // End of for i loop (finished looping through txData)
-        if (k == txJSONList[j].tournaments.length - 1) {
-          fs.appendFile('newTxData.js', "]\r\n} \r\n", function (err, file) {
-            if (err) throw err;
-            console.log("Slow me down");
-            console.log("Slow me down");
-          });
-        }
-      }; //End of for k loop (finished a trail)
-    }; // End of for j loop (finished and Organization)
-    fs.appendFile('newTxData.js', "] \r\n", function (err, file) {
-      if (err) throw err;
-      console.log("Slow me down");
-      console.log("Slow me down");
-    });
-  }; // End of writeTxListJSON function
+      };
+    };
+    response.json(data);
 
+
+  });
 
 }; // End of module.exports
