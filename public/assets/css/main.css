@@ -1,13 +1,13 @@
 * {
     font-family: 'Roboto', sans-serif;
+    /* color: #212121; */
 }
-/* 
-hr {
-    height: 1px;
-    color: #28a745;
-    background-color: #28a745;
-    border: none;
-    } */
+
+.nav-color-splash {
+    background-color: #4CAF50;
+    width: 100%;
+    height: 5px;
+}
 
 .header-title {
     font-weight: bold;
@@ -28,8 +28,19 @@ h2 {
     margin-bottom: 0px;
 }
 
+.btn-success {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+}
+
+.btn:hover {
+    margin-top: -1px;
+    margin-bottom: 1px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.18);
+}
+
 .active {
-    color: #28a745;
+    color: #4CAF50;
 }
 
 
@@ -57,25 +68,37 @@ h2 {
 
 .lakeName {
     font-size: 24px;
-    color: #28a745;
+    color: #4CAF50;
 }
 
 .brand-savvy {
-    color: #28a745;
+    color: #4CAF50;
 }
 
 .current-wrapper {
     margin-left: auto;
     margin-right: auto;
-    background-color: #28a745;
+    background-color: #4CAF50;
+    background-image: linear-gradient(hsl(112, 39%, 49%), hsl(137, 43%, 39%));
     color: white;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.20);
     padding: 5px;
     width: 90%;
+    border-radius: 3px;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.18);
+}
+
+.current-wrapper h1 {
+    color: #FFFFFF;
 }
 
 .current-subtext {
     margin-bottom: 0px;
+    color: hsl(137, 20%, 92%);
+}
 
+#currentNormal {
+    color: hsl(137, 20%, 92%);
 }
 
 /* @media only screen and (max-width: 400px) {
@@ -94,7 +117,7 @@ h2 {
 }
 
 .lake-hr {
-    color: #28a745;
+    color: #4CAF50;
 }
 
 .lake-table {
@@ -127,12 +150,15 @@ h2 {
 /* Cards on Home Page */
 .card-home {
     margin-bottom: 20px;
-    box-shadow: 1px 1px rgb(0,0,0,0.3);
-    -webkit-box-shadow: 1px 1px rgba(199, 197, 197, 0.1);
+    box-shadow: 0px 2px 4px rgb(0,0,0,0.10);
+    -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.10);
 }
 
 .card-home:hover {
-    box-shadow: none;
+    margin-bottom: 21px;
+    margin-top: -1px;
+    box-shadow: 0px 2px 4px rgb(0,0,0,0.20);
+    -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.20);
 }
 
 .card-link {
@@ -145,10 +171,11 @@ h2 {
 }
 
 .request-banner {
-    border: 1px solid #28a745;
+    border: 1px solid #4CAF50;
     padding: 10px;
     width: 75%;
     margin: 5px auto;
+    border-radius: 3px;
 }
 
 
