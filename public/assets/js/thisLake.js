@@ -535,9 +535,16 @@ function elevAlab(callback) {
 }
 
 // Function to dynamically place advertisement on thisLake.html page
-function placeLogoAd() {
-    $("#adLogoWell").append("<a href='" + adLogoUrl + "' target='_blank'><img class='ad-logo' src='" + adLogoSrc + "'/></a>");
+function loadAds() {
+    if (typeof adLogoSrc !== 'undefined') {
+        $("#adLogoWell").append("<a href='" + adLogoUrl + "' target='_blank'><img class='ad-logo' src='" + adLogoSrc + "'/></a>");
+    }
+    if (typeof adTxSrc !== 'undefined') {
+        $("#adTxWell").append("<a href='" + adTxUrl + "' target='_blank'><img class='ad-logo' src='" + adTxSrc + "'/></a>");
+
+    }
 }
+
 
 // User clicked on Tournaments Button on Lake page
 // display tournaments filtered by lake
@@ -570,6 +577,8 @@ $.ajax({
         flowURL = currentLake.flowURL;
         adLogoSrc = currentLake.adLogoSrc;
         adLogoUrl = currentLake.adLogoUrl;
+        adTxSrc = currentLake.adTxSrc;
+        adTxUrl = currentLake.adTxUrl;
 
         // Loop through the lake data sources and run associated functions
         for (var i = 0; i < currentLake.dataSource.length; i++) {
@@ -611,8 +620,8 @@ $.ajax({
                     displayCurrentPageValues();
                     buildTable(displayBatch);
                 });
-            } else if (source === "placeLogoAd") {
-                placeLogoAd();
+            } else if (source === "loadAds") {
+                loadAds();
             }
         }
     })

@@ -24,7 +24,7 @@ module.exports = [
                 elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1882051&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
                 flowURL: "none",
                 href: "/lakes/eufaula",
-                dataSource: ["ACE", "placeLogoAd"], // array of calls to make to retrieve data
+                dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
                 adLogoSrc: "",
@@ -1082,7 +1082,7 @@ module.exports = [
                 elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1745041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
                 flowURL: "none",
                 href: "/lakes/falls",
-                dataSource: ["ACE", "placeLogoAd"], // array of calls to make to retrieve data
+                dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
                 adLogoSrc: "/static/assets/img/outhouse-tackle.png",
@@ -1131,7 +1131,7 @@ module.exports = [
                 elevURL: "",
                 flowURL: "none",
                 href: "/lakes/highrock",
-                dataSource: ["CUBE", "placeLogoAd"], // array of calls to make to retrieve data
+                dataSource: ["CUBE", "loadAds"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
                 adLogoSrc: "/static/assets/img/deep-creek-lures.png",
@@ -1179,7 +1179,7 @@ module.exports = [
                 elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1743041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
                 flowURL: "none",
                 href: "/lakes/jordan",
-                dataSource: ["ACE", "placeLogoAd"], // array of calls to make to retrieve data
+                dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
                 adLogoSrc: "/static/assets/img/pbc.jpg",
@@ -1203,11 +1203,13 @@ module.exports = [
                 elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1749041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
                 flowURL: "none",
                 href: "/lakes/kerr",
-                dataSource: ["ACE", "placeLogoAd"], // array of calls to make to retrieve data
+                dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
                 adLogoSrc: "/static/assets/img/jse.png",
-                adLogoUrl: "http://jacksonsuperiorelectric.com/"
+                adLogoUrl: "http://jacksonsuperiorelectric.com/",
+                adTxSrc: "/static/assets/img/cbc-kerr-tx.png",
+                adTxUrl: "http://carolinasbasschallenge.com/tournament/72"
             },
             {
                 bodyOfWater: "Neuse River (Kinston)", // lake name
@@ -1746,7 +1748,7 @@ module.exports = [
                 elevURL: "https://lakes.duke-energy.com/Data/Detail/3_Month/17.txt",
                 flowURL: "none",
                 href: "/lakes/wateree",
-                dataSource: ["DUKE", "placeLogoAd"], // array of calls to make to retrieve data
+                dataSource: ["DUKE", "loadAds"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
                 adLogoSrc: "/static/assets/img/catt.png",
@@ -2077,7 +2079,9 @@ module.exports = [
                 resultsLink: "undefined",
                 entryLink: "",
                 adLogoSrc: "/static/assets/img/jse.png",
-                adLogoUrl: "http://jacksonsuperiorelectric.com/"
+                adLogoUrl: "http://jacksonsuperiorelectric.com/",
+                adTxSrc: "/static/assets/img/cbc-kerr-tx.png",
+                adTxUrl: "http://carolinasbasschallenge.com/tournament/72"
             },
             {
                 bodyOfWater: "Potomac", // lake name
