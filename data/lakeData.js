@@ -1297,7 +1297,7 @@ module.exports = [
                 seaLevelDelta: 0,
                 normalPool: 0,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=0208114150&period=PT96H&parameterCd=00065&siteType=ST&siteStatus=all",
-                flowURL: "",
+                flowURL: "none",
                 href: "/lakes/roanoke",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
