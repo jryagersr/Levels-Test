@@ -428,6 +428,11 @@ function dataDuke(callback) {
                 skipToValidData++;
                 dataDate = new Date(data[skipToValidData].Date);
             }
+            // Bump index to a valid average value
+            while (data[skipToValidData].Average == "NA") {
+                skipToValidData++;
+                dataDate = new Date(data[skipToValidData].Date);
+            }
 
             if (seaLevelDelta !== 0)
                 elevationAdjust = (parseFloat(data[skipToValidData].Average) + seaLevelDelta).toFixed(2);
