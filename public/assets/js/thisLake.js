@@ -422,9 +422,18 @@ function dataDuke(callback) {
 
             // Duke updates their text file with future datas sometimes
             // While date is ahead of today's date, continue to loop forward
+            // then check to see if the .Average value is valid (a number) if
+            // not, keep looping until you get a valide .Average value.
+            // This is a result of change in Dukes Data on 1/1/19 and a missing day on 1/11/19 (1/10/19 was missing)
+            // as well as 1/11/19 having a .Average value of "NA"
             var now = new Date();
             var dataDate = new Date(data[skipToValidData].Date);
             while (dataDate > now) {
+                skipToValidData++;
+                dataDate = new Date(data[skipToValidData].Date);
+            }
+            // Bump index to a valid average value
+            while (data[skipToValidData].Average == "NA") {
                 skipToValidData++;
                 dataDate = new Date(data[skipToValidData].Date);
             }
