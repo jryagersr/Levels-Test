@@ -228,8 +228,8 @@ function dataACE(callback) {
 
             // Convert UTC date to local time
             let localTime = convertStringToUTC(data[0].Elev[lastElevIndex].time)
-            currentDate = localTime.substring(4, 10) + " " + localTime.substring(13, 15);
-            currentTime = localTime.substring(16, 21);
+            currentDate = localTime.substring(0, 2) + "/" + localTime.substring(3, 5) + "/" + localTime.substring(8, 10);
+            currentTime = localTime.substring(11, 16);
 
             currentElev = parseFloat(data[0].Elev[lastElevIndex].value).toFixed(2);
             //let currentDate = data[0].Elev[lastElevIndex].time.substring(0, 7) + data[0].Elev[lastElevIndex].time.substring(9, 12);
@@ -253,8 +253,8 @@ function dataACE(callback) {
             for (j = lastElevIndex; j >= 0; j = j - jIncrement) {
                 let elev = data[0].Elev[j].value.toFixed(2);
                 localTime = convertStringToUTC(data[0].Elev[j].time)
-                let date = localTime.substring(4, 10) + " " + localTime.substring(13, 15);
-                let time = localTime.substring(16, 21);
+                let date = localTime.substring(0, 2) + "/" + localTime.substring(3, 5) + "/" + localTime.substring(8, 10);
+                let time = localTime.substring(11, 16);
                 flow = 'No data'; // default value, this differentiates no reported data from no data available (N/A)
                 if (ACEFlow)
                     if (data[1].Outflow[i].value !== -99)
@@ -311,15 +311,17 @@ function convertStringToUTC(convertedTime) {
     // Convert to ISO format first. '2011-04-11T10:20:30Z'
     convertedTime = convertedTime.trim();
     let convertedMonth = convertedTime.substring(3, 6);
-    convertMonth = getMonthFromString(convertedMonth);
+    convertedMonth = getMonthFromString(convertedMonth);
+    convertedMonth = convertedMonth.toString();
+    if (convertedMonth.length == 1) convertedMonth = "0" + convertedMonth;
     //Convert the string to UTC (GTM)
     convertedTime = convertedMonth + "/" + convertedTime.substring(0, 2) + "/" + convertedTime.substring(7, 11) + " " + convertedTime.substring(12, 21) + " UTC";
     //Convert the string to a Date
-    convertedTime = new Date(convertedTime);
+    //convertedTime = new Date(convertedTime);
     //Might need this call in ater
     //convertUTCDate(convertedTime);
     //Convert the Date to local time (client)
-    convertedTime = convertedTime.toString(convertedTime);
+    //convertedTime = convertedTime.toString(convertedTime);
     // Time now looks like "Thu Dec 27 2018 11:15:00 GMT-0500 (Eastern Standard Time)"
     // Substring the pieces we want to display
     return (convertedTime)
