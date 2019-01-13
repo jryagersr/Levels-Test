@@ -105,33 +105,7 @@ function elevUSGS(callback) {
             currentDate = splitTimeDate[0];
             currentTime = splitTimeDate[1].substring(0, 5);
             currentDelta = (currentElev - lakePool).toFixed(2);
-            /* I think this switch was only used to line up USGS elev data with ACE flow data by time in the old code. I think it can be deleted
-                        // Find first time value that is at the top of the hour
-                        switch (dataValues[0].dateTime.substring(14, 16)) {
-
-                            case "00":
-                                var j = 0;
-                                break;
-
-                            case "15":
-                                var j = 1;
-                                break;
-
-                            case "30":
-                                var j = 2;
-                                break;
-
-                            case "45":
-                                var j = 3;
-                                break;
-
-                            default:
-                                if (lakeRoute == "jordan" || lakeRoute == "kerr" || lakeRoute == "buggsisland") {
-                                    alert("Check USGS Elev Time");
-                                } else {
-                                    var j = 0;
-                                }
-                        } */
+            
             // Create our increment and loop through each value
             // For each value push an object into displayBatch
             // Set our counter K variable before incrementing for flowUSGS to use
@@ -228,8 +202,8 @@ function dataACE(callback) {
 
             // Convert UTC date to local time
             let localTime = convertStringToUTC(data[0].Elev[lastElevIndex].time)
-            currentDate = localTime.substring(0, 2) + "/" + localTime.substring(3, 5) + "/" + localTime.substring(8, 10);
-            currentTime = localTime.substring(11, 16);
+            currentDate = localTime.toString().substring(4,15);
+            currentTime = localTime.toString().substring(16,21);
 
             currentElev = parseFloat(data[0].Elev[lastElevIndex].value).toFixed(2);
             //let currentDate = data[0].Elev[lastElevIndex].time.substring(0, 7) + data[0].Elev[lastElevIndex].time.substring(9, 12);
@@ -253,8 +227,8 @@ function dataACE(callback) {
             for (j = lastElevIndex; j >= 0; j = j - jIncrement) {
                 let elev = data[0].Elev[j].value.toFixed(2);
                 localTime = convertStringToUTC(data[0].Elev[j].time)
-                let date = localTime.substring(0, 2) + "/" + localTime.substring(3, 5) + "/" + localTime.substring(8, 10);
-                let time = localTime.substring(11, 16);
+                let date = localTime.toString().substring(4,15);
+                let time = localTime.toString().substring(16,21);
                 flow = 'No data'; // default value, this differentiates no reported data from no data available (N/A)
                 if (ACEFlow)
                     if (data[1].Outflow[i].value !== -99)
@@ -264,10 +238,10 @@ function dataACE(callback) {
                 var lakeSection = $("<tr>");
                 lakeSection.addClass("well");
                 lakeSection.attr("id", "lakeWell-" + j + 1);
-                if (isLakeIstokpoga == true && localTime.substring(16, 18) == lastHourDisplayed) {
+                if (isLakeIstokpoga == true && localTime.getHours() == lastHourDisplayed) {
                     displayFlowData = false;
                 } else {
-                    lastHourDisplayed = localTime.substring(16, 18);
+                    lastHourDisplayed = localTime.getHours();
                     displayFlowData = true;
                 }
                 if (displayFlowData) {
@@ -315,13 +289,13 @@ function convertStringToUTC(convertedTime) {
     convertedMonth = convertedMonth.toString();
     if (convertedMonth.length == 1) convertedMonth = "0" + convertedMonth;
     //Convert the string to UTC (GTM)
-    convertedTime = convertedMonth + "/" + convertedTime.substring(0, 2) + "/" + convertedTime.substring(7, 11) + " " + convertedTime.substring(12, 21) + " UTC";
+    convertedTime = convertedTime.substring(7, 11) + "-" + convertedMonth + "-" + convertedTime.substring(0, 2) + "T" + convertedTime.substring(12, 21) + "Z";
     //Convert the string to a Date
     //convertedTime = new Date(convertedTime);
     //Might need this call in ater
-    //convertUTCDate(convertedTime);
+    convertedTime = new Date(convertedTime);
     //Convert the Date to local time (client)
-    //convertedTime = convertedTime.toString(convertedTime);
+    // convertedTime = convertedTime.toString(convertedTime);
     // Time now looks like "Thu Dec 27 2018 11:15:00 GMT-0500 (Eastern Standard Time)"
     // Substring the pieces we want to display
     return (convertedTime)
