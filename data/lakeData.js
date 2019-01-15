@@ -1085,8 +1085,8 @@ module.exports = [
                 dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
-                adLogoSrc: "/static/assets/img/outhouse-tackle.png",
-                adLogoUrl: "http://outhousetackle.com/"
+                adLogoSrc: "/static/assets/img/catt-oldnorth-falls-032319.png",
+                adLogoUrl: "https://www.cattteamtrail.com/divisions/catt-old-north/"
             },
             {
                 bodyOfWater: "Hickory", // lake name
@@ -1183,7 +1183,9 @@ module.exports = [
                 resultsLink: "undefined",
                 entryLink: "",
                 adLogoSrc: "/static/assets/img/pbc.jpg",
-                adLogoUrl: "http://piedmontbassclassics.com/MainPage2.html"
+                adLogoUrl: "http://piedmontbassclassics.com/MainPage2.html",
+                adCharitySrc: "/static/assets/img/warriors-on-the-water.png",
+                adCharityUrl: "https://www.warriorsonthewater.com/"
             },
             {
                 bodyOfWater: "Kerr", // lake name

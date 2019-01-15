@@ -28,7 +28,9 @@
 <body>
     <div class="nav-color-splash"></div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-        <a class="navbar-brand" href="/">Bass<span class="brand-savvy">Savvy</span></a>
+        <a class="navbar-brand" href="/">
+            <h2>Bass<span class="brand-savvy">Savvy</span></h2>
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -49,13 +51,14 @@
     </nav>
 
     <div class="container text-center">
-        <h3>View another State:</h3>
-        <select class="form-control form-control-lg" id="optionWell">
-        </select>
-        <button class="btn btn-success" id="stateSubmit" style="width:100%; margin-top: 2px">View</button>
-        <br>
-        <br>
-        <div class="container">
+        <div class="state-select-wrapper">
+            <h3>View another State:</h3>
+            <select class="form-control form-control-lg" id="optionWell">
+            </select>
+            <button class="btn btn-success btn-state-submit" id="stateSubmit">View</button>
+        </div>
+        <div class="state-container">
+            <h1 class="state-title" id="stateName"></h1>
             <table class="table lake-table table-hover" id="lakeTable">
             </table>
         </div>

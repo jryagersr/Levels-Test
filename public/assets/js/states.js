@@ -114,6 +114,7 @@ $.ajax({
 })
     .then(function (data) {
         console.log(data);
+        $("#stateName").append(data.state);
         for (var i = 0; i < data.lakes.length; i++) {
             var row = $(`
             <tr>
