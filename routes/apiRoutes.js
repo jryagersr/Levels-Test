@@ -43,7 +43,7 @@ module.exports = function (app) {
   // })
 
 
-  //Route to retrieve lakes in a specific state
+  // Route to retrieve lakes in a specific state
   app.get("/api/states/:state", function (req, res) {
     var data = require("../data/lakeData");
     let state = req.query.state;
@@ -51,6 +51,7 @@ module.exports = function (app) {
     res.send(stateObj);
   })
 
+  // Route to retrieve lakeData.js
   app.get("/api/lake-data", function(req,res) {
     // Import lake data from lakeData.js
     var data = require("../data/lakeData");
@@ -177,6 +178,7 @@ module.exports = function (app) {
     }
   });
 
+  // Route to retrieve data for cube carolinas
   app.get("/api/cube", function (request, response) {
     // Parses our HTML and helps us find elements
     var cheerio = require("cheerio");
@@ -252,7 +254,6 @@ module.exports = function (app) {
       });
     }
   })
-
 
   // Route to retrieve ACE data from A2W
   app.get("/api/a2w", function (request, response) {
@@ -390,6 +391,10 @@ module.exports = function (app) {
 
         case "lay":
           url = "http://www.laylake.info/Level/Calendar"
+          break;
+
+        case "rossbarnett":
+          url = "http://www.rossbarnett.uslakes.info/Level/Calendar"
           break;
 
         case "weiss":
