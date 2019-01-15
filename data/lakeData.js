@@ -7,6 +7,30 @@ module.exports = [
         lakes: [
 
             {
+                bodyOfWater: "Columbus", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["18-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 1440, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0,
+                normalPool: 0,
+                elevURL: "/api/alabama",
+                flowURL: "none",
+                href: "/lakes/columbus",
+                dataSource: ["ALAB"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
+            {
                 bodyOfWater: "Eufaula", // lake name
                 data: [
 

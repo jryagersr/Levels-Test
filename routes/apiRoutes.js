@@ -377,6 +377,9 @@ module.exports = function (app) {
       // Set the base of the request depending on which lake we want
       var url = "";
       switch (lakeRoute) {
+        case "columbus":
+          url = "http://columbus.lakesonline.com/Level/Calendar"
+          break;
         case "smith":
           url = "http://www.smithlake.info/Level/Calendar"
           break;
