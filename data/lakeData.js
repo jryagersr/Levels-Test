@@ -7,30 +7,6 @@ module.exports = [
         lakes: [
 
             {
-                bodyOfWater: "Columbus", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
-                refreshInterval: 1440, //minutes
-                lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: 0,
-                normalPool: 0,
-                elevURL: "/api/alabama",
-                flowURL: "none",
-                href: "/lakes/columbus",
-                dataSource: ["ALAB"], // array of calls to make to retrieve data
-                resultsLink: "undefined",
-                entryLink: "",
-                adLogoSrc: "",
-                adLogoUrl: ""
-            },
-            {
                 bodyOfWater: "Eufaula", // lake name
                 data: [
 
@@ -393,7 +369,7 @@ module.exports = [
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
-                normalPool: 6300.0 ,
+                normalPool: 6300.0,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07124400&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/trinidad",
@@ -1002,6 +978,35 @@ module.exports = [
             }
         ]
     }, {
+        state: "Mississippi",
+        lakes: [
+            {
+                bodyOfWater: "Columbus", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["18-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 1440, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0,
+                normalPool: 0,
+                elevURL: "/api/alabama",
+                flowURL: "none",
+                href: "/lakes/columbus",
+                dataSource: ["ALAB"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
+        ]
+    },
+    {
         state: "Nevada",
         lakes: [
 
@@ -1133,8 +1138,10 @@ module.exports = [
                 dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
-                adLogoSrc: "/static/assets/img/catt-oldnorth-falls-032319.png",
-                adLogoUrl: "https://www.cattteamtrail.com/divisions/catt-old-north/"
+                adLogoSrc: "/static/assets/img/outhouse-tackle.png",
+                adLogoUrl: "http://outhousetackle.com/",
+                adTxSrc: "/static/assets/img/catt-oldnorth-falls-032319.png",
+                adTxUrl: "https://www.cattteamtrail.com/divisions/catt-old-north/"
             },
             {
                 bodyOfWater: "Hickory", // lake name
