@@ -1201,7 +1201,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 1000.0,
                 normalPool: 1100.0,
-                elevURL: "https://lakes.duke-energy.com/Data/Detail/3_Month/09.txt",
+                elevURL: "https://lakes.duke-energy.com/Data/Detail/3_Month/9.txt",
                 flowURL: "none",
                 href: "/lakes/jocasse",
                 dataSource: ["DUKE"], // array of calls to make to retrieve data
