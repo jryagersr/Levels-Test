@@ -445,7 +445,7 @@ module.exports = [
                 {
                     date: "19-09/13",
                     lake: "TBD",
-                    ramp: "",
+                    ramp: "TBD",
                     state: "NC",
                     txDetail: "2 Day Championship Div 1",
                     resultsLink: "undefined",
