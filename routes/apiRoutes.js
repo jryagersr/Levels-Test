@@ -544,8 +544,8 @@ module.exports = function (app) {
   // This reads the tournament file for the Tournaments Page
   app.get("/api/tournaments", function (request, response) {
     // Import our txData from tournamentData.js file
-    var txData = require("../data/tournamentData");
-    // Declare array to hold our data to send back to the client
+    var txData = require("../data/TRAILtournamentData");
+    /*// Declare array to hold our data to send back to the client
     let data = [];
     // Loop through the high level organizations in our data
     for (var i = 0; i < txData.length; i++) {
@@ -565,8 +565,8 @@ module.exports = function (app) {
           results: e.resultsLink
         });
       };
-    };
-    response.json(data);
+    };*/
+    response.json(txData);
 
 
   });

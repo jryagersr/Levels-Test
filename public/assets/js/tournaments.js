@@ -50,19 +50,22 @@ function displayData(data) {
     let i = 0;
     data.forEach(function (element) {
 
-        // Create the HTML Well (Section) and Add the table content for each reserved table
-        var txSection = $("<tr>");
-        txSection.addClass("well");
-        txSection.attr("id", "txWell-" + i + 1);
-        $("#txSection").append(txSection);
-
-        // Append the data values to the table row
-        $("#txWell-" + i + 1).append("<td>" + element.organizer + "</td>");
-        $("#txWell-" + i + 1).append("<td>" + element.trail + "</td>");
-        $("#txWell-" + i + 1).append("<td>" + element.date + "</td>");
-        $("#txWell-" + i + 1).append("<td>" + element.lake + "</td>");
-        $("#txWell-" + i + 1).append("<td>" + element.ramp + "</td>");
-        i++;
+            for (k = 0; k < element.trails.length; k++) {
+                for (l = 0; l < element.trails[k].tournaments.length; l++) {
+                    // Create the HTML Well (Section) and Add the table content for each reserved table
+                    var txSection = $("<tr>");
+                    txSection.addClass("well");
+                    txSection.attr("id", "txWell-" + i + 1);
+                    $("#txSection").append(txSection);
+                    // Append the data values to the table row
+                    $("#txWell-" + i + 1).append("<td>" + element.organization + "</td>");
+                    $("#txWell-" + i + 1).append("<td>" + element.trails[k].trail + "</td>");
+                    $("#txWell-" + i + 1).append("<td>" + element.trails[k].tournaments[l].date + "</td>");
+                    $("#txWell-" + i + 1).append("<td>" + element.trails[k].tournaments[l].lake + "</td>");
+                    $("#txWell-" + i + 1).append("<td>" + element.trails[k].tournaments[l].ramp + "</td>");
+                    i++;
+                }
+            }
     })
 }
 

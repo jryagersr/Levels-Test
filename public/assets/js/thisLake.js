@@ -428,7 +428,7 @@ function dataDuke(callback) {
 
             // Set date, time and elev
             currentDate = data[skipToValidData].Date;
-            currentTime = "6:00"; // No time is provided by source
+            currentTime = "06:00"; // No time is provided by source
             currentElev = elevationAdjust;
             currentDelta = (elevationAdjust - lakePool).toFixed(2);
 
@@ -449,7 +449,7 @@ function dataDuke(callback) {
 
                 displayBatch.push({
                     date: date,
-                    time: "6:00",
+                    time: "06:00",
                     elev: elev,
                     flow: flow
                 })

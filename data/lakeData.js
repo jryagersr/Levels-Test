@@ -5,7 +5,32 @@ module.exports = [
         state: "Alabama",
 
         lakes: [
+            
+           /* {
+               // ACE Not returning data for Aliceville (ie John Bevill Lock)
+                bodyOfWater: "Aliceville", // lake name
+                data: [
 
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["18-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 30, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0,
+                normalPool: 0.0,
+                elevURL: "https://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=25512039p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+                flowURL: "none",
+                href: "/lakes/aliceville",
+                dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },*/
             {
                 bodyOfWater: "Eufaula", // lake name
                 data: [
@@ -384,6 +409,31 @@ module.exports = [
         state: "Florida",
         lakes: [
 
+            /*{
+                // ACE not returning data for Hatchineha
+                bodyOfWater: "Hatchineha", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["19-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 30, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0,
+                normalPool: 39.4,
+                elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=165038p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+                flowURL: "none",
+                href: "/lakes/istokpoga",
+                dataSource: ["ACE"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },*/
             {
                 bodyOfWater: "Istokpoga", // lake name
                 data: [
@@ -408,6 +458,32 @@ module.exports = [
                 adLogoSrc: "",
                 adLogoUrl: ""
             },
+
+            /*{
+                // ACE not returning data for Kissimmee
+                bodyOfWater: "Kissimmee", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["19-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 30, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0,
+                normalPool: 39.4,
+                elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=165038p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+                flowURL: "none",
+                href: "/lakes/istokpoga",
+                dataSource: ["ACE"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },*/
             {
                 bodyOfWater: "Minnehaha", // lake name
                 data: [
@@ -1118,6 +1194,31 @@ module.exports = [
                 adLogoUrl: ""
             },
             {
+                bodyOfWater: "Blewitt Falls", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flow
+                        date: ["19-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 30, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 78.0,
+                normalPool: 178.0,
+                elevURL: "https://lakes.duke-energy.com/Data/Detail/3_Month/30.txt",
+                flowURL: "none",
+                href: "/lakes/BlewittFalls",
+                dataSource: ["DUKE"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
+
+            {
                 bodyOfWater: "Falls", // lake name
                 data: [
 
@@ -1211,6 +1312,30 @@ module.exports = [
                 flowURL: "none",
                 href: "/lakes/hyco",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
+            {
+                bodyOfWater: "Jocasee", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flow
+                        date: ["19-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 30, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 1000.0,
+                normalPool: 1100.0,
+                elevURL: "https://lakes.duke-energy.com/Data/Detail/3_Month/9.txt",
+                flowURL: "none",
+                href: "/lakes/jocasse",
+                dataSource: ["DUKE"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
                 adLogoSrc: "",
@@ -1364,6 +1489,31 @@ module.exports = [
                 adLogoSrc: "",
                 adLogoUrl: ""
             },
+            {
+                bodyOfWater: "Tillery", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flow
+                        date: ["19-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 30, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 178.0,
+                normalPool: 278.0,
+                elevURL: "https://lakes.duke-energy.com/Data/Detail/3_Month/31.txt",
+                flowURL: "none",
+                href: "/lakes/Tillery",
+                dataSource: ["DUKE"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
+
             {
                 bodyOfWater: "Tuckertown", // lake name
                 data: [
@@ -1710,6 +1860,30 @@ module.exports = [
                 flowURL: "none",
                 href: "/lakes/hartwell",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
+            {
+                bodyOfWater: "Keowee", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flow
+                        date: ["19-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 30, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 700.0,
+                normalPool: 800.0,
+                elevURL: "https://lakes.duke-energy.com/Data/Detail/3_Month/10.txt",
+                flowURL: "none",
+                href: "/lakes/Keowee",
+                dataSource: ["DUKE"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
                 adLogoSrc: "",
