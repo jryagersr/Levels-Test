@@ -17,6 +17,14 @@ form {
     border-color: rgba(189, 189, 189, 0.9);
 }
 
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group h3 {
+    margin: 10px 0px;
+}
+
 .container {
     padding-left: 5%;
     padding-right: 5%;

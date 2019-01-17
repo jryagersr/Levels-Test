@@ -175,6 +175,30 @@ module.exports = [
                 adLogoUrl: ""
             },
             {
+                bodyOfWater: "Ross Barnett", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["18-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 1440, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0,
+                normalPool: 297.5,
+                elevURL: "/api/alabama",
+                flowURL: "none",
+                href: "/lakes/rossbarnett",
+                dataSource: ["ALAB"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
+            {
                 bodyOfWater: "Smith", // lake name
                 data: [
 
@@ -1027,6 +1051,35 @@ module.exports = [
             }
         ]
     }, {
+        state: "Mississippi",
+        lakes: [
+            {
+                bodyOfWater: "Columbus", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["18-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 1440, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0,
+                normalPool: 0,
+                elevURL: "/api/alabama",
+                flowURL: "none",
+                href: "/lakes/columbus",
+                dataSource: ["ALAB"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
+        ]
+    },
+    {
         state: "Nevada",
         lakes: [
 
@@ -1184,7 +1237,9 @@ module.exports = [
                 resultsLink: "undefined",
                 entryLink: "",
                 adLogoSrc: "/static/assets/img/outhouse-tackle.png",
-                adLogoUrl: "http://outhousetackle.com/"
+                adLogoUrl: "http://outhousetackle.com/",
+                adTxSrc: "/static/assets/img/catt-oldnorth-falls-032319.png",
+                adTxUrl: "https://www.cattteamtrail.com/divisions/catt-old-north/"
             },
             {
                 bodyOfWater: "Hickory", // lake name
@@ -1305,7 +1360,9 @@ module.exports = [
                 resultsLink: "undefined",
                 entryLink: "",
                 adLogoSrc: "/static/assets/img/pbc.jpg",
-                adLogoUrl: "http://piedmontbassclassics.com/MainPage2.html"
+                adLogoUrl: "http://piedmontbassclassics.com/MainPage2.html",
+                adCharitySrc: "/static/assets/img/warriors-on-the-water.png",
+                adCharityUrl: "https://www.warriorsonthewater.com/"
             },
             {
                 bodyOfWater: "Kerr", // lake name

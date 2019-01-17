@@ -51,16 +51,18 @@
     </nav>
 
     <div class="container">
-        <h2 class="header-title text-center">Lakes</h2>
+        <h1 class="header-title text-center">Lakes</h1>
         <h5 class="text-center request-banner">Don't see the lake you want? <b>Make a request</b> for us to add it <a
                 href="/contact"><b>here</b></a>.</h5>
         <hr>
 
 
-        <h3>View a State:</h3>
-        <select class="form-control form-control-lg" id="optionWell">
-        </select>
-        <button class="btn btn-success" id="stateSubmit" style="width:100%; margin-top: 2px">View</button>
+        <div class="state-select-wrapper">
+            <h3>View a State:</h3>
+            <select class="form-control form-control-lg" id="optionWell">
+            </select>
+            <button class="btn btn-success btn-state-submit" id="stateSubmit">View</button>
+        </div>
         <br>
         <br>
         <div class="stateContainer" id="al">
@@ -842,13 +844,13 @@
         <i class="far fa-window-close fa-lg"></i>
     </div>
 
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-            crossorigin="anonymous"></script>
-        <script type="text/javascript" src="/static/assets/js/lakes.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/static/assets/js/lakes.js"></script>
 </body>
 
 </html>
