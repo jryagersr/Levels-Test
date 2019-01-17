@@ -1,5 +1,6 @@
 var txBatch = [];
 var currentBatch = [];
+let flatBatch = [];
 let parameterArray = [];
 let orgSort = false;
 let trailSort = false;
@@ -82,6 +83,7 @@ function populateFilter(data) {
     }
 }
 
+// Function to display data
 function displayData(data) {
     $("#txSection").empty();
     let i = 0;
@@ -105,6 +107,26 @@ function displayData(data) {
     })
 }
 
+// Function to display flat data
+function displayFlatData(data) {
+    $("#txSection").empty();
+    let i = 0;
+    data.forEach(function (element) {
+                // Create the HTML Well (Section) and Add the table content for each reserved table
+                var txSection = $("<tr>");
+                txSection.addClass("well");
+                txSection.attr("id", "txWell-" + i + 1);
+                $("#txSection").append(txSection);
+                // Append the data values to the table row
+                $("#txWell-" + i + 1).append("<td>" + element.organizer + "</td>");
+                $("#txWell-" + i + 1).append("<td>" + element.trail + "</td>");
+                $("#txWell-" + i + 1).append("<td>" + element.date + "</td>");
+                $("#txWell-" + i + 1).append("<td>" + element.lake + "</td>");
+                $("#txWell-" + i + 1).append("<td>" + element.ramp + "</td>");
+                i++;
+    })
+}
+
 // Function to sort data by asc/desc
 var sort_by = function (field, reverse, primer) {
     var key = primer ?
@@ -120,6 +142,24 @@ var sort_by = function (field, reverse, primer) {
     }
 }
 
+function flattenData(data) {
+    flatBatch = [];
+    data.forEach(function (element) {
+        for (k = 0; k < element.trails.length; k++) {
+            for (l = 0; l < element.trails[k].tournaments.length; l++) {
+                // Push our data into a flat array for easier sort later
+                flatBatch.push({
+                organizer: element.organization,
+                trail: element.trails[k].trail,
+                date: element.trails[k].tournaments[l].date,
+                lake: element.trails[k].tournaments[l].lake,
+                ramp: element.trails[k].tournaments[l].ramp
+                })
+            }
+        }
+    })
+}
+
 
 // API call for tx data for Filtering Tournaments
 $.ajax({
@@ -129,6 +169,7 @@ $.ajax({
     .then(function (data) {
         txBatch = data;
         currentBatch = txBatch;
+        flattenData(txBatch);
         displayData(txBatch);
         populateFilter(data);
     });
@@ -145,50 +186,50 @@ $('#headerRow').on('click', 'th', function () {
         // If case is org, then run the sort function and create a newBatch, then display using the newBath
         // Change our sort boolean to keep track of asc/desc
         case "organization":
-            var newBatch = currentBatch.sort(sort_by('organizer', orgSort, function (a) {
+            var newBatch = flatBatch.sort(sort_by('organizer', orgSort, function (a) {
                 return a.toUpperCase()
             }));
-            displayData(newBatch);
+           displayFlatData(newBatch);
             orgSort ^= true;
             break;
 
         case "trail":
-            var newBatch = currentBatch.sort(sort_by('trail', trailSort, function (a) {
+            var newBatch = flatBatch.sort(sort_by('trail', trailSort, function (a) {
                 return a.toUpperCase()
             }));
-            displayData(newBatch);
+           displayFlatData(newBatch);
             trailSort ^= true;
             break;
 
         case "date":
-            var newBatch = currentBatch.sort(sort_by('date', dateSort, function (a) {
+            var newBatch = flatBatch.sort(sort_by('date', dateSort, function (a) {
                 return a.toUpperCase()
             }));
-            displayData(newBatch);
+           displayFlatData(newBatch);
             dateSort ^= true;
             break;
 
         case "location":
-            var newBatch = currentBatch.sort(sort_by('lake', locSort, function (a) {
+            var newBatch = flatBatch.sort(sort_by('lake', locSort, function (a) {
                 return a.toUpperCase()
             }));
-            displayData(newBatch);
+           displayFlatData(newBatch);
             locSort ^= true;
             break;
 
         case "ramp":
-            var newBatch = currentBatch.sort(sort_by('ramp', rampSort, function (a) {
+            var newBatch = flatBatch.sort(sort_by('ramp', rampSort, function (a) {
                 return a.toUpperCase()
             }));
-            displayData(newBatch);
+           displayFlatData(newBatch);
             rampSort ^= true;
             break;
 
         case "state":
-            var newBatch = currentBatch.sort(sort_by('state', stateSort, function (a) {
+            var newBatch = flatBatch.sort(sort_by('state', stateSort, function (a) {
                 return a.toUpperCase()
             }));
-            displayData(newBatch);
+           displayFlatData(newBatch);
             stateSort ^= true;
             break;
 
@@ -215,6 +256,7 @@ $("#clearSubmit").on("click", function (e) {
     $("#filterWrapper").toggle();
     filtered = false;
     filteredTags = [];
+    flattenData(txBatch);
 })
 
 // Define generic filter function
@@ -288,7 +330,6 @@ $("#newFilterSubmit").on("click", function (e) {
     filteredTags = [];
 })
 
-
 // Form submit capture
 $(".btn-filter").on("click", function (e) {
     e.preventDefault();
@@ -340,9 +381,11 @@ $(".btn-filter").on("click", function (e) {
             currentBatch.push(filteredBatch[i]);
         }
         displayData(currentBatch);
+        flattenData(currentBatch);
     } else {
         displayData(filteredBatch);
         currentBatch = filteredBatch;
+        flattenData(currentBatch);
         filtered = true;
     }
     // Reset the option field to the default (ex: "Select Org")
