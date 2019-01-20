@@ -1109,7 +1109,7 @@ module.exports = [
                         date: "19-01/12",
                         lake: "Okeechobee",
                         ramp: "Roland Martin",
-                        state: "Fl",
+                        state: "FL",
                         txDetail: "T1",
                         resultsLink: "undefined",
                         entryLink: ""
