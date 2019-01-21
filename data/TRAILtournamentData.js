@@ -58,263 +58,263 @@ module.exports = [
     {
         organization: "ABA",
         trails: [{
-            trail: "OS AL North",
-            tournaments: [
+                trail: "OS AL North",
+                tournaments: [
 
-                {
-                    date: "19-03/02",
-                    lake: "Guntersville",
-                    ramp: "Goosepond",
-                    state: "AL",
-                    txDetail: "T1",
-                    resultsLink: "undefined",
-                    entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=1&RegionName=R1"
-                },
-                {
-                    date: "19-04/13",
-                    lake: "Neely Henry",
-                    ramp: "Coosa",
-                    state: "AL",
-                    txDetail: "T2",
-                    resultsLink: "undefined",
-                    entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=1&RegionName=R1"
-                },
-                {
-                    date: "19-05/04",
-                    lake: "Guntersville",
-                    ramp: "Goosepond",
-                    state: "AL",
-                    txDetail: "T3",
-                    resultsLink: "undefined",
-                    entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=1&RegionName=R1"
-                },
-                {
-                    date: "19-06/22",
-                    lake: "Weiss",
-                    ramp: "Little River",
-                    state: "AL",
-                    txDetail: "T4",
-                    resultsLink: "undefined",
-                    entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=1&RegionName=R1"
-                },
-                {
-                    date: "19-09/07",
-                    lake: "Guntersville",
-                    ramp: "Goosepond",
-                    state: "AL",
-                    txDetail: "Championship",
-                    resultsLink: "undefined",
-                    entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=1&RegionName=R1"
-                }
-            ]
-        },
-        {
-            trail: "OS AL South",
-            tournaments: [
-
-                {
-                    date: "19-02/19",
-                    lake: "Eufaula",
-                    ramp: "Lakepoint",
-                    state: "AL",
-                    txDetail: "T1",
-                    resultsLink: "undefined",
-                    entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=2&RegionName=R3"
-                },
-                {
-                    date: "19-03/02",
-                    lake: "Lay Lake",
-                    ramp: "Beeswax",
-                    state: "AL",
-                    txDetail: "T2",
-                    resultsLink: "undefined",
-                    entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=2&RegionName=R3"
-                },
-                {
-                    date: "19-05/11",
-                    lake: "Eufaula",
-                    ramp: "Lakepoint",
-                    state: "AL",
-                    txDetail: "T3",
-                    resultsLink: "undefined",
-                    entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=2&RegionName=R3"
-                },
-                {
-                    date: "19-06/22",
-                    lake: "Logan Martin",
-                    ramp: "Lakeside Park",
-                    state: "AL",
-                    txDetail: "T4",
-                    resultsLink: "undefined",
-                    entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=2&RegionName=R3"
-                },
-                {
-                    date: "19-09/14",
-                    lake: "Logan Martin",
-                    ramp: "Lakeside Park",
-                    state: "AL",
-                    txDetail: "Championship",
-                    resultsLink: "undefined",
-                    entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=2&RegionName=R3"
-                }
-            ]
-        },
-        {
-            trail: "OS AK",
-            tournaments: [
-
-                {
-                    date: "19-03/09",
-                    lake: "Greers Ferry",
-                    ramp: "Devils Fork",
-                    state: "AS",
-                    txDetail: "T1",
-                    resultsLink: "undefined",
-                    entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=13&RegionName=R7"
-                },
-                {
-                    date: "19-04/27",
-                    lake: "Hamilton",
-                    ramp: "Fish Hatchery",
-                    state: "AS",
-                    txDetail: "T2",
-                    resultsLink: "undefined",
-                    entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=13&RegionName=R7"
-                },
-                {
-                    date: "19-05/11",
-                    lake: "Ouachita",
-                    ramp: "Mt Harbor",
-                    state: "AS",
-                    txDetail: "T3",
-                    resultsLink: "undefined",
-                    entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=13&RegionName=R7"
-                },
-                {
-                    date: "19-06/15",
-                    lake: "Pine Bluff",
-                    ramp: "Regional Park",
-                    state: "AS",
-                    txDetail: "T4",
-                    resultsLink: "undefined",
-                    entryLink: "ttps://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=13&RegionName=R7"
-                },
-                {
-                    date: "19-01/12",
-                    lake: "Dardenelle",
-                    ramp: "State Park",
-                    state: "AS",
-                    txDetail: "Championship",
-                    resultsLink: "undefined",
-                    entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=13&RegionName=R7"
-                }
-            ]
-        },
-        
-        {
-        trail: "OS FL Central",
-        tournaments: [
-
-            {
-                date: "19-01/12",
-                lake: "Toho",
-                ramp: "Lakefront",
-                state: "FL",
-                txDetail: "T1",
-                resultsLink: "undefined",
-                entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=6&RegionName=R5"
+                    {
+                        date: "19-03/02",
+                        lake: "Guntersville",
+                        ramp: "Goosepond",
+                        state: "AL",
+                        txDetail: "T1",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=1&RegionName=R1"
+                    },
+                    {
+                        date: "19-04/13",
+                        lake: "Neely Henry",
+                        ramp: "Coosa",
+                        state: "AL",
+                        txDetail: "T2",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=1&RegionName=R1"
+                    },
+                    {
+                        date: "19-05/04",
+                        lake: "Guntersville",
+                        ramp: "Goosepond",
+                        state: "AL",
+                        txDetail: "T3",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=1&RegionName=R1"
+                    },
+                    {
+                        date: "19-06/22",
+                        lake: "Weiss",
+                        ramp: "Little River",
+                        state: "AL",
+                        txDetail: "T4",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=1&RegionName=R1"
+                    },
+                    {
+                        date: "19-09/07",
+                        lake: "Guntersville",
+                        ramp: "Goosepond",
+                        state: "AL",
+                        txDetail: "Championship",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=1&RegionName=R1"
+                    }
+                ]
             },
             {
-                date: "19-02/23",
-                lake: "Kissimmee",
-                ramp: "Camp Mack",
-                state: "FL",
-                txDetail: "T2",
-                resultsLink: "undefined",
-                entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=6&RegionName=R5"
-            },
-            {
-                date: "19-04/13",
-                lake: "Harris Chain",
-                ramp: "Hickory Point",
-                state: "FL",
-                txDetail: "T3",
-                resultsLink: "undefined",
-                entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=6&RegionName=R5"
-            },
-            {
-                date: "19-06/08",
-                lake: "Kissimmee",
-                ramp: "Camp Mack",
-                state: "FL",
-                txDetail: "T4",
-                resultsLink: "undefined",
-                entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=6&RegionName=R5"
-            },
-            {
-                date: "19-09/28",
-                lake: "Okeechobee",
-                ramp: "Roland Martin",
-                state: "FL",
-                txDetail: "Championship",
-                resultsLink: "undefined",
-                entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=6&RegionName=R5"
-            }
-        ]
-    },
-        
-            {
-            trail: "OS FL South",
-            tournaments: [
+                trail: "OS AL South",
+                tournaments: [
 
-                {
-                    date: "19-01/19",
-                    lake: "Okeechobee",
-                    ramp: "Roland Martin",
-                    state: "FL",
-                    txDetail: "T1",
-                    resultsLink: "undefined",
-                    entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=7&RegionName=R5"
-                },
-                {
-                    date: "19-02/09",
-                    lake: "Okeechobee",
-                    ramp: "Scott Driver",
-                    state: "FL",
-                    txDetail: "T2",
-                    resultsLink: "undefined",
-                    entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=7&RegionName=R5"
-                },
-                {
-                    date: "19-03/23",
-                    lake: "Okeechobee",
-                    ramp: "Roland Martin",
-                    state: "FL",
-                    txDetail: "T3",
-                    resultsLink: "undefined",
-                    entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=7&RegionName=R5"
-                },
-                {
-                    date: "19-05/18",
-                    lake: "Okeechobee",
-                    ramp: "Scott Driver",
-                    state: "FL",
-                    txDetail: "T4",
-                    resultsLink: "undefined",
-                    entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=7&RegionName=R5"
-                },
-                {
-                    date: "19-09/28",
-                    lake: "Okeechobee",
-                    ramp: "Scott Driver",
-                    state: "FL",
-                    txDetail: "Championship",
-                    resultsLink: "undefined",
-                    entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=7&RegionName=R5"
-                }
-            ]
-        },
-        {
+                    {
+                        date: "19-02/19",
+                        lake: "Eufaula",
+                        ramp: "Lakepoint",
+                        state: "AL",
+                        txDetail: "T1",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=2&RegionName=R3"
+                    },
+                    {
+                        date: "19-03/02",
+                        lake: "Lay Lake",
+                        ramp: "Beeswax",
+                        state: "AL",
+                        txDetail: "T2",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=2&RegionName=R3"
+                    },
+                    {
+                        date: "19-05/11",
+                        lake: "Eufaula",
+                        ramp: "Lakepoint",
+                        state: "AL",
+                        txDetail: "T3",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=2&RegionName=R3"
+                    },
+                    {
+                        date: "19-06/22",
+                        lake: "Logan Martin",
+                        ramp: "Lakeside Park",
+                        state: "AL",
+                        txDetail: "T4",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=2&RegionName=R3"
+                    },
+                    {
+                        date: "19-09/14",
+                        lake: "Logan Martin",
+                        ramp: "Lakeside Park",
+                        state: "AL",
+                        txDetail: "Championship",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=2&RegionName=R3"
+                    }
+                ]
+            },
+            {
+                trail: "OS AK",
+                tournaments: [
+
+                    {
+                        date: "19-03/09",
+                        lake: "Greers Ferry",
+                        ramp: "Devils Fork",
+                        state: "AS",
+                        txDetail: "T1",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=13&RegionName=R7"
+                    },
+                    {
+                        date: "19-04/27",
+                        lake: "Hamilton",
+                        ramp: "Fish Hatchery",
+                        state: "AS",
+                        txDetail: "T2",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=13&RegionName=R7"
+                    },
+                    {
+                        date: "19-05/11",
+                        lake: "Ouachita",
+                        ramp: "Mt Harbor",
+                        state: "AS",
+                        txDetail: "T3",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=13&RegionName=R7"
+                    },
+                    {
+                        date: "19-06/15",
+                        lake: "Pine Bluff",
+                        ramp: "Regional Park",
+                        state: "AS",
+                        txDetail: "T4",
+                        resultsLink: "undefined",
+                        entryLink: "ttps://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=13&RegionName=R7"
+                    },
+                    {
+                        date: "19-01/12",
+                        lake: "Dardenelle",
+                        ramp: "State Park",
+                        state: "AS",
+                        txDetail: "Championship",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=13&RegionName=R7"
+                    }
+                ]
+            },
+
+            {
+                trail: "OS FL Central",
+                tournaments: [
+
+                    {
+                        date: "19-01/12",
+                        lake: "Toho",
+                        ramp: "Lakefront",
+                        state: "FL",
+                        txDetail: "T1",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=6&RegionName=R5"
+                    },
+                    {
+                        date: "19-02/23",
+                        lake: "Kissimmee",
+                        ramp: "Camp Mack",
+                        state: "FL",
+                        txDetail: "T2",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=6&RegionName=R5"
+                    },
+                    {
+                        date: "19-04/13",
+                        lake: "Harris Chain",
+                        ramp: "Hickory Point",
+                        state: "FL",
+                        txDetail: "T3",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=6&RegionName=R5"
+                    },
+                    {
+                        date: "19-06/08",
+                        lake: "Kissimmee",
+                        ramp: "Camp Mack",
+                        state: "FL",
+                        txDetail: "T4",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=6&RegionName=R5"
+                    },
+                    {
+                        date: "19-09/28",
+                        lake: "Okeechobee",
+                        ramp: "Roland Martin",
+                        state: "FL",
+                        txDetail: "Championship",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=6&RegionName=R5"
+                    }
+                ]
+            },
+
+            {
+                trail: "OS FL South",
+                tournaments: [
+
+                    {
+                        date: "19-01/19",
+                        lake: "Okeechobee",
+                        ramp: "Roland Martin",
+                        state: "FL",
+                        txDetail: "T1",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=7&RegionName=R5"
+                    },
+                    {
+                        date: "19-02/09",
+                        lake: "Okeechobee",
+                        ramp: "Scott Driver",
+                        state: "FL",
+                        txDetail: "T2",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=7&RegionName=R5"
+                    },
+                    {
+                        date: "19-03/23",
+                        lake: "Okeechobee",
+                        ramp: "Roland Martin",
+                        state: "FL",
+                        txDetail: "T3",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=7&RegionName=R5"
+                    },
+                    {
+                        date: "19-05/18",
+                        lake: "Okeechobee",
+                        ramp: "Scott Driver",
+                        state: "FL",
+                        txDetail: "T4",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=7&RegionName=R5"
+                    },
+                    {
+                        date: "19-09/28",
+                        lake: "Okeechobee",
+                        ramp: "Scott Driver",
+                        state: "FL",
+                        txDetail: "Championship",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=7&RegionName=R5"
+                    }
+                ]
+            },
+            {
                 trail: "OS GA",
                 tournaments: [
 
@@ -364,58 +364,58 @@ module.exports = [
                         entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=8&RegionName=R4"
                     }
                 ]
-            }, 
+            },
             {
-                    trail: "OS KY",
-                    tournaments: [
-    
-                        {
-                            date: "19-03/16",
-                            lake: "Kentucky",
-                            ramp: "KY Dam",
-                            state: "KY",
-                            txDetail: "T1",
-                            resultsLink: "undefined",
-                            entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=15&RegionName=R2"
-                        },
-                        {
-                            date: "19-04/20",
-                            lake: "Barkley",
-                            ramp: "Kuttawa",
-                            state: "KY",
-                            txDetail: "T2",
-                            resultsLink: "undefined",
-                            entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=15&RegionName=R2"
-                        },
-                        {
-                            date: "19-06/08",
-                            lake: "Barkley",
-                            ramp: "Barkley SP",
-                            state: "KY",
-                            txDetail: "T3",
-                            resultsLink: "undefined",
-                            entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=15&RegionName=R2"
-                        },
-                        {
-                            date: "19-06/29",
-                            lake: "Ketucky",
-                            ramp: "KY Dam",
-                            state: "KY",
-                            txDetail: "T4",
-                            resultsLink: "undefined",
-                            entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=15&RegionName=R2"
-                        },
-                        {
-                            date: "19-09/28",
-                            lake: "Kentucky",
-                            ramp: "Paris",
-                            state: "KY",
-                            txDetail: "Championship",
-                            resultsLink: "undefined",
-                            entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=15&RegionName=R2"
-                        }
-                    ]
-                }, 
+                trail: "OS KY",
+                tournaments: [
+
+                    {
+                        date: "19-03/16",
+                        lake: "Kentucky",
+                        ramp: "KY Dam",
+                        state: "KY",
+                        txDetail: "T1",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=15&RegionName=R2"
+                    },
+                    {
+                        date: "19-04/20",
+                        lake: "Barkley",
+                        ramp: "Kuttawa",
+                        state: "KY",
+                        txDetail: "T2",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=15&RegionName=R2"
+                    },
+                    {
+                        date: "19-06/08",
+                        lake: "Barkley",
+                        ramp: "Barkley SP",
+                        state: "KY",
+                        txDetail: "T3",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=15&RegionName=R2"
+                    },
+                    {
+                        date: "19-06/29",
+                        lake: "Ketucky",
+                        ramp: "KY Dam",
+                        state: "KY",
+                        txDetail: "T4",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=15&RegionName=R2"
+                    },
+                    {
+                        date: "19-09/28",
+                        lake: "Kentucky",
+                        ramp: "Paris",
+                        state: "KY",
+                        txDetail: "Championship",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=15&RegionName=R2"
+                    }
+                ]
+            },
             {
                 trail: "OS MD",
                 tournaments: [
