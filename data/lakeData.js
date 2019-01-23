@@ -629,7 +629,7 @@ module.exports = [
         state: "Florida",
         lakes: [
 
-            {
+            /*{
                 bodyOfWater: "Hatchineha", // lake name
                 data: [
 
@@ -652,7 +652,7 @@ module.exports = [
                 entryLink: "",
                 adLogoSrc: "",
                 adLogoUrl: ""
-            },
+            },*/
             {
                 bodyOfWater: "Istokpoga", // lake name
                 data: [
@@ -678,7 +678,7 @@ module.exports = [
                 adLogoUrl: ""
             },
 
-            {
+            /*{
                 bodyOfWater: "Kissimmee", // lake name
                 data: [
 
@@ -701,7 +701,7 @@ module.exports = [
                 entryLink: "",
                 adLogoSrc: "",
                 adLogoUrl: ""
-            },
+            },*/
             {
                 bodyOfWater: "Minnehaha", // lake name
                 data: [
@@ -2298,7 +2298,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 682.0,
-                elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/GUH_O.xml?1545499372503",
+                elevURL: " http://r7j8v4x4.map2.ssl.hwcdn.net/CHH_O.xml?1548263632238",
                 flowURL: "none",
                 href: "/lakes/chickamauga",
                 dataSource: ["TVA"], // array of calls to make to retrieve data
