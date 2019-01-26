@@ -58,263 +58,263 @@ module.exports = [
     {
         organization: "ABA",
         trails: [{
-            trail: "OS AL North",
-            tournaments: [
+                trail: "OS AL North",
+                tournaments: [
 
-                {
-                    date: "19-03/02",
-                    lake: "Guntersville",
-                    ramp: "Goosepond",
-                    state: "AL",
-                    txDetail: "T1",
-                    resultsLink: "undefined",
-                    entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=1&RegionName=R1"
-                },
-                {
-                    date: "19-04/13",
-                    lake: "Neely Henry",
-                    ramp: "Coosa",
-                    state: "AL",
-                    txDetail: "T2",
-                    resultsLink: "undefined",
-                    entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=1&RegionName=R1"
-                },
-                {
-                    date: "19-05/04",
-                    lake: "Guntersville",
-                    ramp: "Goosepond",
-                    state: "AL",
-                    txDetail: "T3",
-                    resultsLink: "undefined",
-                    entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=1&RegionName=R1"
-                },
-                {
-                    date: "19-06/22",
-                    lake: "Weiss",
-                    ramp: "Little River",
-                    state: "AL",
-                    txDetail: "T4",
-                    resultsLink: "undefined",
-                    entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=1&RegionName=R1"
-                },
-                {
-                    date: "19-09/07",
-                    lake: "Guntersville",
-                    ramp: "Goosepond",
-                    state: "AL",
-                    txDetail: "Championship",
-                    resultsLink: "undefined",
-                    entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=1&RegionName=R1"
-                }
-            ]
-        },
-        {
-            trail: "OS AL South",
-            tournaments: [
-
-                {
-                    date: "19-02/19",
-                    lake: "Eufaula",
-                    ramp: "Lakepoint",
-                    state: "AL",
-                    txDetail: "T1",
-                    resultsLink: "undefined",
-                    entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=2&RegionName=R3"
-                },
-                {
-                    date: "19-03/02",
-                    lake: "Lay Lake",
-                    ramp: "Beeswax",
-                    state: "AL",
-                    txDetail: "T2",
-                    resultsLink: "undefined",
-                    entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=2&RegionName=R3"
-                },
-                {
-                    date: "19-05/11",
-                    lake: "Eufaula",
-                    ramp: "Lakepoint",
-                    state: "AL",
-                    txDetail: "T3",
-                    resultsLink: "undefined",
-                    entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=2&RegionName=R3"
-                },
-                {
-                    date: "19-06/22",
-                    lake: "Logan Martin",
-                    ramp: "Lakeside Park",
-                    state: "AL",
-                    txDetail: "T4",
-                    resultsLink: "undefined",
-                    entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=2&RegionName=R3"
-                },
-                {
-                    date: "19-09/14",
-                    lake: "Logan Martin",
-                    ramp: "Lakeside Park",
-                    state: "AL",
-                    txDetail: "Championship",
-                    resultsLink: "undefined",
-                    entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=2&RegionName=R3"
-                }
-            ]
-        },
-        {
-            trail: "OS AK",
-            tournaments: [
-
-                {
-                    date: "19-03/09",
-                    lake: "Greers Ferry",
-                    ramp: "Devils Fork",
-                    state: "AS",
-                    txDetail: "T1",
-                    resultsLink: "undefined",
-                    entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=13&RegionName=R7"
-                },
-                {
-                    date: "19-04/27",
-                    lake: "Hamilton",
-                    ramp: "Fish Hatchery",
-                    state: "AS",
-                    txDetail: "T2",
-                    resultsLink: "undefined",
-                    entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=13&RegionName=R7"
-                },
-                {
-                    date: "19-05/11",
-                    lake: "Ouachita",
-                    ramp: "Mt Harbor",
-                    state: "AS",
-                    txDetail: "T3",
-                    resultsLink: "undefined",
-                    entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=13&RegionName=R7"
-                },
-                {
-                    date: "19-06/15",
-                    lake: "Pine Bluff",
-                    ramp: "Regional Park",
-                    state: "AS",
-                    txDetail: "T4",
-                    resultsLink: "undefined",
-                    entryLink: "ttps://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=13&RegionName=R7"
-                },
-                {
-                    date: "19-01/12",
-                    lake: "Dardenelle",
-                    ramp: "State Park",
-                    state: "AS",
-                    txDetail: "Championship",
-                    resultsLink: "undefined",
-                    entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=13&RegionName=R7"
-                }
-            ]
-        },
-        
-        {
-        trail: "OS FL Central",
-        tournaments: [
-
-            {
-                date: "19-01/12",
-                lake: "Toho",
-                ramp: "Lakefront",
-                state: "FL",
-                txDetail: "T1",
-                resultsLink: "undefined",
-                entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=6&RegionName=R5"
+                    {
+                        date: "19-03/02",
+                        lake: "Guntersville",
+                        ramp: "Goosepond",
+                        state: "AL",
+                        txDetail: "T1",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=1&RegionName=R1"
+                    },
+                    {
+                        date: "19-04/13",
+                        lake: "Neely Henry",
+                        ramp: "Coosa",
+                        state: "AL",
+                        txDetail: "T2",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=1&RegionName=R1"
+                    },
+                    {
+                        date: "19-05/04",
+                        lake: "Guntersville",
+                        ramp: "Goosepond",
+                        state: "AL",
+                        txDetail: "T3",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=1&RegionName=R1"
+                    },
+                    {
+                        date: "19-06/22",
+                        lake: "Weiss",
+                        ramp: "Little Rvr",
+                        state: "AL",
+                        txDetail: "T4",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=1&RegionName=R1"
+                    },
+                    {
+                        date: "19-09/07",
+                        lake: "Guntersville",
+                        ramp: "Goosepond",
+                        state: "AL",
+                        txDetail: "Championship",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=1&RegionName=R1"
+                    }
+                ]
             },
             {
-                date: "19-02/23",
-                lake: "Kissimmee",
-                ramp: "Camp Mack",
-                state: "FL",
-                txDetail: "T2",
-                resultsLink: "undefined",
-                entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=6&RegionName=R5"
-            },
-            {
-                date: "19-04/13",
-                lake: "Harris Chain",
-                ramp: "Hickory Point",
-                state: "FL",
-                txDetail: "T3",
-                resultsLink: "undefined",
-                entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=6&RegionName=R5"
-            },
-            {
-                date: "19-06/08",
-                lake: "Kissimmee",
-                ramp: "Camp Mack",
-                state: "FL",
-                txDetail: "T4",
-                resultsLink: "undefined",
-                entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=6&RegionName=R5"
-            },
-            {
-                date: "19-09/28",
-                lake: "Okeechobee",
-                ramp: "Roland Martin",
-                state: "FL",
-                txDetail: "Championship",
-                resultsLink: "undefined",
-                entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=6&RegionName=R5"
-            }
-        ]
-    },
-        
-            {
-            trail: "OS FL South",
-            tournaments: [
+                trail: "OS AL South",
+                tournaments: [
 
-                {
-                    date: "19-01/19",
-                    lake: "Okeechobee",
-                    ramp: "Roland Martin",
-                    state: "FL",
-                    txDetail: "T1",
-                    resultsLink: "undefined",
-                    entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=7&RegionName=R5"
-                },
-                {
-                    date: "19-02/09",
-                    lake: "Okeechobee",
-                    ramp: "Scott Driver",
-                    state: "FL",
-                    txDetail: "T2",
-                    resultsLink: "undefined",
-                    entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=7&RegionName=R5"
-                },
-                {
-                    date: "19-03/23",
-                    lake: "Okeechobee",
-                    ramp: "Roland Martin",
-                    state: "FL",
-                    txDetail: "T3",
-                    resultsLink: "undefined",
-                    entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=7&RegionName=R5"
-                },
-                {
-                    date: "19-05/18",
-                    lake: "Okeechobee",
-                    ramp: "Scott Driver",
-                    state: "FL",
-                    txDetail: "T4",
-                    resultsLink: "undefined",
-                    entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=7&RegionName=R5"
-                },
-                {
-                    date: "19-09/28",
-                    lake: "Okeechobee",
-                    ramp: "Scott Driver",
-                    state: "FL",
-                    txDetail: "Championship",
-                    resultsLink: "undefined",
-                    entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=7&RegionName=R5"
-                }
-            ]
-        },
-        {
+                    {
+                        date: "19-02/19",
+                        lake: "Eufaula",
+                        ramp: "Lakepoint",
+                        state: "AL",
+                        txDetail: "T1",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=2&RegionName=R3"
+                    },
+                    {
+                        date: "19-03/02",
+                        lake: "Lay Lake",
+                        ramp: "Beeswax",
+                        state: "AL",
+                        txDetail: "T2",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=2&RegionName=R3"
+                    },
+                    {
+                        date: "19-05/11",
+                        lake: "Eufaula",
+                        ramp: "Lakepoint",
+                        state: "AL",
+                        txDetail: "T3",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=2&RegionName=R3"
+                    },
+                    {
+                        date: "19-06/22",
+                        lake: "Logan Martin",
+                        ramp: "Lakeside Park",
+                        state: "AL",
+                        txDetail: "T4",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=2&RegionName=R3"
+                    },
+                    {
+                        date: "19-09/14",
+                        lake: "Logan Martin",
+                        ramp: "Lakeside Park",
+                        state: "AL",
+                        txDetail: "Championship",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=2&RegionName=R3"
+                    }
+                ]
+            },
+            {
+                trail: "OS AK",
+                tournaments: [
+
+                    {
+                        date: "19-03/09",
+                        lake: "Greers Ferry",
+                        ramp: "Devils Fork",
+                        state: "AS",
+                        txDetail: "T1",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=13&RegionName=R7"
+                    },
+                    {
+                        date: "19-04/27",
+                        lake: "Hamilton",
+                        ramp: "Fish Hatchery",
+                        state: "AS",
+                        txDetail: "T2",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=13&RegionName=R7"
+                    },
+                    {
+                        date: "19-05/11",
+                        lake: "Ouachita",
+                        ramp: "Mt Harbor",
+                        state: "AS",
+                        txDetail: "T3",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=13&RegionName=R7"
+                    },
+                    {
+                        date: "19-06/15",
+                        lake: "Pine Bluff",
+                        ramp: "Regional Park",
+                        state: "AS",
+                        txDetail: "T4",
+                        resultsLink: "undefined",
+                        entryLink: "ttps://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=13&RegionName=R7"
+                    },
+                    {
+                        date: "19-01/12",
+                        lake: "Dardenelle",
+                        ramp: "State Park",
+                        state: "AS",
+                        txDetail: "Championship",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=13&RegionName=R7"
+                    }
+                ]
+            },
+
+            {
+                trail: "OS FL Central",
+                tournaments: [
+
+                    {
+                        date: "19-01/12",
+                        lake: "Toho",
+                        ramp: "Lakefront",
+                        state: "FL",
+                        txDetail: "T1",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=6&RegionName=R5"
+                    },
+                    {
+                        date: "19-02/23",
+                        lake: "Kissimmee",
+                        ramp: "Camp Mack",
+                        state: "FL",
+                        txDetail: "T2",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=6&RegionName=R5"
+                    },
+                    {
+                        date: "19-04/13",
+                        lake: "Harris Chain",
+                        ramp: "Hickory Point",
+                        state: "FL",
+                        txDetail: "T3",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=6&RegionName=R5"
+                    },
+                    {
+                        date: "19-06/08",
+                        lake: "Kissimmee",
+                        ramp: "Camp Mack",
+                        state: "FL",
+                        txDetail: "T4",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=6&RegionName=R5"
+                    },
+                    {
+                        date: "19-09/28",
+                        lake: "Okeechobee",
+                        ramp: "Roland Martin",
+                        state: "FL",
+                        txDetail: "Championship",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=6&RegionName=R5"
+                    }
+                ]
+            },
+
+            {
+                trail: "OS FL South",
+                tournaments: [
+
+                    {
+                        date: "19-01/19",
+                        lake: "Okeechobee",
+                        ramp: "Roland Martin",
+                        state: "FL",
+                        txDetail: "T1",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=7&RegionName=R5"
+                    },
+                    {
+                        date: "19-02/09",
+                        lake: "Okeechobee",
+                        ramp: "Scott Driver",
+                        state: "FL",
+                        txDetail: "T2",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=7&RegionName=R5"
+                    },
+                    {
+                        date: "19-03/23",
+                        lake: "Okeechobee",
+                        ramp: "Roland Martin",
+                        state: "FL",
+                        txDetail: "T3",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=7&RegionName=R5"
+                    },
+                    {
+                        date: "19-05/18",
+                        lake: "Okeechobee",
+                        ramp: "Scott Driver",
+                        state: "FL",
+                        txDetail: "T4",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=7&RegionName=R5"
+                    },
+                    {
+                        date: "19-09/28",
+                        lake: "Okeechobee",
+                        ramp: "Scott Driver",
+                        state: "FL",
+                        txDetail: "Championship",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=7&RegionName=R5"
+                    }
+                ]
+            },
+            {
                 trail: "OS GA",
                 tournaments: [
 
@@ -364,58 +364,58 @@ module.exports = [
                         entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=8&RegionName=R4"
                     }
                 ]
-            }, 
+            },
             {
-                    trail: "OS KY",
-                    tournaments: [
-    
-                        {
-                            date: "19-03/16",
-                            lake: "Kentucky",
-                            ramp: "KY Dam",
-                            state: "KY",
-                            txDetail: "T1",
-                            resultsLink: "undefined",
-                            entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=15&RegionName=R2"
-                        },
-                        {
-                            date: "19-04/20",
-                            lake: "Barkley",
-                            ramp: "Kuttawa",
-                            state: "KY",
-                            txDetail: "T2",
-                            resultsLink: "undefined",
-                            entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=15&RegionName=R2"
-                        },
-                        {
-                            date: "19-06/08",
-                            lake: "Barkley",
-                            ramp: "Barkley SP",
-                            state: "KY",
-                            txDetail: "T3",
-                            resultsLink: "undefined",
-                            entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=15&RegionName=R2"
-                        },
-                        {
-                            date: "19-06/29",
-                            lake: "Ketucky",
-                            ramp: "KY Dam",
-                            state: "KY",
-                            txDetail: "T4",
-                            resultsLink: "undefined",
-                            entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=15&RegionName=R2"
-                        },
-                        {
-                            date: "19-09/28",
-                            lake: "Kentucky",
-                            ramp: "Paris",
-                            state: "KY",
-                            txDetail: "Championship",
-                            resultsLink: "undefined",
-                            entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=15&RegionName=R2"
-                        }
-                    ]
-                }, 
+                trail: "OS KY",
+                tournaments: [
+
+                    {
+                        date: "19-03/16",
+                        lake: "Kentucky",
+                        ramp: "KY Dam",
+                        state: "KY",
+                        txDetail: "T1",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=15&RegionName=R2"
+                    },
+                    {
+                        date: "19-04/20",
+                        lake: "Barkley",
+                        ramp: "Kuttawa",
+                        state: "KY",
+                        txDetail: "T2",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=15&RegionName=R2"
+                    },
+                    {
+                        date: "19-06/08",
+                        lake: "Barkley",
+                        ramp: "Barkley SP",
+                        state: "KY",
+                        txDetail: "T3",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=15&RegionName=R2"
+                    },
+                    {
+                        date: "19-06/29",
+                        lake: "Ketucky",
+                        ramp: "KY Dam",
+                        state: "KY",
+                        txDetail: "T4",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=15&RegionName=R2"
+                    },
+                    {
+                        date: "19-09/28",
+                        lake: "Kentucky",
+                        ramp: "Paris",
+                        state: "KY",
+                        txDetail: "Championship",
+                        resultsLink: "undefined",
+                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=15&RegionName=R2"
+                    }
+                ]
+            },
             {
                 trail: "OS MD",
                 tournaments: [
@@ -449,7 +449,7 @@ module.exports = [
                     },
                     {
                         date: "19-06/01",
-                        lake: "CHesapeak",
+                        lake: "Chesapeak",
                         ramp: "Anchor Boats",
                         state: "MD",
                         txDetail: "T4",
@@ -458,7 +458,7 @@ module.exports = [
                     },
                     {
                         date: "19-09/28",
-                        lake: "Hudson River",
+                        lake: "Hudson Rvr",
                         ramp: "Catskill",
                         state: "MD",
                         txDetail: "Championship",
@@ -611,7 +611,7 @@ module.exports = [
                     },
                     {
                         date: "19-09/28",
-                        lake: "Hudson River",
+                        lake: "Hudson Rvr",
                         ramp: "Catskill",
                         state: "NY",
                         txDetail: "Championship",
@@ -1294,7 +1294,180 @@ module.exports = [
                 ]
             }
         ]
-    }, {
+    },
+    {
+        organization: "BassChamps",
+        trails: [{
+                trail: "Central",
+                tournaments: [
+
+                    {
+                        date: "19-02/09",
+                        lake: "Travis",
+                        ramp: "Pace Bend",
+                        state: "TX",
+                        txDetail: "T1",
+                        resultsLink: "undefined",
+                        entryLink: ""
+                    },
+                    {
+                        date: "19-03/23",
+                        lake: "Travis",
+                        ramp: "Pace Bend",
+                        state: "TX",
+                        txDetail: "T2",
+                        resultsLink: "undefined",
+                        entryLink: ""
+                    },
+                    {
+                        date: "19-04/13",
+                        lake: "Belton",
+                        ramp: "Temple Park",
+                        state: "TX",
+                        txDetail: "T3",
+                        resultsLink: "undefined",
+                        entryLink: ""
+                    },
+                    {
+                        date: "19-05/11",
+                        lake: "LBJ",
+                        ramp: "LBJ Yacht",
+                        state: "TX",
+                        txDetail: "T4",
+                        resultsLink: "undefined",
+                        entryLink: ""
+                    }
+                ]
+            },
+            {
+                trail: "East",
+                tournaments: [
+
+                    {
+                        date: "19-02/16",
+                        lake: "Toledo Bend",
+                        ramp: "Cypress Bend",
+                        state: "TX",
+                        txDetail: "T2",
+                        resultsLink: "undefined",
+                        entryLink: ""
+                    },
+                    {
+                        date: "19-03/09",
+                        lake: "Rayburn",
+                        ramp: "Umphrey",
+                        state: "TX",
+                        txDetail: "T3",
+                        resultsLink: "undefined",
+                        entryLink: ""
+                    },
+                    {
+                        date: "19-04/06",
+                        lake: "Rayburn",
+                        ramp: "Umphrey",
+                        state: "TX",
+                        txDetail: "T4",
+                        resultsLink: "undefined",
+                        entryLink: ""
+                    },
+                    {
+                        date: "19-07/13",
+                        lake: "Rayburn",
+                        ramp: "Umphrey",
+                        state: "TX",
+                        txDetail: "T1",
+                        resultsLink: "undefined",
+                        entryLink: ""
+                    }
+                ]
+            },
+            {
+                trail: "North",
+                tournaments: [
+
+                    {
+                        date: "19-03/02",
+                        lake: "Fork",
+                        ramp: "Fork Lake Marina",
+                        state: "TX",
+                        txDetail: "T1",
+                        resultsLink: "undefined",
+                        entryLink: ""
+                    },
+                    {
+                        date: "19-04/27",
+                        lake: "Cedar Creek",
+                        ramp: "Log Cabin",
+                        state: "TX",
+                        txDetail: "T2",
+                        resultsLink: "undefined",
+                        entryLink: ""
+                    },
+                    {
+                        date: "19-05/18",
+                        lake: "Mayo",
+                        ramp: "Tawakoni",
+                        state: "TX",
+                        txDetail: "T3",
+                        resultsLink: "undefined",
+                        entryLink: ""
+                    },
+                    {
+                        date: "19-06/15",
+                        lake: "Ray Roberts",
+                        ramp: "Ray Roberts Marina",
+                        state: "TX",
+                        txDetail: "T4",
+                        resultsLink: "undefined",
+                        entryLink: ""
+                    }
+                ]
+            },
+            {
+                trail: "South",
+                tournaments: [
+
+                    {
+                        date: "19-02/23",
+                        lake: "Falcon",
+                        ramp: "Zapata Co",
+                        state: "TX",
+                        txDetail: "T1",
+                        resultsLink: "undefined",
+                        entryLink: ""
+                    },
+                    {
+                        date: "19-03/30",
+                        lake: "Amistad",
+                        ramp: "Diablo East",
+                        state: "TX",
+                        txDetail: "T2",
+                        resultsLink: "undefined",
+                        entryLink: ""
+                    },
+                    {
+                        date: "19-05/04",
+                        lake: "Amistad",
+                        ramp: "Diablo East",
+                        state: "TX",
+                        txDetail: "T3",
+                        resultsLink: "undefined",
+                        entryLink: ""
+                    },
+                    {
+                        date: "19-06/01",
+                        lake: "Amistad",
+                        ramp: "Diablo East",
+                        state: "TX",
+                        txDetail: "T4",
+                        resultsLink: "undefined",
+                        entryLink: ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
         organization: "Bojangles",
         trails: [{
             trail: "Wow",
@@ -1320,7 +1493,7 @@ module.exports = [
                 },
                 {
                     date: "19-04/27",
-                    lake: "Chowan River",
+                    lake: "Chowan Rvr",
                     ramp: "Edenton",
                     state: "NC",
                     txDetail: "",
@@ -1338,7 +1511,7 @@ module.exports = [
                 },
                 {
                     date: "19-06/15",
-                    lake: "Roanoke River",
+                    lake: "Roanoke Rvr",
                     ramp: "Plymouth",
                     state: "NC",
                     txDetail: "",
@@ -1356,7 +1529,7 @@ module.exports = [
                 },
                 {
                     date: "19-08/17",
-                    lake: "Roanoke River",
+                    lake: "Roanoke Rvr",
                     ramp: "Plymouth",
                     state: "NC",
                     txDetail: "",
@@ -1379,6 +1552,36 @@ module.exports = [
         organization: "CATT",
         trails: [
 
+
+            {
+                trail: "NC/SC Championship (2-Day)",
+                tournaments: [
+
+                    {
+                        date: "19-06/01",
+                        lake: "Kerr",
+                        ramp: "Nutbush",
+                        state: "NC",
+                        txDetail: "CATT Championship",
+                        resultsLink: "undefined",
+                        entryLink: ""
+                    }
+                ]
+            },{
+                trail: "Phantom Outdoors Invitational",
+                tournaments: [
+
+                    {
+                        date: "19-07/27",
+                        lake: "Waccamaw River",
+                        ramp: "Bucksport",
+                        state: "SC",
+                        txDetail: "Phantom Outdoors",
+                        resultsLink: "undefined",
+                        entryLink: ""
+                    }
+                ]
+            },
             {
                 trail: "Clarks Hill",
                 tournaments: [
@@ -1548,7 +1751,7 @@ module.exports = [
                     {
                         date: "19-03/23",
                         lake: "Albemarle",
-                        ramp: "Lighthouse Landing",
+                        ramp: "Lighthouse",
                         state: "NC",
                         txDetail: "Gold 1",
                         resultsLink: "undefined",
@@ -1557,7 +1760,7 @@ module.exports = [
                     {
                         date: "19-04/13",
                         lake: "Albemarle",
-                        ramp: "Lighthouse Landing",
+                        ramp: "Lighthouse",
                         state: "NC",
                         txDetail: "Gold 2",
                         resultsLink: "undefined",
@@ -1566,7 +1769,7 @@ module.exports = [
                     {
                         date: "19-05/11",
                         lake: "Albemarle",
-                        ramp: "Lighthouse Landing",
+                        ramp: "Lighthouse",
                         state: "NC",
                         txDetail: "Gold 3",
                         resultsLink: "undefined",
@@ -1614,6 +1817,66 @@ module.exports = [
                         ramp: "Lighthouse",
                         state: "NC",
                         txDetail: "Final",
+                        resultsLink: "undefined",
+                        entryLink: ""
+                    }
+                ]
+            },
+            {
+                trail: "Gaston",
+                tournaments: [
+
+                    {
+                        date: "19-03/24",
+                        lake: "Gaston",
+                        ramp: "Summit",
+                        state: "NC",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "undefined",
+                        entryLink: ""
+                    },
+                    {
+                        date: "19-05/05",
+                        lake: "Gaston",
+                        ramp: "Summit",
+                        state: "NC",
+                        txDetail: "Qualifier 2",
+                        resultsLink: "undefined",
+                        entryLink: ""
+                    },
+                    {
+                        date: "19-06/30",
+                        lake: "Gaston",
+                        ramp: "Summit",
+                        state: "NC",
+                        txDetail: "Qualifier 3",
+                        resultsLink: "undefined",
+                        entryLink: ""
+                    },
+                    {
+                        date: "19-08/03",
+                        lake: "Gaston",
+                        ramp: "Summit",
+                        state: "NC",
+                        txDetail: "Qualifier 4",
+                        resultsLink: "undefined",
+                        entryLink: ""
+                    },
+                    {
+                        date: "19-09/21",
+                        lake: "Gaston",
+                        ramp: "Summit ",
+                        state: "NC",
+                        txDetail: "Qualifier 5",
+                        resultsLink: "undefined",
+                        entryLink: ""
+                    },
+                    {
+                        date: "19-011/02",
+                        lake: "Gaston",
+                        state: "NC",
+                        ramp: "Summit",
+                        txDetail: "2 Day Final",
                         resultsLink: "undefined",
                         entryLink: ""
                     }
@@ -1809,7 +2072,7 @@ module.exports = [
                     },
                     {
                         date: "19-09/14",
-                        lake: "James River",
+                        lake: "James Rvr",
                         ramp: "Riverfront",
                         state: "VA",
                         txDetail: "Gold",
@@ -2201,6 +2464,48 @@ module.exports = [
                 ]
             },
             {
+                trail: "Smith Mountain",
+                tournaments: [
+
+                    {
+                        date: "19-02/10",
+                        lake: "SML",
+                        ramp: "Parkway",
+                        state: "VA",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "undefined",
+                        entryLink: ""
+                    },
+                    {
+                        date: "19-03/03",
+                        lake: "SML",
+                        ramp: "Parkway",
+                        state: "VA",
+                        txDetail: "Qualifier 2",
+                        resultsLink: "undefined",
+                        entryLink: ""
+                    },
+                    {
+                        date: "19-03/31",
+                        lake: "SML",
+                        ramp: "Parkway",
+                        state: "VA",
+                        txDetail: "Qualifier 3",
+                        resultsLink: "undefined",
+                        entryLink: ""
+                    },
+                    {
+                        date: "19-05/12",
+                        lake: "SML",
+                        ramp: "Parkway",
+                        state: "VA",
+                        txDetail: "Final",
+                        resultsLink: "undefined",
+                        entryLink: ""
+                    }
+                ]
+            },
+            {
                 trail: "Sparkleberry",
                 tournaments: [
 
@@ -2245,6 +2550,66 @@ module.exports = [
                         lake: "Swamp",
                         ramp: "Packs",
                         state: "SC",
+                        txDetail: "Final",
+                        resultsLink: "undefined",
+                        entryLink: ""
+                    }
+                ]
+            },
+            {
+                trail: "Tidewater",
+                tournaments: [
+
+                    {
+                        date: "19-04/17",
+                        lake: "Pasquotank",
+                        ramp: "Waterfront",
+                        state: "NC",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "undefined",
+                        entryLink: ""
+                    },
+                    {
+                        date: "19-03/30",
+                        lake: "Nottoway",
+                        ramp: "258 Ramp",
+                        state: "NC",
+                        txDetail: "Qualifier 2",
+                        resultsLink: "undefined",
+                        entryLink: ""
+                    },
+                    {
+                        date: "19-04/14",
+                        lake: "Chowan",
+                        ramp: "Shoups",
+                        state: "NC",
+                        txDetail: "Qualifier 3",
+                        resultsLink: "undefined",
+                        entryLink: ""
+                    },
+                    {
+                        date: "19-04/27",
+                        lake: "North Rvr",
+                        ramp: "Pungo Ferry",
+                        state: "NC",
+                        txDetail: "Qualifier 4",
+                        resultsLink: "undefined",
+                        entryLink: ""
+                    },
+                    {
+                        date: "19-05/11",
+                        lake: "North Rvr",
+                        ramp: "Waterlilly",
+                        state: "NC",
+                        txDetail: "Qualifier 5",
+                        resultsLink: "undefined",
+                        entryLink: ""
+                    },
+                    {
+                        date: "19-05/26",
+                        lake: "Pasquotank",
+                        ramp: "Waterfront",
+                        state: "NC",
                         txDetail: "Final",
                         resultsLink: "undefined",
                         entryLink: ""
@@ -2922,7 +3287,7 @@ module.exports = [
 
                     {
                         date: "19-05/30",
-                        lake: "Potomac River",
+                        lake: "Potomac Rvr",
                         ramp: "Smallwood SP",
                         state: "MD",
                         txDetail: "FLW",
@@ -3048,7 +3413,7 @@ module.exports = [
                     },
                     {
                         date: "19-06/08",
-                        lake: "Ohio River",
+                        lake: "Ohio Rvr",
                         ramp: "Lawrenceburg",
                         state: "IN",
                         txDetail: "FLW",
@@ -3066,7 +3431,7 @@ module.exports = [
                     },
                     {
                         date: "19-08/17",
-                        lake: "Ohio River",
+                        lake: "Ohio Rvr",
                         ramp: "Lawrenceburg",
                         state: "IN",
                         txDetail: "FLW",
@@ -3294,7 +3659,7 @@ module.exports = [
 
                     {
                         date: "19-05/18",
-                        lake: "Mississippi River",
+                        lake: "Mississippi Rvr",
                         ramp: "W Copeland",
                         state: "WI",
                         txDetail: "FLW",
@@ -3303,7 +3668,7 @@ module.exports = [
                     },
                     {
                         date: "19-06/15",
-                        lake: "Wolf River Chain",
+                        lake: "Wolf Rvr Chain",
                         ramp: "Winneconne",
                         state: "WI",
                         txDetail: "FLW",
@@ -3312,7 +3677,7 @@ module.exports = [
                     },
                     {
                         date: "19-07/20",
-                        lake: "Mississippi River",
+                        lake: "Mississippi Rvr",
                         ramp: "W Copeland",
                         state: "WI",
                         txDetail: "FLW",
@@ -3321,7 +3686,7 @@ module.exports = [
                     },
                     {
                         date: "19-08/17",
-                        lake: "Mississippi River",
+                        lake: "Mississippi Rvr",
                         ramp: "Washington St",
                         state: "WI",
                         txDetail: "FLW",
@@ -3330,7 +3695,7 @@ module.exports = [
                     },
                     {
                         date: "19-09/07",
-                        lake: "Mississippi River",
+                        lake: "Mississippi Rvr",
                         ramp: "W Copeland",
                         state: "WI",
                         txDetail: "FLW",
@@ -3372,7 +3737,7 @@ module.exports = [
                     },
                     {
                         date: "19-07/20",
-                        lake: "Ohio River",
+                        lake: "Ohio Rvr",
                         ramp: "Rocky Point",
                         state: "IN",
                         txDetail: "FLW",
@@ -3381,7 +3746,7 @@ module.exports = [
                     },
                     {
                         date: "19-09/28",
-                        lake: "Ohio River",
+                        lake: "Ohio Rvr",
                         ramp: "Lawrenceburg",
                         state: "IN",
                         txDetail: "FLW",
@@ -3424,7 +3789,7 @@ module.exports = [
                     },
                     {
                         date: "19-07/27",
-                        lake: "Ohio River",
+                        lake: "Ohio Rvr",
                         ramp: "Golconda",
                         state: "IL",
                         txDetail: "FLW",
@@ -3494,7 +3859,7 @@ module.exports = [
                 ]
             },
             {
-                trail: "BFL Mighigan",
+                trail: "BFL Michigan",
                 tournaments: [
 
                     {
@@ -3526,7 +3891,7 @@ module.exports = [
                     },
                     {
                         date: "19-08/24",
-                        lake: "Detroit River",
+                        lake: "Detroit Rvr",
                         ramp: "Elizabeth Park",
                         state: "MI",
                         txDetail: "FLW",
@@ -3535,7 +3900,7 @@ module.exports = [
                     },
                     {
                         date: "19-09/21",
-                        lake: "Detroit River",
+                        lake: "Detroit Rvr",
                         ramp: "Elizabeth Park",
                         state: "MI",
                         txDetail: "FLW",
@@ -3628,7 +3993,7 @@ module.exports = [
                     },
                     {
                         date: "19-06/22",
-                        lake: "Barren River",
+                        lake: "Barren Rvr",
                         ramp: "Port Oliver",
                         state: "TN",
                         txDetail: "FLW",
@@ -3832,7 +4197,7 @@ module.exports = [
                     },
                     {
                         date: "19-07/13",
-                        lake: "James River",
+                        lake: "James Rvr",
                         ramp: "Osborne",
                         state: "VA",
                         txDetail: "FLW",
@@ -3944,7 +4309,7 @@ module.exports = [
                     },
                     {
                         date: "19-09/14",
-                        lake: "James River",
+                        lake: "James Rvr",
                         ramp: "Osborne",
                         state: "VA",
                         txDetail: "FLW",
@@ -4229,9 +4594,9 @@ module.exports = [
     },
 
     {
-        organization: "Texas Team",
+        organization: "TXTT",
         trails: [{
-            trail: "Trail",
+            trail: "TxTeam Trail",
             tournaments: [
 
                 {
@@ -4281,6 +4646,6 @@ module.exports = [
                     entryLink: ""
                 }
             ]
-        }, ]
-    },
+        }]
+    }
 ]
