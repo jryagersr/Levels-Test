@@ -1,97 +1,105 @@
 // Array to hold all of our states and id's to cross check
 const states = [{
-    state: "Select State",
-    id: "default"
-},
-{
-    state: "Alabama",
-    id: "al"
-},
-{
-    state: "California",
-    id: "ca"
-},
-{
-    state: "Colorado",
-    id: "co"
-},
-{
-    state: "Florida",
-    id: "fl"
-},
-{
-    state: "Georgia",
-    id: "ga"
-},
-{
-    state: "Indiana",
-    id: "in"
-},
-{
-    state: "Iowa",
-    id: "ia"
-},
-{
-    state: "Kansas",
-    id: "ka"
-},
-{
-    state: "Kentucky",
-    id: "ky"
-},
-{
-    state: "Louisiana",
-    id: "la"
-},
-{
-    state: "Minnesota",
-    id: "mn"
-},
-{
-    state: "Missouri",
-    id: "mo"
-},
-{
-    state: "Nevada",
-    id: "nv"
-},
+        state: "Select State",
+        id: "default"
+    },
+    {
+        state: "Alabama",
+        id: "al"
+    },
+    {
+        state: "Arkansas",
+        id: "ak"
+    },
+    {
+        state: "California",
+        id: "ca"
+    },
+    {
+        state: "Colorado",
+        id: "co"
+    },
+    {
+        state: "Florida",
+        id: "fl"
+    },
+    {
+        state: "Georgia",
+        id: "ga"
+    },
+    {
+        state: "Illinois",
+        id: "il"
+    },
+    {
+        state: "Indiana",
+        id: "in"
+    },
+    {
+        state: "Iowa",
+        id: "ia"
+    },
+    {
+        state: "Kansas",
+        id: "ka"
+    },
+    {
+        state: "Kentucky",
+        id: "ky"
+    },
+    {
+        state: "Louisiana",
+        id: "la"
+    },
+    {
+        state: "Minnesota",
+        id: "mn"
+    },
+    {
+        state: "Missouri",
+        id: "mo"
+    },
+    {
+        state: "Nevada",
+        id: "nv"
+    },
 
-{
-    state: "North Carolina",
-    id: "nc"
-},
-{
-    state: "New York",
-    id: "ny"
-},
-{
-    state: "Oklahoma",
-    id: "ok"
-},
-{
-    state: "Pennsylvania",
-    id: "pa"
-},
-{
-    state: "South Carolina",
-    id: "sc"
-},
-{
-    state: "Tennessee",
-    id: "tn"
-},
-{
-    state: "Texas",
-    id: "tx"
-},
-{
-    state: "Virginia",
-    id: "va"
-},
-{
-    state: "Wisconsin",
-    id: "wi"
-}
+    {
+        state: "North Carolina",
+        id: "nc"
+    },
+    {
+        state: "New York",
+        id: "ny"
+    },
+    {
+        state: "Oklahoma",
+        id: "ok"
+    },
+    {
+        state: "Pennsylvania",
+        id: "pa"
+    },
+    {
+        state: "South Carolina",
+        id: "sc"
+    },
+    {
+        state: "Tennessee",
+        id: "tn"
+    },
+    {
+        state: "Texas",
+        id: "tx"
+    },
+    {
+        state: "Virginia",
+        id: "va"
+    },
+    {
+        state: "Wisconsin",
+        id: "wi"
+    }
 ]
 
 // Dynamically create options in our dropdown
@@ -108,10 +116,12 @@ let state = decodeURI(currentURL.split("/")[4]); // Reduce the string to just ou
 let url = window.location.origin + "/api/states/" + state; // Build url for ajax call
 
 $.ajax({
-    url: url, // /api/states/:state
-    method: "GET",
-    data: { state: state }
-})
+        url: url, // /api/states/:state
+        method: "GET",
+        data: {
+            state: state
+        }
+    })
     .then(function (data) {
         console.log(data);
         $("#stateName").append(data.state);

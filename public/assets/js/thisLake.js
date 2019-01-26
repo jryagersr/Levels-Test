@@ -184,9 +184,14 @@ function dataACE(callback) {
             let lastFlowIndex = -1; // -1 rather than zero so that an i = 0 in for loop below does not set j = 0
             let lastElevIndex = 0;
 
-            if (currentLake.bodyOfWater == "Table Rock" || currentLake.bodyOfWater == "Eufaula" || currentLake.bodyOfWater == "McGhee Creek" || currentLake.bodyOfWater == "Texoma")
+            if (['Table Rock', 'Eufaula', 'McGhee Creek', "Texoma", "Dardanelle", "Red Rock", "Folsom"].includes(currentLake.bodyOfWater)) // see comment on IF (ACEFlow) below for why this is here.
+                // if (currentLake.bodyOfWater == "Table Rock" || currentLake.bodyOfWater == "Eufaula" || currentLake.bodyOfWater == "McGhee Creek" || currentLake.bodyOfWater == "Texoma")
                 z = 0;
             else z = 1;
+
+            if (['Truman', 'Pomme De Terre', "Stockton", "Rend"].includes(currentLake.bodyOfWater))
+                // if (currentLake.bodyOfWater == "Truman" || "Pomme De Terre") // Truman has 120 elev data and 5 Flow, ignore flow data
+                ACEFlow = false;
             if (ACEFlow)
                 // This has to follow the declarations or Outflow might be undefined
                 // This should not be -z, need to adjust to ACE data mismatch but ACE is returning more Flow data than Elev data. smh
@@ -228,6 +233,10 @@ function dataACE(callback) {
             }
             if (dailyACEData)
                 jIncrement = 1;
+
+            if (currentLake.bodyOfWater == "Red Rock") // Red Rock is every 30 minutes
+                jIncrement = 2;
+
             for (j = lastElevIndex; j >= 0; j = j - jIncrement) {
                 let elev = data[0].Elev[j].value.toFixed(2);
                 localTime = convertStringToUTC(data[0].Elev[j].time)
@@ -514,7 +523,7 @@ function elevAlab(callback) {
         })
 }
 
-// Function to make elev SJRWMD call
+// Function to make elev SJRWMD call St Johns River Water Management District
 function dataSJRWMD(callback) {
     $.ajax({
             url: "/api/sjrwmd",
