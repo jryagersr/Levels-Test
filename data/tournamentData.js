@@ -4226,5 +4226,61 @@ module.exports = [
                 ]
             }
         ]
-    }
+    },
+
+    {
+        organization: "Texas Team",
+        trails: [{
+            trail: "Trail",
+            tournaments: [
+
+                {
+                    date: "19-03/02",
+                    lake: "Travis",
+                    ramp: "Jones Bros",
+                    state: "TX",
+                    txDetail: "Texas Team Trail",
+                    resultsLink: "undefined",
+                    entryLink: ""
+                },
+                {
+                    date: "19-04/06",
+                    lake: "Texoma",
+                    ramp: "Highport",
+                    state: "TX",
+                    txDetail: "Texas Team Trail",
+                    resultsLink: "undefined",
+                    entryLink: ""
+                },
+                {
+                    date: "19-05/10",
+                    lake: "Rayburn",
+                    ramp: "Umphrey",
+                    state: "TX",
+                    txDetail: "Texas Team Trail",
+                    resultsLink: "undefined",
+                    entryLink: ""
+                },
+                {
+
+                    date: "19-05/11",
+                    lake: "Rayburn",
+                    ramp: "Umphrey",
+                    state: "TX",
+                    txDetail: "Texas Team Trail",
+                    resultsLink: "undefined",
+                    entryLink: ""
+                },
+                {
+                    date: "19-06/08",
+                    lake: "Belton",
+                    ramp: "BLORA",
+                    state: "TX",
+                    txDetail: "2 Day Texas Team Trail Champ",
+                    resultsLink: "undefined",
+                    entryLink: ""
+                }
+            ]
+        }, ]
+    },
 ]
