@@ -300,8 +300,8 @@ module.exports = [
         state: "California",
 
         lakes: [
-// Everything I can find on Camanche lake says water elevation is 135'
-// ACE is reporting a elevation of 220' Guessing 258'
+            // Everything I can find on Camanche lake says water elevation is 135'
+            // ACE is reporting a elevation of 220' Guessing 258'
             {
                 bodyOfWater: "Camanche", // lake name
                 data: [
@@ -627,7 +627,103 @@ module.exports = [
         ]
     }, {
         state: "Florida",
-        lakes: [
+        lakes: [{
+                bodyOfWater: "Big Harris (HC)", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["19-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 30, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0,
+                normalPool: 62.0,
+                elevURL: "http://webapub.sjrwmd.com/agws10/hdsnew/data.aspx?tp=3&stn=30053040_NAVD1988_POR&des=Lake%20Harris%20at%20Leesburg%20(WL)$284837.19$814855.96$Lake%20Harris%20Unit$Lake$Lake$Water%20Level%20(WL)",
+                flowURL: "none",
+                href: "/lakes/bigharris",
+                dataSource: ["SJRWMD"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
+            {
+                bodyOfWater: "Dora (HC)", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["19-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 30, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0,
+                normalPool: 62.0,
+                elevURL: "http://webapub.sjrwmd.com/agws10/hdsnew/data.aspx?tp=3&stn=30013010_NAVD1988_POR&des=Lake%20Dora%20at%20Mount%20Dora%20(WL)$284746.67$813838.67$Lake%20Harris%20Unit$Lake$Lake$Water%20Level%20(WL)",
+                flowURL: "none",
+                href: "/lakes/dora",
+                dataSource: ["SJRWMD"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
+            {
+                bodyOfWater: "Eustis (HC)", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["19-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 30, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0,
+                normalPool: 62.0,
+                elevURL: "http://webapub.sjrwmd.com/agws10/hdsnew/data.aspx?tp=3&stn=30083018_NAVD1988_POR&des=Lake%20Eustis%20at%20Eustis%20(WL)$285105.3$814126.02$Lake%20Harris%20Unit$Lake$Lake$Water%20Level%20(WL)",
+                flowURL: "none",
+                href: "/lakes/eustis",
+                dataSource: ["SJRWMD"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
+            {
+                bodyOfWater: "Griffin (HC)", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["19-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 30, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0,
+                normalPool: 62.0,
+                elevURL: "http://webapub.sjrwmd.com/agws10/hdsnew/data.aspx?tp=3&stn=30013010_NAVD1988_POR&des=Lake%20Dora%20at%20Mount%20Dora%20(WL)$284746.67$813838.67$Lake%20Harris%20Unit$Lake$Lake$Water%20Level%20(WL)",
+                flowURL: "none",
+                href: "/lakes/griffin",
+                dataSource: ["SJRWMD"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
+
 
             /*{
                 bodyOfWater: "Hatchineha", // lake name
@@ -1273,32 +1369,30 @@ module.exports = [
         ]
     }, {
         state: "Mississippi",
-        lakes: [
-            {
-                bodyOfWater: "Columbus", // lake name
-                data: [
+        lakes: [{
+            bodyOfWater: "Columbus", // lake name
+            data: [
 
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
-                refreshInterval: 1440, //minutes
-                lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: 0,
-                normalPool: 0,
-                elevURL: "/api/alabama",
-                flowURL: "none",
-                href: "/lakes/columbus",
-                dataSource: ["ALAB"], // array of calls to make to retrieve data
-                resultsLink: "undefined",
-                entryLink: "",
-                adLogoSrc: "",
-                adLogoUrl: ""
-            },
-        ]
+                {
+                    elev: ["N/A"], //array of elevations
+                    flow: ["Lots"], //array of flows
+                    date: ["18-03/02"], //array of elevation dates
+                    time: ["time"], //arrat if elevation times
+                }
+            ],
+            refreshInterval: 1440, //minutes
+            lastRefresh: "12/31/18", // a Date 
+            seaLevelDelta: 0,
+            normalPool: 0,
+            elevURL: "/api/alabama",
+            flowURL: "none",
+            href: "/lakes/columbus",
+            dataSource: ["ALAB"], // array of calls to make to retrieve data
+            resultsLink: "undefined",
+            entryLink: "",
+            adLogoSrc: "",
+            adLogoUrl: ""
+        }, ]
     },
     {
         state: "Nevada",
@@ -2110,7 +2204,7 @@ module.exports = [
                 entryLink: "",
                 adLogoSrc: "",
                 adLogoUrl: ""
-            },{
+            }, {
                 bodyOfWater: "Cooper River", // lake name
                 data: [
 

@@ -109,7 +109,7 @@ function elevUSGS(callback) {
             currentDate = splitTimeDate[0];
             currentTime = splitTimeDate[1].substring(0, 5);
             currentDelta = (currentElev - lakePool).toFixed(2);
-            
+
             // Create our increment and loop through each value
             // For each value push an object into displayBatch
             // Set our counter K variable before incrementing for flowUSGS to use
@@ -206,8 +206,8 @@ function dataACE(callback) {
 
             // Convert UTC date to local time
             let localTime = convertStringToUTC(data[0].Elev[lastElevIndex].time)
-            currentDate = localTime.toString().substring(4,15);
-            currentTime = localTime.toString().substring(16,21);
+            currentDate = localTime.toString().substring(4, 15);
+            currentTime = localTime.toString().substring(16, 21);
 
             currentElev = parseFloat(data[0].Elev[lastElevIndex].value).toFixed(2);
             //let currentDate = data[0].Elev[lastElevIndex].time.substring(0, 7) + data[0].Elev[lastElevIndex].time.substring(9, 12);
@@ -231,8 +231,8 @@ function dataACE(callback) {
             for (j = lastElevIndex; j >= 0; j = j - jIncrement) {
                 let elev = data[0].Elev[j].value.toFixed(2);
                 localTime = convertStringToUTC(data[0].Elev[j].time)
-                let date = localTime.toString().substring(4,15);
-                let time = localTime.toString().substring(16,21);
+                let date = localTime.toString().substring(4, 15);
+                let time = localTime.toString().substring(16, 21);
                 flow = 'No data'; // default value, this differentiates no reported data from no data available (N/A)
                 if (ACEFlow)
                     if (data[1].Outflow[i].value !== -99)
@@ -514,6 +514,51 @@ function elevAlab(callback) {
         })
 }
 
+// Function to make elev SJRWMD call
+function dataSJRWMD(callback) {
+    $.ajax({
+            url: "/api/sjrwmd",
+            method: "GET",
+            data: {
+                sjrwmdDataURL: elevURL,
+                sjrwmdLakeName: bodyOfWaterName
+            }
+        })
+        .then(function (data) {
+            console.log(data);
+            // Set current Date, Time and Elev
+            currentElev = data[0].level;
+            currentDate = data[0].date;
+            currentTime = data[0].time;
+            currentDelta = (currentElev - lakePool).toFixed(2);
+
+            // Create our increment and loop through each value
+            // For each value create our associated table html
+
+            for (j = 0; j < data.length; j++) {
+                let element = data[j];
+                let elev = element.level;
+
+                let date = element.date;
+                let time = element.time
+                let flow = "";
+
+                // adjust the elev for lakes with data relative to full pool (not from sealevel))
+                if (seaLevelDelta !== 0)
+                    elev = (parseFloat(data[j].Average) + seaLevelDelta).toFixed(2);
+
+                displayBatch.push({
+                    date: date,
+                    time: time,
+                    elev: elev,
+                    flow: flow
+                })
+            };
+            callback(null, displayBatch)
+        });
+}; // End of dataSJRWMD
+
+
 // Function to dynamically place advertisement on thisLake.html page
 function loadAds() {
     if (typeof adLogoSrc !== 'undefined') {
@@ -601,6 +646,11 @@ $.ajax({
                 });
             } else if (source === "DUKE") {
                 dataDuke(function () {
+                    displayCurrentPageValues();
+                    buildTable(displayBatch);
+                });
+            } else if (source === "SJRWMD") {
+                dataSJRWMD(function () {
                     displayCurrentPageValues();
                     buildTable(displayBatch);
                 });
