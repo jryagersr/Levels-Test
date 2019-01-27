@@ -184,18 +184,19 @@ function dataACE(callback) {
             let lastFlowIndex = -1; // -1 rather than zero so that an i = 0 in for loop below does not set j = 0
             let lastElevIndex = 0;
 
-            if (['Table Rock', 'Eufaula', 'McGhee Creek', "Texoma", "Dardanelle", "Red Rock", "Folsom"].includes(currentLake.bodyOfWater)) // see comment on IF (ACEFlow) below for why this is here.
-                // if (currentLake.bodyOfWater == "Table Rock" || currentLake.bodyOfWater == "Eufaula" || currentLake.bodyOfWater == "McGhee Creek" || currentLake.bodyOfWater == "Texoma")
+            // see comment on IF (ACEFlow) below for why this is here.
+            if (['Table Rock', 'Eufaula', 'McGee Creek', "Texoma", "Dardanelle", "Red Rock", "Folsom", "Skiatook", "Norfork", "Bull Shoals"].includes(currentLake.bodyOfWater))
                 z = 0;
             else z = 1;
 
+            // These have 120 elev data and 5 Flow, ignore flow data
             if (['Truman', 'Pomme De Terre', "Stockton", "Rend"].includes(currentLake.bodyOfWater))
-                // if (currentLake.bodyOfWater == "Truman" || "Pomme De Terre") // Truman has 120 elev data and 5 Flow, ignore flow data
                 ACEFlow = false;
             if (ACEFlow)
                 // This has to follow the declarations or Outflow might be undefined
                 // This should not be -z, need to adjust to ACE data mismatch but ACE is returning more Flow data than Elev data. smh
-                // For all lakes but Table Rock, MO, McGhee Creek, OK, Texoma, OK and Eufaula, AL, elev.length is 477 and flow.length is 121, for Table Rock, it is 121 and 121.
+                // For all lakes but Table Rock, MO, McGee Creek, OK, Texoma, OK and Eufaula, AL, etc elev.length is 477 and flow.length is 121 (4 elevs per flow), 
+                // for Table Rock and the rest of the list, it is 121 and 121. 
                 // Flow.length should either equal Elev.length or be some multiple of Elev.length. ACE has chosen not to do so. 
                 dataFlowElevEqual = (data[0].Elev.length === (data[1].Outflow.length - z));
 

@@ -2464,6 +2464,57 @@ module.exports = [
                 ]
             },
             {
+                trail: "Savannah River",
+                tournaments: [
+
+                    {
+                        date: "18-12/29",
+                        lake: "Ogeechee Rvr",
+                        ramp: "Kings Ferry",
+                        state: "GA",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "undefined",
+                        entryLink: ""
+                    },
+                    {
+                        date: "19-01/19",
+                        lake: "Ogeechee Rvr",
+                        ramp: "Kings Ferry",
+                        state: "GA",
+                        txDetail: "Qualifier 2",
+                        resultsLink: "undefined",
+                        entryLink: ""
+                    },
+                    {
+                        date: "19-02/16",
+                        lake: "Savannah Rvr",
+                        ramp: "Hardeeville",
+                        state: "GA-SC",
+                        txDetail: "Qualifier 3",
+                        resultsLink: "undefined",
+                        entryLink: ""
+                    },
+                    {
+                        date: "19-03/09",
+                        lake: "Savannah Rvr",
+                        ramp: "Stokes Bluff",
+                        state: "GA-SC",
+                        txDetail: "Final",
+                        resultsLink: "undefined",
+                        entryLink: ""
+                    },
+                    {
+                        date: "19-04/20",
+                        lake: "Savannah Rvr",
+                        ramp: "Stokes Bluff",
+                        state: "SC",
+                        txDetail: "Final",
+                        resultsLink: "undefined",
+                        entryLink: ""
+                    }
+                ]
+            },
+            {
                 trail: "Smith Mountain",
                 tournaments: [
 
@@ -2867,8 +2918,6 @@ module.exports = [
                         entryLink: ""
                     },
                     {
-                        organizer: "CATT",
-                        trail: "Wateree",
                         date: "19-02/16",
                         lake: "Wateree",
                         ramp: "Clearwater",
@@ -2878,8 +2927,6 @@ module.exports = [
                         entryLink: ""
                     },
                     {
-                        organizer: "CATT",
-                        trail: "Wateree",
                         date: "19-02/23",
                         lake: "Wateree",
                         ramp: "Clearwater",
@@ -2889,8 +2936,6 @@ module.exports = [
                         entryLink: ""
                     },
                     {
-                        organizer: "CATT",
-                        trail: "Wateree",
                         date: "19-03/02",
                         lake: "Wateree",
                         ramp: "Clearwater",
@@ -2900,8 +2945,6 @@ module.exports = [
                         entryLink: ""
                     },
                     {
-                        organizer: "CATT",
-                        trail: "Wateree",
                         date: "19-03/09",
                         lake: "Wateree",
                         ramp: "Clearwater",
@@ -2911,8 +2954,6 @@ module.exports = [
                         entryLink: ""
                     },
                     {
-                        organizer: "CATT",
-                        trail: "Wateree",
                         date: "19-03/16",
                         lake: "Wateree",
                         ramp: "Clearwater",
@@ -2922,8 +2963,6 @@ module.exports = [
                         entryLink: ""
                     },
                     {
-                        organizer: "CATT",
-                        trail: "Wateree",
                         date: "19-03/23",
                         lake: "Wateree",
                         ramp: "Clearwater",
@@ -2933,8 +2972,6 @@ module.exports = [
                         entryLink: ""
                     },
                     {
-                        organizer: "CATT",
-                        trail: "Wateree",
                         date: "19-03/30",
                         lake: "Wateree",
                         ramp: "Clearwater",
@@ -2944,8 +2981,6 @@ module.exports = [
                         entryLink: ""
                     },
                     {
-                        organizer: "CATT",
-                        trail: "Wateree",
                         date: "19-04/06",
                         lake: "Wateree",
                         ramp: "Clearwater",
@@ -2955,8 +2990,6 @@ module.exports = [
                         entryLink: ""
                     },
                     {
-                        organizer: "CATT",
-                        trail: "Wateree",
                         date: "19-04/13",
                         lake: "Wateree",
                         ramp: "Clearwater",
@@ -4596,7 +4629,7 @@ module.exports = [
     {
         organization: "TXTT",
         trails: [{
-            trail: "TxTeam Trail",
+            trail: "Team Trail",
             tournaments: [
 
                 {

@@ -41,12 +41,12 @@ function populateFilter(data) {
                     // Track the new option in dupeArray
                     dupeArray.push(organizer);
                 }
-                if ($.inArray(trail, dupeArray) === -1) {
+                if ($.inArray(organizer + " - " + trail, dupeArray) === -1) {
                     var option = $("<option>" + organizer + " - " + trail + "</option>");
-                    $(option).attr("data-id", trail);
+                    $(option).attr("data-id", organizer + " - " + trail);
                     $("#trailSelect").append(option);
                     // Track the new option in dupeArray
-                    dupeArray.push(trail);
+                    dupeArray.push(organizer + " - " + trail);
                 }
                 if ($.inArray(loc, locArray) === -1) {
                     // Track the new option in dupeArray
@@ -277,7 +277,7 @@ function filterData(batch, category, val, callback) {
             // If we're looking for trails
             if (category === "trail") {
                 // within each organization we filter the trails to find a specific one
-                let filteredBatch2 = element.trails.filter(e => e.trail === val);
+                let filteredBatch2 = element.trails.filter(e => element.organization + " - " + e.trail === val);
                 // If no trail exists, filteredBatch2 will be empty, so we check against that
                 if (filteredBatch2.length) {
                     // Push into filteredBatch matching the data structure 
