@@ -235,7 +235,11 @@ function dataACE(callback) {
             if (dailyACEData)
                 jIncrement = 1;
 
-            if (currentLake.bodyOfWater == "Red Rock") // Red Rock is every 30 minutes
+            if (['Eufaula'].includes(currentLake.bodyOfWater)) // Eufaula is every 15 minutes with no OutFlow
+                if (currentLake.normalPool < 200) // This identfies Eufaula AL from Eufaula, OK
+                    jIncrement = 4;
+
+            if (['Red Rock'].includes(currentLake.bodyOfWater)) // Red Rock is every 30 minutes
                 jIncrement = 2;
 
             for (j = lastElevIndex; j >= 0; j = j - jIncrement) {
