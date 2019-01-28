@@ -17,3 +17,12 @@
     padding: 5px;
     margin: 5px;
 }
+
+.filter-btn {
+    margin-bottom: 20px;
+}
+
+.filter-btn:hover {
+    margin-bottom: 21px;
+    margin-top: -1px;
+}

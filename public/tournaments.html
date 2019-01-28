@@ -45,7 +45,7 @@
                     <a class="nav-link" href="/contact">Contact</a>
                 </li>
             </ul>
-            <div class="navbar-nav ml-auto">
+            <div class="navbar-nav ml-auto social-navItem">
                 <a href="https://www.facebook.com/BassSavvy/" target="_blank">
                     Follow us on social! <i class="fab fa-facebook fa-lg"></i>
                 </a>
@@ -64,7 +64,9 @@
         </a>
         <hr>
 
-        <button class="btn btn-success" id="filterBtn">Filter</button>
+        <h6><b>Using the Filter Feature </b></h6>
+        <p>Click the filter button below to filter out the tournaments you'd like to see. Clicking "Add to Filter" will add a new selection to your current selection. Clicking "New Filter" will reset your query entirely. Clicking "Clear" will reset all data. Clicking on a table header will sort that column alphabetically.</p>
+        <button class="btn btn-success filter-btn" id="filterBtn">Filter</button>
         <div id="filterWrapper">
             <form>
                 <br>
@@ -109,7 +111,6 @@
             </form>
         </div>
 
-        <p>* Click on a table header to sort</p>
         <div class="table-responsive text-center">
             <table id="txTable" class="table table-fixed table-striped">
                 <thead class="sticky-top">
