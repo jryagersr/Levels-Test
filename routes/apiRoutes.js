@@ -412,10 +412,6 @@ module.exports = function (app) {
           url = "http://www.laylake.info/Level/Calendar"
           break;
 
-        case "rossbarnett":
-          url = "http://www.rossbarnett.uslakes.info/Level/Calendar"
-          break;
-
         case "weiss":
           url = "http://www.lakeweiss.info/Level/Calendar"
           break;
@@ -479,7 +475,7 @@ module.exports = function (app) {
             if (!isNaN(value) && value.length === 5) {
               data.unshift({
                 date: dd + "/" + mm + "/" + yyyy,
-                time: "6:00",
+                time: "06:00",
                 elev: value,
                 flow: "N/A"
               });
@@ -604,6 +600,61 @@ module.exports = function (app) {
         };
 
         callback(null, data);
+      });
+    }
+
+
+  });
+
+  /***************************************************************************************************************************************** */
+
+  // Route to retrieve TWDB data
+  app.get("/api/twdb", function (request, response) {
+    let twdbURL = request.query.twdbDataURL;
+    let twdbLakeName = request.query.twdbLakeName;
+
+    getData(twdbLakeName, twdbURL, function (error, data) {
+      if (error) {
+        response.send(error);
+        return;
+      } else {
+        response.json(data);
+      }
+    });
+
+    // Function to pull data
+    function getData(lakeName, newUrl, callback) {
+      var request = require("request");
+      var data = [];
+
+      var options = {
+        url: newUrl
+      }
+      request(options, function (error, response, body) {
+        if (error) {
+          callback(error);
+        }
+        _.each(body.split("\r\n"), function (line) {
+          // Split the text body into readable lines
+          var splitLine;
+          line = line.trim();
+          // Check to see if this is a data line
+          if (!isNaN(line[0])) {
+            splitLine = line.split(/[,]+/);  // split the line
+            // Index 0=date, 1=elevation, there is no flow or time
+
+            // Push each line into data object
+            data.push({
+              lakeName: lakeName,
+              date: splitLine[0],
+              time: "06:00",
+              inflow: "N/A",
+              outflow: "N/A",
+              level: splitLine[1]
+            });
+          }
+        });
+        callback(null, data.reverse()); // reverse the data 
       });
     }
 

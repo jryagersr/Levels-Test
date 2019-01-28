@@ -60,6 +60,10 @@ const states = [{
         id: "mo"
     },
     {
+        state: "Mississippi",
+        id: "mi"
+    },
+    {
         state: "Nevada",
         id: "nv"
     },
@@ -67,6 +71,10 @@ const states = [{
     {
         state: "North Carolina",
         id: "nc"
+    },
+    {
+        state: "New Mexico",
+        id: "nm"
     },
     {
         state: "New York",

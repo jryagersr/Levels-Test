@@ -185,7 +185,7 @@ function dataACE(callback) {
             let lastElevIndex = 0;
 
             // see comment on IF (ACEFlow) below for why this is here.
-            if (['Table Rock', 'Eufaula', 'McGee Creek', "Texoma", "Dardanelle", "Red Rock", "Folsom", "Skiatook", "Norfork", "Bull Shoals"].includes(currentLake.bodyOfWater))
+            if (['Table Rock', 'Eufaula', 'McGee Creek', "Texoma", "Dardanelle", "Red Rock", "Folsom", "Skiatook", "Norfork", "Bull Shoals", "Conchas"].includes(currentLake.bodyOfWater))
                 z = 0;
             else z = 1;
 
@@ -236,8 +236,10 @@ function dataACE(callback) {
                 jIncrement = 1;
 
             if (['Eufaula'].includes(currentLake.bodyOfWater)) // Eufaula is every 15 minutes with no OutFlow
-                if (currentLake.normalPool < 200) // This identfies Eufaula AL from Eufaula, OK
+                if (currentLake.normalPool < 189) // This identfies Eufaula AL from Eufaula, OK
                     jIncrement = 4;
+            if (['Brantley'].includes(currentLake.bodyOfWater)) // Eufaula is every 15 minutes with no OutFlow
+                jIncrement = 4;
 
             if (['Red Rock'].includes(currentLake.bodyOfWater)) // Red Rock is every 30 minutes
                 jIncrement = 2;
@@ -572,6 +574,49 @@ function dataSJRWMD(callback) {
         });
 }; // End of dataSJRWMD
 
+// Function to make elev TWDB call Texas Water Development Board
+function dataTWDB(callback) {
+    $.ajax({
+            url: "/api/twdb",
+            method: "GET",
+            data: {
+                twdbDataURL: elevURL,
+                twdbLakeName: bodyOfWaterName
+            }
+        })
+        .then(function (data) {
+            console.log(data);
+            // Set current Date, Time and Elev
+            currentElev = data[0].level;
+            currentDate = data[0].date;
+            currentTime = data[0].time;
+            currentDelta = (currentElev - lakePool).toFixed(2);
+
+            // Create our increment and loop through each value
+            // For each value create our associated table html
+
+            for (j = 0; j < data.length; j++) {
+                let element = data[j];
+                let elev = element.level;
+
+                let date = element.date;
+                let time = element.time
+                let flow = "";
+
+                // adjust the elev for lakes with data relative to full pool (not from sealevel))
+                if (seaLevelDelta !== 0)
+                    elev = (parseFloat(data[j].Average) + seaLevelDelta).toFixed(2);
+
+                displayBatch.push({
+                    date: date,
+                    time: time,
+                    elev: elev,
+                    flow: flow
+                })
+            };
+            callback(null, displayBatch)
+        });
+}; // End of dataTWDB
 
 // Function to dynamically place advertisement on thisLake.html page
 function loadAds() {
@@ -665,6 +710,11 @@ $.ajax({
                 });
             } else if (source === "SJRWMD") {
                 dataSJRWMD(function () {
+                    displayCurrentPageValues();
+                    buildTable(displayBatch);
+                });
+            } else if (source === "TWDB") {
+                dataTWDB(function () {
                     displayCurrentPageValues();
                     buildTable(displayBatch);
                 });

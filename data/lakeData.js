@@ -175,30 +175,6 @@ module.exports = [
                 adLogoUrl: ""
             },
             {
-                bodyOfWater: "Ross Barnett", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
-                refreshInterval: 1440, //minutes
-                lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: 0,
-                normalPool: 297.5,
-                elevURL: "/api/alabama",
-                flowURL: "none",
-                href: "/lakes/rossbarnett",
-                dataSource: ["ALAB"], // array of calls to make to retrieve data
-                resultsLink: "undefined",
-                entryLink: "",
-                adLogoSrc: "",
-                adLogoUrl: ""
-            },
-            {
                 bodyOfWater: "Smith", // lake name
                 data: [
 
@@ -1743,7 +1719,8 @@ module.exports = [
                 adLogoUrl: ""
             }
         ]
-    }, {
+    },
+    {
         state: "Mississippi",
         lakes: [{
             bodyOfWater: "Columbus", // lake name
@@ -1759,16 +1736,36 @@ module.exports = [
             refreshInterval: 1440, //minutes
             lastRefresh: "12/31/18", // a Date 
             seaLevelDelta: 0,
-            normalPool: 0,
-            elevURL: "/api/alabama",
+            normalPool: 164.0,
+            elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=25832039&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
             flowURL: "none",
-            href: "/lakes/columbus",
-            dataSource: ["ALAB"], // array of calls to make to retrieve data
+            href: "/lakes/Columbus",
+            dataSource: ["ACE"], // array of calls to make to retrieve data
             resultsLink: "undefined",
             entryLink: "",
             adLogoSrc: "",
             adLogoUrl: ""
-        }, ]
+        }, {
+            bodyOfWater: "Ross Barnett", // lake name
+            data: [{
+                elev: ["N/A"], //array of elevations
+                flow: ["Lots"], //array of flows
+                date: ["18-03/02"], //array of elevation dates
+                time: ["time"], //arrat if elevation times
+            }],
+            refreshInterval: 1440, //minutes
+            lastRefresh: "12/31/18", // a Date 
+            seaLevelDelta: 0,
+            normalPool: 297.50,
+            elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=14013&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+            flowURL: "none",
+            href: "/lakes/rossbarnett",
+            dataSource: ["ACE"], // array of calls to make to retrieve data
+            resultsLink: "undefined",
+            entryLink: "",
+            adLogoSrc: "",
+            adLogoUrl: ""
+        }]
     },
     {
         state: "Nevada",
@@ -1823,7 +1820,159 @@ module.exports = [
                 adLogoUrl: ""
             }
         ]
-    }, {
+    },
+    {
+        state: "New Mexico",
+        lakes: [
+            
+            {
+                bodyOfWater: "Brantley", // lake name
+                data: [
+    
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["18-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 1440, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0,
+                normalPool: 3271.0,
+                elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=17043&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+                flowURL: "none",
+                href: "/lakes/brantley",
+                dataSource: ["ACE"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
+            {
+                bodyOfWater: "Conchas", // lake name
+                data: [
+    
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["18-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 1440, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0,
+                normalPool: 4185.25,
+                elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=33043&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+                flowURL: "none",
+                href: "/lakes/conchas",
+                dataSource: ["ACE"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
+
+            {
+                bodyOfWater: "Elephant Butte", // lake name
+                data: [
+    
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["18-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 1440, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0,
+                normalPool: 4301.0,
+                elevURL: "https://waterdatafortexas.org/reservoirs/individual/elephant-butte-30day.csv",
+                flowURL: "none",
+                href: "/lakes/elephantbutte",
+                dataSource: ["TWDB"], // array of calls to make to retrieve data Texas Water Development District
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
+            {
+                bodyOfWater: "Ft Sumner", // lake name
+                data: [
+    
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["18-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 1440, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0,
+                normalPool: 4201.0,
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08384000&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all",
+                flowURL: "none",
+                href: "/lakes/ftsumner",
+                dataSource: ["USGS"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
+            {
+            bodyOfWater: "Santa Rosa", // lake name
+            data: [
+
+                {
+                    elev: ["N/A"], //array of elevations
+                    flow: ["Lots"], //array of flows
+                    date: ["18-03/02"], //array of elevation dates
+                    time: ["time"], //arrat if elevation times
+                }
+            ],
+            refreshInterval: 1440, //minutes
+            lastRefresh: "12/31/18", // a Date 
+            seaLevelDelta: 0,
+            normalPool: 4749.35,
+            elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=261043&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+            flowURL: "none",
+            href: "/lakes/santarosa",
+            dataSource: ["ACE"], // array of calls to make to retrieve data
+            resultsLink: "undefined",
+            entryLink: "",
+            adLogoSrc: "",
+            adLogoUrl: ""
+        },
+        {
+            bodyOfWater: "Ute", // lake name
+            data: [
+
+                {
+                    elev: ["N/A"], //array of elevations
+                    flow: ["Lots"], //array of flows
+                    date: ["19-03/02"], //array of elevation dates
+                    time: ["time"], //arrat if elevation times
+                }
+            ],
+            refreshInterval: 30, //minutes
+            lastRefresh: "12/31/18", // a Date 
+            seaLevelDelta: 0,
+            normalPool: 3784.91,
+            elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07226800&period=PT96H&parameterCd=62615&siteType=LK&siteStatus=all",
+            flowURL: "none",
+            href: "/lakes/ute",
+            dataSource: ["USGS"], // array of calls to make to retrieve data
+            resultsLink: "undefined",
+            entryLink: "",
+            adLogoSrc: "",
+            adLogoUrl: ""
+        }
+    ]
+    },
+    {
         state: "New York",
         lakes: [
 
