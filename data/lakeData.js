@@ -3269,24 +3269,24 @@ module.exports = [
         lakes: [
 
             {
-                bodyOfWater: "Fork", // lake name
+                bodyOfWater: "Amistad", // lake name
                 data: [
-
+    
                     {
                         elev: ["N/A"], //array of elevations
                         flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
+                        date: ["18-03/02"], //array of elevation dates
                         time: ["time"], //arrat if elevation times
                     }
                 ],
-                refreshInterval: 30, //minutes
+                refreshInterval: 1440, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
-                normalPool: 403.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08018800&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all",
+                normalPool: 1117.0,
+                elevURL: "https://waterdatafortexas.org/reservoirs/individual/amistad-30day.csv",
                 flowURL: "none",
-                href: "/lakes/fork",
-                dataSource: ["USGS"], // array of calls to make to retrieve data
+                href: "/lakes/amistad",
+                dataSource: ["TWDB"], // array of calls to make to retrieve data Texas Water Development District
                 resultsLink: "undefined",
                 entryLink: "",
                 adLogoSrc: "",
@@ -3311,6 +3311,78 @@ module.exports = [
                 flowURL: "none",
                 href: "/lakes/conroe",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
+            {
+                bodyOfWater: "Falcon", // lake name
+                data: [
+    
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["18-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 1440, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0,
+                normalPool: 301.0,
+                elevURL: "https://waterdatafortexas.org/reservoirs/individual/falcon-30day.csv",
+                flowURL: "none",
+                href: "/lakes/falcon",
+                dataSource: ["TWDB"], // array of calls to make to retrieve data Texas Water Development District
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
+            {
+                bodyOfWater: "Fork", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["19-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 30, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0,
+                normalPool: 403.0,
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08018800&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all",
+                flowURL: "none",
+                href: "/lakes/fork",
+                dataSource: ["USGS"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
+            {
+                bodyOfWater: "LBJ", // lake name
+                data: [
+    
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["18-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 1440, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0,
+                normalPool: 825.40,
+                elevURL: "https://waterdatafortexas.org/reservoirs/individual/lyndon-b-johnson-30day.csv",
+                flowURL: "none",
+                href: "/lakes/LBJ",
+                dataSource: ["TWDB"], // array of calls to make to retrieve data Texas Water Development District
                 resultsLink: "undefined",
                 entryLink: "",
                 adLogoSrc: "",
@@ -3387,7 +3459,32 @@ module.exports = [
                 entryLink: "",
                 adLogoSrc: "",
                 adLogoUrl: ""
+            },
+            {
+                bodyOfWater: "Travis", // lake name
+                data: [
+    
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["18-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 1440, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0,
+                normalPool: 681.0,
+                elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=203048&p_parameter_type=Flow:Stor:Precip:Stage:Elev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+                flowURL: "none",
+                href: "/lakes/travis",
+                dataSource: ["ACE"], // array of calls to make to retrieve data Texas Water Development District
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
             }
+            
         ]
     }, {
         state: "Virginia",
