@@ -1824,11 +1824,11 @@ module.exports = [
     {
         state: "New Mexico",
         lakes: [
-            
+
             {
                 bodyOfWater: "Brantley", // lake name
                 data: [
-    
+
                     {
                         elev: ["N/A"], //array of elevations
                         flow: ["Lots"], //array of flows
@@ -1852,7 +1852,7 @@ module.exports = [
             {
                 bodyOfWater: "Conchas", // lake name
                 data: [
-    
+
                     {
                         elev: ["N/A"], //array of elevations
                         flow: ["Lots"], //array of flows
@@ -1877,7 +1877,7 @@ module.exports = [
             {
                 bodyOfWater: "Elephant Butte", // lake name
                 data: [
-    
+
                     {
                         elev: ["N/A"], //array of elevations
                         flow: ["Lots"], //array of flows
@@ -1901,7 +1901,7 @@ module.exports = [
             {
                 bodyOfWater: "Ft Sumner", // lake name
                 data: [
-    
+
                     {
                         elev: ["N/A"], //array of elevations
                         flow: ["Lots"], //array of flows
@@ -1923,54 +1923,54 @@ module.exports = [
                 adLogoUrl: ""
             },
             {
-            bodyOfWater: "Santa Rosa", // lake name
-            data: [
+                bodyOfWater: "Santa Rosa", // lake name
+                data: [
 
-                {
-                    elev: ["N/A"], //array of elevations
-                    flow: ["Lots"], //array of flows
-                    date: ["18-03/02"], //array of elevation dates
-                    time: ["time"], //arrat if elevation times
-                }
-            ],
-            refreshInterval: 1440, //minutes
-            lastRefresh: "12/31/18", // a Date 
-            seaLevelDelta: 0,
-            normalPool: 4749.35,
-            elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=261043&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-            flowURL: "none",
-            href: "/lakes/santarosa",
-            dataSource: ["ACE"], // array of calls to make to retrieve data
-            resultsLink: "undefined",
-            entryLink: "",
-            adLogoSrc: "",
-            adLogoUrl: ""
-        },
-        {
-            bodyOfWater: "Ute", // lake name
-            data: [
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["18-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 1440, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0,
+                normalPool: 4749.35,
+                elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=261043&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+                flowURL: "none",
+                href: "/lakes/santarosa",
+                dataSource: ["ACE"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
+            {
+                bodyOfWater: "Ute", // lake name
+                data: [
 
-                {
-                    elev: ["N/A"], //array of elevations
-                    flow: ["Lots"], //array of flows
-                    date: ["19-03/02"], //array of elevation dates
-                    time: ["time"], //arrat if elevation times
-                }
-            ],
-            refreshInterval: 30, //minutes
-            lastRefresh: "12/31/18", // a Date 
-            seaLevelDelta: 0,
-            normalPool: 3784.91,
-            elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07226800&period=PT96H&parameterCd=62615&siteType=LK&siteStatus=all",
-            flowURL: "none",
-            href: "/lakes/ute",
-            dataSource: ["USGS"], // array of calls to make to retrieve data
-            resultsLink: "undefined",
-            entryLink: "",
-            adLogoSrc: "",
-            adLogoUrl: ""
-        }
-    ]
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["19-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 30, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0,
+                normalPool: 3784.91,
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07226800&period=PT96H&parameterCd=62615&siteType=LK&siteStatus=all",
+                flowURL: "none",
+                href: "/lakes/ute",
+                dataSource: ["USGS"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            }
+        ]
     },
     {
         state: "New York",
@@ -3271,7 +3271,7 @@ module.exports = [
             {
                 bodyOfWater: "Amistad", // lake name
                 data: [
-    
+
                     {
                         elev: ["N/A"], //array of elevations
                         flow: ["Lots"], //array of flows
@@ -3319,7 +3319,7 @@ module.exports = [
             {
                 bodyOfWater: "Falcon", // lake name
                 data: [
-    
+
                     {
                         elev: ["N/A"], //array of elevations
                         flow: ["Lots"], //array of flows
@@ -3367,7 +3367,7 @@ module.exports = [
             {
                 bodyOfWater: "LBJ", // lake name
                 data: [
-    
+
                     {
                         elev: ["N/A"], //array of elevations
                         flow: ["Lots"], //array of flows
@@ -3463,7 +3463,7 @@ module.exports = [
             {
                 bodyOfWater: "Travis", // lake name
                 data: [
-    
+
                     {
                         elev: ["N/A"], //array of elevations
                         flow: ["Lots"], //array of flows
@@ -3484,7 +3484,7 @@ module.exports = [
                 adLogoSrc: "",
                 adLogoUrl: ""
             }
-            
+
         ]
     }, {
         state: "Virginia",
@@ -3565,7 +3565,134 @@ module.exports = [
                 adLogoUrl: ""
             }
         ]
-    }, {
+    },
+    {
+        state: "West Virginia",
+        lakes: [
+
+            {
+                bodyOfWater: "Bluestone", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["19-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 30, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0.0,
+                normalPool: 1406.0,
+                elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=253108&p_parameter_type=Flow:Stor:Precip:Stage:Elev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+                flowURL: "none",
+                href: "/lakes/bluestone",
+                dataSource: ["ACE"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
+            {
+                bodyOfWater: "Burnsville", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["19-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 30, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0.0,
+                normalPool: 776.0,
+                elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=459108&p_parameter_type=Flow:Stor:Precip:Stage:Elev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+                flowURL: "none",
+                href: "/lakes/burnsville",
+                dataSource: ["ACE"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
+            {
+                bodyOfWater: "Stonewall Jackson", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["19-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 30, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0.0,
+                normalPool: 1073.20,
+                elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=17130111&p_parameter_type=Flow:Stor:Precip:Stage:Elev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+                flowURL: "none",
+                href: "/lakes/geneva",
+                dataSource: ["ACE"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
+            {
+                bodyOfWater: "Sutton", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["19-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 30, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0.0,
+                normalPool: 895.0,
+                elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=259108&p_parameter_type=Flow:Stor:Precip:Stage:Elev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+                flowURL: "none",
+                href: "/lakes/sutton",
+                dataSource: ["ACE"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
+            {
+                bodyOfWater: "Summersville", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["19-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 30, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0,
+                normalPool: 1575.0,
+                elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=264108&p_parameter_type=Flow:Stor:Precip:Stage:Elev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+                flowURL: "none",
+                href: "/lakes/summersville",
+                dataSource: ["ACE"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            }
+        ]
+    },
+    {
         state: "Wisconsin",
         lakes: [
 
