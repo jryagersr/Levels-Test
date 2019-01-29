@@ -1483,7 +1483,7 @@ module.exports = [
                     entryLink: ""
                 },
                 {
-                    date: "19-06/06",
+                    date: "19-04/06",
                     lake: "Sutton",
                     ramp: "Wilmington",
                     state: "NC",

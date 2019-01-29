@@ -274,6 +274,61 @@ module.exports = [
     },
     {
 
+        state: "Arizona",
+
+        lakes: [
+            {
+                bodyOfWater: "Havasu", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["18-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 30, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
+                normalPool: 1120.0,
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=423525088260400&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all",
+                flowURL: "none",
+                href: "/lakes/havasu",
+                dataSource: ["USGS"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
+            {
+                bodyOfWater: "Roosevelt", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["18-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 30, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0.0, // ft but data reported as a delta gage height
+                normalPool: 2094.0,
+                elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=52327029&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN",
+                flowURL: "none",
+                href: "/lakes/rooseveltaz",
+                dataSource: ["USGS"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            }
+
+        ]
+    }, {
+
         state: "Arkansas",
 
         lakes: [
@@ -423,8 +478,7 @@ module.exports = [
                 adLogoUrl: ""
             }
         ]
-    },
-    {
+    }, {
 
         state: "California",
 
@@ -1178,8 +1232,7 @@ module.exports = [
                 adLogoUrl: ""
             },
         ]
-    },
-    {
+    }, {
         state: "Indiana",
         lakes: [
 
@@ -1256,8 +1309,7 @@ module.exports = [
                 adLogoUrl: ""
             }
         ]
-    },
-    {
+    }, {
         state: "Iowa",
         lakes: [
 
@@ -1719,8 +1771,7 @@ module.exports = [
                 adLogoUrl: ""
             }
         ]
-    },
-    {
+    }, {
         state: "Mississippi",
         lakes: [{
             bodyOfWater: "Columbus", // lake name
@@ -1766,8 +1817,7 @@ module.exports = [
             adLogoSrc: "",
             adLogoUrl: ""
         }]
-    },
-    {
+    }, {
         state: "Nevada",
         lakes: [
 
@@ -1820,8 +1870,7 @@ module.exports = [
                 adLogoUrl: ""
             }
         ]
-    },
-    {
+    }, {
         state: "New Mexico",
         lakes: [
 
@@ -1911,7 +1960,7 @@ module.exports = [
                 ],
                 refreshInterval: 1440, //minutes
                 lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: 0,
+                seaLevelDelta: 4154.0,
                 normalPool: 4201.0,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08384000&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all",
                 flowURL: "none",
@@ -1971,8 +2020,7 @@ module.exports = [
                 adLogoUrl: ""
             }
         ]
-    },
-    {
+    }, {
         state: "New York",
         lakes: [
 
@@ -2986,7 +3034,7 @@ module.exports = [
                 seaLevelDelta: 0,
                 normalPool: 360.0,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02168500&period=PT96H&parameterCd=00062&siteType=ST&siteStatus=all",
-                flowURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02168504&period=PT96H&parameterCd=00060&siteType=ST&siteStatus=all",
+                flowURL: "none", // Until I can fix it "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02168504&period=PT96H&parameterCd=00060&siteType=ST&siteStatus=all",
                 href: "/lakes/murray",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
@@ -3255,7 +3303,7 @@ module.exports = [
                 seaLevelDelta: 0,
                 normalPool: 741.0,
                 elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/WBH_O.xml?1545586001367",
-                flowURL: "",
+                flowURL: "none",
                 href: "/lakes/wattsbar",
                 dataSource: ["TVA"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
@@ -3565,8 +3613,7 @@ module.exports = [
                 adLogoUrl: ""
             }
         ]
-    },
-    {
+    }, {
         state: "West Virginia",
         lakes: [
 
@@ -3691,8 +3738,7 @@ module.exports = [
                 adLogoUrl: ""
             }
         ]
-    },
-    {
+    }, {
         state: "Wisconsin",
         lakes: [
 
