@@ -183,7 +183,7 @@ function dataACE(callback) {
             // default value, this is when ACE has no Flow Data included
             // Sometimes OutFlow is index 1, sometimes it's index 2, or 3
             // And then there is Ross Barnett, that doesn't have flow and only has 3 in the array!
-            if (!['Ross Barnett', 'Okeechobee', 'Tohopekaliga', 'Istokpoga'].includes(currentLake.bodyOfWater)) {
+            if (!['Brantley', 'Ross Barnett', 'Okeechobee', 'Tohopekaliga', 'Istokpoga', 'Columbus', 'Ouachita', 'Mendocino', 'New Hogan', 'Pine Flat', 'Sonoma', 'Success'].includes(currentLake.bodyOfWater)) {
                 if (typeof data[1].Outflow !== 'undefined' || typeof data[2].Outflow !== 'undefined' || typeof data[3].Outflow !== 'undefined') {
                     ACEFlow = true;
                     if (typeof data[1].Outflow !== 'undefined')
@@ -192,7 +192,7 @@ function dataACE(callback) {
                         ACEFlowIndex = 2;
                     else ACEFlowIndex = 3;
                 }
-            } else exceptionLake = true; 
+            } else exceptionLake = true;
 
             let firstDate = data[ACEElevIndex].Elev[0].time.split(" ");
             let secondDate = data[ACEElevIndex].Elev[1].time.split(" ");
@@ -200,7 +200,7 @@ function dataACE(callback) {
             let isLakeIstokpoga = currentLake.bodyOfWater == 'Istokpoga'; // default value, this is when the ACE data is Fucked Up like Istokpoga in Florida, Damn...
 
             // These have 120 elev data and 5 Flow, ignore flow data
-            if (['Truman', 'Pomme De Terre', "Stockton", "Rend"].includes(currentLake.bodyOfWater))
+            if (['Truman', 'Pomme De Terre', "Stockton", "Rend", ].includes(currentLake.bodyOfWater))
                 ACEFlow = false;
 
             // Get current Date, Time and Elev
@@ -265,8 +265,8 @@ function dataACE(callback) {
             if (dailyACEData)
                 jIncrement = 1;
 
-            if (['Eufaula'].includes(currentLake.bodyOfWater)) // Eufaula is every 15 minutes with no OutFlow
-                if (currentLake.normalPool < 189) {// This identfies Eufaula AL from Eufaula, OK
+            if (['Eufaula', 'Brantley', 'Columbus'].includes(currentLake.bodyOfWater)) // Eufaula is every 15 minutes with no OutFlow
+                if (currentLake.normalPool < 189) { // This identfies Eufaula AL from Eufaula, OK
                     jIncrement = 4;
                     exceptionLake = true; // set the exceptionLake flag to bypass the flow check in the for loop below
                 }
@@ -278,24 +278,28 @@ function dataACE(callback) {
 
             for (j = ACEElevNum; j < data[ACEElevIndex].Elev.length; j = j + jIncrement) {
                 // make sure the times match for elev and flow
-                if (!exceptionLake) {
+                if (j == 94)
+                    Stop = 'Here';
+                if (!exceptionLake && i < data[ACEFlowIndex].Outflow.length - 1) {
                     if (Date.parse(data[ACEElevIndex].Elev[j].time) !== Date.parse(data[ACEFlowIndex].Outflow[i].time)) {
                         if (ACEFlow) {
                             // Do the elev and flow dates match
                             while (Date.parse(data[ACEElevIndex].Elev[j].time) !== Date.parse(data[ACEFlowIndex].Outflow[i].time)) {
                                 // If not, need to line up the dates
 
-                                // The Flow data comes in on the hour, find the next elev data that is on the hour
-                                let elevOnHour = false;
+                                //Which one is behind
+                                if (Date.parse(data[ACEElevIndex].Elev[j].time) <= Date.parse(data[ACEFlowIndex].Outflow[i].time)) {
+                                    // The Flow data comes in on the hour, find the next elev data that is on the hour
+                                    let elevOnHour = false;
 
-                                while (!elevOnHour) { // until we find an on the hour
-                                    elevMinIndex = data[ACEElevIndex].Elev[j].time.indexOf(":") + 1; // get the index at the 'minutes'
-                                    elevMin = data[ACEElevIndex].Elev[j].time.substr(elevMinIndex, 2) // retrieve the 'minutes'
-                                    if (elevMin == "00") // is it on the hour
-                                        elevOnHour = true; // end while loop
-                                    else j++ // increment and loop
-                                }
-                                j = j - jIncrement; // Adjust for the normal for loop increment
+                                    while (!elevOnHour) { // until we find an on the hour
+                                        elevMinIndex = data[ACEElevIndex].Elev[j].time.indexOf(":") + 1; // get the index at the 'minutes'
+                                        elevMin = data[ACEElevIndex].Elev[j].time.substr(elevMinIndex, 2) // retrieve the 'minutes'
+                                        if (elevMin == "00") // is it on the hour
+                                            elevOnHour = true; // end while loop
+                                        else j++ // increment and loop
+                                    }
+                                } else i++
                             }
                         }
                     }
@@ -310,7 +314,7 @@ function dataACE(callback) {
                     if (i < data[ACEFlowIndex].Outflow.length) {
 
                         if (data[ACEFlowIndex].Outflow[i].value !== -99)
-                            flow = data[ACEFlowIndex].Outflow[i].value + " " + convertStringToUTC(data[ACEFlowIndex].Outflow[i].time);
+                            flow = data[ACEFlowIndex].Outflow[i].value // commented out for production + " " + convertStringToUTC(data[ACEFlowIndex].Outflow[i].time);
 
                     } else flow = 'Missing';
 
