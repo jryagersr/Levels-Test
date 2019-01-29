@@ -2251,8 +2251,8 @@ module.exports = [
                 dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
-                adLogoSrc: "/static/assets/img/pbc.jpg",
-                adLogoUrl: "http://piedmontbassclassics.com/MainPage2.html",
+                adLogoSrc: "",
+                adLogoUrl: "",
                 adCharitySrc: "/static/assets/img/warriors-on-the-water.png",
                 adCharityUrl: "https://www.warriorsonthewater.com/"
             },

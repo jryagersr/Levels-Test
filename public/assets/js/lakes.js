@@ -59,10 +59,13 @@ const states = [{
         state: "Nevada",
         id: "nv"
     },
-
     {
         state: "North Carolina",
         id: "nc"
+    },
+    {
+        state: "New Mexico",
+        id: "nm"
     },
     {
         state: "New York",

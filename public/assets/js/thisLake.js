@@ -53,18 +53,18 @@ function buildTable(data) {
         var elev = "N/A";
         var flow = "N/A";
         // Check to see if data contains date, time, elev, or flow. If not it will stay as "N/A"
-        if (data[i].date) {
+        if (typeof data[i].date !== 'undefined') {
             date = data[i].date;
         }
-        if (data[i].time) {
+        if (typeof data[i].time !== 'undefined') {
             time = data[i].time;
         }
-        if (data[i].elev) {
+        if (typeof data[i].elev !== 'undefined') {
             elev = data[i].elev;
         }
-        //if (data[i].flow) {
-        flow = data[i].flow;
-        // }
+        if (typeof data[i].flow !== 'undefined') {
+            flow = data[i].flow;
+        }
 
         // Create the HTML Well (Section) and Add the table content for each reserved table
         var lakeSection = $("<tr>");
