@@ -277,6 +277,31 @@ module.exports = [
         state: "Arizona",
 
         lakes: [
+
+            {
+                bodyOfWater: "Alamo", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["18-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 1440, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0,
+                normalPool: 1160.4,
+                elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=157145&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+                flowURL: "none",
+                href: "/lakes/brantley",
+                dataSource: ["ACE"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
             {
                 bodyOfWater: "Havasu", // lake name
                 data: [
@@ -301,33 +326,35 @@ module.exports = [
                 adLogoSrc: "",
                 adLogoUrl: ""
             },
-            {
-                bodyOfWater: "Roosevelt", // lake name
-                data: [
+            /*
+                        {
+                            bodyOfWater: "Roosevelt", // lake name
+                            data: [
 
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
-                refreshInterval: 30, //minutes
-                lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: 0.0, // ft but data reported as a delta gage height
-                normalPool: 2094.0,
-                elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=52327029&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN",
-                flowURL: "none",
-                href: "/lakes/rooseveltaz",
-                dataSource: ["USGS"], // array of calls to make to retrieve data
-                resultsLink: "undefined",
-                entryLink: "",
-                adLogoSrc: "",
-                adLogoUrl: ""
-            }
+                                {
+                                    elev: ["N/A"], //array of elevations
+                                    flow: ["Lots"], //array of flows
+                                    date: ["18-03/02"], //array of elevation dates
+                                    time: ["time"], //arrat if elevation times
+                                }
+                            ],
+                            refreshInterval: 30, //minutes
+                            lastRefresh: "12/31/18", // a Date 
+                            seaLevelDelta: 0.0, // ft but data reported as a delta gage height
+                            normalPool: 2094.0,
+                            elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=52327029&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN",
+                            flowURL: "none",
+                            href: "/lakes/rooseveltaz",
+                            dataSource: ["USGS"], // array of calls to make to retrieve data
+                            resultsLink: "undefined",
+                            entryLink: "",
+                            adLogoSrc: "",
+                            adLogoUrl: ""
+                        }*/
 
         ]
-    }, {
+    },
+    {
 
         state: "Arkansas",
 
@@ -1870,7 +1897,8 @@ module.exports = [
                 adLogoUrl: ""
             }
         ]
-    }, {
+    },
+    {
         state: "New Mexico",
         lakes: [
 
@@ -2020,7 +2048,8 @@ module.exports = [
                 adLogoUrl: ""
             }
         ]
-    }, {
+    },
+    {
         state: "New York",
         lakes: [
 
@@ -2049,7 +2078,8 @@ module.exports = [
                 adLogoUrl: ""
             }
         ]
-    }, {
+    },
+    {
         state: "North Carolina",
         lakes: [
 
