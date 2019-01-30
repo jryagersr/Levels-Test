@@ -116,6 +116,7 @@ function elevUSGS(callback) {
             // k = j;
             if (dataValues.length <= 100) // If we only get 93 data values when we requested 96 hours, then it's hourly
                 jIncrement = 1;
+            else if (['Hudson', 'Lawtonka'].includes(currentLake.bodyOfWater)) jIncrement = 2;
             else jIncrement = 4;
             for (j = 0; j < dataValues.length; j += jIncrement) {
                 let element = dataValues[j];
@@ -135,7 +136,7 @@ function elevUSGS(callback) {
                     flow: "N/A"
                 });
             }
-            callback(null, displayBatch);
+             callback(null, displayBatch); 
         })
 }
 
