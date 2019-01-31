@@ -1567,7 +1567,7 @@ module.exports = [
                         entryLink: ""
                     }
                 ]
-            },{
+            }, {
                 trail: "Phantom Outdoors Invitational",
                 tournaments: [
 
@@ -4624,6 +4624,53 @@ module.exports = [
                 ]
             }
         ]
+    },
+
+    {
+        organization: "Tarheel Bass",
+        trails: [{
+            trail: "Team Trail",
+            tournaments: [
+
+                {
+                    date: "19-03/02",
+                    lake: "Badin",
+                    ramp: "Alcoa Access",
+                    state: "NC",
+                    txDetail: "Tarheel Bass Series 1",
+                    resultsLink: "undefined",
+                    entryLink: ""
+                },
+                {
+                    date: "19-04/27",
+                    lake: "Norman",
+                    ramp: "Pinnacle",
+                    state: "NC",
+                    txDetail: "Tarheel Bass Series 2",
+                    resultsLink: "undefined",
+                    entryLink: ""
+                },
+                {
+                    date: "19-05/18",
+                    lake: "High Rock",
+                    ramp: "Tamarac",
+                    state: "NC",
+                    txDetail: "Tarheel Bass Series 3",
+                    resultsLink: "undefined",
+                    entryLink: ""
+                },
+                {
+
+                    date: "19-06/15",
+                    lake: "Falls",
+                    ramp: "Ledge Rock",
+                    state: "NC",
+                    txDetail: "Tarheel Bass Series 4",
+                    resultsLink: "undefined",
+                    entryLink: ""
+                }
+            ]
+        }]
     },
 
     {
