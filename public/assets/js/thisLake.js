@@ -88,8 +88,13 @@ function buildChart(data) {
     let dataElevBatch = [];
     let dataFlowBatch = [];
     // Loop through our data
-    for (var i = 11; i >= 0; i--) {
-        labelBatch.push(data[i].time);
+    for (var i = 23; i >= 0; i--) {
+        if (i === 23 || i === 11 || i === 0) {
+            labelBatch.push(data[i].time);
+        }
+        else {
+            labelBatch.push("");
+        }
         dataElevBatch.push(data[i].elev);
         dataFlowBatch.push(data.flow);
     }
@@ -118,7 +123,31 @@ function buildChart(data) {
         },
 
         // Configuration options go here
-        options: {}
+        options: {
+            layout: {
+                padding: {
+                    top: 100,
+                    bottom: 100
+                }
+            },
+            responsive: true,
+            scales: {
+                xAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Hour'
+                    }
+                }],
+                yAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Level (feet)'
+                    }
+                }]
+            }
+        }
     });
 
 }
