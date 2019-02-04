@@ -215,13 +215,16 @@ h1, h2, h3 {
 
 /* Chart Styles */
 .chart-container {
-    margin-left: auto;
-    margin-right: auto;
+    width: 90vw;
+    position: relative;
+    
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 1023px) {
     .chart-container {
-        width: 75%;
+        width: 75vw;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
