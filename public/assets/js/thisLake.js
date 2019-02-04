@@ -211,6 +211,7 @@ function dataACE(callback) {
 
             let ACEElevNum = 0;
             let ACEFlowNum = 0;
+            ACEFlow = typeof data[2].Outflow !== 'undefined';
             if (ACEFlow) { // If there are flows, get the data indexes set up for the for loop below.
                 if (Date.parse(data[ACEElevIndex].Elev[ACEElevNum].time) !== Date.parse(data[ACEFlowIndex].Outflow[ACEFlowNum].time)) {
                     // Now need to line up the dates
