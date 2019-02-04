@@ -87,8 +87,8 @@ function buildChart(data) {
     let labelBatch = [];
     let dataElevBatch = [];
     let dataFlowBatch = [];
-    // Loop through our data. Modifying i < num will change how far we graph back in time.
-    for (var i = 0; i < 12; i++) {
+    // Loop through our data
+    for (var i = 11; i >= 0; i--) {
         labelBatch.push(data[i].time);
         dataElevBatch.push(data[i].elev);
         dataFlowBatch.push(data.flow);
