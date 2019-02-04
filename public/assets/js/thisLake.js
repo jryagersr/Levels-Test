@@ -87,9 +87,15 @@ function buildChart(data) {
     let labelBatch = [];
     let dataElevBatch = [];
     let dataFlowBatch = [];
-    // Loop through our data
-    for (var i = 23; i >= 0; i--) {
-        if (i === 23 || i === 11 || i === 0) {
+    // Loop through our data for 24 data points if we have it
+    if (data.length -1 > 24) {
+        counter = 23;
+    }
+    else {
+        counter = data.length - 1;
+    }
+    for (var i = counter; i >= 0; i--) {
+        if (i === counter || i === Math.round(counter / 2) || i === 0) {
             labelBatch.push(data[i].time);
         }
         else {
@@ -124,26 +130,22 @@ function buildChart(data) {
 
         // Configuration options go here
         options: {
-            layout: {
-                padding: {
-                    top: 100,
-                    bottom: 100
-                }
-            },
             responsive: true,
             scales: {
                 xAxes: [{
                     display: true,
                     scaleLabel: {
                         display: true,
-                        labelString: 'Hour'
+                        labelString: 'Hour',
+                        fontSize: 24
                     }
                 }],
                 yAxes: [{
                     display: true,
                     scaleLabel: {
                         display: true,
-                        labelString: 'Level (feet)'
+                        labelString: 'Level (feet)',
+                        fontSize: 24
                     }
                 }]
             }
