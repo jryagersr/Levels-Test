@@ -86,24 +86,18 @@ function buildChart(data) {
     // Our data must be parsed into separate flat arrays for the chart
     let labelBatch = [];
     let dataElevBatch = [];
-    let dataFlowBatch = [];
     // Loop through our data for 24 data points if we have it
-    if (data.length -1 > 24) {
-        counter = 23;
+    for (var i = 0; i < data.length; i++) {
+            if (!labelBatch.includes(data[i].date)) {
+                labelBatch.push(data[i].date);
+                dataElevBatch.push(data[i].elev);
+            }
+            if (labelBatch.length > 6) {
+                break;
+            }
     }
-    else {
-        counter = data.length - 1;
-    }
-    for (var i = counter; i >= 0; i--) {
-        if (i === counter || i === Math.round(counter / 2) || i === 0) {
-            labelBatch.push(data[i].time);
-        }
-        else {
-            labelBatch.push("");
-        }
-        dataElevBatch.push(data[i].elev);
-        dataFlowBatch.push(data.flow);
-    }
+    labelBatch.reverse();
+    dataElevBatch.reverse();
     var ctx = document.getElementById('myChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
     grd.addColorStop(0, 'rgb(0,140,255)');
@@ -120,11 +114,6 @@ function buildChart(data) {
                 // backgroundColor: 'rgb(179,221,255)',
                 borderColor: 'rgb(0, 140, 255)',
                 data: dataElevBatch
-            }, {
-                label: "Flow",
-                // backgroundColor: 'hsl(122,40,50)',
-                borderColor: 'rgb(76, 175, 80)',
-                data: dataFlowBatch
             }]
         },
 
@@ -869,6 +858,21 @@ $.ajax({
             }
         }
     })
+
+
+    // Fetch weather data
+    // let key = "vJcdHzCyQMDapjrtVTDTExkrTVUEIkNq";
+    // $.ajax({
+    //     url: "//www.ncdc.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=ZIP:27502&startdate=2019-01-28&enddate=2019-02-05",
+    //     method: "GET",
+    //     headers: {
+    //         'Access-Control-Allow-Origin': '*',
+    //         token: key
+    //     }
+    // })
+    //     .then(function(data) {
+    //         console.log(data);
+    //     });
 
 
 
