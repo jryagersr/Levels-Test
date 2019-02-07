@@ -57,7 +57,7 @@ module.exports = [
     },
     {
         organization: "ABA",
-        trails: [{
+        trails: [/*{
                 trail: "OS AL North",
                 tournaments: [
 
@@ -517,9 +517,9 @@ module.exports = [
                         entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=12&RegionName=R3"
                     }
                 ]
-            },
+            },*/
             {
-                trail: "OS NC",
+                trail: "Open Series NC",
                 tournaments: [
 
                     {
@@ -569,7 +569,7 @@ module.exports = [
                     }
                 ]
             },
-            {
+            /*{
                 trail: "OS NY",
                 tournaments: [
 
@@ -976,7 +976,7 @@ module.exports = [
                         entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=10&RegionName=R6"
                     }
                 ]
-            },
+            },*/
             {
                 trail: "Open Series VA",
                 tournaments: [
@@ -1097,7 +1097,7 @@ module.exports = [
             ]
         }]
     },
-    {
+    /*{
         organization: "BassBusters",
         trails: [
 
@@ -1294,8 +1294,8 @@ module.exports = [
                 ]
             }
         ]
-    },
-    {
+    },*/
+    /*{
         organization: "BassChamps",
         trails: [{
                 trail: "Central",
@@ -1466,7 +1466,7 @@ module.exports = [
                 ]
             }
         ]
-    },
+    },*/
     {
         organization: "Bojangles",
         trails: [{
@@ -2274,7 +2274,7 @@ module.exports = [
                         lake: "Kerr",
                         ramp: "Flemington",
                         state: "NC-VA",
-                        txDetail: "Gold 1",
+                        txDetail: "Qualifier 1",
                         resultsLink: "undefined",
                         entryLink: ""
                     },
@@ -2283,7 +2283,7 @@ module.exports = [
                         lake: "Falls",
                         ramp: "Ledge Rock",
                         state: "NC",
-                        txDetail: "Gold 2",
+                        txDetail: "Qualifier 2",
                         resultsLink: "undefined",
                         entryLink: ""
                     },
@@ -2292,7 +2292,7 @@ module.exports = [
                         lake: "Harris",
                         ramp: "Crosspointe",
                         state: "NC",
-                        txDetail: "Gold 3",
+                        txDetail: "Qualifier 3",
                         resultsLink: "undefined",
                         entryLink: ""
                     },
@@ -2301,7 +2301,7 @@ module.exports = [
                         lake: "Jordan",
                         ramp: "Farrington",
                         state: "NC",
-                        txDetail: "Gold 4",
+                        txDetail: "Qualifier 4",
                         resultsLink: "undefined",
                         entryLink: ""
                     },
@@ -2310,7 +2310,7 @@ module.exports = [
                         lake: "Jordan",
                         ramp: "Farrington",
                         state: "NC",
-                        txDetail: "Gold 5",
+                        txDetail: "Qualifier 5",
                         resultsLink: "undefined",
                         entryLink: ""
                     },
@@ -2319,7 +2319,7 @@ module.exports = [
                         lake: "Kerr",
                         ramp: "Flemington",
                         state: "NC-VA",
-                        txDetail: "Gold 6",
+                        txDetail: "Qualifier 6",
                         resultsLink: "undefined",
                         entryLink: ""
                     },
@@ -3139,8 +3139,8 @@ module.exports = [
 
                     {
                         date: "19-02/02",
-                        lake: "Waccamaw Rvr",
-                        ramp: "Bucksport",
+                        lake: "Santee",
+                        ramp: "Blacks Camp",
                         state: "SC",
                         txDetail: "CBC",
                         resultsLink: "undefined",
@@ -3172,6 +3172,15 @@ module.exports = [
                         txDetail: "CBC SC",
                         resultsLink: "undefined",
                         entryLink: ""
+                    },
+                    {
+                        date: "19-10/25",
+                        lake: "Santee",
+                        ramp: "John C Land",
+                        state: "SC",
+                        txDetail: "CBC SC",
+                        resultsLink: "undefined",
+                        entryLink: ""
                     }
                 ]
             },
@@ -3182,7 +3191,7 @@ module.exports = [
                     {
                         date: "19-02/16",
                         lake: "Norman",
-                        ramp: "Pinnacle?",
+                        ramp: "Pinnacle",
                         state: "NC",
                         txDetail: "CBC NC",
                         resultsLink: "undefined",
@@ -3314,7 +3323,7 @@ module.exports = [
         organization: "FLW",
         trails: [
 
-            {
+            /*{
                 trail: "BFL All-American",
                 tournaments: [
 
@@ -3736,7 +3745,7 @@ module.exports = [
                         entryLink: ""
                     }
                 ]
-            },
+            },*/
             {
                 trail: "BFL Hoosier",
                 tournaments: [
@@ -3789,7 +3798,7 @@ module.exports = [
                 ]
             },
 
-            {
+            /*{
                 trail: "BFL Illini",
                 tournaments: [
 
@@ -4094,9 +4103,9 @@ module.exports = [
                         entryLink: ""
                     }
                 ]
-            },
+            },*/
             {
-                trail: "BFL North Carolina",
+                trail: "BFL NC",
                 tournaments: [
 
                     {
@@ -4146,7 +4155,7 @@ module.exports = [
                     }
                 ]
             },
-            {
+            /*{
                 trail: "BFL Ozark",
                 tournaments: [
 
@@ -4196,7 +4205,7 @@ module.exports = [
                         entryLink: ""
                     }
                 ]
-            },
+            },*/
             {
                 trail: "BFL Piedmont",
                 tournaments: [
@@ -4249,7 +4258,7 @@ module.exports = [
                 ]
             },
 
-            {
+            /*{
                 trail: "BFL Savannah",
                 tournaments: [
 
@@ -4299,7 +4308,7 @@ module.exports = [
                         entryLink: ""
                     }
                 ]
-            },
+            },*/
             {
                 trail: "BFL Shenandoah",
                 tournaments: [
@@ -4351,7 +4360,7 @@ module.exports = [
                     }
                 ]
             },
-            {
+            /*{
                 trail: "BFL Volunteer",
                 tournaments: [
 
@@ -4401,7 +4410,7 @@ module.exports = [
                         entryLink: ""
                     }
                 ]
-            }
+            }*/
         ]
     },
     {
@@ -4626,7 +4635,7 @@ module.exports = [
         ]
     },
 
-    {
+    /*{
         organization: "Tarheel Bass",
         trails: [{
             trail: "Team Trail",
@@ -4671,9 +4680,9 @@ module.exports = [
                 }
             ]
         }]
-    },
+    },*/
 
-    {
+    /*{
         organization: "TXTT",
         trails: [{
             trail: "Team Trail",
@@ -4727,5 +4736,5 @@ module.exports = [
                 }
             ]
         }]
-    }
+    }*/
 ]
