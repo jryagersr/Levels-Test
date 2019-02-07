@@ -586,7 +586,7 @@ module.exports = function (app) {
         // Get the most recent 30 days data
         for (i = 0; i < 30; i++) {
           // find next end of row
-          for (j = j - 5; body.substr(j, 5) !== "</tr>"; j--) {}
+          for (j = j - 5; body.substr(j, 5) !== "</tr>"; j--) { }
 
           data.push({
             lakeName: lakeName,
@@ -671,5 +671,38 @@ module.exports = function (app) {
 
 
   });
+
+
+  // Fetch weather data
+  // app.get("/api/weather", function (req, res) {
+  //   getData(function (error, data) {
+  //     if (error) {
+  //       res.send(error);
+  //       return;
+  //     } else {
+  //       res.json(data);
+  //     }
+  //   });
+
+  //   function getData(callback) {
+  //     var request = require("request");
+  //     var datasets = "https://www.ncdc.noaa.gov/cdo-web/api/v2/datasets";
+  //     var datasetid = "PRES";
+  //     var url = "https://www.ncdc.noaa.gov/cdo-web/api/v2/data?datasetid=" + datasetid + "&locationid=ZIP:27502&startdate=2019-01-06&enddate=2019-02-06";
+
+  //     let key = "vJcdHzCyQMDapjrtVTDTExkrTVUEIkNq";
+  //     var options = {
+  //       url: datasets,
+  //       method: "GET",
+  //       headers: {
+  //         token: key
+  //       }
+  //     }
+  //     request(options, function (error, response, body) {
+  //       var data = JSON.parse(body);
+  //       callback(null, data);
+  //     });
+  //   }
+  // });
 
 }; // End of module.exports

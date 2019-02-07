@@ -1,3 +1,4 @@
+
 // Pull the lake name from the end of the current URL
 let parsedURL = window.location.href.split("/");
 let lakeRoute = parsedURL[parsedURL.length - 1];
@@ -78,27 +79,27 @@ function buildTable(data) {
         $("#lakeWell-" + i + 1).append("<td>" + elev + "</td>");
         $("#lakeWell-" + i + 1).append("<td>" + flow + "</td>");
     }
-    buildChart(data);
+    buildElevChart(data);
 }
 
 // Function to build chart on page
-function buildChart(data) {
+function buildElevChart(data) {
     // Our data must be parsed into separate flat arrays for the chart
     let labelBatch = [];
     let dataElevBatch = [];
     // Loop through our data for 24 data points if we have it
     for (var i = 0; i < data.length; i++) {
-            if (!labelBatch.includes(data[i].date)) {
-                labelBatch.push(data[i].date);
-                dataElevBatch.push(data[i].elev);
-            }
-            if (labelBatch.length > 6) {
-                break;
-            }
+        if (!labelBatch.includes(data[i].date)) {
+            labelBatch.push(data[i].date);
+            dataElevBatch.push(data[i].elev);
+        }
+        if (labelBatch.length > 6) {
+            break;
+        }
     }
     labelBatch.reverse();
     dataElevBatch.reverse();
-    var ctx = document.getElementById('myChart').getContext('2d');
+    var ctx = document.getElementById('myElevChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
     grd.addColorStop(0, 'rgb(0,140,255)');
     grd.addColorStop(1, 'rgb(0,55,255)');
@@ -125,8 +126,8 @@ function buildChart(data) {
                     display: true,
                     scaleLabel: {
                         display: true,
-                        labelString: 'Hour',
-                        fontSize: 24
+                        labelString: 'Date',
+                        fontSize: 20
                     }
                 }],
                 yAxes: [{
@@ -134,13 +135,78 @@ function buildChart(data) {
                     scaleLabel: {
                         display: true,
                         labelString: 'Level (feet)',
-                        fontSize: 24
+                        fontSize: 20
                     }
                 }]
             }
         }
     });
+    console.log(data[0].flow);
+    if (data[0].flow !== "N/A" && typeof data[0].flow !== 'undefined') {
+        buildFlowChart(data);
+    }
+}
 
+// Function to build flow chart on page
+function buildFlowChart(data) {
+    $("#flowChart").show();
+    // Our data must be parsed into separate flat arrays for the chart
+    let labelBatch = [];
+    let dataFlowBatch = [];
+    // Loop through our data for 24 data points if we have it
+    for (var i = 0; i < data.length; i++) {
+        if (!labelBatch.includes(data[i].date)) {
+            labelBatch.push(data[i].date);
+            dataFlowBatch.push(data[i].flow);
+        }
+        if (labelBatch.length > 6) {
+            break;
+        }
+    }
+    labelBatch.reverse();
+    dataFlowBatch.reverse();
+    var ctx = document.getElementById('myFlowChart').getContext('2d');
+    var grd = ctx.createLinearGradient(0, 0, 170, 0);
+    grd.addColorStop(0, 'rgb(0,140,255)');
+    grd.addColorStop(1, 'rgb(0,55,255)');
+    var chart = new Chart(ctx, {
+        // The type of chart we want to create
+        type: 'line',
+
+        // The data for our dataset
+        data: {
+            labels: labelBatch,
+            datasets: [{
+                label: "Flow",
+                // backgroundColor: 'rgb(179,221,255)',
+                borderColor: 'rgb(0, 140, 255)',
+                data: dataFlowBatch
+            }]
+        },
+
+        // Configuration options go here
+        options: {
+            responsive: true,
+            scales: {
+                xAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Date',
+                        fontSize: 20
+                    }
+                }],
+                yAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Flow (feet)',
+                        fontSize: 20
+                    }
+                }]
+            }
+        }
+    });
 }
 
 // Function to make elevation USGS call
@@ -859,21 +925,15 @@ $.ajax({
         }
     })
 
-
-    // Fetch weather data
-    // let key = "vJcdHzCyQMDapjrtVTDTExkrTVUEIkNq";
+    // Api call to fetch weather data
+    // let apiKey = "d620419cfbb975f425c6262fefeef8f3";
     // $.ajax({
-    //     url: "//www.ncdc.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=ZIP:27502&startdate=2019-01-28&enddate=2019-02-05",
-    //     method: "GET",
-    //     headers: {
-    //         'Access-Control-Allow-Origin': '*',
-    //         token: key
-    //     }
+    //     url: "http://maps.openweathermap.org/maps/2.0/weather/TA2/{z}/{x}/{y}?date=1527811200&opacity=0.9&fill_bound=true&appid=" + apiKey,
+    //     method: "GET"
     // })
     //     .then(function(data) {
     //         console.log(data);
     //     });
-
 
 
 // // Switch to set our api urls based on lake name
