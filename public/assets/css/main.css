@@ -271,13 +271,15 @@ h1, h2, h3 {
     margin-bottom: 10px;
 }
 
-.banner {
+.ad-bottom-banner {
     background-color: rgba(199, 199, 199, 0.3);
-    width: 70%;
-    height: auto;
+    background-color: white;
+    width: 100%;
+    height: 70px;
     position: fixed;
-    bottom: 5px;
-    left: 15%;
+    bottom: 0;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .fa-window-close {
@@ -289,8 +291,9 @@ h1, h2, h3 {
 }
 
 .ad-footer-img {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 50px;
+    padding: 10px 0 0px;
 }
 
  @media only screen and (max-width: 400px) {
