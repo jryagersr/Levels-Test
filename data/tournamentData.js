@@ -3320,6 +3320,79 @@ module.exports = [
         }, ]
     },
     {
+        organization: "Eastern NC",
+        trails: [{
+            trail: "Bass Challenge",
+            tournaments: [
+
+                {
+                    date: "19-03/24",
+                    lake: "Roanoke",
+                    ramp: "Water Street",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "undefined",
+                    entryLink: "https://www.ncbasschallenge.com/2019-tournament-schedule/"
+                },
+                {
+                    date: "19-04/14",
+                    lake: "Pamlico Rvr",
+                    ramp: "Havens Garden",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "undefined",
+                    entryLink: "https://www.ncbasschallenge.com/2019-tournament-schedule/"
+                },
+                {
+                    date: "19-05/19",
+                    lake: "Neuse Rvr",
+                    ramp: "Lawsons Creek",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "undefined",
+                    entryLink: "https://www.ncbasschallenge.com/2019-tournament-schedule/"
+                },
+                {
+
+                    date: "19-06/02",
+                    lake: "Roanoke Rvr",
+                    ramp: "Water Street",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "undefined",
+                    entryLink: "https://www.ncbasschallenge.com/2019-tournament-schedule/"
+                },
+                {
+                    date: "19-07/14",
+                    lake: "Chowan Rvr ",
+                    ramp: "Tunis",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "undefined",
+                    entryLink: "https://www.ncbasschallenge.com/2019-tournament-schedule/"
+                },
+                {
+                    date: "19-08/04",
+                    lake: "Neuse Rvr",
+                    ramp: "Lawsons Creek",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "undefined",
+                    entryLink: "https://www.ncbasschallenge.com/2019-tournament-schedule/"
+                },
+                {
+                    date: "19-08/31",
+                    lake: "Roanoke Rvr",
+                    ramp: "Water Street",
+                    state: "NC",
+                    txDetail: "2-Day",
+                    resultsLink: "undefined",
+                    entryLink: ""
+                }
+            ]
+        }, ]
+    },
+    {
         organization: "FLW",
         trails: [
 
