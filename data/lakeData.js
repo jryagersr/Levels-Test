@@ -3749,6 +3749,33 @@ module.exports = [
         state: "Virginia",
         lakes: [
 
+
+            {
+                bodyOfWater: "Gaston", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flow
+                        date: ["19-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 1440, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0,
+                normalPool: 200.0,
+                elevURL: "/api/alabama",
+                flowURL: "none",
+                href: "/lakes/gaston",
+                dataSource: ["ALAB", "loadAds"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "/static/assets/img/jsegenerac.png",
+                adLogoUrl: "http://jacksonsuperiorelectric.com/",
+                adTxSrc: "",
+                adTxUrl: ""
+            },
             {
                 bodyOfWater: "James", // lake name
                 data: [
@@ -3822,7 +3849,34 @@ module.exports = [
                 entryLink: "",
                 adLogoSrc: "",
                 adLogoUrl: ""
-            }
+            },
+
+            {
+                bodyOfWater: "Smith Mountain", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flow
+                        date: ["19-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 1440, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0,
+                normalPool: 795.0,
+                elevURL: "/api/alabama",
+                flowURL: "none",
+                href: "/lakes/smithmountain",
+                dataSource: ["ALAB", "loadAds"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "/static/assets/img/jsegenerac.png",
+                adLogoUrl: "http://jacksonsuperiorelectric.com/",
+                adTxSrc: "",
+                adTxUrl: ""
+            },
         ]
     },
     {

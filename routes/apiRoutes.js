@@ -419,6 +419,11 @@ module.exports = function (app) {
         case "gaston":
           url = "http://gaston.uslakes.info/Level/Calendar"
           break;
+
+        case "smithmountain":
+          url = "http://smithmountain.uslakes.info/Level/Calendar"
+          break;
+
       }
 
       // Get today's date to build request url
