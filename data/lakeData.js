@@ -3119,7 +3119,7 @@ module.exports = [
                 ],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: 0,
+                seaLevelDelta: -6.38, // Cooper River gage height is -6.38, it's a strange USGS site
                 normalPool: 0.0,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02172053&period=PT96H&parameterCd=00065&siteType=ST&siteStatus=all",
                 flowURL: "none",
