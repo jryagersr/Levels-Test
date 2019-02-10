@@ -295,7 +295,7 @@ module.exports = [
                 normalPool: 1160.4,
                 elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=157145&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
                 flowURL: "none",
-                href: "/lakes/brantley",
+                href: "/lakes/alamo",
                 dataSource: ["ACE"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
@@ -315,8 +315,8 @@ module.exports = [
                 ],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
-                normalPool: 1120.0,
+                seaLevelDelta: 445.0, // 1329ft but data reported as a delta to full pool
+                normalPool: 445.0,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=423525088260400&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/havasu",
