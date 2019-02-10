@@ -3273,6 +3273,30 @@ module.exports = [
                 entryLink: "",
                 adLogoSrc: "/static/assets/img/catt.png",
                 adLogoUrl: "https://www.cattteamtrail.com/"
+            },
+            {
+                bodyOfWater: "Wylie", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flow
+                        date: ["19-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 30, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 400.0,
+                normalPool: 500.0,
+                elevURL: "https://lakes.duke-energy.com/Data/Detail/3_Month/18.txt",
+                flowURL: "none",
+                href: "/lakes/wylie",
+                dataSource: ["DUKE"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
             }
         ]
     },
