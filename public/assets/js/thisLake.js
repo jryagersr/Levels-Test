@@ -1,4 +1,3 @@
-
 // Pull the lake name from the end of the current URL
 let parsedURL = window.location.href.split("/");
 let lakeRoute = parsedURL[parsedURL.length - 1];
@@ -213,17 +212,20 @@ function buildFlowChart(data) {
 function elevUSGS(callback) {
     // API call for flow
     $.ajax({
-        url: elevURL,
-        method: "GET",
-    })
+            url: elevURL,
+            method: "GET",
+        })
         .then(function (data) {
-            console.log('USGS Elev Data', data);
+            console.log("USGS Call")
+            console.log(data);
             // Parse the json data return to find the values we want
             let jIncrement = 1;
             let dataValues = data.value.timeSeries[0].values[0].value;
             // Reverse the order of our data so most recent date is first
             dataValues.reverse();
 
+            // If reported level is not based on MSL, set the seaLevelDelta to add to the level
+            // to convert to MSL based.
             if (seaLevelDelta !== 0)
                 elevationAdjust = (parseFloat(dataValues[0].value) + seaLevelDelta).toFixed(2);
             else {
@@ -273,9 +275,9 @@ function elevUSGS(callback) {
 function flowUSGS(callback) {
     // API call for flow
     $.ajax({
-        url: flowURL,
-        method: "GET",
-    })
+            url: flowURL,
+            method: "GET",
+        })
         .then(function (data) {
             console.log("flowUSGS data ", data);
             // Parse through the json data to find the values we want
@@ -296,33 +298,41 @@ function flowUSGS(callback) {
 function dataACE(callback) {
     // API call for flow
     $.ajax({
-        url: "/api/a2w",
-        method: "GET",
-        data: {
-            a2wURL: elevURL,
-        }
-    })
+            url: "/api/a2w",
+            method: "GET",
+            data: {
+                a2wURL: elevURL,
+            }
+        })
         .then(function (data) {
+            console.log("ACE Call");
             console.log(data);
 
             let ACEFlow = false;
-            let ACEFlowIndex = 1;
+            let ACEFlowIndex = -1;
             let ACEElevIndex = 0;
+            let ACEElevNum = 0;
+            let ACEFlowNum = 0;
             let exceptionLake = false;
 
-            // default value, this is when ACE has no Flow Data included
+            // default value of ACEFlow is false, indicating ACE has no Flow Data included
+            // default value of ACEFlowIndex is -1, indicating
             // Sometimes OutFlow is index 1, sometimes it's index 2, or 3
             // And then there is Ross Barnett, that doesn't have flow and only has 3 in the array!
-            if (!['Brantley', 'Ross Barnett', 'Okeechobee', 'Tohopekaliga', 'Istokpoga', 'Columbus', 'Ouachita', 'Mendocino', 'New Hogan', 'Pine Flat', 'Sonoma', 'Success'].includes(currentLake.bodyOfWater)) {
-                if (typeof data[1].Outflow !== 'undefined' || typeof data[2].Outflow !== 'undefined' || typeof data[3].Outflow !== 'undefined') {
-                    ACEFlow = true;
-                    if (typeof data[1].Outflow !== 'undefined')
-                        ACEFlowIndex = 1;
-                    else if (typeof data[2].Outflow !== 'undefined')
-                        ACEFlowIndex = 2;
-                    else ACEFlowIndex = 3;
-                }
+            
+            // Automating the AceFlowIndex value identification code to automatically determine based on data (Fix the Ace Outflow problem)
+            let aa = 0
+            while (aa < data.length && typeof data[aa].Outflow == 'undefined') {
+                AceFlowIndex = aa;
+                aa++
+            }
+            if (aa < data.length && aa > 0) {
+                ACEFlow = true;
+                ACEFlowIndex = aa;
             } else exceptionLake = true;
+
+            // Log the ACE flow index for debug
+            console.log('ACEFlowIndex:', ACEFlowIndex)
 
             let firstDate = data[ACEElevIndex].Elev[0].time.split(" ");
             let secondDate = data[ACEElevIndex].Elev[1].time.split(" ");
@@ -330,7 +340,7 @@ function dataACE(callback) {
             let isLakeIstokpoga = currentLake.bodyOfWater == 'Istokpoga'; // default value, this is when the ACE data is Fucked Up like Istokpoga in Florida, Damn...
 
             // These have 120 elev data and 5 Flow, ignore flow data
-            if (['Truman', 'Pomme De Terre', "Stockton", "Rend",].includes(currentLake.bodyOfWater))
+            if (['Truman', 'Pomme De Terre', "Stockton", "Rend", ].includes(currentLake.bodyOfWater))
                 ACEFlow = false;
 
             // Get current Date, Time and Elev
@@ -338,9 +348,6 @@ function dataACE(callback) {
 
             // Indexes into data for the first entry
 
-            let ACEElevNum = 0;
-            let ACEFlowNum = 0;
-            ACEFlow = typeof data[1].Outflow !== 'undefined';
             if (ACEFlow) { // If there are flows, get the data indexes set up for the for loop below.
                 if (Date.parse(data[ACEElevIndex].Elev[ACEElevNum].time) !== Date.parse(data[ACEFlowIndex].Outflow[ACEFlowNum].time)) {
                     // Now need to line up the dates
@@ -549,14 +556,15 @@ function convertUTCDate(timestamp) {
 // Function to make elev TVA call
 function dataTVA(callback) {
     $.ajax({
-        url: "/api/tva",
-        method: "GET",
-        data: {
-            tvaDataURL: elevURL,
-            tvaLakeName: bodyOfWaterName
-        }
-    })
+            url: "/api/tva",
+            method: "GET",
+            data: {
+                tvaDataURL: elevURL,
+                tvaLakeName: bodyOfWaterName
+            }
+        })
         .then(function (data) {
+            console.log("TVA Call")
             console.log(data);
 
             if (seaLevelDelta !== 0)
@@ -604,14 +612,15 @@ function dataTVA(callback) {
 // Function to make elev Duke call
 function dataDuke(callback) {
     $.ajax({
-        url: "/api/duke",
-        method: "GET",
-        data: {
-            dukeDataURL: elevURL,
-            dukeLakeName: bodyOfWaterName
-        }
-    })
+            url: "/api/duke",
+            method: "GET",
+            data: {
+                dukeDataURL: elevURL,
+                dukeLakeName: bodyOfWaterName
+            }
+        })
         .then(function (data) {
+            console.log("DUKE Call")
             console.log(data);
             // adjust the elev for lakes with data relative to full pool (not from sealevel))
 
@@ -680,10 +689,12 @@ function dataDuke(callback) {
 function elevCUBE(callback) {
     // API call for flow
     $.ajax({
-        url: "/api/cube",
-        method: "GET",
-    })
+            url: "/api/cube",
+            method: "GET",
+        })
         .then(function (data) {
+            console.log("CUBE Call")
+            console.log(data)
             displayBatch = data;
             // Determine which lake has been selected of the three cube lakes
             if (lakeRoute === "highrock") {
@@ -712,13 +723,15 @@ function elevCUBE(callback) {
 function elevAlab(callback) {
     // API call for flow
     $.ajax({
-        url: "/api/alabama",
-        method: "GET",
-        data: ({
-            lakeRoute: lakeRoute
+            url: "/api/alabama",
+            method: "GET",
+            data: ({
+                lakeRoute: lakeRoute
+            })
         })
-    })
         .then(function (data) {
+            console.log("Alab Call")
+            console.log(data)
 
             // Set current Date, Time and Elev
             currentElev = data[0].elev;
@@ -734,14 +747,15 @@ function elevAlab(callback) {
 // Function to make elev SJRWMD call St Johns River Water Management District
 function dataSJRWMD(callback) {
     $.ajax({
-        url: "/api/sjrwmd",
-        method: "GET",
-        data: {
-            sjrwmdDataURL: elevURL,
-            sjrwmdLakeName: bodyOfWaterName
-        }
-    })
+            url: "/api/sjrwmd",
+            method: "GET",
+            data: {
+                sjrwmdDataURL: elevURL,
+                sjrwmdLakeName: bodyOfWaterName
+            }
+        })
         .then(function (data) {
+            console.log("CUBE Call");
             console.log(data);
             // Set current Date, Time and Elev
             currentElev = data[0].level;
@@ -778,14 +792,15 @@ function dataSJRWMD(callback) {
 // Function to make elev TWDB call Texas Water Development Board
 function dataTWDB(callback) {
     $.ajax({
-        url: "/api/twdb",
-        method: "GET",
-        data: {
-            twdbDataURL: elevURL,
-            twdbLakeName: bodyOfWaterName
-        }
-    })
+            url: "/api/twdb",
+            method: "GET",
+            data: {
+                twdbDataURL: elevURL,
+                twdbLakeName: bodyOfWaterName
+            }
+        })
         .then(function (data) {
+            console.log("CUBE Call");
             console.log(data);
             // Set current Date, Time and Elev
             currentElev = data[0].level;
@@ -843,9 +858,9 @@ $("#lakeTournaments").on("click", function (e) {
 // Declare variable to hold currentLake object
 var currentLake = {};
 $.ajax({
-    url: "/api/lake-data",
-    method: "GET",
-})
+        url: "/api/lake-data",
+        method: "GET",
+    })
     .then(function (data) {
         console.log(data);
         for (var i = 0; i < data.length; i++) {
@@ -925,15 +940,15 @@ $.ajax({
         }
     })
 
-    // Api call to fetch weather data
-    // let apiKey = "d620419cfbb975f425c6262fefeef8f3";
-    // $.ajax({
-    //     url: "http://maps.openweathermap.org/maps/2.0/weather/TA2/{z}/{x}/{y}?date=1527811200&opacity=0.9&fill_bound=true&appid=" + apiKey,
-    //     method: "GET"
-    // })
-    //     .then(function(data) {
-    //         console.log(data);
-    //     });
+// Api call to fetch weather data
+// let apiKey = "d620419cfbb975f425c6262fefeef8f3";
+// $.ajax({
+//     url: "http://maps.openweathermap.org/maps/2.0/weather/TA2/{z}/{x}/{y}?date=1527811200&opacity=0.9&fill_bound=true&appid=" + apiKey,
+//     method: "GET"
+// })
+//     .then(function(data) {
+//         console.log(data);
+//     });
 
 
 // // Switch to set our api urls based on lake name

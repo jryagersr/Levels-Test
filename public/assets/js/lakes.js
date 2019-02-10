@@ -8,6 +8,10 @@ const states = [{
         id: "al"
     },
     {
+        state: "Arkansas",
+        id: "ar"
+    },
+    {
         state: "Arizona",
         id: "az"
     },

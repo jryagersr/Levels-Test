@@ -295,7 +295,7 @@ module.exports = [
                 normalPool: 1160.4,
                 elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=157145&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
                 flowURL: "none",
-                href: "/lakes/brantley",
+                href: "/lakes/alamo",
                 dataSource: ["ACE"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
@@ -958,9 +958,7 @@ module.exports = [
                 adLogoSrc: "",
                 adLogoUrl: ""
             },
-
-
-            /*{
+            {
                 bodyOfWater: "Hatchineha", // lake name
                 data: [
 
@@ -983,7 +981,7 @@ module.exports = [
                 entryLink: "",
                 adLogoSrc: "",
                 adLogoUrl: ""
-            },*/
+            },
             {
                 bodyOfWater: "Istokpoga", // lake name
                 data: [
@@ -1032,8 +1030,7 @@ module.exports = [
                 adLogoSrc: "",
                 adLogoUrl: ""
             },
-
-            /*{
+            {
                 bodyOfWater: "Kissimmee", // lake name
                 data: [
 
@@ -1056,7 +1053,7 @@ module.exports = [
                 entryLink: "",
                 adLogoSrc: "",
                 adLogoUrl: ""
-            },*/
+            },
             {
                 bodyOfWater: "Minnehaha", // lake name
                 data: [
@@ -2283,6 +2280,32 @@ module.exports = [
                 adLogoUrl: "http://jacksonsuperiorelectric.com/",
                 adTxSrc: "/static/assets/img/catt-oldnorth-falls-032319.png",
                 adTxUrl: "https://www.cattteamtrail.com/divisions/catt-old-north/"
+            },
+            {
+                bodyOfWater: "Gaston", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flow
+                        date: ["19-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 1440, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0,
+                normalPool: 200.0,
+                elevURL: "/api/alabama",
+                flowURL: "none",
+                href: "/lakes/gaston",
+                dataSource: ["ALAB", "loadAds"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "/static/assets/img/jsegenerac.png",
+                adLogoUrl: "http://jacksonsuperiorelectric.com/",
+                adTxSrc: "",
+                adTxUrl: ""
             },
             {
                 bodyOfWater: "Hickory", // lake name
