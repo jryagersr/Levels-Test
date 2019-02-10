@@ -218,9 +218,12 @@ function elevUSGS(callback) {
         .then(function (data) {
             console.log("USGS Call")
             console.log(data);
+            let valuesIndex = 0;
             // Parse the json data return to find the values we want
             let jIncrement = 1;
-            let dataValues = data.value.timeSeries[0].values[0].value;
+            if (currentLake.bodyOfWater == "Mille Lacs")
+                valuesIndex = 1 // For some reason Mille Lacs has changed from index 0 to index 1 02/10/19
+            let dataValues = data.value.timeSeries[0].values[valuesIndex].value;
             // Reverse the order of our data so most recent date is first
             dataValues.reverse();
 
@@ -319,7 +322,7 @@ function dataACE(callback) {
             // default value of ACEFlowIndex is -1, indicating
             // Sometimes OutFlow is index 1, sometimes it's index 2, or 3
             // And then there is Ross Barnett, that doesn't have flow and only has 3 in the array!
-            
+
             // Automating the AceFlowIndex value identification code to automatically determine based on data (Fix the Ace Outflow problem)
             let aa = 0
             while (aa < data.length && typeof data[aa].Outflow == 'undefined') {
