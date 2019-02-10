@@ -315,9 +315,9 @@ module.exports = [
                 ],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: 445.0, // 1329ft but data reported as a delta to full pool
-                normalPool: 445.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=423525088260400&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all",
+                seaLevelDelta: 400.54, // 1329ft but data reported as a delta to full pool
+                normalPool: 450.0,
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=09427500&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/havasu",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -645,11 +645,36 @@ module.exports = [
                 ],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: 445.0, // 445ft but data reported as a delta to full pool.
-                normalPool: 445.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=423525088260400&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all",
+                seaLevelDelta: 400.54, // but data reported as a delta to full pool.
+                normalPool: 450.0,
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=09427500&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/havasu",
+                dataSource: ["USGS"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
+
+            {
+                bodyOfWater: "Iron Gate", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["18-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 30, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 2162.44, //but data reported as a delta to full pool
+                normalPool: 2164.43,
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=11516530&period=PT96H&parameterCd=00065&siteType=ST&siteStatus=all",
+                flowURL: "none",
+                href: "/lakes/irongate",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
@@ -933,9 +958,7 @@ module.exports = [
                 adLogoSrc: "",
                 adLogoUrl: ""
             },
-
-
-            /*{
+            {
                 bodyOfWater: "Hatchineha", // lake name
                 data: [
 
@@ -958,7 +981,7 @@ module.exports = [
                 entryLink: "",
                 adLogoSrc: "",
                 adLogoUrl: ""
-            },*/
+            },
             {
                 bodyOfWater: "Istokpoga", // lake name
                 data: [
@@ -983,8 +1006,31 @@ module.exports = [
                 adLogoSrc: "",
                 adLogoUrl: ""
             },
+            {
+                bodyOfWater: "Kenansville", // lake name
+                data: [
 
-            /*{
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["19-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 30, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0,
+                normalPool: 20.0,
+                elevURL: "http://webapub.sjrwmd.com/agws10/hdsnew/data.aspx?tp=3&stn=01310555_NAVD1988_POR&des=S-250D%20South%20at%20Fellsmere%20(WL)$274921.142$804749.182$St.%20Johns%20Marsh%20Unit$Indian%20River$Surface%20Water$Water%20Level%20(WL)",
+                flowURL: "none",
+                href: "/lakes/kenansville",
+                dataSource: ["SJRWMD"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
+            {
                 bodyOfWater: "Kissimmee", // lake name
                 data: [
 
@@ -1007,7 +1053,7 @@ module.exports = [
                 entryLink: "",
                 adLogoSrc: "",
                 adLogoUrl: ""
-            },*/
+            },
             {
                 bodyOfWater: "Minnehaha", // lake name
                 data: [
@@ -1324,8 +1370,8 @@ module.exports = [
                 ],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: 0,
-                normalPool: 0,
+                seaLevelDelta: 328.64,
+                normalPool: 328.64,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03322000&period=PT96H&parameterCd=00065&siteType=ST&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/ohioriverin",
@@ -2230,10 +2276,36 @@ module.exports = [
                 dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
-                adLogoSrc: "/static/assets/img/outhouse-tackle.png",
-                adLogoUrl: "http://outhousetackle.com/",
+                adLogoSrc: "/static/assets/img/jsegenerac.png",
+                adLogoUrl: "http://jacksonsuperiorelectric.com/",
                 adTxSrc: "/static/assets/img/catt-oldnorth-falls-032319.png",
                 adTxUrl: "https://www.cattteamtrail.com/divisions/catt-old-north/"
+            },
+            {
+                bodyOfWater: "Gaston", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flow
+                        date: ["19-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 1440, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0,
+                normalPool: 200.0,
+                elevURL: "/api/alabama",
+                flowURL: "none",
+                href: "/lakes/gaston",
+                dataSource: ["ALAB", "loadAds"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "/static/assets/img/jsegenerac.png",
+                adLogoUrl: "http://jacksonsuperiorelectric.com/",
+                adTxSrc: "",
+                adTxUrl: ""
             },
             {
                 bodyOfWater: "Hickory", // lake name
@@ -2281,8 +2353,8 @@ module.exports = [
                 dataSource: ["CUBE", "loadAds"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
-                adLogoSrc: "/static/assets/img/deep-creek-lures.png",
-                adLogoUrl: "http://deepcreeklures.com"
+                adLogoSrc: "",
+                adLogoUrl: ""
             },
             {
                 bodyOfWater: "Hyco", // lake name
@@ -2379,7 +2451,7 @@ module.exports = [
                 dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
-                adLogoSrc: "/static/assets/img/jse.png",
+                adLogoSrc: "/static/assets/img/jsegenerac.png",
                 adLogoUrl: "http://jacksonsuperiorelectric.com/",
                 adTxSrc: "/static/assets/img/cbc-kerr-tx.png",
                 adTxUrl: "http://carolinasbasschallenge.com/tournament/72"
@@ -2397,8 +2469,8 @@ module.exports = [
                 ],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: 0,
-                normalPool: 0,
+                seaLevelDelta: 10.90,
+                normalPool: 10.90,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02089500&period=PT96H&parameterCd=00065&siteType=ST&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/neuse",
@@ -2896,7 +2968,40 @@ module.exports = [
                 adLogoUrl: ""
             }
         ]
-    }, {
+    },
+
+    {
+        state: "Oregon",
+        lakes: [
+
+            {
+                bodyOfWater: "Lost Creek", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["18-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 30, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
+                normalPool: 1812.0,
+                elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=48202029&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN",
+                flowURL: "none",
+                href: "/lakes/lostcreek",
+                dataSource: ["ACE"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
+        ]
+    },
+
+    {
         state: "Pennsylvania",
         lakes: [
 
@@ -2973,7 +3078,8 @@ module.exports = [
                 adLogoUrl: ""
             }
         ]
-    }, {
+    },
+    {
         state: "South Carolina",
         lakes: [
 
@@ -3013,7 +3119,7 @@ module.exports = [
                 ],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: 0,
+                seaLevelDelta: -6.38, // Cooper River gage height is -6.38, it's a strange USGS site
                 normalPool: 0.0,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02172053&period=PT96H&parameterCd=00065&siteType=ST&siteStatus=all",
                 flowURL: "none",
@@ -3167,9 +3273,34 @@ module.exports = [
                 entryLink: "",
                 adLogoSrc: "/static/assets/img/catt.png",
                 adLogoUrl: "https://www.cattteamtrail.com/"
+            },
+            {
+                bodyOfWater: "Wylie", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flow
+                        date: ["19-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 30, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 400.0,
+                normalPool: 500.0,
+                elevURL: "https://lakes.duke-energy.com/Data/Detail/3_Month/18.txt",
+                flowURL: "none",
+                href: "/lakes/wylie",
+                dataSource: ["DUKE"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
             }
         ]
-    }, {
+    },
+    {
         state: "Tennessee",
         lakes: [
 
@@ -3366,7 +3497,8 @@ module.exports = [
                 adLogoUrl: ""
             }
         ]
-    }, {
+    },
+    {
         state: "Texas",
         lakes: [
 
@@ -3491,6 +3623,30 @@ module.exports = [
                 adLogoUrl: ""
             },
             {
+                bodyOfWater: "Ray Roberts", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["19-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 30, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0,
+                normalPool: 632.5,
+                elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=432048&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+                flowURL: "none",
+                href: "/lakes/rayroberts",
+                dataSource: ["ACE"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
+            {
                 bodyOfWater: "Rayburn", // lake name
                 data: [
 
@@ -3588,10 +3744,38 @@ module.exports = [
             }
 
         ]
-    }, {
+    },
+    {
         state: "Virginia",
         lakes: [
 
+
+            {
+                bodyOfWater: "Gaston", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flow
+                        date: ["19-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 1440, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0,
+                normalPool: 200.0,
+                elevURL: "/api/alabama",
+                flowURL: "none",
+                href: "/lakes/gaston",
+                dataSource: ["ALAB", "loadAds"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "/static/assets/img/jsegenerac.png",
+                adLogoUrl: "http://jacksonsuperiorelectric.com/",
+                adTxSrc: "",
+                adTxUrl: ""
+            },
             {
                 bodyOfWater: "James", // lake name
                 data: [
@@ -3665,9 +3849,37 @@ module.exports = [
                 entryLink: "",
                 adLogoSrc: "",
                 adLogoUrl: ""
-            }
+            },
+
+            {
+                bodyOfWater: "Smith Mountain", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flow
+                        date: ["19-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 1440, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0,
+                normalPool: 795.0,
+                elevURL: "/api/alabama",
+                flowURL: "none",
+                href: "/lakes/smithmountain",
+                dataSource: ["ALAB", "loadAds"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "/static/assets/img/jsegenerac.png",
+                adLogoUrl: "http://jacksonsuperiorelectric.com/",
+                adTxSrc: "",
+                adTxUrl: ""
+            },
         ]
-    }, {
+    },
+    {
         state: "West Virginia",
         lakes: [
 
@@ -3792,7 +4004,8 @@ module.exports = [
                 adLogoUrl: ""
             }
         ]
-    }, {
+    },
+    {
         state: "Wisconsin",
         lakes: [
 

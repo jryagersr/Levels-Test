@@ -8,6 +8,10 @@ const states = [{
         id: "al"
     },
     {
+        state: "Arkansas",
+        id: "ar"
+    },
+    {
         state: "Arizona",
         id: "az"
     },
@@ -78,6 +82,10 @@ const states = [{
     {
         state: "Oklahoma",
         id: "ok"
+    },
+    {
+        state: "Oregon",
+        id: "or"
     },
     {
         state: "Pennsylvania",

@@ -415,6 +415,15 @@ module.exports = function (app) {
         case "weiss":
           url = "http://www.lakeweiss.info/Level/Calendar"
           break;
+
+        case "gaston":
+          url = "http://gaston.uslakes.info/Level/Calendar"
+          break;
+
+        case "smithmountain":
+          url = "http://smithmountain.uslakes.info/Level/Calendar"
+          break;
+
       }
 
       // Get today's date to build request url
@@ -586,7 +595,7 @@ module.exports = function (app) {
         // Get the most recent 30 days data
         for (i = 0; i < 30; i++) {
           // find next end of row
-          for (j = j - 5; body.substr(j, 5) !== "</tr>"; j--) { }
+          for (j = j - 5; body.substr(j, 5) !== "</tr>"; j--) {}
 
           data.push({
             lakeName: lakeName,
@@ -640,7 +649,7 @@ module.exports = function (app) {
           line = line.trim();
           // Check to see if this is a data line
           if (!isNaN(line[0])) {
-            splitLine = line.split(/[,]+/);  // split the line
+            splitLine = line.split(/[,]+/); // split the line
             // Index 0=date, 1=elevation, there is no flow or time
 
             // Push each line into data object
