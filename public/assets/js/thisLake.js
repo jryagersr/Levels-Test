@@ -140,10 +140,10 @@ function buildElevChart(data) {
             }
         }
     });
-    console.log(data[0].flow);
-    if (data[0].flow !== "N/A" && typeof data[0].flow !== 'undefined') {
-        buildFlowChart(data);
-    }
+    // console.log(data[0].flow);
+    // if (data[0].flow !== "N/A" && typeof data[0].flow !== 'undefined') {
+    //     buildFlowChart(data);
+    // }
 }
 
 // Function to build flow chart on page
