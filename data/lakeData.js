@@ -1370,8 +1370,8 @@ module.exports = [
                 ],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: 0,
-                normalPool: 0,
+                seaLevelDelta: 328.64,
+                normalPool: 328.64,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03322000&period=PT96H&parameterCd=00065&siteType=ST&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/ohioriverin",
@@ -2469,8 +2469,8 @@ module.exports = [
                 ],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: 0,
-                normalPool: 0,
+                seaLevelDelta: 10.90,
+                normalPool: 10.90,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02089500&period=PT96H&parameterCd=00065&siteType=ST&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/neuse",
