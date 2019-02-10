@@ -772,7 +772,7 @@ function dataSJRWMD(callback) {
 
                 let date = element.date;
                 let time = element.time
-                let flow = "";
+                let flow = "N/A";
 
                 // adjust the elev for lakes with data relative to full pool (not from sealevel))
                 if (seaLevelDelta !== 0)
