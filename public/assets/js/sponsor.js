@@ -13,7 +13,8 @@ var bottomBannerSponsors = [
     {
         sponsor: "JSE",
         href: "http://jacksonsuperiorelectric.com/",
-        src: "/static/assets/img/sponsors/JSE-logo-660px.png"
+        src: "/static/assets/img/sponsors/JSE-logo-660px.png",
+        endDate: "4/10/19",
     },
     {
         sponsor: "BrucatoFis",
@@ -25,6 +26,14 @@ var bottomBannerSponsors = [
         href: "https://www.cattteamtrail.com/",
         src: "/static/assets/img/sponsors/CBC-logo-660px.png"
     }];
+
+// Sponsor Name
+// Src: ""
+// Href: ""
+// Location: 
+//    // Pages: [All, State, Tournament]
+//    // Lakes: [All, Kerr, Jordan]
+// AdType: [All, Bottom-Banner, Top-Logo, Tournament-Logo]
 
 // loop through our sponsor array
 bottomBannerSponsors.forEach(function (element) {

@@ -76,7 +76,7 @@ function populateFilter(data) {
     }
     // ramp needs to be alphabetized before appending to the filter
     rampArray = rampArray.sort();
-    for (var i = 0 ; i < rampArray.length; i++) {
+    for (var i = 0; i < rampArray.length; i++) {
         var option = $("<option>" + rampArray[i] + "</option>");
         $(option).attr("data-id", rampArray[i]);
         $("#rampSelect").append(option);
@@ -90,12 +90,44 @@ function displayData(data) {
     data.forEach(function (element) {
         for (k = 0; k < element.trails.length; k++) {
             for (l = 0; l < element.trails[k].tournaments.length; l++) {
-                // Create the HTML Well (Section) and Add the table content for each reserved table
+
+                // Create the row well to hold our HTML
                 var txSection = $("<tr>");
                 txSection.addClass("well");
                 txSection.attr("id", "txWell-" + i + 1);
+
+                let entryLink = element.trails[k].tournaments[l].entryLink;
+                let resultsLink = element.trails[k].tournaments[l].resultsLink;
+
+                // check to see if an entryLink exists
+                if (entryLink) {
+                    txSection.attr("data-url", entryLink); // Add data attribute to the row with entryLink url
+                    txSection.addClass("clickable-row"); // Add clickable row css styles
+                }
+
+                // Format the tx date to check against today's date
+                let date = element.trails[k].tournaments[l].date
+                let txDate = new Date(date);
+                let todaysDate = new Date();
+
+                // If tx date is after today's Date
+                if (txDate.setHours(0, 0, 0, 0) < todaysDate.setHours(0, 0, 0, 0)) {
+                    console.log("date checked");
+                    // Check to see if a resultsLink exists
+                    if (resultsLink) {
+                        // Set href as resultsLink
+                        txSection.attr("data-url", resultsLink); // Add data attribute to the row with resultsLink url
+                        txSection.addClass("results-clickable-row"); // ADd clickable results row css styles
+                    }
+                    else {
+                        // If no resultsLink exists remove the clickable row styles since the tx has passed
+                        txSection.removeClass("clickable-row");
+                    }
+                }
+
+                // Append our row to the table
                 $("#txSection").append(txSection);
-                // Append the data values to the table row
+                // Append each value to the row
                 $("#txWell-" + i + 1).append("<td>" + element.organization + "</td>");
                 $("#txWell-" + i + 1).append("<td>" + element.trails[k].trail + "</td>");
                 $("#txWell-" + i + 1).append("<td>" + element.trails[k].tournaments[l].date + "</td>");
@@ -109,21 +141,50 @@ function displayData(data) {
 
 // Function to display flat data
 function displayFlatData(data) {
+    console.log(data);
     $("#txSection").empty();
     let i = 0;
     data.forEach(function (element) {
-                // Create the HTML Well (Section) and Add the table content for each reserved table
-                var txSection = $("<tr>");
-                txSection.addClass("well");
-                txSection.attr("id", "txWell-" + i + 1);
-                $("#txSection").append(txSection);
-                // Append the data values to the table row
-                $("#txWell-" + i + 1).append("<td>" + element.organizer + "</td>");
-                $("#txWell-" + i + 1).append("<td>" + element.trail + "</td>");
-                $("#txWell-" + i + 1).append("<td>" + element.date + "</td>");
-                $("#txWell-" + i + 1).append("<td>" + element.lake + "</td>");
-                $("#txWell-" + i + 1).append("<td>" + element.ramp + "</td>");
-                i++;
+        // Create the row well to hold our HTML
+        var txSection = $("<tr>");
+        txSection.addClass("well");
+        txSection.attr("id", "txWell-" + i + 1);
+
+        let entryLink = element.entryLink;
+        let resultsLink = element.resultsLink;
+
+        // check to see if an entryLink exists
+        if (entryLink) {
+            txSection.attr("data-url", entryLink); // Add data attribute to the row with entryLink url
+            txSection.addClass("clickable-row"); // Add clickable row css styles
+        }
+
+        // Format the tx date to check against today's date
+        let txDate = new Date(element.date);
+        let todaysDate = new Date();
+
+        // If tx date is after today's Date
+        if (txDate.setHours(0, 0, 0, 0) < todaysDate.setHours(0, 0, 0, 0)) {
+            // Check to see if a resultsLink exists
+            if (resultsLink) {
+                // Set href as resultsLink
+                txSection.attr("data-url", resultsLink); // Add data attribute to the row with resultsLink url
+                txSection.addClass("results-clickable-row"); // ADd clickable results row css styles
+            }
+            else {
+                // If no resultsLink exists remove the clickable row styles since the tx has passed
+                txSection.removeClass("clickable-row");
+            }
+        }
+
+        $("#txSection").append(txSection);
+        // Append the data values to the table row
+        $("#txWell-" + i + 1).append("<td>" + element.organizer + "</td>");
+        $("#txWell-" + i + 1).append("<td>" + element.trail + "</td>");
+        $("#txWell-" + i + 1).append("<td>" + element.date + "</td>");
+        $("#txWell-" + i + 1).append("<td>" + element.lake + "</td>");
+        $("#txWell-" + i + 1).append("<td>" + element.ramp + "</td>");
+        i++;
     })
 }
 
@@ -149,11 +210,13 @@ function flattenData(data) {
             for (l = 0; l < element.trails[k].tournaments.length; l++) {
                 // Push our data into a flat array for easier sort later
                 flatBatch.push({
-                organizer: element.organization,
-                trail: element.trails[k].trail,
-                date: element.trails[k].tournaments[l].date,
-                lake: element.trails[k].tournaments[l].lake,
-                ramp: element.trails[k].tournaments[l].ramp
+                    organizer: element.organization,
+                    trail: element.trails[k].trail,
+                    date: element.trails[k].tournaments[l].date,
+                    lake: element.trails[k].tournaments[l].lake,
+                    ramp: element.trails[k].tournaments[l].ramp,
+                    entryLink: element.trails[k].tournaments[l].entryLink,
+                    resultsLink: element.trails[k].tournaments[l].resultsLink
                 })
             }
         }
@@ -189,7 +252,7 @@ $('#headerRow').on('click', 'th', function () {
             var newBatch = flatBatch.sort(sort_by('organizer', orgSort, function (a) {
                 return a.toUpperCase()
             }));
-           displayFlatData(newBatch);
+            displayFlatData(newBatch);
             orgSort ^= true;
             break;
 
@@ -197,7 +260,7 @@ $('#headerRow').on('click', 'th', function () {
             var newBatch = flatBatch.sort(sort_by('trail', trailSort, function (a) {
                 return a.toUpperCase()
             }));
-           displayFlatData(newBatch);
+            displayFlatData(newBatch);
             trailSort ^= true;
             break;
 
@@ -205,7 +268,7 @@ $('#headerRow').on('click', 'th', function () {
             var newBatch = flatBatch.sort(sort_by('date', dateSort, function (a) {
                 return a.toUpperCase()
             }));
-           displayFlatData(newBatch);
+            displayFlatData(newBatch);
             dateSort ^= true;
             break;
 
@@ -213,7 +276,7 @@ $('#headerRow').on('click', 'th', function () {
             var newBatch = flatBatch.sort(sort_by('lake', locSort, function (a) {
                 return a.toUpperCase()
             }));
-           displayFlatData(newBatch);
+            displayFlatData(newBatch);
             locSort ^= true;
             break;
 
@@ -221,7 +284,7 @@ $('#headerRow').on('click', 'th', function () {
             var newBatch = flatBatch.sort(sort_by('ramp', rampSort, function (a) {
                 return a.toUpperCase()
             }));
-           displayFlatData(newBatch);
+            displayFlatData(newBatch);
             rampSort ^= true;
             break;
 
@@ -229,7 +292,7 @@ $('#headerRow').on('click', 'th', function () {
             var newBatch = flatBatch.sort(sort_by('state', stateSort, function (a) {
                 return a.toUpperCase()
             }));
-           displayFlatData(newBatch);
+            displayFlatData(newBatch);
             stateSort ^= true;
             break;
 
@@ -392,4 +455,19 @@ $(".btn-filter").on("click", function (e) {
     $(".default-option").prop({
         selected: true
     });
+});
+
+
+
+// // Capture table row clicks
+// $("#container").on('click-row.bs.table', function (e, row, $element) {
+//     window.location = $element.data('url');
+// });
+
+$('tbody').on("click", "tr", function () {
+    // window.location = $(this).data("url");
+    window.open(
+        $(this).data("url"),
+        '_blank' // <- This is what makes it open in a new window.
+    );
 });

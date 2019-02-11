@@ -126,7 +126,7 @@ function buildElevChart(data) {
                     scaleLabel: {
                         display: true,
                         labelString: 'Date',
-                        fontSize: 20
+                        fontSize: 15
                     }
                 }],
                 yAxes: [{
@@ -134,16 +134,15 @@ function buildElevChart(data) {
                     scaleLabel: {
                         display: true,
                         labelString: 'Level (feet)',
-                        fontSize: 20
+                        fontSize: 15
                     }
                 }]
             }
         }
     });
-    // console.log(data[0].flow);
-    // if (data[0].flow !== "N/A" && typeof data[0].flow !== 'undefined') {
-    //     buildFlowChart(data);
-    // }
+    if (data[0].flow !== "N/A" && typeof data[0].flow !== 'undefined') {
+        buildFlowChart(data);
+    }
 }
 
 // Function to build flow chart on page
@@ -156,7 +155,12 @@ function buildFlowChart(data) {
     for (var i = 0; i < data.length; i++) {
         if (!labelBatch.includes(data[i].date)) {
             labelBatch.push(data[i].date);
-            dataFlowBatch.push(data[i].flow);
+            if (typeof data[i].flow === "string") {
+                dataFlowBatch.push(parseInt(data[i].flow.replace(",", ""))); // Commas in flows must be removed for chart to function
+            }
+            else {
+                dataFlowBatch.push(data[i].flow);
+            }
         }
         if (labelBatch.length > 6) {
             break;
@@ -192,7 +196,7 @@ function buildFlowChart(data) {
                     scaleLabel: {
                         display: true,
                         labelString: 'Date',
-                        fontSize: 20
+                        fontSize: 15
                     }
                 }],
                 yAxes: [{
@@ -200,7 +204,7 @@ function buildFlowChart(data) {
                     scaleLabel: {
                         display: true,
                         labelString: 'Flow (feet)',
-                        fontSize: 20
+                        fontSize: 15
                     }
                 }]
             }
@@ -212,9 +216,9 @@ function buildFlowChart(data) {
 function elevUSGS(callback) {
     // API call for flow
     $.ajax({
-            url: elevURL,
-            method: "GET",
-        })
+        url: elevURL,
+        method: "GET",
+    })
         .then(function (data) {
             console.log("USGS Call")
             console.log(data);
@@ -291,9 +295,9 @@ function elevUSGS(callback) {
 function flowUSGS(callback) {
     // API call for flow
     $.ajax({
-            url: flowURL,
-            method: "GET",
-        })
+        url: flowURL,
+        method: "GET",
+    })
         .then(function (data) {
             console.log("flowUSGS data ", data);
             // Parse through the json data to find the values we want
@@ -314,12 +318,12 @@ function flowUSGS(callback) {
 function dataACE(callback) {
     // API call for flow
     $.ajax({
-            url: "/api/a2w",
-            method: "GET",
-            data: {
-                a2wURL: elevURL,
-            }
-        })
+        url: "/api/a2w",
+        method: "GET",
+        data: {
+            a2wURL: elevURL,
+        }
+    })
         .then(function (data) {
             console.log("ACE Call");
             console.log(data);
@@ -356,7 +360,7 @@ function dataACE(callback) {
                 let isLakeIstokpoga = currentLake.bodyOfWater == 'Istokpoga'; // default value, this is when the ACE data is Fucked Up like Istokpoga in Florida, Damn...
 
                 // These have 120 elev data and 5 Flow, ignore flow data
-                if (['Truman', 'Pomme De Terre', "Stockton", "Rend", ].includes(currentLake.bodyOfWater))
+                if (['Truman', 'Pomme De Terre', "Stockton", "Rend",].includes(currentLake.bodyOfWater))
                     ACEFlow = false;
 
                 // Get current Date, Time and Elev
@@ -580,13 +584,13 @@ function convertUTCDate(timestamp) {
 // Function to make elev TVA call
 function dataTVA(callback) {
     $.ajax({
-            url: "/api/tva",
-            method: "GET",
-            data: {
-                tvaDataURL: elevURL,
-                tvaLakeName: bodyOfWaterName
-            }
-        })
+        url: "/api/tva",
+        method: "GET",
+        data: {
+            tvaDataURL: elevURL,
+            tvaLakeName: bodyOfWaterName
+        }
+    })
         .then(function (data) {
             console.log("TVA Call")
             console.log(data);
@@ -636,13 +640,13 @@ function dataTVA(callback) {
 // Function to make elev Duke call
 function dataDuke(callback) {
     $.ajax({
-            url: "/api/duke",
-            method: "GET",
-            data: {
-                dukeDataURL: elevURL,
-                dukeLakeName: bodyOfWaterName
-            }
-        })
+        url: "/api/duke",
+        method: "GET",
+        data: {
+            dukeDataURL: elevURL,
+            dukeLakeName: bodyOfWaterName
+        }
+    })
         .then(function (data) {
             console.log("DUKE Call")
             console.log(data);
@@ -713,9 +717,9 @@ function dataDuke(callback) {
 function elevCUBE(callback) {
     // API call for flow
     $.ajax({
-            url: "/api/cube",
-            method: "GET",
-        })
+        url: "/api/cube",
+        method: "GET",
+    })
         .then(function (data) {
             console.log("CUBE Call")
             console.log(data)
@@ -747,12 +751,12 @@ function elevCUBE(callback) {
 function elevAlab(callback) {
     // API call for flow
     $.ajax({
-            url: "/api/alabama",
-            method: "GET",
-            data: ({
-                lakeRoute: lakeRoute
-            })
+        url: "/api/alabama",
+        method: "GET",
+        data: ({
+            lakeRoute: lakeRoute
         })
+    })
         .then(function (data) {
             console.log("Alab Call")
             console.log(data)
@@ -771,13 +775,13 @@ function elevAlab(callback) {
 // Function to make elev SJRWMD call St Johns River Water Management District
 function dataSJRWMD(callback) {
     $.ajax({
-            url: "/api/sjrwmd",
-            method: "GET",
-            data: {
-                sjrwmdDataURL: elevURL,
-                sjrwmdLakeName: bodyOfWaterName
-            }
-        })
+        url: "/api/sjrwmd",
+        method: "GET",
+        data: {
+            sjrwmdDataURL: elevURL,
+            sjrwmdLakeName: bodyOfWaterName
+        }
+    })
         .then(function (data) {
             console.log("CUBE Call");
             console.log(data);
@@ -816,13 +820,13 @@ function dataSJRWMD(callback) {
 // Function to make elev TWDB call Texas Water Development Board
 function dataTWDB(callback) {
     $.ajax({
-            url: "/api/twdb",
-            method: "GET",
-            data: {
-                twdbDataURL: elevURL,
-                twdbLakeName: bodyOfWaterName
-            }
-        })
+        url: "/api/twdb",
+        method: "GET",
+        data: {
+            twdbDataURL: elevURL,
+            twdbLakeName: bodyOfWaterName
+        }
+    })
         .then(function (data) {
             console.log("CUBE Call");
             console.log(data);
@@ -882,11 +886,10 @@ $("#lakeTournaments").on("click", function (e) {
 // Declare variable to hold currentLake object
 var currentLake = {};
 $.ajax({
-        url: "/api/lake-data",
-        method: "GET",
-    })
+    url: "/api/lake-data",
+    method: "GET",
+})
     .then(function (data) {
-        console.log(data);
         for (var i = 0; i < data.length; i++) {
             result = data[i].lakes.find(obj => obj.href === "/lakes/" + lakeRoute);
             if (typeof result !== 'undefined') {
