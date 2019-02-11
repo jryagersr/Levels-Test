@@ -1582,7 +1582,7 @@ module.exports = [
                     }
                 ]
             },
-            {
+            /*{
                 trail: "Clarks Hill",
                 tournaments: [
 
@@ -1632,7 +1632,7 @@ module.exports = [
                         entryLink: ""
                     }
                 ]
-            },
+            },*/
             {
                 trail: "Coastal (SC)",
                 tournaments: [
@@ -1643,7 +1643,7 @@ module.exports = [
                         ramp: "Bucksport",
                         state: "SC",
                         txDetail: "Qualifier 1",
-                        resultsLink: "undefined",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-carolina-coastal-rivers-jan-26-2019-pope-johnson-bust-20-lbs/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-carolina-coastal-rivers/"
                     },
                     {
@@ -1872,7 +1872,7 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-gaston/"
                     },
                     {
-                        date: "19-011/02",
+                        date: "19-11/02",
                         lake: "Gaston",
                         state: "NC",
                         ramp: "Summit",
@@ -1943,10 +1943,10 @@ module.exports = [
                         ramp: "Whittenburg",
                         state: "NC",
                         txDetail: "Qualifier 1",
-                        resultsLink: "undefined",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-hickory-jan-19-2019-beatty-brookshire-win-a-tough-one/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-hickory/"
                     },
-                    {
+                    /*{
                         date: "19-03/??",
                         lake: "Hickory",
                         ramp: "Whittenburg",
@@ -1964,7 +1964,7 @@ module.exports = [
                         txDetail: "Qualifier 3",
                         resultsLink: "undefined",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-hickory/"
-                    },
+                    },*/
                     {
                         date: "19-05/11",
                         lake: "Hickory",
@@ -2160,20 +2160,11 @@ module.exports = [
                         ramp: "Pinnacle",
                         state: "NC",
                         txDetail: "Qualifier 1",
-                        resultsLink: "undefined",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-norman-feb-9-2019-hamrick-hoover-start-2019-with-another-win/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
                     },
                     {
-                        date: "19-02/??",
-                        lake: "Norman",
-                        ramp: "Pinnacle",
-                        state: "NC",
-                        txDetail: "Qualifier 2",
-                        resultsLink: "undefined",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
-                    },
-                    {
-                        date: "19-03/??",
+                        date: "19-03/02",
                         lake: "Norman",
                         ramp: "Pinnacle",
                         state: "NC",
@@ -2182,29 +2173,11 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
                     },
                     {
-                        date: "19-03/??",
-                        lake: "Norman",
-                        ramp: "Pinnacle",
-                        state: "NC",
-                        txDetail: "Qualifier 4",
-                        resultsLink: "undefined",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
-                    },
-                    {
-                        date: "19-04/??",
+                        date: "19-04/28",
                         lake: "Norman",
                         ramp: "Pinnacle",
                         state: "NC",
                         txDetail: "Qualifier 5",
-                        resultsLink: "undefined",
-                        entryLink: ""
-                    },
-                    {
-                        date: "19-04/??",
-                        lake: "Norman",
-                        ramp: "Pinnacle",
-                        state: "NC",
-                        txDetail: "Qualifier 6",
                         resultsLink: "undefined",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
                     },
@@ -2218,16 +2191,7 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
                     },
                     {
-                        date: "19-05/??",
-                        lake: "Norman",
-                        ramp: "Pinnacle",
-                        state: "NC",
-                        txDetail: "Qualifier 7",
-                        resultsLink: "undefined",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
-                    },
-                    {
-                        date: "19-06/22",
+                        date: "19-06/15",
                         lake: "Norman",
                         ramp: "Pinnacle",
                         state: "NC",
@@ -2236,7 +2200,7 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
                     },
                     {
-                        date: "19-07/20",
+                        date: "19-07/27",
                         lake: "Norman",
                         ramp: "Pinnacle",
                         state: "NC",
@@ -2255,7 +2219,7 @@ module.exports = [
 
                     },
                     {
-                        date: "19-09/21",
+                        date: "19-09/07",
                         lake: "Norman",
                         ramp: "Pinnacle",
                         state: "NC",
@@ -2344,7 +2308,7 @@ module.exports = [
                         ramp: "Easterling",
                         state: "SC",
                         txDetail: "Qualifier 1",
-                        resultsLink: "undefined",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-robinson-dec-15-2018-hall-fales-win-a-tight-one-everyone-weighes-in/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-robinson/"
                     },
                     {
@@ -2353,7 +2317,7 @@ module.exports = [
                         ramp: "Easterling",
                         state: "SC",
                         txDetail: "Qualifier 2",
-                        resultsLink: "undefined",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-robinson-jan-5-2018-lawhon-garrison-win-next-robinson-catt-is-jan-12th/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-robinson/"
                     },
                     {
@@ -2362,7 +2326,7 @@ module.exports = [
                         ramp: "Easterling",
                         state: "SC",
                         txDetail: "Qualifier 3",
-                        resultsLink: "undefined",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-robinson-jan-12-2019-fletcher-faile-claim-the-top-spot/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-robinson/"
                     },
                     {
@@ -2395,7 +2359,7 @@ module.exports = [
                         ramp: "John C Land",
                         state: "SC",
                         txDetail: "Qualifier 1",
-                        resultsLink: "undefined",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-santee-cooper-feb-9-2019-scott-beatson-weigh-up-27-39-lbs-for-the-win-top-3-teams-weigh-in-over-26-lbs/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-santee-cooper/"
                     },
                     {
@@ -2483,7 +2447,7 @@ module.exports = [
                         state: "GA",
                         txDetail: "Qualifier 2",
                         resultsLink: "https://www.cattteamtrail.com/news/tournament-results-savannah-river-jan-19-2019-roundtree-pittman-weigh-in-9-52-lbs-and-win/",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-savannah-river/"
                     },
                     {
                         date: "19-02/16",
@@ -2566,7 +2530,7 @@ module.exports = [
                         ramp: "Packs",
                         state: "SC",
                         txDetail: "Qualifier 1",
-                        resultsLink: "undefined",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-sparkleberry-swamp-quest-dec-29-2018-deberry-miller-weigh-in-23-35-lbs-next-swamp-quest-is-jam-19th-at-packs/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-sparkleberry-swamp-quest/"
                     },
                     {
@@ -2575,7 +2539,7 @@ module.exports = [
                         ramp: "Packs",
                         state: "SC",
                         txDetail: "Qualifier 2",
-                        resultsLink: "undefined",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-sparkleberry-swamp-quest-jan-19-2019-geddungs-peavy-drop-the-hammer-24-54-lbs-to-win-www-phantomoutdoors-com/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-sparkleberry-swamp-quest/"
                     },
                     {
@@ -2737,7 +2701,7 @@ module.exports = [
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 1",
-                        resultsLink: "undefined",
+                        resultsLink: "https://www.cattteamtrail.com/news/catt-lake-wateree-open-results-feb-9-2019-williams-english-take-the-1st-open-with-19-19-lbs/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
                     },
                     {
@@ -3010,7 +2974,7 @@ module.exports = [
                         ramp: "Buster Boyd",
                         state: "SC",
                         txDetail: "Qualifier 1",
-                        resultsLink: "undefined",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-wylie-feb-2-2019-smith-breakfield-bank-1465-00-with-15-64-lbs/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wylie/"
                     },
                     {
