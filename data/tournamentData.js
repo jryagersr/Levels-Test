@@ -14,7 +14,7 @@ module.exports = [
                     state: "NC-VA",
                     txDetail: "T1",
                     resultsLink: "undefined",
-                    entryLink: ""
+                    entryLink: "https://www.facebook.com/groups/657334777996712/permalink/657734494623407/"
                 },
                 {
                     date: "19-04/20",
@@ -23,7 +23,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "T2",
                     resultsLink: "undefined",
-                    entryLink: ""
+                    entryLink: "https://www.facebook.com/groups/657334777996712/permalink/657734494623407/"
                 },
                 {
                     date: "19-05/04",
@@ -32,7 +32,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "T3",
                     resultsLink: "undefined",
-                    entryLink: ""
+                    entryLink: "https://www.facebook.com/groups/657334777996712/permalink/657734494623407/"
                 },
                 {
                     date: "19-06/22",
@@ -41,7 +41,7 @@ module.exports = [
                     state: "NC-VA",
                     txDetail: "T4",
                     resultsLink: "undefined",
-                    entryLink: ""
+                    entryLink: "https://www.facebook.com/groups/657334777996712/permalink/657734494623407/"
                 },
                 {
                     date: "19-10/19",
@@ -50,7 +50,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "Championship",
                     resultsLink: "undefined",
-                    entryLink: ""
+                    entryLink: "https://www.facebook.com/groups/657334777996712/permalink/657734494623407/"
                 }
             ]
         }, ]
@@ -1043,7 +1043,7 @@ module.exports = [
                     state: "VA",
                     txDetail: "Anglers Choice",
                     resultsLink: "undefined",
-                    entryLink: ""
+                    entryLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule"
                 },
                 {
                     date: "19-04/06",
@@ -1052,7 +1052,7 @@ module.exports = [
                     state: "NC-VA",
                     txDetail: "Anglers Choice",
                     resultsLink: "undefined",
-                    entryLink: ""
+                    entryLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule"
                 },
                 {
                     date: "19-04/07",
@@ -1061,7 +1061,7 @@ module.exports = [
                     state: "NC-VA",
                     txDetail: "Anglers Choice",
                     resultsLink: "undefined",
-                    entryLink: ""
+                    entryLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule"
                 },
                 {
                     date: "19-05/04",
@@ -1070,7 +1070,7 @@ module.exports = [
                     state: "VA",
                     txDetail: "Anglers Choice",
                     resultsLink: "undefined",
-                    entryLink: ""
+                    entryLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule"
                 },
                 {
                     organizer: "Anglers",
@@ -1081,7 +1081,7 @@ module.exports = [
                     state: "NC-VA",
                     txDetail: "Anglers Choice",
                     resultsLink: "undefined",
-                    entryLink: ""
+                    entryLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule"
                 },
                 {
                     organizer: "Anglers",
@@ -1092,7 +1092,7 @@ module.exports = [
                     state: "NC-VA",
                     txDetail: "2-Day Classic",
                     resultsLink: "undefined",
-                    entryLink: ""
+                    entryLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule"
                 }
             ]
         }]
@@ -1480,7 +1480,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "",
                     resultsLink: "undefined",
-                    entryLink: ""
+                    entryLink: "http://bojanglesproam.com/"
                 },
                 {
                     date: "19-04/06",
@@ -1489,7 +1489,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "",
                     resultsLink: "undefined",
-                    entryLink: ""
+                    entryLink: "http://bojanglesproam.com/"
                 },
                 {
                     date: "19-04/27",
@@ -1498,7 +1498,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "",
                     resultsLink: "undefined",
-                    entryLink: ""
+                    entryLink: "http://bojanglesproam.com/"
                 },
                 {
                     date: "19-05/18",
@@ -1507,7 +1507,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "",
                     resultsLink: "undefined",
-                    entryLink: ""
+                    entryLink: "http://bojanglesproam.com/"
                 },
                 {
                     date: "19-06/15",
@@ -1516,7 +1516,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "",
                     resultsLink: "undefined",
-                    entryLink: ""
+                    entryLink: "http://bojanglesproam.com/"
                 },
                 {
                     date: "19-07/20",
@@ -1525,7 +1525,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "",
                     resultsLink: "undefined",
-                    entryLink: ""
+                    entryLink: "http://bojanglesproam.com/"
                 },
                 {
                     date: "19-08/17",
@@ -1534,7 +1534,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "",
                     resultsLink: "undefined",
-                    entryLink: ""
+                    entryLink: "http://bojanglesproam.com/"
                 },
                 {
                     date: "19-09/13",
@@ -1543,7 +1543,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "2 Day Championship Div 1",
                     resultsLink: "undefined",
-                    entryLink: ""
+                    entryLink: "http://bojanglesproam.com/"
                 }
             ]
         }, ]
@@ -1644,7 +1644,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Qualifier 1",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-carolina-coastal-rivers/"
                     },
                     {
                         date: "19-02/16",
@@ -1653,7 +1653,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Qualifier 2",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-carolina-coastal-rivers/"
                     },
                     {
                         date: "19-03/16",
@@ -1662,7 +1662,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Qualifier 3",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-carolina-coastal-rivers/"
                     },
                     {
                         date: "19-04/20",
@@ -1671,7 +1671,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Qualifier 4",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-carolina-coastal-rivers/"
                     },
                     {
                         date: "19-04/27",
@@ -1680,7 +1680,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Final",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-carolina-coastal-rivers/"
                     }
                 ]
             },
@@ -1695,7 +1695,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Qualifier 1",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-cooper-river/"
                     },
                     {
                         date: "19-03/09",
@@ -1704,7 +1704,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Qualifier 2",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-cooper-river/"
                     },
                     {
                         date: "19-03/23",
@@ -1713,7 +1713,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Qualifier 3",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-cooper-river/"
                     },
                     {
                         date: "19-04/06",
@@ -1722,7 +1722,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Qualifier 4",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-cooper-river/"
                     },
                     {
                         date: "19-04/20",
@@ -1731,7 +1731,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Qualifier 5",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-cooper-river/"
                     },
                     {
                         date: "19-05/04",
@@ -1740,7 +1740,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Final",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-cooper-river/"
                     }
                 ]
             },
@@ -1755,7 +1755,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Gold 1",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-east/"
                     },
                     {
                         date: "19-04/13",
@@ -1764,7 +1764,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Gold 2",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-east/"
                     },
                     {
                         date: "19-05/11",
@@ -1773,7 +1773,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Gold 3",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-east/"
                     },
                     {
                         date: "19-06/08",
@@ -1782,7 +1782,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Gold 4",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-east/"
                     },
                     {
                         date: "19-07/13",
@@ -1791,7 +1791,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Gold 5",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-east/"
                     },
                     {
                         date: "19-08/24",
@@ -1800,7 +1800,7 @@ module.exports = [
                         ramp: "Lighthouse",
                         txDetail: "Gold 6",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-east/"
                     },
                     {
                         date: "19-09/21",
@@ -1809,7 +1809,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Gold 7",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-east/"
                     },
                     {
                         date: "19-10/19",
@@ -1818,7 +1818,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Final",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-east/"
                     }
                 ]
             },
@@ -1833,7 +1833,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Qualifier 1",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-gaston/"
                     },
                     {
                         date: "19-05/05",
@@ -1842,7 +1842,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Qualifier 2",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-gaston/"
                     },
                     {
                         date: "19-06/30",
@@ -1851,7 +1851,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Qualifier 3",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-gaston/"
                     },
                     {
                         date: "19-08/03",
@@ -1860,7 +1860,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Qualifier 4",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-gaston/"
                     },
                     {
                         date: "19-09/21",
@@ -1869,7 +1869,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Qualifier 5",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-gaston/"
                     },
                     {
                         date: "19-011/02",
@@ -1878,7 +1878,7 @@ module.exports = [
                         ramp: "Summit",
                         txDetail: "2 Day Final",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-gaston/"
                     }
                 ]
             },
@@ -1892,8 +1892,8 @@ module.exports = [
                         ramp: "Broyles",
                         state: "SC",
                         txDetail: "Qualifier 1",
-                        resultsLink: "https://www.CATTteamtrail.com/news/tournament-results-hartwell-nov-3-2018-king-bloomfield-win/",
-                        entryLink: ""
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-hartwell-nov-3-2018-king-bloomfield-win/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-hartwell/"
                     },
                     {
                         date: "18-12/01",
@@ -1901,8 +1901,8 @@ module.exports = [
                         ramp: "Broyles",
                         state: "SC",
                         txDetail: "Qualifier 2",
-                        resultsLink: "undefined",
-                        entryLink: ""
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-hartwell-dec-1st-2018-taylor-garret-bring-in-20-06-lbs/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-hartwell/"
                     },
                     {
                         date: "18-12/22",
@@ -1910,8 +1910,8 @@ module.exports = [
                         ramp: "Broyles",
                         state: "SC",
                         txDetail: "Qualifier 3",
-                        resultsLink: "undefined",
-                        entryLink: ""
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-hartwell-dec-22-2018-taylor-taylor-weigh-in-16-02-for-the-win/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-hartwell/"
                     },
                     {
                         date: "19-01/05",
@@ -1919,8 +1919,8 @@ module.exports = [
                         ramp: "Broyles",
                         state: "SC",
                         txDetail: "Qualifier 4",
-                        resultsLink: "undefined",
-                        entryLink: ""
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-hartwell-jan-5-2018-david-barnes-wins-solo-bruce-james-taylor-win-the-points/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-hartwell/"
                     },
                     {
                         date: "19-01/26",
@@ -1928,8 +1928,8 @@ module.exports = [
                         ramp: "Broyles",
                         state: "SC",
                         txDetail: "Final",
-                        resultsLink: "undefined",
-                        entryLink: ""
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-hartwell-fall-final-jan-26-2019-sandifer-allgood-take-1st-with-15-09-lbs/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-hartwell/"
                     }
                 ]
             },
@@ -1944,7 +1944,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Qualifier 1",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-hickory/"
                     },
                     {
                         date: "19-03/??",
@@ -1953,7 +1953,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Qualifier 2",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-hickory/"
                     },
                     {
                         trail: "Hickory",
@@ -1963,7 +1963,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Qualifier 3",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-hickory/"
                     },
                     {
                         date: "19-05/11",
@@ -1972,7 +1972,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Qualifier 4",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-hickory/"
                     },
                     {
                         date: "19-06/01",
@@ -1981,7 +1981,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Qualifier 5",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-hickory/"
                     },
                     {
                         date: "19-07/13",
@@ -1990,7 +1990,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Qualifier 6",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-hickory/"
                     },
                     {
                         date: "19-08/17",
@@ -1999,7 +1999,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Qualifier 7",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-hickory/"
                     },
                     {
                         date: "19-09/14",
@@ -2008,7 +2008,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Final",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-hickory/"
                     }
                 ]
             },
@@ -2023,7 +2023,7 @@ module.exports = [
                         state: "VA",
                         txDetail: "Gold",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-james-river/"
                     },
                     {
                         date: "19-04/27",
@@ -2032,7 +2032,7 @@ module.exports = [
                         state: "VA",
                         txDetail: "Gold",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-james-river/"
                     },
                     {
                         date: "19-05/11",
@@ -2041,7 +2041,7 @@ module.exports = [
                         state: "VA",
                         txDetail: "Gold",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-james-river/"
                     },
                     {
                         date: "19-06/08",
@@ -2050,7 +2050,7 @@ module.exports = [
                         state: "VA",
                         txDetail: "Gold",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-james-river/"
                     },
                     {
                         date: "19-07/13",
@@ -2059,7 +2059,7 @@ module.exports = [
                         state: "VA",
                         txDetail: "Gold",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-james-river/"
                     },
                     {
                         date: "19-08/10",
@@ -2068,7 +2068,7 @@ module.exports = [
                         state: "VA",
                         txDetail: "Gold",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-james-river/"
                     },
                     {
                         date: "19-09/14",
@@ -2077,7 +2077,7 @@ module.exports = [
                         state: "VA",
                         txDetail: "Gold",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-james-river/"
                     },
                     {
                         date: "19-10/05",
@@ -2086,7 +2086,7 @@ module.exports = [
                         state: "VA",
                         txDetail: "Final 2-Day",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-james-river/"
                     }
                 ]
             },
@@ -2101,7 +2101,7 @@ module.exports = [
                         state: "NC-VA",
                         txDetail: "Qualifier 1",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
                     },
                     {
                         date: "19-02/24",
@@ -2110,7 +2110,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Qualifier 2",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
                     },
                     {
                         date: "19-03/17",
@@ -2119,7 +2119,7 @@ module.exports = [
                         state: "NC-VA",
                         txDetail: "Gold 3",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
                     },
                     {
                         date: "19-03/31",
@@ -2128,7 +2128,7 @@ module.exports = [
                         state: "NC-VA",
                         txDetail: "Gold 4",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
                     },
                     {
                         date: "19-04/14",
@@ -2137,7 +2137,7 @@ module.exports = [
                         state: "NC-VA",
                         txDetail: "Qualifier 5",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
                     },
                     {
                         date: "19-04/28",
@@ -2146,7 +2146,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Final",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
                     }
                 ]
             },
@@ -2161,7 +2161,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Qualifier 1",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
                     },
                     {
                         date: "19-02/??",
@@ -2170,7 +2170,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Qualifier 2",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
                     },
                     {
                         date: "19-03/??",
@@ -2179,7 +2179,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Qualifier 3",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
                     },
                     {
                         date: "19-03/??",
@@ -2188,7 +2188,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Qualifier 4",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
                     },
                     {
                         date: "19-04/??",
@@ -2206,7 +2206,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Qualifier 6",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
                     },
                     {
                         date: "19-05/25",
@@ -2215,7 +2215,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Qualifier 8",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
                     },
                     {
                         date: "19-05/??",
@@ -2224,7 +2224,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Qualifier 7",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
                     },
                     {
                         date: "19-06/22",
@@ -2233,7 +2233,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Qualifier 9",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
                     },
                     {
                         date: "19-07/20",
@@ -2242,7 +2242,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Qualifier 10",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
                     },
                     {
                         date: "19-08/31",
@@ -2251,7 +2251,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Qualifier 11",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
 
                     },
                     {
@@ -2261,7 +2261,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Final",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
                     }
                 ]
             },
@@ -2276,7 +2276,7 @@ module.exports = [
                         state: "NC-VA",
                         txDetail: "Qualifier 1",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
                     },
                     {
                         date: "19-03/23",
@@ -2285,7 +2285,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Qualifier 2",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
                     },
                     {
                         date: "19-04/06",
@@ -2294,7 +2294,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Qualifier 3",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
                     },
                     {
                         date: "19-04/28",
@@ -2303,7 +2303,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Qualifier 4",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
                     },
                     {
                         date: "19-05/18",
@@ -2321,7 +2321,7 @@ module.exports = [
                         state: "NC-VA",
                         txDetail: "Qualifier 6",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
                     },
                     {
                         date: "19-06/29",
@@ -2330,7 +2330,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Final",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
                     }
                 ]
             },
@@ -2345,7 +2345,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Qualifier 1",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-robinson/"
                     },
                     {
                         date: "19-01/05",
@@ -2354,7 +2354,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Qualifier 2",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-robinson/"
                     },
                     {
                         date: "19-01/12",
@@ -2363,7 +2363,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Qualifier 3",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-robinson/"
                     },
                     {
                         date: "19-01/19",
@@ -2372,7 +2372,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Qualifier 4",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-robinson/"
                     },
                     {
                         date: "19-01/26",
@@ -2381,7 +2381,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Final",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-robinson/"
                     }
                 ]
             },
@@ -2396,7 +2396,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Qualifier 1",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-santee-cooper/"
                     },
                     {
                         date: "19-02/16",
@@ -2405,7 +2405,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Qualifier 2",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-santee-cooper/"
                     },
                     {
                         date: "19-02/23",
@@ -2414,7 +2414,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Gold 3",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-santee-cooper/"
                     },
                     {
                         date: "19-03/23",
@@ -2423,7 +2423,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Gold 4",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-santee-cooper/"
                     },
                     {
                         date: "19-03/30",
@@ -2432,7 +2432,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Qualifier 5",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-santee-cooper/"
                     },
                     {
                         date: "19-04/13",
@@ -2441,7 +2441,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Qualifier 6",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-santee-cooper/"
                     },
                     {
                         date: "19-05/04",
@@ -2450,7 +2450,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Qualifier 7",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-santee-cooper/"
                     },
                     {
                         date: "19-05/11",
@@ -2459,7 +2459,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Final",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-santee-cooper/"
                     }
                 ]
             },
@@ -2473,8 +2473,8 @@ module.exports = [
                         ramp: "Kings Ferry",
                         state: "GA",
                         txDetail: "Qualifier 1",
-                        resultsLink: "undefined",
-                        entryLink: ""
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-savannah-river-dec-29-2018-the-morgans-take-the-1st-qualifier/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-savannah-river/"
                     },
                     {
                         date: "19-01/19",
@@ -2482,7 +2482,7 @@ module.exports = [
                         ramp: "Kings Ferry",
                         state: "GA",
                         txDetail: "Qualifier 2",
-                        resultsLink: "undefined",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-savannah-river-jan-19-2019-roundtree-pittman-weigh-in-9-52-lbs-and-win/",
                         entryLink: ""
                     },
                     {
@@ -2492,7 +2492,7 @@ module.exports = [
                         state: "GA-SC",
                         txDetail: "Qualifier 3",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-savannah-river/"
                     },
                     {
                         date: "19-03/09",
@@ -2501,7 +2501,7 @@ module.exports = [
                         state: "GA-SC",
                         txDetail: "Final",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-savannah-river/"
                     },
                     {
                         date: "19-04/20",
@@ -2510,7 +2510,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Final",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-savannah-river/"
                     }
                 ]
             },
@@ -2525,7 +2525,7 @@ module.exports = [
                         state: "VA",
                         txDetail: "Qualifier 1",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-smith-mountain/"
                     },
                     {
                         date: "19-03/03",
@@ -2534,7 +2534,7 @@ module.exports = [
                         state: "VA",
                         txDetail: "Qualifier 2",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-smith-mountain/"
                     },
                     {
                         date: "19-03/31",
@@ -2543,7 +2543,7 @@ module.exports = [
                         state: "VA",
                         txDetail: "Qualifier 3",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-smith-mountain/"
                     },
                     {
                         date: "19-05/12",
@@ -2552,7 +2552,7 @@ module.exports = [
                         state: "VA",
                         txDetail: "Final",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-smith-mountain/"
                     }
                 ]
             },
@@ -2567,7 +2567,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Qualifier 1",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-sparkleberry-swamp-quest/"
                     },
                     {
                         date: "19-01/19",
@@ -2576,7 +2576,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Qualifier 2",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-sparkleberry-swamp-quest/"
                     },
                     {
                         date: "19-02/17",
@@ -2585,7 +2585,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Qualifier 3",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-sparkleberry-swamp-quest/"
                     },
                     {
                         date: "19-03/03",
@@ -2594,7 +2594,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Qualifier 4",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-sparkleberry-swamp-quest/"
                     },
                     {
                         date: "19-03/16",
@@ -2603,7 +2603,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Final",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-sparkleberry-swamp-quest/"
                     }
                 ]
             },
@@ -2618,7 +2618,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Qualifier 1",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-tidewater/"
                     },
                     {
                         date: "19-03/30",
@@ -2627,7 +2627,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Qualifier 2",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-tidewater/"
                     },
                     {
                         date: "19-04/14",
@@ -2636,7 +2636,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Qualifier 3",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-tidewater/"
                     },
                     {
                         date: "19-04/27",
@@ -2645,7 +2645,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Qualifier 4",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-tidewater/"
                     },
                     {
                         date: "19-05/11",
@@ -2654,7 +2654,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Qualifier 5",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-tidewater/"
                     },
                     {
                         date: "19-05/26",
@@ -2663,7 +2663,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Final",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-tidewater/"
                     }
                 ]
             },
@@ -2678,7 +2678,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Qualifier 1",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-waccamaw-river/"
                     },
                     {
                         date: "19-06/22",
@@ -2687,7 +2687,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Qualifier 2",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-waccamaw-river/"
                     },
                     {
                         date: "19-07/13",
@@ -2696,7 +2696,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Gold 3",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-waccamaw-river/"
                     },
                     {
                         date: "19-07/20",
@@ -2705,7 +2705,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Gold 4",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-waccamaw-river/"
                     },
                     {
                         date: "19-08/03",
@@ -2714,7 +2714,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Qualifier 5",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-waccamaw-river/"
                     },
                     {
                         date: "19-08/17",
@@ -2723,7 +2723,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Final",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-waccamaw-river/"
                     }
                 ]
             },
@@ -2738,7 +2738,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Open 1",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
                     },
                     {
                         date: "19-02/23",
@@ -2747,7 +2747,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Open 2",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
                     },
                     {
                         date: "19-03/09",
@@ -2756,7 +2756,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Open 3",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
                     },
                     {
                         date: "19-03/23",
@@ -2765,7 +2765,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Open 4",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
                     },
                     {
                         date: "19-03/30",
@@ -2774,7 +2774,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Open 5",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
                     }
                 ]
             },
@@ -2789,7 +2789,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Open 6",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
                     {
                         date: "19-04/13",
@@ -2798,7 +2798,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Open 7",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
                     {
                         date: "19-05/11",
@@ -2807,7 +2807,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Open 8",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
                     {
                         date: "19-05/25",
@@ -2816,7 +2816,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Open 9",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
                     {
                         date: "19-06/01",
@@ -2825,7 +2825,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Open 10",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
                     {
                         date: "19-06/08",
@@ -2834,7 +2834,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Open 11",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
                     {
                         date: "19-06/15",
@@ -2843,7 +2843,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Open 12",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
                     {
                         date: "19-06/22",
@@ -2852,7 +2852,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Open 13",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
                     {
                         date: "19-07/20",
@@ -2861,7 +2861,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Open 14",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
                     {
                         date: "19-08/10",
@@ -2870,7 +2870,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Open 15",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
                     {
                         date: "19-09/28",
@@ -2879,7 +2879,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Open 16",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
                     {
                         date: "19-10/12",
@@ -2888,7 +2888,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Open 17",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
                     {
                         date: "19-10/19",
@@ -2897,7 +2897,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Open 18",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
                     {
                         date: "19-11/09",
@@ -2906,7 +2906,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Open 19",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
                     {
                         date: "19-11/16",
@@ -2915,7 +2915,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Final",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
                     {
                         date: "19-02/16",
@@ -2924,7 +2924,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Qualifier 1",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
                     {
                         date: "19-02/23",
@@ -2933,7 +2933,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Qualifier 2",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
                     {
                         date: "19-03/02",
@@ -2951,7 +2951,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Qualifier 4",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
                     {
                         date: "19-03/16",
@@ -2960,7 +2960,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Qualifier 5",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
                     {
                         date: "19-03/23",
@@ -2969,7 +2969,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Qualifier 6",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
                     {
                         date: "19-03/30",
@@ -2978,7 +2978,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Qualifier 7",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
                     {
                         date: "19-04/06",
@@ -2987,7 +2987,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Qualifier 8",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
                     {
                         date: "19-04/13",
@@ -2996,7 +2996,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Final",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     }
                 ]
             },
@@ -3011,7 +3011,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Qualifier 1",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wylie/"
                     },
                     {
                         date: "19-03/16",
@@ -3020,7 +3020,7 @@ module.exports = [
                         state: "NC-SC",
                         txDetail: "Qualifier 2",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wylie/"
                     },
                     {
                         date: "19-03/30",
@@ -3029,7 +3029,7 @@ module.exports = [
                         state: "NC-SC",
                         txDetail: "Qualifier 3",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wylie/"
                     },
                     {
                         date: "19-04/13",
@@ -3038,7 +3038,7 @@ module.exports = [
                         state: "NC-SC",
                         txDetail: "Qualifier 4",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wylie/"
                     },
                     {
                         date: "19-04/27",
@@ -3056,7 +3056,7 @@ module.exports = [
                         state: "NC-SC",
                         txDetail: "Final",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wylie/"
                     }
                 ]
             },
@@ -3071,7 +3071,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Qualifier 1",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
                     },
                     {
                         date: "19-03/02",
@@ -3080,7 +3080,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Qualifier 2",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
                     },
                     {
                         date: "19-03/23",
@@ -3089,7 +3089,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Qualifier 3",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
                     },
                     {
                         date: "19-04/06",
@@ -3098,7 +3098,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Qualifier 4",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
                     },
                     {
                         date: "19-05/18",
@@ -3107,7 +3107,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Qualifier 5",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
                     },
                     {
                         date: "19-05/25",
@@ -3116,7 +3116,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Qualifier 6",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
                     },
                     {
                         date: "19-06/01",
@@ -3125,7 +3125,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Final",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
                     }
                 ]
             }
@@ -3144,7 +3144,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "CBC",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "http://www.carolinasbasschallenge.com/tournaments.php"
                     },
                     {
                         date: "19-03/02",
@@ -3153,7 +3153,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "CBC SC",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "http://www.carolinasbasschallenge.com/tournaments.php"
                     },
                     {
                         date: "19-03/30",
@@ -3162,7 +3162,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "CBC NC",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "http://www.carolinasbasschallenge.com/tournaments.php"
                     },
                     {
                         date: "19-04/27",
@@ -3171,7 +3171,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "CBC SC",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "http://www.carolinasbasschallenge.com/tournaments.php"
                     },
                     {
                         date: "19-10/25",
@@ -3180,7 +3180,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "CBC SC",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "http://www.carolinasbasschallenge.com/tournaments.php"
                     }
                 ]
             },
@@ -3195,7 +3195,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "CBC NC",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "http://www.carolinasbasschallenge.com/tournaments.php"
                     },
                     {
                         date: "19-03/16",
@@ -3204,7 +3204,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "CBC NC",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "http://www.carolinasbasschallenge.com/tournaments.php"
                     },
                     {
                         date: "19-04/20",
@@ -3213,7 +3213,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Bass For Cash Series",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "http://www.carolinasbasschallenge.com/tournaments.php"
                     },
                     {
                         date: "19-05/04",
@@ -3222,7 +3222,7 @@ module.exports = [
                         state: "NC-VA",
                         txDetail: "CBC NC",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "http://www.carolinasbasschallenge.com/tournaments.php"
                     }
                 ]
             }
@@ -3241,7 +3241,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "Warriors On the Water",
                     resultsLink: "undefined",
-                    entryLink: ""
+                    entryLink: "https://www.warriorsonthewater.com/"
                 }
             ]
         }, ]
@@ -3259,7 +3259,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "Bass For Cash Series",
                     resultsLink: "undefined",
-                    entryLink: ""
+                    entryLink: "http://bassforcash.com/rules/"
                 },
                 {
                     date: "19-04/20",
@@ -3268,7 +3268,7 @@ module.exports = [
                     state: "NC-VA",
                     txDetail: "Combined Boys & Girls Club",
                     resultsLink: "undefined",
-                    entryLink: ""
+                    entryLink: "http://bassforcash.com/rules/"
                 },
                 {
                     date: "19-05/04",
@@ -3277,7 +3277,7 @@ module.exports = [
                     state: "NC-VA",
                     txDetail: "Bass For Cash Series",
                     resultsLink: "undefined",
-                    entryLink: ""
+                    entryLink: "http://bassforcash.com/rules/"
                 },
                 {
 
@@ -3287,7 +3287,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "Bass For Cash Series",
                     resultsLink: "undefined",
-                    entryLink: ""
+                    entryLink: "http://bassforcash.com/rules/"
                 },
                 {
                     date: "19-07/27",
@@ -3296,7 +3296,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "Bass For Cash Series",
                     resultsLink: "undefined",
-                    entryLink: ""
+                    entryLink: "http://bassforcash.com/rules/"
                 },
                 {
                     date: "19-08/10",
@@ -3305,7 +3305,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "Bass For Cash Series",
                     resultsLink: "undefined",
-                    entryLink: ""
+                    entryLink: "http://bassforcash.com/rules/"
                 },
                 {
                     date: "19-09/14",
@@ -3314,7 +3314,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "Super 2-Day",
                     resultsLink: "undefined",
-                    entryLink: ""
+                    entryLink: "http://bassforcash.com/rules/"
                 }
             ]
         }, ]
@@ -3830,7 +3830,7 @@ module.exports = [
                         state: "IN",
                         txDetail: "FLW",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.flwfishing.com/schedule"
                     },
                     {
                         date: "19-05/04",
@@ -3839,7 +3839,7 @@ module.exports = [
                         state: "IN",
                         txDetail: "FLW",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.flwfishing.com/schedule"
                     },
                     {
                         date: "19-06/29",
@@ -3848,7 +3848,7 @@ module.exports = [
                         state: "IN",
                         txDetail: "FLW",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.flwfishing.com/schedule"
                     },
                     {
                         date: "19-07/20",
@@ -3857,7 +3857,7 @@ module.exports = [
                         state: "IN",
                         txDetail: "FLW",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.flwfishing.com/schedule"
                     },
                     {
                         date: "19-09/28",
@@ -3866,7 +3866,7 @@ module.exports = [
                         state: "IN",
                         txDetail: "FLW",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.flwfishing.com/schedule"
                     }
                 ]
             },
@@ -4188,7 +4188,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "FLW",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.flwfishing.com/schedule"
                     },
                     {
                         date: "19-03/23",
@@ -4197,7 +4197,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "FLW",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.flwfishing.com/schedule"
                     },
                     {
                         date: "19-04/27",
@@ -4206,7 +4206,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "FLW",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.flwfishing.com/schedule"
                     },
                     {
                         date: "19-06/08",
@@ -4215,7 +4215,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "FLW",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.flwfishing.com/schedule"
                     },
                     {
                         date: "19-09/21",
@@ -4224,7 +4224,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "FLW",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.flwfishing.com/schedule"
                     }
                 ]
             },
@@ -4290,7 +4290,7 @@ module.exports = [
                         state: "NC-VA",
                         txDetail: "FLW",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.flwfishing.com/schedule"
                     },
                     {
                         date: "19-05/11",
@@ -4299,7 +4299,7 @@ module.exports = [
                         state: "VA",
                         txDetail: "FLW",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.flwfishing.com/schedule"
                     },
                     {
                         date: "19-06/22",
@@ -4308,7 +4308,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "FLW",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.flwfishing.com/schedule"
                     },
                     {
                         date: "19-07/13",
@@ -4317,7 +4317,7 @@ module.exports = [
                         state: "VA",
                         txDetail: "FLW",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.flwfishing.com/schedule"
                     },
                     {
                         date: "19-09/07",
@@ -4326,7 +4326,7 @@ module.exports = [
                         state: "VA",
                         txDetail: "FLW",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.flwfishing.com/schedule"
                     }
                 ]
             },
@@ -4393,7 +4393,7 @@ module.exports = [
                         state: "NC-VA",
                         txDetail: "FLW",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.flwfishing.com/schedule"
                     },
                     {
                         date: "19-06/29",
@@ -4402,7 +4402,7 @@ module.exports = [
                         state: "VA",
                         txDetail: "FLW",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.flwfishing.com/schedule"
                     },
                     {
                         date: "19-07/27",
@@ -4411,7 +4411,7 @@ module.exports = [
                         state: "VA",
                         txDetail: "FLW",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.flwfishing.com/schedule"
                     },
                     {
                         date: "19-08/17",
@@ -4420,7 +4420,7 @@ module.exports = [
                         state: "VA",
                         txDetail: "FLW",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.flwfishing.com/schedule"
                     },
                     {
                         date: "19-09/14",
@@ -4429,7 +4429,7 @@ module.exports = [
                         state: "VA",
                         txDetail: "FLW",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.flwfishing.com/schedule"
                     }
                 ]
             },
@@ -4501,7 +4501,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "T1",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.fomntt.com/divisioninfo.cfm?divid=88&getyear=2019"
                     },
                     {
                         date: "19-05/11",
@@ -4510,7 +4510,7 @@ module.exports = [
                         state: "NC-VA",
                         txDetail: "T2",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.fomntt.com/divisioninfo.cfm?divid=88&getyear=2019"
                     },
                     {
                         date: "19-06/15",
@@ -4519,7 +4519,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "T3",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.fomntt.com/divisioninfo.cfm?divid=88&getyear=2019"
                     }
                 ]
             },
@@ -4534,7 +4534,7 @@ module.exports = [
                         state: "NC-VA",
                         txDetail: "T1",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.fomntt.com/divisioninfo.cfm?divid=32&getyear=2019"
                     },
                     {
                         date: "19-04/06",
@@ -4543,7 +4543,7 @@ module.exports = [
                         state: "NC-VA",
                         txDetail: "T2",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.fomntt.com/divisioninfo.cfm?divid=32&getyear=2019"
                     },
                     {
                         date: "19-04/27",
@@ -4552,7 +4552,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "T3",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.fomntt.com/divisioninfo.cfm?divid=32&getyear=2019"
                     },
                     {
                         date: "19-05/18",
@@ -4561,7 +4561,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "T4",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.fomntt.com/divisioninfo.cfm?divid=32&getyear=2019"
                     },
                     {
                         date: "19-06/15",
@@ -4570,7 +4570,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "T5",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "https://www.fomntt.com/divisioninfo.cfm?divid=32&getyear=2019"
                     }
                 ]
             }
@@ -4589,7 +4589,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "http://piedmontbassclassics.com/2019PBC10KSpringTrailMainPage.html"
                     },
                     {
                         date: "19-03/16",
@@ -4598,7 +4598,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "http://piedmontbassclassics.com/2019PBC10KSpringTrailMainPage.html"
                     },
                     {
                         date: "19-03/30",
@@ -4607,7 +4607,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "http://piedmontbassclassics.com/2019PBC10KSpringTrailMainPage.html"
                     },
                     {
                         date: "19-04/13",
@@ -4616,7 +4616,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "http://piedmontbassclassics.com/2019PBC10KSpringTrailMainPage.html"
                     },
                     {
                         date: "19-04/27",
@@ -4625,7 +4625,7 @@ module.exports = [
                         state: "NC-VA",
                         txDetail: "Piedmont Bass Classic",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "http://piedmontbassclassics.com/2019PBC10KSpringTrailMainPage.html"
                     },
                     {
                         date: "19-05/11",
@@ -4634,7 +4634,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "http://piedmontbassclassics.com/2019PBC10KSpringTrailMainPage.html"
                     },
                     {
                         date: "19-06/01",
@@ -4643,7 +4643,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "http://piedmontbassclassics.com/2019PBC10KSpringTrailMainPage.html"
                     },
                     {
                         date: "19-06/15",
@@ -4652,7 +4652,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Championship",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "http://piedmontbassclassics.com/2019PBC10KSpringTrailMainPage.html"
                     }
                 ]
             },
@@ -4665,7 +4665,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "http://piedmontbassclassics.com/2019CashionRodsHartsCustomSetsSpringTrailMainPage.html"
                     },
                     {
                         date: "19-03/09",
@@ -4674,7 +4674,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "http://piedmontbassclassics.com/2019CashionRodsHartsCustomSetsSpringTrailMainPage.html"
                     },
                     {
                         date: "19-03/23",
@@ -4683,7 +4683,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "http://piedmontbassclassics.com/2019CashionRodsHartsCustomSetsSpringTrailMainPage.html"
                     },
                     {
                         date: "19-04/06",
@@ -4692,7 +4692,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "http://piedmontbassclassics.com/2019CashionRodsHartsCustomSetsSpringTrailMainPage.html"
                     },
                     {
                         date: "19-05/04",
@@ -4701,7 +4701,7 @@ module.exports = [
                         state: "NC-VA",
                         txDetail: "Piedmont Bass Classic",
                         resultsLink: "undefined",
-                        entryLink: ""
+                        entryLink: "http://piedmontbassclassics.com/2019CashionRodsHartsCustomSetsSpringTrailMainPage.html"
                     }
                 ]
             }
