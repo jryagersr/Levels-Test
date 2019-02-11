@@ -99,12 +99,6 @@ function displayData(data) {
                 let entryLink = element.trails[k].tournaments[l].entryLink;
                 let resultsLink = element.trails[k].tournaments[l].resultsLink;
 
-                // check to see if an entryLink exists
-                if (entryLink) {
-                    txSection.attr("data-url", entryLink); // Add data attribute to the row with entryLink url
-                    txSection.addClass("clickable-row"); // Add clickable row css styles
-                }
-
                 // Format the tx date to check against today's date
                 let date = element.trails[k].tournaments[l].date
                 let txDate = new Date(date);
@@ -112,16 +106,18 @@ function displayData(data) {
 
                 // If tx date is after today's Date
                 if (txDate.setHours(0, 0, 0, 0) < todaysDate.setHours(0, 0, 0, 0)) {
-                    console.log("date checked");
                     // Check to see if a resultsLink exists
                     if (resultsLink) {
                         // Set href as resultsLink
                         txSection.attr("data-url", resultsLink); // Add data attribute to the row with resultsLink url
                         txSection.addClass("results-clickable-row"); // ADd clickable results row css styles
                     }
-                    else {
-                        // If no resultsLink exists remove the clickable row styles since the tx has passed
-                        txSection.removeClass("clickable-row");
+                }
+                else if (txDate.setHours(0, 0, 0, 0) > todaysDate.setHours(0, 0, 0, 0)) {
+                    // check to see if an entryLink exists
+                    if (entryLink) {
+                        txSection.attr("data-url", entryLink); // Add data attribute to the row with entryLink url
+                        txSection.addClass("clickable-row"); // Add clickable row css styles
                     }
                 }
 
@@ -153,12 +149,6 @@ function displayFlatData(data) {
         let entryLink = element.entryLink;
         let resultsLink = element.resultsLink;
 
-        // check to see if an entryLink exists
-        if (entryLink) {
-            txSection.attr("data-url", entryLink); // Add data attribute to the row with entryLink url
-            txSection.addClass("clickable-row"); // Add clickable row css styles
-        }
-
         // Format the tx date to check against today's date
         let txDate = new Date(element.date);
         let todaysDate = new Date();
@@ -171,9 +161,12 @@ function displayFlatData(data) {
                 txSection.attr("data-url", resultsLink); // Add data attribute to the row with resultsLink url
                 txSection.addClass("results-clickable-row"); // ADd clickable results row css styles
             }
-            else {
-                // If no resultsLink exists remove the clickable row styles since the tx has passed
-                txSection.removeClass("clickable-row");
+        }
+        else if (txDate.setHours(0, 0, 0, 0) > todaysDate.setHours(0, 0, 0, 0)) {
+            // check to see if an entryLink exists
+            if (entryLink) {
+                txSection.attr("data-url", entryLink); // Add data attribute to the row with entryLink url
+                txSection.addClass("clickable-row"); // Add clickable row css styles
             }
         }
 
@@ -465,9 +458,10 @@ $(".btn-filter").on("click", function (e) {
 // });
 
 $('tbody').on("click", "tr", function () {
-    // window.location = $(this).data("url");
-    window.open(
-        $(this).data("url"),
-        '_blank' // <- This is what makes it open in a new window.
-    );
+    if ($(this).data("url")) {
+        window.open(
+            $(this).data("url"),
+            '_blank' // <- This is what makes it open in a new window.
+        );
+    }
 });

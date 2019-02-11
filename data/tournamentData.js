@@ -1872,7 +1872,7 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-gaston/"
                     },
                     {
-                        date: "19-11/02",
+                        date: "2019-11-02",
                         lake: "Gaston",
                         state: "NC",
                         ramp: "Summit",
@@ -1947,7 +1947,7 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-hickory/"
                     },
                     /*{
-                        date: "19-03/??",
+                        date: "2019-03-??",
                         lake: "Hickory",
                         ramp: "Whittenburg",
                         state: "NC",
@@ -2164,7 +2164,7 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
                     },
                     {
-                        date: "19-03/02",
+                        date: "2019-03-02",
                         lake: "Norman",
                         ramp: "Pinnacle",
                         state: "NC",
@@ -2173,7 +2173,7 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
                     },
                     {
-                        date: "19-04/28",
+                        date: "2019-04-28",
                         lake: "Norman",
                         ramp: "Pinnacle",
                         state: "NC",
@@ -2191,7 +2191,7 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
                     },
                     {
-                        date: "19-06/15",
+                        date: "2019-06-15",
                         lake: "Norman",
                         ramp: "Pinnacle",
                         state: "NC",
@@ -2200,7 +2200,7 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
                     },
                     {
-                        date: "19-07/27",
+                        date: "2019-07-27",
                         lake: "Norman",
                         ramp: "Pinnacle",
                         state: "NC",
@@ -2219,7 +2219,7 @@ module.exports = [
 
                     },
                     {
-                        date: "19-09/07",
+                        date: "2019-09-07",
                         lake: "Norman",
                         ramp: "Pinnacle",
                         state: "NC",
