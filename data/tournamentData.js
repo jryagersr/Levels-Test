@@ -2100,7 +2100,7 @@ module.exports = [
                         ramp: "Occonneechee",
                         state: "NC-VA",
                         txDetail: "Qualifier 1",
-                        resultsLink: "undefined",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-kerr-feb-9-2019-kirkpatrick-fore-haul-in-20-33-lbs-collect-1565-00/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
                     },
                     {
@@ -2335,7 +2335,7 @@ module.exports = [
                         ramp: "Easterling",
                         state: "SC",
                         txDetail: "Qualifier 4",
-                        resultsLink: "undefined",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-robinson-sc-jan-19-2019-butler-gainey-win-win-points/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-robinson/"
                     },
                     {
@@ -2344,7 +2344,7 @@ module.exports = [
                         ramp: "Easterling",
                         state: "SC",
                         txDetail: "Final",
-                        resultsLink: "undefined",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-robinson-fall-final-jan-26-2019-mike-clint-byrd-claim-1st-place/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-robinson/"
                     }
                 ]
@@ -3107,7 +3107,7 @@ module.exports = [
                         ramp: "Blacks Camp",
                         state: "SC",
                         txDetail: "CBC",
-                        resultsLink: "undefined",
+                        resultsLink: "http://www.carolinasbasschallenge.com/results.php?id=8",
                         entryLink: "http://www.carolinasbasschallenge.com/tournaments.php"
                     },
                     {
