@@ -1552,7 +1552,6 @@ module.exports = [
         organization: "CATT",
         trails: [
 
-
             {
                 trail: "NC/SC Championship (2-Day)",
                 tournaments: [
@@ -1564,7 +1563,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "CATT Championship",
                         resultsLink: "",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/shop/tournaments/2019-kerr-lake-catt-championship/"
                     }
                 ]
             }, {
