@@ -5,6 +5,14 @@ var express = require("express"),
   _ = require("underscore"),
   fs = require('fs');
 
+  // Holds our display data to send into buildTable function
+let displayBatch = [];
+
+// Variable to calculate and display current pool level
+let lakePool = 0;
+let seaLevelDelta = 0;
+let elevationAdjust = 0;
+
 // var txData = [];
 
 // Require all models
@@ -63,132 +71,8 @@ module.exports = function (app) {
   // I don't think this is required now that we have A2W
 
 
-  // Route to retrieve ACE data for Kerr Lake
-  app.get("/api/kerr", function (request, response) {
-    var url = "http://epec.saw.usace.army.mil/dsskerr.txt";
-    var indexes = [0, 1, 2, 3, 4]
-    getData(10, "Kerr", indexes, url, function (error, data) {
-      if (error) {
-        response.send(error);
-        return;
-      } else {
-        response.json(data.reverse());
-      }
-    });
+  
 
-    // Function to pull data
-    function getData(col, lakeName, indexes, newUrl, callback) {
-      var request = require("request");
-      var data = [];
-
-      var options = {
-        url: newUrl
-      }
-      request(options, function (error, response, body) {
-        if (error) {
-          callback(error);
-        }
-        _.each(body.split("\r\n"), function (line) {
-          // Split the text body into readable lines
-          var splitLine;
-          line = line.trim();
-          splitLine = line.split(/[ ]+/);
-          // Check to see if this is a data line
-          // Column length and first two characters must match
-          if (splitLine.length === col && !isNaN(parseInt(line.substring(0, 2)))) {
-            // Loop through each cell and check for missing data
-            for (var i = 0; i < splitLine.length; i++) {
-              if (splitLine[i].substring(0, 1) === "?" || splitLine[i] == -99) {
-                splitLine[i] = "N/A";
-              }
-            }
-            // Formulate the date to remove Month
-            let cleanDate = splitLine[indexes[0]].substring(0, 2) + " " + splitLine[indexes[0]].substring(2, 5);
-            // Push each line into data object
-            data.push({
-              lakeName: lakeName,
-              date: cleanDate,
-              time: splitLine[indexes[1]],
-              inflow: splitLine[indexes[2]],
-              outflow: splitLine[indexes[3]],
-              level: splitLine[indexes[4]]
-            });
-
-          }
-        });
-        callback(null, data);
-      });
-    }
-
-
-  });
-
-  /***************************************************************************************************************************************** */
-
-  // I don't think this is required now that we have A2W
-
-  // Route to retrieve ACE data for Jordan Lake
-  app.get("/api/jordan", function (request, response) {
-    var url = "http://epec.saw.usace.army.mil/dssjord.txt";
-    var indexes = [0, 1, 8, 9, 10]
-    getData(11, "Jordan", indexes, url, function (error, data) {
-      if (error) {
-        response.send(error);
-        return;
-      } else {
-        response.json(data.reverse());
-      }
-    });
-
-    // Function to pull data
-    function getData(col, lakeName, indexes, newUrl, callback) {
-      var request = require("request");
-      var data = [];
-
-      var options = {
-        url: newUrl
-      }
-      request(options, function (error, response, body) {
-        if (error) {
-          callback(error);
-        }
-
-        _.each(body.split("\r\n"), function (line) {
-          // Split the text body into readable lines
-          var splitLine;
-          line = line.trim();
-          splitLine = line.split(/[ ]+/);
-          // Check to see if this is a data line
-          // Column length and first two characters must match
-
-          if (splitLine.length === col && !isNaN(parseInt(line.substring(0, 2)))) {
-            // Loop through each cell and check for missing data
-            for (var i = 0; i < splitLine.length; i++) {
-              if (splitLine[i].substring(0, 1) === "?" || splitLine[i] == -99) {
-                splitLine[i] = "N/A";
-              }
-            }
-            // Formulate the date to remove Month
-            let cleanDate = splitLine[indexes[0]].substring(0, 2) + " " + splitLine[indexes[0]].substring(2, 5);
-            // Push each line into data object
-            data.push({
-              lakeName: lakeName,
-              date: cleanDate,
-              time: splitLine[indexes[1]],
-              inflow: splitLine[indexes[2]],
-              outflow: splitLine[indexes[3]],
-              level: splitLine[indexes[4]]
-            });
-
-          }
-        });
-        callback(null, data);
-      });
-    }
-  });
-
-
-  /***************************************************************************************************************************************** */
   // Route to retrieve data for cube carolinas
   app.get("/api/cube", function (request, response) {
     // Parses our HTML and helps us find elements
@@ -271,13 +155,14 @@ module.exports = function (app) {
   // Route to retrieve ACE data from A2W
   app.get("/api/a2w", function (request, response) {
     let a2wURL = request.query.a2wURL;
+    let currentLake = request.query.currentLake;
 
     getData(a2wURL, function (error, data) {
       if (error) {
         response.send(error);
         return;
       } else {
-        response.json(data);
+        response.json(displayBatch);
       }
     });
 
@@ -287,12 +172,275 @@ module.exports = function (app) {
       request(a2wURL, function (error, response, body) {
         if (error) {
           callback(error);
-        }
+        };
+        
         data = JSON.parse(body);
-        callback(null, data);
+        
+        // Insert data processing code from thisLake.js here
+
+        console.log("ACE Call");
+        console.log(data);
+
+        let ACEFlow = false;
+        let ACEFlowIndex = -1;
+        let ACEElevIndex = 0;
+        let ACEElevNum = 0;
+        let ACEFlowNum = 0;
+        let exceptionLake = false;
+
+        //see if A2W is returning Elev Data
+        if (typeof data[0].Elev !== 'undefined') {
+
+            // default value of ACEFlow is false, indicating ACE has no Flow Data included
+            // default value of ACEFlowIndex is -1, indicating
+            // Sometimes OutFlow is index 1, sometimes it's index 2, or 3
+            // And then there is Ross Barnett, that doesn't have flow and only has 3 in the array!
+
+            // Automating the AceFlowIndex value identification code to automatically determine based on data (Fix the Ace Outflow problem)
+            let aa = 0
+            while (aa < data.length && typeof data[aa].Outflow == 'undefined') {
+                AceFlowIndex = aa;
+                aa++;
+            }
+            if (aa < data.length && aa > 0) {
+                ACEFlow = true;
+                ACEFlowIndex = aa;
+            } else exceptionLake = true;
+
+            let firstDate = data[ACEElevIndex].Elev[0].time.split(" ");
+            let secondDate = data[ACEElevIndex].Elev[1].time.split(" ");
+            let dailyACEData = firstDate[1] === secondDate[1]; // default value, this is for when ACE only returns daily readings vs hourly
+            let isLakeIstokpoga = currentLake.bodyOfWater == 'Istokpoga'; // default value, this is when the ACE data is Fucked Up like Istokpoga in Florida, Damn...
+
+            // These have 120 elev data and 5 Flow, ignore flow data
+            if (['Truman', 'Pomme De Terre', "Stockton", "Rend", ].includes(currentLake.bodyOfWater))
+                ACEFlow = false;
+
+            // Get current Date, Time and Elev
+            // Convert ACE date to javascript Date format "12/24/2016 02:00:00"
+
+            // Indexes into data for the first entry
+
+            if (ACEFlow) { // If there are flows, get the data indexes set up for the for loop below.
+                if (Date.parse(data[ACEElevIndex].Elev[ACEElevNum].time) !== Date.parse(data[ACEFlowIndex].Outflow[ACEFlowNum].time)) {
+                    // Now need to line up the dates
+
+                    // The Flow data comes in on the hour, find the first elev data that is on the hour
+                    let elevOnHour = false;
+
+                    while (!elevOnHour) {
+                        elevMinIndex = data[ACEElevIndex].Elev[ACEElevNum].time.indexOf(":") + 1;
+                        elevMin = data[ACEElevIndex].Elev[ACEElevNum].time.substr(elevMinIndex, 2)
+                        if (elevMin == "00")
+                            elevOnHour = true;
+                        else ACEElevNum++
+                    }
+
+                    // Determine if flow date is earlier or later than first elev date
+                    // Use the later date as a base and loop thru the earlier date until they match
+                    elevTime = Date.parse(data[ACEElevIndex].Elev[ACEElevNum].time);
+                    flowTime = Date.parse(data[ACEFlowIndex].Outflow[ACEFlowNum].time);
+                    if (elevTime > flowTime)
+                        while (elevTime !== flowTime) {
+                            ACEFlowNum++;
+                            flowTime == Date.parse(data[ACEFlowIndex].Outflow[ACEFlowNum].time);
+                        }
+                    else
+                        while (flowTime > elevTime) {
+                            ACEElevNum++;
+                            elevTime = Date.parse(data[ACEElevIndex].Elev[ACEElevNum].time);
+                        }
+
+                }
+            }
+
+
+            // Convert UTC date to local time
+            let localTime = convertStringToUTC(data[ACEElevIndex].Elev[ACEElevNum].time)
+
+
+            // Create our increment and loop through each value
+            // For each value create our associated table html
+            let i = ACEFlowNum;
+            let flow = 0;
+            let lastHourDisplayed = -1; // for Istokpoga
+            let displayFlowData = true; // This is for this loop, some lakes we have to sort through the times (Istokpoga, FL)
+            let jIncrement = 1; // default
+
+            // if the elev length is more than 3x the flow length, it's probably 
+            // elevs every 15 minutes and flows on the hour 4:1 ratio
+            if (ACEFlow && (data[ACEElevIndex].Elev.length / 3 > data[ACEFlowIndex].Outflow.length))
+                jIncrement = 4;
+
+            // Lower the increment if the elev data is daily
+            if (dailyACEData)
+                jIncrement = 1;
+
+            if (['Eufaula', 'Brantley', 'Columbus'].includes(currentLake.bodyOfWater)) // Eufaula is every 15 minutes with no OutFlow
+                if (currentLake.normalPool < 189) { // This identfies Eufaula AL from Eufaula, OK
+                    jIncrement = 4;
+                    exceptionLake = true; // set the exceptionLake flag to bypass the flow check in the for loop below
+                }
+            if (['Brantley'].includes(currentLake.bodyOfWater)) // Brantley is every 15 minutes with no OutFlow
+                jIncrement = 4;
+
+            if (['Red Rock'].includes(currentLake.bodyOfWater)) // Red Rock is every 30 minutes
+                jIncrement = 2;
+
+            for (j = ACEElevNum; j < data[ACEElevIndex].Elev.length; j = j + jIncrement) {
+                // make sure the times match for elev and flow
+                if (!exceptionLake && i < data[ACEFlowIndex].Outflow.length - 1) {
+                    if (Date.parse(data[ACEElevIndex].Elev[j].time) !== Date.parse(data[ACEFlowIndex].Outflow[i].time)) {
+                        if (ACEFlow) {
+                            // Do the elev and flow dates match
+                            while (Date.parse(data[ACEElevIndex].Elev[j].time) !== Date.parse(data[ACEFlowIndex].Outflow[i].time)) {
+                                // If not, need to line up the dates
+
+                                //Which one is behind
+                                if (Date.parse(data[ACEElevIndex].Elev[j].time) <= Date.parse(data[ACEFlowIndex].Outflow[i].time)) {
+                                    // The Flow data comes in on the hour, find the next elev data that is on the hour
+                                    let elevOnHour = false;
+
+                                    while (!elevOnHour) { // until we find an on the hour
+                                        elevMinIndex = data[ACEElevIndex].Elev[j].time.indexOf(":") + 1; // get the index at the 'minutes'
+                                        elevMin = data[ACEElevIndex].Elev[j].time.substr(elevMinIndex, 2) // retrieve the 'minutes'
+                                        if (elevMin == "00") // is it on the hour
+                                            elevOnHour = true; // end while loop
+                                        else j++ // increment and loop
+                                    }
+                                } else i++
+                            }
+                        }
+                    }
+                }
+
+                let elev = data[ACEElevIndex].Elev[j].value.toFixed(2);
+                localTime = convertStringToUTC(data[ACEElevIndex].Elev[j].time);
+                let date = localTime.toString().substring(4, 15);
+                let time = localTime.toString().substring(16, 21);
+                flow = 'No data'; // default value, this differentiates no reported data from no data available (N/A)
+                if (ACEFlow)
+                    if (i < data[ACEFlowIndex].Outflow.length) {
+
+                        if (data[ACEFlowIndex].Outflow[i].value !== -99)
+                            flow = data[ACEFlowIndex].Outflow[i].value // commented out for production + " " + convertStringToUTC(data[ACEFlowIndex].Outflow[i].time);
+
+                    } else flow = 'Missing'; // This differentiate this condition vs N/A or No data
+
+                /*
+                if (isLakeIstokpoga == true && localTime.getHours() == lastHourDisplayed) {
+                    displayFlowData = false;
+                } else {
+                    lastHourDisplayed = localTime.getHours();
+                    displayFlowData = true;
+                }*/
+                
+                if (displayFlowData) {
+                    if (ACEFlow) {
+                        displayBatch.push({
+                            date: date,
+                            time: time,
+                            elev: elev,
+                            flow: flow
+                        })
+                    } else {
+                        displayBatch.push({
+                            date: date,
+                            time: time,
+                            elev: elev,
+                            flow: "N/A" // no data available
+                        });
+                    }
+                }
+
+                i++;
+
+            }
+            // Convert UTC date to local time
+            localTime = convertStringToUTC(data[ACEElevIndex].Elev[j - jIncrement].time)
+            currentDate = localTime.toString().substring(4, 15);
+            currentTime = localTime.toString().substring(16, 21);
+
+            currentElev = parseFloat(data[ACEElevIndex].Elev[j - jIncrement].value).toFixed(2);
+
+            currentDelta = (currentElev - lakePool).toFixed(2);
+
+        } else {
+            console.log("A2W is not returning Elevation Data", data)
+            $("#lakeTitle").append(bodyOfWaterName);
+            $("#lakeSponsor").append(bodyOfWaterName);
+            $("#lakeFeaturedTournament").append(bodyOfWaterName);
+            // Set current date, time elev, and pool on page
+            $("#currentLevel").append("Water Level sensor down, try again later or report this outage");
+            $("#currentNormal").append("normal pool " + lakePool);
+        }
+
+        // End of data processing code from thisLake.js
+
+        callback(null, displayBatch.reverse());
       })
     }
-  })
+    // Date Conversion functions from thisLake.js
+
+
+    function getMonthNumberFromString(mon) {
+
+      var d = Date.parse(mon + "1, 2012");
+      if (!isNaN(d)) {
+        return new Date(d).getMonth() + 1;
+      }
+      return -1;
+    }
+
+    function convertStringToUTC(convertedTime) {
+      // Convert UTC date to local time
+      // Convert to ISO format first. '2011-04-11T10:20:30Z'
+      convertedTime = convertedTime.trim();
+      let convertedMonth = convertedTime.substring(3, 6);
+      convertedMonth = getMonthFromString(convertedMonth);
+      convertedMonth = convertedMonth.toString();
+      if (convertedMonth.length == 1) convertedMonth = "0" + convertedMonth;
+      //Convert the string to UTC (GTM)
+      convertedTime = convertedTime.substring(7, 11) + "-" + convertedMonth + "-" + convertedTime.substring(0, 2) + "T" + convertedTime.substring(12, 21) + "Z";
+      //Convert the string to a Date
+      //convertedTime = new Date(convertedTime);
+      //Might need this call in ater
+      convertedTime = new Date(convertedTime);
+      //Convert the Date to local time (client)
+      // convertedTime = convertedTime.toString(convertedTime);
+      // Time now looks like "Thu Dec 27 2018 11:15:00 GMT-0500 (Eastern Standard Time)"
+      // Substring the pieces we want to display
+      return (convertedTime)
+    }
+
+    function getMonthFromString(mon) {
+      return new Date(Date.parse(mon + " 1, 2012")).getMonth() + 1
+    }
+
+    function convertUTCDate(timestamp) {
+      // Multiply by 1000 because JS works in milliseconds instead of the UNIX seconds
+      var date = new Date(timestamp * 1000);
+
+      var year = date.getUTCFullYear();
+      var month = date.getUTCMonth() + 1; // getMonth() is zero-indexed, so we'll increment to get the correct month number
+      var day = date.getUTCDate();
+      var hours = date.getUTCHours();
+      var minutes = date.getUTCMinutes();
+      var seconds = date.getUTCSeconds();
+
+      month = (month < 10) ? '0' + month : month;
+      day = (day < 10) ? '0' + day : day;
+      hours = (hours < 10) ? '0' + hours : hours;
+      minutes = (minutes < 10) ? '0' + minutes : minutes;
+      seconds = (seconds < 10) ? '0' + seconds : seconds;
+
+      return year + '-' + month + '-' + day + ' ' + hours + ':' + minutes;
+    }
+
+
+    // End of Date Conversion function from thisLake.js
+
+  }); // End of Route to retrieve ACE data from A2W
 
 
   /***************************************************************************************************************************************** */
