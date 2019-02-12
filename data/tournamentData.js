@@ -1577,7 +1577,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "Phantom Outdoors",
                         resultsLink: "",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/phantom-outdoors-5000-invitational/"
                     }
                 ]
             },
