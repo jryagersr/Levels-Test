@@ -2276,7 +2276,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Qualifier 5",
                         resultsLink: "",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
                     },
                     {
                         date: "2019-06-08",
@@ -2488,7 +2488,7 @@ module.exports = [
                         ramp: "Parkway",
                         state: "VA",
                         txDetail: "Qualifier 1",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-smith-mtn-lake-va-feb9-2019-the-pilsons-sack-em-up/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-smith-mountain/"
                     },
                     {
@@ -2747,6 +2747,39 @@ module.exports = [
                 tournaments: [
 
                     {
+                        date: "2019-02-09",
+                        lake: "Wateree",
+                        ramp: "Clearwater",
+                        state: "SC",
+                        txDetail: "Open 6",
+                        resultsLink: "https://www.cattteamtrail.com/news/catt-lake-wateree-open-results-feb-9-2019-williams-english-take-the-1st-open-with-19-19-lbs/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
+                    },{
+                        date: "2019-02-23",
+                        lake: "Wateree",
+                        ramp: "Clearwater",
+                        state: "SC",
+                        txDetail: "Open 6",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
+                    },{
+                        date: "2019-03-09",
+                        lake: "Wateree",
+                        ramp: "Clearwater",
+                        state: "SC",
+                        txDetail: "Open 6",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
+                    },{
+                        date: "2019-03-23",
+                        lake: "Wateree",
+                        ramp: "Clearwater",
+                        state: "SC",
+                        txDetail: "Open 6",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
+                    },
+                    {
                         date: "2019-04-06",
                         lake: "Wateree",
                         ramp: "Clearwater",
@@ -2828,15 +2861,6 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
                     {
-                        date: "2019-08-10",
-                        lake: "Wateree",
-                        ramp: "Clearwater",
-                        state: "SC",
-                        txDetail: "Open 15",
-                        resultsLink: "",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
-                    },
-                    {
                         date: "2019-09-28",
                         lake: "Wateree",
                         ramp: "Clearwater",
@@ -2874,87 +2898,6 @@ module.exports = [
                     },
                     {
                         date: "2019-11-16",
-                        lake: "Wateree",
-                        ramp: "Clearwater",
-                        state: "SC",
-                        txDetail: "Final",
-                        resultsLink: "",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
-                    },
-                    {
-                        date: "2019-02-16",
-                        lake: "Wateree",
-                        ramp: "Clearwater",
-                        state: "SC",
-                        txDetail: "Qualifier 1",
-                        resultsLink: "",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
-                    },
-                    {
-                        date: "2019-02-23",
-                        lake: "Wateree",
-                        ramp: "Clearwater",
-                        state: "SC",
-                        txDetail: "Qualifier 2",
-                        resultsLink: "",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
-                    },
-                    {
-                        date: "2019-03-02",
-                        lake: "Wateree",
-                        ramp: "Clearwater",
-                        state: "SC",
-                        txDetail: "Qualifier 3",
-                        resultsLink: "",
-                        entryLink: ""
-                    },
-                    {
-                        date: "2019-03-09",
-                        lake: "Wateree",
-                        ramp: "Clearwater",
-                        state: "SC",
-                        txDetail: "Qualifier 4",
-                        resultsLink: "",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
-                    },
-                    {
-                        date: "2019-03-16",
-                        lake: "Wateree",
-                        ramp: "Clearwater",
-                        state: "SC",
-                        txDetail: "Qualifier 5",
-                        resultsLink: "",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
-                    },
-                    {
-                        date: "2019-03-23",
-                        lake: "Wateree",
-                        ramp: "Clearwater",
-                        state: "SC",
-                        txDetail: "Qualifier 6",
-                        resultsLink: "",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
-                    },
-                    {
-                        date: "2019-03-30",
-                        lake: "Wateree",
-                        ramp: "Clearwater",
-                        state: "SC",
-                        txDetail: "Qualifier 7",
-                        resultsLink: "",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
-                    },
-                    {
-                        date: "2019-04-06",
-                        lake: "Wateree",
-                        ramp: "Clearwater",
-                        state: "SC",
-                        txDetail: "Qualifier 8",
-                        resultsLink: "",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
-                    },
-                    {
-                        date: "2019-04-13",
                         lake: "Wateree",
                         ramp: "Clearwater",
                         state: "SC",
@@ -3351,7 +3294,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "2-Day",
                     resultsLink: "",
-                    entryLink: ""
+                    entryLink: "https://www.ncbasschallenge.com/202019-to-rnament-schedule/"
                 }
             ]
         }, ]
