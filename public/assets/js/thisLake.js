@@ -223,26 +223,49 @@ function elevUSGS(callback) {
             let jIncrement = 1;
             if (currentLake.bodyOfWater == "Mille Lacs")
                 valuesIndex = 1 // For some reason Mille Lacs has changed from index 0 to index 1 02/10/19
-            let dataValues = data.value.timeSeries[0].values[valuesIndex].value;
-            // Reverse the order of our data so most recent date is first
-            dataValues.reverse();
 
+            // To retrieve Flows from USGS, we get multiple .timevalues and the variable.variableDecription 
+            // value will contain "Discharge" 'Gage' for Flow or Elev data. We must determine which timevalues
+            let timeSeriesLength = data.value.timeSeries.length;
+            let timeSeriesElevIndex = -1; // default value indicates no data
+            let timeSeriesFlowIndex = -1;
+
+            for (i = 0; i < timeSeriesLength; i++) {
+                if (data.value.timeSeries[i].variable.variableDescription.includes("Discharge"))
+                    timeSeriesFlowIndex = i;
+                else if (data.value.timeSeries[i].variable.variableDescription.includes("Gage height")
+                || data.value.timeSeries[i].variable.variableDescription.includes("water surface"))
+                    timeSeriesElevIndex = i;
+            }
+            // Set up elev and flow Values
+            let elevValues = '';
+            let flowValues = '';
+
+            elevValues = data.value.timeSeries[timeSeriesElevIndex].values[valuesIndex].value;
+            // Reverse the order of our data so most recent date is first
+            elevValues.reverse();
+
+            if (timeSeriesFlowIndex >= 0) { // if there is flow data, then set the flowValues
+                flowValues = data.value.timeSeries[timeSeriesFlowIndex].values[valuesIndex].value;
+                // Reverse the order of our data so most recent date is first
+                flowValues.reverse();
+            }
             // Check to see if the sensor is returning data
-            if (dataValues.length > 0) {
+            if (elevValues.length > 0) {
 
                 // If reported level is not based on MSL, set the seaLevelDelta to add to the level
                 // to convert to MSL based.
                 if (seaLevelDelta !== 0)
-                    elevationAdjust = (parseFloat(dataValues[0].value) + seaLevelDelta).toFixed(2);
+                    elevationAdjust = (parseFloat(elevValues[0].value) + seaLevelDelta).toFixed(2);
                 else {
                     if (lakePool !== 0)
-                        elevationAdjust = dataValues[0].value;
-                    else elevationAdjust = dataValues[0].value;
+                        elevationAdjust = elevValues[0].value;
+                    else elevationAdjust = elevValues[0].value;
                 }
 
                 // Set current Date, Time and Elev
                 currentElev = elevationAdjust;
-                let splitTimeDate = dataValues[0].dateTime.split("T");
+                let splitTimeDate = elevValues[0].dateTime.split("T");
                 currentDate = splitTimeDate[0];
                 currentTime = splitTimeDate[1].substring(0, 5);
                 currentDelta = (currentElev - lakePool).toFixed(2);
@@ -251,26 +274,29 @@ function elevUSGS(callback) {
                 // For each value push an object into displayBatch
                 // Set our counter K variable before incrementing for flowUSGS to use
                 // k = j;
-                if (dataValues.length <= 100) // If we only get 93 data values when we requested 96 hours, then it's hourly
+                if (elevValues.length <= 100) // If we only get 93 data values when we requested 96 hours, then it's hourly
                     jIncrement = 1;
                 else if (['Hudson', 'Lawtonka'].includes(currentLake.bodyOfWater)) jIncrement = 2;
                 else jIncrement = 4;
-                for (j = 0; j < dataValues.length; j += jIncrement) {
-                    let element = dataValues[j];
+                for (j = 0; j < elevValues.length; j += jIncrement) {
+                    let element = elevValues[j];
                     let elev = element.value;
                     let splitTimeDate = element.dateTime.split("T");
                     let date = splitTimeDate[0].substring(2, 10).replace('-', ' ');
                     let time = splitTimeDate[1].substring(0, 5);
+                    let flow = "N/A";
+                    if (timeSeriesFlowIndex >= 0)
+                        flow = flowValues[j].value;
                     // adjust the elev for lakes with data relative to full pool (not from sealevel))
                     if (seaLevelDelta !== 0) {
-                        elev = (parseFloat(dataValues[j].value) + seaLevelDelta).toFixed(2);
+                        elev = (parseFloat(elevValues[j].value) + seaLevelDelta).toFixed(2);
                     }
 
                     displayBatch.push({
                         date: date,
                         time: time,
                         elev: elev,
-                        flow: "N/A"
+                        flow: flow
                     });
                 }
                 callback(null, displayBatch);
@@ -297,12 +323,12 @@ function flowUSGS(callback) {
         .then(function (data) {
             console.log("flowUSGS data ", data);
             // Parse through the json data to find the values we want
-            let dataValues = data.value.timeSeries[0].values[0].value
+            let flowValues = data.value.timeSeries[0].values[0].value
             // Reverse the order of our data so most recent date is first
-            dataValues.reverse();
+            flowValues.reverse();
             // Loop through the flow data, and match it to displayBatch (which already holds the elevation data)
             for (var i = 0; i < displayBatch.length; i++) {
-                displayBatch[i].flow = dataValues[k].value;
+                displayBatch[i].flow = flowValues[k].value;
                 k += 4;
             }
             console.log(displayBatch)

@@ -573,7 +573,7 @@ module.exports = [
                 ],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: 1329.0, // 1329ft but data reported as a delta to full pool
+                seaLevelDelta: 1318.26, // 1329ft but data reported as a delta to full pool
                 normalPool: 1329.0,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=11450000&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all",
                 flowURL: "none",
@@ -673,7 +673,7 @@ module.exports = [
                 seaLevelDelta: 2162.44, //but data reported as a delta to full pool
                 normalPool: 2164.43,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=11516530&period=PT96H&parameterCd=00065&siteType=ST&siteStatus=all",
-                flowURL: "none",
+                flowURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=11516530&period=PT96H&parameterCd=00060&siteType=ST&siteStatus=all",
                 href: "/lakes/irongate",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
@@ -824,7 +824,7 @@ module.exports = [
                 ],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: 0,
+                seaLevelDelta: 11.0,
                 normalPool: 6000.0,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=09091900&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all",
                 flowURL: "none",
@@ -848,8 +848,8 @@ module.exports = [
                 ],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: 0,
-                normalPool: 6300.0,
+                seaLevelDelta: 11.36,
+                normalPool: 6230.0,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07124400&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/trinidad",
@@ -2369,9 +2369,9 @@ module.exports = [
                 ],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: 57.0,
+                seaLevelDelta: 10.21,
                 normalPool: 410.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02168500&period=PT96H&parameterCd=00062&siteType=ST&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02077280&period=PT96H&parameterCd=00062&siteType=ST&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/hyco",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -2718,7 +2718,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 778.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07190000&period=PT95H&parameterCd=00065&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07191285&period=PT95H&parameterCd=00065&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/eucha",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -3030,30 +3030,6 @@ module.exports = [
                 adLogoUrl: ""
             },
             {
-                bodyOfWater: "Shenango", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
-                refreshInterval: 30, //minutes
-                lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: 0,
-                normalPool: 894.67,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03103400&period=PT96H&parameterCd=62615&siteType=LK&siteStatus=all",
-                flowURL: "none",
-                href: "/lakes/shenango",
-                dataSource: ["USGS"], // array of calls to make to retrieve data
-                resultsLink: "undefined",
-                entryLink: "",
-                adLogoSrc: "",
-                adLogoUrl: ""
-            },
-            {
                 bodyOfWater: "Raystown", // lake name
                 data: [
 
@@ -3071,6 +3047,30 @@ module.exports = [
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=01563100&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/raystown",
+                dataSource: ["USGS"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
+            {
+                bodyOfWater: "Shenango", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["19-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 30, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0,
+                normalPool: 894.67,
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03103400&period=PT96H&parameterCd=62615&siteType=LK&siteStatus=all",
+                flowURL: "none",
+                href: "/lakes/shenango",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
@@ -3948,7 +3948,7 @@ module.exports = [
                 normalPool: 1067.53,
                 elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=17130111&p_parameter_type=Flow:Stor:Precip:Stage:Elev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
                 flowURL: "none",
-                href: "/lakes/geneva",
+                href: "/lakes/stonewalljackson",
                 dataSource: ["ACE"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
@@ -4022,7 +4022,7 @@ module.exports = [
                 ],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: 879.0,
+                seaLevelDelta: 861.86,
                 normalPool: 879.0,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=423525088260400&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all",
                 flowURL: "none",
