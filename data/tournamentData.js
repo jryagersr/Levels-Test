@@ -1038,7 +1038,7 @@ module.exports = [
 
                 {
                     date: "2019-03-16",
-                    lake: "Smith Mountain",
+                    lake: "Smith Mtn",
                     ramp: "Parkway",
                     state: "VA",
                     txDetail: "Anglers Choice",
@@ -1065,7 +1065,7 @@ module.exports = [
                 },
                 {
                     date: "2019-05-04",
-                    lake: "Smith Mountain",
+                    lake: "Smith Mtn",
                     ramp: "Parkway",
                     state: "VA",
                     txDetail: "Anglers Choice",
@@ -1638,8 +1638,8 @@ module.exports = [
 
                     {
                         date: "2019-01-26",
-                        lake: "Waccamaw Rvr",
-                        ramp: "Bucksport",
+                        lake: "Winyah Bay",
+                        ramp: "Carroll Campbell Marine",
                         state: "SC",
                         txDetail: "Qualifier 1",
                         resultsLink: "https://www.cattteamtrail.com/news/tournament-results-carolina-coastal-rivers-jan-26-2019-pope-johnson-bust-20-lbs/",
@@ -2235,7 +2235,7 @@ module.exports = [
                     {
                         date: "2019-03-09",
                         lake: "Kerr",
-                        ramp: "Flemington",
+                        ramp: "Flemingtown",
                         state: "NC-VA",
                         txDetail: "Qualifier 1",
                         resultsLink: "",
@@ -2280,7 +2280,7 @@ module.exports = [
                     {
                         date: "2019-06-08",
                         lake: "Kerr",
-                        ramp: "Flemington",
+                        ramp: "Flemingtown",
                         state: "NC-VA",
                         txDetail: "Qualifier 6",
                         resultsLink: "",
@@ -2402,7 +2402,7 @@ module.exports = [
                         lake: "Santee Cooper",
                         ramp: "John C Land",
                         state: "SC",
-                        txDetail: "Qualifier 6",
+                        txDetail: "Gold 6",
                         resultsLink: "",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-santee-cooper/"
                     },
@@ -2509,9 +2509,9 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-smith-mountain/"
                     },
                     {
-                        date: "2019-05-12",
+                        date: "2019-04-20",
                         lake: "SML",
-                        ramp: "Parkway",
+                        ramp: "SML State Park",
                         state: "VA",
                         txDetail: "Final",
                         resultsLink: "",
@@ -2576,7 +2576,7 @@ module.exports = [
 
                     {
                         date: "2019-04-17",
-                        lake: "Pasquotank",
+                        lake: "Pasquotank Rvr",
                         ramp: "Waterfront",
                         state: "NC",
                         txDetail: "Qualifier 1",
@@ -2585,7 +2585,7 @@ module.exports = [
                     },
                     {
                         date: "2019-03-30",
-                        lake: "Nottoway",
+                        lake: "Nottoway Rvr",
                         ramp: "258 Ramp",
                         state: "NC",
                         txDetail: "Qualifier 2",
@@ -2594,7 +2594,7 @@ module.exports = [
                     },
                     {
                         date: "2019-04-14",
-                        lake: "Chowan",
+                        lake: "Chowan Rvr",
                         ramp: "Shoups",
                         state: "NC",
                         txDetail: "Qualifier 3",
@@ -2646,7 +2646,7 @@ module.exports = [
                     {
                         date: "2019-06-22",
                         lake: "Waccamaw Rvr",
-                        ramp: "G-CC Landing",
+                        ramp: "Bucksport",
                         state: "SC",
                         txDetail: "Qualifier 2",
                         resultsLink: "",
@@ -2655,7 +2655,7 @@ module.exports = [
                     {
                         date: "2019-07-13",
                         lake: "Waccamaw Rvr",
-                        ramp: "Bucksport",
+                        ramp: "Georgtown-Carroll CC",
                         state: "SC",
                         txDetail: "Gold 3",
                         resultsLink: "",
@@ -2713,7 +2713,7 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
                     },
                     {
-                        date: "2019-03-09",
+                        date: "2019-03-02",
                         lake: "Wateree",
                         ramp: "Clearwater",
                         state: "SC",
@@ -2722,7 +2722,7 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
                     },
                     {
-                        date: "2019-03-23",
+                        date: "2019-03-09",
                         lake: "Wateree",
                         ramp: "Clearwater",
                         state: "SC",
@@ -2731,11 +2731,47 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
                     },
                     {
-                        date: "2019-03-30",
+                        date: "2019-03-16",
                         lake: "Wateree",
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 5",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
+                    },
+                    {
+                        date: "2019-03-23",
+                        lake: "Wateree",
+                        ramp: "Clearwater",
+                        state: "SC",
+                        txDetail: "Open 6",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
+                    },
+                    {
+                        date: "2019-03-30",
+                        lake: "Wateree",
+                        ramp: "Clearwater",
+                        state: "SC",
+                        txDetail: "Open 7",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
+                    },
+                    {
+                        date: "2019-04-06",
+                        lake: "Wateree",
+                        ramp: "Clearwater",
+                        state: "SC",
+                        txDetail: "Open 8",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
+                    },
+                    {
+                        date: "2019-04-13",
+                        lake: "Wateree",
+                        ramp: "Clearwater",
+                        state: "SC",
+                        txDetail: "Final",
                         resultsLink: "",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
                     }
@@ -2750,7 +2786,7 @@ module.exports = [
                         lake: "Wateree",
                         ramp: "Clearwater",
                         state: "SC",
-                        txDetail: "Open 6",
+                        txDetail: "Open 1",
                         resultsLink: "https://www.cattteamtrail.com/news/catt-lake-wateree-open-results-feb-9-2019-williams-english-take-the-1st-open-with-19-19-lbs/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },{
@@ -2758,7 +2794,7 @@ module.exports = [
                         lake: "Wateree",
                         ramp: "Clearwater",
                         state: "SC",
-                        txDetail: "Open 6",
+                        txDetail: "Open 2",
                         resultsLink: "",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },{
@@ -2766,7 +2802,7 @@ module.exports = [
                         lake: "Wateree",
                         ramp: "Clearwater",
                         state: "SC",
-                        txDetail: "Open 6",
+                        txDetail: "Open 3",
                         resultsLink: "",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },{
@@ -2774,7 +2810,7 @@ module.exports = [
                         lake: "Wateree",
                         ramp: "Clearwater",
                         state: "SC",
-                        txDetail: "Open 6",
+                        txDetail: "Open 4",
                         resultsLink: "",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
@@ -2783,7 +2819,7 @@ module.exports = [
                         lake: "Wateree",
                         ramp: "Clearwater",
                         state: "SC",
-                        txDetail: "Open 6",
+                        txDetail: "Open 5",
                         resultsLink: "",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
@@ -2792,7 +2828,7 @@ module.exports = [
                         lake: "Wateree",
                         ramp: "Clearwater",
                         state: "SC",
-                        txDetail: "Open 7",
+                        txDetail: "Open 6",
                         resultsLink: "",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
@@ -2801,7 +2837,7 @@ module.exports = [
                         lake: "Wateree",
                         ramp: "Clearwater",
                         state: "SC",
-                        txDetail: "Open 8",
+                        txDetail: "Open 7",
                         resultsLink: "",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
@@ -2810,7 +2846,7 @@ module.exports = [
                         lake: "Wateree",
                         ramp: "Clearwater",
                         state: "SC",
-                        txDetail: "Open 9",
+                        txDetail: "Open 8",
                         resultsLink: "",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
@@ -2819,7 +2855,7 @@ module.exports = [
                         lake: "Wateree",
                         ramp: "Clearwater",
                         state: "SC",
-                        txDetail: "Open 10",
+                        txDetail: "Open 9",
                         resultsLink: "",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
@@ -2828,7 +2864,7 @@ module.exports = [
                         lake: "Wateree",
                         ramp: "Clearwater",
                         state: "SC",
-                        txDetail: "Open 11",
+                        txDetail: "Open 10",
                         resultsLink: "",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
@@ -2837,7 +2873,7 @@ module.exports = [
                         lake: "Wateree",
                         ramp: "Clearwater",
                         state: "SC",
-                        txDetail: "Open 12",
+                        txDetail: "Open 11",
                         resultsLink: "",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
@@ -2846,7 +2882,7 @@ module.exports = [
                         lake: "Wateree",
                         ramp: "Clearwater",
                         state: "SC",
-                        txDetail: "Open 13",
+                        txDetail: "Open 12",
                         resultsLink: "",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
@@ -2855,7 +2891,7 @@ module.exports = [
                         lake: "Wateree",
                         ramp: "Clearwater",
                         state: "SC",
-                        txDetail: "Open 14",
+                        txDetail: "Open 13",
                         resultsLink: "",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
@@ -2864,7 +2900,7 @@ module.exports = [
                         lake: "Wateree",
                         ramp: "Clearwater",
                         state: "SC",
-                        txDetail: "Open 16",
+                        txDetail: "Open 14",
                         resultsLink: "",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
@@ -2873,7 +2909,7 @@ module.exports = [
                         lake: "Wateree",
                         ramp: "Clearwater",
                         state: "SC",
-                        txDetail: "Open 17",
+                        txDetail: "Open 15",
                         resultsLink: "",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
@@ -2882,7 +2918,7 @@ module.exports = [
                         lake: "Wateree",
                         ramp: "Clearwater",
                         state: "SC",
-                        txDetail: "Open 18",
+                        txDetail: "Open 16",
                         resultsLink: "",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
@@ -2891,7 +2927,7 @@ module.exports = [
                         lake: "Wateree",
                         ramp: "Clearwater",
                         state: "SC",
-                        txDetail: "Open 19",
+                        txDetail: "Open 17",
                         resultsLink: "",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
@@ -2920,7 +2956,7 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wylie/"
                     },
                     {
-                        date: "2019-03-16",
+                        date: "2019-03-10",
                         lake: "Wylie",
                         ramp: "Buster Boyd",
                         state: "NC-SC",
@@ -2951,18 +2987,9 @@ module.exports = [
                         lake: "Wylie",
                         ramp: "Buster Boyd",
                         state: "NC-SC",
-                        txDetail: "Qualifier 5",
-                        resultsLink: "",
-                        entryLink: ""
-                    },
-                    {
-                        date: "2019-05-11",
-                        lake: "Wylie",
-                        ramp: "Buster Boyd",
-                        state: "NC-SC",
                         txDetail: "Final",
                         resultsLink: "",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wylie/"
+                        entryLink: ""
                     }
                 ]
             },
@@ -2980,7 +3007,7 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
                     },
                     {
-                        date: "2019-03-02",
+                        date: "2019-03-03",
                         lake: "Badin",
                         ramp: "Alcoa",
                         state: "NC",
@@ -3007,7 +3034,7 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
                     },
                     {
-                        date: "2019-05-18",
+                        date: "2019-04-07",
                         lake: "High Rock",
                         ramp: "Tamarac",
                         state: "NC",
@@ -3016,11 +3043,20 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
                     },
                     {
-                        date: "2019-05-25",
+                        date: "2019-05-11",
                         lake: "Tuckertown",
                         ramp: "Flat Rock",
                         state: "NC",
                         txDetail: "Qualifier 6",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
+                    },
+                    {
+                        date: "2019-05-18",
+                        lake: "High Rock",
+                        ramp: "Tamarac",
+                        state: "NC",
+                        txDetail: "Qualifier 7",
                         resultsLink: "",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
                     },
@@ -3066,7 +3102,7 @@ module.exports = [
                         lake: "Murray",
                         ramp: "Dreher Island",
                         state: "SC",
-                        txDetail: "CBC NC",
+                        txDetail: "CBC SC",
                         resultsLink: "",
                         entryLink: "http://www.carolinasbasschallenge.com/tournaments.php"
                     },
@@ -3117,7 +3153,7 @@ module.exports = [
                         lake: "Hickory",
                         ramp: "Whittenburg",
                         state: "NC",
-                        txDetail: "Bass For Cash Series",
+                        txDetail: "CBC NC",
                         resultsLink: "",
                         entryLink: "http://www.carolinasbasschallenge.com/tournaments.php"
                     },
@@ -3165,16 +3201,16 @@ module.exports = [
                     state: "NC",
                     txDetail: "Bass For Cash Series",
                     resultsLink: "",
-                    entryLink: "http://bassforcash.com/rules/"
+                    entryLink: "http://bassforcash.com/schedule/"
                 },
                 {
                     date: "2019-04-20",
                     lake: "Kerr",
                     ramp: "Nutbush",
                     state: "NC-VA",
-                    txDetail: "Combined Boys & Girls Club",
+                    txDetail: "BFCS Combined Boys & Girls Club",
                     resultsLink: "",
-                    entryLink: "http://bassforcash.com/rules/"
+                    entryLink: "http://bassforcash.com/schedule/"
                 },
                 {
                     date: "2019-05-04",
@@ -3183,7 +3219,7 @@ module.exports = [
                     state: "NC-VA",
                     txDetail: "Bass For Cash Series",
                     resultsLink: "",
-                    entryLink: "http://bassforcash.com/rules/"
+                    entryLink: "http://bassforcash.com/schedule/"
                 },
                 {
 
@@ -3193,16 +3229,16 @@ module.exports = [
                     state: "NC",
                     txDetail: "Bass For Cash Series",
                     resultsLink: "",
-                    entryLink: "http://bassforcash.com/rules/"
+                    entryLink: "http://bassforcash.com/schedule/"
                 },
                 {
                     date: "2019-07-27",
-                    lake: "Roanoke ",
+                    lake: "Roanoke Rvr",
                     ramp: "Plymouth",
                     state: "NC",
                     txDetail: "Bass For Cash Series",
                     resultsLink: "",
-                    entryLink: "http://bassforcash.com/rules/"
+                    entryLink: "http://bassforcash.com/schedule/"
                 },
                 {
                     date: "2019-08-10",
@@ -3211,7 +3247,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "Bass For Cash Series",
                     resultsLink: "",
-                    entryLink: "http://bassforcash.com/rules/"
+                    entryLink: "http://bassforcash.com/schedule/"
                 },
                 {
                     date: "2019-09-14",
@@ -3220,7 +3256,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "Super 2-Day",
                     resultsLink: "",
-                    entryLink: "http://bassforcash.com/rules/"
+                    entryLink: "http://bassforcash.com/schedule/"
                 }
             ]
         }, ]
@@ -3238,7 +3274,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "",
                     resultsLink: "",
-                    entryLink: "https://www.ncbasschallenge.com/202019-to-rnament-schedule/"
+                    entryLink: "https://www.ncbasschallenge.com/2019-tournament-schedule/"
                 },
                 {
                     date: "2019-04-14",
@@ -3247,7 +3283,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "",
                     resultsLink: "",
-                    entryLink: "https://www.ncbasschallenge.com/202019-to-rnament-schedule/"
+                    entryLink: "https://www.ncbasschallenge.com/2019-tournament-schedule/"
                 },
                 {
                     date: "2019-05-19",
@@ -3256,7 +3292,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "",
                     resultsLink: "",
-                    entryLink: "https://www.ncbasschallenge.com/202019-to-rnament-schedule/"
+                    entryLink: "https://www.ncbasschallenge.com/2019-tournament-schedule/"
                 },
                 {
 
@@ -3266,7 +3302,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "",
                     resultsLink: "",
-                    entryLink: "https://www.ncbasschallenge.com/202019-to-rnament-schedule/"
+                    entryLink: "https://www.ncbasschallenge.com/2019-tournament-schedule/"
                 },
                 {
                     date: "2019-07-14",
@@ -3275,7 +3311,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "",
                     resultsLink: "",
-                    entryLink: "https://www.ncbasschallenge.com/202019-to-rnament-schedule/"
+                    entryLink: "https://www.ncbasschallenge.com/2019-tournament-schedule/"
                 },
                 {
                     date: "2019-08-04",
@@ -3293,7 +3329,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "2-Day",
                     resultsLink: "",
-                    entryLink: "https://www.ncbasschallenge.com/202019-to-rnament-schedule/"
+                    entryLink: "https://www.ncbasschallenge.com/2019-tournament-schedule/"
                 }
             ]
         }, ]
@@ -3736,7 +3772,7 @@ module.exports = [
                         state: "IN",
                         txDetail: "FLW",
                         resultsLink: "",
-                        entryLink: "https://www.flwfishing.com/schedule"
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-03-30-patoka"
                     },
                     {
                         date: "2019-05-04",
@@ -3745,7 +3781,7 @@ module.exports = [
                         state: "IN",
                         txDetail: "FLW",
                         resultsLink: "",
-                        entryLink: "https://www.flwfishing.com/schedule"
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-05-04-patoka"
                     },
                     {
                         date: "2019-06-29",
@@ -3754,7 +3790,7 @@ module.exports = [
                         state: "IN",
                         txDetail: "FLW",
                         resultsLink: "",
-                        entryLink: "https://www.flwfishing.com/schedule"
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-06-29-monroe"
                     },
                     {
                         date: "2019-07-20",
@@ -3763,7 +3799,7 @@ module.exports = [
                         state: "IN",
                         txDetail: "FLW",
                         resultsLink: "",
-                        entryLink: "https://www.flwfishing.com/schedule"
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-07-20-ohio-river-rocky-point"
                     },
                     {
                         date: "2019-09-28",
@@ -3772,7 +3808,7 @@ module.exports = [
                         state: "IN",
                         txDetail: "FLW",
                         resultsLink: "",
-                        entryLink: "https://www.flwfishing.com/schedule"
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-09-28-ohio-river-tanners-creek"
                     }
                 ]
             },
@@ -4094,7 +4130,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "FLW",
                         resultsLink: "",
-                        entryLink: "https://www.flwfishing.com/schedule"
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-02-23-norman"
                     },
                     {
                         date: "2019-03-23",
@@ -4103,7 +4139,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "FLW",
                         resultsLink: "",
-                        entryLink: "https://www.flwfishing.com/schedule"
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-03-23-wylie"
                     },
                     {
                         date: "2019-04-27",
@@ -4112,7 +4148,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "FLW",
                         resultsLink: "",
-                        entryLink: "https://www.flwfishing.com/schedule"
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-04-27-kerr"
                     },
                     {
                         date: "2019-06-08",
@@ -4121,7 +4157,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "FLW",
                         resultsLink: "",
-                        entryLink: "https://www.flwfishing.com/schedule"
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-06-08-high-rock"
                     },
                     {
                         date: "2019-09-21",
@@ -4130,7 +4166,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "FLW",
                         resultsLink: "",
-                        entryLink: "https://www.flwfishing.com/schedule"
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-09-21-norman"
                     }
                 ]
             },
@@ -4196,16 +4232,16 @@ module.exports = [
                         state: "NC-VA",
                         txDetail: "FLW",
                         resultsLink: "",
-                        entryLink: "https://www.flwfishing.com/schedule"
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-04-13-kerr"
                     },
                     {
                         date: "2019-05-11",
-                        lake: "Smith Mountain",
+                        lake: "Smith Mtn",
                         ramp: "Parkway",
                         state: "VA",
                         txDetail: "FLW",
                         resultsLink: "",
-                        entryLink: "https://www.flwfishing.com/schedule"
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-05-11-smith-mountain"
                     },
                     {
                         date: "2019-06-22",
@@ -4214,7 +4250,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "FLW",
                         resultsLink: "",
-                        entryLink: "https://www.flwfishing.com/schedule"
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-06-22-high-rock"
                     },
                     {
                         date: "2019-07-13",
@@ -4223,16 +4259,16 @@ module.exports = [
                         state: "VA",
                         txDetail: "FLW",
                         resultsLink: "",
-                        entryLink: "https://www.flwfishing.com/schedule"
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-07-13-james-river"
                     },
                     {
                         date: "2019-09-07",
-                        lake: "Smith Mountain",
+                        lake: "Smith Mtn",
                         ramp: "Parkway",
                         state: "VA",
                         txDetail: "FLW",
                         resultsLink: "",
-                        entryLink: "https://www.flwfishing.com/schedule"
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-09-07-smith-mountain"
                     }
                 ]
             },
@@ -4299,34 +4335,34 @@ module.exports = [
                         state: "NC-VA",
                         txDetail: "FLW",
                         resultsLink: "",
-                        entryLink: "https://www.flwfishing.com/schedule"
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-09-07-smith-mountain"
                     },
                     {
                         date: "2019-06-29",
-                        lake: "Smith Mountain",
+                        lake: "Smith Mtn",
                         ramp: "Parkway",
                         state: "VA",
                         txDetail: "FLW",
                         resultsLink: "",
-                        entryLink: "https://www.flwfishing.com/schedule"
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-06-29-smith-mountain"
                     },
                     {
                         date: "2019-07-27",
                         lake: "Potomac",
                         ramp: "Smallwood",
-                        state: "VA",
+                        state: "MD-VA",
                         txDetail: "FLW",
                         resultsLink: "",
-                        entryLink: "https://www.flwfishing.com/schedule"
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-07-27-potomac"
                     },
                     {
                         date: "2019-08-17",
                         lake: "Potomac",
                         ramp: "Smallwood",
-                        state: "VA",
+                        state: "MD-VA",
                         txDetail: "FLW",
                         resultsLink: "",
-                        entryLink: "https://www.flwfishing.com/schedule"
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-08-17-potomac"
                     },
                     {
                         date: "2019-09-14",
@@ -4335,7 +4371,7 @@ module.exports = [
                         state: "VA",
                         txDetail: "FLW",
                         resultsLink: "",
-                        entryLink: "https://www.flwfishing.com/schedule"
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-09-14-james-river"
                     }
                 ]
             },
@@ -4412,7 +4448,7 @@ module.exports = [
                     {
                         date: "2019-05-11",
                         lake: "Kerr",
-                        ramp: "Henderson",
+                        ramp: "Henderson Pt",
                         state: "NC-VA",
                         txDetail: "T2",
                         resultsLink: "",
@@ -4436,7 +4472,7 @@ module.exports = [
                     {
                         date: "2019-03-23",
                         lake: "Kerr",
-                        ramp: "Henderson",
+                        ramp: "Henderson Pt",
                         state: "NC-VA",
                         txDetail: "T1",
                         resultsLink: "",
@@ -4527,7 +4563,7 @@ module.exports = [
                     {
                         date: "2019-04-27",
                         lake: "Kerr",
-                        ramp: "Flemington",
+                        ramp: "Flemingtown",
                         state: "NC-VA",
                         txDetail: "Piedmont Bass Classic",
                         resultsLink: "",
@@ -4603,7 +4639,7 @@ module.exports = [
                     {
                         date: "2019-05-04",
                         lake: "Kerr",
-                        ramp: "Flemington",
+                        ramp: "Flemingtown",
                         state: "NC-VA",
                         txDetail: "Piedmont Bass Classic",
                         resultsLink: "",
