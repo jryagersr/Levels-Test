@@ -2450,9 +2450,9 @@ module.exports = [
                     },
                     {
                         date: "2019-02-16",
-                        lake: "Savannah Rvr",
-                        ramp: "Hardeeville",
-                        state: "GA-SC",
+                        lake: "Ogeechee Rvr",
+                        ramp: "Kings Ferry",
+                        state: "GA",
                         txDetail: "Qualifier 3",
                         resultsLink: "",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-savannah-river/"
