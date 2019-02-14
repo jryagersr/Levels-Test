@@ -78,7 +78,7 @@ function buildTable(data) {
         $("#lakeWell-" + i + 1).append("<td>" + elev + "</td>");
         $("#lakeWell-" + i + 1).append("<td>" + flow + "</td>");
     }
-    buildElevChart(data);
+    // buildElevChart(data);
 }
 
 // Function to build chart on page
