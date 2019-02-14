@@ -188,6 +188,9 @@ module.exports = function (app) {
         let ACEFlowNum = 0;
         let exceptionLake = false;
 
+        // clear displayBatch
+        displayBatch = []
+
         //see if A2W is returning Elev Data
         if (typeof data[0].Elev !== 'undefined') {
 
