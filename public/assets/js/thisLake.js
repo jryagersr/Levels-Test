@@ -154,22 +154,26 @@ function buildFlowChart(data) {
     let dataFlowBatch = [];
     let flowAvg = 0;
     let flowNum = 0;
+
     // Loop through our data for 24 data points if we have it
     for (var i = 0; i < data.length; i++) {
         if (!labelBatch.includes(data[i].date)) {
-            labelBatch.push(data[i-1].date);
-            dataFlowBatch.push(flowAvg/flowNum);
+            labelBatch.push(data[i].date);
+            dataFlowBatch.push((flowAvg / flowNum).toFixed(0));
             flowAvg = Number(data[i].flow);
             flowNum = 1;
+        } else {
+            if (!isNaN(Number(data[i].flow))) {
+                flowAvg = flowAvg + Number(data[i].flow);
+                flowNum = flowNum + 1;
+            }
         }
-        else {
-            flowAvg = flowAvg + data[i].flow;
-            flowNum = flowNum+1
-        }
-        if (labelBatch.length > 6) {
+        if (labelBatch.length > 5) {
             break;
         }
     }
+    // push the final avg value
+    dataFlowBatch.push((flowAvg / flowNum).toFixed(0));
     labelBatch.reverse();
     dataFlowBatch.reverse();
     var ctx = document.getElementById('myFlowChart').getContext('2d');
@@ -459,7 +463,7 @@ function dataTVA(callback) {
 
                 let date = element.date;
                 let time = element.time;
-                let flow = element.outflow;
+                let flow = element.outflow.replace(',', '')
 
                 // adjust the elev for lakes with data relative to full pool (not from sealevel))
                 if (seaLevelDelta !== 0)
