@@ -2529,7 +2529,7 @@ module.exports = [
                 adLogoUrl: ""
             },
             {
-                bodyOfWater: "Roanoke (Hwy 45)", // lake name
+                bodyOfWater: "Roanoke River (Hwy 45)", // lake name
                 data: [
 
                     {
@@ -3777,7 +3777,7 @@ module.exports = [
                 adTxUrl: ""
             },
             {
-                bodyOfWater: "James", // lake name
+                bodyOfWater: "James River", // lake name
                 data: [
 
                     {
@@ -3827,7 +3827,7 @@ module.exports = [
                 adTxUrl: "http://carolinasbasschallenge.com/tournament/72"
             },
             {
-                bodyOfWater: "Potomac", // lake name
+                bodyOfWater: "Potomac River", // lake name
                 data: [
 
                     {
