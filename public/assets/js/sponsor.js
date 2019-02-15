@@ -1,14 +1,5 @@
-// Advertisements
-// ===============================================================
-
-// When user clicks "x" on advertisement it is hidden
-// $(".fa-window-close").on("click", function() {
-//     $("#ad").hide();
-// })
-
-// Hardcoded for now but will need to be dynamic
-var href = "http://jacksonsuperiorelectric.com/"
-var src = "/static/assets/img/jsebanner.jpg";
+// // Advertisements
+// // ===============================================================
 
 var bottomBannerSponsors = [
     {
@@ -42,24 +33,6 @@ var bottomBannerSponsors = [
         src: "/static/assets/img/sponsors/CBC-logo-660px.png"
     }];
 
-
-// Create a tag, append to page, and append img tag after
-// bottomBannerSponsors.forEach(function(element) {
-//     var a = $("<a target='_blank'>");
-//     a.attr("href", element.href);
-//     var adImg = $("<img class='ad-footer-img'>");
-//     adImg.attr("src", element.src);
-//     $("#ad").append(a);
-//     $(a).append(adImg);
-// })
-
-
-// <li class="slide showing">Slide 1</li>
-// <li class="slide">Slide 2</li>
-// <li class="slide">Slide 3</li>
-// <li class="slide">Slide 4</li>
-// <li class="slide">Slide 5</li>
-
 bottomBannerSponsors.forEach(function(element) {
     var li = $("<li>");
     li.addClass("slide");
@@ -82,9 +55,9 @@ function nextSlide() {
     slides[currentSlide].className = 'slide showing';
 }
 
-// var a = $("<a target='_blank'>");
-// a.attr("href", element.href);
-// var adImg = $("<img class='ad-footer-img'>");
-// adImg.attr("src", element.src);
-// $("#ad").append(a);
-// $(a).append(adImg);
+
+
+// // When user clicks "x" on advertisement it is hidden
+// // $(".fa-window-close").on("click", function() {
+// //     $("#ad").hide();
+// // })

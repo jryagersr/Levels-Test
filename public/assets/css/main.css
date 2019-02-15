@@ -4,7 +4,7 @@
 }
 
 body {
-    padding-bottom: 70px;
+    padding-bottom: 10%;
 }
 
 .container {
@@ -275,14 +275,18 @@ h1, h2, h3 {
     margin-bottom: 10px;
 }
 
-/* .ad-bottom-banner { */
-    /* background-color: white; */
-    /* width: 100%; */
-    /* height: 70px; */
-    /* position: fixed; */
-    /* bottom: -70px; */
-    /* padding: 5px; */
-/* } */
+.ad-bottom-banner { 
+    position:fixed;
+   left:0px;
+   bottom:0px;
+   height:70px;
+   width:100%;
+}
+
+footer {
+    height: 70px;
+    /* opacity: 0; Remove this style to reveal footer */
+}
 
 .fa-window-close {
     position: absolute;
@@ -293,43 +297,32 @@ h1, h2, h3 {
 }
 
 .ad-footer-img {
-    width: 100%;
+    width: 70%;
     height: 70px;
     padding: 10px 0 0px;
     margin-bottom: 5px;
 }
 
- @media only screen and (max-width: 400px) {
-     .ad-logo, .banner {
-         width: 90%;
-     }
-
-     .banner {
-         left: 5%;
-     }
- }
-
  /*these make the slideshow work
 */
 
 #slides {
-    opacity: 0; /*Remove this style to unhide */
+    /* opacity: 0; Remove this style to unhide */
     position: relative;
     height: auto;
     width: auto;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 15%;
+    padding-right: 15%;
     margin: 0px;
     list-style-type: none;
 }
 
 .slide {
     position: absolute;
-    left: 0px;
+    left: 25%;
     top: 0px;
-    width: 100%;
+    width: 70%;
     height: 70px;
-    margin-bottom: 5px;
     opacity: 0;
     z-index: 1;
 
@@ -344,47 +337,21 @@ h1, h2, h3 {
     z-index: 2;
 }
 
+ @media only screen and (max-width: 400px) {
+     .ad-logo, .banner {
+         width: 90%;
+     }
 
-/* Footer Styles */
-/* =========================================================== */
+     .banner {
+         left: 5%;
+     }
 
-.footer {
-    margin-top: 300px;
-    width: 100%;
-    height: 150px;
-    background-color: rgba(76, 175, 80, .5);
-    padding: 20px;
-    text-align: center;
-    color: white;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.20);
-}
+     .ad-footer-img, .slide {
+         width: 100%;
+     }
 
-.footer img {
-    width: 100%;
-    mix-blend-mode: multiply;
-    filter: grayscale(100%);
-}
-
-.social-bar {
-    margin: 20px auto;
-}
-
-.social-bar i {
-    color: #4267b2;
-    background-color: white;
-}
-
-.social-bar i:hover {
-    color: #3a5a9b;
-}
-
-
-.footer-subscribe {
-    width: 70%;
-    margin: 20px auto;
-    height: 80px;
-    background-color: #f8f9fa;
-    border-radius: 3px;
-    z-index: 2;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.18);
-}
+     .slide {
+         left: 0px;
+         width: 100%;
+     }
+ }
