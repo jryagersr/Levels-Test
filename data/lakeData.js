@@ -317,7 +317,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 400.54, // 1329ft but data reported as a delta to full pool
                 normalPool: 450.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=09427500&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=09427500&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/havasu",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -575,7 +575,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 1318.26, // 1329ft but data reported as a delta to full pool
                 normalPool: 1329.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=11450000&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=11450000&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/clear",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -647,7 +647,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 400.54, // but data reported as a delta to full pool.
                 normalPool: 450.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=09427500&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=09427500&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/havasu",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -672,8 +672,8 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 2162.44, //but data reported as a delta to full pool
                 normalPool: 2164.43,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=11516530&period=PT96H&parameterCd=00065&siteType=ST&siteStatus=all",
-                flowURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=11516530&period=PT96H&parameterCd=00060&siteType=ST&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=11516530&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
+                flowURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=11516530&period=PT168H&parameterCd=00060&siteType=ST&siteStatus=all",
                 href: "/lakes/irongate",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
@@ -826,7 +826,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 11.0,
                 normalPool: 6000.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=09091900&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=09091900&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/riflegap",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -850,7 +850,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 11.36,
                 normalPool: 6230.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07124400&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07124400&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/trinidad",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -1069,7 +1069,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 125.0,
                 normalPool: 225.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02236840&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02236840&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/minnehaha",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -1117,7 +1117,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 78.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02357500&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02357500&period=PT168H&parameterCd=00062&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/seminole",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -1165,7 +1165,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 70.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02329900&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02329900&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/talquin",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -1218,7 +1218,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 1071.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02334400&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02334400&period=PT168H&parameterCd=00062&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/lanier",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -1242,7 +1242,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 78.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02357500&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02357500&period=PT168H&parameterCd=00062&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/seminole",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -1266,7 +1266,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 326.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02193900&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02193900&period=PT168H&parameterCd=00062&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/thurmond",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -1290,7 +1290,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 635.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02339400&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02339400&period=PT168H&parameterCd=00062&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/westpoint",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -1348,7 +1348,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 538.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03372400&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03372400&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/monroe",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -1372,7 +1372,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 328.64,
                 normalPool: 328.64,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03322000&period=PT96H&parameterCd=00065&siteType=ST&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03322000&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/ohioriverin",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -1396,7 +1396,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 536.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03374498&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03374498&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/patoka",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -1449,7 +1449,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 1398.0, // water level is reported as a delta to full pool
                 normalPool: 1398.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06604200&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06604200&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/westokoboji",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -1478,7 +1478,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 875.50,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06891478&period=PT95H&parameterCd=62614&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06891478&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/clinton",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -1502,7 +1502,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 1039.67,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06910997&period=PT95H&parameterCd=62614&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06910997&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/malvern",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -1526,7 +1526,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 891.50,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06890898&period=PT95H&parameterCd=62614&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06890898&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/perry",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -1550,7 +1550,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 974.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06912490&period=PT95H&parameterCd=62614&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06912490&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/pomona",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -1632,7 +1632,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 172.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08025350&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08025350&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/toledobend",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -1661,7 +1661,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 1240.40, // water level reprted as a delta to Full Pool - 100
                 normalPool: 1251.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=05284000&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=05284000&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/millelacs",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -1685,7 +1685,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 929.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=05289000&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=05289000&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/minnetonka",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -1933,7 +1933,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 547.0, // data reported as a delta to Full Pool -100
                 normalPool: 647.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=09422500&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=09422500&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/mojave",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -1957,7 +1957,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 6208.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=13174000&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=13174000&period=PT168H&parameterCd=00062&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/wildhorse",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -2060,7 +2060,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 4154.0,
                 normalPool: 4201.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08384000&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08384000&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/ftsumner",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -2108,7 +2108,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 3784.91,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07226800&period=PT96H&parameterCd=62615&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07226800&period=PT168H&parameterCd=62615&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/ute",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -2138,7 +2138,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 95.50,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04294413&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04294413&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/champlain",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -2371,7 +2371,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 10.21,
                 normalPool: 410.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02077280&period=PT96H&parameterCd=00062&siteType=ST&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02077280&period=PT168H&parameterCd=00062&siteType=ST&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/hyco",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -2471,7 +2471,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 10.90,
                 normalPool: 10.90,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02089500&period=PT96H&parameterCd=00065&siteType=ST&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02089500&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/neuse",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -2543,7 +2543,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=0208114150&period=PT96H&parameterCd=00065&siteType=ST&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=0208114150&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/roanoke",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -2670,7 +2670,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 1232.50,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07308990&period=PT95H&parameterCd=00065&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07308990&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/ellsworth",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -2718,7 +2718,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 778.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07191285&period=PT95H&parameterCd=00065&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07191285&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/eucha",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -2742,7 +2742,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 619.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07191400&period=PT95H&parameterCd=00065&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07191400&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/hudson",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -2838,7 +2838,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 1343.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07309500&period=PT95H&parameterCd=00065&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07309500&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/lawtonka",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -3020,7 +3020,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 1162.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=01541180&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=01541180&period=PT168H&parameterCd=00062&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/curwensville",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -3044,7 +3044,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 786.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=01563100&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=01563100&period=PT168H&parameterCd=00062&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/raystown",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -3068,7 +3068,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 894.67,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03103400&period=PT96H&parameterCd=62615&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03103400&period=PT168H&parameterCd=62615&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/shenango",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -3098,7 +3098,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 330.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02193900&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02193900&period=PT168H&parameterCd=00062&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/clarkshill",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -3121,7 +3121,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: -6.38, // Cooper River gage height is -6.38, it's a strange USGS site
                 normalPool: 0.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02172053&period=PT96H&parameterCd=00065&siteType=ST&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02172053&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/cooperriver",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -3145,7 +3145,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 660.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02187010&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02187010&period=PT168H&parameterCd=00062&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/hartwell",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -3193,8 +3193,8 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 360.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02168500&period=PT96H&parameterCd=00062&siteType=ST&siteStatus=all",
-                flowURL: "none", // Until I can fix it "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02168504&period=PT96H&parameterCd=00060&siteType=ST&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02168500&period=PT168H&parameterCd=00062&siteType=ST&siteStatus=all",
+                flowURL: "none", // Until I can fix it "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02168504&period=PT168H&parameterCd=00060&siteType=ST&siteStatus=all",
                 href: "/lakes/murray",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
@@ -3217,7 +3217,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 79.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02171000&period=PT96H&parameterCd=00062&siteType=ST&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02171000&period=PT168H&parameterCd=00062&siteType=ST&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/santee1",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -3241,7 +3241,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 79.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02172000&period=PT96H&parameterCd=00062&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02172000&period=PT168H&parameterCd=00062&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/santee2",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -3541,7 +3541,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 201.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08067600&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08067600&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/conroe",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -3589,7 +3589,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 403.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08018800&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08018800&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/fork",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -3661,7 +3661,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 164.40,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08039300&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08039300&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/rayburn",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -3685,7 +3685,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 172.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08025350&period=PT96H&parameterCd=62614&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08025350&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/toledobend",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -3791,7 +3791,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02042770&period=PT96H&parameterCd=62620&siteType=ST&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02042770&period=PT168H&parameterCd=62620&siteType=ST&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/james",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -3841,7 +3841,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=0165258890&period=PT96H&parameterCd=62620&siteType=ST&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=0165258890&period=PT168H&parameterCd=62620&siteType=ST&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/potomac",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -4024,7 +4024,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 861.86,
                 normalPool: 879.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=423525088260400&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=423525088260400&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/geneva",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -4048,7 +4048,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 746.0,
                 normalPool: 746.0,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04082500&period=PT96H&parameterCd=00065&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04082500&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/winnebago",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
