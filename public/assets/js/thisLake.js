@@ -34,7 +34,7 @@ let k = 0;
 // Function to set current values on page
 function displayCurrentPageValues() {
     // Set lake title on page
-    $("#lakeTitle").append(bodyOfWaterName);
+    $("#lakeTitle").append(currentLake.bodyOfWater);
     $("#lakeSponsor").append(bodyOfWaterName);
     $("#lakeFeaturedTournament").append(bodyOfWaterName);
     // Set current date, time elev, and pool on page
@@ -222,112 +222,36 @@ function buildFlowChart(data) {
 
 // Function to make elevation USGS call
 function elevUSGS(callback) {
-    // API call for flow
+    // API call for elev data
     $.ajax({
-            url: elevURL,
+            url: "/api/usgs",
             method: "GET",
+            data: {
+                usgsURL: elevURL,
+                currentLake: currentLake
+            }
         })
         .then(function (data) {
-            console.log("USGS Call")
             console.log(data);
-            let valuesIndex = 0;
-            // Parse the json data return to find the values we want
-            let jIncrement = 1;
-            if (currentLake.bodyOfWater == "Mille Lacs")
-                valuesIndex = 1 // For some reason Mille Lacs has changed from index 0 to index 1 02/10/19
 
-            // To retrieve Flows from USGS, we get multiple .timevalues and the variable.variableDecription 
-            // value will contain "Discharge" 'Gage' for Flow or Elev data. We must determine which timevalues
-            let timeSeriesLength = data.value.timeSeries.length;
-            let timeSeriesElevIndex = -1; // default value indicates no data
-            let timeSeriesFlowIndex = -1;
+            // Check to see that USGS returned data
+            if (data.length > 0) {
+                displayBatch = data;
 
-            for (i = 0; i < timeSeriesLength; i++) {
-                if (data.value.timeSeries[i].variable.variableDescription.includes("Discharge"))
-                    timeSeriesFlowIndex = i;
-                else if (data.value.timeSeries[i].variable.variableDescription.includes("Gage height") ||
-                    data.value.timeSeries[i].variable.variableDescription.includes("water surface"))
-                    timeSeriesElevIndex = i;
-            }
-            // Set up elev and flow Values
-            let elevValues = '';
-            let flowValues = '';
-
-            elevValues = data.value.timeSeries[timeSeriesElevIndex].values[valuesIndex].value;
-            // Reverse the order of our data so most recent date is first
-            elevValues.reverse();
-
-            if (timeSeriesFlowIndex >= 0) { // if there is flow data, then set the flowValues
-                flowValues = data.value.timeSeries[timeSeriesFlowIndex].values[valuesIndex].value;
-                // Reverse the order of our data so most recent date is first
-                flowValues.reverse();
-            }
-            // Check to see if the sensor is returning data
-            if (elevValues.length > 0) {
-
-                // If reported level is not based on MSL, set the seaLevelDelta to add to the level
-                // to convert to MSL based.
-                if (seaLevelDelta !== 0)
-                    elevationAdjust = (parseFloat(elevValues[0].value) + seaLevelDelta).toFixed(2);
-                else {
-                    if (lakePool !== 0)
-                        elevationAdjust = elevValues[0].value;
-                    else elevationAdjust = elevValues[0].value;
-                }
-
-                // Set current Date, Time and Elev
-                currentElev = elevationAdjust;
-                let splitTimeDate = elevValues[0].dateTime.split("T");
-                currentDate = splitTimeDate[0];
-                currentTime = splitTimeDate[1].substring(0, 5);
+                currentDate = displayBatch[0].date;
+                currentTime = displayBatch[0].time;
+                currentElev = displayBatch[0].elev;
                 currentDelta = (currentElev - lakePool).toFixed(2);
+            } else
+                currentLake.bodyOfWater = currentLake.bodyOfWater + " <br> Water Level sensor down, try again later or report this outage";
 
-                // Create our increment and loop through each value
-                // For each value push an object into displayBatch
-                // Set our counter K variable before incrementing for flowUSGS to use
-                // k = j;
-                if (elevValues.length <= 100) // If we only get 93 data values when we requested 96 hours, then it's hourly
-                    jIncrement = 1;
-                else if (['Hudson', 'Lawtonka'].includes(currentLake.bodyOfWater)) jIncrement = 2;
-                else jIncrement = 4;
-                for (j = 0; j < elevValues.length; j += jIncrement) {
-                    let element = elevValues[j];
-                    let elev = element.value;
-                    let splitTimeDate = element.dateTime.split("T");
-                    let date = splitTimeDate[0].substring(2, 10).replace('-', ' ');
-                    let time = splitTimeDate[1].substring(0, 5);
-                    let flow = "N/A";
-                    if (timeSeriesFlowIndex >= 0)
-                        flow = flowValues[j].value;
-                    // adjust the elev for lakes with data relative to full pool (not from sealevel))
-                    if (seaLevelDelta !== 0) {
-                        elev = (parseFloat(elevValues[j].value) + seaLevelDelta).toFixed(2);
-                    }
-
-                    displayBatch.push({
-                        date: date,
-                        time: time,
-                        elev: elev,
-                        flow: flow
-                    });
-                }
-                callback(null, displayBatch);
-
-            } else {
-                console.log("USGS is not returning Elevation Data", data)
-                $("#lakeTitle").append(bodyOfWaterName);
-                $("#lakeSponsor").append(bodyOfWaterName);
-                $("#lakeFeaturedTournament").append(bodyOfWaterName);
-                // Set current date, time elev, and pool on page
-                $("#currentLevel").append("Water Level sensor down, try again later or report this outage");
-                $("#currentNormal").append("normal pool " + lakePool);
-            }
+            callback(null, displayBatch);
         })
 }
 
 // Function to make flow USGS call
 function flowUSGS(callback) {
-    // API call for flow
+    // API call for elev data
     $.ajax({
             url: flowURL,
             method: "GET",
@@ -350,7 +274,7 @@ function flowUSGS(callback) {
 
 // Function to make elev ACE call
 function dataACE(callback) {
-    // API call for flow
+    // API call for elev data
     $.ajax({
             url: "/api/a2w",
             method: "GET",
@@ -361,12 +285,17 @@ function dataACE(callback) {
         })
         .then(function (data) {
             console.log(data);
-            displayBatch = data;
 
-            currentDate = displayBatch[0].date;
-            currentTime = displayBatch[0].time;
-            currentElev = displayBatch[0].elev;
-            currentDelta = (currentElev - lakePool).toFixed(2);
+            // Check to see that ACE returned data
+            if (data.length > 0) {
+                displayBatch = data;
+
+                currentDate = displayBatch[0].date;
+                currentTime = displayBatch[0].time;
+                currentElev = displayBatch[0].elev;
+                currentDelta = (currentElev - lakePool).toFixed(2);
+            } else
+                currentLake.bodyOfWater = currentLake.bodyOfWater + " <br> Water Level sensor down, try again later or report this outage";
 
             callback(null, displayBatch);
         })

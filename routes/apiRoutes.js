@@ -66,12 +66,6 @@ module.exports = function (app) {
     res.json(data);
   })
 
-  /***************************************************************************************************************************************** */
-
-  // I don't think this is required now that we have A2W
-
-
-
 
   // Route to retrieve data for cube carolinas
   app.get("/api/cube", function (request, response) {
@@ -150,6 +144,130 @@ module.exports = function (app) {
     }
   })
 
+  /***************************************************************************************************************************************** */
+  // Route to retrieve USGS Elev data from USGS
+  app.get("/api/usgs", function (request, response) {
+    let usgsURL = request.query.usgsURL;
+    console.log('usgsURL:', usgsURL)
+    let currentLake = request.query.currentLake;
+
+    getData(usgsURL, function (error, data) {
+      if (error) {
+        response.send(error);
+        return;
+      } else {
+        response.json(displayBatch);
+      }
+    });
+
+    function getData(usgsURL, callback) {
+      var request = require("request");
+      var data = [];
+
+      request(usgsURL, function (error, response, body) {
+        if (error) {
+          callback(error);
+        }
+
+        // clear displayBatch
+        displayBatch = [];
+
+        data = JSON.parse(body);
+
+        console.log("USGS Call");
+        console.log(currentLake.bodyOfWater);
+        console.log(data);
+        // Check to see if the sensor is returning data
+        if (data.value.timeSeries.length > 0) {
+          let valuesIndex = 0;
+          // Parse the json data return to find the values we want
+          let jIncrement = 1;
+          if (currentLake.bodyOfWater == "Mille Lacs")
+            valuesIndex = 1 // For some reason Mille Lacs has changed from index 0 to index 1 02/10/19
+
+          // To retrieve Flows from USGS, we get multiple .timevalues and the variable.variableDecription 
+          // value will contain "Discharge" 'Gage' for Flow or Elev data. We must determine which timevalues
+          let timeSeriesLength = data.value.timeSeries.length;
+          let timeSeriesElevIndex = -1; // default value indicates no data
+          let timeSeriesFlowIndex = -1;
+
+          for (i = 0; i < timeSeriesLength; i++) {
+            if (data.value.timeSeries[i].variable.variableDescription.includes("Discharge"))
+              timeSeriesFlowIndex = i;
+            else if (data.value.timeSeries[i].variable.variableDescription.includes("Gage height") ||
+              data.value.timeSeries[i].variable.variableDescription.includes("water surface"))
+              timeSeriesElevIndex = i;
+          }
+          // Set up elev and flow Values
+          let elevValues = '';
+          let flowValues = '';
+
+          elevValues = data.value.timeSeries[timeSeriesElevIndex].values[valuesIndex].value;
+          // Reverse the order of our data so most recent date is first
+          elevValues.reverse();
+
+          if (timeSeriesFlowIndex >= 0) { // if there is flow data, then set the flowValues
+            flowValues = data.value.timeSeries[timeSeriesFlowIndex].values[valuesIndex].value;
+            // Reverse the order of our data so most recent date is first
+            flowValues.reverse();
+          }
+
+          // If reported level is not based on MSL, set the seaLevelDelta to add to the level
+          // to convert to MSL based.
+          if (currentLake.seaLevelDelta !== 0)
+            elevationAdjust = (parseFloat(elevValues[0].value) + Number(currentLake.seaLevelDelta)).toFixed(2);
+          else {
+            if (lakePool !== 0)
+              elevationAdjust = elevValues[0].value;
+            else elevationAdjust = elevValues[0].value;
+          }
+
+          // Set current Date, Time and Elev
+          currentElev = elevationAdjust;
+          let splitTimeDate = elevValues[0].dateTime.split("T");
+          currentDate = splitTimeDate[0];
+          currentTime = splitTimeDate[1].substring(0, 5);
+          currentDelta = (currentElev - lakePool).toFixed(2);
+
+          // Create our increment and loop through each value
+          // For each value push an object into displayBatch
+          // Set our counter K variable before incrementing for flowUSGS to use
+          // k = j;
+          if (elevValues.length <= 100) // If we only get 93 data values when we requested 96 hours, then it's hourly
+            jIncrement = 1;
+          else if (['Hudson', 'Lawtonka'].includes(currentLake.bodyOfWater)) jIncrement = 2;
+          else jIncrement = 4;
+          for (j = 0; j < elevValues.length; j += jIncrement) {
+            let element = elevValues[j];
+            let elev = element.value;
+            let splitTimeDate = element.dateTime.split("T");
+            let date = splitTimeDate[0].substring(2, 10).replace('-', ' ');
+            let time = splitTimeDate[1].substring(0, 5);
+            let flow = "N/A";
+            if (timeSeriesFlowIndex >= 0)
+              flow = flowValues[j].value;
+            // adjust the elev for lakes with data relative to full pool (not from sealevel))
+            if (currentLake.seaLevelDelta !== 0) {
+              elev = (parseFloat(elevValues[j].value) + Number(currentLake.seaLevelDelta)).toFixed(2);
+            }
+
+            displayBatch.push({
+              date: date,
+              time: time,
+              elev: elev,
+              flow: flow
+            });
+          }
+
+        }
+        
+        callback(null, displayBatch);
+
+      })
+
+    }
+
+  })
 
   /***************************************************************************************************************************************** */
   // Route to retrieve ACE data from A2W
@@ -189,7 +307,7 @@ module.exports = function (app) {
         let exceptionLake = false;
 
         // clear displayBatch
-        displayBatch = []
+        displayBatch = [];
 
         //see if A2W is returning Elev Data
         if (typeof data[0].Elev !== 'undefined') {
@@ -291,7 +409,6 @@ module.exports = function (app) {
             jIncrement = 2;
 
           for (j = ACEElevNum; j < data[ACEElevIndex].Elev.length; j = j + jIncrement) {
-            console.log(i, "-", j)
             // make sure the times match for elev and flow
             if (!exceptionLake && i < data[ACEFlowIndex].Outflow.length - 1) {
               if (Date.parse(data[ACEElevIndex].Elev[j].time) !== Date.parse(data[ACEFlowIndex].Outflow[i].time)) {
@@ -307,14 +424,13 @@ module.exports = function (app) {
 
                       while (!elevOnHour) { // until we find an on the hour
                         // get the index at the 'minutes'
-                        elevMinIndex = data[ACEElevIndex].Elev[j+1].time.indexOf(":") + 1;
+                        elevMinIndex = data[ACEElevIndex].Elev[j + 1].time.indexOf(":") + 1;
                         // retrieve the 'minutes'
-                        elevMin = data[ACEElevIndex].Elev[j+1].time.substr(elevMinIndex, 2)
+                        elevMin = data[ACEElevIndex].Elev[j + 1].time.substr(elevMinIndex, 2)
                         if (elevMin == "00") { // is it on the hour
                           elevOnHour = true; // end while loop
                           j++
-                        }
-                        else j++ // increment and loop
+                        } else j++ // increment and loop
                       }
                     } else i++
                   }
@@ -373,15 +489,7 @@ module.exports = function (app) {
 
           currentDelta = (currentElev - lakePool).toFixed(2);
 
-        } else {
-          console.log("A2W is not returning Elevation Data", data)
-          $("#lakeTitle").append(bodyOfWaterName);
-          $("#lakeSponsor").append(bodyOfWaterName);
-          $("#lakeFeaturedTournament").append(bodyOfWaterName);
-          // Set current date, time elev, and pool on page
-          $("#currentLevel").append("Water Level sensor down, try again later or report this outage");
-          $("#currentNormal").append("normal pool " + lakePool);
-        }
+        } 
 
         // End of data processing code from thisLake.js
 

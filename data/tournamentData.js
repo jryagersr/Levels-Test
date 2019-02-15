@@ -3186,7 +3186,21 @@ module.exports = [
                     entryLink: "https://www.warriorsonthewater.com/"
                 }
             ]
-        }, ]
+        },{
+            trail: "FOM/BPS",
+            tournaments: [
+
+                {
+                    date: "2019-03-16",
+                    lake: "Jordan",
+                    ramp: "Ebenezer",
+                    state: "NC",
+                    txDetail: "Fishers of Men Open Invitational",
+                    resultsLink: "",
+                    entryLink: ""
+                }
+            ]
+        } ]
     },
     {
         organization: "Collins",
