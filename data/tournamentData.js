@@ -3136,7 +3136,7 @@ module.exports = [
                         ramp: "Pinnacle",
                         state: "NC",
                         txDetail: "CBC NC",
-                        resultsLink: "",
+                        resultsLink: "http://carolinasbasschallenge.com/results.php?id=1",
                         entryLink: "http://www.carolinasbasschallenge.com/tournaments.php"
                     },
                     {
