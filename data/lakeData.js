@@ -3564,7 +3564,7 @@ module.exports = [
                 refreshInterval: 1440, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
-                normalPool: 301.0,
+                normalPool: 301.10,
                 elevURL: "https://waterdatafortexas.org/reservoirs/individual/falcon-30day.csv",
                 flowURL: "none",
                 href: "/lakes/falcon",
