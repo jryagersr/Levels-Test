@@ -104,8 +104,8 @@ function displayData(data) {
                 let txDate = new Date(date);
                 let todaysDate = new Date();
 
-                // If tx date is after today's Date
-                if (txDate.setHours(0, 0, 0, 0) < todaysDate.setHours(0, 0, 0, 0)) {
+                // If tx date is in the past
+                if (Date.parse(txDate) < Date.parse(todaysDate)) {
                     // Check to see if a resultsLink exists
                     if (resultsLink) {
                         // Set href as resultsLink
@@ -113,7 +113,7 @@ function displayData(data) {
                         txSection.addClass("results-clickable-row"); // ADd clickable results row css styles
                     }
                 }
-                else if (txDate.setHours(0, 0, 0, 0) > todaysDate.setHours(0, 0, 0, 0)) {
+                else {
                     // check to see if an entryLink exists
                     if (entryLink) {
                         txSection.attr("data-url", entryLink); // Add data attribute to the row with entryLink url
@@ -153,8 +153,8 @@ function displayFlatData(data) {
         let txDate = new Date(element.date);
         let todaysDate = new Date();
 
-        // If tx date is after today's Date
-        if (txDate.setHours(0, 0, 0, 0) < todaysDate.setHours(0, 0, 0, 0)) {
+        // If tx date is in the past
+        if (Date.parse(txDate) < Date.parse(todaysDate)) {
             // Check to see if a resultsLink exists
             if (resultsLink) {
                 // Set href as resultsLink
@@ -162,7 +162,7 @@ function displayFlatData(data) {
                 txSection.addClass("results-clickable-row"); // ADd clickable results row css styles
             }
         }
-        else if (txDate.setHours(0, 0, 0, 0) > todaysDate.setHours(0, 0, 0, 0)) {
+        else {
             // check to see if an entryLink exists
             if (entryLink) {
                 txSection.attr("data-url", entryLink); // Add data attribute to the row with entryLink url
