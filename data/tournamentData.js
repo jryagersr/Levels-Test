@@ -2150,6 +2150,93 @@ module.exports = [
                 ]
             },
             {
+                trail: "Murray",
+                tournaments: [
+
+                    {
+                        date: "2019-01-19",
+                        lake: "Murray",
+                        ramp: "Dreher",
+                        state: "SC",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-murray-jan-19-2019-amick-huffstetler-weigh-in-23-52-www-levelperformancerods-com/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-murray/"
+                    },
+                    {
+                        date: "2019-01-26",
+                        lake: "Murray",
+                        ramp: "Dreher",
+                        state: "SC",
+                        txDetail: "Qualifier 2",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-murray-jan-26-2019-wright-slice-make-the-wright-moves-slice-up-the-field-25-37-lbs/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-murray/"
+                    },
+                    {
+                        date: "2019-02-16",
+                        lake: "Murray",
+                        ramp: "Dreher",
+                        state: "SC",
+                        txDetail: "Gold 3",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-murray-feb-16-2019-alvanos-rennenbaum-blow-aawy-the-field-with-25-70-lbs/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-murray/"
+                    },
+                    {
+                        date: "2019-02-23",
+                        lake: "Murray",
+                        ramp: "Dreher",
+                        state: "SC",
+                        txDetail: "Gold 4",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-murray/"
+                    },
+                    {
+                        date: "2019-03-02",
+                        lake: "Murray",
+                        ramp: "Dreher",
+                        state: "SC",
+                        txDetail: "Qualifier 5",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-murray/"
+                    },
+                    {
+                        date: "2019-03-16",
+                        lake: "Murray",
+                        ramp: "Dreher",
+                        state: "SC",
+                        txDetail: "Final",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-murray/"
+                    },
+                    {
+                        date: "2019-03-23",
+                        lake: "Murray",
+                        ramp: "Dreher",
+                        state: "SC",
+                        txDetail: "Gold 4",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-murray/"
+                    },
+                    {
+                        date: "2019-04-06",
+                        lake: "Murray",
+                        ramp: "Dreher",
+                        state: "SC",
+                        txDetail: "Qualifier 5",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-murray/"
+                    },
+                    {
+                        date: "2019-04-13",
+                        lake: "Murray",
+                        ramp: "Dreher",
+                        state: "SC",
+                        txDetail: "Final",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-murray/"
+                    }
+                ]
+            },
+            {
                 trail: "Norman",
                 tournaments: [
 
@@ -2695,12 +2782,12 @@ module.exports = [
                 tournaments: [
 
                     {
-                        date: "2019-02-09",
+                        date: "2019-02-16",
                         lake: "Wateree",
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 1",
-                        resultsLink: "https://www.cattteamtrail.com/news/catt-lake-wateree-open-results-feb-9-2019-williams-english-take-the-1st-open-with-19-19-lbs/",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-wateree-sc-feb-16-2019-williams-english-win-a-tough-won/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
                     },
                     {
@@ -3003,7 +3090,7 @@ module.exports = [
                         ramp: "Swift Island",
                         state: "NC",
                         txDetail: "Qualifier 1",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-yadkin-tillery-feb-9-2019-haynes-talbert-bring-in-21-62-lbs/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
                     },
                     {
