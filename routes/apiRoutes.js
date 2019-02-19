@@ -481,13 +481,13 @@ module.exports = function (app) {
 
           }
           // Convert UTC date to local time
-          localTime = convertStringToUTC(data[ACEElevIndex].Elev[j - jIncrement].time)
+          /*localTime = convertStringToUTC(data[ACEElevIndex].Elev[j - jIncrement].time)
           currentDate = localTime.toString().substring(4, 15);
           currentTime = localTime.toString().substring(16, 21);
 
           currentElev = parseFloat(data[ACEElevIndex].Elev[j - jIncrement].value).toFixed(2);
 
-          currentDelta = (currentElev - lakePool).toFixed(2);
+          currentDelta = (currentElev - lakePool).toFixed(2);*/
 
         } 
 
