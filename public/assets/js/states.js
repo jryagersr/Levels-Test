@@ -160,7 +160,7 @@ $.ajax({
 
 // When an option is selected and user presses view button
 // Hide all states, except the one user has selected
-$("button").on("click", function () {
+$("body").on("click", "#stateSubmit", function () {
     var stateSelected = $('#optionWell option').filter(':selected').text();
     window.location.href = window.location.origin + "/states/" + stateSelected;
     $(".stateContainer").hide();

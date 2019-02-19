@@ -3,6 +3,10 @@
     /* color: #212121; */
 }
 
+body {
+    padding-bottom: 10%;
+}
+
 .container {
     padding-top: 20px;
 }
@@ -271,15 +275,17 @@ h1, h2, h3 {
     margin-bottom: 10px;
 }
 
-.ad-bottom-banner {
-    background-color: rgba(199, 199, 199, 0.3);
-    background-color: white;
-    width: 100%;
+.ad-bottom-banner { 
+    position:fixed;
+   left:0px;
+   bottom:0px;
+   height:70px;
+   width:100%;
+}
+
+footer {
     height: 70px;
-    position: fixed;
-    bottom: 0;
-    display: flex;
-    justify-content: space-evenly;
+    /* opacity: 0; Remove this style to reveal footer */
 }
 
 .fa-window-close {
@@ -291,9 +297,44 @@ h1, h2, h3 {
 }
 
 .ad-footer-img {
-    width: auto;
-    height: 50px;
+    width: 70%;
+    height: 70px;
     padding: 10px 0 0px;
+    margin-bottom: 5px;
+}
+
+ /*these make the slideshow work
+*/
+
+#slides {
+    /* opacity: 0; Remove this style to unhide */
+    position: relative;
+    height: auto;
+    width: auto;
+    padding-left: 15%;
+    padding-right: 15%;
+    margin: 0px;
+    list-style-type: none;
+}
+
+.slide {
+    position: absolute;
+    left: 25%;
+    top: 0px;
+    width: 70%;
+    height: 70px;
+    opacity: 0;
+    z-index: 1;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.showing {
+    opacity: 1;
+    z-index: 2;
 }
 
  @media only screen and (max-width: 400px) {
@@ -304,50 +345,13 @@ h1, h2, h3 {
      .banner {
          left: 5%;
      }
+
+     .ad-footer-img, .slide {
+         width: 100%;
+     }
+
+     .slide {
+         left: 0px;
+         width: 100%;
+     }
  }
-
-
-/* Footer Styles */
-/* =========================================================== */
-
-.footer {
-    margin-top: 300px;
-    width: 100%;
-    height: 400px;
-    background-color: #4CAF50;
-    background-image: linear-gradient(hsl(112, 39%, 49%), hsl(137, 43%, 39%));
-    padding: 20px;
-    text-align: center;
-    color: white;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.20);
-}
-
-.footer img {
-    width: 100%;
-    mix-blend-mode: multiply;
-    filter: grayscale(100%);
-}
-
-.social-bar {
-    margin: 20px auto;
-}
-
-.social-bar i {
-    color: #4267b2;
-    background-color: white;
-}
-
-.social-bar i:hover {
-    color: #3a5a9b;
-}
-
-
-.footer-subscribe {
-    width: 70%;
-    margin: 20px auto;
-    height: 80px;
-    background-color: #f8f9fa;
-    border-radius: 3px;
-    z-index: 2;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.18);
-}
