@@ -307,7 +307,7 @@ footer {
 */
 
 #slides {
-    /* opacity: 0; Remove this style to unhide */
+     opacity: 0; /*Remove this style to unhide */
     position: relative;
     height: auto;
     width: auto;
