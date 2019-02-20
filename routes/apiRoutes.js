@@ -308,14 +308,15 @@ module.exports = function (app) {
         let stageRiver = [];
 
         if (typeof data[0].Elev == 'undefined' &&
-          typeof data[0].Stage !== 'undefined' && ["River".includes(currentLake.bodyOfWater)])
+          typeof data[0].Stage !== 'undefined' && currentLake.bodyOfWater.indexOf("River") >= 0) {
 
           stageRiver = data; //Copy the data
-        data = []; //Clear the data objects
-        data.push({
-          Elev: stageRiver[0].Stage
+          data = []; //Clear the data objects
+          data.push({
+            Elev: stageRiver[0].Stage
 
-        })
+          })
+        }
 
         // clear displayBatch
         displayBatch = [];
@@ -639,11 +640,10 @@ module.exports = function (app) {
           if (line.substring(1, 4) == "AVG") {
             splitLine = line.split(/[>]+/);
             splitLine = splitLine[1].split(/[<]+/);
-           
-            tvaOutFlow = Number(splitLine[0].trim().replace(",",""));
+
+            tvaOutFlow = Number(splitLine[0].trim().replace(",", ""));
           }
-          if (line.substring(1, 5) == "/ROW")
-          {
+          if (line.substring(1, 5) == "/ROW") {
             if (tvaTime == 'noon') tvaTime = '12 PM';
             // Push each line into data object
             data.push({
