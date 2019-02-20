@@ -3777,7 +3777,7 @@ module.exports = [
                 adTxUrl: ""
             },
             {
-                bodyOfWater: "James River", // lake name
+                bodyOfWater: "James River (Jamestown Ferry Pier)", // lake name
                 data: [
 
                     {
@@ -3827,7 +3827,7 @@ module.exports = [
                 adTxUrl: "http://carolinasbasschallenge.com/tournament/72"
             },
             {
-                bodyOfWater: "Potomac River", // lake name
+                bodyOfWater: "Potomac River (Alexandria)", // lake name
                 data: [
 
                     {
