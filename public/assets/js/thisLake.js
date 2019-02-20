@@ -45,6 +45,21 @@ function displayCurrentPageValues() {
     $("#currentNormal").append("normal pool " + lakePool);
 }
 
+
+// Function to set current values on page
+function displayCurrentPageValuesWithUTC() {
+    // Set lake title on page
+    $("#lakeTitle").append(currentLake.bodyOfWater);
+    $("#lakeSponsor").append(bodyOfWaterName);
+    $("#lakeFeaturedTournament").append(bodyOfWaterName);
+    // Set current date, time elev, and pool on page
+    $("#currentDate").append(currentDate);
+    $("#currentTime").append(currentTime);
+    $("#currentLevel").append(currentElev);
+    $("#currentDelta").append(currentDelta);
+    $("#currentNormal").append("normal pool " + lakePool);
+}
+
 // Function to build table on page
 function buildTable(data) {
     for (var i = 0; i < data.length; i++) {
@@ -58,6 +73,42 @@ function buildTable(data) {
         }
         if (typeof data[i].time !== 'undefined') {
             time = data[i].time;
+        }
+        if (typeof data[i].elev !== 'undefined') {
+            elev = data[i].elev;
+        }
+        if (typeof data[i].flow !== 'undefined') {
+            flow = data[i].flow;
+        }
+
+        // Create the HTML Well (Section) and Add the table content for each reserved table
+        var lakeSection = $("<tr>");
+        lakeSection.addClass("well");
+        lakeSection.attr("id", "lakeWell-" + i + 1);
+        $("#lakeSection").append(lakeSection);
+
+        // Append the data values to the table row
+        $("#lakeWell-" + i + 1).append("<td>" + date + "</td>");
+        $("#lakeWell-" + i + 1).append("<td>" + time + "</td>");
+        $("#lakeWell-" + i + 1).append("<td>" + elev + "</td>");
+        $("#lakeWell-" + i + 1).append("<td>" + flow + "</td>");
+    }
+    // buildElevChart(data);
+}
+// Function to build table on page
+function buildTableWithUTC(data) {
+    for (var i = 0; i < data.length; i++) {
+        var date = "N/A";
+        var time = "N/A";
+        var elev = "N/A";
+        var flow = "N/A";
+        // Check to see if data contains date, time, elev, or flow. If not it will stay as "N/A"
+        localTime =  new Date(data[i].date);
+        if (typeof data[i].date !== 'undefined') {
+            date = localTime.toString().substring(0,10);
+        }
+        if (typeof data[i].date !== 'undefined') {
+            time = localTime.toString().substring(16,21);
         }
         if (typeof data[i].elev !== 'undefined') {
             elev = data[i].elev;
@@ -219,6 +270,26 @@ function buildFlowChart(data) {
         }
     });
 }
+function convertStringToUTC(convertedTime) {
+    // Convert UTC date to local time
+    // Convert to ISO format first. '2011-04-11T10:20:30Z'
+    convertedTime = convertedTime.trim();
+    let convertedMonth = convertedTime.substring(5, 7);
+    convertedMonth = getMonthFromString(convertedMonth);
+    convertedMonth = convertedMonth.toString();
+    if (convertedMonth.length == 1) convertedMonth = "0" + convertedMonth;
+    //Convert the string to UTC (GTM)
+    convertedTime = convertedTime.substring(7, 11) + "-" + convertedMonth + "-" + convertedTime.substring(0, 2) + "T" + convertedTime.substring(12, 21) + "Z";
+    //Convert the string to a Date
+    //convertedTime = new Date(convertedTime);
+    //Might need this call in ater
+    convertedTime = new Date(convertedTime);
+    //Convert the Date to local time (client)
+    // convertedTime = convertedTime.toString(convertedTime);
+    // Time now looks like "Thu Dec 27 2018 11:15:00 GMT-0500 (Eastern Standard Time)"
+    // Substring the pieces we want to display
+    return (convertedTime)
+  }
 
 // Function to make elevation USGS call
 function elevUSGS(callback) {
@@ -290,8 +361,9 @@ function dataACE(callback) {
             if (data.length > 0) {
                 displayBatch = data;
 
-                currentDate = displayBatch[0].date;
-                currentTime = displayBatch[0].time;
+                localTime =  new Date(displayBatch[0].date);
+                currentDate = localTime.toString().substring(0,10);;
+                currentTime = localTime.toString().substring(16,21);
                 currentElev = displayBatch[0].elev;
                 currentDelta = (currentElev - lakePool).toFixed(2);
             } else
@@ -314,7 +386,7 @@ function convertStringToUTC(convertedTime) {
     // Convert UTC date to local time
     // Convert to ISO format first. '2011-04-11T10:20:30Z'
     convertedTime = convertedTime.trim();
-    let convertedMonth = convertedTime.substring(3, 6);
+    let convertedMonth = convertedTime.substring(5,7);
     convertedMonth = getMonthFromString(convertedMonth);
     convertedMonth = convertedMonth.toString();
     if (convertedMonth.length == 1) convertedMonth = "0" + convertedMonth;
@@ -691,8 +763,8 @@ $.ajax({
             let source = currentLake.dataSource[i];
             if (source === "ACE") {
                 dataACE(function () {
-                    displayCurrentPageValues();
-                    buildTable(displayBatch);
+                    displayCurrentPageValuesWithUTC();
+                    buildTableWithUTC(displayBatch);
                 });
             } else if (source === "USGS") {
                 elevUSGS(function () {

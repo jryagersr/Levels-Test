@@ -260,7 +260,7 @@ module.exports = function (app) {
           }
 
         }
-        
+
         callback(null, displayBatch);
 
       })
@@ -439,9 +439,9 @@ module.exports = function (app) {
             }
 
             let elev = data[ACEElevIndex].Elev[j].value.toFixed(2);
-            localTime = convertStringToUTC(data[ACEElevIndex].Elev[j].time);
-            let date = localTime.toString().substring(4, 15);
-            let time = localTime.toString().substring(16, 21);
+            //localTime = convertStringToUTC(data[ACEElevIndex].Elev[j].time);
+            let timestamp = convertStringToUTC(data[ACEElevIndex].Elev[j].time);
+            //let time = localTime.toString().substring(16, 21);
             flow = 'No data'; // default value, this differentiates no reported data from no data available (N/A)
             if (ACEFlow)
               if (i < data[ACEFlowIndex].Outflow.length) {
@@ -460,21 +460,14 @@ module.exports = function (app) {
             }*/
 
             if (displayFlowData) {
-              if (ACEFlow) {
-                displayBatch.push({
-                  date: date,
-                  time: time,
-                  elev: elev,
-                  flow: flow
-                })
-              } else {
-                displayBatch.push({
-                  date: date,
-                  time: time,
-                  elev: elev,
-                  flow: "N/A" // no data available
-                });
-              }
+              if (!ACEFlow) flow = "N/A" // no data available
+              displayBatch.push({
+                date: timestamp, //timestamps must be UTC on Server side and converted to local on client side
+                time: " ",
+                elev: elev,
+                flow: flow
+              });
+
             }
 
             i++;
@@ -489,7 +482,7 @@ module.exports = function (app) {
 
           currentDelta = (currentElev - lakePool).toFixed(2);*/
 
-        } 
+        }
 
         // End of data processing code from thisLake.js
 

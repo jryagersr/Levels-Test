@@ -1652,7 +1652,7 @@ module.exports = [
                         ramp: "Cypress Gardens",
                         state: "SC",
                         txDetail: "Qualifier 2",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-carolina-coastal-river-cooper-river-feb-16-2019-pope-johnson-on-a-roll/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-carolina-coastal-rivers/"
                     },
                     {
@@ -2455,7 +2455,7 @@ module.exports = [
                         ramp: "John C Land",
                         state: "SC",
                         txDetail: "Qualifier 2",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-clarke-jones-break-down-the-25-lb-barrier/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-santee-cooper/"
                     },
                     {
@@ -2542,7 +2542,7 @@ module.exports = [
                         ramp: "Kings Ferry",
                         state: "GA",
                         txDetail: "Qualifier 3",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-savannah-river-feb-16-2019-gary-lee-claims-the-top-spot/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-savannah-river/"
                     },
                     {
@@ -2635,7 +2635,7 @@ module.exports = [
                         ramp: "Packs",
                         state: "SC",
                         txDetail: "Qualifier 3",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-sparkleberry-swamp-quest-feb-17-2019-kirby-deberry-smack-em/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-sparkleberry-swamp-quest/"
                     },
                     {
