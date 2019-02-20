@@ -179,10 +179,15 @@ h1, h2, h3 {
     margin-bottom: 10px;
 }
 
+#adLogoWell {
+    height: auto;
+    margin-bottom: 10px;
+}
+
 .current-wrapper {
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     background-color: #4CAF50;
     background-image: linear-gradient(hsl(112, 39%, 49%), hsl(137, 43%, 39%));
     color: white;
