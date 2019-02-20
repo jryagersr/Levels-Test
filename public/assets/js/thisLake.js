@@ -442,7 +442,7 @@ function dataTVA(callback) {
             console.log(data);
 
             if (seaLevelDelta !== 0)
-                elevationAdjust = (parseFloat(data[0].Average) + seaLevelDelta).toFixed(2);
+                elevationAdjust = (parseFloat(data[0].level) + seaLevelDelta).toFixed(2);
             else {
                 if (lakePool == 0)
                     seaLevelDelta = lakePool;
@@ -464,7 +464,7 @@ function dataTVA(callback) {
 
                 let date = element.date;
                 let time = element.time;
-                let flow = element.outflow.replace(',', '')
+                let flow = element.outflow;
 
                 // adjust the elev for lakes with data relative to full pool (not from sealevel))
                 if (seaLevelDelta !== 0)
