@@ -2203,7 +2203,7 @@ module.exports = [
                 adLogoUrl: ""
             },
             //Found this on ACE. Format is different for streams (smh), there is no .elev, it is .stage will add later 
-            /*{
+            {
                 bodyOfWater: "Cape Fear River (Fayett)", // lake name
                 data: [
 
@@ -2226,35 +2226,7 @@ module.exports = [
                 entryLink: "",
                 adLogoSrc: "",
                 adLogoUrl: ""
-            },*/
-            // Fontana Data is not correct for TVA. It says Fontana will be 'sluicing' util further notice. Not sure what that means.
-            //need to skip text until reaching the dat of the first level.
-            /*{
-                bodyOfWater: "Fontana", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flow
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
-                refreshInterval: 60, //minutes
-                lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: 1703.0,
-                normalPool: 1703.0,
-                elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/FNH_R.xml?1547937374477",
-                flowURL: "none",
-                href: "/lakes/fontana",
-                dataSource: ["TVA"], // array of calls to make to retrieve data
-                resultsLink: "undefined",
-                entryLink: "",
-                adLogoSrc: "",
-                adLogoUrl: "",
-                adTxSrc: "",
-                adTxUrl: ""
-            },*/
+            },
             {
                 bodyOfWater: "Falls", // lake name
                 data: [
@@ -2280,6 +2252,34 @@ module.exports = [
                 adLogoUrl: "http://jacksonsuperiorelectric.com/",
                 adTxSrc: "/static/assets/img/catt-oldnorth-falls-032319.png",
                 adTxUrl: "https://www.cattteamtrail.com/divisions/catt-old-north/"
+            },
+            // Fontana Data is not correct for TVA. It says Fontana will be 'sluicing' util further notice. Not sure what that means.
+            //need to skip text until reaching the dat of the first level.
+            {
+                bodyOfWater: "Fontana", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flow
+                        date: ["19-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 60, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0.0,
+                normalPool: 1703.0,
+                elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/FNH_R.xml?1547937374477",
+                flowURL: "none",
+                href: "/lakes/fontana",
+                dataSource: ["TVA"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: "",
+                adTxSrc: "",
+                adTxUrl: ""
             },
             {
                 bodyOfWater: "Gaston", // lake name
@@ -3777,7 +3777,7 @@ module.exports = [
                 adTxUrl: ""
             },
             {
-                bodyOfWater: "James River", // lake name
+                bodyOfWater: "James River (Jamestown Ferry Pier)", // lake name
                 data: [
 
                     {
@@ -3827,7 +3827,7 @@ module.exports = [
                 adTxUrl: "http://carolinasbasschallenge.com/tournament/72"
             },
             {
-                bodyOfWater: "Potomac River", // lake name
+                bodyOfWater: "Potomac River (Alexandria)", // lake name
                 data: [
 
                     {

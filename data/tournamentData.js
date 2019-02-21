@@ -3077,7 +3077,7 @@ module.exports = [
                         state: "NC-SC",
                         txDetail: "Final",
                         resultsLink: "",
-                        entryLink: ""
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wylie/"
                     }
                 ]
             },

@@ -305,9 +305,23 @@ module.exports = function (app) {
         let ACEElevNum = 0;
         let ACEFlowNum = 0;
         let exceptionLake = false;
+        let stageRiver = [];
+
+        if (typeof data[0].Elev == 'undefined' &&
+          typeof data[0].Stage !== 'undefined' && currentLake.bodyOfWater.indexOf("River") >= 0) {
+
+          stageRiver = data; //Copy the data
+          data = []; //Clear the data objects
+          data.push({
+            Elev: stageRiver[0].Stage
+
+          })
+        }
 
         // clear displayBatch
         displayBatch = [];
+
+
 
         //see if A2W is returning Elev Data
         if (typeof data[0].Elev !== 'undefined') {
@@ -439,9 +453,7 @@ module.exports = function (app) {
             }
 
             let elev = data[ACEElevIndex].Elev[j].value.toFixed(2);
-            //localTime = convertStringToUTC(data[ACEElevIndex].Elev[j].time);
             let timestamp = convertStringToUTC(data[ACEElevIndex].Elev[j].time);
-            //let time = localTime.toString().substring(16, 21);
             flow = 'No data'; // default value, this differentiates no reported data from no data available (N/A)
             if (ACEFlow)
               if (i < data[ACEFlowIndex].Outflow.length) {
@@ -451,13 +463,16 @@ module.exports = function (app) {
 
               } else flow = 'Missing'; // This differentiate this condition vs N/A or No data
 
-            /*
-            if (isLakeIstokpoga == true && localTime.getHours() == lastHourDisplayed) {
+            
+              let splitLine = data[ACEElevIndex].Elev[j].time.split(/[ ]+/);
+              splitLine = splitLine[1].split(/[:]+/);
+              
+            if (isLakeIstokpoga == true && splitLine[0] == lastHourDisplayed) {
                 displayFlowData = false;
             } else {
-                lastHourDisplayed = localTime.getHours();
+                lastHourDisplayed = splitLine[0];
                 displayFlowData = true;
-            }*/
+            }
 
             if (displayFlowData) {
               if (!ACEFlow) flow = "N/A" // no data available
@@ -473,15 +488,7 @@ module.exports = function (app) {
             i++;
 
           }
-          // Convert UTC date to local time
-          /*localTime = convertStringToUTC(data[ACEElevIndex].Elev[j - jIncrement].time)
-          currentDate = localTime.toString().substring(4, 15);
-          currentTime = localTime.toString().substring(16, 21);
-
-          currentElev = parseFloat(data[ACEElevIndex].Elev[j - jIncrement].value).toFixed(2);
-
-          currentDelta = (currentElev - lakePool).toFixed(2);*/
-
+          
         }
 
         // End of data processing code from thisLake.js
@@ -583,37 +590,54 @@ module.exports = function (app) {
         let tvaTime = "";
         let tvaElev = "";
         let tvaOutFlow = "";
-        let tvaOutFlowStart = 0
 
         _.each(body.split("\r\n"), function (line) {
-          // Split the text body into readable lines
           var splitLine;
           line = line.trim();
-          splitLine = line.split(/[ ]+/);
 
           // Check to see if this is a data line by checking for keywords
           if (line.substring(1, 6) == "LOCAL") {
             // It's a date time line, save the date and time
             // Formulate the date 
-            tvaDate = splitLine[0].substr(15, 9);
+            // Split the text body into readable lines
+            splitLine = line.split(/[ ]+/);
+            splitLine = splitLine[0].split(/[>]+/);
+            tvaDate = splitLine[1];
             // Formulate the time
+            splitLine = line.split(/[ ]+/);
             tvaTime = splitLine[1] + " " + splitLine[2] + " " + splitLine[3].substr(0, 3);
+          }
+
+          if (line.substring(1, 8) == "OBS_DAY") {
+            // It's a Fontana Date line, isolate and save the date
+            splitLine = line.split(/[>]+/);
+            splitLine = splitLine[1].split(/[<]+/);
+            tvaDate = splitLine[0];
+          }
+
+          if (line.substring(1, 7) == "OBS_HR") {
+            // It's a Fontana time line, isolate and save the elevation
+            splitLine = line.split(/[>]+/);
+            splitLine = splitLine[1].split(/[<]+/);
+            tvaTime = splitLine[0];
           }
 
           if (line.substring(1, 6) == "UPSTR") {
             // It's an elevation level line, save the elevation
-            tvaElev = line.substring(18, 24)
+            splitLine = line.split(/[>]+/);
+            splitLine = splitLine[1].split(/[<]+/);
+            tvaElev = splitLine[0];
+            tvaElev = Number(tvaElev.replace(',', ''));
           }
 
           if (line.substring(1, 4) == "AVG") {
-            // Last Data item
-            // Set the outFlowStart to 25 (5 char outFlow
-            tvaOutFlowStart = 25;
-            if (line.substring(24, 25) != " " && line.substring(23, 24) != " ")
-              tvaOutFlowStart = 23;
-            else if (line.substring(24, 25) != " ")
-              tvaOutFlowStart = 24;
-            tvaOutFlow = line.substring(tvaOutFlowStart, 30)
+            splitLine = line.split(/[>]+/);
+            splitLine = splitLine[1].split(/[<]+/);
+
+            tvaOutFlow = Number(splitLine[0].trim().replace(",", ""));
+          }
+          if (line.substring(1, 5) == "/ROW") {
+            if (tvaTime == 'noon') tvaTime = '12 PM';
             // Push each line into data object
             data.push({
               lakeName: lakeName,
