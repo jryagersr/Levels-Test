@@ -453,9 +453,7 @@ module.exports = function (app) {
             }
 
             let elev = data[ACEElevIndex].Elev[j].value.toFixed(2);
-            //localTime = convertStringToUTC(data[ACEElevIndex].Elev[j].time);
             let timestamp = convertStringToUTC(data[ACEElevIndex].Elev[j].time);
-            //let time = localTime.toString().substring(16, 21);
             flow = 'No data'; // default value, this differentiates no reported data from no data available (N/A)
             if (ACEFlow)
               if (i < data[ACEFlowIndex].Outflow.length) {
@@ -465,13 +463,16 @@ module.exports = function (app) {
 
               } else flow = 'Missing'; // This differentiate this condition vs N/A or No data
 
-            /*
-            if (isLakeIstokpoga == true && localTime.getHours() == lastHourDisplayed) {
+            
+              let splitLine = data[ACEElevIndex].Elev[j].time.split(/[ ]+/);
+              splitLine = splitLine[1].split(/[:]+/);
+              
+            if (isLakeIstokpoga == true && splitLine[0] == lastHourDisplayed) {
                 displayFlowData = false;
             } else {
-                lastHourDisplayed = localTime.getHours();
+                lastHourDisplayed = splitLine[0];
                 displayFlowData = true;
-            }*/
+            }
 
             if (displayFlowData) {
               if (!ACEFlow) flow = "N/A" // no data available
@@ -487,15 +488,7 @@ module.exports = function (app) {
             i++;
 
           }
-          // Convert UTC date to local time
-          /*localTime = convertStringToUTC(data[ACEElevIndex].Elev[j - jIncrement].time)
-          currentDate = localTime.toString().substring(4, 15);
-          currentTime = localTime.toString().substring(16, 21);
-
-          currentElev = parseFloat(data[ACEElevIndex].Elev[j - jIncrement].value).toFixed(2);
-
-          currentDelta = (currentElev - lakePool).toFixed(2);*/
-
+          
         }
 
         // End of data processing code from thisLake.js
