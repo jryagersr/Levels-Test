@@ -102,6 +102,7 @@ h1, h2, h3 {
     border-bottom: 2px solid rgba(199, 199, 199, 0.3);
 }
 
+
 @media only screen and (max-width: 400px) {
     .state-select-wrapper {
         padding-left: 0;
@@ -120,7 +121,8 @@ h1, h2, h3 {
 }
 
 .btn-state-submit:hover {
-    margin: 10px auto;
+    margin-bottom: 2px;
+    margin-top: 8px;
 }
 
 /* Lake Table */
@@ -316,6 +318,47 @@ h1, h2, h3 {
         list-style-type: none;
         position: absolute;
     }
+    
+
+    /* Gif Loading Icon Styles */
+    #lds-ring {
+        display: inline-block;
+        position: relative;
+        width: 44px;
+        height: 44px;
+        margin: 0px -2px -7px 0px;
+      }
+      #lds-ring div {
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        width: 31px;
+        height: 31px;
+        margin: 6px;
+        border: 3px solid #fff;
+        border-radius: 50%;
+        animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+        border-color: #fff transparent transparent transparent;
+      }
+      #lds-ring div:nth-child(1) {
+        animation-delay: -0.45s;
+      }
+      #lds-ring div:nth-child(2) {
+        animation-delay: -0.3s;
+      }
+      #lds-ring div:nth-child(3) {
+        animation-delay: -0.15s;
+      }
+      @keyframes lds-ring {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      
+
 
 /***
 /* Responsive Styles */

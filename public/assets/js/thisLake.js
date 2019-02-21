@@ -1,3 +1,16 @@
+
+// Hide loader gif
+function hideLoader() {
+    $('#lds-ring').hide();
+}
+
+// $(window).ready(hideLoader);
+
+// Strongly recommended: Hide loader after 20 seconds, even if the page hasn't finished loading
+setTimeout(hideLoader, 20 * 1000);
+
+
+
 // Pull the lake name from the end of the current URL
 let parsedURL = window.location.href.split("/");
 let lakeRoute = parsedURL[parsedURL.length - 1];
@@ -33,6 +46,8 @@ let k = 0;
 
 // Function to set current values on page
 function displayCurrentPageValues() {
+    // Hide loading gif
+    hideLoader();
     // Set lake title on page
     $("#lakeTitle").append(currentLake.bodyOfWater);
     $("#lakeSponsor").append(bodyOfWaterName);
@@ -48,6 +63,8 @@ function displayCurrentPageValues() {
 
 // Function to set current values on page
 function displayCurrentPageValuesWithUTC() {
+    // Hide loading gif 
+    hideLoader();
     // Set lake title on page
     $("#lakeTitle").append(currentLake.bodyOfWater);
     $("#lakeSponsor").append(bodyOfWaterName);
