@@ -23,10 +23,10 @@
         });
     </script> -->
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link href="static/assets/css/main.css" rel="stylesheet" type="text/css" />
     <link href="static/assets/css/data.css" rel="stylesheet" type="text/css" />
     <link href="static/assets/css/tournament.css" rel="stylesheet" type="text/css" />
@@ -38,8 +38,8 @@
         <a class="navbar-brand" href="/">
             <h2>Bass<span class="brand-savvy">Savvy</span></h2>
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
-            aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -66,7 +66,8 @@
     <div class="container text-center">
 
         <h1 class="header-title">Tournaments</h1>
-        <h5 class="text-center request-banner">Don't see the tournament you want? <b>Make a request</b> for us to add it <a href="/contact"><b>here</b></a>.</h5>
+        <h5 class="text-center request-banner">Don't see the tournament you want? <b>Make a request</b> for us to add it
+            <a href="/contact"><b>here</b></a>.</h5>
         <br>
         <a href="https://collinsboating.com" target="_blank">
             <img class="ad-logo" src="/static/assets/img/collins.png">
@@ -74,7 +75,9 @@
         <hr>
 
         <h6><b>Using the Filter Feature </b></h6>
-        <p>Click the filter button below to filter out the tournaments you'd like to see. Clicking "Add to Filter" will add a new selection to your current selection. Clicking "New Filter" will reset your query entirely. Clicking "Clear" will reset all data. Clicking on a table header will sort that column alphabetically.</p>
+        <p>Click the filter button below to filter out the tournaments you'd like to see. Clicking "Add to Filter" will
+            add a new selection to your current selection. Clicking "New Filter" will reset your query entirely.
+            Clicking "Clear" will reset all data. Clicking on a table header will sort that column alphabetically.</p>
         <button class="btn btn-success filter-btn" id="filterBtn">Filter</button>
         <div id="filterWrapper">
             <form>
@@ -106,21 +109,24 @@
                     </select>
                 </div>
                 <div class="form-group">
-                        <button type="submit" class="col btn-filter btn btn-success" id="filterSubmit">Filter</button>
+                    <button type="submit" class="col btn-filter btn btn-success" id="filterSubmit">Filter</button>
                 </div>
                 <div class="form-group">
-                        <button type="submit" class="col btn-filter btn btn-success" id="addFilterSubmit">Add to Filter</button>
+                    <button type="submit" class="col btn-filter btn btn-success" id="addFilterSubmit">Add to
+                        Filter</button>
                 </div>
                 <div class="form-group">
-                        <button type="submit" class="col btn-filter btn btn-success" id="newFilterSubmit">New Filter</button>
+                    <button type="submit" class="col btn-filter btn btn-success" id="newFilterSubmit">New
+                        Filter</button>
                 </div>
                 <div class="form-group">
-                        <button type="submit" class="col btn btn-outline-success" id="clearSubmit">Clear</button>
+                    <button type="submit" class="col btn btn-outline-success" id="clearSubmit">Clear</button>
                 </div>
             </form>
         </div>
 
-        <p>All tournament data is provisional, check with tournament trail website or tournament director to confirm dates and times.</p>
+        <p>All tournament data is provisional, check with tournament trail website or tournament director to confirm
+            dates and times.</p>
         <div class="table-responsive text-center">
             <table id="txTable" class="table table-fixed">
                 <thead class="sticky-top">
@@ -139,16 +145,23 @@
     </div>
     </div>
 
-    <footer class="fixed-bottom">
-            <ul id="slides"></ul>
-             <!-- <i class="far fa-window-close fa-lg"></i> -->
-        </footer>
+    <!-- Bottom Scrolling Ad Banner -->
+    <div class="ad-bottom-banner">
+        <div id="scroller">
+            <div class="innerScrollArea">
+                <ul id="adScrollerBottom">
+                </ul>
+            </div>
+        </div>
+    </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="/static/assets/js/tournaments.js"></script>
     <script type="text/javascript" src="/static/assets/js/sponsor.js"></script>
