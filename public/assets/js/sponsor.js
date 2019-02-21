@@ -39,8 +39,39 @@ var bottomBannerSponsors = [
     },
     {
         sponsor: "Academy",
-        href: "https://www.cattteamtrail.com/",
+        href: "https://www.academy.com/",
         src: "/static/assets/img/sponsors/academy logo.png"
+    },
+    
+    {
+        sponsor: "Daves",
+        href: "https://www.davestournamenttackle.com/",
+        src: "/static/assets/img/sponsors/daves logo.png"
+    },
+    {
+        sponsor: "TrueSouth",
+        href: "https://www.truesouthlures.com/",
+        src: "/static/assets/img/sponsors/true south logo.png"
+    },
+    {
+        sponsor: "Siebert",
+        href: "http://www.siebertoutdoors.com",
+        src: "/static/assets/img/sponsors/siebert outdoors logo.png"
+    },
+    {
+        sponsor: "Taterhog",
+        href: "http://www.taterhoglures.com",
+        src: "/static/assets/img/sponsors/tater hog logo.png"
+    },
+    {
+        sponsor: "Flatlands",
+        href: "http://www.flatlandstackle.com",
+        src: "/static/assets/img/sponsors/flatlands logo.png"
+    },
+    {
+        sponsor: "TRC",
+        href: "http://www.trccovers.com",
+        src: "/static/assets/img/sponsors/trc logo.png"
     }];
 
 // Clear any ad content in the scroller
