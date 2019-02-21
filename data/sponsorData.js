@@ -347,6 +347,28 @@ module.exports = [
             }
         ]
     },
+    /************************************************************************************************************************************** */
+    {
+        sponsorName: "DeepCreek",
+        sponsorImage: "png file",
+        defaultHref: "",
+        sponsorships: [{
+            name: "Deep Creek Lure Co",
+            type: [{
+                type: "Banner", //This tells where to position the sponsor featuredTx, lake, charityTx, txPage, Banner, lakeTx, txPage
+                image: "png file",
+                        lake: [
+                    "All" // for lake or tx sponsor
+                ],
+                startDate: [""],
+                endDate: [""],
+                text: ["Sponsor Banner inclusion"],
+                stScope: ["All"], // States or All
+                detail: [""],
+                link: ["http://deepcreeklures.com/"]
+            }]
+        }]
+    },
 
     /************************************************************************************************************************************** */
     {
@@ -354,7 +376,7 @@ module.exports = [
         sponsorImage: "png file",
         defaultHref: "",
         sponsorships: [{
-            name: "Warriors On The Water",
+            name: "Fishers of Men/Bass Pro Shops",
             type: [{
                 type: "charityTx", //This tells where to position the sponsor featuredTx, lake, charityTx, txPage, Banner, lakeTx, txPage
                 image: "png file",
@@ -363,10 +385,10 @@ module.exports = [
                 ],
                 startDate: [""],
                 endDate: [""],
-                text: ["Jordan Lake May 10th"],
+                text: ["Jordan Lake March 16th"],
                 stScope: ["NC"], // States or All
                 detail: ["Charity Tournament"],
-                link: ["http://www.WarriorsOntheWater.com"]
+                link: [""]
             }]
         }]
     },
