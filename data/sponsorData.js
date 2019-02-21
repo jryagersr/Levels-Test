@@ -4,6 +4,7 @@ module.exports = [
     /************************************************************************************************************************************** */
     {
         sponsorName: "BoysandGirls",
+        sponsorImage: "png file",
         defaultHref: "http://bassforcash.com/schedule/",
         sponsorships: [{
             name: "Boys and Girls Club of Henderson, NC",
@@ -11,7 +12,7 @@ module.exports = [
 
                 {
                     type: "charityTx", //This tells where to position the sponsor featuredTx, lake, charityTx, txPage, Banner, lakeTx, txPage
-                    logo: "png file",
+                    image: "png file",
                     lake: [
                         "Kerr" // for lake or tx sponsor
                     ],
@@ -28,7 +29,7 @@ module.exports = [
     /************************************************************************************************************************************** */
     {
         sponsorName: "BrucatoFIS",
-        logo: "png file",
+        sponsorImage: "png file",
         defaultHref: "http://www.BrucatoFIS.com",
         sponsorships: [{
                 name: "Brucato Fuel Injector Service",
@@ -36,7 +37,7 @@ module.exports = [
 
                     {
                         type: "Banner", //This tells where to position the sponsor featuredTx, lake, charityTx, txPage, Banner, lakeTx, txPage
-                        logo: "png file",
+                        image: "png file",
                         lake: [
                             "All" // for lake or tx sponsor
                         ],
@@ -58,7 +59,7 @@ module.exports = [
 
                     {
                         type: "lake", //This tells where to position the sponsor featuredTx, lake, charityTx, txPage, Banner, lakeTx, txPage
-                        logo: "png file",
+                        image: "png file",
                         lake: [
                             "Jordan" // for lake or tx sponsor
                         ],
@@ -76,7 +77,7 @@ module.exports = [
     /************************************************************************************************************************************** */
     {
         sponsorName: "CATT",
-        logo: "png file",
+        sponsorImage: "png file",
         defaultHref: "http://www.cattteamtrail.com",
         sponsorships: [{
                 name: "Carolina Anglers Team Trail",
@@ -84,7 +85,7 @@ module.exports = [
 
                     {
                         type: "featuredTx",
-                        logo: "png file",
+                        image: "png file",
                         lake: [
                             "Kerr",
                             "Falls",
@@ -122,7 +123,7 @@ module.exports = [
 
                     {
                         type: "lakeTx",
-                        logo: "png file",
+                        image: "png file",
                         lake: [
                             "Kerr",
                             "Kerr",
@@ -182,7 +183,7 @@ module.exports = [
 
                     {
                         type: "lake",
-                        logo: "png file",
+                        image: "png file",
                         lake: [
                             "Kerr",
                             "Jordan",
@@ -229,7 +230,7 @@ module.exports = [
     /************************************************************************************************************************************** */
     {
         sponsorName: "Collins",
-        logo: "png file",
+        sponsorImage: "png file",
         defaultHref: "http://CollinsBoating.com/",
         sponsorships: [{
                 name: "Collins, Inc",
@@ -237,7 +238,7 @@ module.exports = [
 
                     {
                         type: "Banner",
-                        logo: "png file",
+                        image: "png file",
                         lake: [
                             "Kerr",
                             "Falls",
@@ -279,7 +280,7 @@ module.exports = [
 
                     {
                         type: "lake",
-                        logo: "png file",
+                        image: "png file",
                         lake: [
                             "Kerr",
                             "Falls",
@@ -318,7 +319,7 @@ module.exports = [
 
                     {
                         type: "lakeTx",
-                        logo: "png file",
+                        image: "png file",
                         lake: [
                             "Jordan",
                             "Kerr"
@@ -350,13 +351,13 @@ module.exports = [
     /************************************************************************************************************************************** */
     {
         sponsorName: "FOM/BPS",
-        logo: "png file",
+        sponsorImage: "png file",
         defaultHref: "",
         sponsorships: [{
             name: "Warriors On The Water",
             type: [{
                 type: "charityTx", //This tells where to position the sponsor featuredTx, lake, charityTx, txPage, Banner, lakeTx, txPage
-                logo: "png file",
+                image: "png file",
                         lake: [
                     "Jordan" // for lake or tx sponsor
                 ],
@@ -372,7 +373,7 @@ module.exports = [
     /************************************************************************************************************************************** */
     {
         sponsorName: "JSE",
-        logo: "png file",
+        sponsorImage: "png file",
         defaultHref: "http://jacksonsuperiorelectric.com/",
         sponsorships: [{
                 name: "Jackson Superior Electric",
@@ -380,7 +381,7 @@ module.exports = [
 
                     {
                         type: "Banner",
-                        logo: "png file",
+                        image: "png file",
                         lake: [
                             "Kerr",
                             "Falls",
@@ -424,7 +425,7 @@ module.exports = [
                 name: "Jackson Superior Electric",
                 type: [{
                     type: "lake",
-                    logo: "png file",
+                    image: "png file",
                         lake: [
                         "Kerr"
                     ],
@@ -441,13 +442,13 @@ module.exports = [
     /************************************************************************************************************************************** */
     {
         sponsorName: "WoW",
-        logo: "png file",
+        sponsorImage: "png file",
         defaultHref: "http://www.WarriorsOntheWater.com",
         sponsorships: [{
             name: "Warriors On The Water",
             type: [{
                 type: "charityTx", //This tells where to position the sponsor featuredTx, lake, charityTx, txPage, Banner, lakeTx, txPage
-                logo: "png file",
+                image: "png file",
                         lake: [
                     "Jordan" // for lake or tx sponsor
                 ],
