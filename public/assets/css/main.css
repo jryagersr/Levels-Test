@@ -19,11 +19,6 @@ h1, h2, h3 {
     margin: 10px;
 }
 
-/* h2 {
-    margin-top: 2px;
-    margin-bottom: 0px;
-} */
-
 .btn {
     margin-bottom: 0px;
 }
@@ -275,88 +270,63 @@ h1, h2, h3 {
 /* Advertisements */
 /* ======================================================= */
 .ad-logo {
-    width: 75%;;
+    width: 40%;;
     height: auto;
     margin-bottom: 10px;
 }
 
-.ad-bottom-banner { 
-    position:fixed;
-   left:0px;
-   bottom:0px;
-   height:70px;
-   width:100%;
-}
+/* Ad Bottom Banner Styles */
+    .ad-bottom-banner {
+        position:fixed; 
+        bottom: 0; 
+        width: 100%; 
+        height: 60px;
+    }
 
-footer {
-    height: 70px;
-    /* opacity: 0; Remove this style to reveal footer */
-}
+    .ad-scroller-img {
+        width: auto;
+        height: 60px;
+        padding: 0px 20px;
+    }
 
-.fa-window-close {
-    position: absolute;
-    right: 0;
-    top: 0;
-    cursor: pointer;
-    color: white;
-}
+/* Scrolling Banner Styles */
+    #scroller {
+        position: relative;
+        width: 100%; 
+        height: 60px; 
+        margin: 0 auto;
+    }
+    #scroller .innerScrollArea {
+        overflow: hidden !important;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+    #scroller ul {
+        padding: 0;
+        margin: 0;
+        position: relative;
+    }
+    #scroller li {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        position: absolute;
+    }
 
-.ad-footer-img {
-    width: 70%;
-    height: 70px;
-    padding: 10px 0 0px;
-    margin-bottom: 5px;
-}
+/***
+/* Responsive Styles */
 
- /*these make the slideshow work
-*/
+    @media only screen and (max-width: 768px) {
+        .ad-logo {
+            width: 60%;
+        }
+    }
 
-#slides {
-     opacity: 0; /*Remove this style to unhide */
-    position: relative;
-    height: auto;
-    width: auto;
-    padding-left: 15%;
-    padding-right: 15%;
-    margin: 0px;
-    list-style-type: none;
-}
-
-.slide {
-    position: absolute;
-    left: 25%;
-    top: 0px;
-    width: 70%;
-    height: 70px;
-    opacity: 0;
-    z-index: 1;
-
-    -webkit-transition: opacity 1s;
-    -moz-transition: opacity 1s;
-    -o-transition: opacity 1s;
-    transition: opacity 1s;
-}
-
-.showing {
-    opacity: 1;
-    z-index: 2;
-}
-
- @media only screen and (max-width: 400px) {
-     .ad-logo, .banner {
+    @media only screen and (max-width: 480px) {
+     .ad-logo {
          width: 90%;
-     }
-
-     .banner {
-         left: 5%;
-     }
-
-     .ad-footer-img, .slide {
-         width: 100%;
-     }
-
-     .slide {
-         left: 0px;
-         width: 100%;
      }
  }
