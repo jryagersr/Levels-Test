@@ -303,7 +303,6 @@ function elevUSGS(callback) {
             }
         })
         .then(function (data) {
-            console.log(data);
 
             // Check to see that USGS returned data
             if (data.length > 0) {
@@ -328,7 +327,6 @@ function flowUSGS(callback) {
             method: "GET",
         })
         .then(function (data) {
-            console.log("flowUSGS data ", data);
             // Parse through the json data to find the values we want
             let flowValues = data.value.timeSeries[0].values[0].value
             // Reverse the order of our data so most recent date is first
@@ -338,7 +336,6 @@ function flowUSGS(callback) {
                 displayBatch[i].flow = flowValues[k].value;
                 k += 4;
             }
-            console.log(displayBatch)
             callback(null, displayBatch);
         });
 }
@@ -355,7 +352,6 @@ function dataACE(callback) {
             }
         })
         .then(function (data) {
-            console.log(data);
 
             // Check to see that ACE returned data
             if (data.length > 0) {
@@ -438,8 +434,6 @@ function dataTVA(callback) {
             }
         })
         .then(function (data) {
-            console.log("TVA Call")
-            console.log(data);
 
             if (seaLevelDelta !== 0)
                 elevationAdjust = (parseFloat(data[0].level) + seaLevelDelta).toFixed(2);
@@ -494,8 +488,6 @@ function dataDuke(callback) {
             }
         })
         .then(function (data) {
-            console.log("DUKE Call")
-            console.log(data);
             // adjust the elev for lakes with data relative to full pool (not from sealevel))
 
             let skipToValidData = 0;
@@ -567,8 +559,6 @@ function elevCUBE(callback) {
             method: "GET",
         })
         .then(function (data) {
-            console.log("CUBE Call")
-            console.log(data)
             displayBatch = data;
             // Determine which lake has been selected of the three cube lakes
             if (lakeRoute === "highrock") {
@@ -604,8 +594,6 @@ function elevAlab(callback) {
             })
         })
         .then(function (data) {
-            console.log("Alab Call")
-            console.log(data)
 
             // Set current Date, Time and Elev
             currentElev = data[0].elev;
@@ -629,8 +617,6 @@ function dataSJRWMD(callback) {
             }
         })
         .then(function (data) {
-            console.log("CUBE Call");
-            console.log(data);
             // Set current Date, Time and Elev
             currentElev = data[0].level;
             currentDate = data[0].date;
@@ -674,8 +660,6 @@ function dataTWDB(callback) {
             }
         })
         .then(function (data) {
-            console.log("CUBE Call");
-            console.log(data);
             // Set current Date, Time and Elev
             currentElev = data[0].level;
             currentDate = data[0].date;
