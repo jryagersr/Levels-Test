@@ -36,7 +36,7 @@ module.exports = [
                 type: [
 
                     {
-                        type: "Banner", //This tells where to position the sponsor featuredTx, lake, charityTx, txPage, Banner, lakeTx, txPage
+                        type: "Banner", //This tells where to position the sponsor featuredTx, lake, charityTx, txPage, Banner, lakeTx, lakePage
                         image: "png file",
                         lake: [
                             "All" // for lake or tx sponsor
@@ -338,7 +338,7 @@ module.exports = [
                         ],
                         detail: ["lakeTx sponsor",
                             "lakeTx sponsor"
-                        ]
+                        ],
                         link: ["http://CollinsBoating.com/",
                             "http://CollinsBoating.com/"
                         ]

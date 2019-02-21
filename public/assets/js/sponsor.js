@@ -18,19 +18,29 @@ var bottomBannerSponsors = [
         src: "/static/assets/img/sponsors/CBC-logo-660px.png"
     },
     {
-        sponsor: "JSE",
-        href: "http://jacksonsuperiorelectric.com/",
-        src: "/static/assets/img/sponsors/JSE-logo-660px.png"
+        sponsor: "Collins",
+        href: "http://collinsboating.com/",
+        src: "/static/assets/img/sponsors/collinslogo.png"
     },
     {
-        sponsor: "BrucatoFis",
-        href: "http://www.brucatofis.com/",
-        src: "/static/assets/img/sponsors/brucatonewlogo-660px.png"
+        sponsor: "Outhouse",
+        href: "http://www.outhousetackle.com/",
+        src: "/static/assets/img/sponsors/outhouse-tacklelogo.png"
     },
     {
-        sponsor: "CBC",
+        sponsor: "DeepCreek",
+        href: "http://deepcreeklures.com/",
+        src: "/static/assets/img/sponsors/deep-creek-lures logo.png"
+    },
+    {
+        sponsor: "CATT",
         href: "https://www.cattteamtrail.com/",
-        src: "/static/assets/img/sponsors/CBC-logo-660px.png"
+        src: "/static/assets/img/sponsors/catt logo.png"
+    },
+    {
+        sponsor: "Academy",
+        href: "https://www.cattteamtrail.com/",
+        src: "/static/assets/img/sponsors/academy logo.png"
     }];
 
 // Clear any ad content in the scroller
