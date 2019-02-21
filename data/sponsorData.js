@@ -4,7 +4,6 @@ module.exports = [
     /************************************************************************************************************************************** */
     {
         sponsorName: "BoysandGirls",
-        logo: "png file",
         defaultHref: "http://bassforcash.com/schedule/",
         sponsorships: [{
             name: "Boys and Girls Club of Henderson, NC",
@@ -12,6 +11,7 @@ module.exports = [
 
                 {
                     type: "charityTx", //This tells where to position the sponsor featuredTx, lake, charityTx, txPage, Banner, lakeTx, txPage
+                    logo: "png file",
                     lake: [
                         "Kerr" // for lake or tx sponsor
                     ],
@@ -36,6 +36,7 @@ module.exports = [
 
                     {
                         type: "Banner", //This tells where to position the sponsor featuredTx, lake, charityTx, txPage, Banner, lakeTx, txPage
+                        logo: "png file",
                         lake: [
                             "All" // for lake or tx sponsor
                         ],
@@ -57,6 +58,7 @@ module.exports = [
 
                     {
                         type: "lake", //This tells where to position the sponsor featuredTx, lake, charityTx, txPage, Banner, lakeTx, txPage
+                        logo: "png file",
                         lake: [
                             "Jordan" // for lake or tx sponsor
                         ],
@@ -82,6 +84,7 @@ module.exports = [
 
                     {
                         type: "featuredTx",
+                        logo: "png file",
                         lake: [
                             "Kerr",
                             "Falls",
@@ -119,6 +122,7 @@ module.exports = [
 
                     {
                         type: "lakeTx",
+                        logo: "png file",
                         lake: [
                             "Kerr",
                             "Kerr",
@@ -178,6 +182,7 @@ module.exports = [
 
                     {
                         type: "lake",
+                        logo: "png file",
                         lake: [
                             "Kerr",
                             "Jordan",
@@ -232,6 +237,7 @@ module.exports = [
 
                     {
                         type: "Banner",
+                        logo: "png file",
                         lake: [
                             "Kerr",
                             "Falls",
@@ -273,6 +279,7 @@ module.exports = [
 
                     {
                         type: "lake",
+                        logo: "png file",
                         lake: [
                             "Kerr",
                             "Falls",
@@ -311,6 +318,7 @@ module.exports = [
 
                     {
                         type: "lakeTx",
+                        logo: "png file",
                         lake: [
                             "Jordan",
                             "Kerr"
@@ -348,7 +356,8 @@ module.exports = [
             name: "Warriors On The Water",
             type: [{
                 type: "charityTx", //This tells where to position the sponsor featuredTx, lake, charityTx, txPage, Banner, lakeTx, txPage
-                lake: [
+                logo: "png file",
+                        lake: [
                     "Jordan" // for lake or tx sponsor
                 ],
                 startDate: [""],
@@ -371,6 +380,7 @@ module.exports = [
 
                     {
                         type: "Banner",
+                        logo: "png file",
                         lake: [
                             "Kerr",
                             "Falls",
@@ -414,7 +424,8 @@ module.exports = [
                 name: "Jackson Superior Electric",
                 type: [{
                     type: "lake",
-                    lake: [
+                    logo: "png file",
+                        lake: [
                         "Kerr"
                     ],
                     startDate: [""],
@@ -436,7 +447,8 @@ module.exports = [
             name: "Warriors On The Water",
             type: [{
                 type: "charityTx", //This tells where to position the sponsor featuredTx, lake, charityTx, txPage, Banner, lakeTx, txPage
-                lake: [
+                logo: "png file",
+                        lake: [
                     "Jordan" // for lake or tx sponsor
                 ],
                 startDate: [""],
