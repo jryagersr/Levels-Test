@@ -13,6 +13,11 @@ var bottomBannerSponsors = [
         src: "/static/assets/img/sponsors/brucatonewlogo-660px.png"
     },
     {
+        sponsor: "BFCS",
+        href: "https://www.bassforcash.com/",
+        src: "/static/assets/img/sponsors/bfcs logo.png"
+    },
+    {
         sponsor: "CBC",
         href: "https://www.cattteamtrail.com/",
         src: "/static/assets/img/sponsors/CBC-logo-660px.png"
@@ -30,7 +35,7 @@ var bottomBannerSponsors = [
     {
         sponsor: "DeepCreek", // All
         href: "http://deepcreeklures.com/",
-        src: "/static/assets/img/sponsors/deep-creek-lures logo.png"
+        src: "/static/assets/img/sponsors/deepcreeklures logo.png"
     },
     {
         sponsor: "CATT",
@@ -64,6 +69,11 @@ var bottomBannerSponsors = [
         src: "/static/assets/img/sponsors/tater hog logo.png"
     },
     {
+        sponsor: "Foothills",// All
+        href: "https://www.foothillsmarine.com/",
+        src: "/static/assets/img/sponsors/foothills logo.png"
+    },
+    {
         sponsor: "Flatlands", // All
         href: "http://www.flatlandstackle.com",
         src: "/static/assets/img/sponsors/flatlands logo.png"
@@ -77,6 +87,21 @@ var bottomBannerSponsors = [
         sponsor: "Bobcats",// All
         href: "http://www.bobcatslakecountry.com/",
         src: "/static/assets/img/sponsors/bobcat logo.png"
+    },
+    {
+        sponsor: "BBS",// All
+        href: "https://www.bassboatsaver.com/",
+        src: "/static/assets/img/sponsors/bbs logo.png"
+    },
+    {
+        sponsor: "Level",// All
+        href: "https://level-rods.myshopify.com/",
+        src: "/static/assets/img/sponsors/level logo.png"
+    },
+    {
+        sponsor: "AnglersChoice",// All
+        href: "https://www.anglerschoicemarine.com/",
+        src: "/static/assets/img/sponsors/anglers choice logo.png"
     }
     ];
 
