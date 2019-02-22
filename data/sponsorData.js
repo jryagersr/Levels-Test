@@ -4,6 +4,7 @@ module.exports = [
     /************************************************************************************************************************************** */
     {
         sponsorName: "BoysandGirls",
+        sponsorType: "Local",
         sponsorImage: "png file",
         defaultHref: "http://bassforcash.com/schedule/",
         sponsorships: [{
@@ -29,6 +30,7 @@ module.exports = [
     /************************************************************************************************************************************** */
     {
         sponsorName: "BrucatoFIS",
+        sponsorType: "Non-Local",
         sponsorImage: "png file",
         defaultHref: "http://www.BrucatoFIS.com",
         sponsorships: [{
@@ -77,6 +79,7 @@ module.exports = [
     /************************************************************************************************************************************** */
     {
         sponsorName: "CATT",
+        sponsorType: "Local",
         sponsorImage: "png file",
         defaultHref: "http://www.cattteamtrail.com",
         sponsorships: [{
@@ -230,6 +233,7 @@ module.exports = [
     /************************************************************************************************************************************** */
     {
         sponsorName: "Collins",
+        sponsorType: "Local",
         sponsorImage: "png file",
         defaultHref: "http://CollinsBoating.com/",
         sponsorships: [{
@@ -350,6 +354,7 @@ module.exports = [
     /************************************************************************************************************************************** */
     {
         sponsorName: "DeepCreek",
+        sponsorType: "Non-Local",
         sponsorImage: "png file",
         defaultHref: "",
         sponsorships: [{
@@ -373,6 +378,7 @@ module.exports = [
     /************************************************************************************************************************************** */
     {
         sponsorName: "FOM/BPS",
+        sponsorType: "Local",
         sponsorImage: "png file",
         defaultHref: "",
         sponsorships: [{
@@ -395,6 +401,7 @@ module.exports = [
     /************************************************************************************************************************************** */
     {
         sponsorName: "JSE",
+        sponsorType: "Local",
         sponsorImage: "png file",
         defaultHref: "http://jacksonsuperiorelectric.com/",
         sponsorships: [{
@@ -464,6 +471,7 @@ module.exports = [
     /************************************************************************************************************************************** */
     {
         sponsorName: "WoW",
+        sponsorType: "Local",
         sponsorImage: "png file",
         defaultHref: "http://www.WarriorsOntheWater.com",
         sponsorships: [{
@@ -481,6 +489,59 @@ module.exports = [
                 detail: ["Charity Tournament"],
                 link: ["http://www.WarriorsOntheWater.com"]
             }]
+        }]
+    },,
+
+    {
+        sponsorName: "Academy",
+        sponsorType: "Non-Local",
+        sponsorImage: "png file",
+        defaultHref: "http://",
+        sponsorships: [{
+            name: "Academy Sports",
+            type: [
+
+                {
+                    type: "Banner", //This tells where to position the sponsor featuredTx, lake, charityTx, txPage, Banner, lakeTx, txPage
+                    image: "png file",
+                    lake: [
+                        "All" // for lake or tx sponsor
+                    ],
+                    startDate: [""],
+                    endDate: [""],
+                    text: ["LakeAndDate"], // For featuredTx, lakeTx and charityTx
+                    stScope: ["NC, VA"], // States or All
+                    detail: [""],
+                    link: ["http://www.academy.com"]
+                }
+            ]
+        }]
+    }
+
+    // Below is a copy paste sponsor
+    {
+        sponsorName: "",
+        sponsorType: "Local",
+        sponsorImage: "png file",
+        defaultHref: "http://",
+        sponsorships: [{
+            name: "LongNameOfSponsor",
+            type: [
+
+                {
+                    type: "", //This tells where to position the sponsor featuredTx, lake, charityTx, txPage, Banner, lakeTx, txPage
+                    image: "png file",
+                    lake: [
+                        "" // for lake or tx sponsor
+                    ],
+                    startDate: [""],
+                    endDate: [""],
+                    text: ["LakeAndDate"], // For featuredTx, lakeTx and charityTx
+                    stScope: ["NC, VA"], // States or All
+                    detail: [""],
+                    link: ["http://"]
+                }
+            ]
         }]
     }
 ]
