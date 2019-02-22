@@ -296,9 +296,6 @@ module.exports = function (app) {
 
         // Insert data processing code from thisLake.js here
 
-        console.log("ACE Call");
-        console.log(data);
-
         let ACEFlow = false;
         let ACEFlowIndex = -1;
         let ACEElevIndex = 0;
