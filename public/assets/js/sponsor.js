@@ -72,7 +72,13 @@ var bottomBannerSponsors = [
         sponsor: "TRC",// All
         href: "http://www.trccovers.com",
         src: "/static/assets/img/sponsors/trc logo.png"
-    }];
+    },
+    {
+        sponsor: "Bobcats",// All
+        href: "http://www.bobcatslakecountry.com/",
+        src: "/static/assets/img/sponsors/bobcat logo.png"
+    }
+    ];
 
 // Clear any ad content in the scroller
 $("#adScrollerBottom").empty();
