@@ -2168,6 +2168,8 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 541.1,
+                lat: 35.45,
+                long: -80.11,
                 cubeCheck: "badin",
                 elevURL: "",
                 flowURL: "none",
@@ -2193,6 +2195,8 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 78.0,
                 normalPool: 178.0,
+                lat: 35.0,
+                long: -79.90,
                 elevURL: "https://lakes.duke-energy.com/Data/Detail/3_Month/30.txt",
                 flowURL: "none",
                 href: "/lakes/BlewittFalls",
@@ -2218,6 +2222,8 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0,
                 normalPool: 0.0,
+                lat: 35.05,
+                long: -78.857,
                 elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=29041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
                 flowURL: "none",
                 href: "/lakes/capefearfayett",
@@ -2242,6 +2248,8 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 251.5,
+                lat: 36.01,
+                long: -78.43,
                 elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1745041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
                 flowURL: "none",
                 href: "/lakes/falls",
@@ -2270,6 +2278,8 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0,
                 normalPool: 1703.0,
+                lat: 35.442211,
+                long: -83.707785,
                 elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/FNH_R.xml?1547937374477",
                 flowURL: "none",
                 href: "/lakes/fontana",
@@ -2296,6 +2306,8 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 200.0,
+                lat: 36.51,
+                long: -77.94,
                 elevURL: "/api/alabama",
                 flowURL: "none",
                 href: "/lakes/gaston",
@@ -2322,6 +2334,8 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 835.0,
                 normalPool: 935.0,
+                lat: 35.80,
+                long: -81.27,
                 elevURL: "https://lakes.duke-energy.com/Data/Detail/3_Month/13.txt",
                 flowURL: "none",
                 href: "/lakes/hickory",
@@ -2347,6 +2361,8 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 655.2,
+                lat: 35.63,
+                long: -80.27,
                 elevURL: "",
                 flowURL: "none",
                 href: "/lakes/highrock",
@@ -2371,6 +2387,8 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 10.21,
                 normalPool: 410.0,
+                lat: 36.49,
+                long: -79.08,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02077280&period=PT168H&parameterCd=00062&siteType=ST&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/hyco",
@@ -2395,6 +2413,8 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 1000.0,
                 normalPool: 1100.0,
+                lat: 34.98,
+                long: -82.94,
                 elevURL: "https://lakes.duke-energy.com/Data/Detail/3_Month/9.txt",
                 flowURL: "none",
                 href: "/lakes/jocasse",
@@ -2419,6 +2439,8 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 216.0,
+                lat: 35.75,
+                long: -79.03,
                 elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1743041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
                 flowURL: "none",
                 href: "/lakes/jordan",
@@ -2445,6 +2467,8 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 300.0,
+                lat: 36.56,
+                long: -78.32,
                 elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1749041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
                 flowURL: "none",
                 href: "/lakes/kerr",
@@ -2471,6 +2495,8 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 10.90,
                 normalPool: 10.90,
+                lat: 35.26,
+                long: -77.585,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02089500&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/neuse",
@@ -2495,6 +2521,8 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 1298.0, // data reported as a delta to full pool = 100
                 normalPool: 1398.0,
+                lat: 35.49,
+                long: -80.94,
                 elevURL: "https://lakes.duke-energy.com/Data/Detail/3_Month/4.txt",
                 flowURL: "none",
                 href: "/lakes/norman",
@@ -2519,6 +2547,8 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 885.0,
                 normalPool: 985.0,
+                lat: 35.78,
+                long: -81.53,
                 elevURL: "https://lakes.duke-energy.com/Data/Detail/3_Month/14.txt",
                 flowURL: "none",
                 href: "/lakes/rhodhiss",
@@ -2543,6 +2573,8 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 0,
+                lat: 35.914,
+                long: -76.722,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=0208114150&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/roanoke",
@@ -2567,6 +2599,8 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 178.0,
                 normalPool: 278.0,
+                lat: 35.23,
+                long: 80.08,
                 elevURL: "https://lakes.duke-energy.com/Data/Detail/3_Month/31.txt",
                 flowURL: "none",
                 href: "/lakes/Tillery",
@@ -2592,6 +2626,8 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 596.0,
+                lat: 35.53,
+                long: -80.198,
                 elevURL: "",
                 flowURL: "none",
                 href: "/lakes/tuckertown",
@@ -2616,6 +2652,8 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 400.0,
                 normalPool: 500.0,
+                lat: 35.08,
+                long: -81.06,
                 elevURL: "https://lakes.duke-energy.com/Data/Detail/3_Month/18.txt",
                 flowURL: "none",
                 href: "/lakes/wylie",
@@ -3149,6 +3187,32 @@ module.exports = [
                 flowURL: "none",
                 href: "/lakes/hartwell",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
+            {
+                bodyOfWater: "Jocasee", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flow
+                        date: ["19-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 30, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 1000.0,
+                normalPool: 1100.0,
+                lat: 34.973062,
+                long: -82.924703,
+                elevURL: "https://lakes.duke-energy.com/Data/Detail/3_Month/9.txt",
+                flowURL: "none",
+                href: "/lakes/jocasse",
+                dataSource: ["DUKE"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
                 adLogoSrc: "",
