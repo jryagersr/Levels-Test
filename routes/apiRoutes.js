@@ -291,13 +291,22 @@ module.exports = function (app) {
         if (error) {
           callback(error);
         };
+        // if statement added for bug
+        // add this in later: 
+        // /<[a-z][\s\S]*>/i.test() 
+        //This is Regex to check if a string contains html elements
+        if (body.includes("503 Service Temporarily Unavailable")) {
+          data = "Data service temporarily unavailable. Please check back later";
+          callback(null, data);
+        }
+        else {
+        
+
 
         data = JSON.parse(body);
 
         // Insert data processing code from thisLake.js here
 
-        console.log("ACE Call");
-        console.log(data);
 
         let ACEFlow = false;
         let ACEFlowIndex = -1;
@@ -494,6 +503,7 @@ module.exports = function (app) {
         // End of data processing code from thisLake.js
 
         callback(null, displayBatch.reverse());
+      }
       })
     }
     // Date Conversion functions from thisLake.js

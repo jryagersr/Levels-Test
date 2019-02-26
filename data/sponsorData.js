@@ -36,7 +36,7 @@ module.exports = [
                 type: [
 
                     {
-                        type: "Banner", //This tells where to position the sponsor featuredTx, lake, charityTx, txPage, Banner, lakeTx, txPage
+                        type: "Banner", //This tells where to position the sponsor featuredTx, lake, charityTx, txPage, Banner, lakeTx, lakePage
                         image: "png file",
                         lake: [
                             "All" // for lake or tx sponsor
@@ -100,7 +100,7 @@ module.exports = [
                             ""
                         ],
                         text: ["NC/SC Championship Kerr Lake June 1-2",
-                            " Old North Falls Qualifier March 23rd",
+                            "Old North Falls Qualifier March 23rd",
                             "Old North Jordan Qualifier April 28th"
                         ],
                         stScope: ["SC, NC, VA, TN, GA",
@@ -266,10 +266,10 @@ module.exports = [
                             "Bottom Banner inclusion",
                             "Bottom Banner inclusion"
                         ],
-                        link: ["http://jacksonsuperiorelectric.com/",
-                            "http://jacksonsuperiorelectric.com/",
-                            "http://jacksonsuperiorelectric.com/",
-                            "http://jacksonsuperiorelectric.com/"
+                        link: ["http://CollinsBoating.com/",
+                            "http://CollinsBoating.com/",
+                            "http://CollinsBoating.com/",
+                            "http://CollinsBoating.com/"
                         ]
                     }
                 ]
@@ -338,7 +338,7 @@ module.exports = [
                         ],
                         detail: ["lakeTx sponsor",
                             "lakeTx sponsor"
-                        ]
+                        ],
                         link: ["http://CollinsBoating.com/",
                             "http://CollinsBoating.com/"
                         ]
