@@ -20,6 +20,7 @@ $.ajax({
 
         // run get location function
         getLocation(function (lat, lon) {
+            console.log(lat + ", " + lon);
 
             // loop through lake data (right now only NC)
             lakeData[19].lakes.forEach(function (lake) {
