@@ -524,13 +524,13 @@ module.exports = [
                 tournaments: [
 
                     {
-                        date: "2019-02-26",
+                        date: "2019-02-02",
                         lake: "Norman",
                         ramp: "Pinnacle",
                         state: "NC",
                         txDetail: "T1",
-                        resultsLink: "",
-                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=19&RegionName=R8"
+                        resultsLink: "https://americanbassanglers.com/Results.php?Circuit=OS&Division=5&Date=02/02/2019",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=5&RegionName=R8"
                     },
                     {
                         date: "2019-03-09",
@@ -539,7 +539,7 @@ module.exports = [
                         state: "SC",
                         txDetail: "T2",
                         resultsLink: "",
-                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=19&RegionName=R8"
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=5&RegionName=R8"
                     },
                     {
                         date: "2019-05-04",
@@ -548,7 +548,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "T3",
                         resultsLink: "",
-                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=19&RegionName=R8"
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=5&RegionName=R8"
                     },
                     {
                         date: "2019-06-15",
@@ -557,7 +557,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "T4",
                         resultsLink: "",
-                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=19&RegionName=R8"
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=5&RegionName=R8"
                     },
                     {
                         date: "2019-09-28",
@@ -566,7 +566,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Championship",
                         resultsLink: "",
-                        entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=19&RegionName=R8"
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=5&RegionName=R8"
                     }
                 ]
             },
@@ -1694,7 +1694,7 @@ module.exports = [
                         ramp: "Cypress Gardens",
                         state: "SC",
                         txDetail: "Qualifier 1",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-cooper-river-sc-feb-23-2019-kyle-welch-tops-the-field-16-78-lbs/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-cooper-river/"
                     },
                     {
@@ -2109,7 +2109,7 @@ module.exports = [
                         ramp: "Occonneechee",
                         state: "NC",
                         txDetail: "Qualifier 2",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-kerr-lake-nc-va-feb-24-2019-talbott-johns-top-the-39-boat-field-with-13-23-lbs/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
                     },
                     {
@@ -2151,6 +2151,48 @@ module.exports = [
                 ]
             },
             {
+                trail: "Monticello",
+                tournaments: [
+
+                    {
+                        date: "2019-02-23",
+                        lake: "Monticello",
+                        ramp: "Hwy 99",
+                        state: "SC",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-monticello-sc-feb-23-2019-farr-sexton-squeake-out-the-win/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-monticello/"
+                    },
+                    {
+                        date: "2019-03-??",
+                        lake: "Monticello",
+                        ramp: "Hwy 99",
+                        state: "SC",
+                        txDetail: "Qualifier 2",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-monticello/"
+                    },
+                    {
+                        date: "2019-04-20",
+                        lake: "Monticello",
+                        ramp: "Hwy 99",
+                        state: "SC",
+                        txDetail: "Qualifier 3",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-monticello/"
+                    },
+                    {
+                        date: "2019-04-25",
+                        lake: "Monticello",
+                        ramp: "Hwy 99",
+                        state: "SC",
+                        txDetail: "Qualifier 4",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-monticello/"
+                    },
+                ]
+            },
+            {
                 trail: "Murray",
                 tournaments: [
 
@@ -2187,7 +2229,7 @@ module.exports = [
                         ramp: "Dreher",
                         state: "SC",
                         txDetail: "Gold 4",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-murray-sc-feb-23-2019-the-rutherfords-weigh-in-26-07-lbs/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-murray/"
                     },
                     {
@@ -2464,7 +2506,7 @@ module.exports = [
                         ramp: "John C Land",
                         state: "SC",
                         txDetail: "Gold 3",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-santee-cooper-feb-23-2019-the-clements-smack-em-stack-em-28-95-lbs-bf-9-14-lbs/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-santee-cooper/"
                     },
                     {
@@ -2621,7 +2663,7 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-sparkleberry-swamp-quest/"
                     },
                     {
-                        date: "2019-01-19",
+                        date: "2019-01-17",
                         lake: "Swamp",
                         ramp: "Packs",
                         state: "SC",
@@ -2787,17 +2829,17 @@ module.exports = [
                         lake: "Wateree",
                         ramp: "Clearwater",
                         state: "SC",
-                        txDetail: "Open 1",
+                        txDetail: "Qual 1",
                         resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-wateree-sc-feb-16-2019-williams-english-win-a-tough-won/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
                     },
                     {
                         date: "2019-02-23",
                         lake: "Wateree",
-                        ramp: "Clearwater",
+                        ramp: "Colonial Creek",
                         state: "SC",
-                        txDetail: "Open 2",
-                        resultsLink: "",
+                        txDetail: "Qual 2",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-wateree-sc-feb-23-2019-cantley-richardson-win-a-tough-one/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
                     },
                     {
@@ -2805,7 +2847,7 @@ module.exports = [
                         lake: "Wateree",
                         ramp: "Clearwater",
                         state: "SC",
-                        txDetail: "Open 3",
+                        txDetail: "Qual 3",
                         resultsLink: "",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
                     },
@@ -2880,10 +2922,10 @@ module.exports = [
                     }, {
                         date: "2019-02-23",
                         lake: "Wateree",
-                        ramp: "Clearwater",
+                        ramp: "Colonial Creek",
                         state: "SC",
                         txDetail: "Open 2",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-resulys-wateree-open-feb-23-2019-richardson-cantley-double-up/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     }, {
                         date: "2019-03-09",
@@ -4248,7 +4290,7 @@ module.exports = [
                         ramp: "Pinnacle",
                         state: "NC",
                         txDetail: "FLW",
-                        resultsLink: "",
+                        resultsLink: "https://www.flwfishing.com/news/2019-02-25-orellana-by-an-ounce-on-norman",
                         entryLink: "https://www.flwfishing.com/tournaments/2019-02-23-norman"
                     },
                     {
@@ -4725,7 +4767,7 @@ module.exports = [
                         ramp: "Farrington",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
-                        resultsLink: "",
+                        resultsLink: "http://piedmontbassclassics.com/223-19Results.html",
                         entryLink: "http://piedmontbassclassics.com/2019CashionRodsHartsCustomSetsSpringTrailMainPage.html"
                     },
                     {

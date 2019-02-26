@@ -8,9 +8,14 @@ var bottomBannerSponsors = [
         src: "/static/assets/img/sponsors/JSE-logo-660px.png"
     },
     {
-        sponsor: "BrucatoFis",
+        sponsor: "BrucatoFis", // All
         href: "http://www.brucatofis.com/",
         src: "/static/assets/img/sponsors/brucatonewlogo-660px.png"
+    },
+    {
+        sponsor: "BFCS",
+        href: "https://www.bassforcash.com/",
+        src: "/static/assets/img/sponsors/bfcs logo.png"
     },
     {
         sponsor: "CBC",
@@ -18,20 +23,87 @@ var bottomBannerSponsors = [
         src: "/static/assets/img/sponsors/CBC-logo-660px.png"
     },
     {
-        sponsor: "JSE",
-        href: "http://jacksonsuperiorelectric.com/",
-        src: "/static/assets/img/sponsors/JSE-logo-660px.png"
+        sponsor: "Collins",
+        href: "http://collinsboating.com/",
+        src: "/static/assets/img/sponsors/collinslogo.png"
     },
     {
-        sponsor: "BrucatoFis",
-        href: "http://www.brucatofis.com/",
-        src: "/static/assets/img/sponsors/brucatonewlogo-660px.png"
+        sponsor: "Outhouse",
+        href: "http://www.outhousetackle.com/",
+        src: "/static/assets/img/sponsors/outhouse-tacklelogo.png"
     },
     {
-        sponsor: "CBC",
+        sponsor: "DeepCreek", // All
+        href: "http://deepcreeklures.com/",
+        src: "/static/assets/img/sponsors/deepcreeklures logo.png"
+    },
+    {
+        sponsor: "CATT",
         href: "https://www.cattteamtrail.com/",
-        src: "/static/assets/img/sponsors/CBC-logo-660px.png"
-    }];
+        src: "/static/assets/img/sponsors/catt logo.png"
+    },
+    {
+        sponsor: "Academy", // All
+        href: "https://www.academy.com/",
+        src: "/static/assets/img/sponsors/academy logo.png"
+    },
+    
+    {
+        sponsor: "Daves", // All
+        href: "https://www.davestournamenttackle.com/",
+        src: "/static/assets/img/sponsors/daves logo.png"
+    },
+    {
+        sponsor: "TrueSouth", // All
+        href: "https://www.truesouthlures.com/",
+        src: "/static/assets/img/sponsors/true south logo.png"
+    },
+    {
+        sponsor: "Siebert", //All
+        href: "http://www.siebertoutdoors.com",
+        src: "/static/assets/img/sponsors/siebert outdoors logo.png"
+    },
+    {
+        sponsor: "Taterhog", //All
+        href: "http://www.taterhoglures.com",
+        src: "/static/assets/img/sponsors/tater hog logo.png"
+    },
+    {
+        sponsor: "Foothills",// All
+        href: "https://www.foothillsmarine.com/",
+        src: "/static/assets/img/sponsors/foothills logo.png"
+    },
+    {
+        sponsor: "Flatlands", // All
+        href: "http://www.flatlandstackle.com",
+        src: "/static/assets/img/sponsors/flatlands logo.png"
+    },
+    {
+        sponsor: "TRC",// All
+        href: "http://www.trccovers.com",
+        src: "/static/assets/img/sponsors/trc logo.png"
+    },
+    {
+        sponsor: "Bobcats",// All
+        href: "http://www.bobcatslakecountry.com/",
+        src: "/static/assets/img/sponsors/bobcat logo.png"
+    },
+    {
+        sponsor: "BBS",// All
+        href: "https://www.bassboatsaver.com/",
+        src: "/static/assets/img/sponsors/bbs logo.png"
+    },
+    {
+        sponsor: "Level",// All
+        href: "https://level-rods.myshopify.com/",
+        src: "/static/assets/img/sponsors/level logo.png"
+    },
+    {
+        sponsor: "AnglersChoice",// All
+        href: "https://www.anglerschoicemarine.com/",
+        src: "/static/assets/img/sponsors/anglers choice logo.png"
+    }
+    ];
 
 // Clear any ad content in the scroller
 $("#adScrollerBottom").empty();
