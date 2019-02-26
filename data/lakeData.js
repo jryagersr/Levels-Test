@@ -3136,6 +3136,8 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 330.0,
+                lat: 33.75,
+                long: -82.25, 
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02193900&period=PT168H&parameterCd=00062&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/clarkshill",
@@ -3159,6 +3161,8 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: -6.38, // Cooper River gage height is -6.38, it's a strange USGS site
                 normalPool: 0.0,
+                lat: 32.84,
+                long: -79.93, 
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02172053&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/cooperriver",
@@ -3183,6 +3187,8 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 660.0,
+                lat: 34.41,
+                long: -82.85, 
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02187010&period=PT168H&parameterCd=00062&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/hartwell",
@@ -3233,6 +3239,8 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 700.0,
                 normalPool: 800.0,
+                lat: 34.76,
+                long: -82.93, 
                 elevURL: "https://lakes.duke-energy.com/Data/Detail/3_Month/10.txt",
                 flowURL: "none",
                 href: "/lakes/Keowee",
@@ -3257,6 +3265,8 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 360.0,
+                lat: 34.06,
+                long: -81.29, 
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02168500&period=PT168H&parameterCd=00062&siteType=ST&siteStatus=all",
                 flowURL: "none", // Until I can fix it "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02168504&period=PT168H&parameterCd=00060&siteType=ST&siteStatus=all",
                 href: "/lakes/murray",
@@ -3281,6 +3291,8 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 79.0,
+                lat: 33.52,
+                long: -80.45, 
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02171000&period=PT168H&parameterCd=00062&siteType=ST&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/santee1",
@@ -3829,6 +3841,8 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 200.0,
+                lat: 36.51,
+                long: -77.94,
                 elevURL: "/api/alabama",
                 flowURL: "none",
                 href: "/lakes/gaston",
@@ -3855,6 +3869,8 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 0,
+                lat: 36.96,
+                long: -76.36,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02042770&period=PT168H&parameterCd=62620&siteType=ST&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/james",
@@ -3879,6 +3895,8 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 300.0,
+                lat: 36.56,
+                long: -78.32,
                 elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1749041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
                 flowURL: "none",
                 href: "/lakes/kerr",
@@ -3905,6 +3923,8 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 0,
+                lat: 38.79,
+                long: -77.04,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=0165258890&period=PT168H&parameterCd=62620&siteType=ST&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/potomac",
@@ -3930,6 +3950,8 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 795.0,
+                lat: 37.05,
+                long: -79.60,
                 elevURL: "/api/alabama",
                 flowURL: "none",
                 href: "/lakes/smithmountain",
