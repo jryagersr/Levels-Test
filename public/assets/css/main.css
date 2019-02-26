@@ -1,6 +1,5 @@
 * {
     font-family: 'Roboto', sans-serif;
-    /* color: #212121; */
 }
 
 body {
@@ -68,10 +67,6 @@ h1, h2, h3 {
     color: #3a5a9b;
 }
 
-/* .navbar-brand h2 {
-    margin-bottom: 0px;
-} */
-
 .brand-savvy {
     color: #4CAF50;
 }
@@ -82,10 +77,51 @@ h1, h2, h3 {
     }
 }
 
-/* .lakeCard {
-    display: flex;
-    justify-content: space-between;
-} */
+/* Home-New Stles */
+#lakeContainer {
+    padding: 20px 0px;
+}
+
+#lakeContainer h3 {
+    margin-bottom: 40px;
+}
+
+#lakeContainer a {
+    text-decoration: none;
+}
+
+.lake-card {
+    width: 95%;
+    margin: 0px auto 20px;
+    padding: 10px;
+    height: auto;
+    text-align: center;
+    color: white;
+    background: rgb(0,212,255);
+    background: linear-gradient(135deg, rgba(0,212,255,1) 0%, rgba(9,45,121,1) 100%);
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.18);
+}
+
+.lake-card:hover {
+    width: 100%;
+    -webkit-transition: width .25s; /* Safari */
+    transition: width .25s;
+}
+
+.lake-card h2 {
+    font-weight: bold;
+}
+
+.lake-card p {
+    color: rgba(255,255,255,0.8);
+    text-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+}
+
+@media only screen and (max-width: 480px) {
+    .lake-card {
+        width: 100%;
+    }
+}
 
 /* Lakes Styles */
 /* ================================================================ */
@@ -103,7 +139,7 @@ h1, h2, h3 {
 }
 
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 480px) {
     .state-select-wrapper {
         padding-left: 0;
         padding-right: 0;
@@ -237,38 +273,6 @@ h1, h2, h3 {
     }
 }
 
-/* Cards on Home Page */
-.card-home {
-    margin-bottom: 20px;
-    box-shadow: 0px 2px 4px rgb(0,0,0,0.10);
-    -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.10);
-}
-
-.card-home:hover {
-    margin-bottom: 21px;
-    margin-top: -1px;
-    box-shadow: 0px 2px 4px rgb(0,0,0,0.20);
-    -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.20);
-}
-
-.card-link {
-    text-decoration: none;
-    color: black;
-}
-
-.card-link:hover {
-    color: black;
-}
-
-.request-banner {
-    border: 1px solid #4CAF50;
-    padding: 10px;
-    width: 75%;
-    margin: 5px auto;
-    border-radius: 3px;
-}
-
-
 /* Advertisements */
 /* ======================================================= */
 .ad-logo {
@@ -284,13 +288,13 @@ h1, h2, h3 {
         bottom: 0; 
         width: 100%; 
         height: 60px;
+        opacity: 0; /*this style hides the banner */
     }
 
     .ad-scroller-img {
         width: 90px;
         height: 60px;
         margin-right: 20px;
-        /* padding: 0px 20px; */
     }
 
 /* Scrolling Banner Styles */
