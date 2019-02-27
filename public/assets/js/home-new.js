@@ -94,6 +94,8 @@ $.ajax({
         function displayNearbyLakes() {
             // dump anything currently in the lake container
             $('#lakeContainer').empty();
+            // dump anything currently in the noLocation container
+            $('#noLocation').empty();
 
             // sort by ascending distance
             console.log(closeLakes);
