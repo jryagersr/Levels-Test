@@ -144,15 +144,19 @@ h1, h2, h3 {
 #lakeContainer {
     margin-top: 120px;
     padding: 20px 0px;
-    background: white;
+    background: rgb(249,249,249);
     display: none;
 }
 
-#lakeContainer h3 {
-    margin-bottom: 40px;
+#lakeContainer a {
+    text-decoration:none;
 }
 
-#lakeContainer a {
+.locate-box h3 {
+    margin-bottom: 30px;
+}
+
+.locate-box a {
     text-decoration: none;
 }
 
@@ -160,8 +164,12 @@ h1, h2, h3 {
     margin: 10px 0px;
 }
 
+.locate-btn:hover {
+    margin: 10px 0px;
+}
+
 .lake-card {
-    width: 95%;
+    width: 80%;
     margin: 0px auto 20px;
     padding: 10px;
     height: auto;
@@ -173,7 +181,7 @@ h1, h2, h3 {
 }
 
 .lake-card:hover {
-    width: 100%;
+    width: 85%;
     -webkit-transition: width .25s; /* Safari */
     transition: width .25s;
 }
@@ -201,7 +209,11 @@ h1, h2, h3 {
 
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 517px) {
+    .locate-container {
+        margin-bottom: 300px;
+    }
+
     .lake-card {
         width: 100%;
     }
@@ -220,6 +232,17 @@ h1, h2, h3 {
         display: block;
         width: 100%;
 
+    }
+
+    .locate-btn {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .locate-btn:hover {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
