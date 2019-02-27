@@ -1,6 +1,6 @@
 * {
     font-family: 'Roboto', sans-serif;
-    /* color: #212121; */
+    color: black;
 }
 
 body {
@@ -68,10 +68,6 @@ h1, h2, h3 {
     color: #3a5a9b;
 }
 
-/* .navbar-brand h2 {
-    margin-bottom: 0px;
-} */
-
 .brand-savvy {
     color: #4CAF50;
 }
@@ -82,10 +78,173 @@ h1, h2, h3 {
     }
 }
 
-/* .lakeCard {
-    display: flex;
-    justify-content: space-between;
+/* Home-New Stles */
+/* .home-container {
+    background: rgb(76,175,80);
+    background: linear-gradient(135deg, rgba(76,175,80,1) 0%, rgba(38,87,40,1) 100%);
+    height: 100vh;
 } */
+
+.home-container {
+    padding: 0;
+}
+
+.locate-container {
+    background-image:
+        /* linear-gradient(rgba(76,175,80,0.3), rgba(76,175,80, 0.3)),  */
+        url("../img/lakes.jpg");
+    background-size: cover;                      
+    background-repeat: no-repeat;
+    background-position: center center;  
+    height: 250px;
+    padding: 20px;
+    width: 100%;
+    margin-bottom: 140px;
+}
+
+.locate-box {
+    width: 60%;
+    height: 200px;
+    margin: 150px auto 20px;
+    background: white;
+    border-radius: 3px;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.18);
+    padding: 20px;
+}
+
+.left, .middle, .right {
+    display: inline-block;
+    margin-top: 10px 0px;
+    height: auto;
+}
+
+.left {
+    width: 45%;
+    float: left;
+}
+
+.right input {
+    width: 40%;
+}
+
+.middle {
+    width: 10%;
+    margin-top: 20px;
+}
+
+.right {
+    width: 45%;
+    float: right;
+}
+
+.locate-box h4{
+    font-weight: bold;
+}
+
+#lakeContainer {
+    margin-top: 120px;
+    padding: 20px 0px;
+    background: rgb(249,249,249);
+    display: none;
+}
+
+#lakeContainer a {
+    text-decoration:none;
+}
+
+.locate-box h3 {
+    margin-bottom: 30px;
+}
+
+.locate-box a {
+    text-decoration: none;
+}
+
+.locate-btn {
+    margin: 10px 0px;
+}
+
+.locate-btn:hover {
+    margin: 10px 0px;
+}
+
+.lake-card {
+    width: 80%;
+    margin: 0px auto 20px;
+    padding: 10px;
+    height: auto;
+    text-align: center;
+    color: white;
+    background: rgb(0,212,255);
+    background: linear-gradient(135deg, rgba(0,212,255,1) 0%, rgba(9,45,121,1) 100%);
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.18);
+}
+
+.lake-card:hover {
+    width: 85%;
+    -webkit-transition: width .25s; /* Safari */
+    transition: width .25s;
+}
+
+.lake-card h2 {
+    font-weight: bold;
+}
+
+.lake-card p {
+    color: rgba(255,255,255,0.8);
+    text-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+}
+
+/* TABLES LANDSCAPE AND DESKTOP */
+@media only screen and (max-width: 1024px) {
+    .locate-box {
+        width: 80%;
+    }
+
+}
+
+/* TABLETS PORTRAIT */
+@media only screen and (min-width: 768px) {
+
+
+}
+
+@media only screen and (max-width: 517px) {
+    .locate-container {
+        margin-bottom: 300px;
+    }
+
+    .lake-card {
+        width: 100%;
+    }
+
+    .locate-box {
+        width: 90%;
+        height: auto;
+    }
+
+    .locate-box h3 {
+        margin-bottom: 20px;
+    }
+
+    .left, .middle, .right {
+        float: none;
+        display: block;
+        width: 100%;
+
+    }
+
+    .locate-btn {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .locate-btn:hover {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 
 /* Lakes Styles */
 /* ================================================================ */
@@ -103,7 +262,7 @@ h1, h2, h3 {
 }
 
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 480px) {
     .state-select-wrapper {
         padding-left: 0;
         padding-right: 0;
@@ -200,6 +359,10 @@ h1, h2, h3 {
     margin: 5px;
 }
 
+.current-wrapper span {
+    color: white;
+}
+
 .current-header-title {
     font-weight: bold;
 }
@@ -280,16 +443,17 @@ h1, h2, h3 {
 /* Ad Bottom Banner Styles */
     .ad-bottom-banner {
         position:fixed; 
+        background-color: white;
         bottom: 0; 
         width: 100%; 
         height: 60px;
+        opacity: 0; /*this style hides the banner */
     }
 
     .ad-scroller-img {
-        width: 80px;
+        width: 90px;
         height: 60px;
         margin-right: 20px;
-        /* padding: 0px 20px; */
     }
 
 /* Scrolling Banner Styles */

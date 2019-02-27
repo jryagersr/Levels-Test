@@ -107,7 +107,7 @@ module.exports = [
                             ""
                         ],
                         text: ["NC/SC Championship Kerr Lake June 1-2",
-                            " Old North Falls Qualifier March 23rd",
+                            "Old North Falls Qualifier March 23rd",
                             "Old North Jordan Qualifier April 28th"
                         ],
                         stScope: ["SC, NC, VA, TN, GA",
@@ -276,10 +276,10 @@ module.exports = [
                             "Bottom Banner inclusion",
                             "Bottom Banner inclusion"
                         ],
-                        link: ["http://jacksonsuperiorelectric.com/",
-                            "http://jacksonsuperiorelectric.com/",
-                            "http://jacksonsuperiorelectric.com/",
-                            "http://jacksonsuperiorelectric.com/"
+                        link: ["http://CollinsBoating.com/",
+                            "http://CollinsBoating.com/",
+                            "http://CollinsBoating.com/",
+                            "http://CollinsBoating.com/"
                         ]
                     }
                 ]
