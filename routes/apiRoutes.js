@@ -972,6 +972,22 @@ module.exports = function (app) {
   });
 
 
+  app.get("/api/zip", function (request, response) {
+    let userZip = request.query.userZip;
+    var zipData = require("../data/zipDataFormatted");
+    data = {};
+    zipData.forEach(function (zip) {
+      if (userZip == zip.zip) {
+        console.log(zip);
+        data.zip = zip.zip;
+        data.lat = zip.lat;
+        data.lon = zip.lon;
+        response.send(data);
+      }
+    });
+  })
+
+
   // Fetch weather data
   // app.get("/api/weather", function (req, res) {
   //   getData(function (error, data) {
