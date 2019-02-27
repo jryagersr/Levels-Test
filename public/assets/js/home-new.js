@@ -26,7 +26,10 @@ $.ajax({
                 console.log(lat + ", " + lon);
 
                 // loop through lake data (right now only NC)
-                lakeData[19].lakes.forEach(function (lake) {
+                lakeData.forEach(function(state) {
+                    state.lakes.forEach(function (lake) {
+                    // if lake is not already collected (duplicate)
+                    if (!closeLakes.some(e => e.name === lake.bodyOfWater)) {
                     // calculate our distance between user and each lake
                     newDistance = distance(lat, lon, lake.lat, lake.long, "M")
                     // collect the first 10 regardless
@@ -49,6 +52,8 @@ $.ajax({
                             }
                         }
                     }
+                    }
+                });
                 });
 
                 // sort by ascending distance
