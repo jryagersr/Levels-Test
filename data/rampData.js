@@ -3,29 +3,43 @@ module.exports = [
 
     /************************************************************************************************************************************** */
     {
-        sponsorName: "BoysandGirls",
-        sponsorType: "Local",
-        sponsorImage: "png file",
-        defaultHref: "http://bassforcash.com/schedule/",
-        sponsorships: [{
-            name: "Boys and Girls Club of Henderson, NC",
-            type: [
-
-                {
-                    type: "charityTx", //This tells where to position the sponsor featuredTx, lake, charityTx, txPage, Banner, lakeTx, txPage
-                    image: "png file",
-                    lake: [
-                        "Kerr" // for lake or tx sponsor
-                    ],
-                    startDate: [""],
-                    endDate: [""],
-                    text: ["Kerr Lake April 20th"], // For featuredTx, lakeTx and charityTx
-                    stScope: ["NC, VA"], // States or All
-                    detail: ["Charity Tournament Combined with BFCS Tx"],
-                    link: ["http://bassforcash.com/schedule/"]
-                }
-            ]
-        }],
+        rampLake: "Jordan",
+        rampName: "Farrington Point",
+        rampType: "Concrete",
+        rampParking: "Good (70)",
+        rampFee: "No",
+        rampAccess: "Paved",
+        rampTotal: 4,
+        rampBottom: 209,
+        rampTop: 224,
+        lat: 36.329107,
+        long: -78.410444
+    },
+    {
+        rampLake: "Jordan",
+        rampName: "Ebenezer",
+        rampType: "Concrete",
+        rampDock: "Yes",
+        rampParking: "Good (100)",
+        rampFee: "No",
+        rampAccess: "Paved",
+        rampTotal: 4,
+        rampBottom: 206,
+        rampTop: 222,
+        lat: 36.329107,
+        long: -78.410444
+    },
+    {
+        rampLake: "Jordan",
+        rampName: "Poe's",
+        rampType: "Concrete",
+        rampDock: "Yes",
+        rampParking: "Good (50)",
+        rampFee: "Yes",
+        rampAccess: "Paved",
+        rampTotal: 4,
+        rampBottom: 206,
+        rampTop: 222,
         lat: 36.329107,
         long: -78.410444
     }

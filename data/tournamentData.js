@@ -983,7 +983,7 @@ module.exports = [
                 tournaments: [
 
                     {
-                        date: "2019-03-02",
+                        date: "2019-03-16",
                         lake: "Kerr",
                         ramp: "NutBush",
                         state: "NC-VA",
