@@ -1,5 +1,6 @@
 * {
     font-family: 'Roboto', sans-serif;
+    color: black;
 }
 
 body {
@@ -78,8 +79,73 @@ h1, h2, h3 {
 }
 
 /* Home-New Stles */
+/* .home-container {
+    background: rgb(76,175,80);
+    background: linear-gradient(135deg, rgba(76,175,80,1) 0%, rgba(38,87,40,1) 100%);
+    height: 100vh;
+} */
+
+.home-container {
+    padding: 0;
+}
+
+.locate-container {
+    background-image:
+        /* linear-gradient(rgba(76,175,80,0.3), rgba(76,175,80, 0.3)),  */
+        url("../img/lakes.jpg");
+    background-size: cover;                      
+    background-repeat: no-repeat;
+    background-position: center center;  
+    height: 250px;
+    padding: 20px;
+    width: 100%;
+    margin-bottom: 140px;
+}
+
+.locate-box {
+    width: 60%;
+    height: 200px;
+    margin: 150px auto 20px;
+    background: white;
+    border-radius: 3px;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.18);
+    padding: 20px;
+}
+
+.left, .middle, .right {
+    display: inline-block;
+    margin-top: 10px 0px;
+    height: auto;
+}
+
+.left {
+    width: 45%;
+    float: left;
+}
+
+.right input {
+    width: 40%;
+}
+
+.middle {
+    width: 10%;
+    margin-top: 20px;
+}
+
+.right {
+    width: 45%;
+    float: right;
+}
+
+.locate-box h4{
+    font-weight: bold;
+}
+
 #lakeContainer {
+    margin-top: 120px;
     padding: 20px 0px;
+    background: white;
+    display: none;
 }
 
 #lakeContainer h3 {
@@ -88,6 +154,10 @@ h1, h2, h3 {
 
 #lakeContainer a {
     text-decoration: none;
+}
+
+.locate-btn {
+    margin: 10px 0px;
 }
 
 .lake-card {
@@ -117,9 +187,39 @@ h1, h2, h3 {
     text-shadow: 0px 1px 2px rgba(0,0,0,0.2);
 }
 
+/* TABLES LANDSCAPE AND DESKTOP */
+@media only screen and (max-width: 1024px) {
+    .locate-box {
+        width: 80%;
+    }
+
+}
+
+/* TABLETS PORTRAIT */
+@media only screen and (min-width: 768px) {
+
+
+}
+
 @media only screen and (max-width: 480px) {
     .lake-card {
         width: 100%;
+    }
+
+    .locate-box {
+        width: 90%;
+        height: auto;
+    }
+
+    .locate-box h3 {
+        margin-bottom: 20px;
+    }
+
+    .left, .middle, .right {
+        float: none;
+        display: block;
+        width: 100%;
+
     }
 }
 
@@ -236,6 +336,10 @@ h1, h2, h3 {
     margin: 5px;
 }
 
+.current-wrapper span {
+    color: white;
+}
+
 .current-header-title {
     font-weight: bold;
 }
@@ -272,6 +376,38 @@ h1, h2, h3 {
         margin-right: auto;
     }
 }
+
+/* Cards on Home Page */
+.card-home {
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 4px rgb(0,0,0,0.10);
+    -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.10);
+}
+
+.card-home:hover {
+    margin-bottom: 21px;
+    margin-top: -1px;
+    box-shadow: 0px 2px 4px rgb(0,0,0,0.20);
+    -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.20);
+}
+
+.card-link {
+    text-decoration: none;
+    color: black;
+}
+
+.card-link:hover {
+    color: black;
+}
+
+.request-banner {
+    border: 1px solid #4CAF50;
+    padding: 10px;
+    width: 75%;
+    margin: 5px auto;
+    border-radius: 3px;
+}
+
 
 /* Advertisements */
 /* ======================================================= */
