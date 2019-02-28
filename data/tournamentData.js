@@ -4687,8 +4687,8 @@ module.exports = [
 
                     {
                         date: "2019-03-02",
-                        lake: "Jordan",
-                        ramp: "Farrington",
+                        lake: "Harris",
+                        ramp: "Cross Pointe",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
                         resultsLink: "",
