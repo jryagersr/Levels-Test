@@ -2417,7 +2417,7 @@ module.exports = [
                 seaLevelDelta: 0,
                 normalPool: 251.5,
                 lat: 36.01,
-                long: -78.43,
+                long: -78.70,
                 elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1745041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
                 flowURL: "none",
                 href: "/lakes/falls",
