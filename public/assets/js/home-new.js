@@ -18,94 +18,105 @@ $.ajax({
         console.log(data);
         lakeData = data;
 
-        $('#locateBtn').on('click', function () {
-            $('#lakeContainer').show();
 
-            // run get location function
-            getLocation(function (lat, lon) {
-                console.log(lat + ", " + lon);
+        // FUNCTIONS
+        // ============================================
 
-                // loop through lake data (right now only NC)
-                lakeData.forEach(function(state) {
-                    state.lakes.forEach(function (lake) {
+        // function to get user's location
+        function getLocation(callback) {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    callback(position.coords.latitude, position.coords.longitude)
+                }, showError);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+
+        // function to define errors for geolocation (ex: user denies location access)
+        function showError(error) {
+            switch (error.code) {
+                case error.PERMISSION_DENIED:
+                    x.innerHTML = `
+                    <p>You've opted out of using location services or have it turned off. Either search using zipcode or enable location permission and try again.</p>
+                    <a style="margin-bottom: 20px;" href='/lakes' class='btn btn-success'>View All Lakes</a>
+                    <br><a style='color: #0060B6;' href='https://www.lifewire.com/denying-access-to-your-location-4027789' target='_blank'>Help with enabling location services on desktop</a>
+                    <br><a style='color: #0060B6;' href='https://help.yahoo.com/kb/SLN24002.html' target='_blank'>Help with enabling location services on mobile</a>`
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    x.innerHTML = "<p>Location information is unavailable.</p><a href='/lakes' class='btn btn-success'>View All Lakes</a>"
+                    break;
+                case error.TIMEOUT:
+                    x.innerHTML = "<p>The request to get user location timed out.</p><a href='/lakes' class='btn btn-success'>View All Lakes</a>"
+                    break;
+                case error.UNKNOWN_ERROR:
+                    x.innerHTML = "<p>An unknown error occurred.</p><a href='/lakes' class='btn btn-success'>View All Lakes</a>"
+                    break;
+            }
+        }
+
+        function findNearbyLakes(lat, lon) {
+            // loop through lake data (right now only NC)
+            lakeData.forEach(function (state) {
+                state.lakes.forEach(function (lake) {
                     // if lake is not already collected (duplicate)
                     if (!closeLakes.some(e => e.name === lake.bodyOfWater)) {
-                    // calculate our distance between user and each lake
-                    newDistance = distance(lat, lon, lake.lat, lake.long, "M")
-                    // collect the first 10 regardless
-                    if (closeLakes.length < 10) {
-                        closeLakes.push({
-                            name: lake.bodyOfWater,
-                            distance: newDistance,
-                            href: lake.href
-                        });
-                    }
-                    // if ten have already been collected
-                    else {
-                        // loop through those ten
-                        for (var i = 0; i < closeLakes.length; i++) {
-                            // and check if the next lake we're looking at is closer
-                            if (closeLakes[i].distance > newDistance) {
-                                // if it is splice it into closeLakes (while removing the larger one);
-                                closeLakes.splice(i, 1, { name: lake.bodyOfWater, distance: newDistance, href: lake.href });
-                                break;
+                        // calculate our distance between user and each lake
+                        newDistance = distance(lat, lon, lake.lat, lake.long, "M")
+                        // collect the first 10 regardless
+                        if (closeLakes.length < 10) {
+                            closeLakes.push({
+                                name: lake.bodyOfWater,
+                                distance: newDistance,
+                                href: lake.href
+                            });
+                        }
+                        // if ten have already been collected
+                        else {
+                            // loop through those ten
+                            for (var i = 0; i < closeLakes.length; i++) {
+                                // and check if the next lake we're looking at is closer
+                                if (closeLakes[i].distance > newDistance) {
+                                    // if it is splice it into closeLakes (while removing the larger one);
+                                    closeLakes.splice(i, 1, { name: lake.bodyOfWater, distance: newDistance, href: lake.href });
+                                    break;
+                                }
                             }
                         }
                     }
-                    }
                 });
-                });
-
-                // sort by ascending distance
-                console.log(closeLakes);
-                closeLakes = closeLakes.sort(function (a, b) { return (a.distance - b.distance) });
-                // loop through closeLakes and build the template for the page
-                closeLakes.forEach(function (lake) {
-                    lakeTemplate += `
-                <a href=${lake.href}>
-                    <div class="lake-card">
-                        <h2>${lake.name}</h2>
-                        <p>${lake.distance.toFixed(0)} miles away</p>
-                    </div>
-                </a>`;
-                });
-                // append template to page
-                $('#lakeContainer').append(lakeTemplate);
             });
+            displayNearbyLakes();
+        }
+
+        // display nearby lakes
+        function displayNearbyLakes() {
+            // dump anything currently in the lake container
+            $('#lakeContainer').empty();
+            // dump anything currently in the noLocation container
+            $('#noLocation').empty();
+
+            // sort by ascending distance
+            console.log(closeLakes);
+            closeLakes = closeLakes.sort(function (a, b) { return (a.distance - b.distance) });
+            // loop through closeLakes and build the template for the page
+            closeLakes.forEach(function (lake) {
+                lakeTemplate += `
+        <a href=${lake.href}>
+            <div class="lake-card">
+                <h2>${lake.name}</h2>
+                <p>${lake.distance.toFixed(0)} miles away</p>
+            </div>
+        </a>`;
+            });
+            // append template to page
+            $('#lakeContainer').append(lakeTemplate);
+            // reveal the lake container 
+            $('#lakeContainer').show();
+        }
 
 
-
-
-            // function to get user's location
-            function getLocation(callback) {
-                if (navigator.geolocation) {
-                    navigator.geolocation.getCurrentPosition(function (position) {
-                        callback(position.coords.latitude, position.coords.longitude)
-                    }, showError);
-                } else {
-                    x.innerHTML = "Geolocation is not supported by this browser.";
-                }
-            }
-
-
-            // function to define errors for geolocation (ex: user denies location access)
-            function showError(error) {
-                switch (error.code) {
-                    case error.PERMISSION_DENIED:
-                        x.innerHTML = "<p>You've opted out of using location services.</p><a href='/lakes' class='btn btn-success'>View All Lakes</a>"
-                        break;
-                    case error.POSITION_UNAVAILABLE:
-                        x.innerHTML = "Location information is unavailable."
-                        break;
-                    case error.TIMEOUT:
-                        x.innerHTML = "The request to get user location timed out."
-                        break;
-                    case error.UNKNOWN_ERROR:
-                        x.innerHTML = "An unknown error occurred."
-                        break;
-                }
-            }
-        });
 
         // function to calculate distance between two locations
         // https://www.geodatasource.com/developers/javascript
@@ -134,5 +145,46 @@ $.ajax({
                 return dist;
             }
         }
+
+
+
+        // USER ACTIONS
+        // =========================================================
+
+        // user clicks on use my location button
+        $('#locateBtn').on('click', function () {
+            // run get location function
+            getLocation(function (lat, lon) {
+                console.log(lat + ", " + lon);
+                findNearbyLakes(lat, lon);
+            });
+        });
+
+        // user clicks zip code button
+        $('#zipBtn').on('click', function () {
+            console.log('zip clicked');
+            userZip = $('#zipInput').val().trim();
+            if (isNaN(userZip) || userZip.length !== 5) {
+                console.log('validation checked');
+
+                $('#validationMessage').text("Zip code must be 5 digits only");
+            }
+            else {
+                // remove validation message if present
+                $('.right p').empty();
+                console.log(userZip);
+                $.ajax({
+                    url: "/api/zip",
+                    method: "GET",
+                    data: {
+                        userZip: userZip
+                    }
+                })
+                    .then(function (data) {
+                        console.log(data);
+                        findNearbyLakes(data.lat, data.lon);
+                    });
+            }
+        });
 
     });
