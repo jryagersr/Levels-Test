@@ -296,7 +296,7 @@ module.exports = function (app) {
         // /<[a-z][\s\S]*>/i.test() 
         //This is Regex to check if a string contains html elements
         if (body.includes("503 Service Temporarily Unavailable")) {
-          data = "Data service temporarily unavailable. Please check back later";
+          data = "Data service temporarily unavailable. Please check back later (503)";
           callback(null, data);
         }
         else {
@@ -718,6 +718,7 @@ module.exports = function (app) {
 
       // Get today's date to build request url
       var today = new Date();
+      // Next line converts month number to 2 digits
       var mm = ((today.getMonth() + 1) < 10 ? '0' : '') + (today.getMonth() + 1); //Fancy conversion because .getMonth() will return numbers 0-12, but we need two digits months to build url
       var yyyy = today.getFullYear();
       var date = "/" + yyyy + "/" + mm;
@@ -731,7 +732,9 @@ module.exports = function (app) {
         date2 = "/" + yyyy2 + "/" + mm2;
       } else {
         yyyy2 = today.getFullYear();
-        var mm2 = (((today.getMonth() + 1) < 10 ? '0' : '') + (today.getMonth() + 1) - 1); // Same fancy conversion except -1 added on the end to get previous month
+        // Same fancy conversion does not work, takes 03-1 and gets 2, not 02
+        var mm2 = (((today.getMonth() - 1) < 10 ? '0' : '') + (today.getMonth()));
+        // var mm2 = (((today.getMonth() + 1) < 10 ? '0' : '') + (today.getMonth() + 1) - 1); // Same fancy conversion except -1 added on the end to get previous month
         var date2 = "/" + yyyy2 + "/" + mm2;
       }
 
