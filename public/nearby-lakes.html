@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>BassSavvy</title>
+    <title>BassSavvy - Lakes</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-77195420-4"></script>
@@ -15,16 +15,6 @@
         gtag('config', 'UA-77195420-4');
     </script>
 
-    <!-- Google Adsense
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({
-            google_ad_client: "ca-pub-1075035015384602",
-            enable_page_level_ads: true
-        });
-    </script> -->
-
-
     <!-- Latest compiled and minified CSS -->
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -34,7 +24,7 @@
     <link href="/static/assets/css/main.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body>
+<body style="background: rgb(249,249,249);">
     <div class="nav-color-splash"></div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
             <a class="navbar-brand" href="/">
@@ -82,33 +72,36 @@
             </div>
         </nav>
 
+    <section id='home-hero' class="container-fluid home-container text-center">
+        <!-- <h1 class="header-title">Welcome to Bass<span class="brand-savvy">Savvy!</span></h1> -->
+        <div class="locate-container">
+            <div class="locate-box">
+                <h3 style="font-weight:bold;">Find Nearby Lakes</h3>
 
-    <div class="container text-center">
-        <h5 class="text-center request-banner">Don't see the lake you want? <b>Make a request</b> for us to add it <a
-                href="/contact"><b>here</b></a>.</h5>
-        <hr>
-        <div class="state-select-wrapper">
-            <h3>View another State:</h3>
-            <select class="form-control form-control-lg" id="optionWell">
-            </select>
-            <button class="btn btn-success btn-state-submit" id="stateSubmit">View</button>
-        </div>
-        <div class="state-container">
-            <h1 class="state-title" id="stateName"></h1>
-            <table class="table lake-table table-hover" id="lakeTable">
-            </table>
-        </div>
-    </div>
-
-    <!-- Bottom Scrolling Ad Banner -->
-    <div class="ad-bottom-banner">
-        <div id="scroller">
-            <div class="innerScrollArea">
-                <ul id="adScrollerBottom">
-                </ul>
+                <div class="left">
+                    <h5>Use my location:</h5>
+                    <button class="btn btn-success locate-btn" id='locateBtn'>Locate</button>
+                </div>
+                <div class="middle">
+                    <h4>or</h4>
+                </div>
+                <div class="right">
+                    <form>
+                    <h5>Use Zip:</h5>
+                    <input id="zipInput"></input>
+                    <button class="btn btn-success locate-btn" id="zipBtn">Submit</button>
+                    <p id="validationMessage"></p>
+                    </form>
+                </div>
             </div>
+    </section>
+
+    <section id='home-nearby'>
+        <div id="lakeContainer">
         </div>
-    </div>
+
+        <div id="noLocation"></div>
+    </section>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -118,8 +111,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="/static/assets/js/states.js"></script>
-    <script type="text/javascript" src="/static/assets/js/sponsor.js"></script>
+    <script type="text/javascript" src="/static/assets/js/home-new.js"></script>
 
 </body>
 

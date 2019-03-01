@@ -973,18 +973,21 @@ module.exports = function (app) {
 
 
   app.get("/api/zip", function (request, response) {
+    // obtain user's zip from client
     let userZip = request.query.userZip;
+    // load in zip lat lon data
     var zipData = require("../data/zipDataFormatted");
     data = {};
+    // loop through zip data and check for a match
     zipData.forEach(function (zip) {
+      // if match send the lat lon to client
       if (userZip == zip.zip) {
-        console.log(zip);
         data.zip = zip.zip;
         data.lat = zip.lat;
         data.lon = zip.lon;
-        response.send(data);
       }
     });
+    response.send(data);
   })
 
 

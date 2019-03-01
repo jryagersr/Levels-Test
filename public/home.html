@@ -15,16 +15,6 @@
         gtag('config', 'UA-77195420-4');
     </script>
 
-    <!-- Google Adsense
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({
-            google_ad_client: "ca-pub-1075035015384602",
-            enable_page_level_ads: true
-        });
-    </script> -->
-
-
     <!-- Latest compiled and minified CSS -->
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -34,7 +24,7 @@
     <link href="/static/assets/css/main.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body>
+<body style="background: rgb(249,249,249);">
     <div class="nav-color-splash"></div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <a class="navbar-brand" href="/">
@@ -46,11 +36,29 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="/lakes">Lakes</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="lakes" href="#" role="button"
+                        aria-haspopup="true" aria-expanded="false">
+                        Lakes
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="lakes">
+                        <a class="dropdown-item" href="/nearby-lakes">Nearby Lakes</a>
+                        <a class="dropdown-item" href="/search-lakes">Search Lakes</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="tournaments" href="#" role="button"
+                        aria-haspopup="true" aria-expanded="false">
+                        Tournaments
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="tournaments">
+                        <a class="dropdown-item" href="/tournaments">Upcoming Tournaments</a>
+                        <a class="dropdown-item" href="/tournament-results">Tournament Results</a>
+                        <a class="dropdown-item" href="/sponsor-tournament">Sponsor a Tournament</a>
+                    </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/tournaments">Tournaments</a>
+                    <a class="nav-link" href="/about">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/contact">Contact</a>
@@ -64,49 +72,57 @@
         </div>
     </nav>
 
-    <div class="container text-center">
-        <h1 class="header-title">Welcome to Bass<span class="brand-savvy">Savvy!</span></h1>
-        <hr>
+    <section id='home-hero' class="container-fluid home-container text-center">
+        <!-- <h1 class="header-title">Welcome to Bass<span class="brand-savvy">Savvy!</span></h1> -->
+        <div class="locate-container">
+            <div class="locate-box">
+                <h3 style="font-weight:bold;">Find Nearby Lakes</h3>
 
+                <div class="left">
+                    <h5>Use my location:</h5>
+                    <button class="btn btn-success locate-btn" id='locateBtn'>Locate</button>
+                </div>
+                <div class="middle">
+                    <h4>or</h4>
+                </div>
+                <div class="right">
+                    <form>
+                        <h5>Use Zip:</h5>
+                        <input id="zipInput"></input>
+                        <button class="btn btn-success locate-btn" id="zipBtn">Submit</button>
+                        <p id="validationMessage"></p>
+                    </form>
+                </div>
+            </div>
+    </section>
 
-        <!-- Cards -->
-        <div class="row">
-            <div class="col">
-                <a class="card-link" href="/lakes">
-                    <div class="card card-home mx-auto">
-                        <img class="card-img-top img-fluid" src="assets/img/lakes.jpg" alt="Image for Lake Levels">
-                        <div class="card-body">
-                            <h4>Lake Levels</h2>
-                        </div>
-                    </div>
-                </a>
-            </div>
+    <section id='home-nearby'>
+        <div id="lakeContainer">
         </div>
-        <div class="row">
-            <div class="col">
-                <a class="card-link" href="/tournaments">
-                    <div class="card card-home mx-auto">
-                        <img class="card-img-top" src="assets/img/tournaments.jpg" alt="Image for Tournaments">
-                        <div class="card-body">
-                            <h4>Tournaments</h2>
-                        </div>
-                    </div>
-                </a>
-            </div>
+
+        <div id="noLocation"></div>
+    </section>
+
+    <section id='home-body'>
+        <div class="home-tile" id="tournamentTile">
+            <a class="tile-anchor" href="/tournaments">
+                <h3>Tournaments</h3>
+            </a>
         </div>
-        <div class="row">
-            <div class="col">
-                <a class="card-link" href="/contact">
-                    <div class="card card-home mx-auto">
-                        <img class="card-img-top" src="assets/img/contact.jpg" alt="Image for Contact Us">
-                        <div class="card-body">
-                            <h4>Contact Us</h2>
-                        </div>
-                    </div>
-                </a>
-            </div>
+        <div class="home-tile" id="allLakes">
+            <h2>Welcome to the new BassSavvy!</h2>
+            <a class="btn btn-success" href="/search-lakes" style="text-shadow: none">
+                Search All Lakes
+            </a>
         </div>
-    </div>
+        <div class="home-tile" id="contactTile">
+            <a class="tile-anchor" href="/contact">
+                <h3>Contact Us</h3>
+            </a>
+
+        </div>
+    </section>
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -116,7 +132,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="/static/assets/js/main.js"></script>
+    <script type="text/javascript" src="/static/assets/js/home-new.js"></script>
+
 </body>
 
 </html>

@@ -1,5 +1,3 @@
-let lat;
-let lon;
 let kerrLat = 36.588792;
 let kerrLon = -78.352668;
 let closeLakes = [];
@@ -36,6 +34,8 @@ $.ajax({
 
         // function to define errors for geolocation (ex: user denies location access)
         function showError(error) {
+            // dump any contents in the lake container
+            $('#lakeContainer').empty();
             switch (error.code) {
                 case error.PERMISSION_DENIED:
                     x.innerHTML = `
@@ -56,14 +56,15 @@ $.ajax({
             }
         }
 
-        function findNearbyLakes(lat, lon) {
+        function findNearbyLakes(userLat, userLon) {
+            closeLakes = [];
             // loop through lake data (right now only NC)
             lakeData.forEach(function (state) {
                 state.lakes.forEach(function (lake) {
                     // if lake is not already collected (duplicate)
                     if (!closeLakes.some(e => e.name === lake.bodyOfWater)) {
                         // calculate our distance between user and each lake
-                        newDistance = distance(lat, lon, lake.lat, lake.long, "M")
+                        newDistance = distance(userLat, userLon, lake.lat, lake.long, "M")
                         // collect the first 10 regardless
                         if (closeLakes.length < 10) {
                             closeLakes.push({
@@ -87,28 +88,27 @@ $.ajax({
                     }
                 });
             });
-            displayNearbyLakes();
+            displayNearbyLakes(userLat, userLon);
         }
 
         // display nearby lakes
-        function displayNearbyLakes() {
-            // dump anything currently in the lake container
+        function displayNearbyLakes(lat, lon) {
+            // dump anything currently in the lake container, noLocation container, or template
             $('#lakeContainer').empty();
-            // dump anything currently in the noLocation container
             $('#noLocation').empty();
-
+            lakeTemplate = `<h6>Lakes near: ${lat}, ${lon}</h6>`;
             // sort by ascending distance
-            console.log(closeLakes);
             closeLakes = closeLakes.sort(function (a, b) { return (a.distance - b.distance) });
             // loop through closeLakes and build the template for the page
             closeLakes.forEach(function (lake) {
                 lakeTemplate += `
-        <a href=${lake.href}>
-            <div class="lake-card">
-                <h2>${lake.name}</h2>
-                <p>${lake.distance.toFixed(0)} miles away</p>
-            </div>
-        </a>`;
+                    <a href=${lake.href}>
+                        <div class="lake-card">
+                            <h2>${lake.name}</h2>
+                            <p>${lake.distance.toFixed(0)} miles away</p>
+                        </div>
+                    </a>
+                `;
             });
             // append template to page
             $('#lakeContainer').append(lakeTemplate);
@@ -154,20 +154,18 @@ $.ajax({
         // user clicks on use my location button
         $('#locateBtn').on('click', function () {
             // run get location function
-            getLocation(function (lat, lon) {
-                console.log(lat + ", " + lon);
-                findNearbyLakes(lat, lon);
+            getLocation(function (userLat, userLon) {
+                console.log(userLat + ", " + userLon);
+                findNearbyLakes(userLat, userLon);
             });
         });
 
         // user clicks zip code button
-        $('#zipBtn').on('click', function () {
-            console.log('zip clicked');
+        $('#zipBtn').on('click', function (e) {
+            e.preventDefault();
             userZip = $('#zipInput').val().trim();
             if (isNaN(userZip) || userZip.length !== 5) {
-                console.log('validation checked');
-
-                $('#validationMessage').text("Zip code must be 5 digits only");
+                $('#validationMessage').text("Not a valid zip code");
             }
             else {
                 // remove validation message if present
@@ -181,8 +179,16 @@ $.ajax({
                     }
                 })
                     .then(function (data) {
-                        console.log(data);
-                        findNearbyLakes(data.lat, data.lon);
+                        if ($.isEmptyObject(data)) {
+                            console.log(data);
+                            $('#validationMessage').text("Not a valid zip code");
+                        }
+                        else {
+                            console.log(data);
+                            userLat = data.lat;
+                            userLon = data.lon;
+                            findNearbyLakes(userLat, userLon);
+                        }
                     });
             }
         });

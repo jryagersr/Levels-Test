@@ -29,16 +29,32 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/thisLake.html"));
   });
 
-  app.get("/lakes", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/lakes.html"));
+  app.get("/nearby-lakes", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/nearby-lakes.html"));
+  })
+
+  app.get("/search-lakes", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/search-lakes.html"));
   })
 
   app.get("/tournaments", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/tournaments.html"));
   })
 
+  app.get("/tournament-results", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/tournaments.html"));
+  })
+
+  app.get("/sponsor-tournament", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/tournaments.html"));
+  })
+
   app.get("/contact", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/contact.html"));
+  })
+
+  app.get("/about", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/about.html"));
   })
 
   app.get("/home-new", function(req, res) {

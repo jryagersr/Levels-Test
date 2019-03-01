@@ -85,6 +85,7 @@ function populateFilter(data) {
 
 // Function to display data
 function displayData(data) {
+    
     $("#txSection").empty();
     let i = 0;
     data.forEach(function (element) {
@@ -228,6 +229,12 @@ $.ajax({
         flattenData(txBatch);
         displayData(txBatch);
         populateFilter(data);
+        // sort by date when page loads (needs to be changed to be variable);
+        var newBatch = flatBatch.sort(sort_by('date', dateSort, function (a) {
+            return a.toUpperCase()
+        }));
+        displayFlatData(newBatch);
+        dateSort ^= true;
     });
 
 

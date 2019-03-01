@@ -151,10 +151,15 @@ h1, h2, h3 {
     padding: 20px 0px;
     background: rgb(249,249,249);
     display: none;
+    text-align: center;
 }
 
 #lakeContainer a {
     text-decoration:none;
+}
+
+#LakeContainer h6 {
+    color: rgba(0,0,0,0.8);
 }
 
 .locate-box h3 {
@@ -202,6 +207,7 @@ h1, h2, h3 {
 }
 
 #noLocation {
+    text-align: center;
     width: 60%;
     margin-left: auto;
     margin-right: auto;
@@ -211,9 +217,75 @@ h1, h2, h3 {
     margin-top: 40px;
 }
 
-/* #noLocation p {
-    margin-top: 10px;
-} */
+#home-body {
+    text-align: center;
+    padding-top: 40px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.home-tile {
+    width: 25%;
+    height: 250px;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.18);
+    margin: 0px auto 5%;
+    color: rgba(255,255,255,0.9);
+    padding: 20px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.40);
+}
+
+.home-tile:hover {
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.3);
+}
+
+.tile-anchor {
+    text-decoration: none;
+    color: rgba(255,255,255,0.9);
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.tile-anchor:hover {
+    text-decoration: none;
+    color: rgba(255,255,255,0.9);
+}
+
+#contactTile {
+    background: linear-gradient(
+                     rgba(20,20,20, .2), 
+                     rgba(20,20,20, .2)),
+                url("../img/contact-widescreen.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#tournamentTile {
+    background: linear-gradient(
+                     rgba(75, 57, 54, 0.5), 
+                     rgba(75,67,54, .5)),
+                url("../img/tournaments-tile.jpg");;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+#allLakes {
+    width: 40%;
+    background-color: #4CAF50;
+    background-image: linear-gradient(hsl(112, 39%, 49%), hsl(137, 43%, 39%));
+}
+
+#allLakes a {
+    text-decoration: none;
+    background-color: white;
+    border-color: #3C8C40;
+    color: #3C8C40;
+    margin-top: 40px;
+}
 
 /* TABLES LANDSCAPE AND DESKTOP */
 @media only screen and (max-width: 1024px) {
@@ -225,9 +297,21 @@ h1, h2, h3 {
         width: 80%;
     }
 
+    .home-tile {
+        width: 40%;
+        order: 2;
+        margin: 2.5%;
+
+    }
+
+    #allLakes {
+        order: 1;
+        width: 100%;
+        height: 200px;
+    }
 }
 
-@media only screen and (max-width: 517px) {
+@media only screen and (max-width: 571px) {
     .locate-container {
         margin-bottom: 300px;
     }
@@ -261,6 +345,14 @@ h1, h2, h3 {
     .locate-btn:hover {
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .home-tile {
+        width: 100%;
+    }
+
+    #allLakes a {
+        margin-top: 20px;
     }
 }
 
