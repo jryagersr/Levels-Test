@@ -125,25 +125,11 @@ function displayFlatData(data) {
         let entryLink = element.entryLink;
         let resultsLink = element.resultsLink;
 
-        // Format the tx date to check against today's date
-        let txDate = new Date(element.date);
-        let todaysDate = new Date();
-
-        // If tx date is in the past
-        if (Date.parse(txDate) < Date.parse(todaysDate)) {
-            // Check to see if a resultsLink exists
-            if (resultsLink) {
-                // Set href as resultsLink
-                txSection.attr("data-url", resultsLink); // Add data attribute to the row with resultsLink url
-                txSection.addClass("results-clickable-row"); // ADd clickable results row css styles
-            }
-        }
-        else {
-            // check to see if an entryLink exists
-            if (entryLink) {
-                txSection.attr("data-url", entryLink); // Add data attribute to the row with entryLink url
-                txSection.addClass("clickable-row"); // Add clickable row css styles
-            }
+        // Check to see if a resultsLink exists
+        if (resultsLink) {
+            // Set href as resultsLink
+            txSection.attr("data-url", resultsLink); // Add data attribute to the row with resultsLink url
+            txSection.addClass("clickable-row"); // ADd clickable results row css styles
         }
 
         $("#txSection").append(txSection);
