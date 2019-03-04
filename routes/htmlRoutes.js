@@ -42,11 +42,11 @@ module.exports = function(app) {
   })
 
   app.get("/tournament-results", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/tournaments.html"));
+    res.sendFile(path.join(__dirname, "../public/tournament-results.html"));
   })
 
   app.get("/sponsor-tournament", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/tournaments.html"));
+    res.sendFile(path.join(__dirname, "../public/sponsor-tournament.html"));
   })
 
   app.get("/contact", function(req, res) {

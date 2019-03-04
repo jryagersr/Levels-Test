@@ -92,8 +92,8 @@ function flattenData(data, callback) {
                 // Format the tx date to check against today's date
                 let txDate = new Date(element.trails[k].tournaments[l].date);
                 let todaysDate = new Date();
-                // If tx date is in the future (exclude all past dates)
-                if (Date.parse(txDate) > Date.parse(todaysDate)) {
+                // If tx date is in the past (exclude all future dates)
+                if (Date.parse(txDate) < Date.parse(todaysDate)) {
                     // Push our data into a flat array for easier sort later
                     flatBatch.push({
                         organizer: element.organization,

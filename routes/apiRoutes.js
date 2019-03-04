@@ -968,8 +968,6 @@ module.exports = function (app) {
     var txData = require("../data/tournamentData");
 
     response.json(txData);
-
-
   });
 
 
