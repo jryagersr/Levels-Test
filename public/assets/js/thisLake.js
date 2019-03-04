@@ -210,7 +210,7 @@ function buildElevChart(data) {
                 xAxes: [{
                     display: true,
                     scaleLabel: {
-                        display: true,
+                        display: false,
                         labelString: 'Date',
                         fontSize: 20
                     }
@@ -218,7 +218,7 @@ function buildElevChart(data) {
                 yAxes: [{
                     display: true,
                     scaleLabel: {
-                        display: true,
+                        display: false,
                         labelString: 'Level (feet)',
                         fontSize: 20
                     }
@@ -287,7 +287,7 @@ function buildFlowChart(data) {
                 xAxes: [{
                     display: true,
                     scaleLabel: {
-                        display: true,
+                        display: false,
                         labelString: 'Date',
                         fontSize: 20
                     }
@@ -295,7 +295,7 @@ function buildFlowChart(data) {
                 yAxes: [{
                     display: true,
                     scaleLabel: {
-                        display: true,
+                        display: false,
                         labelString: 'Flow (feet)',
                         fontSize: 20
                     }

@@ -498,10 +498,14 @@ h1, h2, h3 {
     width: 90vw;
     position: relative;
     margin-bottom: 90px;
-    margin-top: 70px;
+    margin-top: 40px;
 }
 
-
+@media only screen and (max-width: 571px) {
+    .chart-container {
+        height: 300px;
+    }
+}
 
 @media only screen and (min-width: 1023px) {
     .chart-container {
