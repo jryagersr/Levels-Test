@@ -731,7 +731,7 @@ module.exports = function (app) {
         date2 = "/" + yyyy2 + "/" + mm2;
       } else {
         yyyy2 = today.getFullYear();
-        var mm2 = (((today.getMonth() + 1) < 10 ? '0' : '') + (today.getMonth() + 1) - 1); // Same fancy conversion except -1 added on the end to get previous month
+        var mm2 = "0" + (((today.getMonth() + 1) < 10 ? '0' : '') + (today.getMonth() + 1) - 1); // Same fancy conversion except -1 added on the end to get previous month
         var date2 = "/" + yyyy2 + "/" + mm2;
       }
 
@@ -751,7 +751,7 @@ module.exports = function (app) {
           var value = $(element).text();
           if (!isNaN(value) && value.length === 5) {
             data.unshift({
-              date: dd + "/" + mm2 + "/" + yyyy2,
+              date: mm2 + "/" + dd + "/" + yyyy2,
               time: "6:00",
               elev: value,
               flow: "N/A"
@@ -773,8 +773,8 @@ module.exports = function (app) {
             var value = $(element).text();
             if (!isNaN(value) && value.length === 5) {
               data.unshift({
-                date: dd + "/" + mm + "/" + yyyy,
-                time: "06:00",
+                date: mm + "/" + dd + "/" + yyyy,
+                time: "6:00",
                 elev: value,
                 flow: "N/A"
               });

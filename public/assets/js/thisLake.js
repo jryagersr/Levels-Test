@@ -171,7 +171,7 @@ function buildElevChart(data) {
             }
             // else we're on a new day. so push data and reset averages
             else {
-                labelBatch.push(data[i].date);
+                labelBatch.push(data[i-1].date);
                 dataElevBatch.push(sumOfElevs / divisor); // calculate average
                 sumOfElevs = data[i].elev;
                 divisor = 1;
