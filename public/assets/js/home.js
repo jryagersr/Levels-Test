@@ -1,6 +1,7 @@
 let kerrLat = 36.588792;
 let kerrLon = -78.352668;
 let closeLakes = [];
+let nearbyLakes = [];
 let oldDistance = 0;
 let newDistance = 0;
 var x = document.getElementById("noLocation");
@@ -66,25 +67,11 @@ $.ajax({
                         // calculate our distance between user and each lake
                         newDistance = distance(userLat, userLon, lake.lat, lake.long, "M")
                         // collect the first 10 regardless
-                        if (closeLakes.length < 10) {
-                            closeLakes.push({
-                                name: lake.bodyOfWater,
-                                distance: newDistance,
-                                href: lake.href
-                            });
-                        }
-                        // if ten have already been collected
-                        else {
-                            // loop through those ten
-                            for (var i = 0; i < closeLakes.length; i++) {
-                                // and check if the next lake we're looking at is closer
-                                if (closeLakes[i].distance > newDistance) {
-                                    // if it is splice it into closeLakes (while removing the larger one);
-                                    closeLakes.splice(i, 1, { name: lake.bodyOfWater, distance: newDistance, href: lake.href });
-                                    break;
-                                }
-                            }
-                        }
+                        closeLakes.push({
+                            name: lake.bodyOfWater,
+                            distance: parseFloat(newDistance),
+                            href: lake.href
+                        });
                     }
                 });
             });
@@ -96,20 +83,20 @@ $.ajax({
             // dump anything currently in the lake container, noLocation container, or template
             $('#lakeContainer').empty();
             $('#noLocation').empty();
-            lakeTemplate = `<h6>Lakes near: ${lat}, ${lon}</h6>`;
+            lakeTemplate = `<h6>Lakes near: ${lat.toFixed(5)}, ${lon.toFixed(5)}</h6>`;
             // sort by ascending distance
             closeLakes = closeLakes.sort(function (a, b) { return (a.distance - b.distance) });
             // loop through closeLakes and build the template for the page
-            closeLakes.forEach(function (lake) {
+            for (var i = 0; i < 10; i++) {
                 lakeTemplate += `
-                    <a href=${lake.href}>
+                    <a href=${closeLakes[i].href}>
                         <div class="lake-card">
-                            <h2>${lake.name}</h2>
-                            <p>${lake.distance.toFixed(0)} miles away</p>
+                            <h2>${closeLakes[i].name}</h2>
+                            <p>${closeLakes[i].distance.toFixed(0)} miles away</p>
                         </div>
                     </a>
                 `;
-            });
+            }
             // append template to page
             $('#lakeContainer').append(lakeTemplate);
             // reveal the lake container 

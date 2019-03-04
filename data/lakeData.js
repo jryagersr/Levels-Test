@@ -401,6 +401,8 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
                 normalPool: 1120.43,
+                lat: 36.288882,
+                long: -94.015482,
                 elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1615150&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN",
                 flowURL: "none",
                 href: "/lakes/beaver",
