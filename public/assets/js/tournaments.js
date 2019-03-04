@@ -133,7 +133,7 @@ function displayFlatData(data) {
             // Check to see if a resultsLink exists
             if (entryLink) {
                 // Set href as resultsLink
-                txSection.attr("data-url", resultsLink); // Add data attribute to the row with resultsLink url
+                txSection.attr("data-url", entryLink); // Add data attribute to the row with resultsLink url
                 txSection.addClass("clickable-row"); // ADd clickable results row css styles
             }
 
