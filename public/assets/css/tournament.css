@@ -29,14 +29,26 @@
 
 .clickable-row { 
     cursor: pointer; 
-    color: rgb(58, 72, 136);
+    color: rgb(75, 94, 177);
     text-decoration: underline;
+}
+
+.clickable-row-results {
+    cursor: pointer;
+    color: rgb(107, 0, 0);
+    text-decoration: underline;
+}
+
+.clickable-row-results:hover {
+    background-color: rgb(107,0,0,0.8);
+    color: white;
 }
 
 td {
     color: inherit;
 }
 .clickable-row:hover {
-    background-color: rgba(76, 175, 80, 0.3);
+    background-color: rgba(75,94,177,0.8);
+    color: white;
 }
 
