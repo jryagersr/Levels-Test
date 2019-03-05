@@ -2620,7 +2620,51 @@ module.exports = [
                 adLogoSrc: "/static/assets/img/brucatobanner.png",
                 adLogoUrl: "www.brucatoFIS.com",
                 adCharitySrc: "/static/assets/img/warriors-on-the-water.png",
-                adCharityUrl: "https://www.warriorsonthewater.com/"
+                adCharityUrl: "https://www.warriorsonthewater.com/",
+                ramps:[
+                    {
+                        rampName: "Farrington Point",
+                        rampStatus: "Open",
+                        rampType: "Concrete",
+                        rampParking: "Good (70)",
+                        rampFee: "No",
+                        rampAccess: "Paved",
+                        rampTotal: 4,
+                        rampBottom: 209,
+                        rampTop: 224,
+                        lat: 35.799483,
+                        long: -79.017791,
+                    },
+                    {
+                        rampName: "Ebenezer",
+                        rampStatus: "Open",
+                        rampType: "Concrete",
+                        rampDock: "Yes",
+                        rampParking: "Good (100)",
+                        rampFee: "No",
+                        rampAccess: "Paved",
+                        rampTotal: 4,
+                        rampBottom: 206,
+                        rampTop: 222,
+                        lat: 35.700817,
+                        long: -79.020309,
+                    },
+                    {
+                        rampName: "Poe's",
+                        rampStatus: "Open",
+                        rampType: "Concrete",
+                        rampDock: "Yes",
+                        rampParking: "Good (50)",
+                        rampFee: "Yes",
+                        rampAccess: "Paved",
+                        rampTotal: 4,
+                        rampBottom: 206,
+                        rampTop: 222,
+                        lat: 35.642684,
+                        long: -79.085108,
+                    }
+
+                ]
             },
             {
                 bodyOfWater: "Kerr", // lake name
