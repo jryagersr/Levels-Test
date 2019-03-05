@@ -28,6 +28,8 @@ $.ajax({
                     callback(position.coords.latitude, position.coords.longitude)
                 }, showError);
             } else {
+                // Hide loader gif
+                $('#lds-ring').hide();
                 x.innerHTML = "Geolocation is not supported by this browser.";
             }
         }
@@ -37,6 +39,8 @@ $.ajax({
         function showError(error) {
             // dump any contents in the lake container
             $('#lakeContainer').empty();
+            // Hide loader gif
+            $('#lds-ring').hide();
             switch (error.code) {
                 case error.PERMISSION_DENIED:
                     x.innerHTML = `
@@ -97,6 +101,8 @@ $.ajax({
                     </a>
                 `;
             }
+            // Hide loader gif
+            $('#lds-ring').hide();
             // append template to page
             $('#lakeContainer').append(lakeTemplate);
             // reveal the lake container 
@@ -140,6 +146,8 @@ $.ajax({
 
         // user clicks on use my location button
         $('#locateBtn').on('click', function () {
+            // Show loader gif
+            $('#lds-ring').show();
             // run get location function
             getLocation(function (userLat, userLon) {
                 console.log(userLat + ", " + userLon);
@@ -150,6 +158,8 @@ $.ajax({
         // user clicks zip code button
         $('#zipBtn').on('click', function (e) {
             e.preventDefault();
+            // Show loader gif
+            $('#lds-ring').show();
             userZip = $('#zipInput').val().trim();
             if (isNaN(userZip) || userZip.length !== 5) {
                 $('#validationMessage').text("Not a valid zip code");
@@ -179,5 +189,8 @@ $.ajax({
                     });
             }
         });
+
+
+
 
     });
