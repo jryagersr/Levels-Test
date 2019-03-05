@@ -342,8 +342,9 @@ function elevUSGS(callback) {
             if (data.length > 0) {
                 displayBatch = data;
 
-                currentDate = displayBatch[0].date;
-                currentTime = displayBatch[0].time;
+                localTime = new Date(displayBatch[0].date);
+                currentDate = localTime.toString().substring(0, 10);;
+                currentTime = localTime.toString().substring(16, 21);
                 currentElev = displayBatch[0].elev;
                 currentDelta = (currentElev - lakePool).toFixed(2);
             } else
@@ -793,12 +794,12 @@ $.ajax({
                 elevUSGS(function () {
                     if (flowURL !== "none") {
                         flowUSGS(function () {
-                            displayCurrentPageValues();
-                            buildTable(displayBatch);
+                            displayCurrentPageValuesWithUTC();
+                            buildTableWithUTC(displayBatch);
                         });
                     } else {
-                        displayCurrentPageValues();
-                        buildTable(displayBatch);
+                        displayCurrentPageValuesWithUTC();
+                        buildTableWithUTC(displayBatch);
                     }
                 });
             } else if (source === "TVA") {

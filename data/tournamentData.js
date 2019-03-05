@@ -2238,7 +2238,7 @@ module.exports = [
                         ramp: "Dreher",
                         state: "SC",
                         txDetail: "Qualifier 5",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-murray-mar-2-2019-molone-rutherford-break-the-25-lb-mark/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-murray/"
                     },
                     {
@@ -2589,10 +2589,10 @@ module.exports = [
                     },
                     {
                         date: "2019-03-09",
-                        lake: "Savannah Rvr",
-                        ramp: "Stokes Bluff",
-                        state: "GA-SC",
-                        txDetail: "Final",
+                        lake: "Ogeechee Rvr",
+                        ramp: "Kings Ferry",
+                        state: "GA",
+                        txDetail: "Qualifier 4",
                         resultsLink: "",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-savannah-river/"
                     },
@@ -2857,7 +2857,7 @@ module.exports = [
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 4",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-wateree-mar-4-2019-davis-allman-win-another-tough-one-at-wateree/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
                     },
                     {
@@ -3224,7 +3224,7 @@ module.exports = [
                         ramp: "John C Land",
                         state: "SC",
                         txDetail: "CBC SC",
-                        resultsLink: "",
+                        resultsLink: "http://carolinasbasschallenge.com/results.php?id=11",
                         entryLink: "http://www.carolinasbasschallenge.com/tournaments.php"
                     },
                     {
@@ -4691,7 +4691,7 @@ module.exports = [
                         ramp: "Cross Pointe",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
-                        resultsLink: "",
+                        resultsLink: "http://piedmontbassclassics.com/32-19PBCResults.html",
                         entryLink: "http://piedmontbassclassics.com/2019PBC10KSpringTrailMainPage.html"
                     },
                     {
