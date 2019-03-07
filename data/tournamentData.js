@@ -2626,7 +2626,7 @@ module.exports = [
                         ramp: "Parkway",
                         state: "VA",
                         txDetail: "Qualifier 2",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-smith-mtn-lake-mar-3-2019-larry-witt-tim-goff-weigh-up-20-96-lbs-to-top-the-field/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-smith-mountain/"
                     },
                     {
