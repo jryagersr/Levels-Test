@@ -2627,6 +2627,7 @@ module.exports = [
                         rampParking: "Good (70)",
                         rampFee: "No",
                         rampAccess: "Paved",
+                        courtesyDock: "Yes",
                         rampTotal: 4,
                         rampBottom: 209,
                         rampTop: 224,
@@ -2641,6 +2642,7 @@ module.exports = [
                         rampParking: "Good (100)",
                         rampFee: "No",
                         rampAccess: "Paved",
+                        courtesyDock: "Yes",
                         rampTotal: 4,
                         rampBottom: 206,
                         rampTop: 222,
@@ -2655,6 +2657,7 @@ module.exports = [
                         rampParking: "Good (50)",
                         rampFee: "Yes",
                         rampAccess: "Paved",
+                        courtesyDock: "Yes",
                         rampTotal: 4,
                         rampBottom: 206,
                         rampTop: 222,
@@ -2690,7 +2693,183 @@ module.exports = [
                 adLogoSrc: "/static/assets/img/jsegenerac.png",
                 adLogoUrl: "http://jacksonsuperiorelectric.com/",
                 adTxSrc: "/static/assets/img/cbc-kerr-tx.png",
-                adTxUrl: "http://carolinasbasschallenge.com/tournament/72"
+                adTxUrl: "http://carolinasbasschallenge.com/tournament/72",
+                ramps:[
+                    {
+                    
+                        rampName: "County Line",
+                        rampStatus: "Open",
+                        rampType: "Concrete",
+                        rampParking: "Fair (45)",
+                        rampFee: "No",
+                        rampAccess: "Pavement",
+                        courtesyDock: "Yes",
+                        rampTotal: 2,
+                        rampBottom: -1,
+                        rampTop: 309,
+                        lat: 36.522406, 
+                        long: -78.314121,
+                    },
+                    {
+                    
+                        rampName: "Eastland",
+                        rampStatus: "Open",
+                        rampType: "Concrete",
+                        rampParking: "Fair (30)",
+                        rampFee: "Yes",
+                        rampAccess: "Gravel",
+                        courtesyDock: "Yes",
+                        rampTotal: 2,
+                        rampBottom: -1,
+                        rampTop: 305,
+                        lat: 36.601554, 
+                        long: -78.369385,
+                    },
+                    {
+                        rampName: "Flemingtown (Meekins)",
+                        rampStatus: "Open",
+                        rampType: "Concrete",
+                        rampParking: "Good (70)",
+                        rampFee: "No",
+                        rampAccess: "Gravel",
+                        courtesyDock: "Yes",
+                        rampTotal: 6,
+                        rampBottom: -1,
+                        rampTop: 305.21,
+                        lat: 36.438336, 
+                        long: -78.342649,
+                    },
+                    {
+                        rampName: "Hibernia",
+                        rampStatus: "Open",
+                        rampType: "Concrete",
+                        rampParking: "Fair (45)",
+                        rampFee: "No",
+                        rampAccess: "Pavement",
+                        courtesyDock: "Yes",
+                        rampTotal: 2,
+                        rampBottom: -1,
+                        rampTop: 310,
+                        lat: 36.503098, 
+                        long: -78.376210,
+                    },
+                    {
+                        rampName: "Henderson Pt 1 (Glass House)",
+                        rampStatus: "Open",
+                        rampType: "Concrete",
+                        rampParking: "Good (70)",
+                        rampFee: "No",
+                        rampAccess: "Pavement",
+                        courtesyDock: "Yes",
+                        rampTotal: 2,
+                        rampBottom: -1,
+                        rampTop: 309,
+                        lat: 36.539448, 
+                        long: -78.343455,
+                    },
+                    {
+                        rampName: "Henderson Pt 2",
+                        rampStatus: "Open",
+                        rampType: "Concrete",
+                        rampParking: "Fair (40)",
+                        rampFee: "No",
+                        rampAccess: "Pavement",
+                        courtesyDock: "Yes",
+                        rampTotal: 2,
+                        rampBottom: -1,
+                        rampTop: 309,
+                        lat: 36.539448, 
+                        long: -78.343455,
+                    },
+                    {
+                        rampName: "Henderson Pt 3",
+                        rampStatus: "Open",
+                        rampType: "Concrete",
+                        rampParking: "Small (24)",
+                        rampFee: "No",
+                        rampAccess: "Pavement",
+                        courtesyDock: "Yes",
+                        rampTotal: 2,
+                        rampBottom: -1,
+                        rampTop: 309,
+                        lat: 36.533100, 
+                        long: -78.343266,
+                    },
+                    {
+                    
+                        rampName: "Ivy Hill",
+                        rampStatus: "Open",
+                        rampType: "Concrete",
+                        rampParking: "Fair (42)",
+                        rampFee: "No",
+                        rampAccess: "Pavement",
+                        courtesyDock: "Yes",
+                        rampTotal: 2,
+                        rampBottom: -1,
+                        rampTop: 305,
+                        lat: 36.575966, 
+                        long: -78.418850,
+                    },
+                    {
+                    
+                        rampName: "Longwood",
+                        rampStatus: "Open",
+                        rampType: "Concrete",
+                        rampParking: "Fair (50)",
+                        rampFee: "No",
+                        rampAccess: "Pavement",
+                        courtesyDock: "Yes",
+                        rampTotal: 2,
+                        rampBottom: -1,
+                        rampTop: 305,
+                        lat: 36.572836, 
+                        long: -78.549360,
+                    },
+                    {
+                        rampName: "North Bend",
+                        rampStatus: "Open",
+                        rampType: "Concrete",
+                        rampParking: "Fair (35)",
+                        rampFee: "No",
+                        rampAccess: "Pavement",
+                        courtesyDock: "Yes",
+                        rampTotal: 2,
+                        rampBottom: -1,
+                        rampTop: 310,
+                        lat: 36.585802, 
+                        long: -78.305442,
+                    },
+                    {
+                        rampName: "Nutbush",
+                        rampStatus: "Open",
+                        rampType: "Concrete",
+                        rampParking: "Good (70)",
+                        rampFee: "No",
+                        rampAccess: "Pavement",
+                        courtesyDock: "Yes",
+                        rampTotal: 4,
+                        rampBottom: -1,
+                        rampTop: 312,
+                        lat: 36.414745, 
+                        long: -78.398793,
+                    },
+                    {
+                        rampName: "Oconeechee",
+                        rampStatus: "Open",
+                        rampType: "Concrete",
+                        rampParking: "Good (100)",
+                        rampFee: "No",
+                        rampAccess: "Pavement",
+                        courtesyDock: "Yes",
+                        rampTotal: 3,
+                        rampBottom: -1,
+                        rampTop: 310,
+                        lat: 36.633388, 
+                        long: -78.534784,
+                        directionsURL: "https://www.google.com/maps/dir//36.633388,-78.534784/@36.6324129,-78.5388828,1439m/data=!3m1!1e3"
+                    }
+
+                ]
             },
             {
                 bodyOfWater: "Neuse River (Kinston)", // lake name
@@ -3538,7 +3717,7 @@ module.exports = [
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
-                normalPool: 79.0,
+                normalPool: 76.8,
                 lat: 33.52,
                 long: -80.45,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02171000&period=PT168H&parameterCd=00062&siteType=ST&siteStatus=all",
@@ -3564,7 +3743,7 @@ module.exports = [
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
-                normalPool: 79.0,
+                normalPool: 75.5,
                 lat: 33.32,
                 long: -80.06,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02172000&period=PT168H&parameterCd=00062&siteType=LK&siteStatus=all",
@@ -3875,6 +4054,32 @@ module.exports = [
                 adLogoUrl: ""
             },
             {
+                bodyOfWater: "Cedar Creek", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["18-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 1440, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0,
+                normalPool: 322.0,
+                lat: 32.250180, 
+                long: -96.117778,
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08063010&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
+                flowURL: "none",
+                href: "/lakes/cedarcreek",
+                dataSource: ["USGS"], // array of calls to make to retrieve data Texas Water Development District
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
+            {
                 bodyOfWater: "Conroe", // lake name
                 data: [
 
@@ -3979,6 +4184,32 @@ module.exports = [
                 adLogoUrl: ""
             },
             {
+                bodyOfWater: "Palestine", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["19-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 30, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0,
+                normalPool: 344.0,
+                lat: 31.130035,
+                long: -94.210815,
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08031400&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
+                flowURL: "none",
+                href: "/lakes/palestine",
+                dataSource: ["USGS"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
+            {
                 bodyOfWater: "Ray Roberts", // lake name
                 data: [
 
@@ -4024,6 +4255,32 @@ module.exports = [
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08039300&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/rayburn",
+                dataSource: ["USGS"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
+            {
+                bodyOfWater: "Tawakoni", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["19-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 30, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0,
+                normalPool: 436.0,
+                lat: 32.835944, 
+                long: -95.936837,
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08017400&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
+                flowURL: "none",
+                href: "/lakes/tawakoni",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
