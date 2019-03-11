@@ -107,6 +107,10 @@ $.ajax({
             $('#lakeContainer').append(lakeTemplate);
             // reveal the lake container 
             $('#lakeContainer').show();
+            // scroll down to section for usability
+            var divPosition = $('#home-nearby').offset();
+            $('html, body').animate({scrollTop: divPosition.top - 100}, "slow");
+
         }
 
 
