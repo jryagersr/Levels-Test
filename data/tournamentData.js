@@ -2365,7 +2365,7 @@ module.exports = [
                     {
                         date: "2019-03-09",
                         lake: "Kerr",
-                        ramp: "Flemingtown",
+                        ramp: "Nutbush",
                         state: "NC-VA",
                         txDetail: "Qualifier 1",
                         resultsLink: "",
@@ -2626,7 +2626,7 @@ module.exports = [
                         ramp: "Parkway",
                         state: "VA",
                         txDetail: "Qualifier 2",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-smith-mtn-lake-mar-3-2019-larry-witt-tim-goff-weigh-up-20-96-lbs-to-top-the-field/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-smith-mountain/"
                     },
                     {
@@ -2686,7 +2686,7 @@ module.exports = [
                         ramp: "Packs",
                         state: "SC",
                         txDetail: "Qualifier 4",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/tournament-results/tournament-results-sparkleberry-swamp-quest-mar-3-2019-geddings-peavy-weigh-em-up/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-sparkleberry-swamp-quest/"
                     },
                     {
@@ -3142,7 +3142,7 @@ module.exports = [
                         ramp: "Alcoa",
                         state: "NC",
                         txDetail: "Qualifier 2",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-yadkin-badin-lake-mar-3-2019-ray-giles-whack-em-19-01-lbs/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
                     },
                     {
