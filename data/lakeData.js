@@ -2030,7 +2030,7 @@ module.exports = [
                 seaLevelDelta: 0,
                 normalPool: 164.0,
                 lat: 33.526077,
-                long:  -88.485726,
+                long: -88.485726,
                 elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=25832039&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
                 flowURL: "none",
                 href: "/lakes/Columbus",
@@ -2167,7 +2167,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 4201.0,
-                lat:  35.388492,
+                lat: 35.388492,
                 long: -104.193425,
                 elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=33043&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
                 flowURL: "none",
@@ -2247,7 +2247,7 @@ module.exports = [
                 seaLevelDelta: 0,
                 normalPool: 4749.35,
                 lat: 35.043518,
-                long:  -104.675664,
+                long: -104.675664,
                 elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=261043&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
                 flowURL: "none",
                 href: "/lakes/santarosa",
@@ -2619,8 +2619,7 @@ module.exports = [
                 adLogoUrl: "www.brucatoFIS.com",
                 adCharitySrc: "/static/assets/img/warriors-on-the-water.png",
                 adCharityUrl: "https://www.warriorsonthewater.com/",
-                ramps:[
-                    {
+                ramps: [{
                         rampName: "Farrington Point",
                         rampStatus: "Open",
                         rampType: "Concrete",
@@ -2628,11 +2627,12 @@ module.exports = [
                         rampFee: "No",
                         rampAccess: "Paved",
                         courtesyDock: "Yes",
-                        rampTotal: 4,
-                        rampBottom: 209,
-                        rampTop: 224,
-                        lat: 35.799483,
-                        long: -79.017791,
+                        ramps: [{
+                            bottomElev: 202,
+                            topElev: 227,
+                            lat: 35.799483,
+                            long: -79.017791,
+                        }]
                     },
                     {
                         rampName: "Ebenezer",
@@ -2643,11 +2643,12 @@ module.exports = [
                         rampFee: "No",
                         rampAccess: "Paved",
                         courtesyDock: "Yes",
-                        rampTotal: 4,
-                        rampBottom: 206,
-                        rampTop: 222,
-                        lat: 35.700817,
-                        long: -79.020309,
+                        ramps: [{
+                            bottomElev: 202,
+                            topElev: 227,
+                            lat: 35.700817,
+                            long: -79.020309,
+                        }]
                     },
                     {
                         rampName: "Poe's",
@@ -2658,26 +2659,25 @@ module.exports = [
                         rampFee: "Yes",
                         rampAccess: "Paved",
                         courtesyDock: "Yes",
-                        rampTotal: 4,
-                        rampBottom: 206,
-                        rampTop: 222,
-                        lat: 35.642684,
-                        long: -79.085108,
-                    }
+                        ramps: [{
+                                bottomElev: 210,
+                                topElev: 227,
+                                lat: 35.642684,
+                                long: -79.085108,
+                            }
 
-                ]
+                        ]
+                    }
+                ],
             },
             {
                 bodyOfWater: "Kerr", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flow
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [{
+                    elev: ["N/A"], //array of elevations
+                    flow: ["Lots"], //array of flow
+                    date: ["19-03/02"], //array of elevation dates
+                    time: ["time"], //arrat if elevation times
+                }],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -2694,9 +2694,8 @@ module.exports = [
                 adLogoUrl: "http://jacksonsuperiorelectric.com/",
                 adTxSrc: "/static/assets/img/cbc-kerr-tx.png",
                 adTxUrl: "http://carolinasbasschallenge.com/tournament/72",
-                ramps:[
-                    {
-                    
+                ramps: [{
+
                         rampName: "County Line",
                         rampStatus: "Open",
                         rampType: "Concrete",
@@ -2704,14 +2703,14 @@ module.exports = [
                         rampFee: "No",
                         rampAccess: "Pavement",
                         courtesyDock: "Yes",
-                        rampTotal: 2,
-                        rampBottom: -1,
-                        rampTop: 309,
-                        lat: 36.522406, 
-                        long: -78.314121,
+                        ramps: [{
+                            bottomElev: 285,
+                            topElev: 312,
+                            lat: 36.522406,
+                            long: -78.314121
+                        }]
                     },
                     {
-                    
                         rampName: "Eastland",
                         rampStatus: "Open",
                         rampType: "Concrete",
@@ -2719,11 +2718,12 @@ module.exports = [
                         rampFee: "Yes",
                         rampAccess: "Gravel",
                         courtesyDock: "Yes",
-                        rampTotal: 2,
-                        rampBottom: -1,
-                        rampTop: 305,
-                        lat: 36.601554, 
-                        long: -78.369385,
+                        ramps: [{
+                            bottomElev: 286.2,
+                            topElev: 309.15,
+                            lat: 36.601554,
+                            long: -78.369385,
+                        }]
                     },
                     {
                         rampName: "Flemingtown (Meekins)",
@@ -2733,11 +2733,12 @@ module.exports = [
                         rampFee: "No",
                         rampAccess: "Gravel",
                         courtesyDock: "Yes",
-                        rampTotal: 6,
-                        rampBottom: -1,
-                        rampTop: 305.21,
-                        lat: 36.438336, 
-                        long: -78.342649,
+                        ramps: [{
+                            bottomElev: 292.9,
+                            topElev: 305.21,
+                            lat: 36.438336,
+                            long: -78.342649,
+                        }]
                     },
                     {
                         rampName: "Hibernia",
@@ -2747,25 +2748,27 @@ module.exports = [
                         rampFee: "No",
                         rampAccess: "Pavement",
                         courtesyDock: "Yes",
-                        rampTotal: 2,
-                        rampBottom: -1,
-                        rampTop: 310,
-                        lat: 36.503098, 
-                        long: -78.376210,
+                        ramps: [{
+                            bottomElev: 290.6,
+                            topElev: 305.43,
+                            lat: 36.503098,
+                            long: -78.376210,
+                        }]
                     },
                     {
-                        rampName: "Henderson Pt 1 (Glass House)",
+                        rampName: "Henderson Pt 1",
                         rampStatus: "Open",
                         rampType: "Concrete",
                         rampParking: "Good (70)",
                         rampFee: "No",
                         rampAccess: "Pavement",
                         courtesyDock: "Yes",
-                        rampTotal: 2,
-                        rampBottom: -1,
-                        rampTop: 309,
-                        lat: 36.539448, 
-                        long: -78.343455,
+                        ramps: [{
+                            bottomElev: 290.0,
+                            topElev: 306.47,
+                            lat: 36.539448,
+                            long: -78.343455,
+                        }]
                     },
                     {
                         rampName: "Henderson Pt 2",
@@ -2775,11 +2778,12 @@ module.exports = [
                         rampFee: "No",
                         rampAccess: "Pavement",
                         courtesyDock: "Yes",
-                        rampTotal: 2,
-                        rampBottom: -1,
-                        rampTop: 309,
-                        lat: 36.539448, 
-                        long: -78.343455,
+                        ramps: [{
+                            bottomElev: 291.79,
+                            topElev: 306.8,
+                            lat: 36.539448,
+                            long: -78.343455,
+                        }]
                     },
                     {
                         rampName: "Henderson Pt 3",
@@ -2789,14 +2793,15 @@ module.exports = [
                         rampFee: "No",
                         rampAccess: "Pavement",
                         courtesyDock: "Yes",
-                        rampTotal: 2,
-                        rampBottom: -1,
-                        rampTop: 309,
-                        lat: 36.533100, 
-                        long: -78.343266,
+                        ramps: [{
+                            bottomElev: 292.87,
+                            topElev: 306.67,
+                            lat: 36.533100,
+                            long: -78.343266,
+                        }]
                     },
                     {
-                    
+
                         rampName: "Ivy Hill",
                         rampStatus: "Open",
                         rampType: "Concrete",
@@ -2804,14 +2809,15 @@ module.exports = [
                         rampFee: "No",
                         rampAccess: "Pavement",
                         courtesyDock: "Yes",
-                        rampTotal: 2,
-                        rampBottom: -1,
-                        rampTop: 305,
-                        lat: 36.575966, 
-                        long: -78.418850,
+                        ramps: [{
+                            bottomElev: 284.8,
+                            topElev: 307.69,
+                            lat: 36.575966,
+                            long: -78.418850,
+                        }]
                     },
                     {
-                    
+
                         rampName: "Longwood",
                         rampStatus: "Open",
                         rampType: "Concrete",
@@ -2819,11 +2825,12 @@ module.exports = [
                         rampFee: "No",
                         rampAccess: "Pavement",
                         courtesyDock: "Yes",
-                        rampTotal: 2,
-                        rampBottom: -1,
-                        rampTop: 305,
-                        lat: 36.572836, 
-                        long: -78.549360,
+                        ramps: [{
+                            bottomElev: 286.2,
+                            topElev: 308.6,
+                            lat: 36.572836,
+                            long: -78.549360,
+                        }]
                     },
                     {
                         rampName: "North Bend",
@@ -2833,11 +2840,22 @@ module.exports = [
                         rampFee: "No",
                         rampAccess: "Pavement",
                         courtesyDock: "Yes",
-                        rampTotal: 2,
-                        rampBottom: -1,
-                        rampTop: 310,
-                        lat: 36.585802, 
-                        long: -78.305442,
+                        ramps: [{
+                            bottomElev: 285.8,
+                            topElev: 309.51,
+                            lat: 36.585802,
+                            long: -78.305442,
+                        },{
+                            bottomElev: 290.9,
+                            topElev: 314.69,
+                            lat: 36.585802,
+                            long: -78.305442,
+                        },{
+                            bottomElev: 285,
+                            topElev: 311.73,
+                            lat: 36.585802,
+                            long: -78.305442,
+                        }]
                     },
                     {
                         rampName: "Nutbush",
@@ -2847,11 +2865,12 @@ module.exports = [
                         rampFee: "No",
                         rampAccess: "Pavement",
                         courtesyDock: "Yes",
-                        rampTotal: 4,
-                        rampBottom: -1,
-                        rampTop: 312,
-                        lat: 36.414745, 
-                        long: -78.398793,
+                        ramps: [{
+                            bottomElev: 288,
+                            topElev: 310,
+                            lat: 36.414745,
+                            long: -78.398793,
+                        }]
                     },
                     {
                         rampName: "Oconeechee",
@@ -2861,12 +2880,13 @@ module.exports = [
                         rampFee: "No",
                         rampAccess: "Pavement",
                         courtesyDock: "Yes",
-                        rampTotal: 3,
-                        rampBottom: -1,
-                        rampTop: 310,
-                        lat: 36.633388, 
-                        long: -78.534784,
-                        directionsURL: "https://www.google.com/maps/dir//36.633388,-78.534784/@36.6324129,-78.5388828,1439m/data=!3m1!1e3"
+                        ramps: [{
+                            bottomElev: 289.0,
+                            topElev: 308.25,
+                            lat: 36.633388,
+                            long: -78.534784,
+                            directionsURL: "https://www.google.com/maps/dir//36.633388,-78.534784/@36.6324129,-78.5388828,1439m/data=!3m1!1e3"
+                        }]
                     }
 
                 ]
@@ -3055,7 +3075,8 @@ module.exports = [
                 adLogoUrl: ""
             }
         ]
-    }, {
+    },
+    {
         state: "Oklahoma",
         lakes: [
 
@@ -3076,7 +3097,7 @@ module.exports = [
                 seaLevelDelta: 0,
                 normalPool: 710.0,
                 lat: 36.892862,
-                long:  -95.964192,
+                long: -95.964192,
                 elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=5338051&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
                 flowURL: "none",
                 href: "/lakes/copan",
@@ -3505,7 +3526,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 786.0,
-                lat:  40.379739,
+                lat: 40.379739,
                 long: -78.058422,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=01563100&period=PT168H&parameterCd=00062&siteType=LK&siteStatus=all",
                 flowURL: "none",
@@ -4068,7 +4089,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 322.0,
-                lat: 32.250180, 
+                lat: 32.250180,
                 long: -96.117778,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08063010&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
                 flowURL: "none",
@@ -4276,7 +4297,7 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 436.0,
-                lat: 32.835944, 
+                lat: 32.835944,
                 long: -95.936837,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08017400&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
                 flowURL: "none",
