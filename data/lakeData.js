@@ -2814,8 +2814,8 @@ module.exports = [
                         rampFee: "No",
                         rampAccess: "Pavement",
                         courtesyDock: "Yes",
-                        bottomElev: 285.8,
-                        topElev: 314.69,
+                        bottomElev: 285.0,
+                        topElev: 311.73,
                         lat: 36.585802,
                         long: -78.305442,
                         directionsURL: "https://www.google.com/maps/dir//36.585802,-78.305442/@36.585802,--78.305442,1439m/data=!3m1!1e3"
