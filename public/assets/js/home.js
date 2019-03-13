@@ -14,7 +14,6 @@ $.ajax({
     method: "GET",
 })
     .then(function (data) {
-        console.log(data);
         lakeData = data;
 
 
@@ -63,7 +62,7 @@ $.ajax({
 
         function findNearbyLakes(userLat, userLon) {
             closeLakes = [];
-            // loop through lake data (right now only NC)
+            // loop through lake data
             lakeData.forEach(function (state) {
                 state.lakes.forEach(function (lake) {
                     // if lake is not already collected (duplicate)
