@@ -272,7 +272,7 @@ module.exports = function (app) {
   // Route to retrieve ACE data from A2W
   app.get("/api/a2w", function (request, response) {
     let a2wURL = request.query.a2wURL;
-    let currentLake = request.query.currentLake;
+    // let currentLake = request.query.currentLake;
 
     getData(a2wURL, function (error, data) {
       if (error) {
