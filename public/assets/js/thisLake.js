@@ -374,6 +374,7 @@ function flowUSGS(callback) {
 
 // Function to make elev ACE call
 function dataACE(callback) {
+    console.log(elevURL);
     // API call for elev data
     $.ajax({
         url: "/api/a2w",
