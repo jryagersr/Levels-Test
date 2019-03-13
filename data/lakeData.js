@@ -2815,7 +2815,7 @@ module.exports = [
                         long: -78.418850,
                     },
                     {
-                    
+
                         rampName: "Longwood",
                         rampStatus: "Open",
                         rampType: "Concrete",
@@ -2828,7 +2828,7 @@ module.exports = [
                         rampTop: 305,
                         lat: 36.572836, 
                         long: -78.549360,
-                    }
+                    },
                     // {
                     //     rampName: "North Bend",
                     //     rampStatus: "Open",
@@ -2843,20 +2843,20 @@ module.exports = [
                     //     lat: 36.585802, 
                     //     long: -78.305442,
                     // },
-                    // {
-                    //     rampName: "Nutbush",
-                    //     rampStatus: "Open",
-                    //     rampType: "Concrete",
-                    //     rampParking: "Good (70)",
-                    //     rampFee: "No",
-                    //     rampAccess: "Pavement",
-                    //     courtesyDock: "Yes",
-                    //     rampTotal: 4,
-                    //     rampBottom: -1,
-                    //     rampTop: 312,
-                    //     lat: 36.414745, 
-                    //     long: -78.398793,
-                    // },
+                    {
+                        rampName: "Nutbush",
+                        rampStatus: "Open",
+                        rampType: "Concrete",
+                        rampParking: "Good (70)",
+                        rampFee: "No",
+                        rampAccess: "Pavement",
+                        courtesyDock: "Yes",
+                        rampTotal: 4,
+                        rampBottom: -1,
+                        rampTop: 312,
+                        lat: 36.414745, 
+                        long: -78.398793,
+                    }
                     // {
                     //     rampName: "Oconeechee",
                     //     rampStatus: "Open",
