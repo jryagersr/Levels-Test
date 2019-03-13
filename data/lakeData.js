@@ -2698,7 +2698,23 @@ module.exports = [
                 adLogoUrl: "http://jacksonsuperiorelectric.com/",
                 adTxSrc: "/static/assets/img/cbc-kerr-tx.png",
                 adTxUrl: "http://carolinasbasschallenge.com/tournament/72",
-                ramps:[]
+                ramps:[
+                    {
+                    
+                        rampName: "County Line",
+                        rampStatus: "Open",
+                        rampType: "Concrete",
+                        rampParking: "Fair (45)",
+                        rampFee: "No",
+                        rampAccess: "Pavement",
+                        courtesyDock: "Yes",
+                        rampTotal: 2,
+                        rampBottom: -1,
+                        rampTop: 309,
+                        lat: 36.522406, 
+                        long: -78.314121,
+                    }
+                ]
             },
             {
                 bodyOfWater: "Neuse River (Kinston)", // lake name
