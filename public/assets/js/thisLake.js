@@ -1,4 +1,6 @@
 
+"use strict";
+
 // Pull the lake name from the end of the current URL
 let parsedURL = window.location.href.split("/");
 let lakeRoute = parsedURL[parsedURL.length - 1];
@@ -17,6 +19,8 @@ let currentDelta = "";
 let lakePool = 0;
 let seaLevelDelta = 0;
 let elevationAdjust = 0;
+let elevURL;
+let flowURL;
 
 // Holds our display data to send into buildTable function
 let displayBatch = [];
@@ -117,7 +121,7 @@ function buildTableWithUTC(data) {
         var elev = "N/A";
         var flow = "N/A";
         // Check to see if data contains date, time, elev, or flow. If not it will stay as "N/A"
-        localTime = new Date(data[i].date);
+        let localTime = new Date(data[i].date);
         if (typeof data[i].date !== 'undefined') {
             date = localTime.toString().substring(0, 10);
         }
@@ -395,7 +399,7 @@ function dataACE(callback) {
             if (data.length > 0) {
                 displayBatch = data;
 
-                localTime = new Date(displayBatch[0].date);
+                let localTime = new Date(displayBatch[0].date);
                 currentDate = localTime.toString().substring(0, 10);;
                 currentTime = localTime.toString().substring(16, 21);
                 currentElev = displayBatch[0].elev;
@@ -761,7 +765,7 @@ $.ajax({
     .then(function (data) {
         console.log(data);
         for (var i = 0; i < data.length; i++) {
-            result = data[i].lakes.find(obj => obj.href === "/lakes/" + lakeRoute);
+            let result = data[i].lakes.find(obj => obj.href === "/lakes/" + lakeRoute);
             if (typeof result !== 'undefined') {
                 currentLake = result;
                 break;
