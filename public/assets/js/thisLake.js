@@ -332,7 +332,9 @@ function elevUSGS(callback) {
         method: "GET",
         data: {
             usgsURL: elevURL,
-            currentLake: currentLake
+            bodyOfWater: bodyOfWaterName,
+            normalPool: lakePool,
+            seaLevelDelta: seaLevelDelta
         }
     })
         .then(function (data) {
@@ -383,7 +385,8 @@ function dataACE(callback) {
         method: "GET",
         data: {
             a2wURL: elevURL,
-            currentLake: currentLake
+            bodyOfWater: bodyOfWaterName,
+            normalPool: lakePool
         }
     })
         .then(function (data) {
