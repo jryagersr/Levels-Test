@@ -174,9 +174,6 @@ module.exports = function (app) {
 
         data = JSON.parse(body);
 
-        console.log("USGS Call");
-        console.log(currentLake.bodyOfWater);
-        console.log(data);
         // Check to see if the sensor is returning data
         if (data.value.timeSeries.length > 0) {
           let valuesIndex = 0;
@@ -286,6 +283,7 @@ module.exports = function (app) {
     });
 
     function getData(a2wURL, callback) {
+      console.log(a2wURL);
       var request = require("request");
       var data = [];
       request(a2wURL, function (error, response, body) {
