@@ -2677,7 +2677,7 @@ module.exports = [
                         elev: ["N/A"], //array of elevations
                         flow: ["Lots"], //array of flow
                         date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
+                        time: ["time"] //arrat if elevation times
                     }
                 ],
                 refreshInterval: 30, //minutes
@@ -2698,50 +2698,178 @@ module.exports = [
                 adTxUrl: "http://carolinasbasschallenge.com/tournament/72",
                 ramps:[
                     {
-                        rampName: "Farrington Point",
+                    
+                        rampName: "County Line",
+                        rampStatus: "Open",
+                        rampType: "Concrete",
+                        rampParking: "Fair (45)",
+                        rampFee: "No",
+                        rampAccess: "Pavement",
+                        courtesyDock: "Yes",
+                        rampTotal: 2,
+                        rampBottom: -1,
+                        rampTop: 309,
+                        lat: 36.522406, 
+                        long: -78.314121
+                    },
+                    {
+                    
+                        rampName: "Eastland",
+                        rampStatus: "Open",
+                        rampType: "Concrete",
+                        rampParking: "Fair (30)",
+                        rampFee: "Yes",
+                        rampAccess: "Gravel",
+                        courtesyDock: "Yes",
+                        rampTotal: 2,
+                        rampBottom: -1,
+                        rampTop: 305,
+                        lat: 36.601554, 
+                        long: -78.369385
+                    },
+                    {
+                        rampName: "Flemingtown (Meekins)",
                         rampStatus: "Open",
                         rampType: "Concrete",
                         rampParking: "Good (70)",
                         rampFee: "No",
-                        rampAccess: "Paved",
+                        rampAccess: "Gravel",
                         courtesyDock: "Yes",
-                        rampTotal: 4,
-                        rampBottom: 209,
-                        rampTop: 224,
-                        lat: 35.799483,
-                        long: -79.017791,
+                        rampTotal: 6,
+                        rampBottom: -1,
+                        rampTop: 305.21,
+                        lat: 36.438336, 
+                        long: -78.342649
                     },
                     {
-                        rampName: "Ebenezer",
+                        rampName: "Hibernia",
                         rampStatus: "Open",
                         rampType: "Concrete",
-                        rampDock: "Yes",
+                        rampParking: "Fair (45)",
+                        rampFee: "No",
+                        rampAccess: "Pavement",
+                        courtesyDock: "Yes",
+                        rampTotal: 2,
+                        rampBottom: -1,
+                        rampTop: 310,
+                        lat: 36.503098, 
+                        long: -78.376210
+                    },
+                    {
+                        rampName: "Henderson Pt 1 (Glass House)",
+                        rampStatus: "Open",
+                        rampType: "Concrete",
+                        rampParking: "Good (70)",
+                        rampFee: "No",
+                        rampAccess: "Pavement",
+                        courtesyDock: "Yes",
+                        rampTotal: 2,
+                        rampBottom: -1,
+                        rampTop: 309,
+                        lat: 36.539448, 
+                        long: -78.343455
+                    },
+                    {
+                        rampName: "Henderson Pt 2",
+                        rampStatus: "Open",
+                        rampType: "Concrete",
+                        rampParking: "Fair (40)",
+                        rampFee: "No",
+                        rampAccess: "Pavement",
+                        courtesyDock: "Yes",
+                        rampTotal: 2,
+                        rampBottom: -1,
+                        rampTop: 309,
+                        lat: 36.539448, 
+                        long: -78.343455
+                    },
+                    {
+                        rampName: "Henderson Pt 3",
+                        rampStatus: "Open",
+                        rampType: "Concrete",
+                        rampParking: "Small (24)",
+                        rampFee: "No",
+                        rampAccess: "Pavement",
+                        courtesyDock: "Yes",
+                        rampTotal: 2,
+                        rampBottom: -1,
+                        rampTop: 309,
+                        lat: 36.533100, 
+                        long: -78.343266
+                    },
+                    {
+                    
+                        rampName: "Ivy Hill",
+                        rampStatus: "Open",
+                        rampType: "Concrete",
+                        rampParking: "Fair (42)",
+                        rampFee: "No",
+                        rampAccess: "Pavement",
+                        courtesyDock: "Yes",
+                        rampTotal: 2,
+                        rampBottom: -1,
+                        rampTop: 305,
+                        lat: 36.575966, 
+                        long: -78.418850
+                    },
+                    {
+                    
+                        rampName: "Longwood",
+                        rampStatus: "Open",
+                        rampType: "Concrete",
+                        rampParking: "Fair (50)",
+                        rampFee: "No",
+                        rampAccess: "Pavement",
+                        courtesyDock: "Yes",
+                        rampTotal: 2,
+                        rampBottom: -1,
+                        rampTop: 305,
+                        lat: 36.572836, 
+                        long: -78.549360
+                    },
+                    {
+                        rampName: "North Bend",
+                        rampStatus: "Open",
+                        rampType: "Concrete",
+                        rampParking: "Fair (35)",
+                        rampFee: "No",
+                        rampAccess: "Pavement",
+                        courtesyDock: "Yes",
+                        rampTotal: 2,
+                        rampBottom: -1,
+                        rampTop: 310,
+                        lat: 36.585802, 
+                        long: -78.305442
+                    },
+                    {
+                        rampName: "Nutbush",
+                        rampStatus: "Open",
+                        rampType: "Concrete",
+                        rampParking: "Good (70)",
+                        rampFee: "No",
+                        rampAccess: "Pavement",
+                        courtesyDock: "Yes",
+                        rampTotal: 4,
+                        rampBottom: -1,
+                        rampTop: 312,
+                        lat: 36.414745, 
+                        long: -78.398793
+                    },
+                    {
+                        rampName: "Oconeechee",
+                        rampStatus: "Open",
+                        rampType: "Concrete",
                         rampParking: "Good (100)",
                         rampFee: "No",
-                        rampAccess: "Paved",
+                        rampAccess: "Pavement",
                         courtesyDock: "Yes",
-                        rampTotal: 4,
-                        rampBottom: 206,
-                        rampTop: 222,
-                        lat: 35.700817,
-                        long: -79.020309,
-                    },
-                    {
-                        rampName: "Poe's",
-                        rampStatus: "Open",
-                        rampType: "Concrete",
-                        rampDock: "Yes",
-                        rampParking: "Good (50)",
-                        rampFee: "Yes",
-                        rampAccess: "Paved",
-                        courtesyDock: "Yes",
-                        rampTotal: 4,
-                        rampBottom: 206,
-                        rampTop: 222,
-                        lat: 35.642684,
-                        long: -79.085108,
+                        rampTotal: 3,
+                        rampBottom: -1,
+                        rampTop: 310,
+                        lat: 36.633388, 
+                        long: -78.534784,
+                        directionsURL: "https://www.google.com/maps/dir//36.633388,-78.534784/@36.6324129,-78.5388828,1439m/data=!3m1!1e3"
                     }
-
                 ]
             },
             {
