@@ -2713,6 +2713,21 @@ module.exports = [
                         rampTop: 309,
                         lat: 36.522406, 
                         long: -78.314121,
+                    },
+                    {
+                    
+                        rampName: "Eastland",
+                        rampStatus: "Open",
+                        rampType: "Concrete",
+                        rampParking: "Fair (30)",
+                        rampFee: "Yes",
+                        rampAccess: "Gravel",
+                        courtesyDock: "Yes",
+                        rampTotal: 2,
+                        rampBottom: -1,
+                        rampTop: 305,
+                        lat: 36.601554, 
+                        long: -78.369385,
                     }
                 ]
             },
