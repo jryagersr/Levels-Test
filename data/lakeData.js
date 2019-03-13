@@ -2828,7 +2828,7 @@ module.exports = [
                         rampTop: 305,
                         lat: 36.572836, 
                         long: -78.549360,
-                    },
+                    }
                     // {
                     //     rampName: "North Bend",
                     //     rampStatus: "Open",
@@ -2857,21 +2857,21 @@ module.exports = [
                     //     lat: 36.414745, 
                     //     long: -78.398793,
                     // },
-                    {
-                        rampName: "Oconeechee",
-                        rampStatus: "Open",
-                        rampType: "Concrete",
-                        rampParking: "Good (100)",
-                        rampFee: "No",
-                        rampAccess: "Pavement",
-                        courtesyDock: "Yes",
-                        rampTotal: 3,
-                        rampBottom: -1,
-                        rampTop: 310,
-                        lat: 36.633388, 
-                        long: -78.534784,
-                        directionsURL: "https://www.google.com/maps/dir//36.633388,-78.534784/@36.6324129,-78.5388828,1439m/data=!3m1!1e3"
-                    }
+                    // {
+                    //     rampName: "Oconeechee",
+                    //     rampStatus: "Open",
+                    //     rampType: "Concrete",
+                    //     rampParking: "Good (100)",
+                    //     rampFee: "No",
+                    //     rampAccess: "Pavement",
+                    //     courtesyDock: "Yes",
+                    //     rampTotal: 3,
+                    //     rampBottom: -1,
+                    //     rampTop: 310,
+                    //     lat: 36.633388, 
+                    //     long: -78.534784,
+                    //     directionsURL: "https://www.google.com/maps/dir//36.633388,-78.534784/@36.6324129,-78.5388828,1439m/data=!3m1!1e3"
+                    // }
                 ]
             },
             {
