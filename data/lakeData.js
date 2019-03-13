@@ -2770,20 +2770,6 @@ module.exports = [
                         rampTop: 309,
                         lat: 36.539448, 
                         long: -78.343455,
-                    },
-                    {
-                        rampName: "Henderson Pt 2",
-                        rampStatus: "Open",
-                        rampType: "Concrete",
-                        rampParking: "Fair (40)",
-                        rampFee: "No",
-                        rampAccess: "Pavement",
-                        courtesyDock: "Yes",
-                        rampTotal: 2,
-                        rampBottom: -1,
-                        rampTop: 309,
-                        lat: 36.539448, 
-                        long: -78.343455,
                     }
                 ]
             },
