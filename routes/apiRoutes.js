@@ -1,3 +1,4 @@
+
 const mongoose = require("mongoose");
 var express = require("express"),
   app = express(),
@@ -148,8 +149,10 @@ module.exports = function (app) {
   // Route to retrieve USGS Elev data from USGS
   app.get("/api/usgs", function (request, response) {
     let usgsURL = request.query.usgsURL;
+    let bodyOfWater = request.query.bodyOfWater;
+    let normalPool = request.query.normalPool;
+    let seaLevelDelta = request.query.seaLevelDelta;
     console.log('usgsURL:', usgsURL)
-    let currentLake = request.query.currentLake;
 
     getData(usgsURL, function (error, data) {
       if (error) {
@@ -174,15 +177,12 @@ module.exports = function (app) {
 
         data = JSON.parse(body);
 
-        console.log("USGS Call");
-        console.log(currentLake.bodyOfWater);
-        console.log(data);
         // Check to see if the sensor is returning data
         if (data.value.timeSeries.length > 0) {
           let valuesIndex = 0;
           // Parse the json data return to find the values we want
           let jIncrement = 1;
-          if (currentLake.bodyOfWater == "Mille Lacs")
+          if (bodyOfWater == "Mille Lacs")
             valuesIndex = 1 // For some reason Mille Lacs has changed from index 0 to index 1 02/10/19
 
           // To retrieve Flows from USGS, we get multiple .timevalues and the variable.variableDecription 
@@ -214,8 +214,8 @@ module.exports = function (app) {
 
           // If reported level is not based on MSL, set the seaLevelDelta to add to the level
           // to convert to MSL based.
-          if (currentLake.seaLevelDelta !== 0)
-            elevationAdjust = (parseFloat(elevValues[0].value) + Number(currentLake.seaLevelDelta)).toFixed(2);
+          if (seaLevelDelta !== 0)
+            elevationAdjust = (parseFloat(elevValues[0].value) + Number(seaLevelDelta)).toFixed(2);
           else {
             if (lakePool !== 0)
               elevationAdjust = elevValues[0].value;
@@ -235,7 +235,7 @@ module.exports = function (app) {
           // k = j;
           if (elevValues.length <= 100) // If we only get 93 data values when we requested 96 hours, then it's hourly
             jIncrement = 1;
-          else if (['Hudson', 'Lawtonka'].includes(currentLake.bodyOfWater)) jIncrement = 2;
+          else if (['Hudson', 'Lawtonka'].includes(bodyOfWater)) jIncrement = 2;
           else jIncrement = 4;
           for (j = 0; j < elevValues.length; j += jIncrement) {
             let element = elevValues[j];
@@ -248,8 +248,8 @@ module.exports = function (app) {
             if (timeSeriesFlowIndex >= 0)
               flow = flowValues[j].value;
             // adjust the elev for lakes with data relative to full pool (not from sealevel))
-            if (currentLake.seaLevelDelta !== 0) {
-              elev = (parseFloat(elevValues[j].value) + Number(currentLake.seaLevelDelta)).toFixed(2);
+            if (seaLevelDelta !== 0) {
+              elev = (parseFloat(elevValues[j].value) + Number(seaLevelDelta)).toFixed(2);
             }
 
             displayBatch.push({
@@ -274,7 +274,8 @@ module.exports = function (app) {
   // Route to retrieve ACE data from A2W
   app.get("/api/a2w", function (request, response) {
     let a2wURL = request.query.a2wURL;
-    let currentLake = request.query.currentLake;
+    let bodyOfWater = request.query.bodyOfWater;
+    let normalPool = request.query.normalPool;
 
     getData(a2wURL, function (error, data) {
       if (error) {
@@ -286,6 +287,7 @@ module.exports = function (app) {
     });
 
     function getData(a2wURL, callback) {
+      console.log(a2wURL);
       var request = require("request");
       var data = [];
       request(a2wURL, function (error, response, body) {
@@ -316,7 +318,7 @@ module.exports = function (app) {
           let stageRiver = [];
 
           if (typeof data[0].Elev == 'undefined' &&
-            typeof data[0].Stage !== 'undefined' && currentLake.bodyOfWater.indexOf("River") >= 0) {
+            typeof data[0].Stage !== 'undefined' && bodyOfWater.indexOf("River") >= 0) {
 
             stageRiver = data; //Copy the data
             data = []; //Clear the data objects
@@ -353,10 +355,10 @@ module.exports = function (app) {
             let firstDate = data[ACEElevIndex].Elev[0].time.split(" ");
             let secondDate = data[ACEElevIndex].Elev[1].time.split(" ");
             let dailyACEData = firstDate[1] === secondDate[1]; // default value, this is for when ACE only returns daily readings vs hourly
-            let isLakeIstokpoga = currentLake.bodyOfWater == 'Istokpoga'; // default value, this is when the ACE data is Fucked Up like Istokpoga in Florida, Damn...
+            let isLakeIstokpoga = bodyOfWater == 'Istokpoga'; // default value, this is when the ACE data is Fucked Up like Istokpoga in Florida, Damn...
 
             // These have 120 elev data and 5 Flow, ignore flow data
-            if (['Truman', 'Pomme De Terre', "Stockton", "Rend", ].includes(currentLake.bodyOfWater))
+            if (['Truman', 'Pomme De Terre', "Stockton", "Rend", ].includes(bodyOfWater))
               ACEFlow = false;
 
             // Get current Date, Time and Elev
@@ -419,15 +421,15 @@ module.exports = function (app) {
             if (dailyACEData)
               jIncrement = 1;
 
-            if (['Eufaula', 'Brantley', 'Columbus'].includes(currentLake.bodyOfWater)) // Eufaula is every 15 minutes with no OutFlow
-              if (currentLake.normalPool < 189) { // This identfies Eufaula AL from Eufaula, OK
+            if (['Eufaula', 'Brantley', 'Columbus'].includes(bodyOfWater)) // Eufaula is every 15 minutes with no OutFlow
+              if (normalPool < 189) { // This identfies Eufaula AL from Eufaula, OK
                 jIncrement = 4;
                 exceptionLake = true; // set the exceptionLake flag to bypass the flow check in the for loop below
               }
-            if (['Brantley'].includes(currentLake.bodyOfWater)) // Brantley is every 15 minutes with no OutFlow
+            if (['Brantley'].includes(bodyOfWater)) // Brantley is every 15 minutes with no OutFlow
               jIncrement = 4;
 
-            if (['Red Rock'].includes(currentLake.bodyOfWater)) // Red Rock is every 30 minutes
+            if (['Red Rock'].includes(bodyOfWater)) // Red Rock is every 30 minutes
               jIncrement = 2;
 
             for (j = ACEElevNum; j < data[ACEElevIndex].Elev.length; j = j + jIncrement) {

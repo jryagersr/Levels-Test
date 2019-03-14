@@ -72,6 +72,11 @@ h1, h2, h3 {
     color: #4CAF50;
 }
 
+.dropdown-item:active{
+    color:white;
+    background-color: rgba(76, 175, 80, 0.3);
+  }
+
 @media only screen and (max-width: 991px) {
     .social-navItem {
         margin-top: 10px;
@@ -632,7 +637,6 @@ h1, h2, h3 {
           transform: rotate(360deg);
         }
       }
-      
 
 
 /***

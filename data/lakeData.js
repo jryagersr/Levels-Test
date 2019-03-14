@@ -1,3 +1,5 @@
+"usestrict";
+
 module.exports = [
 
     {
@@ -401,6 +403,8 @@ module.exports = [
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
                 normalPool: 1120.43,
+                lat: 36.288882,
+                long: -94.015482,
                 elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1615150&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN",
                 flowURL: "none",
                 href: "/lakes/beaver",
@@ -2665,12 +2669,24 @@ module.exports = [
             },
             {
                 bodyOfWater: "Kerr", // lake name
+<<<<<<< HEAD
                 data: [{
                     elev: ["N/A"], //array of elevations
                     flow: ["Lots"], //array of flow
                     date: ["19-03/02"], //array of elevation dates
                     time: ["time"], //arrat if elevation times
                 }],
+=======
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flow
+                        date: ["19-03/02"], //array of elevation dates
+                        time: ["time"] //arrat if elevation times
+                    }
+                ],
+>>>>>>> 62f4067cc2feac329a32bcdeb09fcf06e3b98e4d
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -2848,7 +2864,6 @@ module.exports = [
                         long: -78.534784,
                         directionsURL: "https://www.google.com/maps/dir//36.633388,-78.534784/@36.6324129,-78.5388828,1439m/data=!3m1!1e3"
                     }
-
                 ]
             },
             {
@@ -4428,13 +4443,188 @@ module.exports = [
                 elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1749041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
                 flowURL: "none",
                 href: "/lakes/kerr",
-                dataSource: ["ACE"], // array of calls to make to retrieve data
+                dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
                 adLogoSrc: "/static/assets/img/jse.png",
                 adLogoUrl: "http://jacksonsuperiorelectric.com/",
                 adTxSrc: "/static/assets/img/cbc-kerr-tx.png",
-                adTxUrl: "http://carolinasbasschallenge.com/tournament/72"
+                adTxUrl: "http://carolinasbasschallenge.com/tournament/72",
+                ramps:[
+                    {
+                    
+                        rampName: "County Line",
+                        rampStatus: "Open",
+                        rampType: "Concrete",
+                        rampParking: "Fair (45)",
+                        rampFee: "No",
+                        rampAccess: "Pavement",
+                        courtesyDock: "Yes",
+                        rampTotal: 2,
+                        rampBottom: -1,
+                        rampTop: 309,
+                        lat: 36.522406, 
+                        long: -78.314121,
+                    },
+                    {
+                    
+                        rampName: "Eastland",
+                        rampStatus: "Open",
+                        rampType: "Concrete",
+                        rampParking: "Fair (30)",
+                        rampFee: "Yes",
+                        rampAccess: "Gravel",
+                        courtesyDock: "Yes",
+                        rampTotal: 2,
+                        rampBottom: -1,
+                        rampTop: 305,
+                        lat: 36.601554, 
+                        long: -78.369385,
+                    },
+                    {
+                        rampName: "Flemingtown (Meekins)",
+                        rampStatus: "Open",
+                        rampType: "Concrete",
+                        rampParking: "Good (70)",
+                        rampFee: "No",
+                        rampAccess: "Gravel",
+                        courtesyDock: "Yes",
+                        rampTotal: 6,
+                        rampBottom: -1,
+                        rampTop: 305.21,
+                        lat: 36.438336, 
+                        long: -78.342649,
+                    },
+                    {
+                        rampName: "Hibernia",
+                        rampStatus: "Open",
+                        rampType: "Concrete",
+                        rampParking: "Fair (45)",
+                        rampFee: "No",
+                        rampAccess: "Pavement",
+                        courtesyDock: "Yes",
+                        rampTotal: 2,
+                        rampBottom: -1,
+                        rampTop: 310,
+                        lat: 36.503098, 
+                        long: -78.376210,
+                    },
+                    {
+                        rampName: "Henderson Pt 1 (Glass House)",
+                        rampStatus: "Open",
+                        rampType: "Concrete",
+                        rampParking: "Good (70)",
+                        rampFee: "No",
+                        rampAccess: "Pavement",
+                        courtesyDock: "Yes",
+                        rampTotal: 2,
+                        rampBottom: -1,
+                        rampTop: 309,
+                        lat: 36.539448, 
+                        long: -78.343455,
+                    },
+                    {
+                        rampName: "Henderson Pt 2",
+                        rampStatus: "Open",
+                        rampType: "Concrete",
+                        rampParking: "Fair (40)",
+                        rampFee: "No",
+                        rampAccess: "Pavement",
+                        courtesyDock: "Yes",
+                        rampTotal: 2,
+                        rampBottom: -1,
+                        rampTop: 309,
+                        lat: 36.539448, 
+                        long: -78.343455,
+                    },
+                    {
+                        rampName: "Henderson Pt 3",
+                        rampStatus: "Open",
+                        rampType: "Concrete",
+                        rampParking: "Small (24)",
+                        rampFee: "No",
+                        rampAccess: "Pavement",
+                        courtesyDock: "Yes",
+                        rampTotal: 2,
+                        rampBottom: -1,
+                        rampTop: 309,
+                        lat: 36.533100, 
+                        long: -78.343266,
+                    },
+                    {
+                    
+                        rampName: "Ivy Hill",
+                        rampStatus: "Open",
+                        rampType: "Concrete",
+                        rampParking: "Fair (42)",
+                        rampFee: "No",
+                        rampAccess: "Pavement",
+                        courtesyDock: "Yes",
+                        rampTotal: 2,
+                        rampBottom: -1,
+                        rampTop: 305,
+                        lat: 36.575966, 
+                        long: -78.418850,
+                    },
+                    {
+                    
+                        rampName: "Longwood",
+                        rampStatus: "Open",
+                        rampType: "Concrete",
+                        rampParking: "Fair (50)",
+                        rampFee: "No",
+                        rampAccess: "Pavement",
+                        courtesyDock: "Yes",
+                        rampTotal: 2,
+                        rampBottom: -1,
+                        rampTop: 305,
+                        lat: 36.572836, 
+                        long: -78.549360,
+                    },
+                    {
+                        rampName: "North Bend",
+                        rampStatus: "Open",
+                        rampType: "Concrete",
+                        rampParking: "Fair (35)",
+                        rampFee: "No",
+                        rampAccess: "Pavement",
+                        courtesyDock: "Yes",
+                        rampTotal: 2,
+                        rampBottom: -1,
+                        rampTop: 310,
+                        lat: 36.585802, 
+                        long: -78.305442,
+                    },
+                    {
+                        rampName: "Nutbush",
+                        rampStatus: "Open",
+                        rampType: "Concrete",
+                        rampParking: "Good (70)",
+                        rampFee: "No",
+                        rampAccess: "Pavement",
+                        courtesyDock: "Yes",
+                        rampTotal: 4,
+                        rampBottom: -1,
+                        rampTop: 312,
+                        lat: 36.414745, 
+                        long: -78.398793,
+                    },
+                    {
+                        rampName: "Oconeechee",
+                        rampStatus: "Open",
+                        rampType: "Concrete",
+                        rampParking: "Good (100)",
+                        rampFee: "No",
+                        rampAccess: "Pavement",
+                        courtesyDock: "Yes",
+                        rampTotal: 3,
+                        rampBottom: -1,
+                        rampTop: 310,
+                        lat: 36.633388, 
+                        long: -78.534784,
+                        directionsURL: "https://www.google.com/maps/dir//36.633388,-78.534784/@36.6324129,-78.5388828,1439m/data=!3m1!1e3"
+                    }
+                ]
             },
             {
                 bodyOfWater: "Potomac River (Alexandria)", // lake name

@@ -1,16 +1,4 @@
 
-// Hide loader gif
-function hideLoader() {
-    $('#lds-ring').hide();
-}
-
-// $(window).ready(hideLoader);
-
-// Strongly recommended: Hide loader after 20 seconds, even if the page hasn't finished loading
-setTimeout(hideLoader, 20 * 1000);
-
-
-
 // Pull the lake name from the end of the current URL
 let parsedURL = window.location.href.split("/");
 let lakeRoute = parsedURL[parsedURL.length - 1];
@@ -29,6 +17,8 @@ let currentDelta = "";
 let lakePool = 0;
 let seaLevelDelta = 0;
 let elevationAdjust = 0;
+let elevURL;
+let flowURL;
 
 // Holds our display data to send into buildTable function
 let displayBatch = [];
@@ -43,6 +33,15 @@ let adCharityUrl = "";
 
 // Counter variable for flowUSGS to use to sync time with elevUSGS
 let k = 0;
+
+
+// Hide loader gif
+function hideLoader() {
+    $('#lds-ring').hide();
+}
+
+// Hide loader gif after 20 seconds if page content hasn't loaded
+setTimeout(hideLoader, 20 * 1000);
 
 // Function to set current values on page
 function displayCurrentPageValues() {
@@ -120,7 +119,7 @@ function buildTableWithUTC(data) {
         var elev = "N/A";
         var flow = "N/A";
         // Check to see if data contains date, time, elev, or flow. If not it will stay as "N/A"
-        localTime = new Date(data[i].date);
+        let localTime = new Date(data[i].date);
         if (typeof data[i].date !== 'undefined') {
             date = localTime.toString().substring(0, 10);
         }
@@ -333,7 +332,9 @@ function elevUSGS(callback) {
         method: "GET",
         data: {
             usgsURL: elevURL,
-            currentLake: currentLake
+            bodyOfWater: bodyOfWaterName,
+            normalPool: lakePool,
+            seaLevelDelta: seaLevelDelta
         }
     })
         .then(function (data) {
@@ -377,16 +378,19 @@ function flowUSGS(callback) {
 
 // Function to make elev ACE call
 function dataACE(callback) {
+    console.log(elevURL);
     // API call for elev data
     $.ajax({
         url: "/api/a2w",
         method: "GET",
         data: {
             a2wURL: elevURL,
-            currentLake: currentLake
+            bodyOfWater: bodyOfWaterName,
+            normalPool: lakePool
         }
     })
         .then(function (data) {
+            console.log(data);
             // if statement added for bug when A2W is down
             if (data.includes("Data service temporarily unavailable. Please check back later")) {
                 currentLake.bodyOfWater = currentLake.bodyOfWater + " <br><h3>Water Level sensor down, try again later or report this outage.</h3>";
@@ -396,7 +400,7 @@ function dataACE(callback) {
             if (data.length > 0) {
                 displayBatch = data;
 
-                localTime = new Date(displayBatch[0].date);
+                let localTime = new Date(displayBatch[0].date);
                 currentDate = localTime.toString().substring(0, 10);;
                 currentTime = localTime.toString().substring(16, 21);
                 currentElev = displayBatch[0].elev;
@@ -762,7 +766,7 @@ $.ajax({
     .then(function (data) {
         console.log(data);
         for (var i = 0; i < data.length; i++) {
-            result = data[i].lakes.find(obj => obj.href === "/lakes/" + lakeRoute);
+            let result = data[i].lakes.find(obj => obj.href === "/lakes/" + lakeRoute);
             if (typeof result !== 'undefined') {
                 currentLake = result;
                 break;

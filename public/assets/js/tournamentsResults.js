@@ -4,7 +4,7 @@ let flatBatch = [];
 let parameterArray = [];
 let orgSort = false;
 let trailSort = false;
-let dateSort = false;
+let dateSort = true;
 let locSort = false;
 let rampSort = false;
 let stateSort = false;
@@ -129,7 +129,7 @@ function displayFlatData(data) {
         if (resultsLink) {
             // Set href as resultsLink
             txSection.attr("data-url", resultsLink); // Add data attribute to the row with resultsLink url
-            txSection.addClass("clickable-row"); // ADd clickable results row css styles
+            txSection.addClass("clickable-row-results"); // ADd clickable results row css styles
         }
 
         $("#txSection").append(txSection);
@@ -171,9 +171,9 @@ $.ajax({
             var newBatch = flatBatch.sort(sort_by('date', dateSort, function (a) {
                 return a.toUpperCase()
             }));
+            dateSort ^= true;
             // display our newly flattened data for the first time (sorted by date);
             displayFlatData(newBatch);
-            dateSort ^= true;
             txBatch = newBatch;
             currentBatch = newBatch;
             // displayData(txBatch);

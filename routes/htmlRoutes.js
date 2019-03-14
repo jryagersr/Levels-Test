@@ -45,8 +45,8 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/tournament-results.html"));
   })
 
-  app.get("/sponsor-tournament", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/sponsor-tournament.html"));
+  app.get("/advertise", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/advertise.html"));
   })
 
   app.get("/contact", function(req, res) {
@@ -55,10 +55,6 @@ module.exports = function(app) {
 
   app.get("/about", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/about.html"));
-  })
-
-  app.get("/home-new", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/home-new.html"));
   })
   
   // If no matching route is found default to home

@@ -1,6 +1,7 @@
 let kerrLat = 36.588792;
 let kerrLon = -78.352668;
 let closeLakes = [];
+let nearbyLakes = [];
 let oldDistance = 0;
 let newDistance = 0;
 var x = document.getElementById("noLocation");
@@ -13,7 +14,6 @@ $.ajax({
     method: "GET",
 })
     .then(function (data) {
-        console.log(data);
         lakeData = data;
 
 
@@ -27,6 +27,8 @@ $.ajax({
                     callback(position.coords.latitude, position.coords.longitude)
                 }, showError);
             } else {
+                // Hide loader gif
+                $('#lds-ring').hide();
                 x.innerHTML = "Geolocation is not supported by this browser.";
             }
         }
@@ -36,6 +38,8 @@ $.ajax({
         function showError(error) {
             // dump any contents in the lake container
             $('#lakeContainer').empty();
+            // Hide loader gif
+            $('#lds-ring').hide();
             switch (error.code) {
                 case error.PERMISSION_DENIED:
                     x.innerHTML = `
@@ -58,7 +62,7 @@ $.ajax({
 
         function findNearbyLakes(userLat, userLon) {
             closeLakes = [];
-            // loop through lake data (right now only NC)
+            // loop through lake data
             lakeData.forEach(function (state) {
                 state.lakes.forEach(function (lake) {
                     // if lake is not already collected (duplicate)
@@ -66,25 +70,11 @@ $.ajax({
                         // calculate our distance between user and each lake
                         newDistance = distance(userLat, userLon, lake.lat, lake.long, "M")
                         // collect the first 10 regardless
-                        if (closeLakes.length < 10) {
-                            closeLakes.push({
-                                name: lake.bodyOfWater,
-                                distance: newDistance,
-                                href: lake.href
-                            });
-                        }
-                        // if ten have already been collected
-                        else {
-                            // loop through those ten
-                            for (var i = 0; i < closeLakes.length; i++) {
-                                // and check if the next lake we're looking at is closer
-                                if (closeLakes[i].distance > newDistance) {
-                                    // if it is splice it into closeLakes (while removing the larger one);
-                                    closeLakes.splice(i, 1, { name: lake.bodyOfWater, distance: newDistance, href: lake.href });
-                                    break;
-                                }
-                            }
-                        }
+                        closeLakes.push({
+                            name: lake.bodyOfWater,
+                            distance: parseFloat(newDistance),
+                            href: lake.href
+                        });
                     }
                 });
             });
@@ -96,24 +86,30 @@ $.ajax({
             // dump anything currently in the lake container, noLocation container, or template
             $('#lakeContainer').empty();
             $('#noLocation').empty();
-            lakeTemplate = `<h6>Lakes near: ${lat}, ${lon}</h6>`;
+            lakeTemplate = `<h6>Lakes near: ${lat.toFixed(5)}, ${lon.toFixed(5)}</h6>`;
             // sort by ascending distance
             closeLakes = closeLakes.sort(function (a, b) { return (a.distance - b.distance) });
             // loop through closeLakes and build the template for the page
-            closeLakes.forEach(function (lake) {
+            for (var i = 0; i < 10; i++) {
                 lakeTemplate += `
-                    <a href=${lake.href}>
+                    <a href=${closeLakes[i].href}>
                         <div class="lake-card">
-                            <h2>${lake.name}</h2>
-                            <p>${lake.distance.toFixed(0)} miles away</p>
+                            <h2>${closeLakes[i].name}</h2>
+                            <p>${closeLakes[i].distance.toFixed(0)} miles away</p>
                         </div>
                     </a>
                 `;
-            });
+            }
+            // Hide loader gif
+            $('#lds-ring').hide();
             // append template to page
             $('#lakeContainer').append(lakeTemplate);
             // reveal the lake container 
             $('#lakeContainer').show();
+            // scroll down to section for usability
+            var divPosition = $('#home-nearby').offset();
+            $('html, body').animate({scrollTop: divPosition.top - 100}, "slow");
+
         }
 
 
@@ -153,6 +149,8 @@ $.ajax({
 
         // user clicks on use my location button
         $('#locateBtn').on('click', function () {
+            // Show loader gif
+            $('#lds-ring').show();
             // run get location function
             getLocation(function (userLat, userLon) {
                 console.log(userLat + ", " + userLon);
@@ -163,6 +161,8 @@ $.ajax({
         // user clicks zip code button
         $('#zipBtn').on('click', function (e) {
             e.preventDefault();
+            // Show loader gif
+            $('#lds-ring').show();
             userZip = $('#zipInput').val().trim();
             if (isNaN(userZip) || userZip.length !== 5) {
                 $('#validationMessage').text("Not a valid zip code");
@@ -192,5 +192,8 @@ $.ajax({
                     });
             }
         });
+
+
+
 
     });

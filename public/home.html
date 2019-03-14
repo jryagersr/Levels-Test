@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link href="/static/assets/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="/static/assets/css/gif-loader.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body style="background: rgb(249,249,249);">
@@ -54,26 +55,29 @@
                     <div class="dropdown-menu" aria-labelledby="tournaments">
                         <a class="dropdown-item" href="/tournaments">Upcoming Tournaments</a>
                         <a class="dropdown-item" href="/tournament-results">Tournament Results</a>
-                        <a class="dropdown-item" href="/sponsor-tournament">Sponsor a Tournament</a>
                     </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/contact">Contact</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="tournaments" href="#" role="button"
+                        aria-haspopup="true" aria-expanded="false">
+                        More
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="tournaments">
+                        <a class="dropdown-item" href="/about">About</a>
+                        <a class="dropdown-item" href="/contact">Contact</a>
+                        <a class="dropdown-item" href="/advertise">Advertise with us</a>
+                    </div>
                 </li>
             </ul>
             <div class="navbar-nav ml-auto social-navItem">
                 <a href="https://www.facebook.com/BassSavvy/" target="_blank">
-                    Follow us on social! <i class="fab fa-facebook fa-lg"></i>
+                    <i class="fab fa-facebook fa-lg"></i>
                 </a>
             </div>
         </div>
     </nav>
 
     <section id='home-hero' class="container-fluid home-container text-center">
-        <!-- <h1 class="header-title">Welcome to Bass<span class="brand-savvy">Savvy!</span></h1> -->
         <div class="locate-container">
             <div class="locate-box">
                 <h3 style="font-weight:bold;">Find Nearby Lakes</h3>
@@ -88,7 +92,7 @@
                 <div class="right">
                     <form>
                         <h5>Use Zip:</h5>
-                        <input id="zipInput"></input>
+                        <input id="zipInput" type="text" pattern="[0-9]*"></input>
                         <button class="btn btn-success locate-btn" id="zipBtn">Submit</button>
                         <p id="validationMessage"></p>
                     </form>
@@ -97,6 +101,7 @@
     </section>
 
     <section id='home-nearby'>
+        <div id="lds-ring"><div></div><div></div><div></div><div></div></div>
         <div id="lakeContainer">
         </div>
 
@@ -119,7 +124,6 @@
             <a class="tile-anchor" href="/contact">
                 <h3>Contact Us</h3>
             </a>
-
         </div>
     </section>
 

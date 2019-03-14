@@ -32,100 +32,89 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="/static/assets/css/main.css" type="text/css">
-    <link rel="stylesheet" href="/static/assets/css/contact.css" type="text/css">
+    <link rel="stylesheet" href="/static/assets/css/about.css" type="text/css">
 </head>
 
 <body>
     <div class="nav-color-splash"></div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-            <a class="navbar-brand" href="/">
-                <h2>Bass<span class="brand-savvy">Savvy</span></h2>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="lakes" href="#" role="button"
-                            aria-haspopup="true" aria-expanded="false">
-                            Lakes
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="lakes">
-                            <a class="dropdown-item" href="/nearby-lakes">Nearby Lakes</a>
-                            <a class="dropdown-item" href="/search-lakes">Search Lakes</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="tournaments" href="#" role="button"
-                            aria-haspopup="true" aria-expanded="false">
-                            Tournaments
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="tournaments">
-                            <a class="dropdown-item" href="/tournaments">Upcoming Tournaments</a>
-                            <a class="dropdown-item" href="/tournament-results">Tournament Results</a>
-                            <a class="dropdown-item" href="/sponsor-tournament">Sponsor A Tournament</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                            <a class="nav-link" href="/about">About</a>
-                        </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/contact">Contact</a>
-                    </li>
-                </ul>
-                <div class="navbar-nav ml-auto social-navItem">
-                    <a href="https://www.facebook.com/BassSavvy/" target="_blank">
-                        Follow us on social! <i class="fab fa-facebook fa-lg"></i>
+        <a class="navbar-brand" href="/">
+            <h2>Bass<span class="brand-savvy">Savvy</span></h2>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="lakes" href="#" role="button"
+                        aria-haspopup="true" aria-expanded="false">
+                        Lakes
                     </a>
-                </div>
+                    <div class="dropdown-menu" aria-labelledby="lakes">
+                        <a class="dropdown-item" href="/nearby-lakes">Nearby Lakes</a>
+                        <a class="dropdown-item" href="/search-lakes">Search Lakes</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="tournaments" href="#" role="button"
+                        aria-haspopup="true" aria-expanded="false">
+                        Tournaments
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="tournaments">
+                        <a class="dropdown-item" href="/tournaments">Upcoming Tournaments</a>
+                        <a class="dropdown-item" href="/tournament-results">Tournament Results</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="tournaments" href="#" role="button"
+                        aria-haspopup="true" aria-expanded="false">
+                        More
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="tournaments">
+                        <a class="dropdown-item" href="/about">About</a>
+                        <a class="dropdown-item" href="/contact">Contact</a>
+                        <a class="dropdown-item" href="/advertise">Advertise with us</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="navbar-nav ml-auto social-navItem">
+                <a href="https://www.facebook.com/BassSavvy/" target="_blank">
+                    <i class="fab fa-facebook fa-lg"></i>
+                </a>
             </div>
-        </nav>
+        </div>
+    </nav>
+
+        <section id='hero'>
+            <!-- <div class="locate-container"> -->
+                <!-- <div class="locate-box"> -->
+    
+                    
+                    
+                        
+                     
+                <!-- </div> -->
+        </section>
 
     <div class="container text-center">
-        <h1 class="header-title">Contact Us</h1>
-        <h2>Thanks for visiting Bass<span class="brand-savvy">Savvy</h2>
-        <p>Please use the contact form below to make requests or provide us feedback. We're actively working to build
-            BassSavvy into the best it can be and would love to hear your feedback!</p>
-
-        <form action="https://formspree.io/admin@basssavvy.com" method="POST">
-            <div class="form-group">
-                <label for="name">
-                    <h3><b>Full Name</b></h3>
-                </label>
-                <input type="text" class="form-control" id="name" name="name" placeholder="John Smith">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputEmail1">
-                    <h3><b>Email address</b></h3>
-                </label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email"
-                    placeholder="Enter email">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                    else.</small>
-            </div>
-            <div class="form-group">
-                <label for="textBox">
-                    <h3><b>What would you like us to know?</b></h3>
-                    <p class="form-subtext">Request specific lakes, specific tournaments or general feedback/bugs here.
-                        Unfortunately, we do not have the resources or local knowledge to fulfill broad tournament
-                        requests.</p>
-                </label>
-                <textarea class="form-control" id="textBox" rows="3" name="textBox"></textarea>
-            </div>
-            <div class="form-group">
-                <label for="text">
-                    <h3><b>Where do you find that data now?</b></h3>
-                    <p class="form-subtext">Requests that include links/urls to lake or tournament data will be
-                        prioritized. Unfortunately, we may not have the local knowledge to fulfill the request otherwise
-                        (but we'll try our best!).</p>
-                </label>
-                <input type="text" class="form-control" id="data" name="data" placeholder="www.website.com">
-            </div>
-            <button type="submit" class="btn btn-success">Submit</button>
-        </form>
-
+        <h1 class="header-title">About Us</h1>
+        <p>BassSavvy was designed <b>by fishermen for fishermen</b> to provide Tournament fishermen with a tool for planning a tournament season, the information to fish tournaments and the post-tournament information to evaluate tournaments.</p>
+        <div class="block-container">
+        <div class="text-block">
+        <h5>Planning the Season</h5>
+        <p>All tournaments in BassSavvy are by request, preferrably from a website. BassSavvy’s tournament list is sortable by column header and filterable by Organization, Trail, Date, Lake, and Ramp. Sorting allows you to sort what is on the page, filtering lets you control what is on the page. Filtering the tournament trails puts only those trails on the page. Sorting those by Date allows easy identification of date conflicts between trails. Upcoming tournaments are found on the upcoming tournaments page and if possible are linked to the associated website to enter with blue text. After the tournament has been held, the listing can be found on the tournament results page, linked to the tournament website if possible with red text.</p> 
+        </div>
+        <div class="text-block">
+        <h5>Fishing Tournaments</h5>
+        <p>Fishing tournaments - BassSavvy provides a list of tournaments to assist in finding a local tournament to fish. It also provides water elevations for over 150 lakes across the USA and flows from reservoir dams when available. Graphs of water levels and flows as well and weather. More data such as barometric pressure, weather forecaste, and sunrise times are coming soon.</p>     
+        </div>
+        <div class="text-block">
+        <h5>After the Tournament</h5>
+        <p>Post Tournament - evaluating the days events. Why did the bite stop at 10am, could it be barometric pressure? Current (dam flows)? Or tidal (River)? The tournament results are linked in red when possible to quickly check the results.</p>
+        </div>
+    </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
