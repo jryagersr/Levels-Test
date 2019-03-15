@@ -42,6 +42,22 @@ h1, h2, h3 {
     font-weight: bold;
 }
 
+::-webkit-input-placeholder {
+    text-align: center;
+ }
+ 
+ :-moz-placeholder { /* Firefox 18- */
+    text-align: center;  
+ }
+ 
+ ::-moz-placeholder {  /* Firefox 19+ */
+    text-align: center;  
+ }
+ 
+ :-ms-input-placeholder {  
+    text-align: center; 
+ }
+
 /* Navbar Styles */
 /* ================================================================ */
 
@@ -103,6 +119,11 @@ h1, h2, h3 {
     margin-bottom: 140px;
 }
 
+/* different background image for nearby-lakes.html */
+.locate-container-nearby {
+    background-image: url("../img/nearby-background.jpg");
+}
+
 .locate-box {
     width: 60%;
     height: 200px;
@@ -125,7 +146,15 @@ h1, h2, h3 {
 }
 
 .right input {
-    width: 40%;
+    width: 70%;
+    height: 35px;
+    box-shadow:inset 0px 2px 4px 0 hsla(0,0%,0%,0.08);
+    margin-bottom: -2px;
+    text-align: center;
+}
+
+.right .locate-btn {
+    width: 70%;
 }
 
 .middle {
@@ -173,11 +202,21 @@ h1, h2, h3 {
 }
 
 .locate-btn {
-    margin: 10px 0px;
+    margin: 10px auto;
+}
+
+.left .locate-btn {
+    margin-top: 20px;
 }
 
 .locate-btn:hover {
-    margin: 10px 0px;
+    margin-top: 19px;
+    margin-bottom: 11px;
+}
+
+.right .locate-btn:hover {
+    margin-top: 9px;
+    margin-bottom: 11px;
 }
 
 .lake-card {
@@ -641,6 +680,13 @@ h1, h2, h3 {
 
 /***
 /* Responsive Styles */
+
+    /* Iphone 6 and above */
+    @media only screen and (min-width: 374px) {
+        .right input, .right .locate-btn {
+            width: 55%;
+        }
+    }
 
     @media only screen and (max-width: 768px) {
         .ad-logo {

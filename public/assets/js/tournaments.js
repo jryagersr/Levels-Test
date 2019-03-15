@@ -87,6 +87,7 @@ function populateFilter(data) {
 function flattenData(data, callback) {
     flatBatch = [];
     data.forEach(function (element) {
+        console.log(data);
         for (k = 0; k < element.trails.length; k++) {
             for (l = 0; l < element.trails[k].tournaments.length; l++) {
                 // Format the tx date to check against today's date
@@ -113,7 +114,6 @@ function flattenData(data, callback) {
 
 // Function to display flat data
 function displayFlatData(data) {
-    console.log(data);
     $("#txSection").empty();
     let i = 0;
     data.forEach(function (element) {
@@ -123,12 +123,6 @@ function displayFlatData(data) {
         txSection.attr("id", "txWell-" + i + 1);
 
         let entryLink = element.entryLink;
-        let resultsLink = element.resultsLink;
-
-        // Format the tx date to check against today's date
-        let txDate = new Date(element.date);
-        let todaysDate = new Date();
-
        
             // Check to see if a resultsLink exists
             if (entryLink) {
@@ -265,7 +259,6 @@ $("#clearSubmit").on("click", function (e) {
     $("#filterWrapper").toggle();
     filtered = false;
     filteredTags = [];
-    flattenData(txBatch);
 })
 
 // Define generic filter function
