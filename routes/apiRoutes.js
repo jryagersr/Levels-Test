@@ -977,7 +977,7 @@ module.exports = function (app) {
     // obtain user's zip from client
     let userZip = request.query.userZip;
     // load in zip lat lon data
-    var zipData = require("../data/zipDataFormatted");
+    var zipData = require("../data/zipData");
     data = {};
     // loop through zip data and check for a match
     zipData.forEach(function (zip) {
