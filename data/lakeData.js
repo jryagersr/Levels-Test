@@ -1299,7 +1299,7 @@ module.exports = [
         lakes: [
 
             {
-                bodyOfWater: "Allatoona", // lake name
+                bodyOfWater: "Allatoona", // lake name 'Allatoona'
                 data: [
 
                     {
