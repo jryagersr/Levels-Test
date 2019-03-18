@@ -43,7 +43,7 @@ function populateFilter(data) {
                 }
                 if ($.inArray(organizer + " - " + trail, dupeArray) === -1) {
                     var option = $("<option>" + organizer + " - " + trail + "</option>");
-                    $(option).attr("data-id", trail);
+                    $(option).attr("data-id", organizer + ":" + trail);
                     $("#trailSelect").append(option);
                     // Track the new option in dupeArray
                     dupeArray.push(organizer + " - " + trail);
@@ -87,7 +87,6 @@ function populateFilter(data) {
 function flattenData(data, callback) {
     flatBatch = [];
     data.forEach(function (element) {
-        console.log(data);
         for (k = 0; k < element.trails.length; k++) {
             for (l = 0; l < element.trails[k].tournaments.length; l++) {
                 // Format the tx date to check against today's date
@@ -102,6 +101,7 @@ function flattenData(data, callback) {
                         date: element.trails[k].tournaments[l].date,
                         lake: element.trails[k].tournaments[l].lake,
                         ramp: element.trails[k].tournaments[l].ramp,
+                        state: element.trails[k].tournaments[l].state,
                         entryLink: element.trails[k].tournaments[l].entryLink,
                         resultsLink: element.trails[k].tournaments[l].resultsLink
                     })
@@ -263,6 +263,11 @@ $("#clearSubmit").on("click", function (e) {
 
 // Define generic filter function
 function filterData(batch, category, val, callback) {
+    // multiple states could be listed so we need to check separately using .includes
+    if (category = "state") {
+        let filteredBatch = batch.filter(e => e.state.includes(val));
+        callback(filteredBatch);
+    }
     // Filter by the category selected
     let filteredBatch = batch.filter(e => e[category] === val);
     callback(filteredBatch);
@@ -293,8 +298,16 @@ $(".btn-filter").on("click", function (e) {
     $("#addFilterSubmit").show();
     $("#newFilterSubmit").show();
     let orgSelect = $("#orgSelect").find(":selected").data("id");
+    // define a second possible org value
+    let orgSelect2;
     let locSelect = $("#locSelect").find(":selected").data("id");
     let trailSelect = $("#trailSelect").find(":selected").data("id");
+    // if trail was selected, separate the attached org
+    if (typeof trailSelect !== 'undefined') {
+    let splitTrail = $("#trailSelect").find(":selected").data("id").split(":");
+    trailSelect = splitTrail[1];
+    orgSelect2 = splitTrail[0];
+    }
     let rampSelect = $("#rampSelect").find(":selected").data("id");
     let stateSelect = $("#stateSelect").find(":selected").data("id");
     let filteredBatch = txBatch;
@@ -302,6 +315,12 @@ $(".btn-filter").on("click", function (e) {
     // Run the necessary filter functions
     if (typeof orgSelect !== 'undefined') {
         filterData(filteredBatch, "organizer", orgSelect, function (newFilteredBatch) {
+            filteredBatch = newFilteredBatch;
+        });
+    }
+
+    if (typeof orgSelect2 !== 'undefined') {
+        filterData(filteredBatch, "organizer", orgSelect2, function (newFilteredBatch) {
             filteredBatch = newFilteredBatch;
         });
     }
