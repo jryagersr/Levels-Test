@@ -2094,15 +2094,6 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-monticello/"
                     },
                     {
-                        date: "2019-03-??",
-                        lake: "Monticello",
-                        ramp: "Hwy 99",
-                        state: "SC",
-                        txDetail: "Qualifier 2",
-                        resultsLink: "",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-monticello/"
-                    },
-                    {
                         date: "2019-04-20",
                         lake: "Monticello",
                         ramp: "Hwy 99",
