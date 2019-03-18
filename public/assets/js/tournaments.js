@@ -264,13 +264,15 @@ $("#clearSubmit").on("click", function (e) {
 // Define generic filter function
 function filterData(batch, category, val, callback) {
     // multiple states could be listed so we need to check separately using .includes
-    if (category = "state") {
+    if (category === "state") {
         let filteredBatch = batch.filter(e => e.state.includes(val));
         callback(filteredBatch);
     }
+    else {
     // Filter by the category selected
     let filteredBatch = batch.filter(e => e[category] === val);
     callback(filteredBatch);
+    }
 }
 
 // Show or hide filter form

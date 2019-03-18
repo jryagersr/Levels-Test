@@ -1,4 +1,3 @@
-"usestrict";
 
 module.exports = [
 
@@ -2669,24 +2668,12 @@ module.exports = [
             },
             {
                 bodyOfWater: "Kerr", // lake name
-<<<<<<< HEAD
                 data: [{
                     elev: ["N/A"], //array of elevations
                     flow: ["Lots"], //array of flow
                     date: ["19-03/02"], //array of elevation dates
                     time: ["time"], //arrat if elevation times
                 }],
-=======
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flow
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"] //arrat if elevation times
-                    }
-                ],
->>>>>>> 62f4067cc2feac329a32bcdeb09fcf06e3b98e4d
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
