@@ -538,7 +538,7 @@ module.exports = [
                         ramp: "South Point",
                         state: "SC",
                         txDetail: "T2",
-                        resultsLink: "",
+                        resultsLink: "https://www.americanbassanglers.com/Results.php?Circuit=OS&Division=5&Date=03/09/2019",
                         entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=5&RegionName=R8"
                     },
                     {
@@ -988,7 +988,7 @@ module.exports = [
                         ramp: "NutBush",
                         state: "NC-VA",
                         txDetail: "T1",
-                        resultsLink: "",
+                        resultsLink: "https://www.americanbassanglers.com/Results.php?Circuit=OS&Division=19&Date=03/16/2019",
                         entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=19&RegionName=R8"
                     },
                     {
@@ -2593,7 +2593,7 @@ module.exports = [
                         ramp: "Kings Ferry",
                         state: "GA",
                         txDetail: "Qualifier 4",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-savannah-river-mar-9-2019-roundtree-pittman-win-the-last-qualifier-and-the-points-with-9-96-lbs/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-savannah-river/"
                     },
                     {
@@ -2848,7 +2848,7 @@ module.exports = [
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Qual 3",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-wateree-mar-4-2019-davis-allman-win-another-tough-one-at-wateree/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
                     },
                     {
@@ -2933,7 +2933,7 @@ module.exports = [
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 3",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/wateree-open-results-mar-9-2019-shane-cantley-michael-richardson-are-red-hot/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     }, {
                         date: "2019-03-23",
@@ -3091,7 +3091,7 @@ module.exports = [
                         ramp: "Buster Boyd",
                         state: "NC-SC",
                         txDetail: "Qualifier 2",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-wylie-march-10-2019/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wylie/"
                     },
                     {
@@ -3275,7 +3275,7 @@ module.exports = [
                         ramp: "Black Bear",
                         state: "NC",
                         txDetail: "CBC NC",
-                        resultsLink: "",
+                        resultsLink: "http://www.carolinasbasschallenge.com/results.php?id=2",
                         entryLink: "http://www.carolinasbasschallenge.com/tournaments.php"
                     },
                     {
@@ -4604,7 +4604,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "T1",
                         resultsLink: "",
-                        entryLink: "https://www.fomntt.com/divisioninfo.cfm?divid=88&getyear=2019"
+                        entryLink: "https://www.fomntt.com/pageflow.cfm?callpage=divisioninfo&divid=88&getyear=2019"
                     },
                     {
                         date: "2019-05-11",
@@ -4613,7 +4613,7 @@ module.exports = [
                         state: "NC-VA",
                         txDetail: "T2",
                         resultsLink: "",
-                        entryLink: "https://www.fomntt.com/divisioninfo.cfm?divid=88&getyear=2019"
+                        entryLink: "https://www.fomntt.com/pageflow.cfm?callpage=divisioninfo&divid=88&getyear=2019"
                     },
                     {
                         date: "2019-06-15",
@@ -4622,7 +4622,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "T3",
                         resultsLink: "",
-                        entryLink: "https://www.fomntt.com/divisioninfo.cfm?divid=88&getyear=2019"
+                        entryLink: "https://www.fomntt.com/pageflow.cfm?callpage=divisioninfo&divid=88&getyear=2019"
                     }
                 ]
             },
@@ -4637,7 +4637,7 @@ module.exports = [
                         state: "NC-VA",
                         txDetail: "T1",
                         resultsLink: "",
-                        entryLink: "https://www.fomntt.com/divisioninfo.cfm?divid=32&getyear=2019"
+                        entryLink: "https://www.fomntt.com/pageflow.cfm?callpage=divisioninfo&divid=32&getyear=2019"
                     },
                     {
                         date: "2019-04-06",
@@ -4646,7 +4646,7 @@ module.exports = [
                         state: "NC-VA",
                         txDetail: "T2",
                         resultsLink: "",
-                        entryLink: "https://www.fomntt.com/divisioninfo.cfm?divid=32&getyear=2019"
+                        entryLink: "https://www.fomntt.com/pageflow.cfm?callpage=divisioninfo&divid=32&getyear=2019"
                     },
                     {
                         date: "2019-04-27",
@@ -4655,7 +4655,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "T3",
                         resultsLink: "",
-                        entryLink: "https://www.fomntt.com/divisioninfo.cfm?divid=32&getyear=2019"
+                        entryLink: "https://www.fomntt.com/pageflow.cfm?callpage=divisioninfo&divid=32&getyear=2019"
                     },
                     {
                         date: "2019-05-18",
@@ -4664,7 +4664,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "T4",
                         resultsLink: "",
-                        entryLink: "https://www.fomntt.com/divisioninfo.cfm?divid=32&getyear=2019"
+                        entryLink: "https://www.fomntt.com/pageflow.cfm?callpage=divisioninfo&divid=32&getyear=2019"
                     },
                     {
                         date: "2019-06-15",
@@ -4673,7 +4673,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "T5",
                         resultsLink: "",
-                        entryLink: "https://www.fomntt.com/divisioninfo.cfm?divid=32&getyear=2019"
+                        entryLink: "https://www.fomntt.com/pageflow.cfm?callpage=divisioninfo&divid=32&getyear=2019"
                     }
                 ]
             }
@@ -4700,7 +4700,7 @@ module.exports = [
                         ramp: "Ledge Rock",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
-                        resultsLink: "",
+                        resultsLink: "http://piedmontbassclassics.com/316-19PBCResults.html",
                         entryLink: "http://piedmontbassclassics.com/2019PBC10KSpringTrailMainPage.html"
                     },
                     {
