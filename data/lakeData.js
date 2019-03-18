@@ -1300,6 +1300,32 @@ module.exports = [
         lakes: [
 
             {
+                bodyOfWater: "Allatoona", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["19-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 30, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0,
+                normalPool: 840.0,
+                lat: 34.132973,
+                long: -84.627509,
+                elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=13257039&p_parameter_type=Flow:Stor:Precip:Stage:Elev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+                flowURL: "none",
+                href: "/lakes/allatoona",
+                dataSource: ["ACE"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
+            {
                 bodyOfWater: "Lanier", // lake name
                 data: [
 
@@ -2669,14 +2695,6 @@ module.exports = [
             },
             {
                 bodyOfWater: "Kerr", // lake name
-<<<<<<< HEAD
-                data: [{
-                    elev: ["N/A"], //array of elevations
-                    flow: ["Lots"], //array of flow
-                    date: ["19-03/02"], //array of elevation dates
-                    time: ["time"], //arrat if elevation times
-                }],
-=======
                 data: [
 
                     {
@@ -2686,7 +2704,6 @@ module.exports = [
                         time: ["time"] //arrat if elevation times
                     }
                 ],
->>>>>>> 62f4067cc2feac329a32bcdeb09fcf06e3b98e4d
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -2945,6 +2962,32 @@ module.exports = [
                 adLogoUrl: ""
             },
             {
+                bodyOfWater: "Roanoke River (Halifax)", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flow
+                        date: ["19-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 30, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0.0,
+                normalPool: 0,
+                lat: 36.332777,
+                long: -77.581685,
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=0208062765&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
+                flowURL: "none",
+                href: "/lakes/roanokehfax",
+                dataSource: ["USGS"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
+            {
                 bodyOfWater: "Roanoke River (Hwy 45)", // lake name
                 data: [
 
@@ -2957,13 +3000,91 @@ module.exports = [
                 ],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: 0,
+                seaLevelDelta: 0.0,
                 normalPool: 0,
                 lat: 35.914,
                 long: -76.722,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=0208114150&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
                 flowURL: "none",
-                href: "/lakes/roanoke",
+                href: "/lakes/roanoke45",
+                dataSource: ["USGS"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
+            {
+                bodyOfWater: "Roanoke River (Roanoke Rapids)", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flow
+                        date: ["19-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 30, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 43.84,
+                normalPool: 0.0,
+                lat: 36.479291,
+                long: -77.662224,
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02080500&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
+                flowURL: "none",
+                href: "/lakes/roanokerap",
+                dataSource: ["USGS"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
+            {
+                bodyOfWater: "Roanoke River (Scotland Neck)", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flow
+                        date: ["19-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 30, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 5.77,
+                normalPool: 0,
+                lat: 36.208942,
+                long: -77.382983,
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02081000&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
+                flowURL: "none",
+                href: "/lakes/roanokescot",
+                dataSource: ["USGS"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
+            {
+                bodyOfWater: "Roanoke River (Williamston)", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flow
+                        date: ["19-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 30, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: -2.86,
+                normalPool: 0,
+                lat: 35.862824,
+                long: -77.044173,
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02081054&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
+                flowURL: "none",
+                href: "/lakes/roanokewill",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
@@ -4450,9 +4571,8 @@ module.exports = [
                 adLogoUrl: "http://jacksonsuperiorelectric.com/",
                 adTxSrc: "/static/assets/img/cbc-kerr-tx.png",
                 adTxUrl: "http://carolinasbasschallenge.com/tournament/72",
-                ramps:[
-                    {
-                    
+                ramps: [{
+
                         rampName: "County Line",
                         rampStatus: "Open",
                         rampType: "Concrete",
@@ -4463,11 +4583,11 @@ module.exports = [
                         rampTotal: 2,
                         rampBottom: -1,
                         rampTop: 309,
-                        lat: 36.522406, 
+                        lat: 36.522406,
                         long: -78.314121,
                     },
                     {
-                    
+
                         rampName: "Eastland",
                         rampStatus: "Open",
                         rampType: "Concrete",
@@ -4478,7 +4598,7 @@ module.exports = [
                         rampTotal: 2,
                         rampBottom: -1,
                         rampTop: 305,
-                        lat: 36.601554, 
+                        lat: 36.601554,
                         long: -78.369385,
                     },
                     {
@@ -4492,7 +4612,7 @@ module.exports = [
                         rampTotal: 6,
                         rampBottom: -1,
                         rampTop: 305.21,
-                        lat: 36.438336, 
+                        lat: 36.438336,
                         long: -78.342649,
                     },
                     {
@@ -4506,7 +4626,7 @@ module.exports = [
                         rampTotal: 2,
                         rampBottom: -1,
                         rampTop: 310,
-                        lat: 36.503098, 
+                        lat: 36.503098,
                         long: -78.376210,
                     },
                     {
@@ -4520,7 +4640,7 @@ module.exports = [
                         rampTotal: 2,
                         rampBottom: -1,
                         rampTop: 309,
-                        lat: 36.539448, 
+                        lat: 36.539448,
                         long: -78.343455,
                     },
                     {
@@ -4534,7 +4654,7 @@ module.exports = [
                         rampTotal: 2,
                         rampBottom: -1,
                         rampTop: 309,
-                        lat: 36.539448, 
+                        lat: 36.539448,
                         long: -78.343455,
                     },
                     {
@@ -4548,11 +4668,11 @@ module.exports = [
                         rampTotal: 2,
                         rampBottom: -1,
                         rampTop: 309,
-                        lat: 36.533100, 
+                        lat: 36.533100,
                         long: -78.343266,
                     },
                     {
-                    
+
                         rampName: "Ivy Hill",
                         rampStatus: "Open",
                         rampType: "Concrete",
@@ -4563,11 +4683,11 @@ module.exports = [
                         rampTotal: 2,
                         rampBottom: -1,
                         rampTop: 305,
-                        lat: 36.575966, 
+                        lat: 36.575966,
                         long: -78.418850,
                     },
                     {
-                    
+
                         rampName: "Longwood",
                         rampStatus: "Open",
                         rampType: "Concrete",
@@ -4578,7 +4698,7 @@ module.exports = [
                         rampTotal: 2,
                         rampBottom: -1,
                         rampTop: 305,
-                        lat: 36.572836, 
+                        lat: 36.572836,
                         long: -78.549360,
                     },
                     {
@@ -4592,7 +4712,7 @@ module.exports = [
                         rampTotal: 2,
                         rampBottom: -1,
                         rampTop: 310,
-                        lat: 36.585802, 
+                        lat: 36.585802,
                         long: -78.305442,
                     },
                     {
@@ -4606,7 +4726,7 @@ module.exports = [
                         rampTotal: 4,
                         rampBottom: -1,
                         rampTop: 312,
-                        lat: 36.414745, 
+                        lat: 36.414745,
                         long: -78.398793,
                     },
                     {
@@ -4620,7 +4740,7 @@ module.exports = [
                         rampTotal: 3,
                         rampBottom: -1,
                         rampTop: 310,
-                        lat: 36.633388, 
+                        lat: 36.633388,
                         long: -78.534784,
                         directionsURL: "https://www.google.com/maps/dir//36.633388,-78.534784/@36.6324129,-78.5388828,1439m/data=!3m1!1e3"
                     }
