@@ -1582,57 +1582,6 @@ module.exports = [
                     }
                 ]
             },
-            /*{
-                trail: "Clarks Hill",
-                tournaments: [
-
-                    {
-                        date: "2018-11-18",
-                        lake: "Clarks Hill",
-                        ramp: "Wildwood",
-                        state: "SC",
-                        txDetail: "Qualifier 1",
-                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-clarks-hill/",
-                        entryLink: ""
-                    },
-                    {
-                        date: "202018-12-09",
-                        lake: "Clarks Hill",
-                        ramp: "Wildwood",
-                        state: "SC",
-                        txDetail: "Qualifier 2",
-                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-clarks-hill/",
-                        entryLink: ""
-                    },
-                    {
-                        date: "2019-01-13",
-                        lake: "Clarks Hill",
-                        ramp: "Wildwood",
-                        state: "SC",
-                        txDetail: "Qualifier 3",
-                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-clarks-hill/",
-                        entryLink: ""
-                    },
-                    {
-                        date: "2019-01-27",
-                        lake: "Clarks Hill",
-                        ramp: "Wildwood",
-                        state: "SC",
-                        txDetail: "Qualifier 4",
-                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-clarks-hill/",
-                        entryLink: ""
-                    },
-                    {
-                        date: "2019-02-10",
-                        lake: "Clarks Hill",
-                        ramp: "Wildwood",
-                        state: "SC-GA",
-                        txDetail: "Final",
-                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-clarks-hill/",
-                        entryLink: ""
-                    }
-                ]
-            },*/
             {
                 trail: "Coastal (SC)",
                 tournaments: [
