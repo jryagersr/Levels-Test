@@ -294,6 +294,13 @@ module.exports = function (app) {
         if (error) {
           callback(error);
         };
+
+        // Check to see if data returned is undefined
+        if (body == undefined) {  
+          data = "Data service temporarily unavailable. Please check back later (503)";
+          callback(null, data);
+          // if not undefined proceed with function
+        } else {
         // if statement added for bug
         // add this in later: 
         // /<[a-z][\s\S]*>/i.test() 
@@ -505,6 +512,7 @@ module.exports = function (app) {
 
           callback(null, displayBatch.reverse());
         }
+      }
       })
     }
     // Date Conversion functions from thisLake.js

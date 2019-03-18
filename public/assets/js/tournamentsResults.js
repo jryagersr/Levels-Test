@@ -1,4 +1,3 @@
-"usestrict";
 
 var txBatch = [];
 var currentBatch = [];
@@ -45,7 +44,7 @@ function populateFilter(data) {
                 }
                 if ($.inArray(organizer + " - " + trail, dupeArray) === -1) {
                     var option = $("<option>" + organizer + " - " + trail + "</option>");
-                    $(option).attr("data-id", organizer + " - " + trail);
+                    $(option).attr("data-id", trail);
                     $("#trailSelect").append(option);
                     // Track the new option in dupeArray
                     dupeArray.push(organizer + " - " + trail);

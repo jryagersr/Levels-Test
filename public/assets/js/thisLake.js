@@ -378,7 +378,6 @@ function flowUSGS(callback) {
 
 // Function to make elev ACE call
 function dataACE(callback) {
-    console.log(elevURL);
     // API call for elev data
     $.ajax({
         url: "/api/a2w",
@@ -390,7 +389,6 @@ function dataACE(callback) {
         }
     })
         .then(function (data) {
-            console.log(data);
             // if statement added for bug when A2W is down
             if (data.includes("Data service temporarily unavailable. Please check back later")) {
                 currentLake.bodyOfWater = currentLake.bodyOfWater + " <br><h3>Water Level sensor down, try again later or report this outage.</h3>";
@@ -753,7 +751,6 @@ function loadAds() {
 // User clicked on Tournaments Button on Lake page
 // display tournaments filtered by lake
 $("#lakeTournaments").on("click", function (e) {
-    console.log("Made it to function lakesTournament")
 })
 
 // Get all lake data from lakeData.js
@@ -764,7 +761,6 @@ $.ajax({
     method: "GET",
 })
     .then(function (data) {
-        console.log(data);
         for (var i = 0; i < data.length; i++) {
             let result = data[i].lakes.find(obj => obj.href === "/lakes/" + lakeRoute);
             if (typeof result !== 'undefined') {
@@ -772,7 +768,6 @@ $.ajax({
                 break;
             }
         }
-        console.log(currentLake);
         // Set all of our baseline data
         bodyOfWaterName = currentLake.bodyOfWater;
         lakePool = currentLake.normalPool;
