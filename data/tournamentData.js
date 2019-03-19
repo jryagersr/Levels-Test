@@ -811,7 +811,7 @@ module.exports = [
                         ramp: "Occonneechee",
                         state: "NC-VA",
                         txDetail: "Gold 3",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-kerr-march-17-2019-the-houchins-claim-the-top-of-the-mountain-17-87-lbs-2440-00/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
                     },
                     {
@@ -2621,8 +2621,8 @@ module.exports = [
                             ramp: "Alcoa Access",
                             state: "NC",
                             txDetail: "Tarheel Bass Series 1",
-                            resultsLink: "",
-                            entryLink: ""
+                            resultsLink: "http://tarheelbassseries.com/results/",
+                            entryLink: "http://tarheelbassseries.com/tournaments/"
                         },
                         {
                             date: "2019-04-27",
@@ -2631,7 +2631,7 @@ module.exports = [
                             state: "NC",
                             txDetail: "Tarheel Bass Series 2",
                             resultsLink: "",
-                            entryLink: ""
+                            entryLink: "http://tarheelbassseries.com/tournaments/"
                         },
                         {
                             date: "2019-05-18",
@@ -2640,7 +2640,7 @@ module.exports = [
                             state: "NC",
                             txDetail: "Tarheel Bass Series 3",
                             resultsLink: "",
-                            entryLink: ""
+                            entryLink: "http://tarheelbassseries.com/tournaments/"
                         },
                         {
                             date: "2019-06-15",
@@ -2649,7 +2649,7 @@ module.exports = [
                             state: "NC",
                             txDetail: "Tarheel Bass Series 4",
                             resultsLink: "",
-                            entryLink: ""
+                            entryLink: "http://tarheelbassseries.com/tournaments/"
                         }
                     ]
                 }]
