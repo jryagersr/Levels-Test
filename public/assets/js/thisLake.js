@@ -385,7 +385,8 @@ function dataACE(callback) {
         data: {
             a2wURL: elevURL,
             bodyOfWater: bodyOfWaterName,
-            normalPool: lakePool
+            normalPool: lakePool,
+            elevDataInterval: currentLake.elevDataInterval
         }
     })
         .then(function (data) {

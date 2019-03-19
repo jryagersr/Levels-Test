@@ -2633,7 +2633,8 @@ module.exports = [
                     }
                 ],
                 refreshInterval: 30, //minutes
-                lastRefresh: "12/31/18", // a Date 
+                lastRefresh: "12/31/18", // a Date
+                elevDataInterval: 4, // Time between elevation data 4 = 15min, 2 = 30 min 1 = 60 min
                 seaLevelDelta: 0,
                 normalPool: 216.0,
                 lat: 35.75,
@@ -2705,6 +2706,7 @@ module.exports = [
                 ],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
+                elevDataInterval: 4, // Time between elevation data 4 = 15min, 2 = 30 min 1 = 60 min
                 seaLevelDelta: 0,
                 normalPool: 300.0,
                 lat: 36.56,
