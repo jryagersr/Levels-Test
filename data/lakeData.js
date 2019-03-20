@@ -1325,6 +1325,32 @@ module.exports = [
                 adLogoUrl: ""
             },
             {
+                bodyOfWater: "Eufaula", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["18-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 30, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0,
+                normalPool: 188.0,
+                lat: 31.681074,
+                long: -85.097779,
+                elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=25898039&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+                flowURL: "none",
+                href: "/lakes/eufaulaal",
+                dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
+            {
                 bodyOfWater: "Lanier", // lake name
                 data: [
 
@@ -1377,7 +1403,7 @@ module.exports = [
                 adLogoUrl: ""
             },
             {
-                bodyOfWater: "Thurmond", // lake name
+                bodyOfWater: "Thurmond", // lake name also "ClarksHill"
                 data: [
 
                     {
@@ -1429,7 +1455,8 @@ module.exports = [
                 adLogoUrl: ""
             }
         ]
-    }, {
+    }, 
+    {
         state: "Illinois",
         lakes: [
 
@@ -1590,8 +1617,9 @@ module.exports = [
                 normalPool: 1398.0,
                 lat: 43.375364,
                 long: -95.153747,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06604200&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06604200&period=PT168H&parameterCd=00065,00010&siteType=LK&siteStatus=all",
                 flowURL: "none",
+                tempURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06604200&period=Pt168H&parameterCd=00010&siteType=LK&siteStatus=all",
                 href: "/lakes/westokoboji",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
@@ -1631,7 +1659,7 @@ module.exports = [
                 adLogoUrl: ""
             },
             {
-                bodyOfWater: "Malvern", // lake name
+                bodyOfWater: "Melvern", // lake name
                 data: [
 
                     {
@@ -1649,7 +1677,7 @@ module.exports = [
                 long: -95.729820,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06910997&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
                 flowURL: "none",
-                href: "/lakes/malvern",
+                href: "/lakes/melvern",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
@@ -2337,7 +2365,34 @@ module.exports = [
                 long: -73.363063,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04294413&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
                 flowURL: "none",
+                tempURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04294413&period=Pt168H&parameterCd=00010&siteType=LK&siteStatus=all",
                 href: "/lakes/champlain",
+                dataSource: ["USGS"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
+            {
+                bodyOfWater: "Ontario", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["19-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 30, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0,
+                normalPool: 95.50,
+                lat: 44.561815,
+                long: -73.363063,
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04220259&period=Pt168H&parameterCd=72214&siteType=LK&siteStatus=all",
+                flowURL: "none",
+                href: "/lakes/ontariony",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
@@ -2449,6 +2504,7 @@ module.exports = [
                 long: -78.70,
                 elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1745041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
                 flowURL: "none",
+                tempURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02087182&period=Pt168H&parameterCd=00010&siteType=LK&siteStatus=all",
                 href: "/lakes/falls",
                 dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
@@ -2582,11 +2638,11 @@ module.exports = [
                 ],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: 10.21,
+                seaLevelDelta: 0.0,
                 normalPool: 410.0,
                 lat: 36.49,
                 long: -79.08,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02077280&period=PT168H&parameterCd=00062&siteType=ST&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02077280&period=PT168H&parameterCd=62614&siteType=ST&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/hyco",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -2981,6 +3037,7 @@ module.exports = [
                 long: -77.581685,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=0208062765&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
                 flowURL: "none",
+                tempURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=0208062765&period=Pt168H&parameterCd=00010&siteType=LK&siteStatus=all",
                 href: "/lakes/roanokehfax",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
@@ -3007,6 +3064,7 @@ module.exports = [
                 long: -76.722,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=0208114150&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
                 flowURL: "none",
+                tempURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=0208114150&period=Pt168H&parameterCd=00010&siteType=LK&siteStatus=all",
                 href: "/lakes/roanoke45",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
@@ -3710,6 +3768,7 @@ module.exports = [
                 long: -79.93,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02172053&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
                 flowURL: "none",
+                tempURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02172053&period=Pt168H&parameterCd=00010&siteType=LK&siteStatus=all",
                 href: "/lakes/cooperriver",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
@@ -4957,11 +5016,11 @@ module.exports = [
                 ],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: 861.86,
+                seaLevelDelta: 0.0,
                 normalPool: 879.0,
                 lat: 42.569355,
                 long: -88.458597,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=423525088260400&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=423525088260400&period=PT168H&parameterCd=62615&siteType=LK&siteStatus=all",
                 flowURL: "none",
                 href: "/lakes/geneva",
                 dataSource: ["USGS"], // array of calls to make to retrieve data
