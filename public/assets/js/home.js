@@ -15,6 +15,7 @@ $.ajax({
 })
     .then(function (data) {
         lakeData = data;
+        console.log(lakeData);
 
 
         // FUNCTIONS

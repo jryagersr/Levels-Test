@@ -1,4 +1,3 @@
-
 const mongoose = require("mongoose");
 var express = require("express"),
   app = express(),
@@ -44,7 +43,6 @@ module.exports = function (app) {
     var data = require("../data/lakeData");
     res.json(data);
   })
-
 
   // Route to retrieve data for cube carolinas
   app.get("/api/cube", function (request, response) {
@@ -254,6 +252,7 @@ module.exports = function (app) {
     let a2wURL = request.query.a2wURL;
     let bodyOfWater = request.query.bodyOfWater;
     let normalPool = request.query.normalPool;
+    let elevDataInterval = request.query.elevDataInterval;
 
     getData(a2wURL, function (error, data) {
       if (error) {
@@ -388,19 +387,24 @@ module.exports = function (app) {
               // Convert UTC date to local time
               // let localTime = convertStringToUTC(data[ACEElevIndex].Elev[ACEElevNum].time)
 
-
               // Create our increment and loop through each value
               // For each value create our associated table html
               let i = ACEFlowNum;
               let flow = 0;
               let lastHourDisplayed = -1; // for Istokpoga
               let displayFlowData = true; // This is for this loop, some lakes we have to sort through the times (Istokpoga, FL)
-              let jIncrement = 1; // default
+              let jIncrement = 1; // default to 1 hour between elevation data
+
+              if (typeof elevDataInterval !== 'undefined') 
+              // Currently only for Jordan, when Flow Data is missing. This uses data in lakeData.js (elevDataInterval)
+              // to set the jIncrement to 4 when there is no Flow Data. This stops Jordan elev data from being displayed
+              // every 15 minutes instead of on the hour. Others may require this in the future (ie Kerr).
+                jIncrement = Number(elevDataInterval);
 
               // if the elev length is more than 3x the flow length, it's probably 
               // elevs every 15 minutes and flows on the hour 4:1 ratio
               if (ACEFlow && (data[ACEElevIndex].Elev.length / 3 > data[ACEFlowIndex].Outflow.length))
-                jIncrement = 4;
+                jIncrement = 4; // Set to 15 minutes between elevation data
 
               // Lower the increment if the elev data is daily
               if (dailyACEData)
