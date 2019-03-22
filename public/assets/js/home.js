@@ -10,11 +10,12 @@ let lakeTemplate = '';
 
 // get all of our lake data
 $.ajax({
-    url: "/api/lake-data",
+    url: "/api/find-all-lakes",
     method: "GET",
 })
     .then(function (data) {
         lakeData = data;
+        console.log(lakeData);
 
 
         // FUNCTIONS

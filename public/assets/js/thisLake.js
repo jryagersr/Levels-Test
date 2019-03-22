@@ -163,14 +163,14 @@ function buildElevChart(data) {
         // if we're past the first entry
         if (i > 0) {
             // if we're still on the same day
-            if (data[i].date === data[i-1].date) {
+            if (data[i].date === data[i - 1].date) {
                 // add to our average variables
                 sumOfElevs += data[i].elev;
                 divisor++
             }
             // else we're on a new day. so push data and reset averages
             else {
-                labelBatch.push(data[i-1].date);
+                labelBatch.push(data[i - 1].date);
                 dataElevBatch.push(sumOfElevs / divisor); // calculate average
                 sumOfElevs = data[i].elev;
                 divisor = 1;
@@ -395,20 +395,20 @@ function dataACE(callback) {
                 currentLake.bodyOfWater = currentLake.bodyOfWater + " <br><h3>Water Level sensor down, try again later or report this outage.</h3>";
             }
             else {
-            // Check to see that ACE returned data
-            if (data.length > 0) {
-                displayBatch = data;
+                // Check to see that ACE returned data
+                if (data.length > 0) {
+                    displayBatch = data;
 
-                let localTime = new Date(displayBatch[0].date);
-                currentDate = localTime.toString().substring(0, 10);;
-                currentTime = localTime.toString().substring(16, 21);
-                currentElev = displayBatch[0].elev;
-                currentDelta = (currentElev - lakePool).toFixed(2);
-            } else
-                currentLake.bodyOfWater = currentLake.bodyOfWater + " <br><h3>Water Level sensor down, try again later or report this outage.</h3>";
+                    let localTime = new Date(displayBatch[0].date);
+                    currentDate = localTime.toString().substring(0, 10);;
+                    currentTime = localTime.toString().substring(16, 21);
+                    currentElev = displayBatch[0].elev;
+                    currentDelta = (currentElev - lakePool).toFixed(2);
+                } else
+                    currentLake.bodyOfWater = currentLake.bodyOfWater + " <br><h3>Water Level sensor down, try again later or report this outage.</h3>";
 
-            callback(null, displayBatch);
-        }
+                callback(null, displayBatch);
+            }
         })
 }
 
@@ -754,21 +754,18 @@ function loadAds() {
 $("#lakeTournaments").on("click", function (e) {
 })
 
-// Get all lake data from lakeData.js
+// Get current lake from database
 // Declare variable to hold currentLake object
 var currentLake = {};
 $.ajax({
-    url: "/api/lake-data",
+    url: "/api/find-one-lake",
     method: "GET",
+    data: {
+        lakeName: lakeRoute
+    }
 })
     .then(function (data) {
-        for (var i = 0; i < data.length; i++) {
-            let result = data[i].lakes.find(obj => obj.href === "/lakes/" + lakeRoute);
-            if (typeof result !== 'undefined') {
-                currentLake = result;
-                break;
-            }
-        }
+        currentLake = data;
         // Set all of our baseline data
         bodyOfWaterName = currentLake.bodyOfWater;
         lakePool = currentLake.normalPool;
@@ -836,7 +833,9 @@ $.ajax({
                 loadAds();
             }
         }
+
     })
+
 
 // Api call to fetch weather data
 // let apiKey = "d620419cfbb975f425c6262fefeef8f3";

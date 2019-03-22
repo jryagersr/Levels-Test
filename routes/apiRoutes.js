@@ -2,8 +2,8 @@ const mongoose = require("mongoose");
 var express = require("express"),
   app = express(),
   request = require("request"),
-  _ = require("underscore"),
-  fs = require('fs');
+  _ = require("underscore");
+
 
 // Holds our display data to send into buildTable function
 let displayBatch = [];
@@ -15,41 +15,19 @@ let elevationAdjust = 0;
 
 // var txData = [];
 
-// Require all models
-var db = require("../models")();
-
-// // Connect to the Mondo DB
-// var databaseUri = 'mongodb://localhost/BassSavvyTestDb';
-
-// if (process.env.MONGODB_URI) {
-//   db.connect(process.env.MONGODB_URI);
-// } else {
-//   db.connect(databaseUri);
-// }
-
 // ===============================================================================
 // ROUTING
 // ===============================================================================
 
 module.exports = function (app) {
+  require("./dbRoutes")(app);
   var $ = require("jquery");
   var request = require("request");
-  // API GET Requests
-  // ---------------------------------------------------------------------------
 
-  // Route to retrieve a single lake's data from db
-  // app.get("/api/lakes/:lakeName", function (req, res) {
-  //   let lakeName = req.params.lakeName
-  //   db.model("Lake").find({ name: lakeName })
-  //     .exec(function (err, data) {
-  //       if (err) {
-  //         res.send(lakeName + " lake data not found");
-  //       } else {
-  //         res.json(data)
-  //       }
-  //     })
-  // })
 
+  // ===============================================================================
+  // GET ROUTES
+  // ===============================================================================
 
   // Route to retrieve lakes in a specific state
   app.get("/api/states/:state", function (req, res) {
@@ -65,7 +43,6 @@ module.exports = function (app) {
     var data = require("../data/lakeData");
     res.json(data);
   })
-
 
   // Route to retrieve data for cube carolinas
   app.get("/api/cube", function (request, response) {
@@ -365,7 +342,7 @@ module.exports = function (app) {
               let isLakeIstokpoga = bodyOfWater == 'Istokpoga'; // default value, this is when the ACE data is Fucked Up like Istokpoga in Florida, Damn...
 
               // These have 120 elev data and 5 Flow, ignore flow data
-              if (['Truman', 'Pomme De Terre', "Stockton", "Rend", ].includes(bodyOfWater))
+              if (['Truman', 'Pomme De Terre', "Stockton", "Rend",].includes(bodyOfWater))
                 ACEFlow = false;
 
               // Get current Date, Time and Elev
@@ -409,7 +386,6 @@ module.exports = function (app) {
 
               // Convert UTC date to local time
               // let localTime = convertStringToUTC(data[ACEElevIndex].Elev[ACEElevNum].time)
-
 
               // Create our increment and loop through each value
               // For each value create our associated table html
@@ -804,36 +780,6 @@ module.exports = function (app) {
     }
   })
 
-
-
-
-  // API POST Requests
-  // ---------------------------------------------------------------------------
-
-  // Route to update database with new lake data
-  // app.post("/api/usgs", (req, res) => {
-  //   console.log("nameID: " + req.body.nameID)
-  //   req.body.newBatch.forEach(function (e) {
-  //     db.model('Lake').updateOne({
-  //       _id: ObjectId(req.body.nameID),
-  //       data: [{
-  //         level: e.value,
-  //         date: e.date,
-  //         time: e.time
-  //       }]
-  //     })
-  //       .then(function (data) {
-  //         res.json(data);
-  //       })
-  //       .catch(function (err) {
-  //         res.json(err);
-  //       });
-  //   })
-  // });
-
-
-  /***************************************************************************************************************************************** */
-  //Start of dukeData
   // Route to retrieve DUKE data
   app.get("/api/duke", function (request, response) {
     let dukeURL = request.query.dukeDataURL;
@@ -867,10 +813,6 @@ module.exports = function (app) {
     }
   });
 
-  //End of dukeData
-
-  /***************************************************************************************************************************************** */
-
   // Route to retrieveSJRWMD data
   app.get("/api/sjrwmd", function (request, response) {
     let sjrwmdURL = request.query.sjrwmdDataURL;
@@ -902,7 +844,7 @@ module.exports = function (app) {
         // Get the most recent 30 days data
         for (i = 0; i < 30; i++) {
           // find next end of row
-          for (j = j - 5; body.substr(j, 5) !== "</tr>"; j--) {}
+          for (j = j - 5; body.substr(j, 5) !== "</tr>"; j--) { }
 
           data.push({
             lakeName: lakeName,
@@ -922,7 +864,6 @@ module.exports = function (app) {
 
   });
 
-  /***************************************************************************************************************************************** */
 
   // Route to retrieve TWDB data
   app.get("/api/twdb", function (request, response) {
@@ -977,16 +918,18 @@ module.exports = function (app) {
 
   });
 
-  /***************************************************************************************************************************************** */
+  // ===============================================================================
+  // GET DATA ROUTES
+  // ===============================================================================
+
   // This reads the tournament file for the Tournaments Page
   app.get("/api/tournaments", function (request, response) {
     // Import our txData from tournamentData.js file
     var txData = require("../data/tournamentData");
-
     response.json(txData);
   });
 
-
+  // retrieve zipData file
   app.get("/api/zip", function (request, response) {
     // obtain user's zip from client
     let userZip = request.query.userZip;

@@ -135,22 +135,22 @@ let currentURL = window.location.href;
 let state = decodeURI(currentURL.split("/")[4]); // Reduce the string to just our state name
 let url = window.location.origin + "/api/states/" + state; // Build url for ajax call
 
-$.ajax({
-        url: url, // /api/states/:state
+    $.ajax({
+        url: "/api/find-one-state",
         method: "GET",
         data: {
-            state: state
+            stateName: state
         }
     })
     .then(function (data) {
         console.log(data);
-        $("#stateName").append(data.state);
-        for (var i = 0; i < data.lakes.length; i++) {
+        $("#stateName").append(state);
+        for (var i = 0; i < data.length; i++) {
             var row = $(`
             <tr>
             <td class="text-left">
-                <a class="lake-link" href="${data.lakes[i].href}">
-                    <h5>${data.lakes[i].bodyOfWater}</h5>
+                <a class="lake-link" href="${data[i].href}">
+                    <h5>${data[i].bodyOfWater}</h5>
                 </a>
             </td>
         </tr>`)
