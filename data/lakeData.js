@@ -2567,8 +2567,8 @@ module.exports = [
                 dataSource: ["ALAB", "loadAds"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
-                adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-                adLogoUrl: "https://www.custombassrods.com/",
+                adLogoSrc: "/static/assets/img/mjhibanner.png",
+                adLogoUrl: "",
                 adTxSrc: "",
                 adTxUrl: ""
             },
@@ -2622,8 +2622,8 @@ module.exports = [
                 dataSource: ["CUBE", "loadAds"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
-                adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-                adLogoUrl: "https://www.custombassrods.com/"
+                adLogoSrc: "/static/assets/img/brucatobanner.png",
+                adLogoUrl: "www.brucatoFIS.com",
             },
             {
                 bodyOfWater: "Hyco", // lake name
@@ -2701,8 +2701,8 @@ module.exports = [
                 dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
-                adLogoSrc: "/static/assets/img/brucatobanner.png",
-                adLogoUrl: "www.brucatoFIS.com",
+                adLogoSrc: "/static/assets/img/jbrodsbanner.png",
+                adLogoUrl: "https://www.custombassrods.com/"
                 adCharitySrc: "/static/assets/img/warriors-on-the-water.png",
                 adCharityUrl: "https://www.warriorsonthewater.com/",
                 ramps: [{
