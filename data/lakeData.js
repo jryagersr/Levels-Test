@@ -1,4 +1,3 @@
-
 module.exports = [
 
     {
@@ -1455,7 +1454,7 @@ module.exports = [
                 adLogoUrl: ""
             }
         ]
-    }, 
+    },
     {
         state: "Illinois",
         lakes: [
@@ -2511,7 +2510,7 @@ module.exports = [
                 entryLink: "",
                 adLogoSrc: "/static/assets/img/jsegenerac.png",
                 adLogoUrl: "http://jacksonsuperiorelectric.com/",
-                adTxSrc: "/static/assets/img/catt-oldnorth-falls-032319.png",
+                adTxSrc: "",
                 adTxUrl: "https://www.cattteamtrail.com/divisions/catt-old-north/"
             },
             // Fontana Data is not correct for TVA. It says Fontana will be 'sluicing' util further notice. Not sure what that means.
@@ -2702,9 +2701,9 @@ module.exports = [
                 resultsLink: "undefined",
                 entryLink: "",
                 adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-                adLogoUrl: "https://www.custombassrods.com/"
-                adCharitySrc: "/static/assets/img/warriors-on-the-water.png",
-                adCharityUrl: "https://www.warriorsonthewater.com/",
+                adLogoUrl: "https://www.custombassrods.com/",
+                adTxSrc: "/static/assets/img/catt-oldnorth-jordan.png",
+                adTxUrl: "https://www.cattteamtrail.com/divisions/catt-old-north/",
                 ramps: [{
                         rampName: "Farrington Point",
                         rampType: "Concrete",
@@ -3228,6 +3227,116 @@ module.exports = [
                 entryLink: "",
                 adLogoSrc: "/static/assets/img/jbrodsbanner.png",
                 adLogoUrl: "https://www.custombassrods.com/"
+            }
+        ]
+    },
+    {
+        state: "Ohio",
+        lakes: [
+
+            /*{
+                bodyOfWater: "Indian Lake", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["19-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 30, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0.0,
+                normalPool: 900.7,
+                lat: 39.082309,
+                long: -84.872313,
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03260500&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
+                flowURL: "none",
+                href: "/lakes/indianoh",
+                dataSource: ["USGS"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },*/
+            {
+                bodyOfWater: "Ohio River (Cincy)", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["19-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 30, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0.0,
+                normalPool: 428.88,
+                lat: 39.094311,
+                long: -84.510556,
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03255000&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
+                flowURL: "none",
+                href: "/lakes/ohiorivercin",
+                dataSource: ["USGS"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
+            {
+                bodyOfWater: "Ohio River (Tanners)", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["19-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 30, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0.0,
+                normalPool: 422.68,
+                lat: 39.082309,
+                long: -84.872313,
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03276650&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
+                flowURL: "none",
+                href: "/lakes/ohiorivertan",
+                dataSource: ["USGS"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
+            },
+            {
+                bodyOfWater: "Misquito Lake", // lake name
+                data: [
+
+                    {
+                        elev: ["N/A"], //array of elevations
+                        flow: ["Lots"], //array of flows
+                        date: ["19-03/02"], //array of elevation dates
+                        time: ["time"], //arrat if elevation times
+                    }
+                ],
+                refreshInterval: 30, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 0.0,
+                normalPool: 900.7,
+                lat: 39.082309,
+                long: -84.872313,
+                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03095000&period=PT168H&parameterCd=62615&siteType=LK&siteStatus=all",
+                flowURL: "none",
+                href: "/lakes/misquito",
+                dataSource: ["USGS"], // array of calls to make to retrieve data
+                resultsLink: "undefined",
+                entryLink: "",
+                adLogoSrc: "",
+                adLogoUrl: ""
             }
         ]
     },

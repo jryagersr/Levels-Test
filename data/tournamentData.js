@@ -57,8 +57,7 @@ module.exports = [
     },
     {
         organization: "ABA",
-        trails: [
-            {
+        trails: [{
                 trail: "Open Series NC",
                 tournaments: [
 
@@ -109,7 +108,7 @@ module.exports = [
                     }
                 ]
             },
-            
+
             {
                 trail: "Open Series VA",
                 tournaments: [
@@ -230,7 +229,7 @@ module.exports = [
             ]
         }]
     },
- 
+
     {
         organization: "Bojangles",
         trails: [{
@@ -940,7 +939,7 @@ module.exports = [
                         ramp: "Dreher",
                         state: "SC",
                         txDetail: "Qualifier 7",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-march-23rd-lake-murray-sc-doug-lown-rhet-manus-claim-1st-19-83-lbs-widened-their-point-lead/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-murray/"
                     },
                     {
@@ -1061,7 +1060,7 @@ module.exports = [
                         ramp: "Ledge Rock",
                         state: "NC",
                         txDetail: "Qualifier 2",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-old-north-falls-nc-march-23-2019-dennis-keith-allen-take-home-2740-00-22-37-lbs/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
                     },
                     {
@@ -1559,7 +1558,7 @@ module.exports = [
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 6",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-wateree-march-23-2019-compton-strickland-weigh-in-21-49-lbs-take-home-1918-00/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
                     },
                     {
@@ -1625,7 +1624,7 @@ module.exports = [
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 4",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-wateree-open-march-23-2019-neal-price-weigh-in-a-solid-limit-at-15-32-lbs-claim-1st-980-00/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
                     {
@@ -1826,7 +1825,7 @@ module.exports = [
                         ramp: "Alcoa",
                         state: "NC",
                         txDetail: "Qualifier 2",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-yadkin-badin-lake-mar-3-2019-ray-giles-whack-em-19-01-lbs/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
                     },
                     {
@@ -1835,7 +1834,7 @@ module.exports = [
                         ramp: "Tamarac",
                         state: "NC",
                         txDetail: "Qualifier 3",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-yadkin-high-rock-march-23-2019-phillips-blankinship-break-the-dirty-30-33-50-lbs-bf-8-05-lbs/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
                     },
                     {
@@ -2184,6 +2183,55 @@ module.exports = [
         trails: [
 
             {
+                trail: "BFL Buckeye",
+                tournaments: [{
+                        date: "2019-05-11",
+                        lake: "Grand Lake",
+                        ramp: "West Bank",
+                        state: "OH",
+                        txDetail: "FLW",
+                        resultsLink: "",
+                        entryLink: ""
+                    },
+                    {
+                        date: "2019-06-08",
+                        lake: "Ohio Rvr",
+                        ramp: "Lawrenceburg",
+                        state: "IN",
+                        txDetail: "FLW",
+                        resultsLink: "",
+                        entryLink: ""
+                    },
+                    {
+                        date: "2019-07-27",
+                        lake: "Indian",
+                        ramp: "Indian Lake SP",
+                        state: "OH",
+                        txDetail: "FLW",
+                        resultsLink: "",
+                        entryLink: ""
+                    },
+                    {
+                        date: "2019-08-17",
+                        lake: "Ohio Rvr",
+                        ramp: "Lawrenceburg",
+                        state: "IN",
+                        txDetail: "FLW",
+                        resultsLink: "",
+                        entryLink: ""
+                    },
+                    {
+                        date: "2019-09-21",
+                        lake: "Mosquito",
+                        ramp: "Mosquito Lake SP",
+                        state: "OH",
+                        txDetail: "FLW",
+                        resultsLink: "",
+                        entryLink: ""
+                    }
+                ]
+            },
+            {
                 trail: "BFL Hoosier",
                 tournaments: [
 
@@ -2286,7 +2334,7 @@ module.exports = [
                     }
                 ]
             },
-               {
+            {
                 trail: "BFL Piedmont",
                 tournaments: [
 
@@ -2587,7 +2635,7 @@ module.exports = [
                         ramp: "Crosspointe",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
-                        resultsLink: "",
+                        resultsLink: "http://piedmontbassclassics.com/323-19Results.html?fbclid=IwAR1ro4qK-pWrvKJL6oth8SjA7ZdWnEyDPLhUBwbeOVBly_dSy_d1Tiwk2xQ",
                         entryLink: "http://piedmontbassclassics.com/2019CashionRodsHartsCustomSetsSpringTrailMainPage.html"
                     },
                     {
@@ -2614,8 +2662,7 @@ module.exports = [
                 organization: "Tarheel Bass",
                 trails: [{
                     trail: "Team Trail",
-                    tournaments: [
-                        {
+                    tournaments: [{
                             date: "2019-03-02",
                             lake: "Badin",
                             ramp: "Alcoa Access",
@@ -2654,7 +2701,7 @@ module.exports = [
                     ]
                 }]
             }
-        
+
         ]
     }
 ]
