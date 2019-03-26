@@ -128,7 +128,7 @@ module.exports = [
                         ramp: "Holly Grove",
                         state: "NC-VA",
                         txDetail: "T2",
-                        resultsLink: "",
+                        resultsLink: "https://www.americanbassanglers.com/Results.php?Circuit=OS&Division=19&Date=03/23/2019",
                         entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=19&RegionName=R8"
                     },
                     {
@@ -423,7 +423,7 @@ module.exports = [
                         ramp: "Cypress Gardens",
                         state: "SC",
                         txDetail: "Qualifier 3",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-cooper-river-march-23-2019-thompson-robertson-weigh-in-4-bass-19-48-lbs-bf-8-86-lbs/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-cooper-river/"
                     },
                     {
@@ -523,7 +523,7 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-east/"
                     },
                     {
-                        date: "2019-10-19",
+                        date: "2019-09-29",
                         lake: "Albemarle",
                         ramp: "Lighthouse",
                         state: "NC",
@@ -2117,7 +2117,7 @@ module.exports = [
                     ramp: "Water Street",
                     state: "NC",
                     txDetail: "",
-                    resultsLink: "",
+                    resultsLink: "https://www.ncbasschallenge.com/tournament-results/tripp-williford-take-victory-on-the-roanoke/",
                     entryLink: "https://www.ncbasschallenge.com/2019-tournament-schedule/"
                 },
                 {
@@ -2302,7 +2302,7 @@ module.exports = [
                         ramp: "Buster Boyd",
                         state: "NC",
                         txDetail: "FLW",
-                        resultsLink: "",
+                        resultsLink: "https://www.flwfishing.com/news/2019-03-25-rampey-wins-t-h-marine-flw-bass-fishing-league-tournament-on-lake-wylie",
                         entryLink: "https://www.flwfishing.com/tournaments/2019-03-23-wylie"
                     },
                     {
@@ -2486,7 +2486,7 @@ module.exports = [
                         ramp: "Henderson Pt",
                         state: "NC-VA",
                         txDetail: "T1",
-                        resultsLink: "",
+                        resultsLink: "https://www.fomntt.com/pageflow.cfm?callpage=results&schid=5639&getyear=2019",
                         entryLink: "https://www.fomntt.com/pageflow.cfm?callpage=divisioninfo&divid=32&getyear=2019"
                     },
                     {
@@ -2658,50 +2658,50 @@ module.exports = [
                     }
                 ]
             },
-            {
-                organization: "Tarheel Bass",
-                trails: [{
-                    trail: "Team Trail",
-                    tournaments: [{
-                            date: "2019-03-02",
-                            lake: "Badin",
-                            ramp: "Alcoa Access",
-                            state: "NC",
-                            txDetail: "Tarheel Bass Series 1",
-                            resultsLink: "http://tarheelbassseries.com/results/",
-                            entryLink: "http://tarheelbassseries.com/tournaments/"
-                        },
-                        {
-                            date: "2019-04-27",
-                            lake: "Norman",
-                            ramp: "Pinnacle",
-                            state: "NC",
-                            txDetail: "Tarheel Bass Series 2",
-                            resultsLink: "",
-                            entryLink: "http://tarheelbassseries.com/tournaments/"
-                        },
-                        {
-                            date: "2019-05-18",
-                            lake: "High Rock",
-                            ramp: "Tamarac",
-                            state: "NC",
-                            txDetail: "Tarheel Bass Series 3",
-                            resultsLink: "",
-                            entryLink: "http://tarheelbassseries.com/tournaments/"
-                        },
-                        {
-                            date: "2019-06-15",
-                            lake: "Falls",
-                            ramp: "Ledge Rock",
-                            state: "NC",
-                            txDetail: "Tarheel Bass Series 4",
-                            resultsLink: "",
-                            entryLink: "http://tarheelbassseries.com/tournaments/"
-                        }
-                    ]
-                }]
-            }
 
         ]
+    },
+    {
+        organization: "Tarheel Bass",
+        trails: [{
+            trail: "Team Trail",
+            tournaments: [{
+                    date: "2019-03-02",
+                    lake: "Badin",
+                    ramp: "Alcoa Access",
+                    state: "NC",
+                    txDetail: "Tarheel Bass Series 1",
+                    resultsLink: "http://tarheelbassseries.com/results/",
+                    entryLink: "http://tarheelbassseries.com/tournaments/"
+                },
+                {
+                    date: "2019-04-27",
+                    lake: "Norman",
+                    ramp: "Pinnacle",
+                    state: "NC",
+                    txDetail: "Tarheel Bass Series 2",
+                    resultsLink: "",
+                    entryLink: "http://tarheelbassseries.com/tournaments/"
+                },
+                {
+                    date: "2019-05-18",
+                    lake: "High Rock",
+                    ramp: "Tamarac",
+                    state: "NC",
+                    txDetail: "Tarheel Bass Series 3",
+                    resultsLink: "",
+                    entryLink: "http://tarheelbassseries.com/tournaments/"
+                },
+                {
+                    date: "2019-06-15",
+                    lake: "Falls",
+                    ramp: "Ledge Rock",
+                    state: "NC",
+                    txDetail: "Tarheel Bass Series 4",
+                    resultsLink: "",
+                    entryLink: "http://tarheelbassseries.com/tournaments/"
+                }
+            ]
+        }]
     }
 ]

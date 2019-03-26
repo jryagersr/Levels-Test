@@ -159,8 +159,8 @@ module.exports = [
                 dataSource: ["TVA"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
-                adLogoSrc: "",
-                adLogoUrl: ""
+                adLogoSrc: "/static/assets/img/jbrodsbanner.png",
+                adLogoUrl: "https://www.custombassrods.com/"
             },
             {
                 bodyOfWater: "Pickwick", // lake name
