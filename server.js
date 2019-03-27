@@ -6,15 +6,11 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
-const mongoose = require("mongoose");
-
 
 // ==============================================================================
 // EXPRESS CONFIGURATION
 // This sets up the basic properties for our express server
 // ==============================================================================
-
-
 
 
 // Tells node that we are creating an "express" server

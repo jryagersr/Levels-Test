@@ -589,10 +589,51 @@ h1, h2, h3 {
 
 /* Advertisements */
 /* ======================================================= */
+#adLogoWell li {
+    list-style-type: none;
+}
+
+#adLogoWell a {
+    display: block;
+}
+
+#adLogoWell .active {
+    display: block;
+    animation: SHW 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes SHW {
+    from {
+        opacity:0
+    }
+    to {
+        opacity:1
+    }
+}
+
+#adLogoWell .inactive {
+    animation: DNTSHW 1s;
+    animation-fill-mode: both;
+    display: none;
+}
+
+@keyframes DNTSHW {
+    from {
+        opacity:1,
+    }
+    to {
+        opacity:0;
+    }
+}
+
 .ad-logo {
     width: 40%;;
     height: auto;
-    margin-bottom: 10px;
+    margin: 0px auto 10px;
+    display: none;
+    opacity: 0;
+    
 }
 
 /* Ad Bottom Banner Styles */
@@ -605,11 +646,11 @@ h1, h2, h3 {
         opacity: 0; /*this style hides the banner */
     }
 
-    .ad-scroller-img {
+    /* .ad-scroller-img {
         width: 90px;
         height: 60px;
         margin-right: 20px;
-    }
+    } */
 
 /* Scrolling Banner Styles */
     #scroller {

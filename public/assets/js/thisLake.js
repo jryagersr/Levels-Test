@@ -765,6 +765,7 @@ $.ajax({
     }
 })
     .then(function (data) {
+        console.log(data);
         currentLake = data;
         // Set all of our baseline data
         bodyOfWaterName = currentLake.bodyOfWater;
@@ -830,7 +831,7 @@ $.ajax({
                     buildTable(displayBatch);
                 });
             } else if (source === "loadAds") {
-                loadAds();
+                // loadAds();
             }
         }
 
