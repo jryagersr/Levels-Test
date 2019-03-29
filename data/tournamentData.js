@@ -465,7 +465,7 @@ module.exports = [
                         ramp: "Lighthouse",
                         state: "NC",
                         txDetail: "Gold 1",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-east-roanoke-river-march-23-2019-thomas-elks-come-out-on-top-17-95-lbs-1226-00/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-east/"
                     },
                     {
@@ -543,7 +543,7 @@ module.exports = [
                         ramp: "Summit",
                         state: "NC",
                         txDetail: "Qualifier 1",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-gaston-nc-va-mar-24-2019-ivan-janet-morris-bag-up-20-29-lbs-2181-00-great-crowd-38-teams-to-kick-off-the-gaston-catt-trail/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-gaston/"
                     },
                     {
@@ -598,48 +598,48 @@ module.exports = [
                 tournaments: [
 
                     {
-                        date: "2018-11-03",
+                        date: "2019-03-23",
                         lake: "Hartwell",
                         ramp: "Broyles",
                         state: "SC",
                         txDetail: "Qualifier 1",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-hartwell-nov-3-2018-king-bloomfield-win/",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-hartwell-sc-march-23rd-thomas-pennell-wins-on-stingy-hartwell/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-hartwell/"
                     },
                     {
-                        date: "2018-12-01",
+                        date: "2019-04-06",
                         lake: "Hartwell",
                         ramp: "Broyles",
                         state: "SC",
                         txDetail: "Qualifier 2",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-hartwell-dec-1st-2018-taylor-garret-bring-in-20-06-lbs/",
+                        resultsLink: "",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-hartwell/"
                     },
                     {
-                        date: "2018-12-22",
+                        date: "2019-05-05",
                         lake: "Hartwell",
                         ramp: "Broyles",
                         state: "SC",
                         txDetail: "Qualifier 3",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-hartwell-dec-22-2018-taylor-taylor-weigh-in-16-02-for-the-win/",
+                        resultsLink: "",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-hartwell/"
                     },
                     {
-                        date: "2019-01-05",
+                        date: "2019-05-11",
                         lake: "Hartwell",
                         ramp: "Broyles",
                         state: "SC",
                         txDetail: "Qualifier 4",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-hartwell-jan-5-2018-david-barnes-wins-solo-bruce-james-taylor-win-the-points/",
+                        resultsLink: "",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-hartwell/"
                     },
                     {
-                        date: "2019-01-26",
+                        date: "2019-06-01",
                         lake: "Hartwell",
                         ramp: "Broyles",
                         state: "SC",
                         txDetail: "Final",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-hartwell-fall-final-jan-26-2019-sandifer-allgood-take-1st-with-15-09-lbs/",
+                        resultsLink: "",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-hartwell/"
                     }
                 ]
@@ -714,7 +714,7 @@ module.exports = [
                         ramp: "Riverfront",
                         state: "VA",
                         txDetail: "Gold",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-james-river-va-march-23-2019-whitehurst-weighs-in-26-10-lbs-cashes-a-2325-00-check/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-james-river/"
                     },
                     {
@@ -1198,7 +1198,7 @@ module.exports = [
                         ramp: "John C Land",
                         state: "SC",
                         txDetail: "Gold 4",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-santee-cooper-sc-march-23-waynick-mccauley-bust-out-a/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-santee-cooper/"
                     },
                     {
