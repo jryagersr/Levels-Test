@@ -32,8 +32,7 @@ let adCharitySrc = "";
 let adCharityUrl = "";
 
 // Counter variable for flowUSGS to use to sync time with elevUSGS
-let k = 0;
-
+// let k = 0;
 
 // Hide loader gif
 function hideLoader() {
@@ -58,7 +57,6 @@ function displayCurrentPageValues() {
     $("#currentDelta").append(currentDelta);
     $("#currentNormal").append("normal pool " + lakePool);
 }
-
 
 // Function to set current values on page
 function displayCurrentPageValuesWithUTC() {
@@ -111,6 +109,7 @@ function buildTable(data) {
     }
     buildElevChart(data);
 }
+
 // Function to build table on page
 function buildTableWithUTC(data) {
     for (var i = 0; i < data.length; i++) {
@@ -156,23 +155,32 @@ function buildElevChart(data) {
     // Our data must be parsed into separate flat arrays for the chart
     let labelBatch = [];
     let dataElevBatch = [];
-    let sumOfElevs = data[0].elev;
+    let sumOfElevs = 0;
     let divisor = 1;
+    let k = 0; // our iterator after starting elevation
+    // find our starting elevation
+    for (var i = 0; data.length; i++) {
+        if (typeof data[i].elev == "number") {
+            sumOfElevs = data[i].elev
+            k = i;
+            break;
+        }
+    }
     // Loop through our data for 24 data points if we have it
-    for (var i = 0; i < data.length; i++) {
+    for (k; k < data.length; k++) {
         // if we're past the first entry
-        if (i > 0) {
-            // if we're still on the same day
-            if (data[i].date === data[i - 1].date) {
+        if (k > 0) {
+            // if we're still on the same day and not on the last entry
+            if (data[k].date === data[k - 1].date) {
                 // add to our average variables
-                sumOfElevs += data[i].elev;
+                sumOfElevs += data[k].elev;
                 divisor++
             }
             // else we're on a new day. so push data and reset averages
             else {
-                labelBatch.push(data[i - 1].date);
-                dataElevBatch.push(sumOfElevs / divisor); // calculate average
-                sumOfElevs = data[i].elev;
+                labelBatch.push(data[k - 1].date);
+                dataElevBatch.push((sumOfElevs / divisor).toFixed(2)); // calculate average
+                sumOfElevs = data[k].elev;
                 divisor = 1;
             }
         }
@@ -181,8 +189,10 @@ function buildElevChart(data) {
             break;
         }
     }
+    // push the final day's values after looping
     labelBatch.reverse();
     dataElevBatch.reverse();
+
     var ctx = document.getElementById('myElevChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
     grd.addColorStop(0, 'rgb(0,140,255)');
@@ -225,41 +235,52 @@ function buildElevChart(data) {
             }
         }
     });
-    if (data[0].flow !== "N/A" && typeof data[0].flow !== 'undefined') {
-        buildFlowChart(data);
-    }
 }
 
 // Function to build flow chart on page
 function buildFlowChart(data) {
     $("#flowChart").show();
     // Our data must be parsed into separate flat arrays for the chart
-    let labelBatch = [data[0].date];
+    let labelBatch = [];
     let dataFlowBatch = [];
-    let flowAvg = 0;
-    let flowNum = 0;
-
-    // Loop through our data for 24 data points if we have it
-    for (var i = 0; i < data.length; i++) {
-        if (!labelBatch.includes(data[i].date)) {
-            labelBatch.push(data[i].date);
-            dataFlowBatch.push((flowAvg / flowNum).toFixed(0));
-            flowAvg = Number(data[i].flow);
-            flowNum = 1;
-        } else {
-            if (!isNaN(Number(data[i].flow))) {
-                flowAvg = flowAvg + Number(data[i].flow);
-                flowNum = flowNum + 1;
-            }
-        }
-        if (labelBatch.length > 5) {
+    let sumOfFlows = 0;
+    let divisor = 1;
+    let k = 0; // our iterator after starting flow
+    // find our starting flow
+    for (var i = 0; data.length; i++) {
+        if (typeof data[i].flow == "number") {
+            sumOfFlows = data[i].flow
+            k = i;
             break;
         }
     }
-    // push the final avg value
-    dataFlowBatch.push((flowAvg / flowNum).toFixed(0));
+    // Loop through our data for 24 data points if we have it
+    for (k; k < data.length; k++) {
+        // if we're past the first entry
+        if (k > 0) {
+            // if we're still on the same day and not on the last entry
+            if (data[k].date === data[k - 1].date) {
+                // add to our average variables
+                sumOfFlows += data[k].flow;
+                divisor++
+            }
+            // else we're on a new day. so push data and reset averages
+            else {
+                labelBatch.push(data[k - 1].date);
+                dataFlowBatch.push((sumOfFlows / divisor).toFixed(2)); // calculate average
+                sumOfFlows = data[k].flow;
+                divisor = 1;
+            }
+        }
+        // when a week of data has been reached stop
+        if (labelBatch.length > 6) {
+            break;
+        }
+    }
+    // push the final day's values after looping
     labelBatch.reverse();
     dataFlowBatch.reverse();
+
     var ctx = document.getElementById('myFlowChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
     grd.addColorStop(0, 'rgb(0,140,255)');
@@ -303,6 +324,7 @@ function buildFlowChart(data) {
         }
     });
 }
+
 function convertStringToUTC(convertedTime) {
     // Convert UTC date to local time
     // Convert to ISO format first. '2011-04-11T10:20:30Z'
@@ -338,6 +360,7 @@ function elevUSGS(callback) {
         }
     })
         .then(function (data) {
+            console.log(data);
 
             // Check to see that USGS returned data
             if (data.length > 0) {
@@ -754,6 +777,10 @@ function loadAds() {
 $("#lakeTournaments").on("click", function (e) {
 })
 
+
+
+
+
 // Get current lake from database
 // Declare variable to hold currentLake object
 var currentLake = {};
@@ -768,11 +795,6 @@ $.ajax({
         console.log(data);
         currentLake = data;
         // Set all of our baseline data
-        bodyOfWaterName = currentLake.bodyOfWater;
-        lakePool = currentLake.normalPool;
-        seaLevelDelta = currentLake.seaLevelDelta;
-        elevURL = currentLake.elevURL;
-        flowURL = currentLake.flowURL;
         adLogoSrc = currentLake.adLogoSrc;
         adLogoUrl = currentLake.adLogoUrl;
         adTxSrc = currentLake.adTxSrc;
@@ -780,62 +802,138 @@ $.ajax({
         adCharitySrc = currentLake.adCharitySrc;
         adCharityUrl = currentLake.adCharityUrl;
 
-        // Loop through the lake data sources and run associated functions
-        for (var i = 0; i < currentLake.dataSource.length; i++) {
-            let source = currentLake.dataSource[i];
-            if (source === "ACE") {
-                dataACE(function () {
-                    displayCurrentPageValuesWithUTC();
-                    buildTableWithUTC(displayBatch);
-                });
-            } else if (source === "USGS") {
-                elevUSGS(function () {
-                    if (flowURL !== "none") {
-                        flowUSGS(function () {
-                            displayCurrentPageValuesWithUTC();
-                            buildTableWithUTC(displayBatch);
-                        });
-                    } else {
-                        displayCurrentPageValuesWithUTC();
-                        buildTableWithUTC(displayBatch);
-                    }
-                });
-            } else if (source === "TVA") {
-                dataTVA(function () {
-                    displayCurrentPageValues();
-                    buildTable(displayBatch);
-                });
-            } else if (source === "CUBE") {
-                elevCUBE(function () {
-                    displayCurrentPageValues();
-                    buildTable(displayBatch);
-                });
-            } else if (source === "ALAB") {
-                elevAlab(function () {
-                    displayCurrentPageValues();
-                    buildTable(displayBatch);
-                });
-            } else if (source === "DUKE") {
-                dataDuke(function () {
-                    displayCurrentPageValues();
-                    buildTable(displayBatch);
-                });
-            } else if (source === "SJRWMD") {
-                dataSJRWMD(function () {
-                    displayCurrentPageValues();
-                    buildTable(displayBatch);
-                });
-            } else if (source === "TWDB") {
-                dataTWDB(function () {
-                    displayCurrentPageValues();
-                    buildTable(displayBatch);
-                });
-            } else if (source === "loadAds") {
-                // loadAds();
+        currentLake.data.forEach(function (entry, i) {
+            let timestamp = new Date(entry.time);
+            entry.date = timestamp.toLocaleDateString();
+            entry.time = timestamp.toLocaleTimeString();
+            if (entry.elev !== "N/A" && entry.elev !== "Missing") {
+                entry.elev = Number(entry.elev);
             }
+            if (entry.flow !== "N/A" && entry.flow !== "Missing") {
+                entry.flow = Number(entry.flow);
+            }
+            // Create the HTML Well (Section) and Add the table content for each reserved table
+            var lakeSection = $("<tr>");
+            lakeSection.addClass("well");
+            lakeSection.attr("id", "lakeWell-" + i + 1);
+            $("#lakeSection").append(lakeSection);
+    
+            // Append the data values to the table row
+            $("#lakeWell-" + i + 1).append("<td>" + entry.date + "</td>");
+            $("#lakeWell-" + i + 1).append("<td>" + entry.time + "</td>");
+            $("#lakeWell-" + i + 1).append("<td>" + entry.elev + "</td>");
+            $("#lakeWell-" + i + 1).append("<td>" + entry.flow + "</td>");
+        })
+
+        // build elevation chart
+        buildElevChart(currentLake.data);
+        
+        // build flow chart if flows are available
+        if (data[0].flow !== "N/A" && typeof data[0].flow !== 'undefined') {
+            buildFlowChart(currentLake.data);
         }
 
+
+        // Hide loading gif
+        hideLoader();
+        // Set lake title on page
+        $("#lakeTitle").append(currentLake.bodyOfWater);
+        $("#lakeSponsor").append(currentLake.bodyOfWater);
+        $("#lakeFeaturedTournament").append(currentLake.bodyOfWater);
+        // Set current date, time elev, and pool on page
+        $("#currentTime").append(currentLake.data[0].time);
+        $("#currentDate").append(currentLake.data[0].date);
+        $("#currentLevel").append(currentLake.data[0].elev);
+        $("#currentDelta").append((currentLake.data[0].elev - currentLake.normalPool).toFixed(2));
+        $("#currentNormal").append("normal pool " + currentLake.normalPool);
     })
+
+
+
+
+// Get current lake from database
+// Declare variable to hold currentLake object
+// var currentLake = {};
+// $.ajax({
+//     url: "/api/find-one-lake",
+//     method: "GET",
+//     data: {
+//         lakeName: lakeRoute
+//     }
+// })
+//     .then(function (data) {
+//         console.log(data);
+//         currentLake = data;
+//         // Set all of our baseline data
+//         bodyOfWaterName = currentLake.bodyOfWater;
+
+//         lakePool = currentLake.normalPool;
+//         seaLevelDelta = currentLake.seaLevelDelta;
+//         elevURL = currentLake.elevURL;
+//         flowURL = currentLake.flowURL;
+//         adLogoSrc = currentLake.adLogoSrc;
+//         adLogoUrl = currentLake.adLogoUrl;
+//         adTxSrc = currentLake.adTxSrc;
+//         adTxUrl = currentLake.adTxUrl;
+//         adCharitySrc = currentLake.adCharitySrc;
+//         adCharityUrl = currentLake.adCharityUrl;
+
+//         // Loop through the lake data sources and run associated functions
+//         for (var i = 0; i < currentLake.dataSource.length; i++) {
+//             let source = currentLake.dataSource[i];
+//             if (source === "ACE") {
+//                 dataACE(function () {
+//                     displayCurrentPageValuesWithUTC();
+//                     buildTableWithUTC(displayBatch);
+//                 });
+//             } else if (source === "USGS") {
+//                 elevUSGS(function () {
+//                     if (flowURL !== "none") {
+//                         flowUSGS(function () {
+//                             displayCurrentPageValuesWithUTC();
+//                             buildTableWithUTC(displayBatch);
+//                         });
+//                     } else {
+//                         displayCurrentPageValuesWithUTC();
+//                         buildTableWithUTC(displayBatch);
+//                     }
+//                 });
+//             } else if (source === "TVA") {
+//                 dataTVA(function () {
+//                     displayCurrentPageValues();
+//                     buildTable(displayBatch);
+//                 });
+//             } else if (source === "CUBE") {
+//                 elevCUBE(function () {
+//                     displayCurrentPageValues();
+//                     buildTable(displayBatch);
+//                 });
+//             } else if (source === "ALAB") {
+//                 elevAlab(function () {
+//                     displayCurrentPageValues();
+//                     buildTable(displayBatch);
+//                 });
+//             } else if (source === "DUKE") {
+//                 dataDuke(function () {
+//                     displayCurrentPageValues();
+//                     buildTable(displayBatch);
+//                 });
+//             } else if (source === "SJRWMD") {
+//                 dataSJRWMD(function () {
+//                     displayCurrentPageValues();
+//                     buildTable(displayBatch);
+//                 });
+//             } else if (source === "TWDB") {
+//                 dataTWDB(function () {
+//                     displayCurrentPageValues();
+//                     buildTable(displayBatch);
+//                 });
+//             } else if (source === "loadAds") {
+//                 // loadAds();
+//             }
+//         }
+
+//     })
 
 
 // Api call to fetch weather data
