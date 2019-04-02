@@ -54,7 +54,7 @@ module.exports = [
                 elevURL: "/api/alabama",
                 flowURL: "none",
                 href: "/lakes/neelyhenry",
-                dataSource: ["ALAB", "loadAds"], // array of calls to make to retrieve data
+                dataSource: ["USLAKES", "loadAds"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
                 adLogoSrc: "/static/assets/img/jbrodsbanner.png",
@@ -72,7 +72,7 @@ module.exports = [
                 elevURL: "/api/alabama",
                 flowURL: "none",
                 href: "/lakes/lay",
-                dataSource: ["ALAB", "loadAds"], // array of calls to make to retrieve data
+                dataSource: ["USLAKES", "loadAds"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
                 adLogoSrc: "/static/assets/img/jbrodsbanner.png",
@@ -90,7 +90,7 @@ module.exports = [
                 elevURL: "/api/alabama",
                 flowURL: "none",
                 href: "/lakes/loganmartin",
-                dataSource: ["ALAB", "loadAds"], // array of calls to make to retrieve data
+                dataSource: ["USLAKES", "loadAds"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
                 adLogoSrc: "/static/assets/img/jbrodsbanner.png",
@@ -144,7 +144,7 @@ module.exports = [
                 elevURL: "/api/alabama",
                 flowURL: "none",
                 href: "/lakes/smith",
-                dataSource: ["ALAB", "loadAds"], // array of calls to make to retrieve data
+                dataSource: ["USLAKES", "loadAds"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
                 adLogoSrc: "/static/assets/img/jbrodsbanner.png",
@@ -162,7 +162,7 @@ module.exports = [
                 elevURL: "/api/alabama",
                 flowURL: "none",
                 href: "/lakes/weiss",
-                dataSource: ["ALAB", "loadAds"], // array of calls to make to retrieve data
+                dataSource: ["USLAKES", "loadAds"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
                 adLogoSrc: "/static/assets/img/jbrodsbanner.png",
@@ -1736,7 +1736,7 @@ module.exports = [
                 adLogoUrl: "https://www.custombassrods.com/"
             },
             {
-                bodyOfWater: "Blewitt Falls", // lake name
+                bodyOfWater: "Blewett Falls", // lake name
                 data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
@@ -1746,7 +1746,7 @@ module.exports = [
                 long: -79.90,
                 elevURL: "https://lakes.duke-energy.com/Data/Detail/3_Month/30.txt",
                 flowURL: "none",
-                href: "/lakes/BlewittFalls",
+                href: "/lakes/blewettfalls",
                 dataSource: ["DUKE", "loadAds"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
@@ -1827,7 +1827,7 @@ module.exports = [
                 elevURL: "/api/alabama",
                 flowURL: "none",
                 href: "/lakes/gaston",
-                dataSource: ["ALAB", "loadAds"], // array of calls to make to retrieve data
+                dataSource: ["USLAKES", "loadAds"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
                 adLogoSrc: "/static/assets/img/mjhibanner.png",
@@ -3377,7 +3377,7 @@ module.exports = [
                 elevURL: "/api/alabama",
                 flowURL: "none",
                 href: "/lakes/gaston",
-                dataSource: ["ALAB", "loadAds"], // array of calls to make to retrieve data
+                dataSource: ["USLAKES", "loadAds"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
                 adLogoSrc: "/static/assets/img/jsegenerac.png",
@@ -3628,7 +3628,7 @@ module.exports = [
                 elevURL: "/api/alabama",
                 flowURL: "none",
                 href: "/lakes/smithmountain",
-                dataSource: ["ALAB", "loadAds"], // array of calls to make to retrieve data
+                dataSource: ["USLAKES", "loadAds"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
                 adLogoSrc: "/static/assets/img/jbrodsbanner.png",
