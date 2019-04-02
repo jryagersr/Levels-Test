@@ -1,9 +1,3 @@
-const mongoose = require("mongoose");
-var express = require("express"),
-  app = express(),
-  request = require("request"),
-  _ = require("underscore");
-
 
 // Holds our display data to send into buildTable function
 let displayBatch = [];
@@ -13,16 +7,13 @@ let lakePool = 0;
 let seaLevelDelta = 0;
 let elevationAdjust = 0;
 
-// var txData = [];
-
 // ===============================================================================
 // ROUTING
 // ===============================================================================
 
 module.exports = function (app) {
   require("./dbRoutes")(app);
-  var $ = require("jquery");
-  var request = require("request");
+  var _ = require("underscore");
 
 
   // ===============================================================================
@@ -164,7 +155,7 @@ module.exports = function (app) {
           // To retrieve Flows from USGS, we get multiple .timevalues and the variable.variableDecription 
           // value will contain "Discharge" 'Gage' for Flow or Elev data. We must determine which timevalues
           let timeSeriesLength = data.value.timeSeries.length;
-          let timeSeriesElevIndex = -1; // default value indicates no data
+          let timeSeriesElevIndex = 0; // default value indicates no data
           let timeSeriesFlowIndex = -1;
 
           for (i = 0; i < timeSeriesLength; i++) {
@@ -947,6 +938,13 @@ module.exports = function (app) {
     });
     response.send(data);
   })
+
+  // This returns the sponsor file
+  app.get("/api/sponsors", function (request, response) {
+    // Import our txData from newSponsorData.js file
+    var sponsorData = require("../data/newSponsorData");
+    response.json(sponsorData);
+  });
 
 
   // Fetch weather data

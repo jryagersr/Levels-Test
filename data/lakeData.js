@@ -8,15 +8,7 @@ module.exports = [
 
             {
                 bodyOfWater: "Aliceville", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -34,15 +26,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Eufaula", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -60,16 +44,8 @@ module.exports = [
             },
             {
                 bodyOfWater: "Neely Henry", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
-                refreshInterval: 1440, //minutes
+                data: [],
+                refreshInterval: 1200, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 508.0,
@@ -86,16 +62,8 @@ module.exports = [
             },
             {
                 bodyOfWater: "Lay", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
-                refreshInterval: 1440, //minutes
+                data: [],
+                refreshInterval: 1200, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 396.0,
@@ -112,16 +80,8 @@ module.exports = [
             },
             {
                 bodyOfWater: "Logan Martin", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
-                refreshInterval: 1440, //minutes
+                data: [],
+                refreshInterval: 1200, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 465.0,
@@ -138,15 +98,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Guntersville", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -156,7 +108,7 @@ module.exports = [
                 elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/GUH_O.xml?1545499372503",
                 flowURL: "none",
                 href: "/lakes/guntersville",
-                dataSource: ["TVA"], // array of calls to make to retrieve data
+                dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
                 adLogoSrc: "/static/assets/img/jbrodsbanner.png",
@@ -164,15 +116,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Pickwick", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -190,16 +134,8 @@ module.exports = [
             },
             {
                 bodyOfWater: "Smith", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
-                refreshInterval: 1440, //minutes
+                data: [],
+                refreshInterval: 1200, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 510.0,
@@ -216,16 +152,8 @@ module.exports = [
             },
             {
                 bodyOfWater: "Weiss", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
-                refreshInterval: 1440, //minutes
+                data: [],
+                refreshInterval: 1200, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 564.0,
@@ -242,15 +170,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Wheeler", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -268,15 +188,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Wilson", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -302,16 +214,8 @@ module.exports = [
 
             {
                 bodyOfWater: "Alamo", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
-                refreshInterval: 1440, //minutes
+                data: [],
+                refreshInterval: 1200, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 1160.4,
@@ -328,15 +232,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Havasu", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 400.54, // 1329ft but data reported as a delta to full pool
@@ -355,15 +251,7 @@ module.exports = [
             /*
                         {
                             bodyOfWater: "Roosevelt", // lake name
-                            data: [
-
-                                {
-                                    elev: ["N/A"], //array of elevations
-                                    flow: ["Lots"], //array of flows
-                                    date: ["18-03/02"], //array of elevation dates
-                                    time: ["time"], //arrat if elevation times
-                                }
-                            ],
+                            data: [],
                             refreshInterval: 30, //minutes
                             lastRefresh: "12/31/18", // a Date 
                             seaLevelDelta: 0.0, // ft but data reported as a delta gage height
@@ -388,15 +276,7 @@ module.exports = [
 
             {
                 bodyOfWater: "Beaver", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
@@ -414,15 +294,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Bull Shoals", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -440,15 +312,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Dardanelle", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
@@ -466,15 +330,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Greers Ferry", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
@@ -492,15 +348,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Ouachita", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
@@ -518,15 +366,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Table Rock", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -552,15 +392,7 @@ module.exports = [
             // ACE is reporting a elevation of 220' Guessing 258'
             {
                 bodyOfWater: "Camanche", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
@@ -578,15 +410,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Canyon", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
@@ -604,15 +428,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Clear", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 1318.26, // 1329ft but data reported as a delta to full pool
@@ -630,15 +446,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Don Pedro", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
@@ -656,15 +464,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Folsom", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
@@ -682,15 +482,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Havasu", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 400.54, // but data reported as a delta to full pool.
@@ -709,15 +501,7 @@ module.exports = [
 
             {
                 bodyOfWater: "Iron Gate", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 2162.44, //but data reported as a delta to full pool
@@ -735,15 +519,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Mendocino", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
@@ -761,15 +537,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "New Hogan", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
@@ -787,15 +555,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Pine Flat", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
@@ -815,15 +575,7 @@ module.exports = [
             // ACE is reporting a elevation of 446' Guessing the pool should be about 458
             {
                 bodyOfWater: "Sonoma", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
@@ -842,15 +594,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Success", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
@@ -875,15 +619,7 @@ module.exports = [
 
             {
                 bodyOfWater: "Rifle Gap", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 11.0,
@@ -901,15 +637,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Trinidad", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 11.36,
@@ -930,15 +658,7 @@ module.exports = [
         state: "Florida",
         lakes: [{
                 bodyOfWater: "Big Harris (HC)", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -956,15 +676,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Dora (HC)", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -982,15 +694,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Eustis (HC)", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -1008,15 +712,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Griffin (HC)", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -1034,15 +730,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Hatchineha", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -1060,15 +748,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Istokpoga", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -1086,15 +766,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Kenansville", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -1112,15 +784,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Kissimmee", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -1138,15 +802,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Minnehaha", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 125.0,
@@ -1164,15 +820,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Okeechobee", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -1190,15 +838,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Seminole", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -1216,15 +856,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Stick Marsh (Farm 13)", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -1242,15 +874,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Talquin", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -1268,15 +892,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Tohopekaliga", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -1299,15 +915,7 @@ module.exports = [
 
             {
                 bodyOfWater: "Allatoona", // lake name 'Allatoona'
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -1325,15 +933,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Eufaula", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -1351,15 +951,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Lanier", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -1377,15 +969,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Seminole", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -1403,15 +987,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Thurmond", // lake name also "ClarksHill"
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -1429,15 +1005,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "West Point", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -1461,15 +1029,7 @@ module.exports = [
 
             {
                 bodyOfWater: "Rend", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -1492,15 +1052,7 @@ module.exports = [
 
             {
                 bodyOfWater: "Monroe", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -1518,15 +1070,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Ohio River (Evansville)", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 328.64,
@@ -1575,15 +1119,7 @@ module.exports = [
 
             {
                 bodyOfWater: "Red Rock", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 1398.0, // water level is reported as a delta to full pool
@@ -1601,15 +1137,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "West Okoboji", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 1398.0, // water level is reported as a delta to full pool
@@ -1633,15 +1161,7 @@ module.exports = [
 
             {
                 bodyOfWater: "Clinton", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -1659,15 +1179,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Melvern", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -1685,15 +1197,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Perry", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -1711,15 +1215,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Pomona", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -1742,15 +1238,7 @@ module.exports = [
 
             {
                 bodyOfWater: "Barkley", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -1768,15 +1256,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Kentucky", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -1799,15 +1279,7 @@ module.exports = [
 
             {
                 bodyOfWater: "Toledo Bend", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -1830,15 +1302,7 @@ module.exports = [
 
             {
                 bodyOfWater: "Mille Lacs", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 1240.40, // water level reprted as a delta to Full Pool - 100
@@ -1856,15 +1320,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Minnetonka", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -1887,15 +1343,7 @@ module.exports = [
 
             {
                 bodyOfWater: "Bull Shoals", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -1913,15 +1361,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Lake of the Ozarks", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -1939,15 +1379,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Norfork", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -1965,15 +1397,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Pomme De Terre", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -1991,15 +1415,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Table Rock", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -2017,15 +1433,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Truman", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -2043,15 +1451,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Stockton", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -2072,16 +1472,8 @@ module.exports = [
         state: "Mississippi",
         lakes: [{
                 bodyOfWater: "Columbus", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
-                refreshInterval: 1440, //minutes
+                data: [],
+                refreshInterval: 1200, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 164.0,
@@ -2104,7 +1496,7 @@ module.exports = [
                     date: ["18-03/02"], //array of elevation dates
                     time: ["time"], //arrat if elevation times
                 }],
-                refreshInterval: 1440, //minutes
+                refreshInterval: 1200, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 297.50,
@@ -2126,15 +1518,7 @@ module.exports = [
 
             {
                 bodyOfWater: "Mojave", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 547.0, // data reported as a delta to Full Pool -100
@@ -2152,15 +1536,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Wild Horse", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -2184,16 +1560,8 @@ module.exports = [
 
             {
                 bodyOfWater: "Brantley", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
-                refreshInterval: 1440, //minutes
+                data: [],
+                refreshInterval: 1200, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 3271.0,
@@ -2210,16 +1578,8 @@ module.exports = [
             },
             {
                 bodyOfWater: "Conchas", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
-                refreshInterval: 1440, //minutes
+                data: [],
+                refreshInterval: 1200, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 4201.0,
@@ -2237,16 +1597,8 @@ module.exports = [
 
             {
                 bodyOfWater: "Elephant Butte", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
-                refreshInterval: 1440, //minutes
+                data: [],
+                refreshInterval: 1200, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 4301.0,
@@ -2263,16 +1615,8 @@ module.exports = [
             },
             {
                 bodyOfWater: "Ft Sumner", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
-                refreshInterval: 1440, //minutes
+                data: [],
+                refreshInterval: 1200, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 4154.0,
                 normalPool: 4201.0,
@@ -2289,16 +1633,8 @@ module.exports = [
             },
             {
                 bodyOfWater: "Santa Rosa", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
-                refreshInterval: 1440, //minutes
+                data: [],
+                refreshInterval: 1200, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 4749.35,
@@ -2315,15 +1651,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Ute", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -2347,15 +1675,7 @@ module.exports = [
 
             {
                 bodyOfWater: "Champlain", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -2374,15 +1694,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Ontario", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -2406,16 +1718,8 @@ module.exports = [
 
             {
                 bodyOfWater: "Badin", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flow
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
-                refreshInterval: 30, //minutes
+                data: [],
+                refreshInterval: 1200, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 541.1,
@@ -2433,15 +1737,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Blewitt Falls", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flow
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 78.0,
@@ -2460,15 +1756,7 @@ module.exports = [
             //Found this on ACE. Format is different for streams (smh), there is no .elev, it is .stage will add later 
             {
                 bodyOfWater: "Cape Fear River (Fayett)", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flow
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0,
@@ -2486,15 +1774,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Falls", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flow
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 60, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -2517,15 +1797,7 @@ module.exports = [
             //need to skip text until reaching the dat of the first level.
             {
                 bodyOfWater: "Fontana", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flow
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 60, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0,
@@ -2545,16 +1817,8 @@ module.exports = [
             },
             {
                 bodyOfWater: "Gaston", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flow
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
-                refreshInterval: 1440, //minutes
+                data: [],
+                refreshInterval: 1200, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 200.0,
@@ -2573,15 +1837,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Hickory", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flow
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 835.0,
@@ -2600,16 +1856,8 @@ module.exports = [
 
             {
                 bodyOfWater: "High Rock", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flow
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
-                refreshInterval: 30, //minutes
+                data: [],
+                refreshInterval: 1200, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 655.2,
@@ -2626,15 +1874,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Hyco", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flow
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0,
@@ -2652,15 +1892,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Jocasee", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flow
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 1000.0,
@@ -2678,15 +1910,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Jordan", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flow
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date
                 elevDataInterval: 4, // Time between elevation data 4 = 15min, 2 = 30 min 1 = 60 min
@@ -2750,15 +1974,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Kerr", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flow
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"] //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 elevDataInterval: 4, // Time between elevation data 4 = 15min, 2 = 30 min 1 = 60 min
@@ -2941,15 +2157,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Neuse River (Kinston)", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flow
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 10.90,
@@ -2967,15 +2175,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Norman", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flow
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 1298.0, // data reported as a delta to full pool = 100
@@ -2993,15 +2193,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Rhodhiss", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flow
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 885.0,
@@ -3019,15 +2211,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Roanoke River (Halifax)", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flow
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0,
@@ -3046,15 +2230,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Roanoke River (Hwy 45)", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flow
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0,
@@ -3073,15 +2249,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Roanoke River (Roanoke Rapids)", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flow
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 43.84,
@@ -3099,15 +2267,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Roanoke River (Scotland Neck)", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flow
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 5.77,
@@ -3125,15 +2285,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Roanoke River (Williamston)", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flow
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: -2.86,
@@ -3151,15 +2303,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Tillery", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flow
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 178.0,
@@ -3178,16 +2322,8 @@ module.exports = [
 
             {
                 bodyOfWater: "Tuckertown", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flow
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
-                refreshInterval: 30, //minutes
+                data: [],
+                refreshInterval: 1200, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 596.0,
@@ -3204,15 +2340,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Wylie", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flow
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 400.0,
@@ -3236,6 +2364,7 @@ module.exports = [
 
             /*{
                 bodyOfWater: "Indian Lake", // lake name
+<<<<<<< HEAD
                 data: [
 
                     {
@@ -3245,6 +2374,9 @@ module.exports = [
                         time: ["time"], //arrat if elevation times
                     }
                 ],
+=======
+                data: [],
+>>>>>>> 895fc7c291428b5b7658709aedc05d123c446dd4
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0,
@@ -3262,6 +2394,7 @@ module.exports = [
             },*/
             {
                 bodyOfWater: "Ohio River (Cincy)", // lake name
+<<<<<<< HEAD
                 data: [
 
                     {
@@ -3274,6 +2407,12 @@ module.exports = [
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0,
+=======
+                data: [],
+                refreshInterval: 30, //minutes
+                lastRefresh: "12/31/18", // a Date 
+                seaLevelDelta: 428.88,
+>>>>>>> 895fc7c291428b5b7658709aedc05d123c446dd4
                 normalPool: 428.88,
                 lat: 39.094311,
                 long: -84.510556,
@@ -3288,6 +2427,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Ohio River (Tanners)", // lake name
+<<<<<<< HEAD
                 data: [
 
                     {
@@ -3297,6 +2437,9 @@ module.exports = [
                         time: ["time"], //arrat if elevation times
                     }
                 ],
+=======
+                data: [],
+>>>>>>> 895fc7c291428b5b7658709aedc05d123c446dd4
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0,
@@ -3314,6 +2457,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Misquito Lake", // lake name
+<<<<<<< HEAD
                 data: [
 
                     {
@@ -3323,6 +2467,9 @@ module.exports = [
                         time: ["time"], //arrat if elevation times
                     }
                 ],
+=======
+                data: [],
+>>>>>>> 895fc7c291428b5b7658709aedc05d123c446dd4
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0,
@@ -3347,15 +2494,7 @@ module.exports = [
 
             {
                 bodyOfWater: "Copan", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -3373,15 +2512,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Ellsworth", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -3399,15 +2530,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Eufaula", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -3425,15 +2548,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Eucha", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -3451,15 +2566,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Hudson", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -3477,15 +2584,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Hulah", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -3503,15 +2602,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Kaw", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -3529,15 +2620,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Grand", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -3555,15 +2638,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Lawtonka", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -3581,15 +2656,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "McGee Creek", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -3607,15 +2674,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Oologah", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -3633,15 +2692,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Skiatook", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -3659,15 +2710,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Tenkiller", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -3685,15 +2728,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Texoma", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -3718,15 +2753,7 @@ module.exports = [
 
             {
                 bodyOfWater: "Lost Creek", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
@@ -3751,15 +2778,7 @@ module.exports = [
 
             {
                 bodyOfWater: "Curwensville", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -3777,15 +2796,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Raystown", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -3803,15 +2814,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Shenango", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -3835,15 +2838,7 @@ module.exports = [
 
             {
                 bodyOfWater: "Clarks Hill", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -3860,15 +2855,7 @@ module.exports = [
                 adLogoUrl: "https://www.custombassrods.com/"
             }, {
                 bodyOfWater: "Cooper River", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: -6.38, // Cooper River gage height is -6.38, it's a strange USGS site
@@ -3887,15 +2874,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Hartwell", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -3913,15 +2892,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Jocasee", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flow
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 1000.0,
@@ -3939,15 +2910,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Keowee", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flow
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 700.0,
@@ -3965,15 +2928,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Murray", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -3991,15 +2946,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Santee (Marion)", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -4017,15 +2964,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Santee (Moultrie)", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -4043,15 +2982,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Wateree", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 125,
@@ -4071,15 +3002,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Wylie", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flow
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 400.0,
@@ -4103,22 +3026,14 @@ module.exports = [
 
             {
                 bodyOfWater: "Chickamauga", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 682.0,
                 lat: 35.229058,
                 long: -85.077891,
-                elevURL: " http://r7j8v4x4.map2.ssl.hwcdn.net/CHH_O.xml?1548263632238",
+                elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/CHH_O.xml?1548263632238",
                 flowURL: "none",
                 href: "/lakes/chickamauga",
                 dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
@@ -4129,15 +3044,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Douglas", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -4146,7 +3053,11 @@ module.exports = [
                 long: -83.380776,
                 elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/DGH_O.xml?1545588002667",
                 flowURL: "none",
+<<<<<<< HEAD
                 href: "/lakes/Douglas",
+=======
+                href: "/lakes/douglas",
+>>>>>>> 895fc7c291428b5b7658709aedc05d123c446dd4
                 dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
@@ -4155,15 +3066,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Dale Hollow", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -4181,15 +3084,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Nickajack", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -4207,15 +3102,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Percy Priest", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -4233,15 +3120,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Tellico", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -4259,15 +3138,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Tims Ford", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -4285,15 +3156,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Watts Bar", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -4317,16 +3180,8 @@ module.exports = [
 
             {
                 bodyOfWater: "Amistad", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
-                refreshInterval: 1440, //minutes
+                data: [],
+                refreshInterval: 1200, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 1117.0,
@@ -4343,16 +3198,8 @@ module.exports = [
             },
             {
                 bodyOfWater: "Cedar Creek", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
-                refreshInterval: 1440, //minutes
+                data: [],
+                refreshInterval: 59, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 322.0,
@@ -4369,15 +3216,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Conroe", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -4395,16 +3234,8 @@ module.exports = [
             },
             {
                 bodyOfWater: "Falcon", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
-                refreshInterval: 1440, //minutes
+                data: [],
+                refreshInterval: 1200, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 301.10,
@@ -4421,15 +3252,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Fork", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -4447,16 +3270,8 @@ module.exports = [
             },
             {
                 bodyOfWater: "LBJ", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
-                refreshInterval: 1440, //minutes
+                data: [],
+                refreshInterval: 1200, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 825.40,
@@ -4473,15 +3288,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Palestine", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -4499,15 +3306,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Ray Roberts", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -4525,15 +3324,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Rayburn", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -4551,15 +3342,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Tawakoni", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -4577,15 +3360,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Toledo Bend", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -4603,15 +3378,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Texoma", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -4629,16 +3396,8 @@ module.exports = [
             },
             {
                 bodyOfWater: "Travis", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["18-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
-                refreshInterval: 1440, //minutes
+                data: [],
+                refreshInterval: 1200, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 681.0,
@@ -4663,16 +3422,8 @@ module.exports = [
 
             {
                 bodyOfWater: "Gaston", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flow
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
-                refreshInterval: 1440, //minutes
+                data: [],
+                refreshInterval: 1200, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 200.0,
@@ -4691,15 +3442,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "James River (Jamestown Ferry Pier)", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -4717,15 +3460,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Kerr", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -4919,15 +3654,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Potomac River (Alexandria)", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -4946,16 +3673,8 @@ module.exports = [
 
             {
                 bodyOfWater: "Smith Mountain", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flow
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
-                refreshInterval: 1440, //minutes
+                data: [],
+                refreshInterval: 1200, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 795.0,
@@ -4980,15 +3699,7 @@ module.exports = [
 
             {
                 bodyOfWater: "Bluestone", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0,
@@ -5006,15 +3717,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Burnsville", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0,
@@ -5032,15 +3735,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Stonewall Jackson", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0,
@@ -5058,15 +3753,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Sutton", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0,
@@ -5084,15 +3771,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Summersville", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
@@ -5116,15 +3795,7 @@ module.exports = [
 
             {
                 bodyOfWater: "Geneva", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0,
@@ -5142,15 +3813,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Winnebago", // lake name
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
+                data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 746.0,
