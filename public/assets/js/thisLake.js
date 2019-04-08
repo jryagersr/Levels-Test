@@ -829,7 +829,7 @@ $.ajax({
         buildElevChart(currentLake.data);
         
         // build flow chart if flows are available
-        if (data[0].flow !== "N/A" && typeof data[0].flow !== 'undefined') {
+        if (currentLake.data[0].flow !== "N/A" && typeof currentLake.data[0].flow !== 'undefined') {
             buildFlowChart(currentLake.data);
         }
 
