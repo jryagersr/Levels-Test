@@ -432,7 +432,7 @@ module.exports = [
                         ramp: "Cypress Gardens",
                         state: "SC",
                         txDetail: "Qualifier 4",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-cooper-river-april-6-2019/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-cooper-river/"
                     },
                     {
@@ -819,7 +819,7 @@ module.exports = [
                         ramp: "Occonneechee",
                         state: "NC-VA",
                         txDetail: "Gold 4",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-march-31-2019-kerr-va-justis-bobbitt-cullen-ports-top-the-57-boat-field-18-18-lbs-collect-2650-00/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
                     },
                     {
@@ -948,7 +948,7 @@ module.exports = [
                         ramp: "Dreher",
                         state: "SC",
                         txDetail: "Qualifier 8",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-murray-sc-april-6-2019-daniel-grassi-tyler-thompson-win-21-33-lbs-1044-00/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-murray/"
                     },
                     {
@@ -1318,7 +1318,7 @@ module.exports = [
                         ramp: "Parkway",
                         state: "VA",
                         txDetail: "Qualifier 3",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-smith-mtn-lake-va-march-31-2019-mike-toney-damien-mcmahon-wegh-in-22-03-lbs-earn-1st-place-win-the-sml-points/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-smith-mountain/"
                     },
                     {
@@ -1393,7 +1393,7 @@ module.exports = [
                         ramp: "Waterfront",
                         state: "NC",
                         txDetail: "Qualifier 1",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-tidewater-pasquotank-river-va-march-17-2019-gatewood-allbritten-weigh-in-27-30-lbs-1244-00/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-tidewater/"
                     },
                     {
@@ -1576,7 +1576,7 @@ module.exports = [
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 8",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-wateree-april-6-2019-mike-ware-bryan-holmes-take-the-top-spot-with-20-05-lbs-1144-00/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
                     },
                     {
@@ -1633,7 +1633,7 @@ module.exports = [
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 5",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-wateree-open-april-6-2019-greg-atkinson-ron-catoe-weigh-19-99-lbs-and-a-7-04-lbs-bf-1297-00/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
                     {
@@ -2495,7 +2495,7 @@ module.exports = [
                         ramp: "Summit",
                         state: "NC-VA",
                         txDetail: "T2",
-                        resultsLink: "",
+                        resultsLink: "https://www.fomntt.com/pageflow.cfm?callpage=results&schid=5640&getyear=2019",
                         entryLink: "https://www.fomntt.com/pageflow.cfm?callpage=divisioninfo&divid=32&getyear=2019"
                     },
                     {
@@ -2644,7 +2644,7 @@ module.exports = [
                         ramp: "Farrington",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
-                        resultsLink: "",
+                        resultsLink: "http://piedmontbassclassics.com/46-19Results.html",
                         entryLink: "http://piedmontbassclassics.com/2019CashionRodsHartsCustomSetsSpringTrailMainPage.html"
                     },
                     {
