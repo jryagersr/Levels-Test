@@ -1073,8 +1073,8 @@ module.exports = [
                 data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: 328.64,
-                normalPool: 328.64,
+                seaLevelDelta: 0.0,
+                normalPool: 13.0,
                 lat: 37.965640,
                 long: -87.580873,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03322000&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
@@ -2364,19 +2364,7 @@ module.exports = [
 
             /*{
                 bodyOfWater: "Indian Lake", // lake name
-<<<<<<< HEAD
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
-=======
                 data: [],
->>>>>>> 895fc7c291428b5b7658709aedc05d123c446dd4
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0,
@@ -2394,26 +2382,11 @@ module.exports = [
             },*/
             {
                 bodyOfWater: "Ohio River (Cincy)", // lake name
-<<<<<<< HEAD
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
-                refreshInterval: 30, //minutes
-                lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: 0.0,
-=======
                 data: [],
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: 428.88,
->>>>>>> 895fc7c291428b5b7658709aedc05d123c446dd4
-                normalPool: 428.88,
+                seaLevelDelta: 0.0,
+                normalPool: 25.4,
                 lat: 39.094311,
                 long: -84.510556,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03255000&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
@@ -2427,23 +2400,11 @@ module.exports = [
             },
             {
                 bodyOfWater: "Ohio River (Tanners)", // lake name
-<<<<<<< HEAD
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
-=======
                 data: [],
->>>>>>> 895fc7c291428b5b7658709aedc05d123c446dd4
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0,
-                normalPool: 422.68,
+                normalPool: 25.4,
                 lat: 39.082309,
                 long: -84.872313,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03276650&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
@@ -2457,19 +2418,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Misquito Lake", // lake name
-<<<<<<< HEAD
-                data: [
-
-                    {
-                        elev: ["N/A"], //array of elevations
-                        flow: ["Lots"], //array of flows
-                        date: ["19-03/02"], //array of elevation dates
-                        time: ["time"], //arrat if elevation times
-                    }
-                ],
-=======
                 data: [],
->>>>>>> 895fc7c291428b5b7658709aedc05d123c446dd4
                 refreshInterval: 30, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0,
@@ -3053,11 +3002,7 @@ module.exports = [
                 long: -83.380776,
                 elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/DGH_O.xml?1545588002667",
                 flowURL: "none",
-<<<<<<< HEAD
-                href: "/lakes/Douglas",
-=======
                 href: "/lakes/douglas",
->>>>>>> 895fc7c291428b5b7658709aedc05d123c446dd4
                 dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",

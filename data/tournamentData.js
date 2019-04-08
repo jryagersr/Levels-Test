@@ -1207,7 +1207,7 @@ module.exports = [
                         ramp: "John C Land",
                         state: "SC",
                         txDetail: "Qualifier 5",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-santee-cooper-march-30-2019-hunter-ashley-hoffmeyer-team-up-for-the-win-23-66-lbs/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-santee-cooper/"
                     },
                     {
@@ -1402,7 +1402,7 @@ module.exports = [
                         ramp: "258 Ramp",
                         state: "NC",
                         txDetail: "Qualifier 2",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-tidewater-march-30-2019-nottoway-river-va-jeremy-gatewood-jarred-allbritten-bring-it-home/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-tidewater/"
                     },
                     {
@@ -1567,7 +1567,7 @@ module.exports = [
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 7",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-wateree-march-30-2019-paul-geddings-bruce-peavy-weigh-in-25-57-lbs-for-the-win/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
                     },
                     {
@@ -1783,7 +1783,7 @@ module.exports = [
                         ramp: "Buster Boyd",
                         state: "NC-SC",
                         txDetail: "Qualifier 3",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-wylie-march-30-2019-john-paul-george-jason-quinn-win-with-17-11-lbs-1440-00/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wylie/"
                     },
                     {
@@ -1916,7 +1916,7 @@ module.exports = [
                         ramp: "Dreher Island",
                         state: "SC",
                         txDetail: "CBC SC",
-                        resultsLink: "",
+                        resultsLink: "http://www.carolinasbasschallenge.com/results.php?id=12",
                         entryLink: "http://www.carolinasbasschallenge.com/tournaments.php"
                     },
                     {
@@ -2044,7 +2044,7 @@ module.exports = [
                     ramp: "Farrington",
                     state: "NC",
                     txDetail: "Bass For Cash Series",
-                    resultsLink: "",
+                    resultsLink: "http://bassforcash.com/2019/03/31/roberts-owens-win-4459-on-jordan-lake/",
                     entryLink: "http://bassforcash.com/schedule/"
                 },
                 {
@@ -2236,15 +2236,6 @@ module.exports = [
                 tournaments: [
 
                     {
-                        date: "2019-03-30",
-                        lake: "Patoka",
-                        ramp: "Newton-Stewart S",
-                        state: "IN",
-                        txDetail: "FLW",
-                        resultsLink: "",
-                        entryLink: "https://www.flwfishing.com/tournaments/2019-03-30-patoka"
-                    },
-                    {
                         date: "2019-05-04",
                         lake: "Patoka",
                         ramp: "Newton-Stewart S",
@@ -2261,6 +2252,15 @@ module.exports = [
                         txDetail: "FLW",
                         resultsLink: "",
                         entryLink: "https://www.flwfishing.com/tournaments/2019-06-29-monroe"
+                    },
+                    {
+                        date: "2019-06-30",
+                        lake: "Monroe",
+                        ramp: "Cutright",
+                        state: "IN",
+                        txDetail: "FLW",
+                        resultsLink: "",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-06-30-monroe-rescheduled"
                     },
                     {
                         date: "2019-07-20",
@@ -2559,7 +2559,7 @@ module.exports = [
                         ramp: "Crosspointe",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
-                        resultsLink: "",
+                        resultsLink: "http://piedmontbassclassics.com/330-19PBCResults.html",
                         entryLink: "http://piedmontbassclassics.com/2019PBC10KSpringTrailMainPage.html"
                     },
                     {
