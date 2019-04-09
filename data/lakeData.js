@@ -1073,8 +1073,8 @@ module.exports = [
                 data: [],
                 refreshInterval: 60, //minutes
                 lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: 328.64,
-                normalPool: 328.64,
+                seaLevelDelta: 0.0,
+                normalPool: 13.0,
                 lat: 37.965640,
                 long: -87.580873,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03322000&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
@@ -2385,8 +2385,8 @@ module.exports = [
                 data: [],
                 refreshInterval: 60, //minutes
                 lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: 428.88,
-                normalPool: 428.88,
+                seaLevelDelta: 0.0,
+                normalPool: 25.4,
                 lat: 39.094311,
                 long: -84.510556,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03255000&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
@@ -2404,7 +2404,7 @@ module.exports = [
                 refreshInterval: 60, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0,
-                normalPool: 422.68,
+                normalPool: 25.4,
                 lat: 39.082309,
                 long: -84.872313,
                 elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03276650&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
