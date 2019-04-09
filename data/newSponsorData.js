@@ -27,6 +27,6 @@ module.exports = [
         sponsor: "MJHI",
         href: "",
         src: "/static/assets/img/mjhibanner.png",
-        location: ["all"]
+        location: ["kerr", "jordan","falls","Gaston"]
     }
 ]
