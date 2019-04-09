@@ -968,6 +968,14 @@ function getACEData(a2wURL, bodyOfWater, normalPool, elevDataInterval, callback)
 
                     //Which one is behind
                     if (Date.parse(data[ACEElevIndex].Elev[j].time) <= Date.parse(data[ACEFlowIndex].Outflow[i].time)) {
+                      // Missing Inflow data, push the current elevation and timestamp with N/A as Flow
+
+                      displayBatch.push({
+                        time: convertStringToUTC(data[ACEElevIndex].Elev[j].time),
+                        elev: data[ACEElevIndex].Elev[j].value.toFixed(2),
+                        flow: "N/A"
+                      });
+
                       // The Flow data comes in on the hour, find the next elev data that is on the hour
                       let elevOnHour = false;
 
@@ -981,18 +989,8 @@ function getACEData(a2wURL, bodyOfWater, normalPool, elevDataInterval, callback)
                           j++
                         } else j++ // increment and loop
                       }
-                    } else {
-                      i++;
-                      // If no matching flow data, need to Push the elevation to the client batch
-                      // Push the current hourly elevation
-                      displayBatch.push({
-                        date: convertStringToUTC(data[ACEElevIndex].Elev[j].time),
-                        time: " ",
-                        elev: data[ACEElevIndex].Elev[j].value.toFixed(2),
-                        flow: "N/A"
-                      });
+                    } else i++;
 
-                    }
                   }
                 }
               }
