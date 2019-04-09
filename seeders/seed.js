@@ -9,7 +9,7 @@ mongoose.connect(
 );
 
 db.model('State')
-  .remove({})
+  .deleteMany({})
   .then(() => db.model('State').collection.insertMany(lakeSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
