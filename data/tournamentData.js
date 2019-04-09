@@ -183,7 +183,7 @@ module.exports = [
                     ramp: "Occonneechee",
                     state: "NC-VA",
                     txDetail: "Anglers Choice",
-                    resultsLink: "https://www.anglerschoicemarine.com/fckimages/2019_YTD%20Points%204-6.pdf",
+                    resultsLink: "https://www.anglerschoicemarine.com/fckimages/RESULTS_2019_Kerr%204-6(1).pdf",
                     entryLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule"
                 },
                 {
@@ -2396,7 +2396,7 @@ module.exports = [
                         ramp: "Nutbush",
                         state: "NC-VA",
                         txDetail: "FLW",
-                        resultsLink: "",
+                        resultsLink: "https://www.flwfishing.com/results/2019-04-06-kerr",
                         entryLink: "https://www.flwfishing.com/tournaments/2019-09-07-smith-mountain"
                     },
                     {
@@ -2405,7 +2405,7 @@ module.exports = [
                         ramp: "Parkway",
                         state: "VA",
                         txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2019-04-06-kerr",
+                        resultsLink: "",
                         entryLink: "https://www.flwfishing.com/tournaments/2019-06-29-smith-mountain"
                     },
                     {
