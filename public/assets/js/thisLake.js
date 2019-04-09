@@ -802,6 +802,12 @@ $.ajax({
         adCharitySrc = currentLake.adCharitySrc;
         adCharityUrl = currentLake.adCharityUrl;
 
+        // Set lake title on page
+        $("#lakeTitle").append(currentLake.bodyOfWater);
+        $("#lakeSponsor").append(currentLake.bodyOfWater);
+        $("#lakeFeaturedTournament").append(currentLake.bodyOfWater);
+
+        if (currentLake.data.length > 0) {
         currentLake.data.forEach(function (entry, i) {
             let timestamp = new Date(entry.time);
             entry.date = timestamp.toLocaleDateString();
@@ -829,23 +835,21 @@ $.ajax({
         buildElevChart(currentLake.data);
         
         // build flow chart if flows are available
-        if (currentLake.data[0].flow !== "N/A" && typeof currentLake.data[0].flow !== 'undefined') {
+        if (currentLake.data[0].flow !== "N/A") {
             buildFlowChart(currentLake.data);
         }
 
-
+        
         // Hide loading gif
         hideLoader();
-        // Set lake title on page
-        $("#lakeTitle").append(currentLake.bodyOfWater);
-        $("#lakeSponsor").append(currentLake.bodyOfWater);
-        $("#lakeFeaturedTournament").append(currentLake.bodyOfWater);
+
         // Set current date, time elev, and pool on page
         $("#currentTime").append(currentLake.data[0].time);
         $("#currentDate").append(currentLake.data[0].date);
         $("#currentLevel").append(currentLake.data[0].elev);
         $("#currentDelta").append((currentLake.data[0].elev - currentLake.normalPool).toFixed(2));
         $("#currentNormal").append("normal pool " + currentLake.normalPool);
+        }
     })
 
 
