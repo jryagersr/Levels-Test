@@ -384,7 +384,57 @@ module.exports = [
         lat: 35.302779, 
         long: -78.612879
     },
+    /************************************************************************************************************************************** */
+    {
+        sponsorName: "TDC",
+        sponsorType: "Non-Local",
+        sponsorImage: "png file",
+        defaultHref: "http://thedesigncorner.biz/",
+        sponsorships: [{
+                name: "The Design Corner",
+                type: [
 
+                    {
+                        type: "Banner", //This tells where to position the sponsor featuredTx, lake, charityTx, txPage, Banner, lakeTx, lakePage
+                        image: "png file",
+                        lake: [
+                            "All" // for lake or tx sponsor
+                        ],
+                        startDate: ["",
+                            "",
+                            ""
+                        ],
+                        endDate: ["", "", ""],
+                        text: ["All lake banner"], // For featuredTx, lakeTx and charityTx
+                        stScope: ["All"], // States or All
+                        detail: ["Bottom Banner All sponsor"],
+                        link: ["http://thedesigncorner.biz/"]
+                    }
+                ]
+            },
+            {
+                name: "The Design Corner",
+                type: [
+
+                    {
+                        type: "lake", //This tells where to position the sponsor featuredTx, lake, charityTx, txPage, Banner, lakeTx, txPage
+                        image: "png file",
+                        lake: [
+                            "Jordan" // for lake or tx sponsor
+                        ],
+                        startDate: [""],
+                        endDate: [""],
+                        text: ["lake Sponsor"], // For featuredTx, lakeTx and charityTx
+                        stScope: ["All"], // States or All
+                        detail: ["Bottom Banner All sponsor"],
+                        link: ["http://thedesigncorner.biz/"]
+                    }
+                ]
+            }
+        ],
+        lat:35.728272,
+        long: -78.849713
+    },
     /************************************************************************************************************************************** */
     {
         sponsorName: "FOM/BPS",
