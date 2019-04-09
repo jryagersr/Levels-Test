@@ -68,8 +68,6 @@ module.exports = function (app) {
                       } else {
                         // send updated lake to client
                         res.json(data);
-                        // update all remaining lakes after servicing user
-                        updateAllLakes();
                       }
                     })
                   }
@@ -92,8 +90,6 @@ module.exports = function (app) {
                       } else {
                         // send updated lake to client
                         res.json(data);
-                        // update all remaining lakes after servicing user
-                        updateAllLakes();
                       }
                     })
                   }
@@ -116,8 +112,6 @@ module.exports = function (app) {
                       } else {
                         // send updated lake to client
                         res.json(data);
-                        // update all remaining lakes after servicing user
-                        updateAllLakes();
                       }
                     })
                   }
@@ -140,8 +134,6 @@ module.exports = function (app) {
                       } else {
                         // send updated lake to client
                         res.json(data);
-                        // update all remaining lakes after servicing user
-                        updateAllLakes();
                       }
                     })
                   }
@@ -164,8 +156,6 @@ module.exports = function (app) {
                       } else {
                         // send updated lake to client
                         res.json(data);
-                        // update all remaining lakes after servicing user
-                        updateAllLakes();
                       }
                     })
                   }
@@ -188,8 +178,7 @@ module.exports = function (app) {
                       } else {
                         // send updated lake to client
                         res.json(data);
-                        // update all remaining lakes after servicing user
-                        updateAllLakes();
+                       
                       }
                     })
                   }
@@ -212,8 +201,6 @@ module.exports = function (app) {
                       } else {
                         // send updated lake to client
                         res.json(data);
-                        // update all remaining lakes after servicing user
-                        updateAllLakes();
                       }
                     })
                   }
@@ -236,8 +223,6 @@ module.exports = function (app) {
                       } else {
                         // send updated lake to client
                         res.json(data);
-                        // update all remaining lakes after servicing user
-                        updateAllLakes();
                       }
                     })
                   }
@@ -258,8 +243,6 @@ module.exports = function (app) {
             });
             res.json(currentLake);
             console.log(`No update needed for ${currentLake.bodyOfWater}`);
-            // update all remaining lakes after servicing the user
-            updateAllLakes();
           }
         }
       })
@@ -389,6 +372,8 @@ function updateAllLakes() {
   updateCubeDB();
 }
 
+setInterval(function(){ updateAllLakes(); }, 600000);
+
 
 
 // CUBE UPDATE FUNCTION
@@ -496,7 +481,7 @@ function updateCubeDB() {
                 })
               }
               else {
-                console.log(`No update needed for ${lake.bodyOfWater}`);
+                console.log(`No update needed for ${lake.bodyOfWater} (${lake.dataSource[0]})`);
               }
             }
           })

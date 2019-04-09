@@ -30,6 +30,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "/public")));
 app.use('/static', express.static(path.join(__dirname, '/public')))
+// Handle 404
+// app.use(function(req, res) {
+//   res.status(404).send("404: Page not Found");
+// });
+
+// Handle 500
+app.use(function(error, req, res, next) {
+  res.status(500).send("500: Internal Server Error");
+});
 
 // ================================================================================
 // ROUTER

@@ -215,7 +215,7 @@ module.exports = [
             {
                 bodyOfWater: "Alamo", // lake name
                 data: [],
-                refreshInterval: 1200, //minutes
+                refreshInterval: 60, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 1160.4,
@@ -1473,7 +1473,7 @@ module.exports = [
         lakes: [{
                 bodyOfWater: "Columbus", // lake name
                 data: [],
-                refreshInterval: 1200, //minutes
+                refreshInterval: 60, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 164.0,
@@ -1481,7 +1481,7 @@ module.exports = [
                 long: -88.485726,
                 elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=25832039&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
                 flowURL: "none",
-                href: "/lakes/Columbus",
+                href: "/lakes/columbus",
                 dataSource: ["ACE"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
@@ -1496,7 +1496,7 @@ module.exports = [
                     date: ["18-03/02"], //array of elevation dates
                     time: ["time"], //arrat if elevation times
                 }],
-                refreshInterval: 1200, //minutes
+                refreshInterval: 60, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 297.50,
@@ -1561,7 +1561,7 @@ module.exports = [
             {
                 bodyOfWater: "Brantley", // lake name
                 data: [],
-                refreshInterval: 1200, //minutes
+                refreshInterval: 60, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 3271.0,
@@ -3224,7 +3224,7 @@ module.exports = [
                 long: -98.350450,
                 elevURL: "https://waterdatafortexas.org/reservoirs/individual/lyndon-b-johnson-30day.csv",
                 flowURL: "none",
-                href: "/lakes/LBJ",
+                href: "/lakes/lbj",
                 dataSource: ["TWDB"], // array of calls to make to retrieve data Texas Water Development District
                 resultsLink: "undefined",
                 entryLink: "",
@@ -3342,7 +3342,7 @@ module.exports = [
             {
                 bodyOfWater: "Travis", // lake name
                 data: [],
-                refreshInterval: 1200, //minutes
+                refreshInterval: 60, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 681.0,
