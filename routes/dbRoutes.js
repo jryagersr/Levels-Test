@@ -360,6 +360,7 @@ function updateAndReturnOneLake(bodyOfWater, lastRefresh, data, callback) {
 
 // function to update all lakes
 function updateAllLakes() {
+  console.log("Updating all lakes...");
   updateUSGSDB();
   updateACEDB();
   updateDUKEDB();

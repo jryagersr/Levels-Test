@@ -34,7 +34,6 @@ $.ajax({
             }
         }
 
-
         // function to define errors for geolocation (ex: user denies location access)
         function showError(error) {
             // dump any contents in the lake container
@@ -82,6 +81,32 @@ $.ajax({
             displayNearbyLakes(userLat, userLon);
         }
 
+        // function to grab update current levels of nearby lakes
+        function updateNearbyLakes(lakes) {
+            lakes.forEach(function(lake, i) {
+                let lakeRoute = lake.href.split("/")[2];
+                $.ajax({
+                    url: "/api/find-one-lake",
+                    method: "GET",
+                    data: {
+                        lakeName: lakeRoute
+                    }
+                })
+                    .then(function (lake) {
+                        let timestamp = new Date(lake.data[0].time);
+                        let date = timestamp.toLocaleDateString();
+                        let time = timestamp.toLocaleTimeString();
+                        let html = `
+                        <div class="right">
+                            <h4>${lake.data[0].elev}</h4>
+                            <p>${date} <br> ${time}</p>
+                        </div>
+                            `
+                        $(`#nearbyLake-${i}`).append(html);
+            })
+        })
+        }
+
         // display nearby lakes
         function displayNearbyLakes(lat, lon) {
             // dump anything currently in the lake container, noLocation container, or template
@@ -90,19 +115,22 @@ $.ajax({
             lakeTemplate = `<h6>Lakes near: ${lat.toFixed(5)}, ${lon.toFixed(5)}</h6>`;
             // sort by ascending distance
             closeLakes = closeLakes.sort(function (a, b) { return (a.distance - b.distance) });
+            closeLakes.length = 10;
             // loop through closeLakes and build the template for the page
-            for (var i = 0; i < 10; i++) {
+            for (var i = 0; i < closeLakes.length; i++) {
                 lakeTemplate += `
                     <a href=${closeLakes[i].href}>
-                        <div class="lake-card">
+                        <div class="lake-card" id="nearbyLake-${i}">
+                        <div class="left">
                             <h2>${closeLakes[i].name}</h2>
                             <p>${closeLakes[i].distance.toFixed(0)} miles away</p>
+                            </div>
                         </div>
                     </a>
                 `;
             }
             // Hide loader gif
-            $('#lds-ring').hide();
+            $('#home-nearby #lds-ring').hide();
             // append template to page
             $('#lakeContainer').append(lakeTemplate);
             // reveal the lake container 
@@ -111,6 +139,8 @@ $.ajax({
             var divPosition = $('#home-nearby').offset();
             $('html, body').animate({scrollTop: divPosition.top - 100}, "slow");
 
+            // update current levels
+            updateNearbyLakes(closeLakes);
         }
 
 
@@ -163,6 +193,8 @@ $.ajax({
             e.preventDefault();
             userZip = $('#zipInput').val().trim();
             if (isNaN(userZip) || userZip.length !== 5) {
+                // Hide loader gif
+                $('#lds-ring').hide();
                 $('#validationMessage').text("Not a valid zip code");
             }
             else {
@@ -179,18 +211,19 @@ $.ajax({
                 })
                     .then(function (data) {
                         if ($.isEmptyObject(data)) {
-                            $('#validationMessage').text("Not a valid zip code");
+                            // Hide loader gif
+                            $('#lds-ring').hide();
+                            $('#validationMessage').text("Zip code not found.");
                         }
                         else {
                             userLat = data.lat;
                             userLon = data.lon;
                             findNearbyLakes(userLat, userLon);
+
                         }
                     });
             }
         });
-
-
 
 
     });
