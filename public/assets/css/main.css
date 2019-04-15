@@ -222,12 +222,14 @@ h1, h2, h3 {
 .lake-card {
     width: 80%;
     margin: 0px auto 20px;
-    padding: 10px;
     height: auto;
+    padding: 5px;
     text-align: center;
     background: rgb(0,212,255);
     background: linear-gradient(135deg, rgba(0,212,255,1) 0%, rgba(9,45,121,1) 100%);
     box-shadow: 0px 2px 4px rgba(0,0,0,0.18);
+    display: flex;
+    justify-content: space-between;
 }
 
 .lake-card:hover {
@@ -238,7 +240,11 @@ h1, h2, h3 {
 
 .lake-card div {
     color: white;
-    margin: 0;
+    margin: auto;
+}
+
+.lake-card div * {
+    margin: 0px 0px 5px;
 }
 
 .lake-card div h2, .lake-card div h4 {
@@ -246,7 +252,7 @@ h1, h2, h3 {
 }
 
 .lake-card div h4 {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .lake-card div p {
@@ -751,20 +757,20 @@ h1, h2, h3 {
 
     @media only screen and (min-width: 571px) {
         .lake-card {
-            display: flex;
-            justify-content: space-between;
+            padding: 10px;
+        }
+        /* .lake-card div h4 {
+            margin-top: 20px;
         }
 
-        .lake-card div {
-            margin: auto;
-        }
-        
+        .lake-card div h2 {
+            margin-top: 10px;
+        } */
         .lake-card .left {
             flex: 2;
         }
-        
+
         .lake-card .right {
             flex: 1;
         }
-        
     }
