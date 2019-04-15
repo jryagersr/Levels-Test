@@ -158,18 +158,21 @@ function buildFlowChart(data) {
     for (k; k < data.length; k++) {
         // if we're past the first entry
         if (k > 0) {
-            // if we're still on the same day and not on the last entry
-            if (data[k].date === data[k - 1].date) {
-                // add to our average variables
-                sumOfFlows += data[k].flow;
-                divisor++
-            }
-            // else we're on a new day. so push data and reset averages
-            else {
-                labelBatch.push(data[k - 1].date);
-                dataFlowBatch.push((sumOfFlows / divisor).toFixed(2)); // calculate average
-                sumOfFlows = data[k].flow;
-                divisor = 1;
+            // if the data is available and not "missing"
+            if (data[k].flow !== "Missing") {
+                // if we're still on the same day and not on the last entry
+                if (data[k].date === data[k - 1].date) {
+                    // add to our average variables
+                    sumOfFlows += data[k].flow;
+                    divisor++
+                }
+                // else we're on a new day. so push data and reset averages
+                else {
+                    labelBatch.push(data[k - 1].date);
+                    dataFlowBatch.push((sumOfFlows / divisor).toFixed(2)); // calculate average
+                    sumOfFlows = data[k].flow;
+                    divisor = 1;
+                }
             }
         }
         // when a week of data has been reached stop
@@ -244,47 +247,47 @@ $.ajax({
         $("#lakeFeaturedTournament").append(currentLake.bodyOfWater);
 
         if (currentLake.data.length > 0) {
-        currentLake.data.forEach(function (entry, i) {
-            let timestamp = new Date(entry.time);
-            entry.date = timestamp.toLocaleDateString();
-            entry.time = timestamp.toLocaleTimeString();
-            if (entry.elev !== "N/A" && entry.elev !== "Missing") {
-                entry.elev = Number(entry.elev);
+            currentLake.data.forEach(function (entry, i) {
+                let timestamp = new Date(entry.time);
+                entry.date = timestamp.toLocaleDateString();
+                entry.time = timestamp.toLocaleTimeString();
+                if (entry.elev !== "N/A" && entry.elev !== "Missing") {
+                    entry.elev = Number(entry.elev);
+                }
+                if (entry.flow !== "N/A" && entry.flow !== "Missing") {
+                    entry.flow = Number(entry.flow);
+                }
+                // Create the HTML Well (Section) and Add the table content for each reserved table
+                var lakeSection = $("<tr>");
+                lakeSection.addClass("well");
+                lakeSection.attr("id", "lakeWell-" + i + 1);
+                $("#lakeSection").append(lakeSection);
+
+                // Append the data values to the table row
+                $("#lakeWell-" + i + 1).append("<td>" + entry.date + "</td>");
+                $("#lakeWell-" + i + 1).append("<td>" + entry.time + "</td>");
+                $("#lakeWell-" + i + 1).append("<td>" + entry.elev + "</td>");
+                $("#lakeWell-" + i + 1).append("<td>" + entry.flow + "</td>");
+            })
+
+            // build elevation chart
+            buildElevChart(currentLake.data);
+
+            // build flow chart if flows are available
+            if (currentLake.data[0].flow !== "N/A") {
+                buildFlowChart(currentLake.data);
             }
-            if (entry.flow !== "N/A" && entry.flow !== "Missing") {
-                entry.flow = Number(entry.flow);
-            }
-            // Create the HTML Well (Section) and Add the table content for each reserved table
-            var lakeSection = $("<tr>");
-            lakeSection.addClass("well");
-            lakeSection.attr("id", "lakeWell-" + i + 1);
-            $("#lakeSection").append(lakeSection);
-    
-            // Append the data values to the table row
-            $("#lakeWell-" + i + 1).append("<td>" + entry.date + "</td>");
-            $("#lakeWell-" + i + 1).append("<td>" + entry.time + "</td>");
-            $("#lakeWell-" + i + 1).append("<td>" + entry.elev + "</td>");
-            $("#lakeWell-" + i + 1).append("<td>" + entry.flow + "</td>");
-        })
 
-        // build elevation chart
-        buildElevChart(currentLake.data);
-        
-        // build flow chart if flows are available
-        if (currentLake.data[0].flow !== "N/A") {
-            buildFlowChart(currentLake.data);
-        }
 
-        
-        // Hide loading gif
-        hideLoader();
+            // Hide loading gif
+            hideLoader();
 
-        // Set current date, time elev, and pool on page
-        $("#currentTime").append(currentLake.data[0].time);
-        $("#currentDate").append(currentLake.data[0].date);
-        $("#currentLevel").append(currentLake.data[0].elev);
-        $("#currentDelta").append((currentLake.data[0].elev - currentLake.normalPool).toFixed(2));
-        $("#currentNormal").append("normal pool " + currentLake.normalPool);
+            // Set current date, time elev, and pool on page
+            $("#currentTime").append(currentLake.data[0].time);
+            $("#currentDate").append(currentLake.data[0].date);
+            $("#currentLevel").append(currentLake.data[0].elev);
+            $("#currentDelta").append((currentLake.data[0].elev - currentLake.normalPool).toFixed(2));
+            $("#currentNormal").append("normal pool " + currentLake.normalPool);
         }
     })
 

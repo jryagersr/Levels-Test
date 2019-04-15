@@ -759,13 +759,7 @@ h1, h2, h3 {
         .lake-card {
             padding: 10px;
         }
-        /* .lake-card div h4 {
-            margin-top: 20px;
-        }
-
-        .lake-card div h2 {
-            margin-top: 10px;
-        } */
+        
         .lake-card .left {
             flex: 2;
         }
