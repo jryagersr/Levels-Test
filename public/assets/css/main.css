@@ -243,6 +243,17 @@ h1, h2, h3 {
     margin: auto;
 }
 
+.lds {
+    padding: 20px 40px;
+    width: 50%;
+}
+
+.lake-card .lds #lds-ring div {
+    border: 3px solid white;
+    border-color: white transparent transparent transparent;
+
+}
+
 .lake-card div * {
     margin: 0px 0px 5px;
 }
@@ -764,7 +775,11 @@ h1, h2, h3 {
             flex: 2;
         }
 
-        .lake-card .right {
+        .lake-card .right, .lake-card .lds {
             flex: 1;
+        }
+
+        .lds {
+            padding: 20px 0px;
         }
     }

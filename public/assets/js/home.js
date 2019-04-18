@@ -8,6 +8,12 @@ var x = document.getElementById("noLocation");
 let lakeData;
 let lakeTemplate = '';
 
+
+// Hide loader gif
+function hideLoader() {
+    $('.lds #lds-ring').hide();
+}
+
 // get all of our lake data
 $.ajax({
     url: "/api/find-all-lakes",
@@ -102,9 +108,12 @@ $.ajax({
                             <p>${date} <br> ${time}</p>
                         </div>
                             `
+                        $(`#nearbyLake-${i} .lds`).hide();
                         $(`#nearbyLake-${i}`).append(html);
             })
         })
+        // Hide lake card loader gifs after 20 seconds if page content hasn't loaded
+        setTimeout(hideLoader, 20 * 1000);
         }
 
         // display nearby lakes
@@ -112,7 +121,7 @@ $.ajax({
             // dump anything currently in the lake container, noLocation container, or template
             $('#lakeContainer').empty();
             $('#noLocation').empty();
-            lakeTemplate = `<h6>Lakes near: ${lat.toFixed(5)}, ${lon.toFixed(5)}</h6>`;
+            lakeTemplate = `<h6>Lakes near: ${lat.toFixed(2)}, ${lon.toFixed(2)}</h6>`;
             // sort by ascending distance
             closeLakes = closeLakes.sort(function (a, b) { return (a.distance - b.distance) });
             closeLakes.length = 10;
@@ -121,9 +130,17 @@ $.ajax({
                 lakeTemplate += `
                     <a href=${closeLakes[i].href}>
                         <div class="lake-card" id="nearbyLake-${i}">
-                        <div class="left">
-                            <h2>${closeLakes[i].name}</h2>
-                            <p>${closeLakes[i].distance.toFixed(0)} miles away</p>
+                            <div class="left">
+                                <h2>${closeLakes[i].name}</h2>
+                                <p>${closeLakes[i].distance.toFixed(0)} miles away</p>
+                            </div>
+                            <div class="lds">
+                                <div id="lds-ring">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
                             </div>
                         </div>
                     </a>
@@ -133,6 +150,8 @@ $.ajax({
             $('#home-nearby #lds-ring').hide();
             // append template to page
             $('#lakeContainer').append(lakeTemplate);
+            // Display lake-card loader gifs
+            $('.lds #lds-ring').show();
             // reveal the lake container 
             $('#lakeContainer').show();
             // scroll down to section for usability
