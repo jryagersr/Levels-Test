@@ -10,6 +10,9 @@ var LakeSchema = new Schema({
     type: String,
     required: true
   },
+  state: {
+    type: Array
+  },
   data: {
     type: Array
   },

@@ -69,8 +69,7 @@ $.ajax({
         function findNearbyLakes(userLat, userLon) {
             closeLakes = [];
             // loop through lake data
-            lakeData.forEach(function (state) {
-                state.lakes.forEach(function (lake) {
+                lakeData.forEach(function (lake) {
                     // if lake is not already collected (duplicate)
                     if (!closeLakes.some(e => e.name === lake.bodyOfWater)) {
                         // calculate our distance between user and each lake
@@ -83,7 +82,6 @@ $.ajax({
                         });
                     }
                 });
-            });
             displayNearbyLakes(userLat, userLon);
         }
 

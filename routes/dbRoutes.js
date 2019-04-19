@@ -30,21 +30,16 @@ module.exports = function (app) {
     // match off of href because this value has no caps and no spaces
     // matching off lakename alone requires modifying our entire database
     let hrefMatch = "/lakes/" + lakeName;
-    db.model("State").find({
-      //   state : stateName 
-      "lakes.href": hrefMatch
+    db.model("Lake").find({
+      "href": hrefMatch
     })
       .exec(function (err, data) {
         if (err) {
           res.send("There was a problem querying the database");
         } else {
-          // find the current lake
-          let currentLake;
-          data[0].lakes.forEach(function (e) {
-            if (e.href === hrefMatch) {
-              currentLake = e;
-            }
-          })
+          // set currentLake equal to returned lake document
+          let currentLake = data[0];
+          
           //check to see if update is needed (function returns true if update is needed)
           if (checkForUpdate(currentLake.lastRefresh, currentLake.refreshInterval, currentLake.data.length)) {
             // update current lake
@@ -251,14 +246,14 @@ module.exports = function (app) {
   app.get("/api/find-one-state", function (req, res) {
     let stateName = req.query.stateName;
     // we can match off statename for this route because the client has done the conversion from id to full name
-    db.model("State").find({
-      state: stateName
+    db.model("Lake").find({
+      "state": stateName
     })
       .exec(function (err, data) {
         if (err) {
           res.send("There was a problem querying the database");
         } else {
-          let stateLakes = data[0].lakes;
+          let stateLakes = data;
           res.json(stateLakes);
         }
       })
@@ -267,7 +262,7 @@ module.exports = function (app) {
   // route to retrieve all lake data from the database
   app.get("/api/find-all-lakes", function (req, res) {
     // we can match off statename for this route because the client has done the conversion from id to full name
-    db.model("State").find({})
+    db.model("Lake").find({})
       .exec(function (err, data) {
         if (err) {
           res.send("There was a problem querying the database");
@@ -318,50 +313,17 @@ function updateAndReturnOneLake(bodyOfWater, lastRefresh, data, callback) {
     lastRefresh = data[0].time;
   }
 
-
-
-  // data.forEach(function (entry) {
-  //   db.model("State").updateOne({
-  //     "lakes.bodyOfWater": bodyOfWater,
-  //     "lakes.$.data.time": entry.time
-  //   }, {
-  //       $set: {
-  //         "lakes.$.data": entry
-  //         },
-  //       $set: {
-  //         "lakes.$.lastRefresh": lastRefresh
-  //       }
-  //     }, {
-  //       upsert: true,
-  //       useFindAndModify: false,
-  //       new: true
-  //     })
-  //     .exec(function (err, data) {
-  //       if (err) {
-  //         console.log(err);
-  //       } else {
-  //         console.log("entry created")
-  //       }
-  //     })
-  // });
-
-
-  // db.model("State").findOne({
-  //   "lakes.bodyOfWater": bodyOfWater
-  // })
-
-
     // use updateData to update the lake data
-    db.model("State").findOneAndUpdate({
-        "lakes.bodyOfWater": bodyOfWater
+    db.model("Lake").findOneAndUpdate({
+        "bodyOfWater": bodyOfWater
       }, {
         $addToSet: {
-          "lakes.$.data": {
+          "data": {
             $each: data
           },
         },
         $set: {
-          "lakes.$.lastRefresh": lastRefresh
+          "lastRefresh": lastRefresh
         }
       }, {
         upsert: true,
@@ -372,14 +334,7 @@ function updateAndReturnOneLake(bodyOfWater, lastRefresh, data, callback) {
       if (err) {
         console.log(err);
       } else {
-        // find the lake that was updated
-        for (var i = 0; i < data.lakes.length; i++) {
-          if (data.lakes[i].bodyOfWater === bodyOfWater) {
-            updatedLake = data.lakes[i];
-            break;
-          }
-        }
-
+        let updatedLake = data;
         updatedLake.data.sort(function (a, b) {
           // Turn your strings into dates, and then subtract them
           // to get a value that is either negative, positive, or zero.
@@ -479,18 +434,15 @@ function getCUBEData(bodyOfWater, callback) {
 // function to update the database with cube data
 function updateCubeDB() {
   // find documents with CUBE in the dataSource
-  db.model("State").find({
-    "lakes.dataSource": "CUBE"
+  db.model("Lake").find({
+    "dataSource":"CUBE"
   })
     .exec(function (err, data) {
       if (err) {
         console.log("There was a problem querying the database");
       } else {
         // loop through the documents
-        data.forEach(function (state) {
-          state.lakes.forEach(function (lake) {
-            // filter each lake once more to see if dataSource array includes CUBE
-            if (lake.dataSource.includes("CUBE")) {
+          data.forEach(function (lake) {
               // check if update is needed (true = update is needed)
               if (checkForUpdate(lake.lastRefresh, lake.refreshInterval, lake.data.length)) {
                 // run the getData function
@@ -514,9 +466,7 @@ function updateCubeDB() {
               else {
                 console.log(`No update needed for ${lake.bodyOfWater} (${lake.dataSource[0]})`);
               }
-            }
           })
-        })
       }
     });
 }
@@ -635,18 +585,15 @@ function getUSGSData(usgsURL, bodyOfWater, seaLevelDelta, callback) {
 // function to update the db with usgs data
 function updateUSGSDB() {
   // find documents with USGS in the dataSource
-  db.model("State").find({
-    "lakes.dataSource": "USGS"
+  db.model("Lake").find({
+    "dataSource":"USGS"
   })
     .exec(function (err, data) {
       if (err) {
         console.log("There was a problem querying the database");
       } else {
         // loop through the documents
-        data.forEach(function (state) {
-          state.lakes.forEach(function (lake) {
-            // filter each lake once more to see if dataSource array includes USGS
-            if (lake.dataSource.includes("USGS")) {
+          data.forEach(function (lake) {
               // check if update is needed (true = update is needed)
               if (checkForUpdate(lake.lastRefresh, lake.refreshInterval, lake.data.length)) {
                 // run the getData function
@@ -669,9 +616,7 @@ function updateUSGSDB() {
               } else {
                 console.log(`No update needed for ${lake.bodyOfWater} (${lake.dataSource})`);
               }
-            }
           })
-        })
       }
     });
 }
@@ -775,18 +720,15 @@ function getTVAData(newUrl, callback) {
 // function to update the db with tva data
 function updateTVADB() {
   // find documents with TVA in the dataSource
-  db.model("State").find({
-    "lakes.dataSource": "TVA"
+  db.model("Lake").find({
+    "dataSource":"TVA"
   })
     .exec(function (err, data) {
       if (err) {
         console.log("There was a problem querying the database");
       } else {
         // loop through the documents
-        data.forEach(function (state) {
-          state.lakes.forEach(function (lake) {
-            // filter each lake once more to see if dataSource array includes TVA
-            if (lake.dataSource.includes("TVA")) {
+          data.forEach(function (lake) {
               // check if update is needed (true = update is needed)
               if (checkForUpdate(lake.lastRefresh, lake.refreshInterval, lake.data.length)) {
                 // run the getData function
@@ -809,9 +751,7 @@ function updateTVADB() {
               } else {
                 console.log(`No update needed for ${lake.bodyOfWater} (${lake.dataSource})`);
               }
-            }
           })
-        })
       }
     });
 }
@@ -1123,18 +1063,15 @@ function getACEData(a2wURL, bodyOfWater, normalPool, elevDataInterval, callback)
 
 function updateACEDB() {
   // find documents with ACE in the dataSource
-  db.model("State").find({
-    "lakes.dataSource": "ACE"
+  db.model("Lake").find({
+    "dataSource":"ACE"
   })
     .exec(function (err, data) {
       if (err) {
         console.log("There was a problem querying the database");
       } else {
         // loop through the documents
-        data.forEach(function (state) {
-          state.lakes.forEach(function (lake) {
-            // filter each lake once more to see if dataSource array includes ACE
-            if (lake.dataSource.includes("ACE")) {
+          data.forEach(function (lake) {
               // check if update is needed (true = update is needed)
               if (checkForUpdate(lake.lastRefresh, lake.refreshInterval, lake.data.length)) {
                 // run the getData function
@@ -1157,9 +1094,7 @@ function updateACEDB() {
               } else {
                 console.log(`No update needed for ${lake.bodyOfWater} (${lake.dataSource})`);
               }
-            }
           })
-        })
       }
     });
 }
@@ -1282,18 +1217,15 @@ function getUSLAKESData(bodyOfWater, callback) {
 
 function updateUSLAKESDB() {
   // find documents with USLAKES in the dataSource
-  db.model("State").find({
-    "lakes.dataSource": "USLAKES"
+  db.model("Lake").find({
+    "dataSource":"USLAKES"
   })
     .exec(function (err, data) {
       if (err) {
         console.log("There was a problem querying the database");
       } else {
         // loop through the documents
-        data.forEach(function (state) {
-          state.lakes.forEach(function (lake) {
-            // filter each lake once more to see if dataSource array includes USLAKES
-            if (lake.dataSource.includes("USLAKES")) {
+          data.forEach(function (lake) {
               // check if update is needed (true = update is needed)
               if (checkForUpdate(lake.lastRefresh, lake.refreshInterval, lake.data.length)) {
                 // run the getData function
@@ -1316,9 +1248,7 @@ function updateUSLAKESDB() {
               } else {
                 console.log(`No update needed for ${lake.bodyOfWater} (${lake.dataSource})`);
               }
-            }
           })
-        })
       }
     });
 }
@@ -1361,18 +1291,15 @@ function getDUKEData(lakeName, newUrl, seaLevelDelta, callback) {
 
 function updateDUKEDB() {
   // find documents with DUKE in the dataSource
-  db.model("State").find({
-    "lakes.dataSource": "DUKE"
+  db.model("Lake").find({
+    "dataSource":"DUKE"
   })
     .exec(function (err, data) {
       if (err) {
         console.log("There was a problem querying the database");
       } else {
         // loop through the documents
-        data.forEach(function (state) {
-          state.lakes.forEach(function (lake) {
-            // filter each lake once more to see if dataSource array includes DUKE
-            if (lake.dataSource.includes("DUKE")) {
+          data.forEach(function (lake) {
               // check if update is needed (true = update is needed)
               if (checkForUpdate(lake.lastRefresh, lake.refreshInterval, lake.data.length)) {
                 // run the getData function
@@ -1395,9 +1322,7 @@ function updateDUKEDB() {
               } else {
                 console.log(`No update needed for ${lake.bodyOfWater} (${lake.dataSource})`);
               }
-            }
           })
-        })
       }
     });
 }
@@ -1440,18 +1365,15 @@ function getSJRWMDData(lakeName, newUrl, callback) {
 
 function updateSJRWMDDB() {
   // find documents with SJRWMDDB in the dataSource
-  db.model("State").find({
-    "lakes.dataSource": "SJRWMD"
+  db.model("Lake").find({
+    "dataSource":"SJRWMD"
   })
     .exec(function (err, data) {
       if (err) {
         console.log("There was a problem querying the database");
       } else {
         // loop through the documents
-        data.forEach(function (state) {
-          state.lakes.forEach(function (lake) {
-            // filter each lake once more to see if dataSource array includes SJRWMD
-            if (lake.dataSource.includes("SJRWMD")) {
+          data.forEach(function (lake) {
               // check if update is needed (true = update is needed)
               if (checkForUpdate(lake.lastRefresh, lake.refreshInterval, lake.data.length)) {
                 // run the getData function
@@ -1474,9 +1396,7 @@ function updateSJRWMDDB() {
               } else {
                 console.log(`No update needed for ${lake.bodyOfWater} (${lake.dataSource})`);
               }
-            }
           })
-        })
       }
     });
 }
@@ -1521,18 +1441,15 @@ function getTWDBData(lakeName, newUrl, callback) {
 
 function updateTWDBDB() {
   // find documents with TWDB in the dataSource
-  db.model("State").find({
-    "lakes.dataSource": "TWDB"
+  db.model("Lake").find({
+    "dataSource":"TWDB"
   })
     .exec(function (err, data) {
       if (err) {
         console.log("There was a problem querying the database");
       } else {
         // loop through the documents
-        data.forEach(function (state) {
-          state.lakes.forEach(function (lake) {
-            // filter each lake once more to see if dataSource array includes TWDB
-            if (lake.dataSource.includes("TWDB")) {
+          data.forEach(function (lake) {
               // check if update is needed (true = update is needed)
               if (checkForUpdate(lake.lastRefresh, lake.refreshInterval, lake.data.length)) {
                 // run the getData function
@@ -1555,9 +1472,7 @@ function updateTWDBDB() {
               } else {
                 console.log(`No update needed for ${lake.bodyOfWater} (${lake.dataSource})`);
               }
-            }
           })
-        })
       }
     });
 }
