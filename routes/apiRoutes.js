@@ -942,7 +942,7 @@ module.exports = function (app) {
   // This returns the sponsor file
   app.get("/api/sponsors", function (request, response) {
     // Import our txData from newSponsorData.js file
-    var sponsorData = require("../data/newSponsorData");
+    var sponsorData = require("../data/sponsorData");
     response.json(sponsorData);
   });
 

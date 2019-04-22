@@ -8,9 +8,9 @@ mongoose.connect(
   "mongodb://localhost/BassSavvyTestDb"
 );
 
-db.model('State')
-  .remove({})
-  .then(() => db.model('State').collection.insertMany(lakeSeed))
+db.model('Lake')
+  .deleteMany({})
+  .then(() => db.model('Lake').collection.insertMany(lakeSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);

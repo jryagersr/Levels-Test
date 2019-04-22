@@ -80,7 +80,7 @@ const states = [{
         id: "nc"
     },
     {
-        state: "Oho",
+        state: "Ohio",
         id: "oh"
     },
     {
@@ -106,6 +106,10 @@ const states = [{
     {
         state: "Texas",
         id: "tx"
+    },
+    {
+        state: "Utah",
+        id: "ut"
     },
     {
         state: "Virginia",
