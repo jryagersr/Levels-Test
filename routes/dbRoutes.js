@@ -8,9 +8,11 @@ var _ = require("underscore");
 var databaseUri = 'mongodb://localhost/BassSavvyTestDb';
 
 if (process.env.MONGODB_URI) {
-  db.connect(process.env.MONGODB_URI);
+  db.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
+  console.log("MongoDB connection successful")
 } else {
-  db.connect(databaseUri);
+  db.connect(databaseUri, { useNewUrlParser: true });
+  console.log("MongoDB connection successful")
 }
 
 // ===============================================================================

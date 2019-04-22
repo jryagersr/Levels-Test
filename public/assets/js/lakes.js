@@ -80,7 +80,7 @@ const states = [{
         id: "nc"
     },
     {
-        state: "Oho",
+        state: "Ohio",
         id: "oh"
     },
     {
