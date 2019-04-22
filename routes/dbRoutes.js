@@ -8,10 +8,14 @@ var _ = require("underscore");
 var databaseUri = 'mongodb://localhost/BassSavvyTestDb';
 
 if (process.env.MONGODB_URI) {
-  db.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
+  db.connect(process.env.MONGODB_URI, {
+    useNewUrlParser: true
+  });
   console.log("MongoDB connection successful");
 } else {
-  db.connect(databaseUri, { useNewUrlParser: true });
+  db.connect(databaseUri, {
+    useNewUrlParser: true
+  });
   console.log("MongoDB connection successful");
 }
 
@@ -33,15 +37,15 @@ module.exports = function (app) {
     // matching off lakename alone requires modifying our entire database
     let hrefMatch = "/lakes/" + lakeName;
     db.model("Lake").find({
-      "href": hrefMatch
-    })
+        "href": hrefMatch
+      })
       .exec(function (err, data) {
         if (err) {
           res.send("There was a problem querying the database");
         } else {
           // set currentLake equal to returned lake document
           let currentLake = data[0];
-          
+
           //check to see if update is needed (function returns true if update is needed)
           if (checkForUpdate(currentLake.lastRefresh, currentLake.refreshInterval, currentLake.data.length)) {
             // update current lake
@@ -249,8 +253,8 @@ module.exports = function (app) {
     let stateName = req.query.stateName;
     // we can match off statename for this route because the client has done the conversion from id to full name
     db.model("Lake").find({
-      "state": stateName
-    })
+        "state": stateName
+      })
       .exec(function (err, data) {
         if (err) {
           res.send("There was a problem querying the database");
@@ -315,23 +319,23 @@ function updateAndReturnOneLake(bodyOfWater, lastRefresh, data, callback) {
     lastRefresh = data[0].time;
   }
 
-    // use updateData to update the lake data
-    db.model("Lake").findOneAndUpdate({
-        "bodyOfWater": bodyOfWater
-      }, {
-        $addToSet: {
-          "data": {
-            $each: data
-          },
+  // use updateData to update the lake data
+  db.model("Lake").findOneAndUpdate({
+      "bodyOfWater": bodyOfWater
+    }, {
+      $addToSet: {
+        "data": {
+          $each: data
         },
-        $set: {
-          "lastRefresh": lastRefresh
-        }
-      }, {
-        upsert: true,
-        useFindAndModify: false,
-        new: true
-      })
+      },
+      $set: {
+        "lastRefresh": lastRefresh
+      }
+    }, {
+      upsert: true,
+      useFindAndModify: false,
+      new: true
+    })
     .exec(function (err, data) {
       if (err) {
         console.log(err);
@@ -362,7 +366,9 @@ function updateAllLakes() {
   updateCubeDB();
 }
 
-setInterval(function () { updateAllLakes(); }, 600000);
+setInterval(function () {
+  updateAllLakes();
+}, 600000);
 
 
 
@@ -437,38 +443,37 @@ function getCUBEData(bodyOfWater, callback) {
 function updateCubeDB() {
   // find documents with CUBE in the dataSource
   db.model("Lake").find({
-    "dataSource":"CUBE"
-  })
+      "dataSource": "CUBE"
+    })
     .exec(function (err, data) {
       if (err) {
         console.log("There was a problem querying the database");
       } else {
         // loop through the documents
-          data.forEach(function (lake) {
-              // check if update is needed (true = update is needed)
-              if (checkForUpdate(lake.lastRefresh, lake.refreshInterval, lake.data.length)) {
-                // run the getData function
-                // run the getData function
-                getCUBEData(lake.bodyOfWater, function (error, data) {
+        data.forEach(function (lake) {
+          // check if update is needed (true = update is needed)
+          if (checkForUpdate(lake.lastRefresh, lake.refreshInterval, lake.data.length)) {
+            // run the getData function
+            // run the getData function
+            getCUBEData(lake.bodyOfWater, function (error, data) {
+              if (error) {
+                response.send(error);
+                return;
+              } else {
+                // update the current lake
+                updateAndReturnOneLake(lake.bodyOfWater, lake.lastRefresh, data, function (error, data) {
                   if (error) {
-                    response.send(error);
+                    console.log(error);
                     return;
-                  } else {
-                    // update the current lake
-                    updateAndReturnOneLake(lake.bodyOfWater, lake.lastRefresh, data, function (error, data) {
-                      if (error) {
-                        console.log(error);
-                        return;
-                        // if successful return the data
-                      }
-                    })
+                    // if successful return the data
                   }
                 })
               }
-              else {
-                console.log(`No update needed for ${lake.bodyOfWater} (${lake.dataSource[0]})`);
-              }
-          })
+            })
+          } else {
+            console.log(`No update needed for ${lake.bodyOfWater} (${lake.dataSource[0]})`);
+          }
+        })
       }
     });
 }
@@ -588,37 +593,37 @@ function getUSGSData(usgsURL, bodyOfWater, seaLevelDelta, callback) {
 function updateUSGSDB() {
   // find documents with USGS in the dataSource
   db.model("Lake").find({
-    "dataSource":"USGS"
-  })
+      "dataSource": "USGS"
+    })
     .exec(function (err, data) {
       if (err) {
         console.log("There was a problem querying the database");
       } else {
         // loop through the documents
-          data.forEach(function (lake) {
-              // check if update is needed (true = update is needed)
-              if (checkForUpdate(lake.lastRefresh, lake.refreshInterval, lake.data.length)) {
-                // run the getData function
-                getUSGSData(lake.elevURL, lake.bodyOfWater, lake.seaLevelDelta, function (error, data) {
+        data.forEach(function (lake) {
+          // check if update is needed (true = update is needed)
+          if (checkForUpdate(lake.lastRefresh, lake.refreshInterval, lake.data.length)) {
+            // run the getData function
+            getUSGSData(lake.elevURL, lake.bodyOfWater, lake.seaLevelDelta, function (error, data) {
+              if (error) {
+                console.log(error);
+                return;
+                // if successful update the database
+              } else {
+                // update the current lake
+                updateAndReturnOneLake(lake.bodyOfWater, lake.lastRefresh, data, function (error, data) {
                   if (error) {
                     console.log(error);
                     return;
-                    // if successful update the database
-                  } else {
-                    // update the current lake
-                    updateAndReturnOneLake(lake.bodyOfWater, lake.lastRefresh, data, function (error, data) {
-                      if (error) {
-                        console.log(error);
-                        return;
-                        // if successful return the data
-                      }
-                    })
+                    // if successful return the data
                   }
-                });
-              } else {
-                console.log(`No update needed for ${lake.bodyOfWater} (${lake.dataSource})`);
+                })
               }
-          })
+            });
+          } else {
+            console.log(`No update needed for ${lake.bodyOfWater} (${lake.dataSource})`);
+          }
+        })
       }
     });
 }
@@ -723,37 +728,37 @@ function getTVAData(newUrl, callback) {
 function updateTVADB() {
   // find documents with TVA in the dataSource
   db.model("Lake").find({
-    "dataSource":"TVA"
-  })
+      "dataSource": "TVA"
+    })
     .exec(function (err, data) {
       if (err) {
         console.log("There was a problem querying the database");
       } else {
         // loop through the documents
-          data.forEach(function (lake) {
-              // check if update is needed (true = update is needed)
-              if (checkForUpdate(lake.lastRefresh, lake.refreshInterval, lake.data.length)) {
-                // run the getData function
-                getTVAData(lake.elevURL, function (error, data) {
+        data.forEach(function (lake) {
+          // check if update is needed (true = update is needed)
+          if (checkForUpdate(lake.lastRefresh, lake.refreshInterval, lake.data.length)) {
+            // run the getData function
+            getTVAData(lake.elevURL, function (error, data) {
+              if (error) {
+                console.log(error);
+                return;
+                // if successful update the database
+              } else {
+                // update the current lake
+                updateAndReturnOneLake(lake.bodyOfWater, lake.lastRefresh, data, function (error, data) {
                   if (error) {
                     console.log(error);
                     return;
-                    // if successful update the database
-                  } else {
-                    // update the current lake
-                    updateAndReturnOneLake(lake.bodyOfWater, lake.lastRefresh, data, function (error, data) {
-                      if (error) {
-                        console.log(error);
-                        return;
-                        // if successful return the data
-                      }
-                    })
+                    // if successful return the data
                   }
-                });
-              } else {
-                console.log(`No update needed for ${lake.bodyOfWater} (${lake.dataSource})`);
+                })
               }
-          })
+            });
+          } else {
+            console.log(`No update needed for ${lake.bodyOfWater} (${lake.dataSource})`);
+          }
+        })
       }
     });
 }
@@ -799,6 +804,7 @@ function getACEData(a2wURL, bodyOfWater, normalPool, elevDataInterval, callback)
         let ACEFlowNum = 0;
         let exceptionLake = false;
         let stageRiver = [];
+        let elevMin = "";
 
         if (typeof data[0].Elev == 'undefined' &&
           typeof data[0].Stage !== 'undefined' && bodyOfWater.indexOf("River") >= 0) {
@@ -841,7 +847,7 @@ function getACEData(a2wURL, bodyOfWater, normalPool, elevDataInterval, callback)
           let isLakeIstokpoga = bodyOfWater == 'Istokpoga'; // default value, this is when the ACE data is Fucked Up like Istokpoga in Florida, Damn...
 
           // These have 120 elev data and 5 Flow, ignore flow data
-          if (['Truman', 'Pomme De Terre', "Stockton", "Rend",].includes(bodyOfWater))
+          if (['Truman', 'Pomme De Terre', "Stockton", "Rend", ].includes(bodyOfWater))
             ACEFlow = false;
 
           // Get current Date, Time and Elev
@@ -856,7 +862,9 @@ function getACEData(a2wURL, bodyOfWater, normalPool, elevDataInterval, callback)
               // The Flow data comes in on the hour, find the first elev data that is on the hour
               let elevOnHour = false;
 
-              while (!elevOnHour) {
+              // Deer Creek Utah only returns elevs on the :30 and Flows on the :00 so do not try to line them up.
+
+              while (!elevOnHour && bodyOfWater !== "Deer Creek") {
                 elevMinIndex = data[ACEElevIndex].Elev[ACEElevNum].time.indexOf(":") + 1;
                 elevMin = data[ACEElevIndex].Elev[ACEElevNum].time.substr(elevMinIndex, 2)
                 if (elevMin == "00")
@@ -926,7 +934,10 @@ function getACEData(a2wURL, bodyOfWater, normalPool, elevDataInterval, callback)
               if (Date.parse(data[ACEElevIndex].Elev[j].time) !== Date.parse(data[ACEFlowIndex].Outflow[i].time)) {
                 if (ACEFlow) {
                   // Do the elev and flow dates match
-                  while (Date.parse(data[ACEElevIndex].Elev[j].time) !== Date.parse(data[ACEFlowIndex].Outflow[i].time)) {
+
+                  // Deer Creek Utah only returns elevs on the :30 and Flows on the :00 so do not try to line them up.
+                  while (Date.parse(data[ACEElevIndex].Elev[j].time) !== Date.parse(data[ACEFlowIndex].Outflow[i].time) &&
+                    bodyOfWater !== "Deer Creek") {
                     // If not, need to line up the dates
 
                     //Which one is behind
@@ -947,6 +958,7 @@ function getACEData(a2wURL, bodyOfWater, normalPool, elevDataInterval, callback)
                         elevMinIndex = data[ACEElevIndex].Elev[j + 1].time.indexOf(":") + 1;
                         // retrieve the 'minutes'
                         elevMin = data[ACEElevIndex].Elev[j + 1].time.substr(elevMinIndex, 2)
+
                         if (elevMin == "00") { // is it on the hour
                           elevOnHour = true; // end while loop
                           j++
@@ -1064,37 +1076,37 @@ function getACEData(a2wURL, bodyOfWater, normalPool, elevDataInterval, callback)
 function updateACEDB() {
   // find documents with ACE in the dataSource
   db.model("Lake").find({
-    "dataSource":"ACE"
-  })
+      "dataSource": "ACE"
+    })
     .exec(function (err, data) {
       if (err) {
         console.log("There was a problem querying the database");
       } else {
         // loop through the documents
-          data.forEach(function (lake) {
-              // check if update is needed (true = update is needed)
-              if (checkForUpdate(lake.lastRefresh, lake.refreshInterval, lake.data.length)) {
-                // run the getData function
-                getACEData(lake.elevURL, lake.bodyOfWater, lake.normalPool, lake.elevDataInterval, function (error, data) {
+        data.forEach(function (lake) {
+          // check if update is needed (true = update is needed)
+          if (checkForUpdate(lake.lastRefresh, lake.refreshInterval, lake.data.length)) {
+            // run the getData function
+            getACEData(lake.elevURL, lake.bodyOfWater, lake.normalPool, lake.elevDataInterval, function (error, data) {
+              if (error) {
+                console.log(error);
+                return;
+                // if successful update the database
+              } else {
+                // update the current lake
+                updateAndReturnOneLake(lake.bodyOfWater, lake.lastRefresh, data, function (error, data) {
                   if (error) {
                     console.log(error);
                     return;
-                    // if successful update the database
-                  } else {
-                    // update the current lake
-                    updateAndReturnOneLake(lake.bodyOfWater, lake.lastRefresh, data, function (error, data) {
-                      if (error) {
-                        console.log(error);
-                        return;
-                        // if successful return the data
-                      }
-                    })
+                    // if successful return the data
                   }
-                });
-              } else {
-                console.log(`No update needed for ${lake.bodyOfWater} (${lake.dataSource})`);
+                })
               }
-          })
+            });
+          } else {
+            console.log(`No update needed for ${lake.bodyOfWater} (${lake.dataSource})`);
+          }
+        })
       }
     });
 }
@@ -1218,37 +1230,37 @@ function getUSLAKESData(bodyOfWater, callback) {
 function updateUSLAKESDB() {
   // find documents with USLAKES in the dataSource
   db.model("Lake").find({
-    "dataSource":"USLAKES"
-  })
+      "dataSource": "USLAKES"
+    })
     .exec(function (err, data) {
       if (err) {
         console.log("There was a problem querying the database");
       } else {
         // loop through the documents
-          data.forEach(function (lake) {
-              // check if update is needed (true = update is needed)
-              if (checkForUpdate(lake.lastRefresh, lake.refreshInterval, lake.data.length)) {
-                // run the getData function
-                getUSLAKESData(lake.bodyOfWater, function (error, data) {
+        data.forEach(function (lake) {
+          // check if update is needed (true = update is needed)
+          if (checkForUpdate(lake.lastRefresh, lake.refreshInterval, lake.data.length)) {
+            // run the getData function
+            getUSLAKESData(lake.bodyOfWater, function (error, data) {
+              if (error) {
+                console.log(error);
+                return;
+                // if successful update the database
+              } else {
+                // update the current lake
+                updateAndReturnOneLake(lake.bodyOfWater, lake.lastRefresh, data, function (error, data) {
                   if (error) {
                     console.log(error);
                     return;
-                    // if successful update the database
-                  } else {
-                    // update the current lake
-                    updateAndReturnOneLake(lake.bodyOfWater, lake.lastRefresh, data, function (error, data) {
-                      if (error) {
-                        console.log(error);
-                        return;
-                        // if successful return the data
-                      }
-                    })
+                    // if successful return the data
                   }
-                });
-              } else {
-                console.log(`No update needed for ${lake.bodyOfWater} (${lake.dataSource})`);
+                })
               }
-          })
+            });
+          } else {
+            console.log(`No update needed for ${lake.bodyOfWater} (${lake.dataSource})`);
+          }
+        })
       }
     });
 }
@@ -1292,37 +1304,37 @@ function getDUKEData(lakeName, newUrl, seaLevelDelta, callback) {
 function updateDUKEDB() {
   // find documents with DUKE in the dataSource
   db.model("Lake").find({
-    "dataSource":"DUKE"
-  })
+      "dataSource": "DUKE"
+    })
     .exec(function (err, data) {
       if (err) {
         console.log("There was a problem querying the database");
       } else {
         // loop through the documents
-          data.forEach(function (lake) {
-              // check if update is needed (true = update is needed)
-              if (checkForUpdate(lake.lastRefresh, lake.refreshInterval, lake.data.length)) {
-                // run the getData function
-                getDUKEData(lake.bodyOfWater, lake.elevURL, lake.seaLevelDelta, function (error, data) {
+        data.forEach(function (lake) {
+          // check if update is needed (true = update is needed)
+          if (checkForUpdate(lake.lastRefresh, lake.refreshInterval, lake.data.length)) {
+            // run the getData function
+            getDUKEData(lake.bodyOfWater, lake.elevURL, lake.seaLevelDelta, function (error, data) {
+              if (error) {
+                console.log(error);
+                return;
+                // if successful update the database
+              } else {
+                // update the current lake
+                updateAndReturnOneLake(lake.bodyOfWater, lake.lastRefresh, data, function (error, data) {
                   if (error) {
                     console.log(error);
                     return;
-                    // if successful update the database
-                  } else {
-                    // update the current lake
-                    updateAndReturnOneLake(lake.bodyOfWater, lake.lastRefresh, data, function (error, data) {
-                      if (error) {
-                        console.log(error);
-                        return;
-                        // if successful return the data
-                      }
-                    })
+                    // if successful return the data
                   }
-                });
-              } else {
-                console.log(`No update needed for ${lake.bodyOfWater} (${lake.dataSource})`);
+                })
               }
-          })
+            });
+          } else {
+            console.log(`No update needed for ${lake.bodyOfWater} (${lake.dataSource})`);
+          }
+        })
       }
     });
 }
@@ -1347,7 +1359,7 @@ function getSJRWMDData(lakeName, newUrl, callback) {
     // Get the most recent 30 days data
     for (i = 0; i < 30; i++) {
       // find next end of row
-      for (j = j - 5; body.substr(j, 5) !== "</tr>"; j--) { }
+      for (j = j - 5; body.substr(j, 5) !== "</tr>"; j--) {}
 
       // set timestamp for db
       let timestamp = new Date(body.substr(j - 116, 10) + " " + body.substr(j - 97, 8));
@@ -1366,37 +1378,37 @@ function getSJRWMDData(lakeName, newUrl, callback) {
 function updateSJRWMDDB() {
   // find documents with SJRWMDDB in the dataSource
   db.model("Lake").find({
-    "dataSource":"SJRWMD"
-  })
+      "dataSource": "SJRWMD"
+    })
     .exec(function (err, data) {
       if (err) {
         console.log("There was a problem querying the database");
       } else {
         // loop through the documents
-          data.forEach(function (lake) {
-              // check if update is needed (true = update is needed)
-              if (checkForUpdate(lake.lastRefresh, lake.refreshInterval, lake.data.length)) {
-                // run the getData function
-                getSJRWMDData(lake.bodyOfWater, lake.elevURL, function (error, data) {
+        data.forEach(function (lake) {
+          // check if update is needed (true = update is needed)
+          if (checkForUpdate(lake.lastRefresh, lake.refreshInterval, lake.data.length)) {
+            // run the getData function
+            getSJRWMDData(lake.bodyOfWater, lake.elevURL, function (error, data) {
+              if (error) {
+                console.log(error);
+                return;
+                // if successful update the database
+              } else {
+                // update the current lake
+                updateAndReturnOneLake(lake.bodyOfWater, lake.lastRefresh, data, function (error, data) {
                   if (error) {
                     console.log(error);
                     return;
-                    // if successful update the database
-                  } else {
-                    // update the current lake
-                    updateAndReturnOneLake(lake.bodyOfWater, lake.lastRefresh, data, function (error, data) {
-                      if (error) {
-                        console.log(error);
-                        return;
-                        // if successful return the data
-                      }
-                    })
+                    // if successful return the data
                   }
-                });
-              } else {
-                console.log(`No update needed for ${lake.bodyOfWater} (${lake.dataSource})`);
+                })
               }
-          })
+            });
+          } else {
+            console.log(`No update needed for ${lake.bodyOfWater} (${lake.dataSource})`);
+          }
+        })
       }
     });
 }
@@ -1442,37 +1454,37 @@ function getTWDBData(lakeName, newUrl, callback) {
 function updateTWDBDB() {
   // find documents with TWDB in the dataSource
   db.model("Lake").find({
-    "dataSource":"TWDB"
-  })
+      "dataSource": "TWDB"
+    })
     .exec(function (err, data) {
       if (err) {
         console.log("There was a problem querying the database");
       } else {
         // loop through the documents
-          data.forEach(function (lake) {
-              // check if update is needed (true = update is needed)
-              if (checkForUpdate(lake.lastRefresh, lake.refreshInterval, lake.data.length)) {
-                // run the getData function
-                getTWDBData(lake.bodyOfWater, lake.elevURL, function (error, data) {
+        data.forEach(function (lake) {
+          // check if update is needed (true = update is needed)
+          if (checkForUpdate(lake.lastRefresh, lake.refreshInterval, lake.data.length)) {
+            // run the getData function
+            getTWDBData(lake.bodyOfWater, lake.elevURL, function (error, data) {
+              if (error) {
+                console.log(error);
+                return;
+                // if successful update the database
+              } else {
+                // update the current lake
+                updateAndReturnOneLake(lake.bodyOfWater, lake.lastRefresh, data, function (error, data) {
                   if (error) {
                     console.log(error);
                     return;
-                    // if successful update the database
-                  } else {
-                    // update the current lake
-                    updateAndReturnOneLake(lake.bodyOfWater, lake.lastRefresh, data, function (error, data) {
-                      if (error) {
-                        console.log(error);
-                        return;
-                        // if successful return the data
-                      }
-                    })
+                    // if successful return the data
                   }
-                });
-              } else {
-                console.log(`No update needed for ${lake.bodyOfWater} (${lake.dataSource})`);
+                })
               }
-          })
+            });
+          } else {
+            console.log(`No update needed for ${lake.bodyOfWater} (${lake.dataSource})`);
+          }
+        })
       }
     });
 }
