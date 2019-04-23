@@ -158,8 +158,8 @@ function buildFlowChart(data) {
     for (k; k < data.length; k++) {
         // if we're past the first entry
         if (k > 0) {
-            // if the data is available and not "missing"
-            if (data[k].flow !== "Missing" || data[k].flow !== "N/A") {
+            // if the data is available and not "Missing" or "N/A"
+            if (data[k].flow !== "Missing" && data[k].flow !== "N/A") {
                 // if we're still on the same day and not on the last entry
                 if (data[k].date === data[k - 1].date) {
                     // add to our average variables
