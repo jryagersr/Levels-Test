@@ -318,7 +318,6 @@ function updateAndReturnOneLake(bodyOfWater, lastRefresh, data, callback) {
   if (data.length > 0) {
     lastRefresh = data[0].time;
   }
-
   // use updateData to update the lake data
   db.model("Lake").findOneAndUpdate({
       "bodyOfWater": bodyOfWater
@@ -346,9 +345,27 @@ function updateAndReturnOneLake(bodyOfWater, lastRefresh, data, callback) {
           // to get a value that is either negative, positive, or zero.
           return new Date(b.time) - new Date(a.time);
         });
+        // loop through data once more
+        for (var i = 1; i < updatedLake.data.length; i++) {
+          // check to see if there are two duplicate entrys
+          if (updatedLake.data[i].time == updatedLake.data[i-1].time) {
+            // remove the oldest entry
+            updatedLake.data[i].splice(i,1);
+          }
+        }
         // log that the lake was updated and return it
         console.log(`Update completed for ${updatedLake.bodyOfWater} (${updatedLake.dataSource[0]})`);
         callback(null, updatedLake);
+        // update the database with the 'clean' data
+        db.model("Lake").updateOne(
+          { 'bodyOfWater': bodyOfWater },
+          { $set: { "data": updatedLake.data }}
+        )
+          .exec(function(err) {
+            if (err) {
+              console.log(error);
+            }
+          })
       }
     });
 }
