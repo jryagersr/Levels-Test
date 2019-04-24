@@ -348,9 +348,10 @@ function updateAndReturnOneLake(bodyOfWater, lastRefresh, data, callback) {
         // loop through data once more
         for (var i = 1; i < updatedLake.data.length; i++) {
           // check to see if there are two duplicate entrys
-          if (updatedLake.data[i].time == updatedLake.data[i-1].time) {
+          // convert timestamps to strings to avoid millisecond differences
+          if (updatedLake.data[i].time.toString() == updatedLake.data[i-1].time.toString()) {
             // remove the oldest entry
-            updatedLake.data[i].splice(i,1);
+            updatedLake.data.splice(i,1);
           }
         }
         // log that the lake was updated and return it
