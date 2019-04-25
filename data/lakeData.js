@@ -2196,7 +2196,7 @@ module.exports = [
             },
             {
                 bodyOfWater: "Gaston", // lake name
-                state: ["North Carolina"],    
+                state: ["North Carolina", "Virginia"],    
                 data: [],
                 refreshInterval: 1200, //minutes
                 lastRefresh: "12/31/18", // a Date 
@@ -3863,27 +3863,6 @@ module.exports = [
             },
 
             // VIRGINIA ---------------------------------------------------------------------------------------------------------
-            {
-                bodyOfWater: "Gaston", // lake name
-                state: ["Virginia"],  
-                data: [],
-                refreshInterval: 1200, //minutes
-                lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: 0,
-                normalPool: 200.0,
-                lat: 36.51,
-                long: -77.94,
-                elevURL: "/api/alabama",
-                flowURL: "none",
-                href: "/lakes/gaston",
-                dataSource: ["USLAKES", "loadAds"], // array of calls to make to retrieve data
-                resultsLink: "undefined",
-                entryLink: "",
-                adLogoSrc: "/static/assets/img/jsegenerac.png",
-                adLogoUrl: "http://jacksonsuperiorelectric.com/",
-                adTxSrc: "",
-                adTxUrl: ""
-            },
             {
                 bodyOfWater: "James River (Jamestown Ferry Pier)", // lake name
                 state: ["Virginia"],
