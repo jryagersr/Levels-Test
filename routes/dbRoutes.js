@@ -341,6 +341,7 @@ function updateAndReturnOneLake(bodyOfWater, lastRefresh, data, callback) {
         console.log(err);
       } else {
         let updatedLake = data;
+        console.log(`Update started for ${updatedLake.bodyOfWater} (${updatedLake.dataSource[0]})`);
         updatedLake.data.sort(function (a, b) {
           // Turn your strings into dates, and then subtract them
           // to get a value that is either negative, positive, or zero.
@@ -497,7 +498,6 @@ function getUSGSData(usgsURL, bodyOfWater, seaLevelDelta, callback) {
 
     // clear displayBatch
     displayBatch = [];
-
     data = JSON.parse(body);
 
     // Check to see if the sensor is returning data
@@ -863,30 +863,31 @@ function getACEData(a2wURL, bodyOfWater, normalPool, elevDataInterval, callback)
               let elevOnHour = false;
 
               // Deer Creek Utah only returns elevs on the :30 and Flows on the :00 so do not try to line them up.
+              if (bodyOfWater !== "Deer Creek") {
+                while (!elevOnHour) {
+                  elevMinIndex = data[ACEElevIndex].Elev[ACEElevNum].time.indexOf(":") + 1;
+                  if (data[ACEElevIndex].Elev[ACEElevNum].time.substr(elevMinIndex, 2) == "30") console.log(data);
+                  elevMin = data[ACEElevIndex].Elev[ACEElevNum].time.substr(elevMinIndex, 2)
+                  if (elevMin == "00")
+                    elevOnHour = true;
+                  else ACEElevNum++
+                }
 
-              while (!elevOnHour && bodyOfWater !== "Deer Creek") {
-                elevMinIndex = data[ACEElevIndex].Elev[ACEElevNum].time.indexOf(":") + 1;
-                elevMin = data[ACEElevIndex].Elev[ACEElevNum].time.substr(elevMinIndex, 2)
-                if (elevMin == "00")
-                  elevOnHour = true;
-                else ACEElevNum++
+                // Determine if flow date is earlier or later than first elev date
+                // Use the later date as a base and loop thru the earlier date until they match
+                let elevTime = Date.parse(data[ACEElevIndex].Elev[ACEElevNum].time);
+                let flowTime = Date.parse(data[ACEFlowIndex].Outflow[ACEFlowNum].time);
+                if (elevTime > flowTime)
+                  while (elevTime !== flowTime) {
+                    ACEFlowNum++;
+                    flowTime = Date.parse(data[ACEFlowIndex].Outflow[ACEFlowNum].time);
+                  }
+                else
+                  while (flowTime > elevTime) {
+                    ACEElevNum++;
+                    elevTime = Date.parse(data[ACEElevIndex].Elev[ACEElevNum].time);
+                  }
               }
-
-              // Determine if flow date is earlier or later than first elev date
-              // Use the later date as a base and loop thru the earlier date until they match
-              elevTime = Date.parse(data[ACEElevIndex].Elev[ACEElevNum].time);
-              flowTime = Date.parse(data[ACEFlowIndex].Outflow[ACEFlowNum].time);
-              if (elevTime > flowTime)
-                while (elevTime !== flowTime) {
-                  ACEFlowNum++;
-                  flowTime == Date.parse(data[ACEFlowIndex].Outflow[ACEFlowNum].time);
-                }
-              else
-                while (flowTime > elevTime) {
-                  ACEElevNum++;
-                  elevTime = Date.parse(data[ACEElevIndex].Elev[ACEElevNum].time);
-                }
-
             }
           }
 
