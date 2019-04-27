@@ -2,14 +2,14 @@ const express = require("express"),
   db = require("../models")();
 
 // Import all data source update functions
-const ace = require('./updateRoutes/updateACE');
-const cube = require("./updateRoutes/updateCUBE");
-const duke = require("./updateRoutes/updateDUKE");
-const sjrwmd = require("./updateRoutes/updateSJRWMD");
-const tva = require("./updateRoutes/updateTVA");
-const twdb = require("./updateRoutes/updateTWDB");
-const usgs = require("./updateRoutes/updateUSGS");
-const uslakes = require("./updateRoutes/updateUSLAKES");
+const ace = require('./updateRoutes/getACEData');
+const cube = require("./updateRoutes/getCUBEData");
+const duke = require("./updateRoutes/getDUKEData");
+const sjrwmd = require("./updateRoutes/getSJRWMDData");
+const tva = require("./updateRoutes/getTVAData");
+const twdb = require("./updateRoutes/getTWDBData");
+const usgs = require("./updateRoutes/getUSGSData");
+const uslakes = require("./updateRoutes/getUSLAKESData");
 // Import update functions
 var update = require('./updateFunctions');
 

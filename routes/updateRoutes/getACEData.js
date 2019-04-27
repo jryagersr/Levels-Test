@@ -102,13 +102,15 @@ getACEData: function (a2wURL, bodyOfWater, normalPool, elevDataInterval, callbac
                 let elevOnHour = false;
   
                 // Deer Creek Utah only returns elevs on the :30 and Flows on the :00 so do not try to line them up.
-  
-                while (!elevOnHour && bodyOfWater !== "Deer Creek") {
-                  elevMinIndex = data[ACEElevIndex].Elev[ACEElevNum].time.indexOf(":") + 1;
-                  elevMin = data[ACEElevIndex].Elev[ACEElevNum].time.substr(elevMinIndex, 2)
-                  if (elevMin == "00")
-                    elevOnHour = true;
-                  else ACEElevNum++
+                if (bodyOfWater !== "Deer Creek") {
+                  while (!elevOnHour) {
+                    elevMinIndex = data[ACEElevIndex].Elev[ACEElevNum].time.indexOf(":") + 1;
+                    if (data[ACEElevIndex].Elev[ACEElevNum].time.substr(elevMinIndex, 2) == "30");
+                    elevMin = data[ACEElevIndex].Elev[ACEElevNum].time.substr(elevMinIndex, 2)
+                    if (elevMin == "00")
+                      elevOnHour = true;
+                    else ACEElevNum++
+                  }
                 }
   
                 // Determine if flow date is earlier or later than first elev date
@@ -118,7 +120,7 @@ getACEData: function (a2wURL, bodyOfWater, normalPool, elevDataInterval, callbac
                 if (elevTime > flowTime)
                   while (elevTime !== flowTime) {
                     ACEFlowNum++;
-                    flowTime == Date.parse(data[ACEFlowIndex].Outflow[ACEFlowNum].time);
+                    flowTime = Date.parse(data[ACEFlowIndex].Outflow[ACEFlowNum].time);
                   }
                 else
                   while (flowTime > elevTime) {
