@@ -307,8 +307,6 @@ function updateAllLakes() {
   updateCubeDB();
 }
 
-updateACEDB();
-
 // run update function every 10 minutes
 setInterval(function () {
   updateAllLakes();
