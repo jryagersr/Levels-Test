@@ -249,8 +249,11 @@ $.ajax({
         if (currentLake.data.length > 0) {
             currentLake.data.forEach(function (entry, i) {
                 let timestamp = new Date(entry.time);
+                console.log(timestamp);
                 entry.date = timestamp.toLocaleDateString();
+                console.log(entry.date);
                 entry.time = timestamp.toLocaleTimeString();
+                console.log(entry.time);
                 if (entry.elev !== "N/A" && entry.elev !== "Missing") {
                     entry.elev = Number(entry.elev);
                 }
