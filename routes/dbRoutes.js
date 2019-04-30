@@ -298,19 +298,46 @@ module.exports = function (app) {
 function updateAllLakes() {
   console.log("Updating all lakes...");
   updateUSGSDB();
-  updateACEDB();
-  updateDUKEDB();
-  updateSJRWMDDB();
-  updateTVADB();
-  updateUSLAKESDB();
-  updateTWDBDB();
-  updateCubeDB();
+
+  setTimeout(function () {
+    updateACEDB();
+  }, 30000);
+
+  setTimeout(function () {
+    updateDUKEDB();
+  }, 60000);
+
+  setTimeout(function () {
+    updateSJRWMDDB();
+  }, 90000);
+
+  setTimeout(function () {
+    updateTVADB();
+  }, 120000);
+
+  setTimeout(function () {
+    updateSJRWMDDB();
+  }, 150000);
+
+  setTimeout(function () {
+    updateTWDBDB();
+  }, 180000);
+
+  setTimeout(function () {
+    updateCubeDB();
+  }, 210000);
+  
 }
+
+
 
 // run update function every 10 minutes
 setInterval(function () {
   updateAllLakes();
 }, 600000);
+
+updateAllLakes();
+
 
 
 function updateACEDB() {
