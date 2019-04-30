@@ -2,7 +2,7 @@ const lakes = require("./data/lakeData");
 let aceLakes = [];
 
 lakes.forEach(lake => {
-    if (lake.bodyOfWater == "Cape Fear River (Fayett)") {
+    if (lake.bodyOfWater == "Deer Creek") {
         aceLakes.push(lake);
     }
 })
@@ -27,9 +27,9 @@ function getACEData(a2wURL, bodyOfWater, callback) {
                     // check for flow entries
                     else if ("Outflow" in object) {
                         flowEntries = object.Outflow;
-                    }
-                    // check for stage entries
-                    else if ("Stage" in object) {
+                    }  
+                    // check for stage entries first (if elev exists it will overwrite)
+                    else if ("Stage" in object && elevEntries.length == 0) {
                         elevEntries = object.Stage;
                     }
                 })
