@@ -17,6 +17,7 @@
     "jquery": "^3.4.0",
     "mime": "^2.4.0",
     "mongoose": "^5.3.14",
+    "newrelic": "^5.7.0",
     "request": "^2.88.0",
     "underscore": "^1.9.1"
   }
