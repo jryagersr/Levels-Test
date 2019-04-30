@@ -324,8 +324,12 @@ function updateAllLakes() {
   }, 180000);
 
   setTimeout(function () {
-    updateCubeDB();
+    updateUSLAKESDB();
   }, 210000);
+
+  setTimeout(function () {
+    updateCubeDB();
+  }, 240000);
   
 }
 

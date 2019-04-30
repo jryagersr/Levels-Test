@@ -441,7 +441,7 @@ module.exports = [
                         ramp: "Cypress Gardens",
                         state: "SC",
                         txDetail: "Qualifier 5",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-cooper-river-sc-april-20-2019-kyle-welch-wayne-clifton-win-with-18-02-lbs-also-win-the-cooper-river-spring-points/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-cooper-river/"
                     },
                     {
@@ -474,7 +474,7 @@ module.exports = [
                         ramp: "Lighthouse",
                         state: "NC",
                         txDetail: "Gold 2",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-east-trail-roanoke-river-nc-april-14-2019-nanney-brisette-win-a-close-one/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-east/"
                     },
                     {
@@ -612,7 +612,7 @@ module.exports = [
                         ramp: "Broyles",
                         state: "SC",
                         txDetail: "Qualifier 2",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-hartwell-april-6-2019-thomas-pennell-josh-daniel-win-with-14-41-lbs/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-hartwell/"
                     },
                     {
@@ -1327,7 +1327,7 @@ module.exports = [
                         ramp: "SML State Park",
                         state: "VA",
                         txDetail: "Final",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-smith-mtn-va-spring-final-april-20-2019-david-mills-shane-mills-weigh-in-20-56-lbs-2180-00/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-smith-mountain/"
                     }
                 ]
@@ -1796,6 +1796,15 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wylie/"
                     },
                     {
+                        date: "2019-04-20",
+                        lake: "Wylie",
+                        ramp: "Buster Boyd",
+                        state: "NC-SC",
+                        txDetail: "Final",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-wylie-sc-nc-april-20-2019-david-winters/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wylie/"
+                    },
+                    {
                         date: "2019-04-27",
                         lake: "Wylie",
                         ramp: "Buster Boyd",
@@ -1967,7 +1976,7 @@ module.exports = [
                         ramp: "Whittenburg",
                         state: "NC",
                         txDetail: "CBC NC",
-                        resultsLink: "",
+                        resultsLink: "http://www.carolinasbasschallenge.com/results.php?id=7",
                         entryLink: "http://www.carolinasbasschallenge.com/tournaments.php"
                     },
                     {
@@ -2025,7 +2034,7 @@ module.exports = [
                         ramp: "Nutbush",
                         state: "NC-VA",
                         txDetail: "BFCS Combined Boys & Girls Club",
-                        resultsLink: "",
+                        resultsLink: "http://bassforcash.com/wp-content/uploads/2019/04/FINAL-Kerr-Boys-Girls-Event.pdf",
                         entryLink: "http://bassforcash.com/schedule/"
                     }
                 ]
@@ -2053,7 +2062,7 @@ module.exports = [
                     ramp: "Nutbush",
                     state: "NC-VA",
                     txDetail: "BFCS Combined Boys & Girls Club",
-                    resultsLink: "",
+                    resultsLink: "http://bassforcash.com/wp-content/uploads/2019/04/FINAL-Kerr-Boys-Girls-Event.pdf",
                     entryLink: "http://bassforcash.com/schedule/"
                 },
                 {
