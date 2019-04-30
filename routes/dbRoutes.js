@@ -336,8 +336,6 @@ setInterval(function () {
   updateAllLakes();
 }, 600000);
 
-updateAllLakes();
-
 
 
 function updateACEDB() {
