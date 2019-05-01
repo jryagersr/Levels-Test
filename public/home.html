@@ -7,13 +7,18 @@
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-77195420-4"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-77195420-4');
+    <script type="text/javascript">
+        if (document.location.hostname.search("basssavvy.com") !== -1) {
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'UA-77195420-4');
+        } else {
+            console.log("GA Tag not in use for development environment.");
+        }
     </script>
+
+
 
     <!-- Latest compiled and minified CSS -->
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -96,11 +101,16 @@
                     </form>
                 </div>
             </div>
-            </div>
+        </div>
     </section>
 
     <section id='home-nearby'>
-        <div id="lds-ring"><div></div><div></div><div></div><div></div></div>
+        <div id="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
         <div id="lakeContainer">
         </div>
 
