@@ -616,15 +616,6 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-hartwell/"
                     },
                     {
-                        date: "2019-05-05",
-                        lake: "Hartwell",
-                        ramp: "Broyles",
-                        state: "SC",
-                        txDetail: "Qualifier 3",
-                        resultsLink: "",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-hartwell/"
-                    },
-                    {
                         date: "2019-05-11",
                         lake: "Hartwell",
                         ramp: "Broyles",
@@ -1074,11 +1065,11 @@ module.exports = [
                     },
                     {
                         date: "2019-04-28",
-                        lake: "Jordan",
-                        ramp: "Farrington",
+                        lake: "Falls",
+                        ramp: "Ledge Rock",
                         state: "NC",
                         txDetail: "Qualifier 4",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-old-north-falls-lake-nc-the-allens-are-hot-3-in-a-row-26-04-lbs-2560-00-almost-8000-in-winnngs-over-the-last-3-old-north-qualifiers/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
                     },
                     {
