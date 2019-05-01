@@ -381,7 +381,7 @@ module.exports = [
                         ramp: "Bucksport",
                         state: "SC",
                         txDetail: "Qualifier 4",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-coastal-carolina-rivers-sc-april-20-2019-colby-calhoun-wins-13-24-lbs/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-carolina-coastal-rivers/"
                     },
                     {
@@ -390,7 +390,7 @@ module.exports = [
                         ramp: "Bucksport",
                         state: "SC",
                         txDetail: "Final",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-carolina-coastal-river-trail-final-april-27-2019-waccamaw-river-sc/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-carolina-coastal-rivers/"
                     }
                 ]
@@ -865,7 +865,7 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-monticello/"
                     },
                     {
-                        date: "2019-04-25",
+                        date: "2019-05-25",
                         lake: "Monticello",
                         ramp: "Hwy 99",
                         state: "SC",
@@ -990,7 +990,7 @@ module.exports = [
                         ramp: "Pinnacle",
                         state: "NC",
                         txDetail: "Qualifier 5",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-norman-nc-april-28-2019-josh-quesinberry-and-ryan-pearce-win-12-31-lbs-1st-bf-at-4-36-lbs/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
                     },
                     {
@@ -1285,7 +1285,7 @@ module.exports = [
                         ramp: "Stokes Bluff",
                         state: "SC",
                         txDetail: "Final",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-savannah-river-spring-final-april-20-2019-anthony-joyner-barry-conley-take-1st-17-92-lbs-1500-00/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-savannah-river/"
                     }
                 ]
@@ -1420,7 +1420,7 @@ module.exports = [
                         ramp: "Pungo Ferry",
                         state: "NC",
                         txDetail: "Qualifier 4",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-tidewater-north-landing-river-va-jeremy-gatewood-jarred-allbritten-win-with-22-13-lbs-bf-6-02-lbs/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-tidewater/"
                     },
                     {
@@ -1810,7 +1810,7 @@ module.exports = [
                         ramp: "Buster Boyd",
                         state: "NC-SC",
                         txDetail: "Final",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-wylie-sc-nc-spring-final-april-27-tim-chapman-takes-home-3925-00-in-cash-prizes/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wylie/"
                     }
                 ]
@@ -2320,7 +2320,7 @@ module.exports = [
                         ramp: "Nutbush",
                         state: "NC",
                         txDetail: "FLW",
-                        resultsLink: "",
+                        resultsLink: "https://www.flwfishing.com/results/2019-04-27-kerr",
                         entryLink: "https://www.flwfishing.com/tournaments/2019-04-27-kerr"
                     },
                     {
@@ -2586,7 +2586,7 @@ module.exports = [
                         ramp: "Flemingtown",
                         state: "NC-VA",
                         txDetail: "Piedmont Bass Classic",
-                        resultsLink: "",
+                        resultsLink: "http://piedmontbassclassics.com/427-19PBCResults.html",
                         entryLink: "http://piedmontbassclassics.com/2019PBC10KSpringTrailMainPage.html"
                     },
                     {

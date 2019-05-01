@@ -495,6 +495,10 @@ function getUSGSData(usgsURL, bodyOfWater, seaLevelDelta, callback) {
     if (error) {
       callback(error);
     }
+    if (typeof body == 'undefined') {
+      console.log("Have No USGS data");
+      callback(null, displayBatch);
+    } else console.log("Have data USGS");
 
     // clear displayBatch
     displayBatch = [];
@@ -798,6 +802,7 @@ function getACEData(a2wURL, bodyOfWater, normalPool, elevDataInterval, callback)
         // Insert data processing code from thisLake.js here
 
         let ACEFlow = false;
+        let ACEElev = false;
         let ACEFlowIndex = -1;
         let ACEElevIndex = 0;
         let ACEElevNum = 0;
@@ -805,7 +810,10 @@ function getACEData(a2wURL, bodyOfWater, normalPool, elevDataInterval, callback)
         let exceptionLake = false;
         let stageRiver = [];
         let elevMin = "";
+        let flowLineUp = true;
 
+
+        // This needs to be below the while loop checking for Elev, not using hard coded 0
         if (typeof data[0].Elev == 'undefined' &&
           typeof data[0].Stage !== 'undefined' && bodyOfWater.indexOf("River") >= 0) {
 
@@ -820,10 +828,29 @@ function getACEData(a2wURL, bodyOfWater, normalPool, elevDataInterval, callback)
         // clear displayBatch
         displayBatch = [];
 
+        // These have 120 elev data and 5 Flow, ignore flow data
+        if (['Truman', 'Pomme De Terre', "Stockton", "Rend", ].includes(bodyOfWater))
+          ACEFlow = false;
 
+        // Deer Creek Utah only returns elevs on the :30 and Flows on the :00 so do not try to line them up.
+        if (bodyOfWater == "Deer Creek")
+          flowLineUp = false;
 
         //see if A2W is returning Elev Data
-        if (typeof data[0].Elev !== 'undefined') {
+
+        let aa = 0
+        while (aa < data.length && typeof data[aa].Elev == 'undefined') {
+          AceElevIndex = aa;
+          aa++;
+        }
+        if (aa < data.length && aa >= 0) {
+          ACEElev = true;
+          ACEElevIndex = aa;
+        } else exceptionLake = true;
+
+        // If there is Elevation data then process the lake, we should add an else to say "Data Source down"
+        if (ACEElev) {
+
 
           // default value of ACEFlow is false, indicating ACE has no Flow Data included
           // default value of ACEFlowIndex is -1, indicating
@@ -841,14 +868,24 @@ function getACEData(a2wURL, bodyOfWater, normalPool, elevDataInterval, callback)
             ACEFlowIndex = aa;
           } else exceptionLake = true;
 
+          // Set up elev and flow Values
+          let elevValues = '';
+          let flowValues = '';
+          elevValues = data[ACEElevIndex].Elev;
+          // Reverse the order of our data so most recent date is first
+          //elevValues.reverse();
+
+          if (ACEFlow) { // if there is flow data, then set the flowValues
+            flowValues = data[ACEFlowIndex].Outflow;
+            // Reverse the order of our data so most recent date is first
+            //flowValues.reverse();
+          }
+
           let firstDate = data[ACEElevIndex].Elev[0].time.split(" ");
           let secondDate = data[ACEElevIndex].Elev[1].time.split(" ");
           let dailyACEData = firstDate[1] === secondDate[1]; // default value, this is for when ACE only returns daily readings vs hourly
           let isLakeIstokpoga = bodyOfWater == 'Istokpoga'; // default value, this is when the ACE data is Fucked Up like Istokpoga in Florida, Damn...
 
-          // These have 120 elev data and 5 Flow, ignore flow data
-          if (['Truman', 'Pomme De Terre', "Stockton", "Rend", ].includes(bodyOfWater))
-            ACEFlow = false;
 
           // Get current Date, Time and Elev
           // Convert ACE date to javascript Date format "12/24/2016 02:00:00"
@@ -862,11 +899,11 @@ function getACEData(a2wURL, bodyOfWater, normalPool, elevDataInterval, callback)
               // The Flow data comes in on the hour, find the first elev data that is on the hour
               let elevOnHour = false;
 
-              // Deer Creek Utah only returns elevs on the :30 and Flows on the :00 so do not try to line them up.
-              if (bodyOfWater !== "Deer Creek") {
+              if (flowLineUp) {
                 while (!elevOnHour) {
                   elevMinIndex = data[ACEElevIndex].Elev[ACEElevNum].time.indexOf(":") + 1;
-                  if (data[ACEElevIndex].Elev[ACEElevNum].time.substr(elevMinIndex, 2) == "30") console.log(data);
+                  //if (data[ACEElevIndex].Elev[ACEElevNum].time.substr(elevMinIndex, 2) == "30") console.log(ACEElevNum);
+                  //if (data[ACEElevIndex].Elev[ACEElevNum].time.substr(elevMinIndex, 2) == "30") console.log(ACEFlowNum);
                   elevMin = data[ACEElevIndex].Elev[ACEElevNum].time.substr(elevMinIndex, 2)
                   if (elevMin == "00")
                     elevOnHour = true;
@@ -951,10 +988,13 @@ function getACEData(a2wURL, bodyOfWater, normalPool, elevDataInterval, callback)
                         flow: "N/A"
                       });
 
+                      // Elev Time is less than Flow time (meaning there are flows missing) so increment j
+                      j = j + jIncrement;
+
                       // The Flow data comes in on the hour, find the next elev data that is on the hour
                       let elevOnHour = false;
 
-                      while (!elevOnHour) { // until we find an on the hour
+                      while (!elevOnHour && (j < elevValues.Length && i < flowValues.Length)) { // until we find an on the hour
                         // get the index at the 'minutes'
                         elevMinIndex = data[ACEElevIndex].Elev[j + 1].time.indexOf(":") + 1;
                         // retrieve the 'minutes'
