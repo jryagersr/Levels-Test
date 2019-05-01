@@ -828,7 +828,7 @@ module.exports = [
                         ramp: "Occonneechee",
                         state: "NC",
                         txDetail: "Final",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-spring-final-kerr-lake-va-nc-april-28-2019-corey-leonard-paul-rigsbee-weigh-in-16-40-lbs-cash-a-4000-00-check-boom/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
                     }
                 ]
@@ -1925,7 +1925,7 @@ module.exports = [
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "CBC SC",
-                        resultsLink: "",
+                        resultsLink: "http://www.carolinasbasschallenge.com/results.php?id=13",
                         entryLink: "http://www.carolinasbasschallenge.com/tournaments.php"
                     },
                     {
@@ -1934,7 +1934,7 @@ module.exports = [
                         ramp: "John C Land",
                         state: "SC",
                         txDetail: "CBC SC",
-                        resultsLink: "",
+                        resultsLink: "http://www.carolinasbasschallenge.com/results.php?id=16",
                         entryLink: "http://www.carolinasbasschallenge.com/tournaments.php"
                     }
                 ]
