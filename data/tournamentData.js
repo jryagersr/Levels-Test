@@ -714,7 +714,7 @@ module.exports = [
                         ramp: "Osborne",
                         state: "VA",
                         txDetail: "Gold",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-james-river-va-april-27-2019-steve-lamm-jesse-johnson-weighed-in-25-13-lbs-with-a-9-22-lb-james-river-hammer-1st-place-2871-00/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-james-river/"
                     },
                     {
@@ -2504,7 +2504,7 @@ module.exports = [
                         ramp: "Triple Springs",
                         state: "NC",
                         txDetail: "T3",
-                        resultsLink: "",
+                        resultsLink: "https://www.fomntt.com/pageflow.cfm?callpage=results&schid=5641&getyear=2019",
                         entryLink: "https://www.fomntt.com/pageflow.cfm?callpage=divisioninfo&divid=32&getyear=2019"
                     },
                     {
@@ -2680,7 +2680,7 @@ module.exports = [
                     ramp: "Pinnacle",
                     state: "NC",
                     txDetail: "Tarheel Bass Series 2",
-                    resultsLink: "",
+                    resultsLink: "http://tarheelbassseries.com/results/",
                     entryLink: "http://tarheelbassseries.com/tournaments/"
                 },
                 {
@@ -2689,7 +2689,7 @@ module.exports = [
                     ramp: "Tamarac",
                     state: "NC",
                     txDetail: "Tarheel Bass Series 3",
-                    resultsLink: "",
+                    resultsLink: "http://tarheelbassseries.com/results/",
                     entryLink: "http://tarheelbassseries.com/tournaments/"
                 },
                 {
@@ -2698,7 +2698,7 @@ module.exports = [
                     ramp: "Ledge Rock",
                     state: "NC",
                     txDetail: "Tarheel Bass Series 4",
-                    resultsLink: "",
+                    resultsLink: "http://tarheelbassseries.com/results/",
                     entryLink: "http://tarheelbassseries.com/tournaments/"
                 }
             ]
