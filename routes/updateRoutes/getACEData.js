@@ -34,7 +34,7 @@ module.exports = {
             }
           })
           if (elevEntries.length == 0) {
-            console.log(`No elev data for ${bodyOfWater}`);
+            console.log(`No elev data for ${bodyOfWater} (ACE)`);
             // send empty array to front end
           } else {
             // reverse arrays
