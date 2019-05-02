@@ -6,7 +6,7 @@ module.exports = [
                 bodyOfWater: "Aliceville", // lake name
                 state: ["Alabama"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 137.0,
@@ -25,7 +25,7 @@ module.exports = [
                 bodyOfWater: "Eufaula", // lake name
                 state: ["Alabama"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 188.0,
@@ -101,7 +101,7 @@ module.exports = [
                 bodyOfWater: "Guntersville", // lake name
                 state: ["Alabama"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 594.0,
@@ -120,7 +120,7 @@ module.exports = [
                 bodyOfWater: "Pickwick", // lake name
                 state: ["Alabama"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 414.0,
@@ -177,7 +177,7 @@ module.exports = [
                 bodyOfWater: "Wheeler", // lake name
                 state: ["Alabama"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 552.28,
@@ -196,7 +196,7 @@ module.exports = [
                 bodyOfWater: "Wilson", // lake name
                 state: ["Alabama"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 509.0,
@@ -235,7 +235,7 @@ module.exports = [
                 bodyOfWater: "Havasu", // lake name
                 state: ["Arizona"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 400.54, // 1329ft but data reported as a delta to full pool
                 normalPool: 450.0,
@@ -254,7 +254,7 @@ module.exports = [
                         {
                             bodyOfWater: "Roosevelt", // lake name
                             data: [],
-                            refreshInterval: 60, //minutes
+                            refreshInterval: 90, //minutes
                             lastRefresh: "12/31/18", // a Date 
                             seaLevelDelta: 0.0, // ft but data reported as a delta gage height
                             normalPool: 2094.0,
@@ -275,7 +275,7 @@ module.exports = [
                 bodyOfWater: "Beaver", // lake name
                 state: ["Arkansas"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
                 normalPool: 1120.43,
@@ -294,7 +294,7 @@ module.exports = [
                 bodyOfWater: "Bull Shoals", // lake name
                 state: ["Arkansas"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 659.0,
@@ -313,7 +313,7 @@ module.exports = [
                 bodyOfWater: "Dardanelle", // lake name
                 state: ["Arkansas"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
                 normalPool: 338.0,
@@ -332,7 +332,7 @@ module.exports = [
                 bodyOfWater: "Greers Ferry", // lake name
                 state: ["Arkansas"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
                 normalPool: 462.04,
@@ -351,7 +351,7 @@ module.exports = [
                 bodyOfWater: "Ouachita", // lake name
                 state: ["Arkansas"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
                 normalPool: 578.0,
@@ -370,7 +370,7 @@ module.exports = [
                 bodyOfWater: "Table Rock", // lake name
                 state: ["Arkansas"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 915.0,
@@ -392,7 +392,7 @@ module.exports = [
                 bodyOfWater: "Camanche", // lake name
                 state: ["California"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
                 normalPool: 258.0,
@@ -411,7 +411,7 @@ module.exports = [
                 bodyOfWater: "Canyon", // lake name
                 state: ["California"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
                 normalPool: 909.0,
@@ -430,7 +430,7 @@ module.exports = [
                 bodyOfWater: "Clear", // lake name
                 state: ["California"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 1318.26, // 1329ft but data reported as a delta to full pool
                 normalPool: 1329.0,
@@ -449,7 +449,7 @@ module.exports = [
                 bodyOfWater: "Don Pedro", // lake name
                 state: ["California"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
                 normalPool: 804.0,
@@ -468,7 +468,7 @@ module.exports = [
                 bodyOfWater: "Folsom", // lake name
                 state: ["California"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
                 normalPool: 466.0,
@@ -487,7 +487,7 @@ module.exports = [
                 bodyOfWater: "Havasu", // lake name
                 state: ["California"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 400.54, // but data reported as a delta to full pool.
                 normalPool: 450.0,
@@ -507,7 +507,7 @@ module.exports = [
                 bodyOfWater: "Iron Gate", // lake name
                 state: ["California"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 2162.44, //but data reported as a delta to full pool
                 normalPool: 2164.43,
@@ -526,7 +526,7 @@ module.exports = [
                 bodyOfWater: "Mendocino", // lake name
                 state: ["California"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
                 normalPool: 737.0,
@@ -545,7 +545,7 @@ module.exports = [
                 bodyOfWater: "New Hogan", // lake name
                 state: ["California"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
                 normalPool: 666.0,
@@ -564,7 +564,7 @@ module.exports = [
                 bodyOfWater: "Pine Flat", // lake name
                 state: ["California"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
                 normalPool: 903.9,
@@ -585,7 +585,7 @@ module.exports = [
                 bodyOfWater: "Sonoma", // lake name
                 state: ["California"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
                 normalPool: 458.0,
@@ -605,7 +605,7 @@ module.exports = [
                 bodyOfWater: "Success", // lake name
                 state: ["California"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
                 normalPool: 656.0,
@@ -627,7 +627,7 @@ module.exports = [
                 bodyOfWater: "Rifle Gap", // lake name
                 state: ["Colorado"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 11.0,
                 normalPool: 6000.0,
@@ -646,7 +646,7 @@ module.exports = [
                 bodyOfWater: "Trinidad", // lake name
                 state: ["Colorado"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 11.36,
                 normalPool: 6230.0,
@@ -742,7 +742,7 @@ module.exports = [
                 bodyOfWater: "Hatchineha", // lake name
                 state: ["Florida"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 50.65,
@@ -761,7 +761,7 @@ module.exports = [
                 bodyOfWater: "Istokpoga", // lake name
                 state: ["Florida"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 39.4,
@@ -799,7 +799,7 @@ module.exports = [
                 bodyOfWater: "Kissimmee", // lake name
                 state: ["Florida"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 57.65,
@@ -818,7 +818,7 @@ module.exports = [
                 bodyOfWater: "Minnehaha", // lake name
                 state: ["Florida"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 125.0,
                 normalPool: 225.0,
@@ -837,7 +837,7 @@ module.exports = [
                 bodyOfWater: "Okeechobee", // lake name
                 state: ["Florida"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 12.0,
@@ -856,7 +856,7 @@ module.exports = [
                 bodyOfWater: "Seminole", // lake name
                 state: ["Florida"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 78.0,
@@ -894,7 +894,7 @@ module.exports = [
                 bodyOfWater: "Talquin", // lake name
                 state: ["Florida"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 70.0,
@@ -913,7 +913,7 @@ module.exports = [
                 bodyOfWater: "Tohopekaliga", // lake name
                 state: ["Florida"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 58.0,
@@ -934,7 +934,7 @@ module.exports = [
                 bodyOfWater: "Allatoona", // lake name 'Allatoona'
                 state: ["Georgia"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 840.0,
@@ -953,7 +953,7 @@ module.exports = [
                 bodyOfWater: "Eufaula", // lake name
                 state: ["Georgia"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 188.0,
@@ -972,7 +972,7 @@ module.exports = [
                 bodyOfWater: "Lanier", // lake name
                 state: ["Georgia"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 1071.0,
@@ -991,7 +991,7 @@ module.exports = [
                 bodyOfWater: "Seminole", // lake name
                 state: ["Georgia"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 78.0,
@@ -1010,7 +1010,7 @@ module.exports = [
                 bodyOfWater: "Thurmond", // lake name also "ClarksHill"
                 state: ["Georgia"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 326.0,
@@ -1029,7 +1029,7 @@ module.exports = [
                 bodyOfWater: "West Point", // lake name
                 state: ["Georgia"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 635.0,
@@ -1050,7 +1050,7 @@ module.exports = [
                 bodyOfWater: "Rend", // lake name
                 state: ["Illinois"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 405.0,
@@ -1071,7 +1071,7 @@ module.exports = [
                 bodyOfWater: "Brookville", // lake name
                 state: ["Indiana"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 755.0,
@@ -1090,7 +1090,7 @@ module.exports = [
                 bodyOfWater: "Eagle Creek", // lake name
                 state: ["Indiana"],
                 data: [                ],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 797.0,
@@ -1109,7 +1109,7 @@ module.exports = [
                 bodyOfWater: "Mississinewa", // lake name
                 state: ["Indiana"],
                 data: [                ],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 725.0,
@@ -1128,7 +1128,7 @@ module.exports = [
                 bodyOfWater: "Monroe", // lake name
                 state: ["Indiana"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 538.0,
@@ -1147,7 +1147,7 @@ module.exports = [
                 bodyOfWater: "Ohio River (Evansville)", // lake name
                 state: ["Indiana"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0,
                 normalPool: 13.0,
@@ -1166,7 +1166,7 @@ module.exports = [
                 bodyOfWater: "Patoka", // lake name
                 state: ["Indiana"],
                 data: [                ],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 536.0,
@@ -1185,7 +1185,7 @@ module.exports = [
                 bodyOfWater: "Raccoon", // lake name
                 state: ["Indiana"],
                 data: [                ],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 663.28,
@@ -1204,7 +1204,7 @@ module.exports = [
                 bodyOfWater: "Salmonie", // lake name
                 state: ["Indiana"],
                 data: [                ],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 751.0,
@@ -1225,7 +1225,7 @@ module.exports = [
                 bodyOfWater: "Red Rock", // lake name
                 state: ["Iowa"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 1398.0, // water level is reported as a delta to full pool
                 normalPool: 742.0,
@@ -1244,7 +1244,7 @@ module.exports = [
                 bodyOfWater: "West Okoboji", // lake name
                 state: ["Iowa"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 1398.0, // water level is reported as a delta to full pool
                 normalPool: 1398.0,
@@ -1266,7 +1266,7 @@ module.exports = [
                 bodyOfWater: "Clinton", // lake name
                 state: ["Kansas"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 875.50,
@@ -1285,7 +1285,7 @@ module.exports = [
                 bodyOfWater: "Melvern", // lake name
                 state: ["Kansas"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 1039.67,
@@ -1304,7 +1304,7 @@ module.exports = [
                 bodyOfWater: "Perry", // lake name
                 state: ["Kansas"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 891.50,
@@ -1323,7 +1323,7 @@ module.exports = [
                 bodyOfWater: "Pomona", // lake name
                 state: ["Kansas"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 974.0,
@@ -1344,7 +1344,7 @@ module.exports = [
                 bodyOfWater: "Barkley", // lake name
                 state: ["Kentucky"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 358.0,
@@ -1363,7 +1363,7 @@ module.exports = [
                 bodyOfWater: "Kentucky", // lake name
                 state: ["Kentucky"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 359.0,
@@ -1384,7 +1384,7 @@ module.exports = [
                 bodyOfWater: "Toledo Bend", // lake name
                 state: ["Louisiana"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 172.0,
@@ -1405,7 +1405,7 @@ module.exports = [
                 bodyOfWater: "Mille Lacs", // lake name
                 state: ["Minnesota"],              
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 1240.40, // water level reprted as a delta to Full Pool - 100
                 normalPool: 1251.0,
@@ -1424,7 +1424,7 @@ module.exports = [
                 bodyOfWater: "Minnetonka", // lake name
                 state: ["Minnesota"],              
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 929.0,
@@ -1445,7 +1445,7 @@ module.exports = [
                 bodyOfWater: "Bull Shoals", // lake name
                 state: ["Missouri"],              
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 659.0,
@@ -1464,7 +1464,7 @@ module.exports = [
                 bodyOfWater: "Lake of the Ozarks", // lake name
                 state: ["Missouri"],           
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 660.0,
@@ -1483,7 +1483,7 @@ module.exports = [
                 bodyOfWater: "Norfork", // lake name
                 state: ["Missouri"],           
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 553.75,
@@ -1502,7 +1502,7 @@ module.exports = [
                 bodyOfWater: "Pomme De Terre", // lake name
                 state: ["Missouri"],           
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 839.0,
@@ -1521,7 +1521,7 @@ module.exports = [
                 bodyOfWater: "Table Rock", // lake name
                 state: ["Missouri"],           
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 915.0,
@@ -1540,7 +1540,7 @@ module.exports = [
                 bodyOfWater: "Truman", // lake name
                 state: ["Missouri"],           
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 706.02,
@@ -1559,7 +1559,7 @@ module.exports = [
                 bodyOfWater: "Stockton", // lake name
                 state: ["Missouri"],           
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 867.0,
@@ -1581,7 +1581,7 @@ module.exports = [
                 bodyOfWater: "Aberdeen", // lake name
                 state: ["Mississippi"],           
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0, // data reported as a delta to Full Pool -100
                 normalPool: 40.5,
@@ -1600,7 +1600,7 @@ module.exports = [
                 bodyOfWater: "Amory", // lake name
                 state: ["Mississippi"],           
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0, // data reported as a delta to Full Pool -100
                 normalPool: 220.0,
@@ -1621,7 +1621,7 @@ module.exports = [
                 bodyOfWater: "Bay Springs", // lake name
                 state: ["Mississippi"],           
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 547.0, // data reported as a delta to Full Pool -100
                 normalPool: 407.0,
@@ -1642,7 +1642,7 @@ module.exports = [
                 bodyOfWater: "Beaver Lake", // lake name
                 state: ["Mississippi"],           
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0, // data reported as a delta to Full Pool -100
                 normalPool: 299.0,
@@ -1680,7 +1680,7 @@ module.exports = [
                 bodyOfWater: "Pool B", // lake name
                 state: ["Mississippi"],           
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0, // data reported as a delta to Full Pool -100
                 normalPool: 245.0,
@@ -1701,7 +1701,7 @@ module.exports = [
                 bodyOfWater: "Queen", // lake name
                 state: ["Mississippi"],           
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0, // data reported as a delta to Full Pool -100
                 normalPool: 270.0,
@@ -1739,7 +1739,7 @@ module.exports = [
                 bodyOfWater: "Saucer Creek", // lake name
                 state: ["Mississippi"],           
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0, // data reported as a delta to Full Pool -100
                 normalPool: 330.0,
@@ -1760,7 +1760,7 @@ module.exports = [
                 bodyOfWater: "Mojave", // lake name
                 state: ["Nevada"],           
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 547.0, // data reported as a delta to Full Pool -100
                 normalPool: 647.0,
@@ -1779,7 +1779,7 @@ module.exports = [
                 bodyOfWater: "Wild Horse", // lake name
                 state: ["Nevada"],           
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 6208.0,
@@ -2032,7 +2032,7 @@ module.exports = [
                 bodyOfWater: "Ute", // lake name
                 state: ["New Mexico"],    
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 3784.91,
@@ -2053,7 +2053,7 @@ module.exports = [
                 bodyOfWater: "Champlain", // lake name
                 state: ["New York"],    
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 95.50,
@@ -2073,7 +2073,7 @@ module.exports = [
                 bodyOfWater: "Ontario", // lake name
                 state: ["New York"],    
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 95.50,
@@ -2114,7 +2114,7 @@ module.exports = [
                 bodyOfWater: "Blewett Falls", // lake name
                 state: ["North Carolina"],    
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 78.0,
                 normalPool: 178.0,
@@ -2134,7 +2134,7 @@ module.exports = [
                 bodyOfWater: "Cape Fear River (Fayett)", // lake name
                 state: ["North Carolina"],    
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0,
                 normalPool: 0.0,
@@ -2153,7 +2153,7 @@ module.exports = [
                 bodyOfWater: "Falls", // lake name
                 state: ["North Carolina"],    
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 251.5,
@@ -2177,7 +2177,7 @@ module.exports = [
                 bodyOfWater: "Fontana", // lake name
                 state: ["North Carolina"],    
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0,
                 normalPool: 1703.0,
@@ -2219,7 +2219,7 @@ module.exports = [
                 bodyOfWater: "Hickory", // lake name
                 state: ["North Carolina"],    
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 835.0,
                 normalPool: 935.0,
@@ -2258,7 +2258,7 @@ module.exports = [
                 bodyOfWater: "Hyco", // lake name
                 state: ["North Carolina"],    
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0,
                 normalPool: 410.0,
@@ -2277,7 +2277,7 @@ module.exports = [
                 bodyOfWater: "Jocasee", // lake name
                 state: ["North Carolina"],    
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 1000.0,
                 normalPool: 1100.0,
@@ -2296,7 +2296,7 @@ module.exports = [
                 bodyOfWater: "Jordan", // lake name
                 state: ["North Carolina"],    
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date
                 elevDataInterval: 4, // Time between elevation data 4 = 15min, 2 = 30 min 1 = 60 min
                 seaLevelDelta: 0,
@@ -2361,7 +2361,7 @@ module.exports = [
                 bodyOfWater: "Kerr", // lake name
                 state: ["North Carolina", "Virginia"],    
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 elevDataInterval: 4, // Time between elevation data 4 = 15min, 2 = 30 min 1 = 60 min
                 seaLevelDelta: 0,
@@ -2545,7 +2545,7 @@ module.exports = [
                 bodyOfWater: "Neuse River (Kinston)", // lake name
                 state: ["North Carolina"],    
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 10.90,
                 normalPool: 10.90,
@@ -2564,7 +2564,7 @@ module.exports = [
                 bodyOfWater: "Norman", // lake name
                 state: ["North Carolina"],    
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 1298.0, // data reported as a delta to full pool = 100
                 normalPool: 1398.0,
@@ -2583,7 +2583,7 @@ module.exports = [
                 bodyOfWater: "Rhodhiss", // lake name
                 state: ["North Carolina"],    
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 885.0,
                 normalPool: 985.0,
@@ -2602,7 +2602,7 @@ module.exports = [
                 bodyOfWater: "Roanoke River (Halifax)", // lake name
                 state: ["North Carolina"],    
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0,
                 normalPool: 0,
@@ -2622,7 +2622,7 @@ module.exports = [
                 bodyOfWater: "Roanoke River (Hwy 45)", // lake name
                 state: ["North Carolina"],    
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0,
                 normalPool: 0,
@@ -2642,7 +2642,7 @@ module.exports = [
                 bodyOfWater: "Roanoke River (Roanoke Rapids)", // lake name
                 state: ["North Carolina"],    
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 43.84,
                 normalPool: 0.0,
@@ -2661,7 +2661,7 @@ module.exports = [
                 bodyOfWater: "Roanoke River (Scotland Neck)", // lake name
                 state: ["North Carolina"],    
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 5.77,
                 normalPool: 0,
@@ -2680,7 +2680,7 @@ module.exports = [
                 bodyOfWater: "Roanoke River (Williamston)", // lake name
                 state: ["North Carolina"],    
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: -2.86,
                 normalPool: 0,
@@ -2699,7 +2699,7 @@ module.exports = [
                 bodyOfWater: "Tillery", // lake name
                 state: ["North Carolina"],    
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 178.0,
                 normalPool: 278.0,
@@ -2738,7 +2738,7 @@ module.exports = [
                 bodyOfWater: "Wylie", // lake name
                 state: ["North Carolina"],    
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 400.0,
                 normalPool: 500.0,
@@ -2757,7 +2757,7 @@ module.exports = [
             /*{
                 bodyOfWater: "Indian Lake", // lake name
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0,
                 normalPool: 900.7,
@@ -2779,7 +2779,7 @@ module.exports = [
                 bodyOfWater: "Ohio River (Cincy)", // lake name
                 state: ["Ohio"],    
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0,
                 normalPool: 25.4,
@@ -2798,7 +2798,7 @@ module.exports = [
                 bodyOfWater: "Ohio River (Tanners)", // lake name
                 state: ["Ohio"],    
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0,
                 normalPool: 25.4,
@@ -2817,7 +2817,7 @@ module.exports = [
                 bodyOfWater: "Misquito Lake", // lake name
                 state: ["Ohio"],    
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0,
                 normalPool: 900.7,
@@ -2838,7 +2838,7 @@ module.exports = [
                 bodyOfWater: "Copan", // lake name
                 state: ["Oklahoma"],    
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 710.0,
@@ -2857,7 +2857,7 @@ module.exports = [
                 bodyOfWater: "Ellsworth", // lake name
                 state: ["Oklahoma"],  
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 1232.50,
@@ -2876,7 +2876,7 @@ module.exports = [
                 bodyOfWater: "Eufaula", // lake name
                 state: ["Oklahoma"],  
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 585.0,
@@ -2895,7 +2895,7 @@ module.exports = [
                 bodyOfWater: "Eucha", // lake name
                 state: ["Oklahoma"],  
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 778.0,
@@ -2914,7 +2914,7 @@ module.exports = [
                 bodyOfWater: "Hudson", // lake name
                 state: ["Oklahoma"],  
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 619.0,
@@ -2933,7 +2933,7 @@ module.exports = [
                 bodyOfWater: "Hulah", // lake name
                 state: ["Oklahoma"],  
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 733.0,
@@ -2952,7 +2952,7 @@ module.exports = [
                 bodyOfWater: "Kaw", // lake name
                 state: ["Oklahoma"],  
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 1010.0,
@@ -2971,7 +2971,7 @@ module.exports = [
                 bodyOfWater: "Grand", // lake name
                 state: ["Oklahoma"],  
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 742.0,
@@ -2990,7 +2990,7 @@ module.exports = [
                 bodyOfWater: "Lawtonka", // lake name
                 state: ["Oklahoma"],  
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 1343.0,
@@ -3009,7 +3009,7 @@ module.exports = [
                 bodyOfWater: "McGee Creek", // lake name
                 state: ["Oklahoma"],  
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 577.1,
@@ -3028,7 +3028,7 @@ module.exports = [
                 bodyOfWater: "Oologah", // lake name
                 state: ["Oklahoma"],  
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 638.0,
@@ -3047,7 +3047,7 @@ module.exports = [
                 bodyOfWater: "Skiatook", // lake name
                 state: ["Oklahoma"],  
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 714.0,
@@ -3066,7 +3066,7 @@ module.exports = [
                 bodyOfWater: "Tenkiller", // lake name
                 state: ["Oklahoma"],  
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 632.0,
@@ -3085,7 +3085,7 @@ module.exports = [
                 bodyOfWater: "Texoma", // lake name
                 state: ["Oklahoma"],  
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 617.0,
@@ -3106,7 +3106,7 @@ module.exports = [
                 bodyOfWater: "Lost Creek", // lake name
                 state: ["Oregon"],  
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
                 normalPool: 1812.0,
@@ -3127,7 +3127,7 @@ module.exports = [
                 bodyOfWater: "Curwensville", // lake name
                 state: ["Pennsylvania"],  
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 1162.0,
@@ -3146,7 +3146,7 @@ module.exports = [
                 bodyOfWater: "Raystown", // lake name
                 state: ["Pennsylvania"],  
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 786.0,
@@ -3165,7 +3165,7 @@ module.exports = [
                 bodyOfWater: "Shenango", // lake name
                 state: ["Pennsylvania"],  
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 894.67,
@@ -3186,7 +3186,7 @@ module.exports = [
                 bodyOfWater: "Clarks Hill", // lake name
                 state: ["South Carolina"],  
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 330.0,
@@ -3205,7 +3205,7 @@ module.exports = [
                 bodyOfWater: "Cooper River", // lake name
                 state: ["South Carolina"],  
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: -6.38, // Cooper River gage height is -6.38, it's a strange USGS site
                 normalPool: 0.0,
@@ -3225,7 +3225,7 @@ module.exports = [
                 bodyOfWater: "Hartwell", // lake name
                 state: ["South Carolina"],  
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 660.0,
@@ -3244,7 +3244,7 @@ module.exports = [
                 bodyOfWater: "Jocasee", // lake name
                 state: ["South Carolina"],  
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 1000.0,
                 normalPool: 1100.0,
@@ -3263,7 +3263,7 @@ module.exports = [
                 bodyOfWater: "Keowee", // lake name
                 state: ["South Carolina"],  
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 700.0,
                 normalPool: 800.0,
@@ -3282,7 +3282,7 @@ module.exports = [
                 bodyOfWater: "Murray", // lake name
                 state: ["South Carolina"],  
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 360.0,
@@ -3301,7 +3301,7 @@ module.exports = [
                 bodyOfWater: "Santee (Marion)", // lake name
                 state: ["South Carolina"],  
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 76.8,
@@ -3320,7 +3320,7 @@ module.exports = [
                 bodyOfWater: "Santee (Moultrie)", // lake name
                 state: ["South Carolina"],  
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 75.5,
@@ -3360,7 +3360,7 @@ module.exports = [
                 bodyOfWater: "Wylie", // lake name
                 state: ["South Carolina"],  
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 400.0,
                 normalPool: 500.0,
@@ -3381,7 +3381,7 @@ module.exports = [
                 bodyOfWater: "Chickamauga", // lake name
                 state: ["Tennessee"],  
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 682.0,
@@ -3400,7 +3400,7 @@ module.exports = [
                 bodyOfWater: "Douglas", // lake name
                 state: ["Tennessee"],  
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 990.0,
@@ -3419,7 +3419,7 @@ module.exports = [
                 bodyOfWater: "Dale Hollow", // lake name
                 state: ["Tennessee"],  
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 651.0,
@@ -3438,7 +3438,7 @@ module.exports = [
                 bodyOfWater: "Nickajack", // lake name
                 state: ["Tennessee"],  
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 692.0,
@@ -3457,7 +3457,7 @@ module.exports = [
                 bodyOfWater: "Percy Priest", // lake name
                 state: ["Tennessee"],  
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 489.0,
@@ -3476,7 +3476,7 @@ module.exports = [
                 bodyOfWater: "Tellico", // lake name
                 state: ["Tennessee"],  
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 814.0,
@@ -3495,7 +3495,7 @@ module.exports = [
                 bodyOfWater: "Tims Ford", // lake name
                 state: ["Tennessee"],  
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 889.0,
@@ -3514,7 +3514,7 @@ module.exports = [
                 bodyOfWater: "Watts Bar", // lake name
                 state: ["Tennessee"],  
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 741.0,
@@ -3573,7 +3573,7 @@ module.exports = [
                 bodyOfWater: "Conroe", // lake name
                 state: ["Texas"],  
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 201.0,
@@ -3611,7 +3611,7 @@ module.exports = [
                 bodyOfWater: "Fork", // lake name
                 state: ["Texas"],  
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 403.0,
@@ -3649,7 +3649,7 @@ module.exports = [
                 bodyOfWater: "Palestine", // lake name
                 state: ["Texas"],  
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 344.0,
@@ -3668,7 +3668,7 @@ module.exports = [
                 bodyOfWater: "Ray Roberts", // lake name
                 state: ["Texas"],  
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 632.5,
@@ -3687,7 +3687,7 @@ module.exports = [
                 bodyOfWater: "Rayburn", // lake name
                 state: ["Texas"],  
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 164.40,
@@ -3706,7 +3706,7 @@ module.exports = [
                 bodyOfWater: "Tawakoni", // lake name
                 state: ["Texas"],  
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 436.0,
@@ -3725,7 +3725,7 @@ module.exports = [
                 bodyOfWater: "Toledo Bend", // lake name
                 state: ["Texas"],  
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 172.0,
@@ -3744,7 +3744,7 @@ module.exports = [
                 bodyOfWater: "Texoma", // lake name
                 state: ["Texas"],  
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 617.0,
@@ -3807,7 +3807,7 @@ module.exports = [
                 bodyOfWater: "Champlain", // lake name
                 state: ["Vermont"],    
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 95.50,
@@ -3827,7 +3827,7 @@ module.exports = [
                 bodyOfWater: "Memphremagog", // lake name
                 state: ["Vermont"],    
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 679.0,
@@ -3846,7 +3846,7 @@ module.exports = [
                 bodyOfWater: "Waterbury", // lake name
                 state: ["Vermont"],    
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 591.0,
@@ -3867,7 +3867,7 @@ module.exports = [
                 bodyOfWater: "James River (Jamestown Ferry Pier)", // lake name
                 state: ["Virginia"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 0,
@@ -3886,7 +3886,7 @@ module.exports = [
                 bodyOfWater: "Potomac River (Alexandria)", // lake name
                 state: ["Virginia"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 0,
@@ -3929,7 +3929,7 @@ module.exports = [
                 bodyOfWater: "Bluestone", // lake name
                 state: ["West Virginia"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0,
                 normalPool: 1406.0,
@@ -3948,7 +3948,7 @@ module.exports = [
                 bodyOfWater: "Burnsville", // lake name
                 state: ["West Virginia"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0,
                 normalPool: 776.0,
@@ -3967,7 +3967,7 @@ module.exports = [
                 bodyOfWater: "Stonewall Jackson", // lake name
                 state: ["West Virginia"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0,
                 normalPool: 1067.53,
@@ -3986,7 +3986,7 @@ module.exports = [
                 bodyOfWater: "Sutton", // lake name
                 state: ["West Virginia"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0,
                 normalPool: 895.0,
@@ -4005,7 +4005,7 @@ module.exports = [
                 bodyOfWater: "Summersville", // lake name
                 state: ["West Virginia"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0,
                 normalPool: 1575.0,
@@ -4026,7 +4026,7 @@ module.exports = [
                 bodyOfWater: "Geneva", // lake name
                 state: ["Wisconsin"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 0.0,
                 normalPool: 879.0,
@@ -4045,7 +4045,7 @@ module.exports = [
                 bodyOfWater: "Winnebago", // lake name
                 state: ["Wisconsin"],
                 data: [],
-                refreshInterval: 60, //minutes
+                refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
                 seaLevelDelta: 746.0,
                 normalPool: 746.0,
