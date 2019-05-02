@@ -381,7 +381,7 @@ module.exports = [
                         ramp: "Bucksport",
                         state: "SC",
                         txDetail: "Qualifier 4",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-coastal-carolina-rivers-sc-april-20-2019-colby-calhoun-wins-13-24-lbs/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-carolina-coastal-rivers/"
                     },
                     {
@@ -390,7 +390,7 @@ module.exports = [
                         ramp: "Bucksport",
                         state: "SC",
                         txDetail: "Final",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-carolina-coastal-river-trail-final-april-27-2019-waccamaw-river-sc/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-carolina-coastal-rivers/"
                     }
                 ]
@@ -616,15 +616,6 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-hartwell/"
                     },
                     {
-                        date: "2019-05-05",
-                        lake: "Hartwell",
-                        ramp: "Broyles",
-                        state: "SC",
-                        txDetail: "Qualifier 3",
-                        resultsLink: "",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-hartwell/"
-                    },
-                    {
                         date: "2019-05-11",
                         lake: "Hartwell",
                         ramp: "Broyles",
@@ -723,7 +714,7 @@ module.exports = [
                         ramp: "Osborne",
                         state: "VA",
                         txDetail: "Gold",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-james-river-va-april-27-2019-steve-lamm-jesse-johnson-weighed-in-25-13-lbs-with-a-9-22-lb-james-river-hammer-1st-place-2871-00/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-james-river/"
                     },
                     {
@@ -837,7 +828,7 @@ module.exports = [
                         ramp: "Occonneechee",
                         state: "NC",
                         txDetail: "Final",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-spring-final-kerr-lake-va-nc-april-28-2019-corey-leonard-paul-rigsbee-weigh-in-16-40-lbs-cash-a-4000-00-check-boom/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
                     }
                 ]
@@ -865,7 +856,7 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-monticello/"
                     },
                     {
-                        date: "2019-04-25",
+                        date: "2019-05-25",
                         lake: "Monticello",
                         ramp: "Hwy 99",
                         state: "SC",
@@ -990,7 +981,7 @@ module.exports = [
                         ramp: "Pinnacle",
                         state: "NC",
                         txDetail: "Qualifier 5",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-norman-nc-april-28-2019-josh-quesinberry-and-ryan-pearce-win-12-31-lbs-1st-bf-at-4-36-lbs/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
                     },
                     {
@@ -1074,11 +1065,11 @@ module.exports = [
                     },
                     {
                         date: "2019-04-28",
-                        lake: "Jordan",
-                        ramp: "Farrington",
+                        lake: "Falls",
+                        ramp: "Ledge Rock",
                         state: "NC",
                         txDetail: "Qualifier 4",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-old-north-falls-lake-nc-the-allens-are-hot-3-in-a-row-26-04-lbs-2560-00-almost-8000-in-winnngs-over-the-last-3-old-north-qualifiers/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
                     },
                     {
@@ -1285,7 +1276,7 @@ module.exports = [
                         ramp: "Stokes Bluff",
                         state: "SC",
                         txDetail: "Final",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-savannah-river-spring-final-april-20-2019-anthony-joyner-barry-conley-take-1st-17-92-lbs-1500-00/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-savannah-river/"
                     }
                 ]
@@ -1420,7 +1411,7 @@ module.exports = [
                         ramp: "Pungo Ferry",
                         state: "NC",
                         txDetail: "Qualifier 4",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-tidewater-north-landing-river-va-jeremy-gatewood-jarred-allbritten-win-with-22-13-lbs-bf-6-02-lbs/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-tidewater/"
                     },
                     {
@@ -1810,7 +1801,7 @@ module.exports = [
                         ramp: "Buster Boyd",
                         state: "NC-SC",
                         txDetail: "Final",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-wylie-sc-nc-spring-final-april-27-tim-chapman-takes-home-3925-00-in-cash-prizes/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wylie/"
                     }
                 ]
@@ -1934,7 +1925,7 @@ module.exports = [
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "CBC SC",
-                        resultsLink: "",
+                        resultsLink: "http://www.carolinasbasschallenge.com/results.php?id=13",
                         entryLink: "http://www.carolinasbasschallenge.com/tournaments.php"
                     },
                     {
@@ -1943,7 +1934,7 @@ module.exports = [
                         ramp: "John C Land",
                         state: "SC",
                         txDetail: "CBC SC",
-                        resultsLink: "",
+                        resultsLink: "http://www.carolinasbasschallenge.com/results.php?id=16",
                         entryLink: "http://www.carolinasbasschallenge.com/tournaments.php"
                     }
                 ]
@@ -2320,7 +2311,7 @@ module.exports = [
                         ramp: "Nutbush",
                         state: "NC",
                         txDetail: "FLW",
-                        resultsLink: "",
+                        resultsLink: "https://www.flwfishing.com/results/2019-04-27-kerr",
                         entryLink: "https://www.flwfishing.com/tournaments/2019-04-27-kerr"
                     },
                     {
@@ -2462,7 +2453,7 @@ module.exports = [
                         ramp: "Holleman's",
                         state: "NC",
                         txDetail: "T1",
-                        resultsLink: "",
+                        resultsLink: "https://www.fomntt.com/pageflow.cfm?callpage=results&schid=5904&getyear=2019",
                         entryLink: "https://www.fomntt.com/pageflow.cfm?callpage=divisioninfo&divid=88&getyear=2019"
                     },
                     {
@@ -2513,7 +2504,7 @@ module.exports = [
                         ramp: "Triple Springs",
                         state: "NC",
                         txDetail: "T3",
-                        resultsLink: "",
+                        resultsLink: "https://www.fomntt.com/pageflow.cfm?callpage=results&schid=5641&getyear=2019",
                         entryLink: "https://www.fomntt.com/pageflow.cfm?callpage=divisioninfo&divid=32&getyear=2019"
                     },
                     {
@@ -2586,7 +2577,7 @@ module.exports = [
                         ramp: "Flemingtown",
                         state: "NC-VA",
                         txDetail: "Piedmont Bass Classic",
-                        resultsLink: "",
+                        resultsLink: "http://piedmontbassclassics.com/427-19PBCResults.html",
                         entryLink: "http://piedmontbassclassics.com/2019PBC10KSpringTrailMainPage.html"
                     },
                     {
@@ -2689,7 +2680,7 @@ module.exports = [
                     ramp: "Pinnacle",
                     state: "NC",
                     txDetail: "Tarheel Bass Series 2",
-                    resultsLink: "",
+                    resultsLink: "http://tarheelbassseries.com/results/",
                     entryLink: "http://tarheelbassseries.com/tournaments/"
                 },
                 {
@@ -2698,7 +2689,7 @@ module.exports = [
                     ramp: "Tamarac",
                     state: "NC",
                     txDetail: "Tarheel Bass Series 3",
-                    resultsLink: "",
+                    resultsLink: "http://tarheelbassseries.com/results/",
                     entryLink: "http://tarheelbassseries.com/tournaments/"
                 },
                 {
@@ -2707,7 +2698,7 @@ module.exports = [
                     ramp: "Ledge Rock",
                     state: "NC",
                     txDetail: "Tarheel Bass Series 4",
-                    resultsLink: "",
+                    resultsLink: "http://tarheelbassseries.com/results/",
                     entryLink: "http://tarheelbassseries.com/tournaments/"
                 }
             ]
