@@ -2453,7 +2453,7 @@ module.exports = [
                         ramp: "Holleman's",
                         state: "NC",
                         txDetail: "T1",
-                        resultsLink: "",
+                        resultsLink: "https://www.fomntt.com/pageflow.cfm?callpage=results&schid=5904&getyear=2019",
                         entryLink: "https://www.fomntt.com/pageflow.cfm?callpage=divisioninfo&divid=88&getyear=2019"
                     },
                     {
