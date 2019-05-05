@@ -85,7 +85,7 @@ module.exports = [
                         ramp: "Whittenburg",
                         state: "NC",
                         txDetail: "T3",
-                        resultsLink: "",
+                        resultsLink: "https://americanbassanglers.com/Results.php?Circuit=OS&Division=5&Date=05/04/2019",
                         entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=5&RegionName=R8"
                     },
                     {
@@ -94,7 +94,7 @@ module.exports = [
                         ramp: "Tamarac",
                         state: "NC",
                         txDetail: "T4",
-                        resultsLink: "",
+                        resultsLink: "https://americanbassanglers.com/Results.php?Circuit=OS&Division=5&Date=06/15/2019",
                         entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=5&RegionName=R8"
                     },
                     {
@@ -103,7 +103,7 @@ module.exports = [
                         ramp: "Nutbush",
                         state: "NC",
                         txDetail: "Championship",
-                        resultsLink: "",
+                        resultsLink: "https://americanbassanglers.com/Results.php?Circuit=OS&Division=108&Date=09/28/2019",
                         entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=5&RegionName=R8"
                     }
                 ]
@@ -137,7 +137,7 @@ module.exports = [
                         ramp: "NutBush",
                         state: "NC",
                         txDetail: "T3",
-                        resultsLink: "",
+                        resultsLink: "https://www.americanbassanglers.com/Results.php?Circuit=OS&Division=19&Date=05/18/2019",
                         entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=19&RegionName=R8"
                     },
                     {
@@ -146,7 +146,7 @@ module.exports = [
                         ramp: "Holly Grove",
                         state: "NC-VA",
                         txDetail: "T4",
-                        resultsLink: "",
+                        resultsLink: "https://www.americanbassanglers.com/Results.php?Circuit=OS&Division=19&Date=06/29/2019",
                         entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=19&RegionName=R8"
                     },
                     {
@@ -155,7 +155,7 @@ module.exports = [
                         ramp: "NutBush",
                         state: "NC-VA",
                         txDetail: "2-Day Championship",
-                        resultsLink: "",
+                        resultsLink: "https://www.americanbassanglers.com/Results.php?Circuit=OS&Division=108&Date=09/28/2019",
                         entryLink: "https://www.americanbassanglers.com/Division.php?Circuit=OS&Season=2019&Division=19&RegionName=R8"
                     }
                 ]
@@ -1976,7 +1976,7 @@ module.exports = [
                         ramp: "Nutbush",
                         state: "NC-VA",
                         txDetail: "CBC NC",
-                        resultsLink: "",
+                        resultsLink: "http://www.carolinasbasschallenge.com/results.php?id=9",
                         entryLink: "http://www.carolinasbasschallenge.com/tournaments.php"
                     }
                 ]
@@ -2190,8 +2190,8 @@ module.exports = [
                         ramp: "West Bank",
                         state: "OH",
                         txDetail: "FLW",
-                        resultsLink: "",
-                        entryLink: ""
+                        resultsLink: "https://www.flwfishing.com/tournaments/2019-05-11-grand-lake-st-marys",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-05-11-grand-lake-st-marys"
                     },
                     {
                         date: "2019-06-08",
@@ -2237,12 +2237,12 @@ module.exports = [
 
                     {
                         date: "2019-05-04",
-                        lake: "Patoka",
-                        ramp: "Newton-Stewart S",
+                        lake: "Rough River Lake",
+                        ramp: "RR State Park",
                         state: "IN",
                         txDetail: "FLW",
-                        resultsLink: "",
-                        entryLink: "https://www.flwfishing.com/tournaments/2019-05-04-patoka"
+                        resultsLink: "https://www.flwfishing.com/results/2019-05-04-rough-river-lake-rescheduled",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-05-04-rough-river-lake-rescheduled"
                     },
                     {
                         date: "2019-06-29",
@@ -2250,7 +2250,7 @@ module.exports = [
                         ramp: "Cutright",
                         state: "IN",
                         txDetail: "FLW",
-                        resultsLink: "",
+                        resultsLink: "https://www.flwfishing.com/results/2019-06-29-monroe",
                         entryLink: "https://www.flwfishing.com/tournaments/2019-06-29-monroe"
                     },
                     {
@@ -2259,7 +2259,7 @@ module.exports = [
                         ramp: "Cutright",
                         state: "IN",
                         txDetail: "FLW",
-                        resultsLink: "",
+                        resultsLink: "https://www.flwfishing.com/results/2019-06-30-monroe-rescheduled",
                         entryLink: "https://www.flwfishing.com/tournaments/2019-06-30-monroe-rescheduled"
                     },
                     {
@@ -2268,7 +2268,7 @@ module.exports = [
                         ramp: "Rocky Point",
                         state: "IN",
                         txDetail: "FLW",
-                        resultsLink: "",
+                        resultsLink: "https://www.flwfishing.com/results/2019-07-20-ohio-river-rocky-point",
                         entryLink: "https://www.flwfishing.com/tournaments/2019-07-20-ohio-river-rocky-point"
                     },
                     {
@@ -2277,7 +2277,7 @@ module.exports = [
                         ramp: "Lawrenceburg",
                         state: "IN",
                         txDetail: "FLW",
-                        resultsLink: "",
+                        resultsLink: "https://www.flwfishing.com/results/2019-09-28-ohio-river-tanners-creek",
                         entryLink: "https://www.flwfishing.com/tournaments/2019-09-28-ohio-river-tanners-creek"
                     }
                 ]
@@ -2293,7 +2293,7 @@ module.exports = [
                         ramp: "Pinnacle",
                         state: "NC",
                         txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/news/2019-02-25-orellana-by-an-ounce-on-norman",
+                        resultsLink: "https://www.flwfishing.com/results/2019-02-23-norman",
                         entryLink: "https://www.flwfishing.com/tournaments/2019-02-23-norman"
                     },
                     {
@@ -2302,7 +2302,7 @@ module.exports = [
                         ramp: "Buster Boyd",
                         state: "NC",
                         txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/news/2019-03-25-rampey-wins-t-h-marine-flw-bass-fishing-league-tournament-on-lake-wylie",
+                        resultsLink: "https://www.flwfishing.com/results/2019-03-23-wylie",
                         entryLink: "https://www.flwfishing.com/tournaments/2019-03-23-wylie"
                     },
                     {
@@ -2320,7 +2320,7 @@ module.exports = [
                         ramp: "Tamarac",
                         state: "NC",
                         txDetail: "FLW",
-                        resultsLink: "",
+                        resultsLink: "https://www.flwfishing.com/results/2019-06-08-high-rock",
                         entryLink: "https://www.flwfishing.com/tournaments/2019-06-08-high-rock"
                     },
                     {
@@ -2329,7 +2329,7 @@ module.exports = [
                         ramp: "Pinnacle",
                         state: "NC",
                         txDetail: "FLW",
-                        resultsLink: "",
+                        resultsLink: "https://www.flwfishing.com/results/2019-09-21-norman",
                         entryLink: "https://www.flwfishing.com/tournaments/2019-09-21-norman"
                     }
                 ]
@@ -2353,7 +2353,7 @@ module.exports = [
                         ramp: "Parkway",
                         state: "VA",
                         txDetail: "FLW",
-                        resultsLink: "",
+                        resultsLink: "https://www.flwfishing.com/results/2019-05-11-smith-mountain",
                         entryLink: "https://www.flwfishing.com/tournaments/2019-05-11-smith-mountain"
                     },
                     {
@@ -2362,7 +2362,7 @@ module.exports = [
                         ramp: "Tamarac",
                         state: "NC",
                         txDetail: "FLW",
-                        resultsLink: "",
+                        resultsLink: "https://www.flwfishing.com/results/2019-06-22-high-rock",
                         entryLink: "https://www.flwfishing.com/tournaments/2019-06-22-high-rock"
                     },
                     {
@@ -2371,7 +2371,7 @@ module.exports = [
                         ramp: "Osborne",
                         state: "VA",
                         txDetail: "FLW",
-                        resultsLink: "",
+                        resultsLink: "https://www.flwfishing.com/results/2019-07-13-james-river",
                         entryLink: "https://www.flwfishing.com/tournaments/2019-07-13-james-river"
                     },
                     {
@@ -2380,7 +2380,7 @@ module.exports = [
                         ramp: "Parkway",
                         state: "VA",
                         txDetail: "FLW",
-                        resultsLink: "",
+                        resultsLink: "https://www.flwfishing.com/results/2019-09-07-smith-mountain",
                         entryLink: "https://www.flwfishing.com/tournaments/2019-09-07-smith-mountain"
                     }
                 ]
@@ -2405,7 +2405,7 @@ module.exports = [
                         ramp: "Parkway",
                         state: "VA",
                         txDetail: "FLW",
-                        resultsLink: "",
+                        resultsLink: "https://www.flwfishing.com/results/2019-06-29-smith-mountain",
                         entryLink: "https://www.flwfishing.com/tournaments/2019-06-29-smith-mountain"
                     },
                     {
@@ -2414,7 +2414,7 @@ module.exports = [
                         ramp: "Smallwood",
                         state: "MD-VA",
                         txDetail: "FLW",
-                        resultsLink: "",
+                        resultsLink: "https://www.flwfishing.com/results/2019-07-27-potomac",
                         entryLink: "https://www.flwfishing.com/tournaments/2019-07-27-potomac"
                     },
                     {
@@ -2423,7 +2423,7 @@ module.exports = [
                         ramp: "Smallwood",
                         state: "MD-VA",
                         txDetail: "FLW",
-                        resultsLink: "",
+                        resultsLink: "https://www.flwfishing.com/results/2019-08-17-potomac",
                         entryLink: "https://www.flwfishing.com/tournaments/2019-08-17-potomac"
                     },
                     {
@@ -2432,7 +2432,7 @@ module.exports = [
                         ramp: "Osborne",
                         state: "VA",
                         txDetail: "FLW",
-                        resultsLink: "",
+                        resultsLink: "https://www.flwfishing.com/results/2019-09-14-james-river",
                         entryLink: "https://www.flwfishing.com/tournaments/2019-09-14-james-river"
                     }
                 ]
@@ -2586,7 +2586,7 @@ module.exports = [
                         ramp: "Farrington",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
-                        resultsLink: "",
+                        resultsLink: "http://piedmontbassclassics.com/511-19PBCResults.html",
                         entryLink: "http://piedmontbassclassics.com/2019PBC10KSpringTrailMainPage.html"
                     },
                     {
@@ -2595,7 +2595,7 @@ module.exports = [
                         ramp: "Ledge Rock",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
-                        resultsLink: "",
+                        resultsLink: "http://piedmontbassclassics.com/61-19PBCResults.html",
                         entryLink: "http://piedmontbassclassics.com/2019PBC10KSpringTrailMainPage.html"
                     },
                     {
@@ -2604,7 +2604,7 @@ module.exports = [
                         ramp: "Farrington",
                         state: "NC",
                         txDetail: "Championship",
-                        resultsLink: "",
+                        resultsLink: "http://piedmontbassclassics.com/615-19PBCResults.html",
                         entryLink: "http://piedmontbassclassics.com/2019PBC10KSpringTrailMainPage.html"
                     }
                 ]
@@ -2653,7 +2653,7 @@ module.exports = [
                         ramp: "Flemingtown",
                         state: "NC-VA",
                         txDetail: "Piedmont Bass Classic",
-                        resultsLink: "",
+                        resultsLink: "http://piedmontbassclassics.com/54-19Results.html",
                         entryLink: "http://piedmontbassclassics.com/2019CashionRodsHartsCustomSetsSpringTrailMainPage.html"
                     }
                 ]
