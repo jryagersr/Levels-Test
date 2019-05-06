@@ -2169,7 +2169,7 @@ module.exports = [
                 adLogoSrc: "/static/assets/img/jsegenerac.png",
                 adLogoUrl: "http://jacksonsuperiorelectric.com/",
                 adTxSrc: "",
-                adTxUrl: "https://www.cattteamtrail.com/divisions/catt-old-north/"
+                adTxUrl: ""
             },
             // Fontana Data is not correct for TVA. It says Fontana will be 'sluicing' util further notice. Not sure what that means.
             //need to skip text until reaching the dat of the first level.
@@ -2311,8 +2311,8 @@ module.exports = [
                 entryLink: "",
                 adLogoSrc: "/static/assets/img/jbrodsbanner.png",
                 adLogoUrl: "https://www.custombassrods.com/",
-                adTxSrc: "/static/assets/img/catt-oldnorth-jordan.png",
-                adTxUrl: "https://www.cattteamtrail.com/divisions/catt-old-north/",
+                adTxSrc: "",
+                adTxUrl: "",
                 ramps: [{
                         rampName: "Farrington Point",
                         rampType: "Concrete",
@@ -2376,8 +2376,8 @@ module.exports = [
                 entryLink: "",
                 adLogoSrc: "/static/assets/img/jse.png",
                 adLogoUrl: "http://jacksonsuperiorelectric.com/",
-                adTxSrc: "/static/assets/img/cbc-kerr-tx.png",
-                adTxUrl: "http://carolinasbasschallenge.com/tournament/72",
+                adTxSrc: "",
+                adTxUrl: "",
                 ramps: [{
 
                         rampName: "County Line",
