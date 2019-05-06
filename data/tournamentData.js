@@ -450,7 +450,7 @@ module.exports = [
                         ramp: "Cypress Gardens",
                         state: "SC",
                         txDetail: "Final",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-cooper-river-spring-final-may-4-2019-bucky-clarke-wins-big-18-23-lbs-bf-7-67-lbs-2204-00-plus-a-lews-speed-stick/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-cooper-river/"
                     }
                 ]
