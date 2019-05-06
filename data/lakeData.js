@@ -3803,26 +3803,7 @@ module.exports = [
             },
 
             // Vermont  ---------------------------------------------------------------------------------------------------------
-            {
-                bodyOfWater: "Champlain", // lake name
-                state: ["Vermont"],    
-                data: [],
-                refreshInterval: 90, //minutes
-                lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: 0,
-                normalPool: 95.50,
-                lat: 44.561815,
-                long: -73.363063,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04294413&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-                flowURL: "none",
-                tempURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04294413&period=Pt168H&parameterCd=00010&siteType=LK&siteStatus=all",
-                href: "/lakes/champlain",
-                dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-                resultsLink: "undefined",
-                entryLink: "",
-                adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-                adLogoUrl: "https://www.custombassrods.com/"
-            },
+           // Champlain found under New York
             {
                 bodyOfWater: "Memphremagog", // lake name
                 state: ["Vermont"],    
@@ -3863,6 +3844,7 @@ module.exports = [
             },
 
             // VIRGINIA ---------------------------------------------------------------------------------------------------------
+            // Kerr found under North Carolina
             {
                 bodyOfWater: "James River (Jamestown Ferry Pier)", // lake name
                 state: ["Virginia"],
