@@ -303,9 +303,10 @@ function updateAllLakes() {
       if (err) {
         res.send("There was a problem querying the database");
       } else {
+        
         // initiate counter
         let i = 0;
-        // start timer on 1 minute interval
+        // start timer
         setInterval(function () {
 
           // set currentLake equal to returned lake document
@@ -478,7 +479,7 @@ function updateAllLakes() {
             i = 0;
           }
 
-        }, 60 * 1000); // 60 second interval
+        }, 20 * 1000); // 20 second interval
       }
     })
 }
