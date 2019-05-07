@@ -2169,7 +2169,7 @@ module.exports = [
                 adLogoSrc: "/static/assets/img/jsegenerac.png",
                 adLogoUrl: "http://jacksonsuperiorelectric.com/",
                 adTxSrc: "",
-                adTxUrl: "https://www.cattteamtrail.com/divisions/catt-old-north/"
+                adTxUrl: ""
             },
             // Fontana Data is not correct for TVA. It says Fontana will be 'sluicing' util further notice. Not sure what that means.
             //need to skip text until reaching the dat of the first level.
@@ -2311,8 +2311,8 @@ module.exports = [
                 entryLink: "",
                 adLogoSrc: "/static/assets/img/jbrodsbanner.png",
                 adLogoUrl: "https://www.custombassrods.com/",
-                adTxSrc: "/static/assets/img/catt-oldnorth-jordan.png",
-                adTxUrl: "https://www.cattteamtrail.com/divisions/catt-old-north/",
+                adTxSrc: "",
+                adTxUrl: "",
                 ramps: [{
                         rampName: "Farrington Point",
                         rampType: "Concrete",
@@ -2376,8 +2376,8 @@ module.exports = [
                 entryLink: "",
                 adLogoSrc: "/static/assets/img/jse.png",
                 adLogoUrl: "http://jacksonsuperiorelectric.com/",
-                adTxSrc: "/static/assets/img/cbc-kerr-tx.png",
-                adTxUrl: "http://carolinasbasschallenge.com/tournament/72",
+                adTxSrc: "",
+                adTxUrl: "",
                 ramps: [{
 
                         rampName: "County Line",
@@ -3803,26 +3803,7 @@ module.exports = [
             },
 
             // Vermont  ---------------------------------------------------------------------------------------------------------
-            {
-                bodyOfWater: "Champlain", // lake name
-                state: ["Vermont"],    
-                data: [],
-                refreshInterval: 90, //minutes
-                lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: 0,
-                normalPool: 95.50,
-                lat: 44.561815,
-                long: -73.363063,
-                elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04294413&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-                flowURL: "none",
-                tempURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04294413&period=Pt168H&parameterCd=00010&siteType=LK&siteStatus=all",
-                href: "/lakes/champlain",
-                dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-                resultsLink: "undefined",
-                entryLink: "",
-                adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-                adLogoUrl: "https://www.custombassrods.com/"
-            },
+           // Champlain found under New York
             {
                 bodyOfWater: "Memphremagog", // lake name
                 state: ["Vermont"],    
@@ -3863,6 +3844,7 @@ module.exports = [
             },
 
             // VIRGINIA ---------------------------------------------------------------------------------------------------------
+            // Kerr found under North Carolina
             {
                 bodyOfWater: "James River (Jamestown Ferry Pier)", // lake name
                 state: ["Virginia"],
