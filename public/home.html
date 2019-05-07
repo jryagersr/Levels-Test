@@ -79,8 +79,39 @@
                     <i class="fab fa-facebook fa-lg"></i>
                 </a>
             </div>
+            <div class="nav-item">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" data-toggle="modal" data-target="#loginModal">Login</button>
+            </div>
         </div>
     </nav>
+
+    <!-- Login Modal -->
+    <!-- Small modal -->
+    <div id="loginModal" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div id="formWell">
+                <h2>Login</h2>
+                <form onsubmit="validateAndSubmitForm('login', event)">
+                    <div>
+                        <label>Username:</label>
+                        <input id='username' type="text" name="username"/>
+                    </div>
+                    <div>
+                        <label>Password:</label>
+                        <input id='password' type="password" name="password"/>
+                    </div>
+                    <div>
+                        <span id='validationMsg'></span>
+                        <input type="submit" value="Log In"/>
+                    </div>
+                </form>
+            </div>
+            <button id="switch">Register</button>
+            </div>
+        </div>
+    </div>
 
     <section id='home-hero' class="container-fluid home-container text-center">
         <div class="locate-container">
@@ -146,6 +177,7 @@
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="/static/assets/js/home.js"></script>
+    <script type="text/javascript" src="/static/assets/js/login.js"></script>
 
 </body>
 
