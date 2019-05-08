@@ -1113,6 +1113,70 @@ module.exports = [
         directionsURL: ""
     },
 
+    // MICHIGAN  ---------------------------------------------------------------------------------------------------------
+    {
+        bodyOfWater: "St Clair", // lake name
+        state: ["Michigan"],
+        rampName: "Harley Ensign",
+        rampType: "Concrete",
+        rampParking: "Great (200+)",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 42.593187,
+        long: -82.774816,
+        directionsURL: "https://www.google.com/maps/dir//42.593187,-82.774816/@42.593188,-82.7753862,237m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "St Clair", // lake name
+        state: ["Michigan"],
+        rampName: "Snooks Hwy",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 42.585832, 
+        long: -82.641589,
+        directionsURL: "https://www.google.com/maps/dir//42.585832,-82.641589/@42.5858332,-82.6422442,272m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "St Clair", // lake name
+        state: ["Michigan"],
+        rampName: "9 Mile",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 42.464833, 
+        long: -82.880364,
+        directionsURL: "https://www.google.com/maps/dir//42.464833,-82.880364/@42.4648345,-82.8812178,355m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "St Clair", // lake name
+        state: ["Michigan"],
+        rampName: "Blossum Heath",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 42.474172, 
+        long: -82.885266,
+        directionsURL: "https://www.google.com/maps/dir//42.474172,-82.885266/@42.4741732,-82.8859395,280m/data=!3m1!1e3"
+    },
+
+
+
     // MINNESOTA  ---------------------------------------------------------------------------------------------------------
     {
         bodyOfWater: "Mille Lacs", // lake name
@@ -1656,6 +1720,7 @@ module.exports = [
     },
 
     // NORTH CAROLINA  ---------------------------------------------------------------------------------------------------------
+    
     {
         bodyOfWater: "Badin", // lake name
         state: ["North Carolina"],
@@ -1786,6 +1851,21 @@ module.exports = [
     {
         bodyOfWater: "Gaston", // lake name
         state: ["North Carolina", "Virginia"],
+        rampName: "Holly Grove",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.569189,
+        long: -78.068809,
+        directionsURL: "https://www.google.com/maps/dir//36.569189,-78.068809/@36.5691901,-78.0693562,248m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Gaston", // lake name
+        state: ["North Carolina", "Virginia"],
         rampName: "Summit",
         rampType: "",
         rampParking: "",
@@ -1794,14 +1874,14 @@ module.exports = [
         courtesyDock: "",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
-        directionsURL: "https://www.google.com/maps/dir//36.484471,-77.827821/@36.4844734,-77.8290599,562m/data=!3m1!1e3?hl=en"
+        lat: 36.484149,
+        long: -77.828247,
+        directionsURL: "https://www.google.com/maps/dir//36.4841389,-77.82825/@36.4841831,-77.8284339,160m/data=!3m1!1e3"
     },
     {
         bodyOfWater: "Hickory", // lake name
-        state: ["North Carolina"],
-        rampName: "",
+        state: ["North Carolina"],    
+        rampName: "Whittenberg",
         rampType: "",
         rampParking: "",
         rampFee: "",
@@ -1809,15 +1889,15 @@ module.exports = [
         courtesyDock: "",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
-        directionsURL: ""
+        lat: 35.805297,
+        long: -81.313050,
+        directionsURL: "https://www.google.com/maps/dir//35.805297,-81.31305/@35.8052984,-81.3137638,327m/data=!3m1!1e3"
     },
 
     {
         bodyOfWater: "High Rock", // lake name
         state: ["North Carolina"],
-        rampName: "",
+        rampName: "Tamarac",
         rampType: "",
         rampParking: "",
         rampFee: "",
@@ -1825,9 +1905,9 @@ module.exports = [
         courtesyDock: "",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
-        directionsURL: ""
+        lat: 35.608823,
+        long: -80.308628,
+        directionsURL: "https://www.google.com/maps/dir//35.608823,-80.308628/@35.6094431,-80.3088328,436m/data=!3m1!1e3"
     },
     {
         bodyOfWater: "Hyco", // lake name
@@ -2109,7 +2189,7 @@ module.exports = [
     {
         bodyOfWater: "Norman", // lake name
         state: ["North Carolina"],
-        rampName: "",
+        rampName: "Pinnacle",
         rampType: "",
         rampParking: "",
         rampFee: "",
@@ -2117,14 +2197,14 @@ module.exports = [
         courtesyDock: "",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
-        directionsURL: ""
+        lat: 35.606779,
+        long: -80.937806,
+        directionsURL: "https://www.google.com/maps/dir//35.606779,-80.937806/@35.6067801,-80.9383532,251m/data=!3m1!1e3"
     },
     {
-        bodyOfWater: "Albemarle", // lake name
+        bodyOfWater: "Mayo", // lake name
         state: ["North Carolina"],
-        rampName: "Cypress Landing",
+        rampName: "Triple Springs",
         rampType: "",
         rampParking: "",
         rampFee: "",
@@ -2132,9 +2212,9 @@ module.exports = [
         courtesyDock: "",
         bottomElev: 0,
         topElev: 0,
-        lat: 36.057595,
-        long: -76.6299890,
-        directionsURL: ""
+        lat: 36.480357,
+        long:  -78.877081,
+        directionsURL: "https://www.google.com/maps/dir//36.480357,-78.877081/@36.4803596,-78.8784106,603m/data=!3m1!1e3"
     },
     {
         bodyOfWater: "Rhodhiss", // lake name
@@ -2227,6 +2307,36 @@ module.exports = [
         directionsURL: "https://www.google.com/maps/dir//35.866541,-76.753076/@35.8665421,-76.7536232,250m/data=!3m1!1e3?hl=en"
     },
     {
+        bodyOfWater: "Shearon Harris", // lake name
+        state: ["North Carolina"],
+        rampName: "Crosspoint",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.573244,
+        long: -78.975881,
+        directionsURL: "https://www.google.com/maps/dir//35.573244,-78.975881/@35.5732453,-78.9765091,288m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Shearon Harris", // lake name
+        state: ["North Carolina"],
+        rampName: "Holleman",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.608119, 
+        long: -78.938986,
+        directionsURL: "https://www.google.com/maps/dir//35.608119,-78.938986/@35.6081201,-78.9395332,251m/data=!3m1!1e3"
+    },
+    {
         bodyOfWater: "Tillery", // lake name
         state: ["North Carolina"],
         rampName: "",
@@ -2260,7 +2370,7 @@ module.exports = [
     {
         bodyOfWater: "Wylie", // lake name
         state: ["North Carolina"],
-        rampName: "",
+        rampName: "South Point",
         rampType: "",
         rampParking: "",
         rampFee: "",
@@ -2268,11 +2378,29 @@ module.exports = [
         courtesyDock: "",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
-        directionsURL: ""
+        lat: 35.155761,
+        long: -81.011964,
+        directionsURL: "https://www.google.com/maps/dir//35.155761,-81.011964/@35.1557621,-81.0125112,252m/data=!3m1!1e3"
     },
 
+    {
+        bodyOfWater: "Wylie", // lake name
+        state: ["North Carolina"],
+        rampName: "Buster Boyd",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.106969,
+        long: -81.038802,
+        directionsURL: "https://www.google.com/maps/dir//35.155761,-81.011964/@35.1557621,-81.0125112,252m/data=!3m1!1e3"
+    },
+
+    // OHIO  ---------------------------------------------------------------------------------------------------------
+    
     /*{
         bodyOfWater: "Indian Lake", // lake name
         data: [],
@@ -2292,9 +2420,7 @@ module.exports = [
         adLogoUrl: ""
     },*/
 
-
-    // OHIO  ---------------------------------------------------------------------------------------------------------
-    {
+{
         bodyOfWater: "Ohio River (Cincy)", // lake name
         state: ["Ohio"],
         rampName: "",

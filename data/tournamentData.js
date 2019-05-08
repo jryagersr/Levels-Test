@@ -1216,7 +1216,7 @@ module.exports = [
                         ramp: "John C Land",
                         state: "SC",
                         txDetail: "Qualifier 7",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-santee-cooper-nc-may-4-2019-max-terry-emmett-mccauley-weigh-up-26-50-lbs-1300-00-santee-final-is-may-11-112-teams-qualified/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-santee-cooper/"
                     },
                     {
@@ -2062,7 +2062,7 @@ module.exports = [
                     ramp: "Summit",
                     state: "NC-VA",
                     txDetail: "Bass For Cash Series",
-                    resultsLink: "",
+                    resultsLink: "http://bassforcash.com/2019/05/07/moss-willis-win-4298-at-lake-gaston/?fbclid=IwAR1DVNszfkSm-R_w6Aly7VWvPSEssRuFKBHOROvfwMp2FTcPAfjRaCojf8o",
                     entryLink: "http://bassforcash.com/schedule/"
                 },
                 {
