@@ -29,8 +29,14 @@ module.exports = {
         let valuesIndex = 0;
         // Parse the json data return to find the values we want
         let jIncrement = 1;
-        if (bodyOfWater == "Mille Lacs")
-          valuesIndex = 1 // For some reason Mille Lacs has changed from index 0 to index 1 02/10/19
+
+        // For some reason Mille Lacs has changed from index 0 to index 1 02/10/19
+        // Bay Springs, Armory and Pool B are Locks with a sensor that provides Headwater (above the lock)
+        // and Tailwater (below the lock)
+        // data.value.timeSeries[i].values[j].method[0].methodDescription == "Tailwater" or "Headwater"
+        // These three have value[1] of "Tailwater"
+        if (["Mille Lacs", "Bay Springs", "Amory", "Pool B"].includes(bodyOfWater))
+          valuesIndex = 1 
 
         // To retrieve Flows from USGS, we get multiple .timevalues and the variable.variableDecription 
         // value will contain "Discharge" 'Gage' for Flow or Elev data. We must determine which timevalues

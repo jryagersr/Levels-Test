@@ -244,8 +244,10 @@ module.exports = function (app) {
                   break;
 
                 default:
-                  console.log("Data source could not be found.");
-                  res.send("Data source could not be found.");
+                  console.log(`No data source for ${currentLake.bodyOfWater}`);
+                  res.json(currentLake);
+                  //console.log("Data source could not be found.");
+                  //res.send("Data source could not be found.");
               }
             }
             // if no update is needed, send currentLake to client
@@ -463,7 +465,7 @@ function updateAllLakes() {
 
               default:
                 console.log("Data source could not be found.");
-                res.send("Data source could not be found.");
+                //res.send("Data source could not be found.");
             }
           }
           // if no update is needed log to console

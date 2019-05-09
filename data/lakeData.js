@@ -1645,7 +1645,7 @@ module.exports = [
         data: [],
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
-        seaLevelDelta: 547.0, // data reported as a delta to Full Pool -100
+        seaLevelDelta: 0.0, // data reported as a delta to Full Pool -100
         normalPool: 407.0,
         lat: 34.574800,
         long: -88.313900,
