@@ -1731,7 +1731,7 @@ module.exports = [
         long: -88.424722,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02431011&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
         flowURL: "none",
-        href: "/lakes/beaverlakems",
+        href: "/lakes/queen",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
         resultsLink: "undefined",
         entryLink: "",

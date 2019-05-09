@@ -30,13 +30,6 @@ module.exports = {
         // Parse the json data return to find the values we want
         let jIncrement = 1;
 
-        // For some reason Mille Lacs has changed from index 0 to index 1 02/10/19
-        // Bay Springs, Armory and Pool B are Locks with a sensor that provides Headwater (above the lock)
-        // and Tailwater (below the lock)
-        // data.value.timeSeries[i].values[j].method[0].methodDescription == "Tailwater" or "Headwater"
-        // These three have value[1] of "Tailwater"
-        if (["Mille Lacs", "Bay Springs", "Amory", "Pool B"].includes(bodyOfWater))
-          valuesIndex = 1 
 
         // To retrieve Flows from USGS, we get multiple .timevalues and the variable.variableDecription 
         // value will contain "Discharge" 'Gage' for Flow or Elev data. We must determine which timevalues
@@ -48,8 +41,20 @@ module.exports = {
           if (data.value.timeSeries[i].variable.variableDescription.includes("Discharge"))
             timeSeriesFlowIndex = i;
           else if (data.value.timeSeries[i].variable.variableDescription.includes("Gage height") ||
-            data.value.timeSeries[i].variable.variableDescription.includes("water surface"))
+            data.value.timeSeries[i].variable.variableDescription.includes("water surface")) {
+            for (z = 0; z < data.value.timeSeries[i].values.length; z++) {
+              // For some reason Mille Lacs has changed from index 0 to index 1 02/10/19 (Lake Outlet, other sensor has failed??? )
+              // Bay Springs, Armory and Pool B are Locks with a sensor that provides Headwater (above the lock)
+              // and Tailwater (below the lock)
+              // data.value.timeSeries[i].values[j].method[0].methodDescription == "Tailwater" or "Headwater"
+              // These three have value[1] of "Tailwater"
+              if (["Lake Outlet", "Headwater", "headwater"].includes(data.value.timeSeries[i].values[z].method[0].methodDescription)) {
+                valuesIndex = z;
+              }
+            }
+
             timeSeriesElevIndex = i;
+          }
         }
         // Set up elev and flow Values
         let elevValues = '';
