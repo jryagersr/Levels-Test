@@ -769,7 +769,7 @@ module.exports = [
         directionsURL: "https://www.google.com/maps/dir//34.545146,-86.931489/@34.5451471,-86.9320375,260m/data=!3m1!1e3"
     },
     {
-        bodyOfWater: "Wilson", // lake name
+        bodyOfWater: "Wheeler", // lake name
         state: ["Alabama"],
         rampName: "Limestone Creek",
         rampType: "Concrete",
@@ -782,6 +782,51 @@ module.exports = [
         lat: 34.601945,
         long: -86.891814,
         directionsURL: "https://www.google.com/maps/dir//34.601945,-86.891814/@34.6019461,-86.8923625,259m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Wilson", // lake name
+        state: ["Alabama"],
+        rampName: "Safety Harbor",
+        rampType: "Concrete",
+        rampParking: "Poor",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "No",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.793930,
+        long: -87.387710,
+        directionsURL: "https://www.google.com/maps/dir//34.79393,-87.38771/@34.7939311,-87.3882585,259m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Wilson", // lake name
+        state: ["Alabama"],
+        rampName: "Colbert Alloys",
+        rampType: "Concrete",
+        rampParking: "Poor",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "No",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.802219,
+        long: -87.497363,
+        directionsURL: "https://www.google.com/maps/dir//34.802219,-87.497363/@34.8022201,-87.4979115,259m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Wilson", // lake name
+        state: ["Alabama"],
+        rampName: "Fleet Harbor",
+        rampType: "Concrete",
+        rampParking: "Poor",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "No",
+        bottomElev: 0,
+        topElev: 0,
+        lat:34.791808,
+        long: -87.623069,
+        directionsURL: "https://www.google.com/maps/dir//34.791808,-87.623069/@34.7918093,-87.6237168,306m/data=!3m1!1e3"
     },
     // Arizona  ---------------------------------------------------------------------------------------------------------
     {
