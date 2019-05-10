@@ -18,28 +18,28 @@ userController.register = function(req, res) {
 userController.doRegister = function(req, res) {
   User.register(new User({ username : req.body.username, name: req.body.name }), req.body.password, function(err, user) {
     if (err) {
-      res.json({
+      return res.json({
       message: err.message,
       error: err
     });
     }
 
     passport.authenticate('local')(req, res, function () {
-      console.log("New user registered");
-      res.redirect('/');
+      console.log(`New user registered. Username: ${req.username}`);
+      res.redirect(req.get('referer'));
     });
   });
 };
 
 // Go to login page
 userController.login = function(req, res) {
-  res.redirect('/login');
+  res.redirect(req.get('referer'));
 };
 
 // Post login
 userController.doLogin = function(req, res) {
   passport.authenticate('local')(req, res, function () {
-    res.redirect('/');
+    res.redirect(req.get('referer'));
   });
 };
 

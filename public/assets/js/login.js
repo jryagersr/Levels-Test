@@ -73,6 +73,14 @@ function validateAndSubmitForm(type) {
             $('#validationMsg').html("All fields are required.");
             return false;
         }
+
+
+        let data = {
+            name: name,
+            username: username,
+            password: password
+        }
+        makePost("/register", "POST", data, "Registered");
     }
 
     // if submit is login event
@@ -90,6 +98,29 @@ function validateAndSubmitForm(type) {
             $('#validationMsg').html("All fields are required.");
             return false;
         }
+
+        let data = {
+            username: username,
+            password: password
+        }
+        makePost("/login", "POST", data, "Logged in");
     }
 }
 
+function makePost(url, method, data, string) {
+$.ajax({
+    url: url,
+    method: method,
+    data: (data)
+}).then(function(data, err) {
+    if (typeof data.message !== 'undefined') {
+        $('#loginMsg').html(data.message);
+    } else {
+        $('#loginMsg').html(`${string} successfully. You will be redirected in a few moments.`)
+        setTimeout(function(){ 
+            window.location.reload();
+        }, 5000);
+    }
+})
+
+}

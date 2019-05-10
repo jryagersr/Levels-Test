@@ -245,7 +245,7 @@ module.exports = function (app) {
 
                 default:
                   console.log("Data source could not be found.");
-                  res.send("Data source could not be found.");
+                  res.json(currentLake);
               }
             }
             // if no update is needed, send currentLake to client
