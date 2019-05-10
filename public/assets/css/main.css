@@ -100,7 +100,7 @@ h1, h2, h3 {
     height: 250px;
     padding: 20px;
     width: 100%;
-    margin-bottom: 140px;
+    margin-bottom: 250px;
 }
 
 /* different background image for nearby-lakes.html */
@@ -177,8 +177,8 @@ h1, h2, h3 {
 }
 
 #lakeContainer {
-    margin-top: 120px;
-    padding: 20px 0px;
+    margin-top: 30px;
+    padding: 0px;
     background: rgb(249,249,249);
     display: none;
     text-align: center;
@@ -284,7 +284,7 @@ h1, h2, h3 {
 
 #home-body {
     text-align: center;
-    padding-top: 40px;
+    padding-top: 20px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
@@ -378,9 +378,6 @@ h1, h2, h3 {
 }
 
 @media only screen and (max-width: 571px) {
-    .locate-container {
-        margin-bottom: 300px;
-    }
 
     .lake-card {
         width: 100%;
@@ -433,8 +430,7 @@ h1, h2, h3 {
 .state-select-wrapper {
     padding-left: 20%;
     padding-right: 20%;
-    padding-bottom: 20px;
-    border-bottom: 2px solid rgba(199, 199, 199, 0.3);
+    padding-bottom: 40px;
 }
 
 
@@ -769,6 +765,10 @@ h1, h2, h3 {
     @media only screen and (min-width: 571px) {
         .lake-card {
             padding: 10px;
+        }
+
+        .locate-container {
+            margin-bottom: 180px;
         }
         
         .lake-card .left {

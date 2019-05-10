@@ -56,9 +56,24 @@ module.exports = function(app) {
   app.get("/about", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/about.html"));
   })
+
+  app.get("/login", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/login.html"));
+  })
+
+  app.get("/register", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/register.html"));
+  })
   
   // If no matching route is found default to home
   app.get("*", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/home.html"));
   });
+
+  // function loggedIn(req, res, next) {
+  //   if (req.user) {
+  //     console.log("user is logged in");
+  //   }
+  //   next();
+  //}
 };

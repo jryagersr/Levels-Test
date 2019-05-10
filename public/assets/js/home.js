@@ -14,6 +14,8 @@ function hideLoader() {
     $('.lds #lds-ring').hide();
 }
 
+$('#adLogoWell').hide();
+
 // get all of our lake data
 $.ajax({
     url: "/api/find-all-lakes",
@@ -146,6 +148,8 @@ $.ajax({
             }
             // Hide loader gif
             $('#home-nearby #lds-ring').hide();
+            // Reveal sponsors
+            $('#adLogoWell').show();
             // append template to page
             $('#lakeContainer').append(lakeTemplate);
             // Display lake-card loader gifs
@@ -153,7 +157,7 @@ $.ajax({
             // reveal the lake container 
             $('#lakeContainer').show();
             // scroll down to section for usability
-            var divPosition = $('#home-nearby').offset();
+            var divPosition = $('#adLogoWell').offset();
             $('html, body').animate({scrollTop: divPosition.top - 100}, "slow");
 
             // update current levels
@@ -197,6 +201,7 @@ $.ajax({
 
         // user clicks on use my location button
         $('#locateBtn').on('click', function () {
+            console.log("click");
             // Show loader gif
             $('#lds-ring').show();
             // run get location function

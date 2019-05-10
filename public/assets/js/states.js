@@ -134,6 +134,10 @@ const states = [{
     }
 ]
 
+// Show sponsors
+$('#adLogoWell').show();
+
+
 // Dynamically create options in our dropdown
 for (var i = 0; i < states.length; i++) {
     var stateOption = $("<option>");
