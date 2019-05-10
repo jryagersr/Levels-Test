@@ -48,7 +48,7 @@ module.exports = {
               // and Tailwater (below the lock)
               // data.value.timeSeries[i].values[j].method[0].methodDescription == "Tailwater" or "Headwater"
               // These three have value[1] of "Tailwater"
-              if (["Lake Outlet", "Headwater", "headwater"].includes(data.value.timeSeries[i].values[z].method[0].methodDescription)) {
+              if (['Headwater', 'headwater', '[At Lake Outlet]'].includes(data.value.timeSeries[i].values[z].method[0].methodDescription)) {
                 valuesIndex = z;
               }
             }
@@ -71,6 +71,9 @@ module.exports = {
 
         // If reported level is not based on MSL, set the seaLevelDelta to add to the level
         // to convert to MSL based.
+        console.log(bodyOfWater)
+        console.log("TCL: elevValues[0].value", elevValues[0].value)
+
         if (seaLevelDelta !== 0)
           elevationAdjust = (parseFloat(elevValues[0].value) + Number(seaLevelDelta)).toFixed(2);
         else {

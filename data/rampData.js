@@ -5,7 +5,7 @@ module.exports = [
     {
         bodyOfWater: "Aliceville", // lake name
         state: ["Alabama"],
-        rampName: "",
+        rampName: "Public Access",
         rampType: "",
         rampParking: "",
         rampFee: "",
@@ -13,53 +13,293 @@ module.exports = [
         courtesyDock: "",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
-        directionsURL: ""
+        lat: 33.228956,
+        long: -88.288748,
+        directionsURL: "https://www.google.com/maps/dir//33.228956,-88.288748/@33.2289571,-88.2892965,264m/data=!3m1!1e3"
     },
     {
         bodyOfWater: "Eufaula", // lake name
         state: ["Alabama"],
-        rampName: "",
-        rampType: "",
-        rampParking: "",
+        rampName: "Chenyhatchee",
+        rampType: "Concrete",
+        rampParking: "Good",
         rampFee: "",
-        rampAccess: "",
+        rampAccess: "Pavement",
         courtesyDock: "",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
-        directionsURL: ""
+        lat: 31.832159,
+        long: -85.163672,
+        directionsURL: "https://www.google.com/maps/dir//31.985698,-85.112576/@31.9836784,-85.1123067,1506m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Eufaula", // lake name
+        state: ["Georgia"],
+        rampName: "Cotton Hill",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Pavement",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 31.671972,
+        long: -85.062881,
+        directionsURL: "https://www.google.com/maps/dir//31.671972,-85.062881/@31.6719765,-85.065075,1073m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Eufaula", // lake name
+        state: ["Alabama"],
+        rampName: "Cowikee",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Pavement",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 31.985698,
+        long: -85.112576,
+        directionsURL: "https://www.google.com/maps/dir//31.985698,-85.112576/@31.9836784,-85.1123067,1506m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Eufaula", // lake name
+        state: ["Alabama"],
+        rampName: "Eufaula Ave",
+        rampType: "Concrete",
+        rampParking: "Fair",
+        rampFee: "",
+        rampAccess: "Pavement",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 31.866636,
+        long: -85.159323,
+        directionsURL: "https://www.google.com/maps/dir//31.985698,-85.112576/@31.9836784,-85.1123067,1506m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Eufaula", // lake name
+        state: ["Alabama"],
+        rampName: "Florence",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Pavement",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 31.985698,
+        long: -85.112576,
+        directionsURL: "https://www.google.com/maps/dir//32.087728,-85.04325/@32.0877291,-85.0437985,267m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Eufaula", // lake name
+        state: ["Alabama"],
+        rampName: "Hardridge Creek",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Pavement",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 31.64115,
+        long: -85.10503,
+        directionsURL: "https://www.google.com/maps/dir//31.641154,-85.105033/@31.6413238,-85.1052244,406m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Eufaula", // lake name
+        state: ["Georgia"],
+        rampName: "Pataula",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Pavement",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 31.733778,
+        long: -85.081108,
+        directionsURL: "https://www.google.com/maps/dir//31.733778,-85.081108/@31.7345331,-85.0823281,1260m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Eufaula", // lake name
+        state: ["Alabama"],
+        rampName: "Old Creek",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Pavement",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 32.087728,
+        long: -85.043250,
+        directionsURL: "https://www.google.com/maps/dir//31.703892,-85.152331/@31.7038931,-85.1528795,268m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Eufaula", // lake name
+        state: ["Georgia"],
+        rampName: "River Bluff",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Pavement",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 31.892273,
+        long: -85.109580,
+        directionsURL: "https://www.google.com/maps/dir//31.892273,-85.10958/@31.8922749,-85.1104774,438m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Eufaula", // lake name
+        state: ["Georgia"],
+        rampName: "Sandy Creek",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Pavement",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 31.667544,
+        long: -85.056858,
+        directionsURL: "https://www.google.com/maps/dir//31.667544,-85.056858/@31.6675451,-85.0574065,268m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Eufaula", // lake name
+        state: ["Alabama"],
+        rampName: "Thomas Mill",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Pavement",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 31.703892,
+        long: -85.152331,
+        directionsURL: "https://www.google.com/maps/dir//31.918184,-85.121187/@31.9181862,-85.1222314,510m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Eufaula", // lake name
+        state: ["Alabama"],
+        rampName: "White Oak",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Pavement",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 31.774709,
+        long: -85.154742,
+        directionsURL: "https://www.google.com/maps/dir//31.774709,-85.154742/@31.7747102,-85.1553079,276m/data=!3m1!1e3"
     },
     {
         bodyOfWater: "Neely Henry", // lake name
         state: ["Alabama"],
-        rampName: "",
-        rampType: "",
-        rampParking: "",
+        rampName: "Rainbow",
+        rampType: "Concrete",
+        rampParking: "Good",
         rampFee: "",
         rampAccess: "",
-        courtesyDock: "",
+        courtesyDock: "Yes",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
+        lat: 33.943317,
+        long: -86.028078,
+        directionsURL: "https://www.google.com/maps/dir//33.943317,-86.028078/@33.9433181,-86.0286265,262m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Neely Henry", // lake name
+        state: ["Alabama"],
+        rampName: "Ten Islands",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 33.785503,
+        long: -86.065133,
         directionsURL: ""
     },
     {
         bodyOfWater: "Lay", // lake name
         state: ["Alabama"],
-        rampName: "",
-        rampType: "",
-        rampParking: "",
+        rampName: "Dam",
+        rampType: "Concrete",
+        rampParking: "Good",
         rampFee: "",
-        rampAccess: "",
-        courtesyDock: "",
+        rampAccess: "Pavement",
+        courtesyDock: "Yes",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
+        lat: 32.978236, 
+        long: -86.522088,
+        directionsURL: "https://www.google.com/maps/dir//32.978236,-86.522088/@32.9782371,-86.5226365,264m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Lay", // lake name
+        state: ["Alabama"],
+        rampName: "Paint Creek",
+        rampType: "Concrete",
+        rampParking: "Poor",
+        rampFee: "",
+        rampAccess: "Gravel",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 32.992642,
+        long: -86.489364,
+        directionsURL: "https://www.google.com/maps/dir//32.992642,-86.489364/@32.9928566,-86.4916017,1091m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Lay", // lake name
+        state: ["Alabama"],
+        rampName: "Narrows",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 33.054941,
+        long: -86.526724,
+        directionsURL: "https://www.google.com/maps/dir//33.054941,-86.526724/@33.0549421,-86.5272725,264m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Lay", // lake name
+        state: ["Alabama"],
+        rampName: "Spring Creek",
+        rampType: "Concrete",
+        rampParking: "Fair",
+        rampFee: "",
+        rampAccess: "Gravel",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 33.083529,
+        long: -86.533034,
+        directionsURL: "https://www.google.com/maps/dir//33.083529,-86.533034/@33.0835317,-86.5343588,638m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Lay", // lake name
+        state: ["Alabama"],
+        rampName: "Beeswax",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 33.177069,
+        long: -86.521193,
         directionsURL: ""
     },
     {
@@ -73,14 +313,89 @@ module.exports = [
         courtesyDock: "",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
+        lat: 33.45649,
+        long: -86.29562,
         directionsURL: ""
+    },
+    {
+        bodyOfWater: "Logan Martin", // lake name
+        state: ["Alabama"],
+        rampName: "Pleasure Point",
+        rampType: "Concrete",
+        rampParking: "Fair",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 33.45649,
+        long: -86.29562,
+        directionsURL: "https://www.google.com/maps/dir//33.456493,-86.295617/@33.4564942,-86.2962125,286m/data=!3m1!1e3"
     },
     {
         bodyOfWater: "Guntersville", // lake name
         state: ["Alabama"],
-        rampName: "",
+        rampName: "State Park",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.399509,
+        long: -86.209299,
+        directionsURL: "https://www.google.com/maps/dir//34.399509,-86.209299/@34.3995101,-86.2098475,260m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Guntersville", // lake name
+        state: ["Alabama"],
+        rampName: "Goose Pond",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.580058,
+        long: -86.082527,
+        directionsURL: "https://www.google.com/maps/dir//34.580058,-86.082527/@34.5800591,-86.0830755,260m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Guntersville", // lake name
+        state: ["Alabama"],
+        rampName: "Thomas Ave",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.330668,
+        long: -86.319273,
+        directionsURL: "https://www.google.com/maps/dir//34.330668,-86.319273/@34.3306691,-86.3198215,260m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Guntersville", // lake name
+        state: ["Alabama"],
+        rampName: "Municipal",
+        rampType: "Concrete",
+        rampParking: "Fair",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.323391,
+        long: -86.309198,
+        directionsURL: "https://www.google.com/maps/dir//34.323391,-86.309198/@34.3233921,-86.3097465,260m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Guntersville", // lake name
+        state: ["Alabama"],
+        rampName: "Poll Cat",
         rampType: "",
         rampParking: "",
         rampFee: "",
@@ -88,84 +403,385 @@ module.exports = [
         courtesyDock: "",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
+        lat: 34.347170,
+        long: -86.270709,
+        directionsURL: "https://www.google.com/maps/dir//34.34717,-86.270709/@34.3471711,-86.2712575,260m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Guntersville", // lake name
+        state: ["Alabama"],
+        rampName: "Tom Jackson",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.355033,
+        long: -86.318341,
+        directionsURL: "https://www.google.com/maps/dir//34.355033,-86.318341/@34.3550352,-86.3194402,522m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Guntersville", // lake name
+        state: ["Alabama"],
+        rampName: "Parkers",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.36037,
+        long:  -86.34376,
+        directionsURL: "https://www.google.com/maps/dir//34.360374,-86.34376/@34.3603753,-86.3444028,305m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Guntersville", // lake name
+        state: ["Alabama"],
+        rampName: "431",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.380337,
+        long: -86.288402,
+        directionsURL: "https://www.google.com/maps/dir//34.380337,-86.288402/@34.3803414,-86.290596,1041m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Guntersville", // lake name
+        state: ["Alabama"],
+        rampName: "Siebold",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.432598,
+        long: -86.248902,
+        directionsURL: "https://www.google.com/maps/dir//34.432598,-86.248902/@34.4325992,-86.2495074,287m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Guntersville", // lake name
+        state: ["Alabama"],
+        rampName: "TVA",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.456610,
+        long: -86.295333,
+        directionsURL: "https://www.google.com/maps/dir//34.45661,-86.295333/@34.4566117,-86.2961677,396m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Guntersville", // lake name
+        state: ["Alabama"],
+        rampName: "Sunrise TVA",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.450971,
+        long: -86.333433,
+        directionsURL: "https://www.google.com/maps/dir//34.45661,-86.295333/@34.4566117,-86.2961677,396m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Pickwick", // lake name
+        state: ["Mississippi"],
+        rampName: "Pickwick Landing",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.056742,
+        long: -88.232502,
+        directionsURL: "https://www.google.com/maps/dir//35.056742,-88.232502/@35.0567438,-88.2333842,415m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Pickwick", // lake name
+        state: ["Mississippi"],
+        rampName: "Goat Island",
+        rampType: "Concrete",
+        rampParking: "Fair",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.956042,
+        long: -88.230219,
         directionsURL: ""
     },
     {
         bodyOfWater: "Pickwick", // lake name
-        state: ["Alabama"],
-        rampName: "",
-        rampType: "",
-        rampParking: "",
+        state: ["Mississippi"],
+        rampName: "Pickwick Landing",
+        rampType: "Concrete",
+        rampParking: "Good",
         rampFee: "",
-        rampAccess: "",
-        courtesyDock: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
-        directionsURL: ""
+        lat: 35.056742,
+        long: -88.232502,
+        directionsURL: "https://www.google.com/maps/dir//35.056742,-88.232502/@35.0567438,-88.2333842,415m/data=!3m1!1e3"
+    },
+        
+    {
+        bodyOfWater: "Pickwick", // lake name
+        state: ["Alabama"],
+        rampName: "Muscle Shoals",
+        rampType: "",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Pavement",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.792139,
+        long: -87.637080,
+        directionsURL: "https://www.google.com/maps/dir//34.792139,-87.63708/@34.7904906,-87.637224,526m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Pickwick", // lake name
+        state: ["Alabama"],
+        rampName: "McFarland Park",
+        rampType: "",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Pavement",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.785140,
+        long: -87.674469,
+        directionsURL: "https://www.google.com/maps/dir//34.78514,-87.674469/@34.7851413,-87.6751207,308m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Pickwick", // lake name
+        state: ["Alabama"],
+        rampName: "Riverfront",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.766752,
+        long: -87.711949,
+        directionsURL: "https://www.google.com/maps/dir//34.766752,-87.711949/@34.7667537,-87.7128158,409m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Pickwick", // lake name
+        state: ["Alabama"],
+        rampName: "Spring Creek",
+        rampType: "Concrete",
+        rampParking: "Fair",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "No",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.747436,
+        long: -87.721625,
+        directionsURL: "https://www.google.com/maps/dir//34.747436,-87.721625/@34.7469305,-87.722716,258m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Pickwick", // lake name
+        state: ["Alabama"],
+        rampName: "Natchez Trace",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "No",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.839307,
+        long: -87.944653,
+        directionsURL: "https://www.google.com/maps/dir//34.839307,-87.944653/@34.8393081,-87.9452015,259m/data=!3m1!1e3"
     },
     {
         bodyOfWater: "Smith", // lake name
         state: ["Alabama"],
-        rampName: "",
-        rampType: "",
-        rampParking: "",
+        rampName: "Dam",
+        rampType: "Concrete",
+        rampParking: "Good",
         rampFee: "",
-        rampAccess: "",
-        courtesyDock: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
-        directionsURL: ""
+        lat: 33.944558,
+        long: -87.108731,
+        directionsURL: "https://www.google.com/maps/dir//33.944558,-87.108731/@33.9431567,-87.1130323,575m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Smith", // lake name
+        state: ["Alabama"],
+        rampName: "Lick Creek",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 33.968599,
+        long: -87.086479,
+        directionsURL: "https://www.google.com/maps/dir//33.968599,-87.086479/@33.9686001,-87.0870275,261m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Smith", // lake name
+        state: ["Alabama"],
+        rampName: "Smith Park",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.083872,
+        long: -86.957294,
+        directionsURL: "https://www.google.com/maps/dir//34.083872,-86.957294/@34.0838731,-86.9578425,261m/data=!3m1!1e3"
     },
     {
         bodyOfWater: "Weiss", // lake name
         state: ["Alabama"],
-        rampName: "",
-        rampType: "",
-        rampParking: "",
+        rampName: "Leesburg",
+        rampType: "Concrete",
+        rampParking: "Good",
         rampFee: "",
-        rampAccess: "",
-        courtesyDock: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
+        lat: 34.162263,
+        long: -85.762512,
+        directionsURL: "https://www.google.com/maps/dir//34.162263,-85.762512/@34.1622641,-85.7630605,261m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Weiss", // lake name
+        state: ["Alabama"],
+        rampName: "Hwy 9",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.202018,
+        long: -85.622181,
+        directionsURL: "https://www.google.com/maps/dir//34.202018,-85.622181/@34.2020196,-85.6229866,383m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Weiss", // lake name
+        state: ["Alabama"],
+        rampName: "Cobia Bridge",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: -85.602412,
         long: 0,
-        directionsURL: ""
+        directionsURL: "https://www.google.com/maps/dir//34.237304,-85.602412/@34.2373051,-85.6029605,261m/data=!3m1!1e3"
     },
     {
         bodyOfWater: "Wheeler", // lake name
         state: ["Alabama"],
-        rampName: "",
-        rampType: "",
-        rampParking: "",
+        rampName: "State Park",
+        rampType: "Concrete",
+        rampParking: "Good",
         rampFee: "",
-        rampAccess: "",
-        courtesyDock: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
-        directionsURL: ""
+        lat: 34.820816,
+        long: -87.316178,
+        directionsURL: "https://www.google.com/maps/dir//34.820816,-87.316178/@34.8208176,-87.3169585,368m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Wheeler", // lake name
+        state: ["Alabama"],
+        rampName: "Elk River",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.807493,
+        long: -87.233790,
+        directionsURL: "https://www.google.com/maps/dir//34.807493,-87.23379/@34.8074941,-87.2343385,259m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Wheeler", // lake name
+        state: ["Alabama"],
+        rampName: "Round Island",
+        rampType: "Comcrete",
+        rampParking: "Paved",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.685179,
+        long: -87.070359,
+        directionsURL: "https://www.google.com/maps/dir//34.685179,-87.070359/@34.6851818,-87.0717493,657m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Wheeler", // lake name
+        state: ["Alabama"],
+        rampName: "Point Mallard",
+        rampType: "Dirt",
+        rampParking: "Fair",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "No",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.545146,
+        long: -86.931489,
+        directionsURL: "https://www.google.com/maps/dir//34.545146,-86.931489/@34.5451471,-86.9320375,260m/data=!3m1!1e3"
     },
     {
         bodyOfWater: "Wilson", // lake name
         state: ["Alabama"],
-        rampName: "",
-        rampType: "",
-        rampParking: "",
+        rampName: "Limestone Creek",
+        rampType: "Concrete",
+        rampParking: "Poor",
         rampFee: "",
-        rampAccess: "",
-        courtesyDock: "",
+        rampAccess: "Paved",
+        courtesyDock: "No",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
-        directionsURL: ""
+        lat: 34.601945,
+        long: -86.891814,
+        directionsURL: "https://www.google.com/maps/dir//34.601945,-86.891814/@34.6019461,-86.8923625,259m/data=!3m1!1e3"
     },
     // Arizona  ---------------------------------------------------------------------------------------------------------
     {
@@ -1724,22 +2340,22 @@ module.exports = [
     {
         bodyOfWater: "Badin", // lake name
         state: ["North Carolina"],
-        rampName: "",
-        rampType: "",
-        rampParking: "",
+        rampName: "Alcoa Access",
+        rampType: "Concrete",
+        rampParking: "Fair (35)",
         rampFee: "",
-        rampAccess: "",
-        courtesyDock: "",
+        rampAccess: "Gravel",
+        courtesyDock: "Yes",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
-        directionsURL: ""
+        lat: 35.407876,
+        long: -80.115033,
+        directionsURL: "https://www.google.com/maps/dir//35.407876,-80.115033/@35.4078771,-80.1155815,257m/data=!3m1!1e3"
     },
     {
         bodyOfWater: "Blewett Falls", // lake name
         state: ["North Carolina"],
-        rampName: "",
+        rampName: "SR 759",
         rampType: "",
         rampParking: "",
         rampFee: "",
@@ -1747,9 +2363,9 @@ module.exports = [
         courtesyDock: "",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
-        directionsURL: ""
+        lat: 34.987774,
+        long: -79.890788,
+        directionsURL: "https://www.google.com/maps/dir//34.987774,-79.890788/@34.9877751,-79.8913365,258m/data=!3m1!1e3"
     },
     //Found this on ACE. Format is different for streams (smh), there is no .elev, it is .stage will add later 
     {
@@ -1763,9 +2379,59 @@ module.exports = [
         courtesyDock: "",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
-        directionsURL: ""
+        lat: 35.55015,
+        long: -79.02368,
+        directionsURL: "https://www.google.com/maps/dir//35.550146,-79.023679/@35.5501473,-79.0243502,314m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Falls", // lake name
+        state: ["North Carolina"],
+        rampName: "Eno",
+        rampType: "Concrete",
+        rampDock: "Yes",
+        rampParking: "Poor (20)",
+        rampFee: "No",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.093038,
+        long: -78.823730,
+        directionsURL: "https://www.google.com/maps/dir//36.093038,-78.82373/@36.0930391,-78.8242772,249m/data=!3m1!1e3"
+
+    },
+    {
+        bodyOfWater: "Falls", // lake name
+        state: ["North Carolina"],
+        rampName: "Hickory Hill",
+        rampType: "Concrete",
+        rampDock: "Yes",
+        rampParking: "Good (100)",
+        rampFee: "No",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.058017,
+        long: -78.773586,
+        directionsURL: "https://www.google.com/maps/dir//36.093038,-78.82373/@36.0930391,-78.8242772,249m/data=!3m1!1e3"
+
+    },
+    {
+        bodyOfWater: "Falls", // lake name
+        state: ["North Carolina"],
+        rampName: "Hwy 50",
+        rampType: "Concrete",
+        rampDock: "Yes",
+        rampParking: "Good (150)",
+        rampFee: "No",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.021548,
+        long: -78.690513,
+        directionsURL: "https://www.google.com/maps/dir//36.021548,-78.690513/@36.0215491,-78.6910602,250m/data=!3m1!1e3"
     },
     {
         bodyOfWater: "Falls", // lake name
@@ -1797,39 +2463,6 @@ module.exports = [
         lat: 35.975211,
         long: -78.655261,
         directionsURL: "https://www.google.com/maps/dir//35.975211,-78.655261/@35.9752132,-78.6563607,502m/data=!3m1!1e3"
-    },
-    {
-        bodyOfWater: "Falls", // lake name
-        state: ["North Carolina"],
-        rampName: "Hwy 50",
-        rampType: "Concrete",
-        rampDock: "Yes",
-        rampParking: "Good (150)",
-        rampFee: "No",
-        rampAccess: "Paved",
-        courtesyDock: "Yes",
-        bottomElev: 0,
-        topElev: 0,
-        lat: 36.021548,
-        long: -78.690513,
-        directionsURL: "https://www.google.com/maps/dir//36.021548,-78.690513/@36.0215491,-78.6910602,250m/data=!3m1!1e3"
-    },
-    {
-        bodyOfWater: "Falls", // lake name
-        state: ["North Carolina"],
-        rampName: "Eno",
-        rampType: "Concrete",
-        rampDock: "Yes",
-        rampParking: "Poor (20)",
-        rampFee: "Yes",
-        rampAccess: "Paved",
-        courtesyDock: "Yes",
-        bottomElev: 0,
-        topElev: 0,
-        lat: 36.093038,
-        long: -78.823730,
-        directionsURL: "https://www.google.com/maps/dir//36.093038,-78.82373/@36.0930391,-78.8242772,249m/data=!3m1!1e3"
-
     },
     // Fontana Data is not correct for TVA. It says Fontana will be 'sluicing' util further notice. Not sure what that means.
     //need to skip text until reaching the dat of the first level.
@@ -1912,47 +2545,32 @@ module.exports = [
     {
         bodyOfWater: "Hyco", // lake name
         state: ["North Carolina"],
-        rampName: "",
-        rampType: "",
-        rampParking: "",
-        rampFee: "",
+        rampName: "Boat Ramp",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "Ye$$",
         rampAccess: "",
-        courtesyDock: "",
+        courtesyDock: "Yes",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
-        directionsURL: ""
+        lat: 36.471367,
+        long: -79.123811,
+        directionsURL: "https://www.google.com/maps/dir//36.471367,-79.123811/@36.4713602,-79.124512,281m/data=!3m1!1e3"
     },
     {
         bodyOfWater: "Jocasee", // lake name
         state: ["North Carolina"],
-        rampName: "",
-        rampType: "",
-        rampParking: "",
-        rampFee: "",
-        rampAccess: "",
-        courtesyDock: "",
-        bottomElev: 0,
-        topElev: 0,
-        lat: 0,
-        long: 0,
-        directionsURL: ""
-    },
-    {
-        bodyOfWater: "Jordan", // lake name
-        state: ["North Carolina"],
-        rampName: "Farrington Point",
+        rampName: "Jocassee Lake Rd",
         rampType: "Concrete",
-        rampParking: "Good (70)",
-        rampFee: "No",
+        rampParking: "Good",
+        rampFee: "",
         rampAccess: "Paved",
         courtesyDock: "Yes",
-        bottomElev: 202,
-        topElev: 227,
-        lat: 35.799483,
-        long: -79.017791,
-        directionsURL: "https://www.google.com/maps/dir//35.799483,-79.017791/@35.799483,-79.017791,1439m/data=!3m1!1e3"
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.953379,
+        long: -82.946531,
+        directionsURL: "https://www.google.com/maps/dir//34.953379,-82.946531/@34.9533806,-82.9473249,374m/data=!3m1!1e3"
     },
     {
         bodyOfWater: "Jordan", // lake name
@@ -1973,6 +2591,36 @@ module.exports = [
     {
         bodyOfWater: "Jordan", // lake name
         state: ["North Carolina"],
+        rampName: "Farrington Point",
+        rampType: "Concrete",
+        rampParking: "Good (70)",
+        rampFee: "No",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 202,
+        topElev: 227,
+        lat: 35.799483,
+        long: -79.017791,
+        directionsURL: "https://www.google.com/maps/dir//35.799483,-79.017791/@35.799483,-79.017791,1439m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Jordan", // lake name
+        state: ["North Carolina"],
+        rampName: "New Hope",
+        rampType: "Concrete",
+        rampParking: "Good (120)",
+        rampFee: "Yes",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.683800,
+        long: -79.046263,
+        directionsURL: "https://www.google.com/maps/dir//35.6838,-79.046263/@35.6834452,-79.0469066,256m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Jordan", // lake name
+        state: ["North Carolina"],
         rampName: "Poes",
         rampType: "Concrete",
         rampDock: "Yes",
@@ -1986,6 +2634,51 @@ module.exports = [
         long: -79.085108,
         directionsURL: "https://www.google.com/maps/dir//35.642684,-79.085108/@35.642684,-79.085108,1439m/data=!3m1!1e3"
 
+    },
+    {
+        bodyOfWater: "Jordan", // lake name
+        state: ["North Carolina"],
+        rampName: "Seaforth",
+        rampType: "Concrete",
+        rampParking: "Good (50)",
+        rampFee: "Yes",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.736232,
+        long: -79.034773,
+        directionsURL: "https://www.google.com/maps/dir//35.736232,-79.034773/@35.7362331,-79.0353215,256m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Jordan", // lake name
+        state: ["North Carolina"],
+        rampName: "Robeson",
+        rampType: "Concrete",
+        rampParking: "Good (50)",
+        rampFee: "No",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.703362,
+        long: -79.100093,
+        directionsURL: "https://www.google.com/maps/dir//35.703362,-79.100093/@35.7033631,-79.1006415,256m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Jordan", // lake name
+        state: ["North Carolina"],
+        rampName: "Vista Point",
+        rampType: "Concrete",
+        rampParking: "Fair (40)",
+        rampFee: "Yes",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.703703,
+        long: -79.046542,
+        directionsURL: "https://www.google.com/maps/dir//35.703703,-79.046542/@35.7037043,-79.0471973,306m/data=!3m1!1e3"
     },
     {
 
@@ -2174,17 +2867,32 @@ module.exports = [
     {
         bodyOfWater: "Neuse River (Kinston)", // lake name
         state: ["North Carolina"],
-        rampName: "",
-        rampType: "",
-        rampParking: "",
+        rampName: "Kinston",
+        rampType: "Concrete",
+        rampParking: "Good",
         rampFee: "",
-        rampAccess: "",
+        rampAccess: "Paved",
         courtesyDock: "",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
-        directionsURL: ""
+        lat: 35.257624,
+        long: -77.590833,
+        directionsURL: "https://www.google.com/maps/dir//35.257624,-77.590833/@35.2575982,-77.5912543,163m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Neuse River (Kinston)", // lake name
+        state: ["North Carolina"],
+        rampName: "Lawson Creek",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.101512,
+        long: -77.052544,
+        directionsURL: "https://www.google.com/maps/dir//35.101512,-77.052544/@35.1015141,-77.0535889,491m/data=!3m1!1e3"
     },
     {
         bodyOfWater: "Norman", // lake name
@@ -2219,77 +2927,92 @@ module.exports = [
     {
         bodyOfWater: "Rhodhiss", // lake name
         state: ["North Carolina"],
-        rampName: "",
-        rampType: "",
-        rampParking: "",
+        rampName: "Castle Bridge",
+        rampType: "Concrete",
+        rampParking: "Good",
         rampFee: "",
-        rampAccess: "",
-        courtesyDock: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
-        directionsURL: ""
+        lat: 35.782004,
+        long: -81.524543,
+        directionsURL: "https://www.google.com/maps/dir//35.782004,-81.524543/@35.7820051,-81.5250915,256m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Rhodhiss", // lake name
+        state: ["North Carolina"],
+        rampName: "Dam",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.771507,
+        long: -81.442649,
+        directionsURL: "https://www.google.com/maps/dir//35.782004,-81.524543/@35.7820051,-81.5250915,256m/data=!3m1!1e3"
     },
     {
         bodyOfWater: "Roanoke River (Halifax)", // lake name
         state: ["North Carolina"],
-        rampName: "",
-        rampType: "",
-        rampParking: "",
+        rampName: "Hamilton",
+        rampType: "Concrete",
+        rampParking: "Fair",
         rampFee: "",
-        rampAccess: "",
-        courtesyDock: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
-        directionsURL: ""
+        lat: 35.947260,
+        long: -77.202815,
+        directionsURL: "https://www.google.com/maps/dir//35.94726,-77.202815/@35.9472219,-77.2033453,170m/data=!3m1!1e3"
     },
     {
         bodyOfWater: "Roanoke River (Hwy 45)", // lake name
         state: ["North Carolina"],
-        rampName: "",
-        rampType: "",
-        rampParking: "",
+        rampName: "Plymouth",
+        rampType: "Concrete",
+        rampParking: "Good",
         rampFee: "",
-        rampAccess: "",
-        courtesyDock: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
-        directionsURL: ""
+        lat: 35.912390,
+        long: -76.720372,
+        directionsURL: "https://www.google.com/maps/dir//35.91239,-76.720372/@35.9124797,-76.720865,190m/data=!3m1!1e3"
     },
     {
         bodyOfWater: "Roanoke River (Roanoke Rapids)", // lake name
         state: ["North Carolina"],
-        rampName: "",
-        rampType: "",
-        rampParking: "",
+        rampName: "Weldon",
+        rampType: "Concrete",
+        rampParking: "Good",
         rampFee: "",
-        rampAccess: "",
-        courtesyDock: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
-        directionsURL: ""
+        lat: 36.427334,
+        long: -77.590760,
+        directionsURL: "https://www.google.com/maps/dir//36.427334,-77.59076/@36.426773,-77.5911329,397m/data=!3m1!1e3"
     },
     {
         bodyOfWater: "Roanoke River (Scotland Neck)", // lake name
         state: ["North Carolina"],
-        rampName: "",
-        rampType: "",
-        rampParking: "",
+        rampName: "Edwards Ferry",
+        rampType: "Concrete",
+        rampParking: "Good",
         rampFee: "",
-        rampAccess: "",
-        courtesyDock: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
-        directionsURL: ""
+        lat: 36.207840,
+        long: -77.384099,
+        directionsURL: "https://www.google.com/maps/dir//36.20784,-77.384099/@36.2078418,-77.3850073,421m/data=!3m1!1e3"
     },
     {
         bodyOfWater: "Roanoke River (Williamston)", // lake name
@@ -2339,33 +3062,49 @@ module.exports = [
     {
         bodyOfWater: "Tillery", // lake name
         state: ["North Carolina"],
-        rampName: "",
-        rampType: "",
-        rampParking: "",
+        rampName: "Swift Island",
+        rampType: "Concrete",
+        rampParking: "Good",
         rampFee: "",
         rampAccess: "",
-        courtesyDock: "",
+        courtesyDock: "Yes",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
-        directionsURL: ""
+        lat: 35.305793,
+        long: -80.074242,
+        directionsURL: "https://www.google.com/maps/dir//35.305793,-80.074242/@35.3057945,-80.0750074,359m/data=!3m1!1e3"
     },
 
     {
         bodyOfWater: "Tuckertown", // lake name
         state: ["North Carolina"],
-        rampName: "",
-        rampType: "",
-        rampParking: "",
+        rampName: "Flat Creek",
+        rampType: "Concrete",
+        rampParking: "Good",
         rampFee: "",
-        rampAccess: "",
-        courtesyDock: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
-        directionsURL: ""
+        lat: 35.549704,
+        long: -80.212189,
+        directionsURL: "https://www.google.com/maps/dir//35.5496944,-80.2121944/@35.5496955,-80.2127429,256m/data=!3m1!1e3"
+    },
+
+    {
+        bodyOfWater: "Tuckertown", // lake name
+        state: ["North Carolina"],
+        rampName: "Hwy 49",
+        rampType: "Concrete",
+        rampParking: "Fair",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.502394,
+        long: -80.191538,
+        directionsURL: "https://www.google.com/maps/dir//35.502394,-80.191538/@35.5022591,-80.192298,357m/data=!3m1!1e3"
     },
     {
         bodyOfWater: "Wylie", // lake name
@@ -2806,17 +3545,17 @@ module.exports = [
     {
         bodyOfWater: "Keowee", // lake name
         state: ["South Carolina"],
-        rampName: "",
-        rampType: "",
-        rampParking: "",
+        rampName: "South Cove",
+        rampType: "Concrete",
+        rampParking: "Good",
         rampFee: "",
         rampAccess: "",
-        courtesyDock: "",
+        courtesyDock: "Yes",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
-        directionsURL: ""
+        lat: 34.711478,
+        long: -82.966693,
+        directionsURL: "https://www.google.com/maps/dir//34.711478,-82.966693/@34.7114791,-82.9672415,259m/data=!3m1!1e3"
     },
     {
         bodyOfWater: "Murray", // lake name
