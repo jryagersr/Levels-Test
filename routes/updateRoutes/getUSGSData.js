@@ -71,8 +71,6 @@ module.exports = {
 
         // If reported level is not based on MSL, set the seaLevelDelta to add to the level
         // to convert to MSL based.
-        console.log(bodyOfWater)
-        console.log("TCL: elevValues[0].value", elevValues[0].value)
 
         if (seaLevelDelta !== 0)
           elevationAdjust = (parseFloat(elevValues[0].value) + Number(seaLevelDelta)).toFixed(2);
