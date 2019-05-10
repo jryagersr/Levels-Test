@@ -1,6 +1,10 @@
 
 let sponsors;
 
+if (typeof lakeRoute == 'undefined') {
+    lakeRoute = "";
+}
+
 // call the backend and return sponsor data array
 $.ajax({
     url: "/api/sponsors",
@@ -15,7 +19,7 @@ $.ajax({
 
         // Loop through our ads and append them to the page in format: <li><a><img></a></li>
         sponsors.forEach(function (element) {
-            if ( typeof lakeRoute == 'undefined' || element.location.includes("all") || element.location.includes(lakeRoute)){
+            if (element.location.includes("all") || element.location.includes(lakeRoute)){
                 var a = $("<a target='_blank'>");
                 a.attr("href", element.href);
                 var adImg = $("<img class='ad-logo'>");

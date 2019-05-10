@@ -201,6 +201,7 @@ $.ajax({
 
         // user clicks on use my location button
         $('#locateBtn').on('click', function () {
+            console.log("click");
             // Show loader gif
             $('#lds-ring').show();
             // run get location function
