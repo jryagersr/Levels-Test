@@ -45,7 +45,7 @@ var mongoose = require('mongoose');
   mongoose.Promise = global.Promise;
 
   mongoose.connect('mongodb://localhost/BassSavvyTestDb')
-    .then(() => console.log('connection succesful'))
+    .then(() => console.log('connection successful'))
     .catch((err) => console.error(err));
 
   var passport = require('passport');

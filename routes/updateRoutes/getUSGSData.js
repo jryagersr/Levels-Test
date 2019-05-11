@@ -18,6 +18,8 @@ module.exports = {
       if (error) {
         callback(error);
       }
+      
+      if (typeof body !== 'json') {
 
       // clear displayBatch
       displayBatch = [];
@@ -122,6 +124,7 @@ module.exports = {
 
       }
       callback(null, displayBatch);
+    };
     })
   }
 }

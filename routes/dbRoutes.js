@@ -465,7 +465,7 @@ function updateAllLakes() {
                 break;
 
               default:
-                console.log("Data source could not be found.");
+              console.log(`No data source for ${currentLake.bodyOfWater}`) ;
                 //res.send("Data source could not be found.");
             }
           }

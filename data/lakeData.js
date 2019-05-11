@@ -1047,6 +1047,44 @@ module.exports = [
 
     // ILLINOIS  ---------------------------------------------------------------------------------------------------------
     {
+        bodyOfWater: "Carlyle", // lake name
+        state: ["Illinois"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0.0,
+        normalPool: 445.0,
+        lat: 38.622475,
+        long: -89.346391,
+        elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=590018&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+        flowURL: "none",
+        href: "/lakes/carlyle",
+        dataSource: ["ACE"], // array of calls to make to retrieve data
+        resultsLink: "undefined",
+        entryLink: "",
+        adLogoSrc: "",
+        adLogoUrl: ""
+    },
+    {
+        bodyOfWater: "Clinton", // lake name
+        state: ["Illinois"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 690.0,
+        lat: 40.143002,
+        long: -88.873364,
+        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=05578300&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
+        flowURL: "none",
+        href: "/lakes/clintonil",
+        dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+        resultsLink: "undefined",
+        entryLink: "",
+        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
+        adLogoUrl: "https://www.custombassrods.com/"
+    },
+    {
         bodyOfWater: "Rend", // lake name
         state: ["Illinois"],
         data: [],
@@ -2635,6 +2673,7 @@ module.exports = [
 
 
     // OHIO  ---------------------------------------------------------------------------------------------------------
+
     {
         bodyOfWater: "Ohio River (Cincy)", // lake name
         state: ["Ohio"],
