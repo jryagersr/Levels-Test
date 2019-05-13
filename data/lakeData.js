@@ -22,8 +22,8 @@ module.exports = [
                 adLogoUrl: "https://www.custombassrods.com/"
             },
             {
-                bodyOfWater: "Eufaula", // lake name
-                state: ["Alabama"],
+                bodyOfWater: "Eufaula (WFG)", // lake name
+                state: ["Alabama", "Georgia"],
                 data: [],
                 refreshInterval: 90, //minutes
                 lastRefresh: "12/31/18", // a Date 
@@ -943,25 +943,6 @@ module.exports = [
                 elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=13257039&p_parameter_type=Flow:Stor:Precip:Stage:Elev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
                 flowURL: "none",
                 href: "/lakes/allatoona",
-                dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
-                resultsLink: "undefined",
-                entryLink: "",
-                adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-                adLogoUrl: "https://www.custombassrods.com/"
-            },
-            {
-                bodyOfWater: "Eufaula", // lake name
-                state: ["Georgia"],
-                data: [],
-                refreshInterval: 90, //minutes
-                lastRefresh: "12/31/18", // a Date 
-                seaLevelDelta: 0,
-                normalPool: 188.0,
-                lat: 31.681074,
-                long: -85.097779,
-                elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=25898039&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-                flowURL: "none",
-                href: "/lakes/eufaulaal",
                 dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",
