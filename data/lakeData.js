@@ -2255,7 +2255,7 @@ module.exports = [
                 adLogoUrl: "https://www.custombassrods.com/"
             },
             {
-                bodyOfWater: "Jocasee", // lake name
+                bodyOfWater: "Jocassee", // lake name
                 state: ["North Carolina"],    
                 data: [],
                 refreshInterval: 90, //minutes
@@ -2266,7 +2266,7 @@ module.exports = [
                 long: -82.94,
                 elevURL: "https://lakes.duke-energy.com/Data/Detail/3_Month/9.txt",
                 flowURL: "none",
-                href: "/lakes/jocasse",
+                href: "/lakes/jocassee",
                 dataSource: ["DUKE"], // array of calls to make to retrieve data
                 resultsLink: "undefined",
                 entryLink: "",

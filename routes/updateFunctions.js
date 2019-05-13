@@ -48,12 +48,21 @@ updateAndReturnOneLake: function (bodyOfWater, lastRefresh, data, callback) {
     // use updateData to update the lake data
     db.model("Lake").findOneAndUpdate({
         "bodyOfWater": bodyOfWater
-      }, {
-        $addToSet: {
-          "data": {
-            $each: data
+      }, 
+      // {
+      //   $addToSet: {
+      //     "data": {
+      //       $each: data
+      //     },
+      //   },
+        {
+          $push: {
+            "data": {
+               $each: data,
+               $sort: { date: -1 },
+               position: 0
+            }
           },
-        },
         $set: {
           "lastRefresh": lastRefresh
         }
