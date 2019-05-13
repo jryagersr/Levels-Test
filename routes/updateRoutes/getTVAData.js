@@ -9,7 +9,7 @@ module.exports = {
 // TVA UPDATE FUNCTION
 // ===============================================================================
 // function to get TVA data
-getTVAData: function (newUrl, callback) {
+getTVAData: function (newUrl, bodyOfWater, callback) {
     var data = [];
     var options = {
       url: newUrl,
@@ -26,6 +26,8 @@ getTVAData: function (newUrl, callback) {
       let reformatDate = "";
       let tvaDateFormatted = "";
   
+
+      if (typeof body !== 'undefined') {
       _.each(body.split("\r\n"), function (line) {
         var splitLine;
         line = line.trim();
@@ -96,6 +98,10 @@ getTVAData: function (newUrl, callback) {
         }
       });
       callback(null, data.reverse());
+    }  else {
+      console.log(`TVA data is bad for ${bodyOfWater}`);
+      callback(null, body);
+    }
     });
   }
   

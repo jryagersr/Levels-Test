@@ -802,7 +802,7 @@ module.exports = [
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
-        normalPool: 57.65,
+        normalPool: 49.0,
         lat: 27.911861,
         long: -81.282112,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=165038&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
@@ -1418,6 +1418,43 @@ module.exports = [
     },
 
     // LOUISIANA  ---------------------------------------------------------------------------------------------------------
+    {
+        bodyOfWater: "Atchfalaya Basin", // lake name
+        state: ["Louisiana"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 28.0,
+        lat: 30.690560,
+        long: -91.734875,
+        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07381495&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
+        flowURL: "none",
+        href: "/lakes/atchafalaybasinmelville",
+        dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+        resultsLink: "undefined",
+        entryLink: "",
+        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
+        adLogoUrl: "https://www.custombassrods.com/"
+    },{
+        bodyOfWater: "Fausse Point", // lake name
+        state: ["Louisiana"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 0.0,
+        lat: 30.062306,
+        long:-91.608083,
+        elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=8758015&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+        flowURL: "none",
+        href: "/lakes/faussepoint",
+        dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+        resultsLink: "undefined",
+        entryLink: "",
+        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
+        adLogoUrl: "https://www.custombassrods.com/"
+    },
     {
         bodyOfWater: "Toledo Bend", // lake name
         state: ["Louisiana"],

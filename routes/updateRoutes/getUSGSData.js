@@ -124,7 +124,10 @@ module.exports = {
 
       }
       callback(null, displayBatch);
-    };
+    } else {
+      console.log(`USGS data is bad for ${bodyOfWater}`);
+      callback(null, exportData);
+    }
     })
   }
 }

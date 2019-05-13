@@ -155,7 +155,7 @@ module.exports = function (app) {
                   break;
 
                 case "TVA":
-                  tva.getTVAData(currentLake.elevURL, function (error, data) {
+                  tva.getTVAData(currentLake.elevURL, currentLake.bodyOfWater, function (error, data) {
                     if (error) {
                       console.log(error);
                       return;
@@ -393,7 +393,7 @@ function updateAllLakes() {
                 break;
 
               case "TVA":
-                tva.getTVAData(currentLake.elevURL, function (error, data) {
+                tva.getTVAData(currentLake.elevURL, currentLake.bodyOfWater, function (error, data) {
                   if (error) {
                     console.log(error);
                     return;

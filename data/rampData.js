@@ -3695,7 +3695,7 @@ module.exports = [
         directionsURL: ""
     },
     {
-        bodyOfWater: "Douglas", // lake name
+        bodyOfWater: "Chickamauga", // lake name
         state: ["Tennessee"],
         rampName: "",
         rampType: "",
@@ -3710,64 +3710,349 @@ module.exports = [
         directionsURL: ""
     },
     {
-        bodyOfWater: "Dale Hollow", // lake name
+        bodyOfWater: "Chickamauga", // lake name
         state: ["Tennessee"],
-        rampName: "",
-        rampType: "",
-        rampParking: "",
+        rampName: "Dam",
+        rampType: "Concrete",
+        rampParking: "Good",
         rampFee: "",
-        rampAccess: "",
-        courtesyDock: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
-        directionsURL: ""
+        lat: 35.097504,
+        long: -85.219710,
+        directionsURL: "https://www.google.com/maps/dir//35.097504,-85.21971/@35.097504,-85.2202585,216m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Chickamauga", // lake name
+        state: ["Tennessee"],
+        rampName: "Grasshopper",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.150341,
+        long: -85.108149,
+        directionsURL: "https://www.google.com/maps/dir//35.150341,-85.108149/@35.150341,-85.1090859,368m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Chickamauga", // lake name
+        state: ["Tennessee"],
+        rampName: "Sale Creek",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.371261,
+        long: -85.071872,
+        directionsURL: "https://www.google.com/maps/dir//35.371261,-85.071872/@35.371261,-85.0727565,347m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Chickamauga", // lake name
+        state: ["Tennessee"],
+        rampName: "Wolftever",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.343691,
+        long: -85.039673,
+        directionsURL: "https://www.google.com/maps/dir//35.343691,-85.039673/@35.343691,-85.0403251,256m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Douglas", // lake name
+        state: ["Tennessee"],
+        rampName: "Dam",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.958672,
+        long: -83.534468,
+        directionsURL: "https://www.google.com/maps/dir//35.958672,-83.534468/@35.958672,-83.5353459,342m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Douglas", // lake name
+        state: ["Tennessee"],
+        rampName: "Shady Grove",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.981323,
+        long: -83.467798,
+        directionsURL: "https://www.google.com/maps/dir//35.981323,-83.467798/@35.981323,-83.4685877,307m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Douglas", // lake name
+        state: ["Tennessee"],
+        rampName: "Dandridge,",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.007754,
+        long: -83.414940,
+        directionsURL: "https://www.google.com/maps/dir//36.007754,-83.41494/@36.0099822,-83.4199212,1803m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Dale Hollow", // lake name
+        state: ["Kentucky"],
+        rampName: "State Park",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.637284,
+        long: -85.283564,
+        directionsURL: "https://www.google.com/maps/dir//36.637284,-85.283564/@36.637284,-85.2843714,311m/data=!3m1!1e3"
     },
     {
         bodyOfWater: "Nickajack", // lake name
         state: ["Tennessee"],
-        rampName: "",
-        rampType: "",
-        rampParking: "",
+        rampName: "Shellmound",
+        rampType: "Concrete",
+        rampParking: "Good",
         rampFee: "",
-        rampAccess: "",
-        courtesyDock: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
+        lat: 35.007663,
+        long: -85.606114,
+        directionsURL: "https://www.google.com/maps/dir//35.007663,-85.606114/@35.007663,-85.6068777,301m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Nickajack", // lake name
+        state: ["Tennessee"],
+        rampName: "Sullivans",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.020499,
+        long: -85.460584,
+        directionsURL: "https://www.google.com/maps/dir//35.020499,-85.460584/@35.020499,-85.4611325,216m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Percy Priest", // lake name
+        state: ["Tennessee"],
+        rampName: "Cook's",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.131473,
+        long: -86.595446,
         directionsURL: ""
     },
     {
         bodyOfWater: "Percy Priest", // lake name
         state: ["Tennessee"],
-        rampName: "",
-        rampType: "",
-        rampParking: "",
+        rampName: "Marine",
+        rampType: "Concrete",
+        rampParking: "Good",
         rampFee: "",
-        rampAccess: "",
-        courtesyDock: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
-        directionsURL: ""
+        lat: 36.090496,
+        long: -86.601998,
+        directionsURL: "https://www.google.com/maps/dir//36.090496,-86.601998/@36.090496,-86.6025625,219m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Percy Priest", // lake name
+        state: ["Tennessee"],
+        rampName: "Seven Points",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.131587,
+        long: -86.565168,
+        directionsURL: "https://www.google.com/maps/dir//36.131587,-86.565168/@36.131587,-86.5657165,213m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Percy Priest", // lake name
+        state: ["Tennessee"],
+        rampName: "Vivrette",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.140851,
+        long: -86.543485,
+        directionsURL: "https://www.google.com/maps/dir//36.140851,-86.543485/@36.140851,-86.5446218,441m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Percy Priest", // lake name
+        state: ["Tennessee"],
+        rampName: "Long Hunter",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.089900,
+        long: -86.545903,
+        directionsURL: "https://www.google.com/maps/dir//36.0899,-86.545903/@36.0899,-86.5464515,213m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Percy Priest", // lake name
+        state: ["Tennessee"],
+        rampName: "Fate Sanders",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.042648,
+        long: -86.494528,
+        directionsURL: "https://www.google.com/maps/dir//36.042648,-86.494528/@36.042648,-86.4960199,580m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Percy Priest", // lake name
+        state: ["Tennessee"],
+        rampName: "Stewart",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.032986,
+        long: -86.494408,
+        directionsURL: "https://www.google.com/maps/dir//36.032986,-86.494408/@36.032986,-86.4951811,301m/data=!3m1!1e3"
     },
     {
         bodyOfWater: "Tellico", // lake name
         state: ["Tennessee"],
-        rampName: "",
-        rampType: "",
-        rampParking: "",
+        rampName: "Dam",
+        rampType: "Concrete",
+        rampParking: "Good",
         rampFee: "",
-        rampAccess: "",
-        courtesyDock: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
-        directionsURL: ""
+        lat: 35.778882,
+        long: -84.248471,
+        directionsURL: "https://www.google.com/maps/dir//35.778882,-84.248471/@35.778882,-84.249478,394m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Tellico", // lake name
+        state: ["Tennessee"],
+        rampName: "Lenoir",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.797635,
+        long: -84.233234,
+        directionsURL: "https://www.google.com/maps/dir//35.797635,-84.233234/@35.797635,-84.2337812,214m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Tellico", // lake name
+        state: ["Tennessee"],
+        rampName: "Yarberry",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.769614,
+        long: -84.216274,
+        directionsURL: "https://www.google.com/maps/dir//35.769614,-84.216274/@35.769614,-84.2168212,214m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Tellico", // lake name
+        state: ["Tennessee"],
+        rampName: "Clear Creek",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.671053,
+        long: -84.271726,
+        directionsURL: "https://www.google.com/maps/dir//35.671053,-84.271726/@35.671053,-84.2723787,256m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Tellico", // lake name
+        state: ["Tennessee"],
+        rampName: "Morganton",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.639920,
+        long: -84.218614,
+        directionsURL: "https://www.google.com/maps/dir//35.63992,-84.218614/@35.63992,-84.2191612,214m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Tellico", // lake name
+        state: ["Tennessee"],
+        rampName: "Vonore",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.593537,
+        long: -84.246449,
+        directionsURL: "https://www.google.com/maps/dir//35.593537,-84.246449/@35.593537,-84.2470276,227m/data=!3m1!1e3"
     },
     {
         bodyOfWater: "Tims Ford", // lake name
