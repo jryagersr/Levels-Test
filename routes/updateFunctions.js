@@ -49,17 +49,11 @@ module.exports = {
     db.model("Lake").findOneAndUpdate({
       "bodyOfWater": bodyOfWater
     },
-      // {
-      //   $addToSet: {
-      //     "data": {
-      //       $each: data
-      //     },
-      //   },
       {
         $push: {
           "data": {
             $each: data,
-            $sort: { date: -1 },
+            $sort: { time: -1 },
             position: 0
           }
         },
@@ -76,11 +70,6 @@ module.exports = {
           console.log(err);
         } else {
           let updatedLake = data;
-          updatedLake.data.sort(function (a, b) {
-            // Turn your strings into dates, and then subtract them
-            // to get a value that is either negative, positive, or zero.
-            return new Date(b.time) - new Date(a.time);
-          });
           // while the first two entries still have dupes
           while (updatedLake.data[1].time.toString() == updatedLake.data[0].time.toString()) {
             // loop through the data, beginning at first index
