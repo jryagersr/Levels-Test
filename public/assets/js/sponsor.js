@@ -11,21 +11,25 @@ $.ajax({
     method: "GET",
 })
     .then(function (data) {
-        console.log(data);
         sponsors = data;
+
+        // ad Logo functions
+        // ==================================================
 
         // // Clear any ad content in the scroller
         $("#adLogoWell").empty();
 
         // Loop through our ads and append them to the page in format: <li><a><img></a></li>
         sponsors.forEach(function (element) {
-            if (element.location.includes("all") || element.location.includes(lakeRoute)){
-                var a = $("<a target='_blank'>");
-                a.attr("href", element.href);
-                var adImg = $("<img class='ad-logo'>");
-                adImg.attr("src", element.src);
-                $("#adLogoWell").append(a);
-                $(a).append(adImg);
+            if (element.type == 'logo') {
+                if (element.location.includes("all") || element.location.includes(lakeRoute)) {
+                    var a = $("<a target='_blank'>");
+                    a.attr("href", element.href);
+                    var adImg = $("<img class='ad-logo'>");
+                    adImg.attr("src", element.src);
+                    $("#adLogoWell").append(a);
+                    $(a).append(adImg);
+                }
             }
         });
 
@@ -48,4 +52,53 @@ $.ajax({
             setTimeout(carousel, 3500); // Change image every 2 seconds
         }
 
+
+
+
+        // tx ad functions
+        // ==================================================
+        
+        // just for temporary purposes only do this on kerr/jordan or falls
+            // this is to avoid interfering with other lake's w/ txs
+        if (lakeRoute == 'kerr' || lakeRoute == 'jordan' || lakeRoute == 'falls') {
+
+        // Clear any ad content in the scroller
+        $("#adTxWell").empty();
+
+        // Loop through our ads and append them to the page in format: <li><a><img></a></li>
+        sponsors.forEach(function (element) {
+            if (element.type == 'tournament') {
+                if (element.location.includes("all") || element.location.includes(lakeRoute)) {
+                    var a = $("<a target='_blank'>");
+                    a.attr("href", element.href);
+                    var adImg = $("<img class='ad-tx'>");
+                    adImg.attr("src", element.src);
+                    $("#adTxWell").append(a);
+                    $(a).append(adImg);
+                }
+            }
+        });
+
+        var slideIndex = 0;
+        var x = document.getElementsByClassName("ad-tx");
+        x[0].classList.add("active");
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("ad-tx");
+            for (i = 0; i < x.length; i++) {
+                x[i].classList.remove("active");
+                x[i].classList.add("inactive");
+            }
+            slideIndex++;
+            if (slideIndex > x.length) { slideIndex = 1 }
+            x[slideIndex - 1].classList.remove("inactive");
+            x[slideIndex - 1].classList.add("active");
+            setTimeout(carousel, 3500); // Change image every 2 seconds
+        }
+    }
+
     });
+
+

@@ -507,7 +507,7 @@ h1, h2, h3 {
     margin-bottom: 10px;
 }
 
-#adLogoWell {
+#adLogoWell, #adTxWell {
     height: auto;
     margin-bottom: 10px;
 }
@@ -610,15 +610,15 @@ h1, h2, h3 {
 
 /* Advertisements */
 /* ======================================================= */
-#adLogoWell li {
+#adLogoWell li, #adTxWell li {
     list-style-type: none;
 }
 
-#adLogoWell a {
+#adLogoWell a, #adTxWell a {
     display: block;
 }
 
-#adLogoWell .active {
+#adLogoWell .active, #adTxWell .active {
     display: block;
     animation: SHW 1s;
     animation-fill-mode: both;
@@ -633,7 +633,7 @@ h1, h2, h3 {
     }
 }
 
-#adLogoWell .inactive {
+#adLogoWell .inactive, #adTxWell .inactive {
     animation: DNTSHW 1s;
     animation-fill-mode: both;
     display: none;
@@ -648,13 +648,12 @@ h1, h2, h3 {
     }
 }
 
-.ad-logo {
+.ad-logo, .ad-tx {
     width: 40%;;
     height: auto;
     margin: 0px auto 10px;
     display: none;
     opacity: 0;
-    
 }
 
 /* Ad Bottom Banner Styles */
