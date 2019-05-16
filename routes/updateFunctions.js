@@ -74,6 +74,7 @@ module.exports = {
           // Check to make sure there is enough data before de-duping
           if (updatedLake.data.length > 1) {
             // while the first two entries still have dupes
+            console.log(updatedLake.bodyOfWater);
             while (updatedLake.data[1].time.toString() == updatedLake.data[0].time.toString()) {
               // loop through the data, beginning at first index
               for (var i = 1; i < updatedLake.data.length; i++) {
