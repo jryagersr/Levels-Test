@@ -13,7 +13,7 @@ module.exports = [
         lat: 33.260887,
         long: -88.298818,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=25512039&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/aliceville",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
     },
@@ -28,7 +28,7 @@ module.exports = [
         lat: 33.500505,
         long: -87.287597,
         elevURL: "http://apcshorelines.com/our-lakes/bankhead",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/bankhead",
         dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
     },
@@ -43,7 +43,7 @@ module.exports = [
         lat: 32.567057,
         long: -86.270391,
         elevURL: "http://apcshorelines.com/our-lakes/walter-bouldin",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/bouldin",
         dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
     },
@@ -58,7 +58,7 @@ module.exports = [
         lat: 31.681074,
         long: -85.097779,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=25898039&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/eufaulaal",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
     },
@@ -73,7 +73,7 @@ module.exports = [
         lat: 34.458445,
         long: -86.206939,
         elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/GUH_O.xml?1545499372503",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/guntersville",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
     },
@@ -88,7 +88,7 @@ module.exports = [
         lat: 33.310325,
         long: -87.399978,
         elevURL: "http://apcshorelines.com/our-lakes/harris",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/harris",
         dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
     },
@@ -103,7 +103,7 @@ module.exports = [
         lat: 33.310325,
         long: -87.399978,
         elevURL: "http://apcshorelines.com/our-lakes/holt",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/holt",
         dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
     },
@@ -118,7 +118,7 @@ module.exports = [
         lat: 32.640703,
         long: -86.296619,
         elevURL: "http://apcshorelines.com/our-lakes/jordan",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/jordanal",
         dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
     },
@@ -133,7 +133,7 @@ module.exports = [
         lat: 33.112973,
         long: -86.483895,
         elevURL: "http://apcshorelines.com/our-lakes/lay",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/lay",
         dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
     },
@@ -148,7 +148,7 @@ module.exports = [
         lat: 33.584844,
         long: -86.218684,
         elevURL: "http://apcshorelines.com/our-lakes/logan-martin",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/loganmartin",
         dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
     },
@@ -163,7 +163,7 @@ module.exports = [
         lat: 32.863256,
         long: -86.452222,
         elevURL: "http://apcshorelines.com/our-lakes/mitchell",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/mitchell",
         dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
     },
@@ -178,7 +178,7 @@ module.exports = [
         lat: 33.827617,
         long: -86.054435,
         elevURL: "http://apcshorelines.com/our-lakes/neely-henry",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/neelyhenry",
         dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
     },
@@ -193,7 +193,7 @@ module.exports = [
         lat: 33.584844,
         long: -86.218684,
         elevURL: "http://apcshorelines.com/our-lakes/martin",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/martin",
         dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
     },
@@ -208,7 +208,7 @@ module.exports = [
         lat: 34.907393,
         long: -88.040723,
         elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/PKH_O.xml?1545582182415",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/pickwick",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
     },
@@ -223,7 +223,7 @@ module.exports = [
         lat: 34.027963,
         long: -87.125180,
         elevURL: "http://apcshorelines.com/our-lakes/smith",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/smith",
         dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
     },
@@ -238,7 +238,7 @@ module.exports = [
         lat: 32.539681,
         long: -85.887188,
         elevURL: "http://apcshorelines.com/our-lakes/Thurlow",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/thurlow",
         dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
     },
@@ -253,7 +253,7 @@ module.exports = [
         lat: 34.197311,
         long: -85.606245,
         elevURL: "http://apcshorelines.com/our-lakes/weiss",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/weiss",
         dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
     },
@@ -268,7 +268,7 @@ module.exports = [
         lat: 34.651033,
         long: -87.017641,
         elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/WEH_O.xml?1545585488936",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/wheeler",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
     },
@@ -283,7 +283,7 @@ module.exports = [
         lat: 34.818539,
         long: -87.489826,
         elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/WLH_O.xml?1545585733788",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/wilson",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
     },
@@ -298,7 +298,7 @@ module.exports = [
         lat: 34.818539,
         long: -87.489826,
         elevURL: "http://apcshorelines.com/our-lakes/yates",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/yates",
         dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
     },
@@ -314,7 +314,7 @@ module.exports = [
         lat: 34.262902,
         long: -113.573761,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=157145&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/alamo",
         dataSource: ["ACE"], // array of calls to make to retrieve data
     },
@@ -329,7 +329,7 @@ module.exports = [
         lat: 34.499044,
         long: -114.378362,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=09427500&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/havasu",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -342,7 +342,7 @@ module.exports = [
                     seaLevelDelta: 0.0, // ft but data reported as a delta gage height
                     normalPool: 2094.0,
                     elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=52327029&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN",
-                    flowURL: "none",
+                    flowURL: "",
                     href: "/lakes/rooseveltaz",
                     dataSource: ["USGS"], // array of calls to make to retrieve data
                 }*/
@@ -361,7 +361,7 @@ module.exports = [
         lat: 36.288882,
         long: -94.015482,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1615150&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/beaver",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
         resultsLink: "undefined",
@@ -377,7 +377,7 @@ module.exports = [
         lat: 36.455453,
         long: -92.645632,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1609150&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/bullshoals",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
     },
@@ -392,7 +392,7 @@ module.exports = [
         lat: 35.370016,
         long: -93.399838,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1776150&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/dardenelle",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
     },
@@ -407,7 +407,7 @@ module.exports = [
         lat: 35.523713,
         long: -92.146595,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1946150&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/greersferry",
         dataSource: ["ACE"], // array of calls to make to retrieve data
     },
@@ -422,7 +422,7 @@ module.exports = [
         lat: 34.435554,
         long: -93.064535,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07358500&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/hamilton",
         dataSource: ["USGS"], // array of calls to make to retrieve data
     },
@@ -437,7 +437,7 @@ module.exports = [
         lat: 34.587940,
         long: -93.338407,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=11092013&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/ouachita",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
     },
@@ -452,7 +452,7 @@ module.exports = [
         lat: 36.586973,
         long: -93.324056,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1884150&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/tablerock",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
     },
@@ -470,7 +470,7 @@ module.exports = [
         lat: 38.221381,
         long: -120.960911,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=7438044&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/camanche",
         dataSource: ["ACE"], // array of calls to make to retrieve data
     },
@@ -485,7 +485,7 @@ module.exports = [
         lat: 33.687159,
         long: -117.269968,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=219048&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/canyon",
         dataSource: ["ACE"], // array of calls to make to retrieve data
     },
@@ -500,7 +500,7 @@ module.exports = [
         lat: 38.987617,
         long: -122.717792,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=11450000&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/clear",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -515,7 +515,7 @@ module.exports = [
         lat: 37.732655,
         long: -120.378979,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=7285044&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/donpedro",
         dataSource: ["ACE"], // array of calls to make to retrieve data
     },
@@ -530,7 +530,7 @@ module.exports = [
         lat: 38.717852,
         long: -121.133390,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=9813044&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/folsom",
         dataSource: ["ACE"], // array of calls to make to retrieve data
     },
@@ -545,7 +545,7 @@ module.exports = [
         lat: 34.499044,
         long: -114.378362,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=09427500&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/havasu",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -576,7 +576,7 @@ module.exports = [
         lat: 39.215309,
         long: -123.172327,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=739044&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/mendocino",
         dataSource: ["ACE"], // array of calls to make to retrieve data
     },
@@ -591,7 +591,7 @@ module.exports = [
         lat: 38.160071,
         long: -120.792308,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=502044&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/newhogan",
         dataSource: ["ACE"], // array of calls to make to retrieve data
     },
@@ -606,7 +606,7 @@ module.exports = [
         lat: 36.857025,
         long: -119.300940,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=314044&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/pineflat",
         dataSource: ["ACE"], // array of calls to make to retrieve data
     },
@@ -623,7 +623,7 @@ module.exports = [
         lat: 38.722618,
         long: -123.027628,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=507044&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/sonoma",
         dataSource: ["ACE"], // array of calls to make to retrieve data
     },
@@ -638,7 +638,7 @@ module.exports = [
         lat: 36.074796,
         long: -118.914035,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=379044&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/success",
         dataSource: ["ACE"], // array of calls to make to retrieve data
     },
@@ -655,7 +655,7 @@ module.exports = [
         lat: 39.629899,
         long: -107.754241,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=09091900&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/riflegap",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -670,7 +670,7 @@ module.exports = [
         lat: 37.137969,
         long: -104.566012,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07124400&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/trinidad",
         dataSource: ["USGS"], // array of calls to make to retrieve data
     },
@@ -686,7 +686,7 @@ module.exports = [
         lat: 28.762634,
         long: -81.816544,
         elevURL: "http://webapub.sjrwmd.com/agws10/hdsnew/data.aspx?tp=3&stn=30053040_NAVD1988_POR&des=Lake%20Harris%20at%20Leesburg%20(WL)$284837.19$814855.96$Lake%20Harris%20Unit$Lake$Lake$Water%20Level%20(WL)",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/bigharris",
         dataSource: ["SJRWMD", "loadAds"], // array of calls to make to retrieve data
     },
@@ -701,7 +701,7 @@ module.exports = [
         lat: 28.786919,
         long: -81.680107,
         elevURL: "http://webapub.sjrwmd.com/agws10/hdsnew/data.aspx?tp=3&stn=30013010_NAVD1988_POR&des=Lake%20Dora%20at%20Mount%20Dora%20(WL)$284746.67$813838.67$Lake%20Harris%20Unit$Lake$Lake$Water%20Level%20(WL)",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/dora",
         dataSource: ["SJRWMD"], // array of calls to make to retrieve data
     },
@@ -716,7 +716,7 @@ module.exports = [
         lat: 28.848252,
         long: -81.721496,
         elevURL: "http://webapub.sjrwmd.com/agws10/hdsnew/data.aspx?tp=3&stn=30083018_NAVD1988_POR&des=Lake%20Eustis%20at%20Eustis%20(WL)$285105.3$814126.02$Lake%20Harris%20Unit$Lake$Lake$Water%20Level%20(WL)",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/eustis",
         dataSource: ["SJRWMD", "loadAds"], // array of calls to make to retrieve data
     },
@@ -731,7 +731,7 @@ module.exports = [
         lat: 28.856153,
         long: -81.845419,
         elevURL: "http://webapub.sjrwmd.com/agws10/hdsnew/data.aspx?tp=3&stn=30013010_NAVD1988_POR&des=Lake%20Dora%20at%20Mount%20Dora%20(WL)$284746.67$813838.67$Lake%20Harris%20Unit$Lake$Lake$Water%20Level%20(WL)",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/griffin",
         dataSource: ["SJRWMD"], // array of calls to make to retrieve data
     },
@@ -746,7 +746,7 @@ module.exports = [
         lat: 28.011285,
         long: -81.399960,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=165038&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/hatchineha",
         dataSource: ["ACE"], // array of calls to make to retrieve data
     },
@@ -761,7 +761,7 @@ module.exports = [
         lat: 27.372715,
         long: -81.287764,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=4069038&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/istokpoga",
         dataSource: ["ACE"], // array of calls to make to retrieve data
     },
@@ -776,7 +776,7 @@ module.exports = [
         lat: 27.812593,
         long: -80.785047,
         elevURL: "http://webapub.sjrwmd.com/agws10/hdsnew/data.aspx?tp=3&stn=01310555_NAVD1988_POR&des=S-250D%20South%20at%20Fellsmere%20(WL)$274921.142$804749.182$St.%20Johns%20Marsh%20Unit$Indian%20River$Surface%20Water$Water%20Level%20(WL)",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/kenansville",
         dataSource: ["SJRWMD", "loadAds"], // array of calls to make to retrieve data
     },
@@ -791,7 +791,7 @@ module.exports = [
         lat: 27.911861,
         long: -81.282112,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=165038&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/kissimmee",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
     },
@@ -806,7 +806,7 @@ module.exports = [
         lat: 28.535367,
         long: -81.768513,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02236840&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/minnehaha",
         dataSource: ["USGS"], // array of calls to make to retrieve data
     },
@@ -821,7 +821,7 @@ module.exports = [
         lat: 26.959730,
         long: -80.790181,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1839038&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/okeechobee",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
     },
@@ -836,7 +836,7 @@ module.exports = [
         lat: 30.724724,
         long: -84.871265,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02357500&period=PT168H&parameterCd=00062&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/seminole",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -851,7 +851,7 @@ module.exports = [
         lat: 27.792952,
         long: -80.727619,
         elevURL: "http://webapub.sjrwmd.com/agws10/hdsnew/data.aspx?tp=3&stn=00960391_NAVD1988_POR&des=S-96B%20West%20at%20Fellsmere%20(WL)$274931.099$804428.589$Fellsmere$Brevard$Surface%20Water$Water%20Level%20(WL)",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/stickmarsh",
         dataSource: ["SJRWMD", "loadAds"], // array of calls to make to retrieve data
     },
@@ -866,7 +866,7 @@ module.exports = [
         lat: 30.417830,
         long: -84.606598,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02329900&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/talquin",
         dataSource: ["USGS"], // array of calls to make to retrieve data
     },
@@ -881,7 +881,7 @@ module.exports = [
         lat: 28.200614,
         long: -81.389007,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1074038&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/tohopekaliga",
         dataSource: ["ACE"], // array of calls to make to retrieve data
     },
@@ -898,7 +898,7 @@ module.exports = [
         lat: 34.132973,
         long: -84.627509,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=13257039&p_parameter_type=Flow:Stor:Precip:Stage:Elev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/allatoona",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
     },
@@ -913,7 +913,7 @@ module.exports = [
         lat: 34.215240,
         long: -83.971819,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02334400&period=PT168H&parameterCd=00062&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/lanier",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -928,7 +928,7 @@ module.exports = [
         lat: 33.450243,
         long: -83.262985,
         elevURL: "/api/alabama",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/oconee",
         dataSource: ["USLAKES", "loadAds"], // array of calls to make to retrieve data
     },
@@ -943,7 +943,7 @@ module.exports = [
         lat: 30.724724,
         long: -84.871265,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02357500&period=PT168H&parameterCd=00062&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/seminole",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -958,7 +958,7 @@ module.exports = [
         lat: 33.184953,
         long: -83.251959,
         elevURL: "/api/alabama",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/sinclair",
         dataSource: ["USLAKES", "loadAds"], // array of calls to make to retrieve data
     },
@@ -973,7 +973,7 @@ module.exports = [
         lat: 32.974759,
         long: -85.198377,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02339400&period=PT168H&parameterCd=00062&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/westpoint",
         dataSource: ["USGS"], // array of calls to make to retrieve data
     },
@@ -990,7 +990,7 @@ module.exports = [
         lat: 38.622475,
         long: -89.346391,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=590018&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/carlyle",
         dataSource: ["ACE"], // array of calls to make to retrieve data
     },
@@ -1005,7 +1005,7 @@ module.exports = [
         lat: 40.143002,
         long: -88.873364,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=05578300&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/clintonil",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1020,7 +1020,7 @@ module.exports = [
         lat: 38.097955,
         long: -88.971885,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=773018&p_parameter_type=Flow:Stor:Precip:Stage:Elev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/rend",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1037,7 +1037,7 @@ module.exports = [
         lat: 39.439722,
         long: -84.998889,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03275990&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/brookville",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1052,7 +1052,7 @@ module.exports = [
         lat: 39.849199,
         long: -86.305425,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03353450&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/eaglecreek",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1067,7 +1067,7 @@ module.exports = [
         lat: 40.685754,
         long: -85.897141,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03326950&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/mississinewa",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1082,7 +1082,7 @@ module.exports = [
         lat: 39.059557,
         long: -86.442157,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03372400&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/monroe",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1097,7 +1097,7 @@ module.exports = [
         lat: 37.965640,
         long: -87.580873,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03322000&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/ohioriverin",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1112,7 +1112,7 @@ module.exports = [
         lat: 38.425371,
         long: -86.658841,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03374498&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/patoka",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1127,7 +1127,7 @@ module.exports = [
         lat: 39.722434,
         long: -87.071616,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03340870&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/raccoon",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1142,7 +1142,7 @@ module.exports = [
         lat: 40.802213,
         long: -85.667668,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03324450&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/salmonie",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1159,7 +1159,7 @@ module.exports = [
         lat: 41.406061,
         long: -93.047140,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=50017&p_parameter_type=Flow:Stor:Precip:Stage:Elev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/redrock",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1174,7 +1174,7 @@ module.exports = [
         lat: 43.375364,
         long: -95.153747,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06604200&period=PT168H&parameterCd=00065,00010&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         tempURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06604200&period=Pt168H&parameterCd=00010&siteType=LK&siteStatus=all",
         href: "/lakes/westokoboji",
         dataSource: ["USGS"], // array of calls to make to retrieve data
@@ -1192,7 +1192,7 @@ module.exports = [
         lat: 38.920332,
         long: -95.350975,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06891478&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/clinton",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1207,7 +1207,7 @@ module.exports = [
         lat: 38.507650,
         long: -95.729820,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06910997&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/melvern",
         dataSource: ["USGS"], // array of calls to make to retrieve data
     },
@@ -1222,7 +1222,7 @@ module.exports = [
         lat: 39.162375,
         long: -95.448666,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06890898&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/perry",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1237,7 +1237,7 @@ module.exports = [
         lat: 38.658750,
         long: -95.574597,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06912490&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/pomona",
         dataSource: ["USGS"], // array of calls to make to retrieve data
     },
@@ -1254,7 +1254,7 @@ module.exports = [
         lat: 36.999930,
         long: -88.189288,
         elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/BAH_O.xml?1545583937120",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/barkley",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1269,7 +1269,7 @@ module.exports = [
         lat: 36.982417,
         long: -88.245251,
         elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/KYH_O.xml?1545580918909",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/kentucky",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1286,7 +1286,7 @@ module.exports = [
         lat: 30.690560,
         long: -91.734875,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07381495&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/atchafalaybasinmelville",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },{
@@ -1300,7 +1300,7 @@ module.exports = [
         lat: 30.062306,
         long:-91.608083,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=8758015&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/faussepoint",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1317,7 +1317,7 @@ module.exports = [
         lat: 42.466667,
         long: -82.666667,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=325005&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/stclair",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1334,7 +1334,7 @@ module.exports = [
         lat: 46.239358,
         long: -93.662979,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=05284000&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/millelacs",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1349,7 +1349,7 @@ module.exports = [
         lat: 44.905807,
         long: -93.637058,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=05289000&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/minnetonka",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1366,7 +1366,7 @@ module.exports = [
         lat: 36.455453,
         long: -92.645632,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1609150&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/bullshoals",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1381,7 +1381,7 @@ module.exports = [
         lat: 38.136876,
         long: -92.806876,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=5043030&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/lakeoftheozarks",
         dataSource: ["ACE"], // array of calls to make to retrieve data
     },
@@ -1396,7 +1396,7 @@ module.exports = [
         lat: 36.361878,
         long: -92.233743,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=2211150&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/norfork",
         dataSource: ["ACE"], // array of calls to make to retrieve data
     },
@@ -1411,7 +1411,7 @@ module.exports = [
         lat: 37.893713,
         long: -93.312066,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=15222030&p_parameter_type=Flow:Stor:Precip:Stage:Elev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/pommedeterre",
         dataSource: ["ACE"], // array of calls to make to retrieve data
     },
@@ -1426,7 +1426,7 @@ module.exports = [
         lat: 36.601058,
         long: -93.322459,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1884150&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/tablerock",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1441,7 +1441,7 @@ module.exports = [
         lat: 38.270197,
         long: -93.413133,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=15347030&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/truman",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1456,7 +1456,7 @@ module.exports = [
         lat: 37.654290,
         long: -93.772275,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=5706030&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/stockton",
         dataSource: ["ACE"], // array of calls to make to retrieve data
     },
@@ -1474,7 +1474,7 @@ module.exports = [
         lat: 33.831058,
         long: -88.519936,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02437100&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/aberdeen",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1491,7 +1491,7 @@ module.exports = [
         //need to use value index of 1 to get the headwaters data (lake) rather than tailwater )index 0
         //check timeseries[0].values[0].method[0].methodDiscription for "Headwater"
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02433496&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/amory",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1508,7 +1508,7 @@ module.exports = [
         //need to use value index of 1 to get the headwaters data (lake) rather than tailwater )index 0
         //check timeseries[0].values[0].method[0].methodDiscription for "Headwater"
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02430005&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/baysprings",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1523,7 +1523,7 @@ module.exports = [
         lat: 34.463072,
         long: -88.364861,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02430626&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/beaverlakems",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1538,7 +1538,7 @@ module.exports = [
         lat: 33.526077,
         long: -88.485726,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=25832039&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/Columbus",
         dataSource: ["ACE"], // array of calls to make to retrieve data
     },
@@ -1555,7 +1555,7 @@ module.exports = [
         //need to use value index of 1 to get the headwaters data (lake) rather than tailwater )index 0
         //check timeseries[0].values[0].method[0].methodDiscription for "Headwater"
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02433151&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/poolb",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1570,7 +1570,7 @@ module.exports = [
         lat: 34.257778,
         long: -88.424722,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02431011&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/queen",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1585,7 +1585,7 @@ module.exports = [
         lat: 32.438277,
         long: -90.033388,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=14013&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/rossbarnett",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1600,7 +1600,7 @@ module.exports = [
         lat: 34.463072,
         long: -88.364861,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02430161&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/saucercreek",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1617,7 +1617,7 @@ module.exports = [
         lat: 35.421721,
         long: -114.632742,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=09422500&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/mojave",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1632,7 +1632,7 @@ module.exports = [
         lat: 41.656400,
         long: -115.799095,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=13174000&period=PT168H&parameterCd=00062&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/wildhorse",
         dataSource: ["USGS"], // array of calls to make to retrieve data
     },
@@ -1650,7 +1650,7 @@ module.exports = [
         lat: 40.876346,
         long: -74.411533,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=01380900&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/boonton",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1665,7 +1665,7 @@ module.exports = [
         lat: 40.963163,
         long: -74.018331,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=01378480&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/oradell",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1680,7 +1680,7 @@ module.exports = [
         lat: 40.662778,
         long: -74.938889,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=01396790&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/sprucerun",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1695,7 +1695,7 @@ module.exports = [
         lat: 40.318890,
         long: -74.118060,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=01396790&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/swimmingrvr",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1710,7 +1710,7 @@ module.exports = [
         lat: 32.572133,
         long: -104.388761,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=01376950&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/tappan",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1725,7 +1725,7 @@ module.exports = [
         lat: 32.572133,
         long: -104.388761,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=01386990&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/wanaque",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1740,7 +1740,7 @@ module.exports = [
         lat: 41.055357,
         long: -74.299193,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=01377450&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/woodcliff",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1757,7 +1757,7 @@ module.exports = [
         lat: 32.572133,
         long: -104.388761,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=17043&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/brantley",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1772,7 +1772,7 @@ module.exports = [
         lat: 35.388492,
         long: -104.193425,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=33043&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/conchas",
         dataSource: ["ACE"], // array of calls to make to retrieve data
     },
@@ -1788,7 +1788,7 @@ module.exports = [
         lat: 33.212019,
         long: -107.192382,
         elevURL: "https://waterdatafortexas.org/reservoirs/individual/elephant-butte-30day.csv",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/elephantbutte",
         dataSource: ["TWDB", "loadAds"], // array of calls to make to retrieve data Texas Water Development District
     },
@@ -1803,7 +1803,7 @@ module.exports = [
         lat: 34.625466,
         long: -104.389870,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08384000&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/ftsumner",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1818,7 +1818,7 @@ module.exports = [
         lat: 35.043518,
         long: -104.675664,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=261043&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/santarosa",
         dataSource: ["ACE"], // array of calls to make to retrieve data
     },
@@ -1833,7 +1833,7 @@ module.exports = [
         lat: 35.349691,
         long: -103.459605,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07226800&period=PT168H&parameterCd=62615&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/ute",
         dataSource: ["USGS"], // array of calls to make to retrieve data
     },
@@ -1850,7 +1850,7 @@ module.exports = [
         lat: 44.561815,
         long: -73.363063,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04294413&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         tempURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04294413&period=Pt168H&parameterCd=00010&siteType=LK&siteStatus=all",
         href: "/lakes/champlain",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
@@ -1866,7 +1866,7 @@ module.exports = [
         lat: 43.190682,
         long:  -75.841113,
         elevURL: "/api/alabama",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/oneida",
         dataSource: ["USLAKES", "loadAds"], // array of calls to make to retrieve data
         adTxSrc: "",
@@ -1883,7 +1883,7 @@ module.exports = [
         lat: 44.561815,
         long: -73.363063,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04220259&period=Pt168H&parameterCd=72214&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/ontariony",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1901,7 +1901,7 @@ module.exports = [
         long: -80.11,
         cubeCheck: "badin",
         elevURL: "",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/badin",
         dataSource: ["CUBE", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1916,7 +1916,7 @@ module.exports = [
         lat: 35.0,
         long: -79.90,
         elevURL: "https://lakes.duke-energy.com/Data/Detail/3_Month/30.txt",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/blewettfalls",
         dataSource: ["DUKE", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1932,7 +1932,7 @@ module.exports = [
         lat: 35.05,
         long: -78.857,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=29041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/capefearfayett",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
     },
@@ -1947,7 +1947,7 @@ module.exports = [
         lat: 36.01,
         long: -78.70,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1745041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         tempURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02087182&period=Pt168H&parameterCd=00010&siteType=LK&siteStatus=all",
         href: "/lakes/falls",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
@@ -1967,7 +1967,7 @@ module.exports = [
         lat: 35.442211,
         long: -83.707785,
         elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/FNH_R.xml?1547937374477",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/fontana",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
         adTxSrc: "",
@@ -1984,7 +1984,7 @@ module.exports = [
         lat: 36.51,
         long: -77.94,
         elevURL: "/api/alabama",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/gaston",
         dataSource: ["USLAKES", "loadAds"], // array of calls to make to retrieve data
         adTxSrc: "",
@@ -2001,7 +2001,7 @@ module.exports = [
         lat: 35.80,
         long: -81.27,
         elevURL: "https://lakes.duke-energy.com/Data/Detail/3_Month/13.txt",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/hickory",
         dataSource: ["DUKE", "loadAds"], // array of calls to make to retrieve data
     },
@@ -2017,7 +2017,7 @@ module.exports = [
         lat: 35.63,
         long: -80.27,
         elevURL: "",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/highrock",
         dataSource: ["CUBE", "loadAds"], // array of calls to make to retrieve data
     },
@@ -2032,7 +2032,7 @@ module.exports = [
         lat: 36.49,
         long: -79.08,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02077280&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/hyco",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -2047,7 +2047,7 @@ module.exports = [
         lat: 34.98,
         long: -82.94,
         elevURL: "https://lakes.duke-energy.com/Data/Detail/3_Month/9.txt",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/jocassee",
         dataSource: ["DUKE"], // array of calls to make to retrieve data
     },
@@ -2063,7 +2063,7 @@ module.exports = [
         lat: 35.75,
         long: -79.03,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1743041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/jordan",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
         adTxSrc: "",
@@ -2081,7 +2081,7 @@ module.exports = [
         lat: 36.56,
         long: -78.32,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1749041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/kerr",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
         adTxSrc: "",
@@ -2100,7 +2100,7 @@ module.exports = [
         lat: 36.527172,
         long: -78.871988,
         elevURL: "none",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/mayo",
         dataSource: ["loadAds"], // array of calls to make to retrieve data
         adTxSrc: "",
@@ -2118,7 +2118,7 @@ module.exports = [
         lat: 35.26,
         long: -77.585,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02089500&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/neuse",
         dataSource: ["USGS"], // array of calls to make to retrieve data
     },
@@ -2133,7 +2133,7 @@ module.exports = [
         lat: 35.49,
         long: -80.94,
         elevURL: "https://lakes.duke-energy.com/Data/Detail/3_Month/4.txt",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/norman",
         dataSource: ["DUKE", "loadAds"], // array of calls to make to retrieve data
     },
@@ -2148,7 +2148,7 @@ module.exports = [
         lat: 35.78,
         long: -81.53,
         elevURL: "https://lakes.duke-energy.com/Data/Detail/3_Month/14.txt",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/rhodhiss",
         dataSource: ["DUKE"], // array of calls to make to retrieve data
     },
@@ -2163,7 +2163,7 @@ module.exports = [
         lat: 36.332777,
         long: -77.581685,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=0208062765&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         tempURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=0208062765&period=Pt168H&parameterCd=00010&siteType=LK&siteStatus=all",
         href: "/lakes/roanokehfax",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
@@ -2179,7 +2179,7 @@ module.exports = [
         lat: 35.914,
         long: -76.722,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=0208114150&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         tempURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=0208114150&period=Pt168H&parameterCd=00010&siteType=LK&siteStatus=all",
         href: "/lakes/roanoke45",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
@@ -2195,7 +2195,7 @@ module.exports = [
         lat: 36.479291,
         long: -77.662224,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02080500&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/roanokerap",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -2210,7 +2210,7 @@ module.exports = [
         lat: 36.208942,
         long: -77.382983,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02081000&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/roanokescot",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -2225,7 +2225,7 @@ module.exports = [
         lat: 35.862824,
         long: -77.044173,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02081054&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/roanokewill",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -2240,7 +2240,7 @@ module.exports = [
         lat: 35.594526,
         long: -78.961252,
         elevURL: "none",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/shearonharris",
         dataSource: ["loadAds"], // array of calls to make to retrieve data
     },
@@ -2255,7 +2255,7 @@ module.exports = [
         lat: 35.23,
         long: 80.08,
         elevURL: "https://lakes.duke-energy.com/Data/Detail/3_Month/31.txt",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/tillery",
         dataSource: ["DUKE", "loadAds"], // array of calls to make to retrieve data
     },
@@ -2271,7 +2271,7 @@ module.exports = [
         lat: 35.53,
         long: -80.198,
         elevURL: "",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/tuckertown",
         dataSource: ["CUBE", "loadAds"], // array of calls to make to retrieve data
     },
@@ -2286,7 +2286,7 @@ module.exports = [
         lat: 35.08,
         long: -81.06,
         elevURL: "https://lakes.duke-energy.com/Data/Detail/3_Month/18.txt",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/wylie",
         dataSource: ["DUKE", "loadAds"], // array of calls to make to retrieve data
     },
@@ -2301,7 +2301,7 @@ module.exports = [
         lat: 39.082309,
         long: -84.872313,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03260500&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/indianoh",
         dataSource: ["USGS"], // array of calls to make to retrieve data
     },*/
@@ -2320,7 +2320,7 @@ module.exports = [
         lat: 39.094311,
         long: -84.510556,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03255000&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/ohiorivercin",
         dataSource: ["USGS"], // array of calls to make to retrieve data
     },
@@ -2335,7 +2335,7 @@ module.exports = [
         lat: 39.082309,
         long: -84.872313,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03276650&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/ohiorivertan",
         dataSource: ["USGS"], // array of calls to make to retrieve data
     },
@@ -2350,7 +2350,7 @@ module.exports = [
         lat: 41.348051,
         long: -80.753973,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03095000&period=PT168H&parameterCd=62615&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/misquito",
         dataSource: ["USGS"], // array of calls to make to retrieve data
     },
@@ -2367,7 +2367,7 @@ module.exports = [
         lat: 36.892862,
         long: -95.964192,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=5338051&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/copan",
         dataSource: ["ACE"], // array of calls to make to retrieve data
     },
@@ -2382,7 +2382,7 @@ module.exports = [
         lat: 34.822983,
         long: -98.354524,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07308990&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/ellsworth",
         dataSource: ["USGS"], // array of calls to make to retrieve data
     },
@@ -2397,7 +2397,7 @@ module.exports = [
         lat: 35.294172,
         long: -95.547248,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1882051&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/eufaulaok",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
     },
@@ -2412,7 +2412,7 @@ module.exports = [
         lat: 36.364810,
         long: -94.914365,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07191285&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/eucha",
         dataSource: ["USGS"], // array of calls to make to retrieve data
     },
@@ -2427,7 +2427,7 @@ module.exports = [
         lat: 35.967182, 
         long: -95.285279,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=3690051&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/ftgibson",
         dataSource: ["ACE"], // array of calls to make to retrieve data
     },
@@ -2442,7 +2442,7 @@ module.exports = [
         lat: 36.251656,
         long: -95.151576,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07191400&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/hudson",
         dataSource: ["USGS"], // array of calls to make to retrieve data
     },
@@ -2457,7 +2457,7 @@ module.exports = [
         lat: 36.927736,
         long: -96.112751,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=5316051&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/hulah",
         dataSource: ["ACE"], // array of calls to make to retrieve data
     },
@@ -2472,7 +2472,7 @@ module.exports = [
         lat: 36.731611,
         long: -96.907271,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=5294051&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/kaw",
         dataSource: ["ACE"], // array of calls to make to retrieve data
     },
@@ -2487,7 +2487,7 @@ module.exports = [
         lat: 36.552084,
         long: -94.905543,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=3770051&p_parameter_type=Flow:Stor:Precip:Stage:Elev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/grand",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
     },
@@ -2502,7 +2502,7 @@ module.exports = [
         lat: 34.746575,
         long: -98.497717,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07309500&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/lawtonka",
         dataSource: ["USGS"], // array of calls to make to retrieve data
     },
@@ -2517,7 +2517,7 @@ module.exports = [
         lat: 34.336223,
         long: -95.887650,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1550051&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/mcgee",
         dataSource: ["ACE"], // array of calls to make to retrieve data
     },
@@ -2532,7 +2532,7 @@ module.exports = [
         lat: 36.543770,
         long: -95.603535,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=5368051&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/oologah",
         dataSource: ["ACE"], // array of calls to make to retrieve data
     },
@@ -2547,7 +2547,7 @@ module.exports = [
         lat: 36.375804,
         long: -96.178646,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=5117051&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/skiatook",
         dataSource: ["ACE"], // array of calls to make to retrieve data
     },
@@ -2562,7 +2562,7 @@ module.exports = [
         lat: 35.650108,
         long: -94.994100,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=3660051&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/tenkiller",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
     },
@@ -2579,7 +2579,7 @@ module.exports = [
         lat: 42.683351,
         long: -122.656166,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=48202029&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/lostcreek",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
     },
@@ -2596,7 +2596,7 @@ module.exports = [
         lat: 40.949700,
         long: -78.529598,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=01541180&period=PT168H&parameterCd=00062&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/curwensville",
         dataSource: ["USGS"], // array of calls to make to retrieve data
     },
@@ -2611,7 +2611,7 @@ module.exports = [
         lat: 40.379739,
         long: -78.058422,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=01563100&period=PT168H&parameterCd=00062&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/raystown",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -2626,7 +2626,7 @@ module.exports = [
         lat: 41.290985,
         long: -80.429697,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03103400&period=PT168H&parameterCd=62615&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/shenango",
         dataSource: ["USGS"], // array of calls to make to retrieve data
     },
@@ -2643,7 +2643,7 @@ module.exports = [
         lat: 33.75,
         long: -82.25,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02193900&period=PT168H&parameterCd=00062&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/clarkshill",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -2658,7 +2658,7 @@ module.exports = [
         lat: 32.84,
         long: -79.93,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02172053&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         tempURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02172053&period=Pt168H&parameterCd=00010&siteType=LK&siteStatus=all",
         href: "/lakes/cooperriver",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
@@ -2674,7 +2674,7 @@ module.exports = [
         lat: 34.41,
         long: -82.85,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02187010&period=PT168H&parameterCd=00062&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/hartwell",
         dataSource: ["USGS"], // array of calls to make to retrieve data
     },
@@ -2689,7 +2689,7 @@ module.exports = [
         lat: 34.76,
         long: -82.93,
         elevURL: "https://lakes.duke-energy.com/Data/Detail/3_Month/10.txt",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/Keowee",
         dataSource: ["DUKE"], // array of calls to make to retrieve data
     },
@@ -2704,7 +2704,7 @@ module.exports = [
         lat: 34.06,
         long: -81.29,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02168500&period=PT168H&parameterCd=00062&siteType=ST&siteStatus=all",
-        flowURL: "none", // Until I can fix it "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02168504&period=PT168H&parameterCd=00060&siteType=ST&siteStatus=all",
+        flowURL: "", // Until I can fix it "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02168504&period=PT168H&parameterCd=00060&siteType=ST&siteStatus=all",
         href: "/lakes/murray",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -2719,7 +2719,7 @@ module.exports = [
         lat: 33.52,
         long: -80.45,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02171000&period=PT168H&parameterCd=00062&siteType=ST&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/santee1",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -2734,7 +2734,7 @@ module.exports = [
         lat: 33.32,
         long: -80.06,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02172000&period=PT168H&parameterCd=00062&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/santee2",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -2749,7 +2749,7 @@ module.exports = [
         lat: 34.41,
         long: 80.79,
         elevURL: "https://lakes.duke-energy.com/Data/Detail/3_Month/17.txt",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/wateree",
         dataSource: ["DUKE", "loadAds"], // array of calls to make to retrieve data
     },
@@ -2764,7 +2764,7 @@ module.exports = [
         lat: 35.08,
         long: -81.06,
         elevURL: "https://lakes.duke-energy.com/Data/Detail/3_Month/18.txt",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/wylie",
         dataSource: ["DUKE", "loadAds"], // array of calls to make to retrieve data
     },
@@ -2781,7 +2781,7 @@ module.exports = [
         lat: 35.229058,
         long: -85.077891,
         elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/CHH_O.xml?1548263632238",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/chickamauga",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
     },
@@ -2796,7 +2796,7 @@ module.exports = [
         lat: 35.998267,
         long: -83.380776,
         elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/DGH_O.xml?1545588002667",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/douglas",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
     },
@@ -2811,7 +2811,7 @@ module.exports = [
         lat: 36.594828,
         long: -85.363089,
         elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/DHH_O.xml?1545582944732",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/dalehollow",
         dataSource: ["TVA"], // array of calls to make to retrieve data
     },
@@ -2826,7 +2826,7 @@ module.exports = [
         lat: 35.022662,
         long: -85.544745,
         elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/NJH_O.xml?1545584741938",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/nicakjack",
         dataSource: ["TVA"], // array of calls to make to retrieve data
     },
@@ -2841,7 +2841,7 @@ module.exports = [
         lat: 36.124047,
         long: -86.600873,
         elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/JPH_O.xml?1545583512033",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/percypriest",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
     },
@@ -2856,7 +2856,7 @@ module.exports = [
         lat: 35.735481,
         long: -84.248521,
         elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/TEH_O.xml?1548483187456",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/tellico",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
     },
@@ -2871,7 +2871,7 @@ module.exports = [
         lat: 35.215233,
         long: -86.240669,
         elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/TFH_O.xml?1548482740011",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/timsford",
         dataSource: ["TVA"], // array of calls to make to retrieve data
     },
@@ -2886,7 +2886,7 @@ module.exports = [
         lat: 35.691108,
         long: -84.726450,
         elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/WBH_O.xml?1545586001367",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/wattsbar",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
     },
@@ -2903,7 +2903,7 @@ module.exports = [
         lat: 29.464076,
         long: -101.055931,
         elevURL: "https://waterdatafortexas.org/reservoirs/individual/amistad-30day.csv",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/amistad",
         dataSource: ["TWDB", "loadAds"], // array of calls to make to retrieve data Texas Water Development District
     },
@@ -2918,7 +2918,7 @@ module.exports = [
         lat: 32.250180,
         long: -96.117778,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08063010&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/cedarcreek",
         dataSource: ["USGS"], // array of calls to make to retrieve data Texas Water Development District
     },
@@ -2933,7 +2933,7 @@ module.exports = [
         lat: 30.387607,
         long: -95.574936,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08067600&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/conroe",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -2948,7 +2948,7 @@ module.exports = [
         lat: 26.779704,
         long: -99.225982,
         elevURL: "https://waterdatafortexas.org/reservoirs/individual/falcon-30day.csv",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/falcon",
         dataSource: ["TWDB", "loadAds"], // array of calls to make to retrieve data Texas Water Development District
     },
@@ -2963,7 +2963,7 @@ module.exports = [
         lat: 32.826972,
         long: -95.572361,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08018800&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/fork",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -2978,7 +2978,7 @@ module.exports = [
         lat: 30.558502,
         long: -98.350450,
         elevURL: "https://waterdatafortexas.org/reservoirs/individual/lyndon-b-johnson-30day.csv",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/LBJ",
         dataSource: ["TWDB"], // array of calls to make to retrieve data Texas Water Development District
     },
@@ -2993,7 +2993,7 @@ module.exports = [
         lat: 31.130035,
         long: -94.210815,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08031400&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/palestine",
         dataSource: ["USGS"], // array of calls to make to retrieve data
     },
@@ -3008,7 +3008,7 @@ module.exports = [
         lat: 33.369670,
         long: -97.047413,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=432048&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/rayroberts",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
     },
@@ -3023,7 +3023,7 @@ module.exports = [
         lat: 31.130035,
         long: -94.210815,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08039300&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/rayburn",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -3038,7 +3038,7 @@ module.exports = [
         lat: 32.835944,
         long: -95.936837,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08017400&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/tawakoni",
         dataSource: ["USGS"], // array of calls to make to retrieve data
     },
@@ -3053,7 +3053,7 @@ module.exports = [
         lat: 31.499501,
         long: -93.739995,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08025350&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/toledobend",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -3068,7 +3068,7 @@ module.exports = [
         lat: 33.914060,
         long: -96.629444,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=2063051&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/texoma",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
     },
@@ -3083,7 +3083,7 @@ module.exports = [
         lat: 30.410029,
         long: -97.906123,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=203048&p_parameter_type=Flow:Stor:Precip:Stage:Elev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/travis",
         dataSource: ["ACE"], // array of calls to make to retrieve data 
     },
@@ -3100,7 +3100,7 @@ module.exports = [
         lat: 38.040028,
         long: -111.382762,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=868108&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/deercreek",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
         adTxSrc: "",
@@ -3120,7 +3120,7 @@ module.exports = [
         lat: 44.3865,
         long: -72.7622,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04295500&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/memphremagog",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -3135,7 +3135,7 @@ module.exports = [
         lat: 44.3865,
         long: -72.7622,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04288500&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/waterbury",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -3153,7 +3153,7 @@ module.exports = [
         lat: 36.96,
         long: -76.36,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02042770&period=PT168H&parameterCd=62620&siteType=ST&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/james",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -3168,7 +3168,7 @@ module.exports = [
         lat: 38.79,
         long: -77.04,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=0165258890&period=PT168H&parameterCd=62620&siteType=ST&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/potomac",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -3184,7 +3184,7 @@ module.exports = [
         lat: 37.05,
         long: -79.60,
         elevURL: "/api/alabama",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/smithmountain",
         dataSource: ["USLAKES", "loadAds"], // array of calls to make to retrieve data
     },
@@ -3201,7 +3201,7 @@ module.exports = [
         lat: 37.612123,
         long: -80.919781,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=253108&p_parameter_type=Flow:Stor:Precip:Stage:Elev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/bluestone",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
     },
@@ -3216,7 +3216,7 @@ module.exports = [
         lat: 38.830378,
         long: -80.618509,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=459108&p_parameter_type=Flow:Stor:Precip:Stage:Elev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/burnsville",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
     },
@@ -3231,7 +3231,7 @@ module.exports = [
         lat: 38.999310,
         long: -80.475742,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=17130111&p_parameter_type=Flow:Stor:Precip:Stage:Elev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/stonewalljackson",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
     },
@@ -3246,7 +3246,7 @@ module.exports = [
         lat: 38.656194,
         long: -80.684586,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=259108&p_parameter_type=Flow:Stor:Precip:Stage:Elev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/sutton",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
     },
@@ -3261,7 +3261,7 @@ module.exports = [
         lat: 38.227544,
         long: -80.886351,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=264108&p_parameter_type=Flow:Stor:Precip:Stage:Elev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/summersville",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
     },
@@ -3278,7 +3278,7 @@ module.exports = [
         lat: 42.569355,
         long: -88.458597,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=423525088260400&period=PT168H&parameterCd=62615&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/geneva",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
@@ -3293,7 +3293,7 @@ module.exports = [
         lat: 44.027742,
         long: -88.447058,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04082500&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
-        flowURL: "none",
+        flowURL: "",
         href: "/lakes/winnebago",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     }

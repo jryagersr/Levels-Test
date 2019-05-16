@@ -71,49 +71,62 @@ $.ajax({
         function findNearbyLakes(userLat, userLon) {
             closeLakes = [];
             // loop through lake data
-                lakeData.forEach(function (lake) {
-                    // if lake is not already collected (duplicate)
-                    if (!closeLakes.some(e => e.name === lake.bodyOfWater)) {
-                        // calculate our distance between user and each lake
-                        newDistance = distance(userLat, userLon, lake.lat, lake.long, "M")
-                        // collect the first 10 regardless
-                        closeLakes.push({
-                            name: lake.bodyOfWater,
-                            distance: parseFloat(newDistance),
-                            href: lake.href
-                        });
-                    }
-                });
+            lakeData.forEach(function (lake) {
+                // if lake is not already collected (duplicate)
+                if (!closeLakes.some(e => e.name === lake.bodyOfWater)) {
+                    // calculate our distance between user and each lake
+                    newDistance = distance(userLat, userLon, lake.lat, lake.long, "M")
+                    // collect the first 10 regardless
+                    closeLakes.push({
+                        name: lake.bodyOfWater,
+                        distance: parseFloat(newDistance),
+                        href: lake.href,
+                        elevURL: lake.elevURL
+                    });
+                }
+            });
             displayNearbyLakes(userLat, userLon);
         }
 
         // function to grab update current levels of nearby lakes
         function updateNearbyLakes(lakes) {
-            lakes.forEach(function(lake, i) {
-                let lakeRoute = lake.href.split("/")[2];
-                $.ajax({
-                    url: "/api/find-one-lake",
-                    method: "GET",
-                    data: {
-                        lakeName: lakeRoute
-                    }
-                })
-                    .then(function (lake) {
-                        let timestamp = new Date(lake.data[0].time);
-                        let date = timestamp.toLocaleDateString();
-                        let time = timestamp.toLocaleTimeString();
-                        let html = `
+            lakes.forEach(function (lake, i) {
+                if (lake.elevURL !== "none") {
+                    let lakeRoute = lake.href.split("/")[2];
+                    $.ajax({
+                        url: "/api/find-one-lake",
+                        method: "GET",
+                        data: {
+                            lakeName: lakeRoute
+                        }
+                    })
+                        .then(function (lake) {
+                            let timestamp = new Date(lake.data[0].time);
+                            let date = timestamp.toLocaleDateString();
+                            let time = timestamp.toLocaleTimeString();
+                            let html = `
                         <div class="right">
                             <h4>${lake.data[0].elev}</h4>
                             <p>${date} <br> ${time}</p>
                         </div>
                             `
-                        $(`#nearbyLake-${i} .lds`).hide();
-                        $(`#nearbyLake-${i}`).append(html);
+                            $(`#nearbyLake-${i} .lds`).hide();
+                            $(`#nearbyLake-${i}`).append(html);
+                        })
+                }
+                else {
+                    let html = `
+                        <div class="right">
+                            <h4></h4>
+                            <p></p>
+                        </div>
+                            `
+                    $(`#nearbyLake-${i} .lds`).hide();
+                    $(`#nearbyLake-${i}`).append(html);
+                }
             })
-        })
-        // Hide lake card loader gifs after 20 seconds if page content hasn't loaded
-        setTimeout(hideLoader, 20 * 1000);
+            // Hide lake card loader gifs after 20 seconds if page content hasn't loaded
+            setTimeout(hideLoader, 20 * 1000);
         }
 
         // display nearby lakes
@@ -158,7 +171,7 @@ $.ajax({
             $('#lakeContainer').show();
             // scroll down to section for usability
             var divPosition = $('#adLogoWell').offset();
-            $('html, body').animate({scrollTop: divPosition.top - 100}, "slow");
+            $('html, body').animate({ scrollTop: divPosition.top - 100 }, "slow");
 
             // update current levels
             updateNearbyLakes(closeLakes);
