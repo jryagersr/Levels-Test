@@ -38,7 +38,7 @@ module.exports = {
                 callback(null, data);
             }
             else {
-                console.log(`DUKE data is bad for ${lakeName}`);
+                console.log(`Data is bad for ${lakeName} (DUKE)`);
                 callback(null, body);
             }
         })

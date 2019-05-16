@@ -115,7 +115,7 @@ module.exports = {
             callback(null, exportData);
           }
         } else {
-          console.log(`ACE data is bad for ${bodyOfWater}`);
+          console.log(`Data is bad for ${bodyOfWater} (ACE)`);
           callback(null, exportData);
         }
 
