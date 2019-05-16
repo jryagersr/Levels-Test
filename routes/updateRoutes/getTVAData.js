@@ -99,7 +99,7 @@ getTVAData: function (newUrl, bodyOfWater, callback) {
       });
       callback(null, data.reverse());
     }  else {
-      console.log(`TVA data is bad for ${bodyOfWater}`);
+      console.log(`Data is bad for ${bodyOfWater} (TVA)`);
       callback(null, body);
     }
     });

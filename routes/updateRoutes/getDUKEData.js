@@ -26,21 +26,21 @@ module.exports = {
                     // Check against future dates DUKE likes to send
                     if (new Date(lake.Date) <= today) {
                         // Check to make sure data is good
-                        if (lake.Average !== "N/A" && typeof parseInt(lake.Average) == 'number') {
+                        if (lake.Average !== "N/A" && typeof parseInt(lake.Average) == 'number' && Number(lake.Average) !== 0) {
                             data.push({
                                 time: new Date(lake.Date + " " + "6:00"), // format timestamp
                                 elev: Number(lake.Average) + seaLevelDelta, // add SLD to average
                                 flow: "N/A"
                             })
                         }
-                    }
-                })
-
+                    } 
+                });
                 callback(null, data);
-            } else {
-                console.log(`TVA data is bad for ${lakeName}`);
+            }
+            else {
+                console.log(`Data is bad for ${lakeName} (DUKE)`);
                 callback(null, body);
             }
-        });
+        })
     }
 }

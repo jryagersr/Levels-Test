@@ -125,7 +125,7 @@ module.exports = {
       }
       callback(null, displayBatch);
     } else {
-      console.log(`USGS data is bad for ${bodyOfWater}`);
+      console.log(`Data is bad for ${bodyOfWater} (USGS)`);
       callback(null, exportData);
     }
     })

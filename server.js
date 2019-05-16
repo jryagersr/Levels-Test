@@ -41,28 +41,28 @@ app.use(function(error, req, res, next) {
 });
 
 // authentication passport + mongoose
-var mongoose = require('mongoose');
-  mongoose.Promise = global.Promise;
+// var mongoose = require('mongoose');
+//   mongoose.Promise = global.Promise;
 
-  mongoose.connect('mongodb://localhost/BassSavvyTestDb')
-    .then(() => console.log('connection successful'))
-    .catch((err) => console.error(err));
+//   mongoose.connect('mongodb://localhost/BassSavvyTestDb')
+//     .then(() => console.log('connection successful'))
+//     .catch((err) => console.error(err));
 
-  var passport = require('passport');
-  var LocalStrategy = require('passport-local').Strategy;
+//   var passport = require('passport');
+//   var LocalStrategy = require('passport-local').Strategy;
 
-  app.use(require('express-session')({
-    secret: 'keyboard cat',
-    resave: false,
-    saveUninitialized: false
-  }));
-  app.use(passport.initialize());
-  app.use(passport.session());
+//   app.use(require('express-session')({
+//     secret: 'keyboard cat',
+//     resave: false,
+//     saveUninitialized: false
+//   }));
+//   app.use(passport.initialize());
+//   app.use(passport.session());
 
-  var User = require('./models/User');
-  passport.use(new LocalStrategy(User.authenticate()));
-  passport.serializeUser(User.serializeUser());
-  passport.deserializeUser(User.deserializeUser());
+//   var User = require('./models/User');
+//   passport.use(new LocalStrategy(User.authenticate()));
+//   passport.serializeUser(User.serializeUser());
+//   passport.deserializeUser(User.deserializeUser());
 
 // ================================================================================
 // ROUTER
