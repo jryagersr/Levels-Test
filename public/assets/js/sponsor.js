@@ -33,61 +33,50 @@ $.ajax({
             }
         });
 
-        var slideIndex = 0;
-        var x = document.getElementsByClassName("ad-logo");
-        x[0].classList.add("active");
-        carousel();
-
-        function carousel() {
-            var i;
-            var x = document.getElementsByClassName("ad-logo");
-            for (i = 0; i < x.length; i++) {
-                x[i].classList.remove("active");
-                x[i].classList.add("inactive");
-            }
-            slideIndex++;
-            if (slideIndex > x.length) { slideIndex = 1 }
-            x[slideIndex - 1].classList.remove("inactive");
-            x[slideIndex - 1].classList.add("active");
-            setTimeout(carousel, 3500); // Change image every 2 seconds
-        }
-
-
-
 
         // tx ad functions
         // ==================================================
-        
+
         // just for temporary purposes only do this on kerr/jordan or falls
-            // this is to avoid interfering with other lake's w/ txs
+        // this is to avoid interfering with other lake's w/ txs
         if (lakeRoute == 'kerr' || lakeRoute == 'jordan' || lakeRoute == 'falls') {
 
-        // Clear any ad content in the scroller
-        $("#adTxWell").empty();
+            // Clear any ad content in the scroller
+            $("#adTxWell").empty();
 
-        // Loop through our ads and append them to the page in format: <li><a><img></a></li>
-        sponsors.forEach(function (element) {
-            if (element.type == 'tournament') {
-                if (element.location.includes("all") || element.location.includes(lakeRoute)) {
-                    var a = $("<a target='_blank'>");
-                    a.attr("href", element.href);
-                    var adImg = $("<img class='ad-tx'>");
-                    adImg.attr("src", element.src);
-                    $("#adTxWell").append(a);
-                    $(a).append(adImg);
+            // Loop through our ads and append them to the page in format: <li><a><img></a></li>
+            sponsors.forEach(function (element) {
+                if (element.type == 'tournament') {
+                    if (element.location.includes("all") || element.location.includes(lakeRoute)) {
+                        var a = $("<a target='_blank'>");
+                        a.attr("href", element.href);
+                        var adImg = $("<img class='ad-tx'>");
+                        adImg.attr("src", element.src);
+                        $("#adTxWell").append(a);
+                        $(a).append(adImg);
+                    }
                 }
-            }
-        });
+            });
+        }
 
+        // slideshow carousel function
+        // =======================================================
         var slideIndex = 0;
-        var x = document.getElementsByClassName("ad-tx");
-        x[0].classList.add("active");
-        carousel();
+        var x = document.getElementsByClassName("ad-logo");
+        var y = document.getElementsByClassName("ad-tx");
+        if (typeof x !== 'undefined') {
+            x[0].classList.add("active");
+            carousel(x, 'ad-logo', 0);
+        }
+        if (typeof y[0] !== 'undefined') {
+            console.log(typeof y[0]);
+            y[0].classList.add('active');
+            carousel(y, 'ad-tx', 0);
+        }
 
-        function carousel() {
-            var i;
-            var x = document.getElementsByClassName("ad-tx");
-            for (i = 0; i < x.length; i++) {
+        function carousel(x, className, slideIndex) {
+            var x = document.getElementsByClassName(className);
+            for (var i = 0; i < x.length; i++) {
                 x[i].classList.remove("active");
                 x[i].classList.add("inactive");
             }
@@ -95,9 +84,10 @@ $.ajax({
             if (slideIndex > x.length) { slideIndex = 1 }
             x[slideIndex - 1].classList.remove("inactive");
             x[slideIndex - 1].classList.add("active");
-            setTimeout(carousel, 3500); // Change image every 2 seconds
+            setTimeout(function(){ 
+                carousel(x, className, slideIndex);
+             }, 3500);
         }
-    }
 
     });
 
