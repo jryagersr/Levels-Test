@@ -70,15 +70,19 @@ module.exports = {
           console.log(err);
         } else {
           let updatedLake = data;
-          // while the first two entries still have dupes
-          while (updatedLake.data[1].time.toString() == updatedLake.data[0].time.toString()) {
-            // loop through the data, beginning at first index
-            for (var i = 1; i < updatedLake.data.length; i++) {
-              // check to see if there are two duplicate entrys
-              // convert timestamps to strings to avoid millisecond differences
-              if (updatedLake.data[i].time.toString() == updatedLake.data[i - 1].time.toString()) {
-                // remove the oldest entry
-                updatedLake.data.splice(i - 1, 1);
+
+          // Check to make sure there is enough data before de-duping
+          if (updatedLake.data.length > 1) {
+            // while the first two entries still have dupes
+            while (updatedLake.data[1].time.toString() == updatedLake.data[0].time.toString()) {
+              // loop through the data, beginning at first index
+              for (var i = 1; i < updatedLake.data.length; i++) {
+                // check to see if there are two duplicate entrys
+                // convert timestamps to strings to avoid millisecond differences
+                if (updatedLake.data[i].time.toString() == updatedLake.data[i - 1].time.toString()) {
+                  // remove the oldest entry
+                  updatedLake.data.splice(i - 1, 1);
+                }
               }
             }
           }
