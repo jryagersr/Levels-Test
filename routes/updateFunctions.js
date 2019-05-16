@@ -75,7 +75,6 @@ module.exports = {
           if (updatedLake.data.length > 1) {
             // while the first two entries still have dupes
             console.log(updatedLake.bodyOfWater);
-            while (updatedLake.data[1].time.toString() == updatedLake.data[0].time.toString()) {
               // loop through the data, beginning at first index
               for (var i = 1; i < updatedLake.data.length; i++) {
                 // check to see if there are two duplicate entrys
@@ -85,7 +84,6 @@ module.exports = {
                   updatedLake.data.splice(i - 1, 1);
                 }
               }
-            }
           }
           // log that the lake was updated and return it
           console.log(`Update completed for ${updatedLake.bodyOfWater} (${updatedLake.dataSource[0]})`);
