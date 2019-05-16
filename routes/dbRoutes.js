@@ -3,6 +3,7 @@ const express = require("express"),
 
 // Import all data source update functions
 const ace = require('./updateRoutes/getACEData');
+const apc = require('./updateRoutes/getAPCData');
 const cube = require("./updateRoutes/getCUBEData");
 const duke = require("./updateRoutes/getDUKEData");
 const sjrwmd = require("./updateRoutes/getSJRWMDData");
@@ -87,6 +88,27 @@ module.exports = function (app) {
                     }
                   });
                   break;
+
+                  case "APC":
+                    apc.getAPCData(currentLake.elevURL, currentLake.bodyOfWater, function (error, data) {
+                      if (error) {
+                        console.log(error);
+                        return;
+                        // if successful return the data
+                      } else {
+                        // update the current lake
+                        update.updateAndReturnOneLake(currentLake.bodyOfWater, currentLake.lastRefresh, data, function (error, data) {
+                          if (error) {
+                            console.log(error);
+                            return;
+                          }else {
+                            // send updated lake to client
+                            res.json(data);
+                          }
+                        })
+                      }
+                    });
+                    break;
 
                 case "CUBE":
                   cube.getCUBEData(currentLake.bodyOfWater, function (error, data) {
@@ -337,6 +359,24 @@ function updateAllLakes() {
                   }
                 });
                 break;
+
+                case "APC":
+                  apc.getAPCData(currentLake.elevURL, currentLake.bodyOfWater, function (error, data) {
+                    if (error) {
+                      console.log(error);
+                      return;
+                      // if successful return the data
+                    } else {
+                      // update the current lake
+                      update.updateAndReturnOneLake(currentLake.bodyOfWater, currentLake.lastRefresh, data, function (error, data) {
+                        if (error) {
+                          console.log(error);
+                          return;
+                        }
+                      })
+                    }
+                  });
+                  break;
 
               case "CUBE":
                 cube.getCUBEData(currentLake.bodyOfWater, function (error, data) {

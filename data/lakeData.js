@@ -16,10 +16,36 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/aliceville",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
+    },
+    {
+        bodyOfWater: "Bankhead", // lake name
+        state: ["Alabama"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 255.0,
+        lat: 33.500505,
+        long: -87.287597,
+        elevURL: "http://apcshorelines.com/our-lakes/bankhead",
+        flowURL: "none",
+        href: "/lakes/bankhead",
+        dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "Bouldin", // lake name
+        state: ["Alabama"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 252.0,
+        lat: 32.567057,
+        long: -86.270391,
+        elevURL: "http://apcshorelines.com/our-lakes/walter-bouldin",
+        flowURL: "none",
+        href: "/lakes/bouldin",
+        dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
     },
     {
         bodyOfWater: "Eufaula", // lake name
@@ -35,67 +61,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/eufaulaal",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
-    },
-    {
-        bodyOfWater: "Neely Henry", // lake name
-        state: ["Alabama"],
-        data: [],
-        refreshInterval: 1200, //minutes
-        lastRefresh: "12/31/18", // a Date 
-        seaLevelDelta: 0,
-        normalPool: 508.0,
-        lat: 33.827617,
-        long: -86.054435,
-        elevURL: "/api/alabama",
-        flowURL: "none",
-        href: "/lakes/neelyhenry",
-        dataSource: ["USLAKES", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
-    },
-    {
-        bodyOfWater: "Lay", // lake name
-        state: ["Alabama"],
-        data: [],
-        refreshInterval: 1200, //minutes
-        lastRefresh: "12/31/18", // a Date 
-        seaLevelDelta: 0,
-        normalPool: 396.0,
-        lat: 33.112973,
-        long: -86.483895,
-        elevURL: "/api/alabama",
-        flowURL: "none",
-        href: "/lakes/lay",
-        dataSource: ["USLAKES", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
-    },
-    {
-        bodyOfWater: "Logan Martin", // lake name
-        state: ["Alabama"],
-        data: [],
-        refreshInterval: 1200, //minutes
-        lastRefresh: "12/31/18", // a Date 
-        seaLevelDelta: 0,
-        normalPool: 465.0,
-        lat: 33.584844,
-        long: -86.218684,
-        elevURL: "/api/alabama",
-        flowURL: "none",
-        href: "/lakes/loganmartin",
-        dataSource: ["USLAKES", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Guntersville", // lake name
@@ -111,10 +76,126 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/guntersville",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
+    },
+    {
+        bodyOfWater: "Harris (AL)", // lake name
+        state: ["Alabama"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 793.0,
+        lat: 33.310325,
+        long: -87.399978,
+        elevURL: "http://apcshorelines.com/our-lakes/harris",
+        flowURL: "none",
+        href: "/lakes/harris",
+        dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "Holt", // lake name
+        state: ["Alabama"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 187.0,
+        lat: 33.310325,
+        long: -87.399978,
+        elevURL: "http://apcshorelines.com/our-lakes/holt",
+        flowURL: "none",
+        href: "/lakes/holt",
+        dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "Jordan (Al)", // lake name
+        state: ["Alabama"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 252.0,
+        lat: 32.640703,
+        long: -86.296619,
+        elevURL: "http://apcshorelines.com/our-lakes/jordan",
+        flowURL: "none",
+        href: "/lakes/jordanal",
+        dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "Lay", // lake name
+        state: ["Alabama"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 396.0,
+        lat: 33.112973,
+        long: -86.483895,
+        elevURL: "http://apcshorelines.com/our-lakes/lay",
+        flowURL: "none",
+        href: "/lakes/lay",
+        dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "Logan Martin", // lake name
+        state: ["Alabama"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 465.0,
+        lat: 33.584844,
+        long: -86.218684,
+        elevURL: "http://apcshorelines.com/our-lakes/logan-martin",
+        flowURL: "none",
+        href: "/lakes/loganmartin",
+        dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "Mitchell", // lake name
+        state: ["Alabama"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 312.0,
+        lat: 32.863256,
+        long: -86.452222,
+        elevURL: "http://apcshorelines.com/our-lakes/mitchell",
+        flowURL: "none",
+        href: "/lakes/mitchell",
+        dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "Neely Henry", // lake name
+        state: ["Alabama"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 508.0,
+        lat: 33.827617,
+        long: -86.054435,
+        elevURL: "http://apcshorelines.com/our-lakes/neely-henry",
+        flowURL: "none",
+        href: "/lakes/neelyhenry",
+        dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "Martin", // lake name
+        state: ["Alabama"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 491.0,
+        lat: 33.584844,
+        long: -86.218684,
+        elevURL: "http://apcshorelines.com/our-lakes/martin",
+        flowURL: "none",
+        href: "/lakes/martin",
+        dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
     },
     {
         bodyOfWater: "Pickwick", // lake name
@@ -130,48 +211,51 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/pickwick",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Smith", // lake name
         state: ["Alabama"],
         data: [],
-        refreshInterval: 1200, //minutes
+        refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 510.0,
         lat: 34.027963,
         long: -87.125180,
-        elevURL: "/api/alabama",
+        elevURL: "http://apcshorelines.com/our-lakes/smith",
         flowURL: "none",
         href: "/lakes/smith",
-        dataSource: ["USLAKES", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
+        dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "Thurlow", // lake name
+        state: ["Alabama"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 288.0,
+        lat: 32.539681,
+        long: -85.887188,
+        elevURL: "http://apcshorelines.com/our-lakes/Thurlow",
+        flowURL: "none",
+        href: "/lakes/thurlow",
+        dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
     },
     {
         bodyOfWater: "Weiss", // lake name
         state: ["Alabama"],
         data: [],
-        refreshInterval: 1200, //minutes
+        refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 564.0,
         lat: 34.197311,
         long: -85.606245,
-        elevURL: "/api/alabama",
+        elevURL: "http://apcshorelines.com/our-lakes/weiss",
         flowURL: "none",
         href: "/lakes/weiss",
-        dataSource: ["USLAKES", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
+        dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
     },
     {
         bodyOfWater: "Wheeler", // lake name
@@ -187,10 +271,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/wheeler",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Wilson", // lake name
@@ -206,10 +286,21 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/wilson",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
+    },
+    {
+        bodyOfWater: "Yates", // lake name
+        state: ["Alabama"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 344.0,
+        lat: 34.818539,
+        long: -87.489826,
+        elevURL: "http://apcshorelines.com/our-lakes/yates",
+        flowURL: "none",
+        href: "/lakes/yates",
+        dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
     },
     // Arizona  ---------------------------------------------------------------------------------------------------------
     {
@@ -226,10 +317,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/alamo",
         dataSource: ["ACE"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Havasu", // lake name
@@ -245,10 +332,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/havasu",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     /*
                 {
@@ -262,10 +345,6 @@ module.exports = [
                     flowURL: "none",
                     href: "/lakes/rooseveltaz",
                     dataSource: ["USGS"], // array of calls to make to retrieve data
-                    resultsLink: "undefined",
-                    entryLink: "",
-                    adLogoSrc: "",
-                    adLogoUrl: ""
                 }*/
 
 
@@ -286,9 +365,6 @@ module.exports = [
         href: "/lakes/beaver",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
         resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Bull Shoals", // lake name
@@ -304,10 +380,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/bullshoals",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Dardanelle", // lake name
@@ -323,10 +395,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/dardenelle",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Greers Ferry", // lake name
@@ -342,10 +410,21 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/greersferry",
         dataSource: ["ACE"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
+    },
+    {
+        bodyOfWater: "Hamilton", // lake name
+        state: ["Arkansas"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
+        normalPool: 399.0,
+        lat: 34.435554,
+        long: -93.064535,
+        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07358500&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
+        flowURL: "none",
+        href: "/lakes/hamilton",
+        dataSource: ["USGS"], // array of calls to make to retrieve data
     },
     {
         bodyOfWater: "Ouachita", // lake name
@@ -361,10 +440,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/ouachita",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Table Rock", // lake name
@@ -380,10 +455,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/tablerock",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     // CALIFORNIA  ---------------------------------------------------------------------------------------------------------
     // Everything I can find on Camanche lake says water elevation is 135'
@@ -402,10 +473,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/camanche",
         dataSource: ["ACE"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Canyon", // lake name
@@ -421,10 +488,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/canyon",
         dataSource: ["ACE"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Clear", // lake name
@@ -440,10 +503,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/clear",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Don Pedro", // lake name
@@ -459,10 +518,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/donpedro",
         dataSource: ["ACE"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Folsom", // lake name
@@ -478,10 +533,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/folsom",
         dataSource: ["ACE"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Havasu", // lake name
@@ -497,10 +548,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/havasu",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
 
     {
@@ -517,10 +564,6 @@ module.exports = [
         flowURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=11516530&period=PT168H&parameterCd=00060&siteType=ST&siteStatus=all",
         href: "/lakes/irongate",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Mendocino", // lake name
@@ -536,10 +579,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/mendocino",
         dataSource: ["ACE"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "New Hogan", // lake name
@@ -555,10 +594,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/newhogan",
         dataSource: ["ACE"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Pine Flat", // lake name
@@ -574,10 +609,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/pineflat",
         dataSource: ["ACE"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     // Everything I can find on Sonoma lake says water elevation is 358'
     // ACE is reporting a elevation of 446' Guessing the pool should be about 458
@@ -593,13 +624,8 @@ module.exports = [
         long: -123.027628,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=507044&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN",
         flowURL: "none",
-
         href: "/lakes/sonoma",
         dataSource: ["ACE"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Success", // lake name
@@ -613,13 +639,8 @@ module.exports = [
         long: -118.914035,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=379044&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN",
         flowURL: "none",
-
         href: "/lakes/success",
         dataSource: ["ACE"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
 
     // COLORADO  ---------------------------------------------------------------------------------------------------------
@@ -637,10 +658,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/riflegap",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Trinidad", // lake name
@@ -656,10 +673,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/trinidad",
         dataSource: ["USGS"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     // FLORIDA  ---------------------------------------------------------------------------------------------------------
     {
@@ -676,10 +689,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/bigharris",
         dataSource: ["SJRWMD", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Dora (HC)", // lake name
@@ -695,10 +704,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/dora",
         dataSource: ["SJRWMD"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Eustis (HC)", // lake name
@@ -714,10 +719,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/eustis",
         dataSource: ["SJRWMD", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Griffin (HC)", // lake name
@@ -733,10 +734,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/griffin",
         dataSource: ["SJRWMD"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Hatchineha", // lake name
@@ -752,10 +749,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/hatchineha",
         dataSource: ["ACE"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Istokpoga", // lake name
@@ -771,10 +764,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/istokpoga",
         dataSource: ["ACE"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Kenansville", // lake name
@@ -790,10 +779,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/kenansville",
         dataSource: ["SJRWMD", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Kissimmee", // lake name
@@ -809,10 +794,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/kissimmee",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Minnehaha", // lake name
@@ -828,10 +809,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/minnehaha",
         dataSource: ["USGS"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Okeechobee", // lake name
@@ -847,10 +824,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/okeechobee",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Seminole", // lake name
@@ -866,10 +839,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/seminole",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Stick Marsh (Farm 13)", // lake name
@@ -885,10 +854,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/stickmarsh",
         dataSource: ["SJRWMD", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Talquin", // lake name
@@ -904,10 +869,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/talquin",
         dataSource: ["USGS"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Tohopekaliga", // lake name
@@ -923,10 +884,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/tohopekaliga",
         dataSource: ["ACE"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
 
     // GEORGIA ---------------------------------------------------------------------------------------------------------
@@ -944,10 +901,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/allatoona",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Eufaula", // lake name
@@ -963,10 +916,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/eufaulaal",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Lanier", // lake name
@@ -982,10 +931,21 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/lanier",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
+    },
+    {
+        bodyOfWater: "Oconee", // lake name
+        state: ["Georgia"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 435.0,
+        lat: 33.450243,
+        long: -83.262985,
+        elevURL: "/api/alabama",
+        flowURL: "none",
+        href: "/lakes/oconee",
+        dataSource: ["USLAKES", "loadAds"], // array of calls to make to retrieve data
     },
     {
         bodyOfWater: "Seminole", // lake name
@@ -1001,10 +961,21 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/seminole",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
+    },
+    {
+        bodyOfWater: "Sinclair", // lake name
+        state: ["Georgia"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 340.0,
+        lat: 33.184953,
+        long: -83.251959,
+        elevURL: "/api/alabama",
+        flowURL: "none",
+        href: "/lakes/sinclair",
+        dataSource: ["USLAKES", "loadAds"], // array of calls to make to retrieve data
     },
     {
         bodyOfWater: "Thurmond", // lake name also "ClarksHill"
@@ -1020,10 +991,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/thurmond",
         dataSource: ["USGS"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "West Point", // lake name
@@ -1039,10 +1006,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/westpoint",
         dataSource: ["USGS"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
 
     // ILLINOIS  ---------------------------------------------------------------------------------------------------------
@@ -1060,10 +1023,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/carlyle",
         dataSource: ["ACE"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Clinton", // lake name
@@ -1079,10 +1038,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/clintonil",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Rend", // lake name
@@ -1098,10 +1053,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/rend",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
 
     // INDIANA  ---------------------------------------------------------------------------------------------------------
@@ -1119,10 +1070,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/brookville",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Eagle Creek", // lake name
@@ -1138,10 +1085,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/eaglecreek",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Mississinewa", // lake name
@@ -1157,10 +1100,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/mississinewa",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Monroe", // lake name
@@ -1176,10 +1115,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/monroe",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Ohio River (Evansville)", // lake name
@@ -1195,10 +1130,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/ohioriverin",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Patoka", // lake name
@@ -1214,10 +1145,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/patoka",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Raccoon", // lake name
@@ -1233,10 +1160,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/raccoon",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Salmonie", // lake name
@@ -1252,10 +1175,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/salmonie",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
 
     // IOWA  ---------------------------------------------------------------------------------------------------------
@@ -1273,10 +1192,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/redrock",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "West Okoboji", // lake name
@@ -1293,10 +1208,6 @@ module.exports = [
         tempURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06604200&period=Pt168H&parameterCd=00010&siteType=LK&siteStatus=all",
         href: "/lakes/westokoboji",
         dataSource: ["USGS"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
 
     // KANSAS  ---------------------------------------------------------------------------------------------------------
@@ -1314,10 +1225,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/clinton",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Melvern", // lake name
@@ -1333,10 +1240,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/melvern",
         dataSource: ["USGS"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Perry", // lake name
@@ -1352,10 +1255,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/perry",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Pomona", // lake name
@@ -1371,10 +1270,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/pomona",
         dataSource: ["USGS"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
 
     // KENTUCKY  ---------------------------------------------------------------------------------------------------------
@@ -1392,10 +1287,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/barkley",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Kentucky", // lake name
@@ -1411,10 +1302,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/kentucky",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
 
     // LOUISIANA  ---------------------------------------------------------------------------------------------------------
@@ -1432,10 +1319,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/atchafalaybasinmelville",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },{
         bodyOfWater: "Fausse Point", // lake name
         state: ["Louisiana"],
@@ -1450,10 +1333,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/faussepoint",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Toledo Bend", // lake name
@@ -1469,10 +1348,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/toledobend",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
 
 
@@ -1491,10 +1366,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/stclair",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
 
     // MINNESOTA  ---------------------------------------------------------------------------------------------------------
@@ -1512,10 +1383,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/millelacs",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Minnetonka", // lake name
@@ -1531,10 +1398,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/minnetonka",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
 
     // MISSOURI  ---------------------------------------------------------------------------------------------------------
@@ -1552,10 +1415,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/bullshoals",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Lake of the Ozarks", // lake name
@@ -1571,10 +1430,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/lakeoftheozarks",
         dataSource: ["ACE"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Norfork", // lake name
@@ -1590,10 +1445,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/norfork",
         dataSource: ["ACE"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Pomme De Terre", // lake name
@@ -1609,10 +1460,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/pommedeterre",
         dataSource: ["ACE"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Table Rock", // lake name
@@ -1628,10 +1475,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/tablerock",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Truman", // lake name
@@ -1647,10 +1490,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/truman",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Stockton", // lake name
@@ -1666,10 +1505,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/stockton",
         dataSource: ["ACE"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
 
     // MISSISSIPPI  ---------------------------------------------------------------------------------------------------------
@@ -1688,10 +1523,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/aberdeen",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Amory", // lake name
@@ -1709,10 +1540,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/amory",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Bay Springs", // lake name
@@ -1730,10 +1557,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/baysprings",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Beaver Lake", // lake name
@@ -1749,10 +1572,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/beaverlakems",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Columbus", // lake name
@@ -1768,10 +1587,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/Columbus",
         dataSource: ["ACE"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Pool B", // lake name
@@ -1789,10 +1604,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/poolb",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Queen", // lake name
@@ -1808,10 +1619,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/queen",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Ross Barnett", // lake name
@@ -1827,10 +1634,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/rossbarnett",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Saucer Creek", // lake name
@@ -1846,10 +1649,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/saucercreek",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
 
     // NEVADA  ---------------------------------------------------------------------------------------------------------
@@ -1867,10 +1666,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/mojave",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Wild Horse", // lake name
@@ -1886,10 +1681,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/wildhorse",
         dataSource: ["USGS"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
 
     // NEW JERSEY  ---------------------------------------------------------------------------------------------------------
@@ -1908,10 +1699,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/boonton",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Oradell", // lake name
@@ -1927,10 +1714,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/oradell",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Spruce Run", // lake name
@@ -1946,10 +1729,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/sprucerun",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Swimming Rvr", // lake name
@@ -1965,10 +1744,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/swimmingrvr",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Tappan", // lake name
@@ -1984,10 +1759,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/tappan",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Wanaque", // lake name
@@ -2003,10 +1774,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/wanaque",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Woodcliff", // lake name
@@ -2022,10 +1789,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/woodcliff",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
 
     // NEW MEXICO  ---------------------------------------------------------------------------------------------------------
@@ -2043,10 +1806,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/brantley",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Conchas", // lake name
@@ -2062,10 +1821,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/conchas",
         dataSource: ["ACE"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
 
     {
@@ -2082,10 +1837,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/elephantbutte",
         dataSource: ["TWDB", "loadAds"], // array of calls to make to retrieve data Texas Water Development District
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Ft Sumner", // lake name
@@ -2101,10 +1852,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/ftsumner",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Santa Rosa", // lake name
@@ -2120,10 +1867,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/santarosa",
         dataSource: ["ACE"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Ute", // lake name
@@ -2139,10 +1882,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/ute",
         dataSource: ["USGS"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
 
     // NEW YORK  ---------------------------------------------------------------------------------------------------------
@@ -2161,10 +1900,23 @@ module.exports = [
         tempURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04294413&period=Pt168H&parameterCd=00010&siteType=LK&siteStatus=all",
         href: "/lakes/champlain",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
+    },
+    {
+        bodyOfWater: "Oneida", // lake name
+        state: ["New York"],
+        data: [],
+        refreshInterval: 1200, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 370.0,
+        lat: 43.190682,
+        long:  -75.841113,
+        elevURL: "/api/alabama",
+        flowURL: "none",
+        href: "/lakes/oneida",
+        dataSource: ["USLAKES", "loadAds"], // array of calls to make to retrieve data
+        adTxSrc: "",
+        adTxUrl: ""
     },
     {
         bodyOfWater: "Ontario", // lake name
@@ -2180,10 +1932,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/ontariony",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
 
     // NORTH CAROLINA  ---------------------------------------------------------------------------------------------------------
@@ -2202,10 +1950,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/badin",
         dataSource: ["CUBE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Blewett Falls", // lake name
@@ -2221,10 +1965,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/blewettfalls",
         dataSource: ["DUKE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     //Found this on ACE. Format is different for streams (smh), there is no .elev, it is .stage will add later 
     {
@@ -2241,10 +1981,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/capefearfayett",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Falls", // lake name
@@ -2261,10 +1997,6 @@ module.exports = [
         tempURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02087182&period=Pt168H&parameterCd=00010&siteType=LK&siteStatus=all",
         href: "/lakes/falls",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jsegenerac.png",
-        adLogoUrl: "http://jacksonsuperiorelectric.com/",
         adTxSrc: "",
         adTxUrl: ""
     },
@@ -2284,10 +2016,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/fontana",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/",
         adTxSrc: "",
         adTxUrl: ""
     },
@@ -2305,10 +2033,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/gaston",
         dataSource: ["USLAKES", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/mjhibanner.png",
-        adLogoUrl: "",
         adTxSrc: "",
         adTxUrl: ""
     },
@@ -2326,10 +2050,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/hickory",
         dataSource: ["DUKE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
 
     {
@@ -2346,10 +2066,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/highrock",
         dataSource: ["CUBE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/brucatobanner.png",
-        adLogoUrl: "www.brucatoFIS.com",
     },
     {
         bodyOfWater: "Hyco", // lake name
@@ -2365,10 +2081,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/hyco",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Jocasee", // lake name
@@ -2384,10 +2096,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/jocasse",
         dataSource: ["DUKE"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Jordan", // lake name
@@ -2404,10 +2112,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/jordan",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/",
         adTxSrc: "",
         adTxUrl: "",
     },
@@ -2426,10 +2130,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/kerr",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jse.png",
-        adLogoUrl: "http://jacksonsuperiorelectric.com/",
         adTxSrc: "",
         adTxUrl: "",
 
@@ -2449,10 +2149,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/mayo",
         dataSource: ["loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: "",
         adTxSrc: "",
         adTxUrl: "",
 
@@ -2471,10 +2167,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/neuse",
         dataSource: ["USGS"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Norman", // lake name
@@ -2490,10 +2182,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/norman",
         dataSource: ["DUKE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Rhodhiss", // lake name
@@ -2509,10 +2197,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/rhodhiss",
         dataSource: ["DUKE"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Roanoke River (Halifax)", // lake name
@@ -2529,10 +2213,6 @@ module.exports = [
         tempURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=0208062765&period=Pt168H&parameterCd=00010&siteType=LK&siteStatus=all",
         href: "/lakes/roanokehfax",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Roanoke River (Hwy 45)", // lake name
@@ -2549,10 +2229,6 @@ module.exports = [
         tempURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=0208114150&period=Pt168H&parameterCd=00010&siteType=LK&siteStatus=all",
         href: "/lakes/roanoke45",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Roanoke River (Roanoke Rapids)", // lake name
@@ -2568,10 +2244,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/roanokerap",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Roanoke River (Scotland Neck)", // lake name
@@ -2587,10 +2259,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/roanokescot",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Roanoke River (Williamston)", // lake name
@@ -2606,10 +2274,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/roanokewill",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Shearon Harris", // lake name
@@ -2625,10 +2289,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/shearon",
         dataSource: ["loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Tillery", // lake name
@@ -2644,10 +2304,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/tillery",
         dataSource: ["DUKE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
 
     {
@@ -2664,10 +2320,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/tuckertown",
         dataSource: ["CUBE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Wylie", // lake name
@@ -2683,10 +2335,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/wylie",
         dataSource: ["DUKE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
 
     /*{
@@ -2702,10 +2350,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/indianoh",
         dataSource: ["USGS"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },*/
 
 
@@ -2725,10 +2369,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/ohiorivercin",
         dataSource: ["USGS"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Ohio River (Tanners)", // lake name
@@ -2744,10 +2384,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/ohiorivertan",
         dataSource: ["USGS"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Misquito Lake", // lake name
@@ -2757,16 +2393,12 @@ module.exports = [
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0,
         normalPool: 900.7,
-        lat: 39.082309,
-        long: -84.872313,
+        lat: 41.348051,
+        long: -80.753973,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03095000&period=PT168H&parameterCd=62615&siteType=LK&siteStatus=all",
         flowURL: "none",
         href: "/lakes/misquito",
         dataSource: ["USGS"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
 
     // OKLAHOMA  ---------------------------------------------------------------------------------------------------------
@@ -2784,10 +2416,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/copan",
         dataSource: ["ACE"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Ellsworth", // lake name
@@ -2803,10 +2431,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/ellsworth",
         dataSource: ["USGS"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Eufaula", // lake name
@@ -2822,10 +2446,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/eufaulaok",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Eucha", // lake name
@@ -2841,10 +2461,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/eucha",
         dataSource: ["USGS"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Ft Gibson", // lake name
@@ -2860,10 +2476,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/ftgibson",
         dataSource: ["ACE"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Hudson", // lake name
@@ -2879,10 +2491,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/hudson",
         dataSource: ["USGS"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Hulah", // lake name
@@ -2898,10 +2506,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/hulah",
         dataSource: ["ACE"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Kaw", // lake name
@@ -2917,10 +2521,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/kaw",
         dataSource: ["ACE"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Grand", // lake name
@@ -2936,10 +2536,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/grand",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Lawtonka", // lake name
@@ -2955,10 +2551,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/lawtonka",
         dataSource: ["USGS"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "McGee Creek", // lake name
@@ -2974,10 +2566,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/mcgee",
         dataSource: ["ACE"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Oologah", // lake name
@@ -2993,10 +2581,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/oologah",
         dataSource: ["ACE"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Skiatook", // lake name
@@ -3012,10 +2596,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/skiatook",
         dataSource: ["ACE"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Tenkiller", // lake name
@@ -3031,10 +2611,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/tenkiller",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Texoma", // lake name
@@ -3050,10 +2626,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/texoma",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
 
     // OREGON  ---------------------------------------------------------------------------------------------------------
@@ -3071,10 +2643,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/lostcreek",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
 
     // PENNSYLVANIA  ---------------------------------------------------------------------------------------------------------
@@ -3092,10 +2660,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/curwensville",
         dataSource: ["USGS"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Raystown", // lake name
@@ -3111,10 +2675,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/raystown",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Shenango", // lake name
@@ -3130,10 +2690,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/shenango",
         dataSource: ["USGS"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
 
     // SOUTH CAROLINA  ---------------------------------------------------------------------------------------------------------
@@ -3151,10 +2707,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/clarkshill",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Cooper River", // lake name
@@ -3171,10 +2723,6 @@ module.exports = [
         tempURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02172053&period=Pt168H&parameterCd=00010&siteType=LK&siteStatus=all",
         href: "/lakes/cooperriver",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Hartwell", // lake name
@@ -3190,10 +2738,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/hartwell",
         dataSource: ["USGS"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Jocasee", // lake name
@@ -3209,10 +2753,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/jocasse",
         dataSource: ["DUKE"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Keowee", // lake name
@@ -3228,10 +2768,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/Keowee",
         dataSource: ["DUKE"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Murray", // lake name
@@ -3247,10 +2783,6 @@ module.exports = [
         flowURL: "none", // Until I can fix it "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02168504&period=PT168H&parameterCd=00060&siteType=ST&siteStatus=all",
         href: "/lakes/murray",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Santee (Marion)", // lake name
@@ -3266,10 +2798,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/santee1",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Santee (Moultrie)", // lake name
@@ -3285,10 +2813,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/santee2",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Wateree", // lake name
@@ -3304,12 +2828,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/wateree",
         dataSource: ["DUKE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        // adLogoSrc: "/static/assets/img/catt.png",
-        // adLogoUrl: "https://www.cattteamtrail.com/"
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Wylie", // lake name
@@ -3325,10 +2843,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/wylie",
         dataSource: ["DUKE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
 
     // TENNESSEE  ---------------------------------------------------------------------------------------------------------
@@ -3346,10 +2860,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/chickamauga",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Douglas", // lake name
@@ -3365,10 +2875,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/douglas",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Dale Hollow", // lake name
@@ -3384,10 +2890,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/dalehollow",
         dataSource: ["TVA"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Nickajack", // lake name
@@ -3403,10 +2905,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/nicakjack",
         dataSource: ["TVA"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Percy Priest", // lake name
@@ -3422,10 +2920,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/percypriest",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Tellico", // lake name
@@ -3441,10 +2935,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/tellico",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Tims Ford", // lake name
@@ -3460,10 +2950,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/timsford",
         dataSource: ["TVA"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Watts Bar", // lake name
@@ -3479,10 +2965,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/wattsbar",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
 
     // TEXAS  ---------------------------------------------------------------------------------------------------------
@@ -3500,10 +2982,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/amistad",
         dataSource: ["TWDB", "loadAds"], // array of calls to make to retrieve data Texas Water Development District
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Cedar Creek", // lake name
@@ -3519,10 +2997,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/cedarcreek",
         dataSource: ["USGS"], // array of calls to make to retrieve data Texas Water Development District
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Conroe", // lake name
@@ -3538,10 +3012,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/conroe",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Falcon", // lake name
@@ -3557,10 +3027,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/falcon",
         dataSource: ["TWDB", "loadAds"], // array of calls to make to retrieve data Texas Water Development District
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Fork", // lake name
@@ -3576,10 +3042,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/fork",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "LBJ", // lake name
@@ -3595,10 +3057,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/LBJ",
         dataSource: ["TWDB"], // array of calls to make to retrieve data Texas Water Development District
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Palestine", // lake name
@@ -3614,10 +3072,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/palestine",
         dataSource: ["USGS"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Ray Roberts", // lake name
@@ -3633,10 +3087,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/rayroberts",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Rayburn", // lake name
@@ -3652,10 +3102,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/rayburn",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Tawakoni", // lake name
@@ -3671,10 +3117,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/tawakoni",
         dataSource: ["USGS"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
     },
     {
         bodyOfWater: "Toledo Bend", // lake name
@@ -3690,10 +3132,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/toledobend",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Texoma", // lake name
@@ -3709,10 +3147,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/texoma",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Travis", // lake name
@@ -3727,11 +3161,7 @@ module.exports = [
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=203048&p_parameter_type=Flow:Stor:Precip:Stage:Elev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
         flowURL: "none",
         href: "/lakes/travis",
-        dataSource: ["ACE"], // array of calls to make to retrieve data Texas Water Development District
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
+        dataSource: ["ACE"], // array of calls to make to retrieve data 
     },
 
     // UTAH ---------------------------------------------------------------------------------------------------------
@@ -3749,10 +3179,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/deercreek",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: "",
         adTxSrc: "",
         adTxUrl: ""
     },
@@ -3773,10 +3199,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/memphremagog",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Waterbury", // lake name
@@ -3792,10 +3214,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/waterbury",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
 
     // VIRGINIA ---------------------------------------------------------------------------------------------------------
@@ -3814,10 +3232,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/james",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Potomac River (Alexandria)", // lake name
@@ -3833,10 +3247,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/potomac",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
 
     {
@@ -3853,12 +3263,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/smithmountain",
         dataSource: ["USLAKES", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/",
-        adTxSrc: "",
-        adTxUrl: ""
     },
 
     // WEST VIRGINIA ---------------------------------------------------------------------------------------------------------
@@ -3876,10 +3280,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/bluestone",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Burnsville", // lake name
@@ -3895,10 +3295,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/burnsville",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Stonewall Jackson", // lake name
@@ -3914,10 +3310,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/stonewalljackson",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Sutton", // lake name
@@ -3933,10 +3325,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/sutton",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Summersville", // lake name
@@ -3952,10 +3340,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/summersville",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
 
     // WISCONSIN  ---------------------------------------------------------------------------------------------------------
@@ -3973,10 +3357,6 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/geneva",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     },
     {
         bodyOfWater: "Winnebago", // lake name
@@ -3992,9 +3372,5 @@ module.exports = [
         flowURL: "none",
         href: "/lakes/winnebago",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "/static/assets/img/jbrodsbanner.png",
-        adLogoUrl: "https://www.custombassrods.com/"
     }
 ]

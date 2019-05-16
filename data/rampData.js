@@ -333,6 +333,111 @@ module.exports = [
         directionsURL: "https://www.google.com/maps/dir//33.456493,-86.295617/@33.4564942,-86.2962125,286m/data=!3m1!1e3"
     },
     {
+        bodyOfWater: "Martin", // lake name
+        state: ["Alabama"],
+        rampName: "Union",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 32.736947,
+        long: -85.853331,
+        directionsURL: "https://www.google.com/maps/dir//32.736947,-85.853331/@32.7369481,-85.8538782,259m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Martin", // lake name
+        state: ["Alabama"],
+        rampName: "Hwy 63",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 32.744189,
+        long: -85.960952,
+        directionsURL: "https://www.google.com/maps/dir//32.744189,-85.960952/@32.7441901,-85.9614992,259m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Martin", // lake name
+        state: ["Alabama"],
+        rampName: "Hwy 34",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 32.781028,
+        long: -85.876717,
+        directionsURL: "https://www.google.com/maps/dir//32.781028,-85.876717/@32.7810294,-85.8773844,316m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Martin", // lake name
+        state: ["Alabama"],
+        rampName: "Wind Creek",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 32.857316,
+        long: -85.935542,
+        directionsURL: "https://www.google.com/maps/dir//32.857316,-85.935542/@32.8573187,-85.9368439,616m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Martin", // lake name
+        state: ["Alabama"],
+        rampName: "Point Windy",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 0,
+        long: 0,
+        directionsURL: ""
+    },
+    {
+        bodyOfWater: "Martin", // lake name
+        state: ["Alabama"],
+        rampName: "",
+        rampType: "Concrete",
+        rampParking: "Fair",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 32.855264,
+        long: -85.853848,
+        directionsURL: "https://www.google.com/maps/dir//32.855264,-85.853848/@32.8552651,-85.8543952,259m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Martin", // lake name
+        state: ["Alabama"],
+        rampName: "Elkahatchee",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "No",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 32.869393,
+        long: -85.915967,
+        directionsURL: "https://www.google.com/maps/dir//32.869393,-85.915967/@32.8693941,-85.9165218,262m/data=!3m1!1e3"
+    },
+    {
         bodyOfWater: "Guntersville", // lake name
         state: ["Alabama"],
         rampName: "State Park",
@@ -911,59 +1016,238 @@ module.exports = [
         directionsURL: ""
     },
     {
-        bodyOfWater: "Dardanelle", // lake name
+        bodyOfWater: "Hamilton", // lake name
         state: ["Arkansas"],
-        rampName: "",
-        rampType: "",
-        rampParking: "",
+        rampName: "Entergy Park",
+        rampType: "Concrete",
+        rampParking: "Good",
         rampFee: "",
-        rampAccess: "",
-        courtesyDock: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
-        directionsURL: ""
+        lat: 34.445610,
+        long: -93.025580,
+        directionsURL: "https://www.google.com/maps/dir//34.44561,-93.02558/@34.4466187,-93.0297641,1388m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Dardanelle", // lake name
+        state: ["Arkansas"],
+        rampName: "State Park",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.285813,
+        long: -93.205036,
+        directionsURL: "https://www.google.com/maps/dir//35.285813,-93.205036/@35.285813,-93.2055832,243m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Dardanelle", // lake name
+        state: ["Arkansas"],
+        rampName: "Washburn Park",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.305746,
+        long: -93.165540,
+        directionsURL: "https://www.google.com/maps/dir//35.305746,-93.16554/@35.305746,-93.1660872,243m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Dardanelle", // lake name
+        state: ["Arkansas"],
+        rampName: "Bayou Park",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.319378,
+        long: -93.184872,
+        directionsURL: "https://www.google.com/maps/dir//35.319378,-93.184872/@35.3200515,-93.1895759,1574m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Dardanelle", // lake name
+        state: ["Arkansas"],
+        rampName: "ANO Efluent",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "No",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.302216,
+        long: -93.235903,
+        directionsURL: "https://www.google.com/maps/dir//35.302216,-93.235903/@35.302216,-93.2364502,243m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Dardanelle", // lake name
+        state: ["Arkansas"],
+        rampName: "Spadra",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 35.425412,
+        long: -93.4684940,
+        directionsURL: "https://www.google.com/maps/dir//35.425412,-93.468494/@35.425412,-93.4693108,362m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Dardanelle", // lake name
+        state: ["Arkansas"],
+        rampName: "Cane Creek",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.389321,
+        long: -93.501762,
+        directionsURL: "https://www.google.com/maps/dir//35.389321,-93.501762/@35.389321,-93.5023092,243m/data=!3m1!1e3"
     },
     {
         bodyOfWater: "Greers Ferry", // lake name
         state: ["Arkansas"],
-        rampName: "",
-        rampType: "",
-        rampParking: "",
+        rampName: "Dam",
+        rampType: "Concrete",
+        rampParking: "Good",
         rampFee: "",
-        rampAccess: "",
-        courtesyDock: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
-        directionsURL: ""
+        lat: 35.527846,
+        long: -92.010492,
+        directionsURL: "https://www.google.com/maps/dir//35.527846,-92.010492/@35.5271093,-92.0144985,1508m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Greers Ferry", // lake name
+        state: ["Arkansas"],
+        rampName: "Cove Creek",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.465796,
+        long: -92.152818,
+        directionsURL: "https://www.google.com/maps/dir//35.465796,-92.152818/@35.4657974,-92.1535061,316m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Greers Ferry", // lake name
+        state: ["Arkansas"],
+        rampName: "Devil's Fork",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.589895,
+        long: -92.178354,
+        directionsURL: "https://www.google.com/maps/dir//35.589895,-92.178354/@35.5898969,-92.179291,429m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Greers Ferry", // lake name
+        state: ["Arkansas"],
+        rampName: "Narrows",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "No",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.562882,
+        long: -92.197155,
+        directionsURL: "https://www.google.com/maps/dir//35.562882,-92.197155/@35.5628835,-92.197931,355m/data=!3m1!1e3"
     },
     {
         bodyOfWater: "Ouachita", // lake name
         state: ["Arkansas"],
-        rampName: "",
-        rampType: "",
-        rampParking: "",
+        rampName: "Crystal Springs",
+        rampType: "Concrete",
+        rampParking: "Good",
         rampFee: "",
-        rampAccess: "",
-        courtesyDock: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
-        directionsURL: ""
+        lat: 34.542042,
+        long: -93.348880,
+        directionsURL: "https://www.google.com/maps/dir//34.542042,-93.34888/@34.542042,-93.350249,613m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Ouachita", // lake name
+        state: ["Arkansas"],
+        rampName: "Mountain Harbor",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.572123,
+        long: -93.437447,
+        directionsURL: "https://www.google.com/maps/dir//34.572123,-93.437447/@34.572123,-93.4396357,980m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Ouachita", // lake name
+        state: ["Arkansas"],
+        rampName: "State Park",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.619652,
+        long: -93.178494,
+        directionsURL: "https://www.google.com/maps/dir//34.619652,-93.178494/@34.619652,-93.1790412,245m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Ouachita", // lake name
+        state: ["Arkansas"],
+        rampName: "Brady Mtn",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.581558,
+        long: -93.266502,
+        directionsURL: "https://www.google.com/maps/dir//34.619652,-93.178494/@34.619652,-93.1790412,245m/data=!3m1!1e3"
     },
     {
         bodyOfWater: "Table Rock", // lake name
         state: ["Arkansas"],
         rampName: "",
-        rampType: "",
-        rampParking: "",
+        rampType: "Concrete",
+        rampParking: "Poor",
         rampFee: "",
-        rampAccess: "",
-        courtesyDock: "",
+        rampAccess: "Paved",
+        courtesyDock: "No",
         bottomElev: 0,
         topElev: 0,
         lat: 0,
@@ -1434,17 +1718,392 @@ module.exports = [
     {
         bodyOfWater: "Lanier", // lake name
         state: ["Georgia"],
-        rampName: "",
-        rampType: "",
-        rampParking: "",
+        rampName: "East Bank",
+        rampType: "Concrete",
+        rampParking: "Good",
         rampFee: "",
-        rampAccess: "",
-        courtesyDock: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.150207,
+        long: -84.060145,
+        directionsURL: "https://www.google.com/maps/dir//34.150207,-84.060145/@34.1508878,-84.0604633,340m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Lanier", // lake name
+        state: ["Georgia"],
+        rampName: "Lanier Park",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.149599,
+        long: -84.057545,
+        directionsURL: ""
+    },
+    {
+        bodyOfWater: "Lanier", // lake name
+        state: ["Georgia"],
+        rampName: "Little Ridge",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.190820,
+        long: -84.088021,
+        directionsURL: "https://www.google.com/maps/dir//34.19082,-84.088021/@34.1922552,-84.0901345,256m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Lanier", // lake name
+        state: ["Georgia"],
+        rampName: "Mary Alice",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.197097,
+        long: -84.099825,
+        directionsURL: "https://www.google.com/maps/dir//34.197097,-84.099825/@34.197099,-84.1008062,457m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Lanier", // lake name
+        state: ["Georgia"],
+        rampName: "Tidwell",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.195219,
+        long: -84.065694,
+        directionsURL: "https://www.google.com/maps/dir//34.195219,-84.065694/@34.1952203,-84.0663312,297m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Lanier", // lake name
+        state: ["Georgia"],
+        rampName: "Young Deer",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Dirt",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.220771,
+        long: -84.056969,
+        directionsURL: "https://www.google.com/maps/dir//34.220771,-84.056969/@34.2207725,-84.0576974,339m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Lanier", // lake name
+        state: ["Georgia"],
+        rampName: "Two Mile",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
         bottomElev: 0,
         topElev: 0,
         lat: 0,
         long: 0,
         directionsURL: ""
+    },
+    {
+        bodyOfWater: "Lanier", // lake name
+        state: ["Georgia"],
+        rampName: "",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.22195,
+        long: -84.00071,
+        directionsURL: "https://www.google.com/maps/dir//34.221954,-84.000712/@34.2219551,-84.0012592,255m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Lanier", // lake name
+        state: ["Georgia"],
+        rampName: "Vanns Tavern",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.235938,
+        long: -83.980601,
+        directionsURL: "https://www.google.com/maps/dir//34.235938,-83.980601/@34.2359396,-83.9814006,372m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Lanier", // lake name
+        state: ["Georgia"],
+        rampName: "Mountain View",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.255163,
+        long: -83.945501,
+        directionsURL: "https://www.google.com/maps/dir//34.255163,-83.945501/@34.2551641,-83.9460482,255m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Lanier", // lake name
+        state: ["Georgia"],
+        rampName: "Long Hollow",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.28213,
+        long: -83.97311,
+        directionsURL: "https://www.google.com/maps/dir//34.282131,-83.973108/@34.2821321,-83.9736552,255m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Lanier", // lake name
+        state: ["Georgia"],
+        rampName: "Duckett Mill",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.307799,
+        long: -83.930946,
+        directionsURL: "https://www.google.com/maps/dir//34.307799,-83.930946/@34.3078005,-83.9316695,337m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Lanier", // lake name
+        state: ["Georgia"],
+        rampName: "Little Hall",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.312022,
+        long: -83.942274,
+        directionsURL: ""
+    },
+    {
+        bodyOfWater: "Lanier", // lake name
+        state: ["Georgia"],
+        rampName: "Bolding Mill",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.339189,
+        long: -83.952930,
+        directionsURL: "https://www.google.com/maps/dir//34.339189,-83.95293/@34.3391907,-83.9537551,384m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Lanier", // lake name
+        state: ["Georgia"],
+        rampName: "Sardis Creek",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.338309,
+        long: -83.889081,
+        directionsURL: "https://www.google.com/maps/dir//34.338309,-83.889081/@34.3383101,-83.8896282,254m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Lanier", // lake name
+        state: ["Georgia"],
+        rampName: "Little River",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.358899,
+        long: -83.827899,
+        directionsURL: "https://www.google.com/maps/dir//34.358899,-83.827899/@34.3589017,-83.8292402,623m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Lanier", // lake name
+        state: ["Georgia"],
+        rampName: "Clarks Bridge",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.353111,
+        long: -83.792837,
+        directionsURL: "https://www.google.com/maps/dir//34.353111,-83.792837/@34.3531126,-83.7936285,368m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Lanier", // lake name
+        state: ["Georgia"],
+        rampName: "Balus Creek",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.253507,
+        long: -83.914685,
+        directionsURL: "https://www.google.com/maps/dir//34.253507,-83.914685/@34.2535102,-83.9162829,744m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Lanier", // lake name
+        state: ["Georgia"],
+        rampName: "Old Federal",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.227345,
+        long: -83.937543,
+        directionsURL: "https://www.google.com/maps/dir//34.227345,-83.937543/@34.2273462,-83.9381513,283m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Lanier", // lake name
+        state: ["Georgia"],
+        rampName: "Burton Mill",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.168212,
+        long: -83.976668,
+        directionsURL: "https://www.google.com/maps/dir//34.168212,-83.976668/@34.1682131,-83.9772152,255m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Lanier", // lake name
+        state: ["Georgia"],
+        rampName: "Van Pugh",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.183410,
+        long: -83.986961,
+        directionsURL: "https://www.google.com/maps/dir//34.18341,-83.986961/@34.1834112,-83.987562,280m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Lanier", // lake name
+        state: ["Georgia"],
+        rampName: "Big Creek",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.165777,
+        long: -83.994126,
+        directionsURL: "https://www.google.com/maps/dir//34.165777,-83.994126/@34.1657781,-83.9946844,260m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Oconee", // lake name
+        state: ["Georgia"],
+        rampName: "Sugar Creek",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 33.470354,
+        long: -83.311043,
+        directionsURL: "https://www.google.com/maps/dir//33.470354,-83.311043/@33.4703554,-83.3117129,315m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Oconee", // lake name
+        state: ["Georgia"],
+        rampName: "Parks Ferry",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 33.520093,
+        long: -83.273178,
+        directionsURL: "https://www.google.com/maps/dir//33.520093,-83.273178/@33.5200941,-83.2737252,257m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Oconee", // lake name
+        state: ["Georgia"],
+        rampName: "Redlands",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 33.568350,
+        long: -83.272146,
+        directionsURL: "https://www.google.com/maps/dir//33.56835,-83.272146/@33.5683511,-83.2726932,257m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Oconee", // lake name
+        state: ["Georgia"],
+        rampName: "Long Shoals",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 33.386188,
+        long: -83.198677,
+        directionsURL: "https://www.google.com/maps/dir//33.386188,-83.198677/@33.3861892,-83.1992619,275m/data=!3m1!1e3"
     },
     {
         bodyOfWater: "Seminole", // lake name
@@ -1460,6 +2119,51 @@ module.exports = [
         lat: 0,
         long: 0,
         directionsURL: ""
+    },
+    {
+        bodyOfWater: "Sinclair", // lake name
+        state: ["Georgia"],
+        rampName: "Dennis Station",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 33.188538,
+        long: -83.317532,
+        directionsURL: "https://www.google.com/maps/dir//33.188538,-83.317532/@33.1885395,-83.3182743,350m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Sinclair", // lake name
+        state: ["Georgia"],
+        rampName: "Twin Bridges",
+        rampType: "Concrete",
+        rampParking: "Poor",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 33.201556,
+        long: -83.381879,
+        directionsURL: "https://www.google.com/maps/dir//33.201556,-83.381879/@33.2015571,-83.3824262,258m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Sinclair", // lake name
+        state: ["Georgia"],
+        rampName: "Bass Boat House",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 33.144101,
+        long: -83.226153,
+        directionsURL: "https://www.google.com/maps/dir//33.144101,-83.226153/@33.1441021,-83.2267002,258m/data=!3m1!1e3"
     },
     {
         bodyOfWater: "Thurmond", // lake name also "ClarksHill"
@@ -2351,13 +3055,153 @@ module.exports = [
     // NEW YORK  ---------------------------------------------------------------------------------------------------------
     {
         bodyOfWater: "Champlain", // lake name
+        state: ["New York"],
+        rampName: "Dock Street",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 44.697857,
+        long: -73.444530,
+        directionsURL: "https://www.google.com/maps/dir//44.697857,-73.44453/@44.697857,-73.4450772,212m/data=!3m1!1e3"
+    },{
+        bodyOfWater: "Champlain", // lake name
+        state: ["New York"],
+        rampName: "Port Henry",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 44.052516,
+        long: -73.453686,
+        directionsURL: "https://www.google.com/maps/dir//44.052516,-73.453686/@44.052516,-73.4547645,422m/data=!3m1!1e3"
+    },{
+        bodyOfWater: "Champlain", // lake name
+        state: ["New York"],
+        rampName: "Ticonderoga",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 43.853809,
+        long: -73.386777,
+        directionsURL: "https://www.google.com/maps/dir//43.853809,-73.386777/@43.853809,-73.3873817,237m/data=!3m1!1e3"
+    },{
+        bodyOfWater: "Champlain", // lake name
+        state: ["Vermont"],
+        rampName: "Cedar Beach",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Gravel",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 44.295869,
+        long: -73.291823,
+        directionsURL: "https://www.google.com/maps/dir//44.295869,-73.291823/@44.295869,-73.2923702,213m/data=!3m1!1e3"
+    },{
+        bodyOfWater: "Champlain", // lake name
+        state: ["New York"],
+        rampName: "West Port",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 44.189046,
+        long: -73.434950,
+        directionsURL: "https://www.google.com/maps/dir//44.189046,-73.43495/@44.189046,-73.436081,441m/data=!3m1!1e3"
+    },{
+        bodyOfWater: "Champlain", // lake name
+        state: ["New York"],
+        rampName: "Willsboro Bay",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 44.400797,
+        long: -73.389948,
+        directionsURL: "https://www.google.com/maps/dir//44.400797,-73.389948/@44.400797,-73.3905576,237m/data=!3m1!1e3"
+    },{
+        bodyOfWater: "Champlain", // lake name
+        state: ["Vermont"],
+        rampName: "Shelburne Bay",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 44.398862,
+        long: -73.235406,
+        directionsURL: "https://www.google.com/maps/dir//44.398862,-73.235406/@44.398862,-73.2364012,387m/data=!3m1!1e3"
+    },{
+        bodyOfWater: "Champlain", // lake name
+        state: ["Vermont"],
+        rampName: "Burlington Waterfront",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 44.48109,
+        long: -73.22291,
+        directionsURL: "https://www.google.com/maps/dir//44.481087,-73.222906/@44.481087,-73.2234779,222m/data=!3m1!1e3"
+    },{
+        bodyOfWater: "Champlain", // lake name
+        state: ["Vermont"],
+        rampName: "Mallets Bay",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 44.552387,
+        long: -73.231957,
+        directionsURL: "https://www.google.com/maps/dir//44.552387,-73.231957/@44.552387,-73.2329815,397m/data=!3m1!1e3"
+    },{
+        bodyOfWater: "Champlain", // lake name
+        state: ["New York"],
+        rampName: "Peru",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 44.619048,
+        long: -73.443895,
+        directionsURL: "https://www.google.com/maps/dir//44.619048,-73.443895/@44.619048,-73.4447145,317m/data=!3m1!1e3"
+    },{
+        bodyOfWater: "Champlain", // lake name
         state: ["New York", "Vermont"],
         rampName: "",
-        rampType: "",
-        rampParking: "",
+        rampType: "Concrete",
+        rampParking: "Good",
         rampFee: "",
-        rampAccess: "",
-        courtesyDock: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
         bottomElev: 0,
         topElev: 0,
         lat: 0,
@@ -2366,18 +3210,63 @@ module.exports = [
     },
     {
         bodyOfWater: "Ontario", // lake name
-        state: ["New York"],
-        rampName: "",
-        rampType: "",
-        rampParking: "",
+        state: ["Vermont"],
+        rampName: "Tarbour Pt",
+        rampType: "Concrete",
+        rampParking: "Good",
         rampFee: "",
-        rampAccess: "",
-        courtesyDock: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
-        directionsURL: ""
+        lat: 44.925374,
+        long: -73.213931,
+        directionsURL: "https://www.google.com/maps/dir//44.925374,-73.213931/@44.9253195,-73.2150015,817m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Ontario", // lake name
+        state: ["Vermont"],
+        rampName: "Sandy Pt",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 44.970354,
+        long: -73.211114,
+        directionsURL: "https://www.google.com/maps/dir//44.970354,-73.211114/@44.970354,-73.2117207,233m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Oneida", // lake name
+        state: ["New York"],
+        rampName: "Oneida Shores",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 43.22810,
+        long: -76.10916,
+        directionsURL: "https://www.google.com/maps/dir//43.228102,-76.109161/@43.228102,-76.1102416,428m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Oneida", // lake name
+        state: ["New York"],
+        rampName: "South Shore",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 43.162499,
+        long: -75.926992,
+        directionsURL: "https://www.google.com/maps/dir//43.162499,-75.926992/@43.162499,-75.9275884,237m/data=!3m1!1e3"
     },
 
     // NORTH CAROLINA  ---------------------------------------------------------------------------------------------------------
@@ -3185,24 +4074,51 @@ module.exports = [
 
     // OHIO  ---------------------------------------------------------------------------------------------------------
     
-    /*{
+    {
         bodyOfWater: "Indian Lake", // lake name
-        data: [],
-        refreshInterval: 90, //minutes
-        lastRefresh: "12/31/18", // a Date 
-        seaLevelDelta: 0.0,
-        normalPool: 900.7,
-        lat: 39.082309,
-        long: -84.872313,
-        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03260500&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
-        flowURL: "none",
-        href: "/lakes/indianoh",
-        dataSource: ["USGS"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
-        entryLink: "",
-        adLogoSrc: "",
-        adLogoUrl: ""
-    },*/
+        state: ["Ohio"],
+        rampName: "Hwy 49",
+        rampType: "Concrete",
+        rampParking: "Fair",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.502394,
+        long: -80.191538,
+        directionsURL: "https://www.google.com/maps/dir//35.502394,-80.191538/@35.5022591,-80.192298,357m/data=!3m1!1e3"
+    }, 
+    {
+        bodyOfWater: "Grand", // lake name
+        state: ["Ohio"],
+        rampName: "West Bank",
+        rampType: "Concrete",
+        rampParking: "Fair",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 40.52643,
+        long: -84.57420,
+        directionsURL: "https://www.google.com/maps/dir//40.526433,-84.574205/@40.535877,-84.6047782,16340m/data=!3m1!1e3"
+    }, 
+    {
+        bodyOfWater: "Grand", // lake name
+        state: ["Ohio"],
+        rampName: "Freedom",
+        rampType: "Concrete",
+        rampParking: "Fair",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 40.540671,
+        long: -84.418644,
+        directionsURL: "https://www.google.com/maps/dir//40.540671,-84.418644/@40.540672,-84.4191912,234m/data=!3m1!1e3"
+    },
 
 {
         bodyOfWater: "Ohio River (Cincy)", // lake name
@@ -3222,32 +4138,62 @@ module.exports = [
     {
         bodyOfWater: "Ohio River (Tanners)", // lake name
         state: ["Ohio"],
-        rampName: "",
-        rampType: "",
-        rampParking: "",
+        rampName: "Lawrenceburg",
+        rampType: "Concrete",
+        rampParking: "Great",
         rampFee: "",
-        rampAccess: "",
-        courtesyDock: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
-        directionsURL: ""
+        lat: 39.081889,
+        long: -84.871798,
+        directionsURL: "https://www.google.com/maps/dir//39.081889,-84.871798/@39.0818904,-84.8725272,319m/data=!3m1!1e3"
     },
     {
         bodyOfWater: "Misquito Lake", // lake name
         state: ["Ohio"],
-        rampName: "",
-        rampType: "",
-        rampParking: "",
+        rampName: "State Park",
+        rampType: "Concrete",
+        rampParking: "Great",
         rampFee: "",
-        rampAccess: "",
-        courtesyDock: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
-        directionsURL: ""
+        lat: 41.306562,
+        long: -80.766635,
+        directionsURL: "https://www.google.com/maps/dir//41.306562,-80.766635/@41.306046,-80.7690536,777m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Misquito Lake", // lake name
+        state: ["Ohio"],
+        rampName: "Route 305",
+        rampType: "Concrete",
+        rampParking: "Great",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 41.308266,
+        long: -80.747374,
+        directionsURL: "https://www.google.com/maps/dir//41.308266,-80.747374/@41.308267,-80.7479212,231m/data=!3m1!1e3"
+    },
+    {
+        bodyOfWater: "Misquito Lake", // lake name
+        state: ["Ohio"],
+        rampName: "Causeway",
+        rampType: "Concrete",
+        rampParking: "Great",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 41.389466,
+        long: -80.740217,
+        directionsURL: "https://www.google.com/maps/dir//41.389466,-80.740217/@41.3894661,-80.7407795,238m/data=!3m1!1e3"
     },
 
     // OKLAHOMA  ---------------------------------------------------------------------------------------------------------

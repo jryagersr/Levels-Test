@@ -483,7 +483,7 @@ module.exports = [
                         ramp: "Lighthouse",
                         state: "NC",
                         txDetail: "Gold 3",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-east-roanoke-river-nc-may-11-2019-michael-chlomoudis-scott-griffin-weigh-in-a-fat-sack-at-22-19-lbs-for-the-win-next-catt-east-on-the-roanoke-river-is-june-8th/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-east/"
                     },
                     {
@@ -654,7 +654,7 @@ module.exports = [
                         ramp: "Whittenburg",
                         state: "NC",
                         txDetail: "Qualifier 4",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-hickory-nc-may-11-2019-petey-brookshire-jeremy-beatty-win-a-tough-one-13-60-lbs-next-lake-hickory-catt-is-june-22-at-wittenburg/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-hickory/"
                     },
                     {
@@ -723,7 +723,7 @@ module.exports = [
                         ramp: "Riverfront",
                         state: "VA",
                         txDetail: "Gold",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-james-river-va-may-11-2019-rya-hogge-donnie-daniel-slay-em-26-75-lbs-for-the-win-2559-00-bud-mason-charles-crowder-weigh-in-a-9-28-pounder-to-take-the-bf/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-james-river/"
                     },
                     {
@@ -1225,7 +1225,7 @@ module.exports = [
                         ramp: "John C Land",
                         state: "SC",
                         txDetail: "Final",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-santee-cooper-spring-final-may-11-2019-brent-riley-nathan-burgess-repeat-34-02-lbs-3750-00/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-santee-cooper/"
                     }
                 ]
@@ -1420,7 +1420,7 @@ module.exports = [
                         ramp: "Waterlilly",
                         state: "NC",
                         txDetail: "Qualifier 5",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-tidewater-north-landing-river-va-matt-jennings-mark-london-weigh-in-23-10-lbs-jeremy-gatewood-jarred-allbritten-dominate-the-tidewater-pointsn/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-tidewater/"
                     },
                     {
@@ -1861,7 +1861,7 @@ module.exports = [
                         ramp: "Flat Rock",
                         state: "NC",
                         txDetail: "Qualifier 6",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-tuckertown-reservoir-nc-may-11-2019-bradley-chandler-cole-file-cash-in-with-a-24-01-lbs-bag-next-yadkin-qualifier-is-at-high-rock-may-18th-last-chance-to-qualify-to-enter-the/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
                     },
                     {

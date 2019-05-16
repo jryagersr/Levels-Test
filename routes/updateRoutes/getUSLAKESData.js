@@ -13,27 +13,17 @@ module.exports = {
         // Set the base of the request depending on which lake we want
         var url = "";
         switch (bodyOfWater) {
+            
             case "Columbus":
                 url = "http://columbus.lakesonline.com/Level/Calendar"
                 break;
-            case "Smith":
-                url = "http://www.smithlake.info/Level/Calendar"
+
+            case "Oconee":
+                url = "http://oconee.uslakes.info/Level/Calendar"
                 break;
 
-            case "Neely Henry":
-                url = "http://www.neelyhenry.uslakes.info/Level/Calendar"
-                break;
-
-            case "Logan Martin":
-                url = "http://www.loganmartin.info/Level/Calendar"
-                break;
-
-            case "Lay":
-                url = "http://www.laylake.info/Level/Calendar"
-                break;
-
-            case "Weiss":
-                url = "http://www.lakeweiss.info/Level/Calendar"
+            case "Oneida":
+                url = "http://oneida.uslakes.info/Level/Calendar"
                 break;
 
             case "Gaston":
@@ -44,6 +34,11 @@ module.exports = {
                 url = "http://smithmountain.uslakes.info/Level/Calendar"
                 break;
 
+            case "Sinclair":
+                url = "http://sinclair.uslakes.info/Level/Calendar"
+                break;
+
+               
         }
 
         // Get today's date to build request url
