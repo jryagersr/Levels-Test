@@ -18,6 +18,8 @@ module.exports = {
       if (error) {
         callback(error);
       }
+      
+      if (typeof body !== 'json') {
 
       // clear displayBatch
       displayBatch = [];
@@ -29,8 +31,7 @@ module.exports = {
         let valuesIndex = 0;
         // Parse the json data return to find the values we want
         let jIncrement = 1;
-        if (bodyOfWater == "Mille Lacs")
-          valuesIndex = 1 // For some reason Mille Lacs has changed from index 0 to index 1 02/10/19
+
 
         // To retrieve Flows from USGS, we get multiple .timevalues and the variable.variableDecription 
         // value will contain "Discharge" 'Gage' for Flow or Elev data. We must determine which timevalues
@@ -42,8 +43,20 @@ module.exports = {
           if (data.value.timeSeries[i].variable.variableDescription.includes("Discharge"))
             timeSeriesFlowIndex = i;
           else if (data.value.timeSeries[i].variable.variableDescription.includes("Gage height") ||
-            data.value.timeSeries[i].variable.variableDescription.includes("water surface"))
+            data.value.timeSeries[i].variable.variableDescription.includes("water surface")) {
+            for (z = 0; z < data.value.timeSeries[i].values.length; z++) {
+              // For some reason Mille Lacs has changed from index 0 to index 1 02/10/19 (Lake Outlet, other sensor has failed??? )
+              // Bay Springs, Armory and Pool B are Locks with a sensor that provides Headwater (above the lock)
+              // and Tailwater (below the lock)
+              // data.value.timeSeries[i].values[j].method[0].methodDescription == "Tailwater" or "Headwater"
+              // These three have value[1] of "Tailwater"
+              if (['Headwater', 'headwater', '[At Lake Outlet]'].includes(data.value.timeSeries[i].values[z].method[0].methodDescription)) {
+                valuesIndex = z;
+              }
+            }
+
             timeSeriesElevIndex = i;
+          }
         }
         // Set up elev and flow Values
         let elevValues = '';
@@ -60,6 +73,7 @@ module.exports = {
 
         // If reported level is not based on MSL, set the seaLevelDelta to add to the level
         // to convert to MSL based.
+
         if (seaLevelDelta !== 0)
           elevationAdjust = (parseFloat(elevValues[0].value) + Number(seaLevelDelta)).toFixed(2);
         else {
@@ -110,6 +124,10 @@ module.exports = {
 
       }
       callback(null, displayBatch);
+    } else {
+      console.log(`USGS data is bad for ${bodyOfWater}`);
+      callback(null, exportData);
+    }
     })
   }
 }

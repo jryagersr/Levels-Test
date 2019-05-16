@@ -3,6 +3,7 @@ const express = require("express"),
 
 // Import all data source update functions
 const ace = require('./updateRoutes/getACEData');
+const apc = require('./updateRoutes/getAPCData');
 const cube = require("./updateRoutes/getCUBEData");
 const duke = require("./updateRoutes/getDUKEData");
 const sjrwmd = require("./updateRoutes/getSJRWMDData");
@@ -88,6 +89,27 @@ module.exports = function (app) {
                   });
                   break;
 
+                  case "APC":
+                    apc.getAPCData(currentLake.elevURL, currentLake.bodyOfWater, function (error, data) {
+                      if (error) {
+                        console.log(error);
+                        return;
+                        // if successful return the data
+                      } else {
+                        // update the current lake
+                        update.updateAndReturnOneLake(currentLake.bodyOfWater, currentLake.lastRefresh, data, function (error, data) {
+                          if (error) {
+                            console.log(error);
+                            return;
+                          }else {
+                            // send updated lake to client
+                            res.json(data);
+                          }
+                        })
+                      }
+                    });
+                    break;
+
                 case "CUBE":
                   cube.getCUBEData(currentLake.bodyOfWater, function (error, data) {
                     if (error) {
@@ -155,7 +177,7 @@ module.exports = function (app) {
                   break;
 
                 case "TVA":
-                  tva.getTVAData(currentLake.elevURL, function (error, data) {
+                  tva.getTVAData(currentLake.elevURL, currentLake.bodyOfWater, function (error, data) {
                     if (error) {
                       console.log(error);
                       return;
@@ -244,8 +266,10 @@ module.exports = function (app) {
                   break;
 
                 default:
-                  console.log("Data source could not be found.");
+                  console.log(`No data source for ${currentLake.bodyOfWater}`);
                   res.json(currentLake);
+                  //console.log("Data source could not be found.");
+                  //res.send("Data source could not be found.");
               }
             }
             // if no update is needed, send currentLake to client
@@ -336,6 +360,24 @@ function updateAllLakes() {
                 });
                 break;
 
+                case "APC":
+                  apc.getAPCData(currentLake.elevURL, currentLake.bodyOfWater, function (error, data) {
+                    if (error) {
+                      console.log(error);
+                      return;
+                      // if successful return the data
+                    } else {
+                      // update the current lake
+                      update.updateAndReturnOneLake(currentLake.bodyOfWater, currentLake.lastRefresh, data, function (error, data) {
+                        if (error) {
+                          console.log(error);
+                          return;
+                        }
+                      })
+                    }
+                  });
+                  break;
+
               case "CUBE":
                 cube.getCUBEData(currentLake.bodyOfWater, function (error, data) {
                   if (error) {
@@ -391,7 +433,7 @@ function updateAllLakes() {
                 break;
 
               case "TVA":
-                tva.getTVAData(currentLake.elevURL, function (error, data) {
+                tva.getTVAData(currentLake.elevURL, currentLake.bodyOfWater, function (error, data) {
                   if (error) {
                     console.log(error);
                     return;
@@ -463,8 +505,8 @@ function updateAllLakes() {
                 break;
 
               default:
-                console.log("Data source could not be found.");
-                res.send("Data source could not be found.");
+              console.log(`No data source for ${currentLake.bodyOfWater}`) ;
+                //res.send("Data source could not be found.");
             }
           }
           // if no update is needed log to console

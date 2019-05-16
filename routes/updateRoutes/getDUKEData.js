@@ -18,24 +18,28 @@ module.exports = {
             if (error) {
                 callback(error);
             }
-            let dukeLakes = JSON.parse(body);
-            let today = new Date();
+            if (typeof body !== 'json') {
+                let dukeLakes = JSON.parse(body);
+                let today = new Date();
 
-            dukeLakes.reverse().forEach(function (lake) {
-                // Check against future dates DUKE likes to send
-                if (new Date(lake.Date) <= today) {
-                    // Check to make sure data is good
-                    if (lake.Average !== "N/A" && typeof parseInt(lake.Average) == 'number' && Number(lake.Average) !== 0) {
-                        data.push({
-                            time: new Date(lake.Date + " " + "6:00"), // format timestamp
-                            elev: Number(lake.Average) + seaLevelDelta, // add SLD to average
-                            flow: "N/A"
-                        })
+                dukeLakes.reverse().forEach(function (lake) {
+                    // Check against future dates DUKE likes to send
+                    if (new Date(lake.Date) <= today) {
+                        // Check to make sure data is good
+                        if (lake.Average !== "N/A" && typeof parseInt(lake.Average) == 'number' && Number(lake.Average) !== 0) {
+                            data.push({
+                                time: new Date(lake.Date + " " + "6:00"), // format timestamp
+                                elev: Number(lake.Average) + seaLevelDelta, // add SLD to average
+                                flow: "N/A"
+                            })
+                        }
+                        callback(null, data);
+                    } else {
+                        console.log(`DUKE data is bad for ${lakeName}`);
+                        callback(null, body);
                     }
-                }
-            })
-
-            callback(null, data);
-        });
+                });
+            }
+        })
     }
 }

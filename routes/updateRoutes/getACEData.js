@@ -49,7 +49,8 @@ module.exports = {
                 currentTime.setMinutes(0);
                 exportData.push({
                   time: currentTime,
-                  elev: elevEntries[i].value
+                  elev: elevEntries[i].value,
+                  flow: "N/A"
                 });
 
                 if (flowEntries.length > 0) {
@@ -64,7 +65,7 @@ module.exports = {
                       break;
                     }
                   }
-                  if (typeof exportData[0].flow == 'undefined') {
+                  if (typeof exportData[0].flow == 'undefined' || exportData[0].flow == 'N/A') {
                     exportData[0].flow = "Missing";
                   }
                 }
@@ -81,7 +82,8 @@ module.exports = {
                   currentTime.setMinutes(0);
                   exportData.push({
                     time: currentTime,
-                    elev: elevEntries[i].value
+                    elev: elevEntries[i].value,
+                    flow: "N/A"
                   });
 
                   // if flows exist
@@ -98,8 +100,7 @@ module.exports = {
                         // Update entry's flow property.
                         exportData[objIndex].flow = flowEntries[j].value;
                         break;
-                      }
-                      else {
+                      } else {
                         objIndex = exportData.findIndex((obj => obj.time == currentTime));
                         exportData[objIndex].flow = "Missing";
                       }
@@ -114,7 +115,7 @@ module.exports = {
             callback(null, exportData);
           }
         } else {
-          console.log(`Ace data is bad for ${bodyOfWater}`);
+          console.log(`ACE data is bad for ${bodyOfWater}`);
           callback(null, exportData);
         }
 

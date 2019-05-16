@@ -201,7 +201,7 @@ module.exports = [
                     ramp: "Parkway",
                     state: "VA",
                     txDetail: "Anglers Choice",
-                    resultsLink: "",
+                    resultsLink: "https://www.anglerschoicemarine.com/fckimages/RESULTS_SML_May4-19.pdf",
                     entryLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule"
                 },
                 {
@@ -483,7 +483,7 @@ module.exports = [
                         ramp: "Lighthouse",
                         state: "NC",
                         txDetail: "Gold 3",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-east-roanoke-river-nc-may-11-2019-michael-chlomoudis-scott-griffin-weigh-in-a-fat-sack-at-22-19-lbs-for-the-win-next-catt-east-on-the-roanoke-river-is-june-8th/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-east/"
                     },
                     {
@@ -552,7 +552,7 @@ module.exports = [
                         ramp: "Summit",
                         state: "NC",
                         txDetail: "Qualifier 2",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-gaston-nc-may-5-2019-josh-lanaville-timmy-davis-take-1st-place-17-59-lbs-2119-00/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-gaston/"
                     },
                     {
@@ -654,7 +654,7 @@ module.exports = [
                         ramp: "Whittenburg",
                         state: "NC",
                         txDetail: "Qualifier 4",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-hickory-nc-may-11-2019-petey-brookshire-jeremy-beatty-win-a-tough-one-13-60-lbs-next-lake-hickory-catt-is-june-22-at-wittenburg/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-hickory/"
                     },
                     {
@@ -723,7 +723,7 @@ module.exports = [
                         ramp: "Riverfront",
                         state: "VA",
                         txDetail: "Gold",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-james-river-va-may-11-2019-rya-hogge-donnie-daniel-slay-em-26-75-lbs-for-the-win-2559-00-bud-mason-charles-crowder-weigh-in-a-9-28-pounder-to-take-the-bf/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-james-river/"
                     },
                     {
@@ -1216,7 +1216,7 @@ module.exports = [
                         ramp: "John C Land",
                         state: "SC",
                         txDetail: "Qualifier 7",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-santee-cooper-nc-may-4-2019-max-terry-emmett-mccauley-weigh-up-26-50-lbs-1300-00-santee-final-is-may-11-112-teams-qualified/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-santee-cooper/"
                     },
                     {
@@ -1225,7 +1225,7 @@ module.exports = [
                         ramp: "John C Land",
                         state: "SC",
                         txDetail: "Final",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-santee-cooper-spring-final-may-11-2019-brent-riley-nathan-burgess-repeat-34-02-lbs-3750-00/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-santee-cooper/"
                     }
                 ]
@@ -1420,7 +1420,7 @@ module.exports = [
                         ramp: "Waterlilly",
                         state: "NC",
                         txDetail: "Qualifier 5",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-tidewater-north-landing-river-va-matt-jennings-mark-london-weigh-in-23-10-lbs-jeremy-gatewood-jarred-allbritten-dominate-the-tidewater-pointsn/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-tidewater/"
                     },
                     {
@@ -1642,7 +1642,7 @@ module.exports = [
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 7",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/wateree-open-may-11-2019-craig-tim-haven-whack-em-19-42-lbs-bf-5-63-lbs-1299-00-next-wateree-open-may-25th-no-membership/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
                     {
@@ -1861,7 +1861,7 @@ module.exports = [
                         ramp: "Flat Rock",
                         state: "NC",
                         txDetail: "Qualifier 6",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-tuckertown-reservoir-nc-may-11-2019-bradley-chandler-cole-file-cash-in-with-a-24-01-lbs-bag-next-yadkin-qualifier-is-at-high-rock-may-18th-last-chance-to-qualify-to-enter-the/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
                     },
                     {
@@ -1995,7 +1995,7 @@ module.exports = [
                         ramp: "New Hope",
                         state: "NC",
                         txDetail: "Warriors On the Water",
-                        resultsLink: "",
+                        resultsLink: "https://www.warriorsonthewater.com/2019-weigh-in-results",
                         entryLink: "https://www.warriorsonthewater.com/"
                     }
                 ]
@@ -2062,7 +2062,7 @@ module.exports = [
                     ramp: "Summit",
                     state: "NC-VA",
                     txDetail: "Bass For Cash Series",
-                    resultsLink: "",
+                    resultsLink: "http://bassforcash.com/2019/05/07/moss-willis-win-4298-at-lake-gaston/?fbclid=IwAR1DVNszfkSm-R_w6Aly7VWvPSEssRuFKBHOROvfwMp2FTcPAfjRaCojf8o",
                     entryLink: "http://bassforcash.com/schedule/"
                 },
                 {
@@ -2183,6 +2183,104 @@ module.exports = [
         trails: [
 
             {
+                trail: "BFL Arkie",
+                tournaments: [{
+                        date: "2019-02-23",
+                        lake: "Ouachita",
+                        ramp: "Mountain Harbor",
+                        state: "AR",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-02-23-ouachita",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-02-23-ouachita"
+                    },
+                    {
+                        date: "2019-03-23",
+                        lake: "Dardanelle",
+                        ramp: "Lake Dardanelle SP",
+                        state: "AR",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-03-23-dardanelle",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-03-23-dardanelle"
+                    },
+                    {
+                        date: "2019-04-13",
+                        lake: "Hamilton",
+                        ramp: "Hulsey Hatchery",
+                        state: "AR",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-04-13-hamilton",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-04-13-hamilton"
+                    },
+                    {
+                        date: "2019-05-18",
+                        lake: "Greers Ferry",
+                        ramp: "Devil's Fork",
+                        state: "AR",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-05-18-greers-ferry",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-05-18-greers-ferry"
+                    },
+                    {
+                        date: "2019-09-07",
+                        lake: "Lake Dardanelle",
+                        ramp: "Lake Dardanelle SP",
+                        state: "AR",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-09-07-dardanelle",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-09-07-dardanelle"
+                    }
+                ]
+            },
+            {
+                trail: "BFL Bama",
+                tournaments: [{
+                        date: "2019-03-09",
+                        lake: "Martin",
+                        ramp: "Wind Creek",
+                        state: "AL",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-03-09-martin",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-03-09-martin"
+                    },
+                    {
+                        date: "2019-03-23",
+                        lake: "Eufaula",
+                        ramp: "Lakepoint SP",
+                        state: "AL",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-03-23-eufaula",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-03-23-eufaula"
+                    },
+                    {
+                        date: "2019-05-11",
+                        lake: "Lay",
+                        ramp: "Beeswax",
+                        state: "AL",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-05-11-lay",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-05-11-lay"
+                    },
+                    {
+                        date: "2019-06-29",
+                        lake: "Neely Henry",
+                        ramp: "Coosa",
+                        state: "AL",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-06-29-neely-henry",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-06-29-neely-henry"
+                    },
+                    {
+                        date: "2019-09-28",
+                        lake: "Eufaula",
+                        ramp: "Lakepoint SP",
+                        state: "AL",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-09-28-eufaula",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-09-28-eufaula"
+                    }
+                ]
+            },
+            {
                 trail: "BFL Buckeye",
                 tournaments: [{
                         date: "2019-05-11",
@@ -2190,7 +2288,7 @@ module.exports = [
                         ramp: "West Bank",
                         state: "OH",
                         txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/tournaments/2019-05-11-grand-lake-st-marys",
+                        resultsLink: "https://www.flwfishing.com/results/2019-05-11-grand-lake-st-marys",
                         entryLink: "https://www.flwfishing.com/tournaments/2019-05-11-grand-lake-st-marys"
                     },
                     {
@@ -2199,8 +2297,8 @@ module.exports = [
                         ramp: "Lawrenceburg",
                         state: "IN",
                         txDetail: "FLW",
-                        resultsLink: "",
-                        entryLink: ""
+                        resultsLink: "https://www.flwfishing.com/results/2019-06-08-ohio-river-tanners-creek",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-06-08-ohio-river-tanners-creek"
                     },
                     {
                         date: "2019-07-27",
@@ -2208,8 +2306,8 @@ module.exports = [
                         ramp: "Indian Lake SP",
                         state: "OH",
                         txDetail: "FLW",
-                        resultsLink: "",
-                        entryLink: ""
+                        resultsLink: "https://www.flwfishing.com/results/2019-07-27-indian",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-07-27-indian"
                     },
                     {
                         date: "2019-08-17",
@@ -2217,8 +2315,8 @@ module.exports = [
                         ramp: "Lawrenceburg",
                         state: "IN",
                         txDetail: "FLW",
-                        resultsLink: "",
-                        entryLink: ""
+                        resultsLink: "https://www.flwfishing.com/results/2019-08-17-ohio-river-tanners-creek",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-08-17-ohio-river-tanners-creek"
                     },
                     {
                         date: "2019-09-21",
@@ -2226,8 +2324,253 @@ module.exports = [
                         ramp: "Mosquito Lake SP",
                         state: "OH",
                         txDetail: "FLW",
-                        resultsLink: "",
-                        entryLink: ""
+                        resultsLink: "https://www.flwfishing.com/results/2019-09-21-mosquito",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-09-21-mosquito"
+                    }
+                ]
+            },
+            {
+                trail: "BFL Bulldog",
+                tournaments: [{
+                        date: "2019-02-23",
+                        lake: "Lanier",
+                        ramp: "Laurel Park",
+                        state: "GA",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-02-23-lanier",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-02-23-lanier"
+                    },
+                    {
+                        date: "2019-03-23",
+                        lake: "Oconee",
+                        ramp: "Sugar Creek",
+                        state: "GA",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-03-23-oconee",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-03-23-oconee"
+                    },
+                    {
+                        date: "2019-04-13",
+                        lake: "Sinclair",
+                        ramp: "Dennis Station",
+                        state: "GA",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-04-13-sinclair",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-04-13-sinclair"
+                    },
+                    {
+                        date: "2019-06-22",
+                        lake: "Eufaula",
+                        ramp: "Lakepoint SP",
+                        state: "AL",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-06-22-eufaula",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-06-22-eufaula"
+                    },
+                    {
+                        date: "2019-09-28",
+                        lake: "Lanier",
+                        ramp: "Laurel Park",
+                        state: "GA",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-09-28-lanier",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-09-28-lanier"
+                    }
+                ]
+            },
+            {
+                trail: "BFL Choo Choo",
+                tournaments: [{
+                        date: "2019-02-16",
+                        lake: "Guntersville",
+                        ramp: "Goose Pond",
+                        state: "AL",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-02-16-guntersville",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-02-16-guntersville"
+                    },
+                    {
+                        date: "2019-03-16",
+                        lake: "Wheeler",
+                        ramp: "Joe Wheeler",
+                        state: "AL",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-03-16-wheeler",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-03-16-wheeler"
+                    },
+                    {
+                        date: "2019-04-06",
+                        lake: "Lewis Smith",
+                        ramp: "Smith Lake Dam",
+                        state: "AL",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-04-06-lewis-smith",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-04-06-lewis-smith"
+                    },
+                    {
+                        date: "2019-05-04",
+                        lake: "Neeley Henry",
+                        ramp: "Coosa",
+                        state: "AL",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-05-04-neely-henry",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-05-04-neely-henry"
+                    },
+                    {
+                        date: "2019-09-14",
+                        lake: "Guntersville",
+                        ramp: "Guntersville SP",
+                        state: "AL",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-09-14-guntersville",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-09-14-guntersville"
+                    }
+                ]
+            },
+            {
+                trail: "BFL Cowboy",
+                tournaments: [{
+                        date: "2019-01-26",
+                        lake: "Toledo Bend",
+                        ramp: "Cypress Bend",
+                        state: "LA",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-01-26-toledo-bend",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-01-26-toledo-bend"
+                    },
+                    {
+                        date: "2019-03-02",
+                        lake: "Sam Rayburn",
+                        ramp: "Umphrey",
+                        state: "TX",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-03-02-sam-rayburn",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-03-02-sam-rayburn"
+                    },
+                    {
+                        date: "2019-04-13",
+                        lake: "Toledo Bend",
+                        ramp: "Cypress Bend",
+                        state: "LA",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-04-13-toledo-bend",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-04-13-toledo-bend"
+                    },
+                    {
+                        date: "2019-06-08",
+                        lake: "Sam Rayburn",
+                        ramp: "Umphrey",
+                        state: "TX",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-06-08-sam-rayburn",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-06-08-sam-rayburn"
+                    },
+                    {
+                        date: "2019-09-21",
+                        lake: "Sam Rayburn",
+                        ramp: "Umphrey",
+                        state: "TX",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-06-08-sam-rayburn",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-06-08-sam-rayburn"
+                    }
+                ]
+            },
+            {
+                trail: "BFL Gator",
+                tournaments: [{
+                        date: "2019-01-26",
+                        lake: "Okeechobee",
+                        ramp: "Roland Martin",
+                        state: "FL",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-01-26-okeechobee",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-01-26-okeechobee"
+                    },
+                    {
+                        date: "2019-02-16",
+                        lake: "Okeechobee",
+                        ramp: "C.Scott Driver",
+                        state: "FL",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-02-16-okeechobee",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-02-16-okeechobee"
+                    },
+                    {
+                        date: "2019-03-16",
+                        lake: "Okeechobee",
+                        ramp: "C.Scott Driver",
+                        state: "FL",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-03-16-okeechobee",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-03-16-okeechobee"
+                    },
+                    {
+                        date: "2019-03-30",
+                        lake: "Okeechobee",
+                        ramp: "Roland Martin",
+                        state: "FL",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-03-30-okeechobee",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-03-30-okeechobee"
+                    },
+                    {
+                        date: "2019-09-21",
+                        lake: "Okeechobee",
+                        ramp: "Roland Martin",
+                        state: "FL",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-03-30-okeechobee",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-03-30-okeechobee"
+                    }
+                ]
+            },
+            {
+                trail: "BFL Great Lakes",
+                tournaments: [{
+                        date: "2019-05-18",
+                        lake: "Mississippi Rvr",
+                        ramp: "W Copeland",
+                        state: "WI",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-05-18-ms-river-la-crosse",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-05-18-ms-river-la-crosse"
+                    },
+                    {
+                        date: "2019-06-15",
+                        lake: "Wolf Rvr Chain",
+                        ramp: "Winneconne",
+                        state: "WI",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-06-15-wolf-river-chain",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-06-15-wolf-river-chain"
+                    },
+                    {
+                        date: "2019-07-20",
+                        lake: "Mississippi Rvr",
+                        ramp: "W Copeland",
+                        state: "WI",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-07-20-ms-river-la-crosse",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-07-20-ms-river-la-crosse"
+                    },
+                    {
+                        date: "2019-08-17",
+                        lake: "Mississippi Rvr",
+                        ramp: "Washington St",
+                        state: "WI",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-08-17-ms-river-prairie-du-chien",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-08-17-ms-river-prairie-du-chien"
+                    },
+                    {
+                        date: "2019-09-07",
+                        lake: "Mississippi Rvr",
+                        ramp: "W Copeland",
+                        state: "WI",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-09-07-ms-river-la-crosse",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-09-07-ms-river-la-crosse"
                     }
                 ]
             },
@@ -2282,7 +2625,301 @@ module.exports = [
                     }
                 ]
             },
+            {
+                trail: "BFL Illini",
+                tournaments: [{
+                        date: "2019-04-27",
+                        lake: "Rend",
+                        ramp: "Wayne Fitzgerall",
+                        state: "IL",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-04-27-rend",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-04-27-rend"
+                    },
+                    {
+                        date: "2019-06-08",
+                        lake: "Shelbyville",
+                        ramp: "9th Street",
+                        state: "IL",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-06-08-shelbyville",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-06-08-shelbyville"
+                    },
+                    {
+                        date: "2019-06-29",
+                        lake: "Rend",
+                        ramp: "Wayne Fitzgerall",
+                        state: "IL",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-06-29-rend",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-06-29-rend"
+                    },
+                    {
+                        date: "2019-07-27",
+                        lake: "Ohio Rvr",
+                        ramp: "Golconda",
+                        state: "IL",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-07-27-ohio-river-golconda",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-07-27-ohio-river-golconda"
+                    },
+                    {
+                        date: "2019-09-07",
+                        lake: "Shelbyville",
+                        ramp: "9th Street",
+                        state: "IL",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-09-07-shelbyville",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-09-07-shelbyville"
+                    }
+                ]
+            },
+            {
+                trail: "BFL LBL",
+                tournaments: [
 
+                    {
+                        date: "2019-03-23",
+                        lake: "Kentucky-Barkley",
+                        ramp: "Kentucky Dam",
+                        state: "KY",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-03-23-kentucky-barkley",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-03-23-kentucky-barkley"
+                    },
+                    {
+                        date: "2019-05-18",
+                        lake: "Kentucky-Barkley",
+                        ramp: "Moors Resort",
+                        state: "KY",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-05-18-kentucky-barkley",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-05-18-kentucky-barkley"
+                    },
+                    {
+                        date: "2019-06-15",
+                        lake: "Kentucky-Barkley",
+                        ramp: "Paris Landing",
+                        state: "TN",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-06-15-kentucky-barkley",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-06-15-kentucky-barkley"
+                    }, {
+                        date: "2019-06-16",
+                        lake: "Kentucky-Barkley",
+                        ramp: "Paris Landing",
+                        state: "TN",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-06-16-kentucky-barkley-rescheduled",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-06-16-kentucky-barkley-rescheduled"
+                    },
+                    {
+                        date: "2019-09-14",
+                        lake: "Kentucky-Barkley",
+                        ramp: "Moors Resort",
+                        state: "KY",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-09-14-kentucky-barkley",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-09-14-kentucky-barkley"
+                    }
+                ]
+            },
+            {
+                trail: "BFL Michigan",
+                tournaments: [{
+                        date: "2019-06-22",
+                        lake: "St Clair",
+                        ramp: "Harley Ensign",
+                        state: "MI",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-06-22-st-clair",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-06-22-st-clair"
+                    },
+                    {
+                        date: "2019-07-13",
+                        lake: "St Clair",
+                        ramp: "Harley Ensign",
+                        state: "MI",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-07-13-st-clair",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-07-13-st-clair"
+                    },
+                    {
+                        date: "2019-08-03",
+                        lake: "St Clair",
+                        ramp: "Harley Ensign",
+                        state: "MI",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-08-03-st-clair",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-08-03-st-clair"
+                    },
+                    {
+                        date: "2019-08-24",
+                        lake: "Detroit Rvr",
+                        ramp: "Elizabeth Park",
+                        state: "MI",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-08-24-detroit-river",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-08-24-detroit-river"
+                    },
+                    {
+                        date: "2019-09-21",
+                        lake: "Detroit Rvr",
+                        ramp: "Elizabeth Park",
+                        state: "MI",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-09-21-detroit-river",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-09-21-detroit-river"
+                    }
+                ]
+            },
+            {
+                trail: "BFL Mississippi",
+                tournaments: [{
+                        date: "2019-03-10",
+                        lake: "Ross Barnett",
+                        ramp: "Tommy's",
+                        state: "FL",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-03-10-ross-barnett-rescheduled",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-03-10-ross-barnett-rescheduled"
+                    },
+                    {
+                        date: "2019-04-06",
+                        lake: "Pickwick",
+                        ramp: "JP Coleman",
+                        state: "FL",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-04-06-pickwick",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-04-06-pickwick"
+                    },
+                    {
+                        date: "2019-05-18",
+                        lake: "Pickwick",
+                        ramp: "JP Coleman",
+                        state: "FL",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-05-18-pickwick",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-05-18-pickwick"
+                    },
+                    {
+                        date: "2019-06-15",
+                        lake: "Ross Barnett",
+                        ramp: "Tommy's",
+                        state: "FL",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-06-15-ross-barnett",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-06-15-ross-barnett"
+                    },
+                    {
+                        date: "2019-09-28",
+                        lake: "Pickwick",
+                        ramp: "JP Coleman",
+                        state: "FL",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-09-28-pickwick",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-09-28-pickwick"
+                    }
+                ]
+            },
+            {
+                trail: "BFL Mountain",
+                tournaments: [{
+                        date: "2019-02-23",
+                        lake: "Dale Hollow",
+                        ramp: "Star Point",
+                        state: "TN",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-02-23-dale-hollow",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-02-23-dale-hollow"
+                    },
+                    {
+                        date: "2019-03-16",
+                        lake: "Dale Hollow",
+                        ramp: "Star Point",
+                        state: "TN",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-03-16-dale-hollow-rescheduled",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-03-16-dale-hollow-rescheduled"
+                    },
+                    {
+                        date: "2019-05-04",
+                        lake: "Cumberland",
+                        ramp: "General Burnside",
+                        state: "TN",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-05-04-cumberland-rescheduled",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-05-04-cumberland-rescheduled"
+                    },
+                    {
+                        date: "2019-06-22",
+                        lake: "Barren Rvr",
+                        ramp: "Port Oliver",
+                        state: "TN",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-06-22-barren-river",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-06-22-barren-river"
+                    },
+                    {
+                        date: "2019-09-07",
+                        lake: "Cherokee",
+                        ramp: "County Line Hwy 25",
+                        state: "TN",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-09-07-cherokee",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-09-07-cherokee"
+                    }
+                ]
+            },
+            {
+                trail: "BFL Music City",
+                tournaments: [{
+                        date: "2019-03-09",
+                        lake: "Percy Priest",
+                        ramp: "Fate Sanders",
+                        state: "TN",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-03-09-percy-priest",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-03-09-percy-priest"
+                    },
+                    {
+                        date: "2019-03-30",
+                        lake: "Center Hill",
+                        ramp: "Ragland Bottom",
+                        state: "TN",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-03-30-center-hill",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-03-30-center-hill"
+                    },
+                    {
+                        date: "2019-05-11",
+                        lake: "Tim's Ford",
+                        ramp: "Tim's Ford BC",
+                        state: "TN",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-05-11-tims-ford",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-05-11-tims-ford"
+                    },
+                    {
+                        date: "2019-06-08",
+                        lake: "Old Hickory",
+                        ramp: "Bulls Creek",
+                        state: "TN",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-06-08-old-hickory",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-06-08-old-hickory"
+                    },
+                    {
+                        date: "2019-09-21",
+                        lake: "Old Hickory",
+                        ramp: "Bulls Creek",
+                        state: "TN",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-09-21-old-hickory",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-09-21-old-hickory"
+                    }
+                ]
+            },
             {
                 trail: "BFL NC",
                 tournaments: [
@@ -2331,6 +2968,157 @@ module.exports = [
                         txDetail: "FLW",
                         resultsLink: "https://www.flwfishing.com/results/2019-09-21-norman",
                         entryLink: "https://www.flwfishing.com/tournaments/2019-09-21-norman"
+                    }
+                ]
+            },
+            {
+                trail: "BFL Northeast",
+                tournaments: [
+                    {
+                        date: "2019-05-18",
+                        lake: "Chesapeake Bay",
+                        ramp: "Anchor Marina",
+                        state: "MD",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-05-18-chesapeake-bay",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-05-18-chesapeake-bay"
+                    },
+                    {
+                        date: "2019-06-15",
+                        lake: "Chesapeake Bay",
+                        ramp: "Anchor Marina",
+                        state: "MD",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-06-15-chesapeake-bay",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-06-15-chesapeake-bay"
+                    },
+                    {
+                        date: "2019-07-13",
+                        lake: "Champlain",
+                        ramp: "Dock Street Landing",
+                        state: "NY",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-07-13-champlain",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-07-13-champlain"
+                    },
+                    {
+                        date: "2019-08-03",
+                        lake: "Oneida",
+                        ramp: "Oneida Shores CP",
+                        state: "NY",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-08-03-oneida",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-08-03-oneida"
+                    },
+                    {
+                        date: "2019-09-14",
+                        lake: "1000 Islands",
+                        ramp: "Clayton Village",
+                        state: "NY",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-09-14-1000-islands",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-09-14-1000-islands"
+                    }
+                ]
+            },
+            {
+                trail: "BFL Okie",
+                tournaments: [
+                    {
+                        date: "2019-04-06",
+                        lake: "Arkansas River",
+                        ramp: "Three Forks",
+                        state: "OK",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-04-06-arkansas-river",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-04-06-arkansas-river"
+                    },
+                    {
+                        date: "2019-04-27",
+                        lake: "Eufaula",
+                        ramp: "North Point",
+                        state: "OK",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-04-27-eufaula",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-04-27-eufaula"
+                    },
+                    {
+                        date: "2019-04-28",
+                        lake: "Eufaula",
+                        ramp: "North Point",
+                        state: "OK",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/tournaments/2019-04-28-eufaula-rescheduled",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-04-28-eufaula-rescheduled"
+                    },
+                    {
+                        date: "2019-06-22",
+                        lake: "Ft Gibson",
+                        ramp: "Taylor's Ferry",
+                        state: "OK",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-06-22-ft-gibson",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-06-22-ft-gibson"
+                    },
+                    {
+                        date: "2019-09-07",
+                        lake: "Grand",
+                        ramp: "Wolf Creek",
+                        state: "OK",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-09-07-grand",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-09-07-grand"
+                    }
+
+                ]
+            },
+            {
+                trail: "BFL Ozark",
+                tournaments: [
+
+                    {
+                        date: "2019-03-16",
+                        lake: "Table Rock",
+                        ramp: "TR State Park",
+                        state: "MO",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-03-16-table-rock",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-03-16-table-rock"
+                    },
+                    {
+                        date: "2019-05-04",
+                        lake: "Stockton",
+                        ramp: "Ruark Bluff",
+                        state: "MO",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-05-04-stockton",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-05-04-stockton"
+                    }, {
+                        date: "2019-05-18",
+                        lake: "Lake of the Ozarks",
+                        ramp: "Public Beach #2",
+                        state: "MO",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-05-18-lake-of-the-ozarks-rescheduled",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-05-18-lake-of-the-ozarks-rescheduled"
+                    },
+                    {
+                        date: "2019-06-29",
+                        lake: "Truman",
+                        ramp: "Long Shoal",
+                        state: "MO",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-06-29-truman",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-06-29-truman"
+                    },
+                    {
+                        date: "2019-09-14",
+                        lake: "Lake of the Ozarks",
+                        ramp: "Public Beach #2",
+                        state: "MO",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-09-14-lake-of-the-ozarks",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-09-14-lake-of-the-ozarks"
                     }
                 ]
             },
@@ -2385,7 +3173,55 @@ module.exports = [
                     }
                 ]
             },
-
+            {
+                trail: "BFL Savannah",
+                tournaments: [{
+                        date: "2019-02-09",
+                        lake: "Keowee",
+                        ramp: "South Cove",
+                        state: "SC",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-02-09-keowee",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-02-09-keowee"
+                    },
+                    {
+                        date: "2019-03-02",
+                        lake: "Clarks Hill",
+                        ramp: "Wildwood Park",
+                        state: "GA",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-03-02-clarks-hill",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-03-02-clarks-hill"
+                    },
+                    {
+                        date: "2019-04-06",
+                        lake: "Hartwell",
+                        ramp: "Tugaloo",
+                        state: "GA",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-04-06-hartwell",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-04-06-hartwell"
+                    },
+                    {
+                        date: "2019-05-11",
+                        lake: "Hartwell",
+                        ramp: "Green Pond",
+                        state: "SC",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-05-11-hartwell",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-05-11-hartwell"
+                    },
+                    {
+                        date: "2019-09-14",
+                        lake: "Hartwell",
+                        ramp: "Green Pond",
+                        state: "SC",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-09-14-hartwell",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-09-14-hartwell"
+                    }
+                ]
+            },
             {
                 trail: "BFL Shenandoah",
                 tournaments: [
@@ -2436,7 +3272,103 @@ module.exports = [
                         entryLink: "https://www.flwfishing.com/tournaments/2019-09-14-james-river"
                     }
                 ]
-            },
+            }, {
+                trail: "BFL SC",
+                tournaments: [{
+                        date: "2019-02-16",
+                        lake: "Hartwell",
+                        ramp: "Green Pond",
+                        state: "SC",
+                        txDetail: "FLW",
+                        resultsLink: "",
+                        entryLink: ""
+                    },
+                    {
+                        date: "2019-03-09",
+                        lake: "Santee Cooper",
+                        ramp: "John C Land",
+                        state: "SC",
+                        txDetail: "FLW",
+                        resultsLink: "",
+                        entryLink: ""
+                    },
+                    {
+                        date: "2019-03-30",
+                        lake: "Clarks Hill",
+                        ramp: "Wildwood Park",
+                        state: "SC",
+                        txDetail: "FLW",
+                        resultsLink: "",
+                        entryLink: ""
+                    },
+                    {
+                        date: "2019-05-18",
+                        lake: "Wylie",
+                        ramp: "Buster Boyd",
+                        state: "SC",
+                        txDetail: "FLW",
+                        resultsLink: "",
+                        entryLink: ""
+                    },
+                    {
+                        date: "2019-09-28",
+                        lake: "Hartwell",
+                        ramp: "Green Pond",
+                        state: "SC",
+                        txDetail: "FLW",
+                        resultsLink: "",
+                        entryLink: ""
+                    }
+                ]
+            }, {
+                trail: "BFL Volunteer",
+                tournaments: [{
+                        date: "2019-02-02",
+                        lake: "Watts Bar",
+                        ramp: "Tom Fuller",
+                        state: "TN",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-03-02-watts-bar",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-03-02-watts-bar"
+                    },
+                    {
+                        date: "2019-03-30",
+                        lake: "South Holston",
+                        ramp: "Observation Knob",
+                        state: "TN",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-03-30-south-holston",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-03-30-south-holston"
+                    },
+                    {
+                        date: "2019-04-27",
+                        lake: "Douglas",
+                        ramp: "Mountain Cove",
+                        state: "TN",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-04-27-douglas",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-04-27-douglas"
+                    },
+                    {
+                        date: "2019-05-18",
+                        lake: "Cherokee",
+                        ramp: "Hamblen",
+                        state: "TN",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-05-18-cherokee",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-05-18-cherokee"
+                    },
+                    {
+                        date: "2019-09-14",
+                        lake: "Watts Bar",
+                        ramp: "Tom Fuller",
+                        state: "TN",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2019-09-14-watts-bar",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-09-14-watts-bar"
+                    }
+                ]
+            }
         ]
     },
     {
@@ -2700,6 +3632,58 @@ module.exports = [
                     txDetail: "Tarheel Bass Series 4",
                     resultsLink: "http://tarheelbassseries.com/results/",
                     entryLink: "http://tarheelbassseries.com/tournaments/"
+                }
+            ]
+        }]
+    },
+    {
+        organization: "TXTT",
+        trails: [{
+            trail: "Team Trail",
+            tournaments: [{
+                    date: "2019-03-02",
+                    lake: "Travis",
+                    ramp: "Jones Bros",
+                    state: "TX",
+                    txDetail: "Texas Team Trail",
+                    resultsLink: "http://texasteamtrail.com/uploads/pdf/2019_TXTT_Travis_Results.xls_-_Compatibility_Mode_1.pdf",
+                    entryLink: "http://texasteamtrail.com/tournaments"
+                },
+                {
+                    date: "2019-04-06",
+                    lake: "Texoma",
+                    ramp: "Highport",
+                    state: "TX",
+                    txDetail: "Texas Team Trail",
+                    resultsLink: "http://texasteamtrail.com/uploads/pdf/2019_TXTT_Texoma_Results.pdf",
+                    entryLink: "http://texasteamtrail.com/tournaments"
+                },
+                {
+                    date: "2019-05-10",
+                    lake: "Rayburn",
+                    ramp: "Umphrey",
+                    state: "TX",
+                    txDetail: "Texas Team Trail",
+                    resultsLink: "http://texasteamtrail.com/uploads/pdf/2019_TXTT_Sam_Rayburn_Day_1_51019.pdf",
+                    entryLink: "http://texasteamtrail.com/tournaments"
+                },
+                {
+                    date: "2019-05-11",
+                    lake: "Rayburn",
+                    ramp: "Umphrey",
+                    state: "TX",
+                    txDetail: "Texas Team Trail",
+                    resultsLink: "http://texasteamtrail.com/uploads/pdf/2019_May_11_TXTT_Sam_Rayburn_Results.pdf",
+                    entryLink: "http://texasteamtrail.com/tournaments"
+                },
+                {
+                    date: "2019-06-08",
+                    lake: "Belton",
+                    ramp: "BLORA",
+                    state: "TX",
+                    txDetail: "2 Day Texas Team Trail Champ",
+                    resultsLink: "",
+                    entryLink: "http://texasteamtrail.com/tournaments"
                 }
             ]
         }]
