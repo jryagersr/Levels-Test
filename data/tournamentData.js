@@ -163,6 +163,109 @@ module.exports = [
         ]
     },
     {
+        organization: "Alabama Bass Trail",
+        trails: [{
+            trail: "North",
+            tournaments: [{
+                    date: "2019-02-23",
+                    lake: "Smith",
+                    ramp: "Smith Dam",
+                    state: "AL",
+                    txDetail: "",
+                    resultsLink: "https://www.alabamabasstrail.org/tournament-series/lsl-results/",
+                    entryLink: "https://www.alabamabasstrail.org/tournament-series/north-division/lsl-overview/"
+                },
+                {
+                    date: "2019-03-23",
+                    lake: "Wheeler",
+                    ramp: "Ingalls Harbor",
+                    state: "AL",
+                    txDetail: "",
+                    resultsLink: "https://www.alabamabasstrail.org/tournament-series/wl-results/",
+                    entryLink: "https://www.alabamabasstrail.org/tournament-series/north-division/wl-overview/"
+                },
+                {
+                    date: "2019-04-27",
+                    lake: "Weiss",
+                    ramp: "Leesburg",
+                    state: "AL",
+                    txDetail: "",
+                    resultsLink: "https://www.alabamabasstrail.org/tournament-series/wel-results/",
+                    entryLink: "https://www.alabamabasstrail.org/tournament-series/north-division/wel-overview/"
+                },
+                {
+                    date: "2019-05-11",
+                    lake: "Pickwick",
+                    ramp: "McFarland",
+                    state: "AL",
+                    txDetail: "",
+                    resultsLink: "https://www.alabamabasstrail.org/tournament-series/pl-results/",
+                    entryLink: "https://www.alabamabasstrail.org/tournament-series/north-division/pl-overview/"
+                },
+                {
+                    date: "2019-06-08",
+                    lake: "Neely Henry",
+                    ramp: "Coosa Landing",
+                    state: "AL",
+                    txDetail: "",
+                    resultsLink: "https://www.alabamabasstrail.org/tournament-series/nhl-results/",
+                    entryLink: "https://www.alabamabasstrail.org/tournament-series/north-division/nhl-overview/"
+                }
+            ]
+        },
+         {
+            trail: "South",
+            tournaments: [
+                {
+                    date: "2019-02-16",
+                    lake: "Martin",
+                    ramp: "Wind Creek SP",
+                    state: "AL",
+                    txDetail: "",
+                    resultsLink: "https://www.alabamabasstrail.org/tournament-series/lm-results/",
+                    entryLink: "https://www.alabamabasstrail.org/tournament-series/south-division/lm-overview/"
+                },
+                {
+                    date: "2019-03-30",
+                    lake: "Jordan",
+                    ramp: "Wetumpka",
+                    state: "AL",
+                    txDetail: "",
+                    resultsLink: "https://www.alabamabasstrail.org/tournament-series/jl-results/",
+                    entryLink: "https://www.alabamabasstrail.org/tournament-series/south-division/jl-overview/"
+                },
+                {
+                    date: "2019-04-27",
+                    lake: "Alabama River",
+                    ramp: "Cooter's Pond",
+                    state: "AL",
+                    txDetail: "",
+                    resultsLink: "https://www.alabamabasstrail.org/tournament-series/ar-results/",
+                    entryLink: "https://www.alabamabasstrail.org/tournament-series/south-division/ar-overview/"
+                },
+                {
+                    date: "2019-05-18",
+                    lake: "Lay",
+                    ramp: "Beeswax",
+                    state: "AL",
+                    txDetail: "",
+                    resultsLink: "https://www.alabamabasstrail.org/tournament-series/ll-results/",
+                    entryLink: "https://www.alabamabasstrail.org/tournament-series/south-division/ll-overview/"
+                },
+                {
+                    date: "2019-06-15",
+                    lake: "Eufaula",
+                    ramp: "Lakepoint SP",
+                    state: "AL",
+                    txDetail: "",
+                    resultsLink: "https://www.alabamabasstrail.org/tournament-series/le-results/",
+                    entryLink: "https://www.alabamabasstrail.org/tournament-series/south-division/le-overview/"
+                }
+
+            ]
+        }]
+    },
+    {
         organization: "Anglers",
         trails: [{
             trail: "Team Trail",
@@ -2973,8 +3076,7 @@ module.exports = [
             },
             {
                 trail: "BFL Northeast",
-                tournaments: [
-                    {
+                tournaments: [{
                         date: "2019-05-18",
                         lake: "Chesapeake Bay",
                         ramp: "Anchor Marina",
@@ -3023,8 +3125,7 @@ module.exports = [
             },
             {
                 trail: "BFL Okie",
-                tournaments: [
-                    {
+                tournaments: [{
                         date: "2019-04-06",
                         lake: "Arkansas River",
                         ramp: "Three Forks",
