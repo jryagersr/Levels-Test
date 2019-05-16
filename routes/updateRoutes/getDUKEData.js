@@ -33,12 +33,13 @@ module.exports = {
                                 flow: "N/A"
                             })
                         }
-                        callback(null, data);
-                    } else {
-                        console.log(`DUKE data is bad for ${lakeName}`);
-                        callback(null, body);
-                    }
+                    } 
                 });
+                callback(null, data);
+            }
+            else {
+                console.log(`DUKE data is bad for ${lakeName}`);
+                callback(null, body);
             }
         })
     }
