@@ -17,7 +17,7 @@ module.exports = {
   // ===============================================================================
 
   // check to see if an update is needed (true = update is needed);
-  checkForUpdate: function (lastRefresh, refreshInterval, dataLength) {
+  checkForUpdate: function (bodyOfWater,lastRefresh, refreshInterval, dataLength) {
     // set today's date for comparison and find minute difference
     let today = new Date();
     let diffMins = 2400; // default setting to force update
@@ -26,11 +26,11 @@ module.exports = {
       let msMinute = 60 * 1000;
       let msDay = 60 * 60 * 24 * 1000;
       let lastUpdate = new Date(lastRefresh);
-      let diffDays = Math.floor((today - lastUpdate) / msDay); // calculate diff in days
+      let diffDays = (today - lastUpdate) / msDay; // calculate diff in days
       if (diffDays > 1) {
         return true;
       }
-      diffMins = Math.floor(((today - lastUpdate) % msDay) / msMinute) //calculate diff in minutes
+      diffMins = Math.round((today - lastUpdate) / 60000); // minutes
     }
     if (diffMins > refreshInterval) {
       return true;
@@ -73,8 +73,6 @@ module.exports = {
 
           // Check to make sure there is enough data before de-duping
           if (updatedLake.data.length > 1) {
-            // while the first two entries still have dupes
-            console.log(updatedLake.bodyOfWater);
               // loop through the data, beginning at first index
               for (var i = 1; i < updatedLake.data.length; i++) {
                 // check to see if there are two duplicate entrys

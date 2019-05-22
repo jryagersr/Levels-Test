@@ -2,7 +2,6 @@
 // DEPENDENCIES
 // Series of npm packages that we will use to give our server useful functionality
 // ==============================================================================
-require('newrelic');
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
@@ -40,30 +39,6 @@ app.use(function(error, req, res, next) {
   res.status(500).send("500: Internal Server Error");
 });
 
-// authentication passport + mongoose
-// var mongoose = require('mongoose');
-//   mongoose.Promise = global.Promise;
-
-//   mongoose.connect('mongodb://localhost/BassSavvyTestDb')
-//     .then(() => console.log('connection successful'))
-//     .catch((err) => console.error(err));
-
-//   var passport = require('passport');
-//   var LocalStrategy = require('passport-local').Strategy;
-
-//   app.use(require('express-session')({
-//     secret: 'keyboard cat',
-//     resave: false,
-//     saveUninitialized: false
-//   }));
-//   app.use(passport.initialize());
-//   app.use(passport.session());
-
-//   var User = require('./models/User');
-//   passport.use(new LocalStrategy(User.authenticate()));
-//   passport.serializeUser(User.serializeUser());
-//   passport.deserializeUser(User.deserializeUser());
-
 // ================================================================================
 // ROUTER
 // The below points our server to a series of "route" files.
@@ -72,7 +47,6 @@ app.use(function(error, req, res, next) {
 
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
-require("./routes/authRoutes")(app);
 
 // =============================================================================
 // LISTENER

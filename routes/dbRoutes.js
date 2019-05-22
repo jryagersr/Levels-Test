@@ -62,7 +62,7 @@ module.exports = function (app) {
             let currentLake = data[0];
 
             //check to see if update is needed (function returns true if update is needed)
-            if (update.checkForUpdate(currentLake.lastRefresh, currentLake.refreshInterval, currentLake.data.length)) {
+            if (update.checkForUpdate(currentLake.bodyOfWater, currentLake.lastRefresh, currentLake.refreshInterval, currentLake.data.length)) {
               // update current lake
               // determine which data source and run function
               switch (currentLake.dataSource[0]) {
@@ -89,26 +89,26 @@ module.exports = function (app) {
                   });
                   break;
 
-                  case "APC":
-                    apc.getAPCData(currentLake.elevURL, currentLake.bodyOfWater, function (error, data) {
-                      if (error) {
-                        console.log(error);
-                        return;
-                        // if successful return the data
-                      } else {
-                        // update the current lake
-                        update.updateAndReturnOneLake(currentLake.bodyOfWater, currentLake.lastRefresh, data, function (error, data) {
-                          if (error) {
-                            console.log(error);
-                            return;
-                          }else {
-                            // send updated lake to client
-                            res.json(data);
-                          }
-                        })
-                      }
-                    });
-                    break;
+                case "APC":
+                  apc.getAPCData(currentLake.elevURL, currentLake.bodyOfWater, function (error, data) {
+                    if (error) {
+                      console.log(error);
+                      return;
+                      // if successful return the data
+                    } else {
+                      // update the current lake
+                      update.updateAndReturnOneLake(currentLake.bodyOfWater, currentLake.lastRefresh, data, function (error, data) {
+                        if (error) {
+                          console.log(error);
+                          return;
+                        } else {
+                          // send updated lake to client
+                          res.json(data);
+                        }
+                      })
+                    }
+                  });
+                  break;
 
                 case "CUBE":
                   cube.getCUBEData(currentLake.bodyOfWater, function (error, data) {
@@ -268,8 +268,8 @@ module.exports = function (app) {
                 default:
                   console.log(`No data source for ${currentLake.bodyOfWater}`);
                   res.json(currentLake);
-                  //console.log("Data source could not be found.");
-                  //res.send("Data source could not be found.");
+                //console.log("Data source could not be found.");
+                //res.send("Data source could not be found.");
               }
             }
             // if no update is needed, send currentLake to client
@@ -327,17 +327,20 @@ function updateAllLakes() {
       if (err) {
         res.send("There was a problem querying the database");
       } else {
-        
+
+        //set all lakes equal to data returned
+        let allLakes = data;
+
         // initiate counter
         let i = 0;
         // start timer
-        setInterval(function () {
+        var timer = setInterval(function () {
 
-          // set currentLake equal to returned lake document
-          let currentLake = data[i];
+          // set currentLake for each loop
+          let currentLake = allLakes[i];
 
           //check to see if update is needed (function returns true if update is needed)
-          if (update.checkForUpdate(currentLake.lastRefresh, currentLake.refreshInterval, currentLake.data.length)) {
+          if (update.checkForUpdate(currentLake.bodyOfWater, currentLake.lastRefresh, currentLake.refreshInterval, currentLake.data.length)) {
             // update current lake
             // determine which data source and run function
             switch (currentLake.dataSource[0]) {
@@ -360,23 +363,23 @@ function updateAllLakes() {
                 });
                 break;
 
-                case "APC":
-                  apc.getAPCData(currentLake.elevURL, currentLake.bodyOfWater, function (error, data) {
-                    if (error) {
-                      console.log(error);
-                      return;
-                      // if successful return the data
-                    } else {
-                      // update the current lake
-                      update.updateAndReturnOneLake(currentLake.bodyOfWater, currentLake.lastRefresh, data, function (error, data) {
-                        if (error) {
-                          console.log(error);
-                          return;
-                        }
-                      })
-                    }
-                  });
-                  break;
+              case "APC":
+                apc.getAPCData(currentLake.elevURL, currentLake.bodyOfWater, function (error, data) {
+                  if (error) {
+                    console.log(error);
+                    return;
+                    // if successful return the data
+                  } else {
+                    // update the current lake
+                    update.updateAndReturnOneLake(currentLake.bodyOfWater, currentLake.lastRefresh, data, function (error, data) {
+                      if (error) {
+                        console.log(error);
+                        return;
+                      }
+                    })
+                  }
+                });
+                break;
 
               case "CUBE":
                 cube.getCUBEData(currentLake.bodyOfWater, function (error, data) {
@@ -505,8 +508,8 @@ function updateAllLakes() {
                 break;
 
               default:
-              console.log(`No data source for ${currentLake.bodyOfWater}`) ;
-                //res.send("Data source could not be found.");
+                console.log(`No data source for ${currentLake.bodyOfWater}`);
+              //res.send("Data source could not be found.");
             }
           }
           // if no update is needed log to console
@@ -516,9 +519,14 @@ function updateAllLakes() {
 
           // increment counter
           i++;
+
           // if counter hits the end of data reset
           if (i > data.length - 1) {
-            i = 0;
+            clearInterval(timer);
+            // wait for the final update to finish before resetting
+            setTimeout(function () {
+              updateAllLakes();
+            }, 30000);
           }
 
         }, 20 * 1000); // 20 second interval
