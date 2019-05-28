@@ -2567,6 +2567,23 @@ module.exports = [
         dataSource: ["ACE"], // array of calls to make to retrieve data
     },
     {
+        bodyOfWater: "Keystone", // lake name
+        state: ["Oklahoma"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 723.0,
+        topOfFloodControl: 754.0,
+        topOfDam: 771.0,
+        lat: 36.168618,
+        long: -96.268313,
+        elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=5502051&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+        flowURL: "",
+        href: "/lakes/keystone",
+        dataSource: ["ACE"], // array of calls to make to retrieve data
+    },
+    {
         bodyOfWater: "Lawtonka", // lake name
         state: ["Oklahoma"],
         data: [],

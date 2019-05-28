@@ -121,9 +121,9 @@ function buildElevChart(data, lake) {
 
     // Set y axis limits for Flow Chart
     chartMinElevLimit = Math.round(chartMinElev) - 2; // set the chart lower limit
-    if (chartMinElevLimit > lake.normalPool) chartMinElevLimit = lake.normalPool - 2; // make sure normal pool line shows.
+    if (chartMinElevLimit > lake.normalPool) chartMinElevLimit = lake.normalPool - 3; // make sure normal pool line shows.
     chartMaxElevLimit = Math.round(chartMaxElev) + 2; // set the chart upper limit
-    if (chartMaxElevLimit < lake.normalPool) chartMaxElevLimit = lake.normalPool + 2; // make sure normal pool line shows.
+    if (chartMaxElevLimit < lake.normalPool) chartMaxElevLimit = lake.normalPool + 3; // make sure normal pool line shows.
 
     var ctx = document.getElementById('myElevChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
