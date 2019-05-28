@@ -55,6 +55,8 @@ function buildElevChart(data, lake) {
     let labelBatch = [];
     let dataElevBatch = [];
     let dataNPBatch = []; // Storage for Normal Pool batch data
+    let dataFCBatch = []; // Storage for Top of Flood Control batch data
+    let dataTDBatch = []; // Storage for Top of Flood Control batch data
     let sumOfElevs = 0;
     let divisor = 1;
     let k = 0; // our iterator after starting elevation
@@ -88,8 +90,10 @@ function buildElevChart(data, lake) {
                     chartMinElev = sumOfElevs / divisor; // update Min Elev average
                 labelBatch.push(data[k - 1].date);
                 dataElevBatch.push((sumOfElevs / divisor).toFixed(2)); // calculate average
-                dataNPBatch.push(lake.normalPool); // Normal Pool line batch (currently trying to get it to display)
-                                         
+                dataNPBatch.push(lake.normalPool); // Normal Pool line batch 
+                dataFCBatch.push(lake.topOfFloodControl); // Top of Flood Control Pool line batch
+                dataTDBatch.push(lake.topOfDam); // Top of Dam line batch
+
                 sumOfElevs = data[k].elev;
                 divisor = 1;
             }
@@ -102,13 +106,24 @@ function buildElevChart(data, lake) {
     // push the final day's values after looping
     labelBatch.push(data[k - 1].date); // put final day date value in array
     dataElevBatch.push((sumOfElevs / divisor).toFixed(2)); // calculate average final day and push
+    dataNPBatch.push(lake.normalPool); // Normal Pool line batch (currently trying to get it to display)
+    dataFCBatch.push(lake.topOfFloodControl); // Normal Pool line batch (currently trying to get it to display)
+    dataTDBatch.push(lake.topOfDam); // Top of Dam line batch (currently trying to get it to display)
+
+    //check the final day's values for Min and MaxLimit
+    if ((sumOfElevs / divisor) > chartMaxElev) // if value is greater than max, replace max
+        chartMaxElev = sumOfElevs / divisor; // update Max Elev average
+    if ((sumOfElevs / divisor) < chartMinElev) // if value is less thank min, replace min
+        chartMinElev = sumOfElevs / divisor; // update Min Elev average
 
     labelBatch.reverse();
     dataElevBatch.reverse();
 
     // Set y axis limits for Flow Chart
     chartMinElevLimit = Math.round(chartMinElev) - 2; // set the chart lower limit
+    if (chartMinElevLimit > lake.normalPool) chartMinElevLimit = lake.normalPool - 2; // make sure normal pool line shows.
     chartMaxElevLimit = Math.round(chartMaxElev) + 2; // set the chart upper limit
+    if (chartMaxElevLimit < lake.normalPool) chartMaxElevLimit = lake.normalPool + 2; // make sure normal pool line shows.
 
     var ctx = document.getElementById('myElevChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
@@ -116,30 +131,41 @@ function buildElevChart(data, lake) {
     grd.addColorStop(1, 'rgb(0,55,255)');
     var chart = new Chart(ctx, {
         // The type of chart we want to create
-        type: 'line',
-
-        // The data for our dataset for second line. Currently not working.
-        data: {
-            labels: labelBatch,
-            datasets: [{
-                label: "Normal Pool",
-                // backgroundColor: 'rgb(179,221,255)',
-                borderColor: 'rgb(255, 140, 0)',
-                data: dataNPBatch
-            }]
-        },
-        // The type of chart we want to create
+       
         type: 'line',
 
         // The data for our dataset
         data: {
             labels: labelBatch,
-            datasets: [{
+            datasets: [
+                {
+                type: 'line',
                 label: "Level",
                 // backgroundColor: 'rgb(179,221,255)',
                 borderColor: 'rgb(0, 140, 255)',
                 data: dataElevBatch
-            }]
+            },
+            {
+                type: 'line',
+                label: "Normal Pool",
+                // backgroundColor: 'rgb(179,221,255)',
+                borderColor: 'rgb(100, 140, 100)',
+                data: dataNPBatch
+            },
+            {
+                type: 'line',
+                label: "Top Flood",
+                // backgroundColor: 'rgb(179,221,255)',
+                borderColor: 'rgb(172, 83, 83)',
+                data: dataFCBatch
+            },
+            {
+                label: "Top of Dam",
+                // backgroundColor: 'rgb(179,221,255)',
+                borderColor: 'rgb(0, 0, 0)',
+                data: dataTDBatch
+            }
+        ]
         },
 
         // Configuration options go here
@@ -230,6 +256,7 @@ function buildFlowChart(data) {
     // push the final day's values after looping
     labelBatch.push(data[k - 1].date); // Push final day data Date
     dataFlowBatch.push((sumOfFlows / divisor).toFixed(2)); // calculate average for final day and push
+    
     //check the final day's values for Min and MaxLimit
     if ((sumOfFlows / divisor) <= chartMinFlow)
         chartMinFlow = (sumOfFlows / divisor);
@@ -244,7 +271,7 @@ function buildFlowChart(data) {
     chartMaxFlowLimit = ((((chartMaxFlow - (chartMaxFlow % 1000)) / 1000) * 1.2) * 1000); // set the chart upper limit
 
     if (chartMinFlowLimit < 1000) chartMinFlowLimit = 0;
-    if (chartMaxFlowLimit < 2000)
+    if (chartMaxFlowLimit < 4000)
         chartMaxFlowLimit = 4000;
 
 

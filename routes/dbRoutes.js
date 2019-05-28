@@ -347,7 +347,7 @@ module.exports = function (app) {
                 return new Date(b.time) - new Date(a.time);
               });
               res.json(currentLake);
-              console.log(`No single lake update needed for ${currentLake.bodyOfWater}`);
+              //console.log(`No single lake update needed for ${currentLake.bodyOfWater}`);
             }
           }
         }
@@ -389,6 +389,9 @@ module.exports = function (app) {
 let totDataUpdate = 0;
 var totUpdateCounter = 0;
 var totCounter = 0;
+let updateCounter = 0;
+let oldLastRefresh = 0;
+let dataUpdated = 0;
 
 // function to update all lakes in the database
 function updateAllLakes() {
@@ -398,9 +401,6 @@ function updateAllLakes() {
         res.send("There was a problem querying the database");
       } else {
         // initiate counter
-let updateCounter = 0;
-let oldLastRefresh = 0;
-let dataUpdated = 0;
         let i = 0;
         // start timer
         var timer = setInterval(function () {
@@ -430,8 +430,8 @@ let dataUpdated = 0;
                         console.log(error);
                         return;
                       }
-                      if (oldLastRefresh !== currentLake.lastRefresh) 
-                      dataUpdated++;
+                      if (oldLastRefresh !== currentLake.lastRefresh)
+                        dataUpdated++;
                     })
                   }
                 });
@@ -450,8 +450,8 @@ let dataUpdated = 0;
                         console.log(error);
                         return;
                       }
-                      if (oldLastRefresh !== currentLake.lastRefresh) 
-                      dataUpdated++;
+                      if (oldLastRefresh !== currentLake.lastRefresh)
+                        dataUpdated++;
                     })
                   }
                 });
@@ -470,8 +470,8 @@ let dataUpdated = 0;
                         console.log(error);
                         return;
                       }
-                      if (oldLastRefresh !== currentLake.lastRefresh) 
-                      dataUpdated++;
+                      if (oldLastRefresh !== currentLake.lastRefresh)
+                        dataUpdated++;
                     })
                   }
                 });
@@ -490,8 +490,8 @@ let dataUpdated = 0;
                         console.log(error);
                         return;
                       }
-                      if (oldLastRefresh !== currentLake.lastRefresh) 
-                      dataUpdated++;
+                      if (oldLastRefresh !== currentLake.lastRefresh)
+                        dataUpdated++;
                     })
                   }
                 })
@@ -510,8 +510,8 @@ let dataUpdated = 0;
                         console.log(error);
                         return;
                       }
-                      if (oldLastRefresh !== currentLake.lastRefresh) 
-                      dataUpdated++;
+                      if (oldLastRefresh !== currentLake.lastRefresh)
+                        dataUpdated++;
                     })
                   }
                 });
@@ -530,8 +530,8 @@ let dataUpdated = 0;
                         console.log(error);
                         return;
                       }
-                      if (oldLastRefresh !== currentLake.lastRefresh) 
-                      dataUpdated++;
+                      if (oldLastRefresh !== currentLake.lastRefresh)
+                        dataUpdated++;
                     })
                   }
                 });
@@ -550,8 +550,8 @@ let dataUpdated = 0;
                         console.log(error);
                         return;
                       }
-                      if (oldLastRefresh !== currentLake.lastRefresh) 
-                      dataUpdated++;
+                      if (oldLastRefresh !== currentLake.lastRefresh)
+                        dataUpdated++;
                     })
                   }
                 });
@@ -570,8 +570,8 @@ let dataUpdated = 0;
                         console.log(error);
                         return;
                       }
-                      if (oldLastRefresh !== currentLake.lastRefresh) 
-                      dataUpdated++;
+                      if (oldLastRefresh !== currentLake.lastRefresh)
+                        dataUpdated++;
                     })
                   }
                 });
@@ -590,8 +590,8 @@ let dataUpdated = 0;
                         console.log(error);
                         return;
                       }
-                      if (oldLastRefresh !== currentLake.lastRefresh) 
-                      dataUpdated++;
+                      if (oldLastRefresh !== currentLake.lastRefresh)
+                        dataUpdated++;
                     })
                   }
                 });
@@ -610,8 +610,8 @@ let dataUpdated = 0;
                         console.log(error);
                         return;
                       }
-                      if (oldLastRefresh !== currentLake.lastRefresh) 
-                      dataUpdated++;
+                      if (oldLastRefresh !== currentLake.lastRefresh)
+                        dataUpdated++;
                     })
                   }
                 });
@@ -630,8 +630,8 @@ let dataUpdated = 0;
                         console.log(error);
                         return;
                       }
-                      if (oldLastRefresh !== currentLake.lastRefresh) 
-                      dataUpdated++;
+                      if (oldLastRefresh !== currentLake.lastRefresh)
+                        dataUpdated++;
                     })
                   }
                 });
@@ -650,8 +650,8 @@ let dataUpdated = 0;
                         console.log(error);
                         return;
                       }
-                      if (oldLastRefresh !== currentLake.lastRefresh) 
-                      dataUpdated++;
+                      if (oldLastRefresh !== currentLake.lastRefresh)
+                        dataUpdated++;
                     })
                   }
                 });
@@ -664,7 +664,7 @@ let dataUpdated = 0;
           }
           // if no update is needed log to console
           else {
-          //  console.log(`${i}. No update needed for ${currentLake.bodyOfWater} (${currentLake.dataSource[0]})`);
+            //  console.log(`${i}. No update needed for ${currentLake.bodyOfWater} (${currentLake.dataSource[0]})`);
           }
 
           // increment counter
@@ -679,14 +679,19 @@ let dataUpdated = 0;
             totUpdateCounter = totUpdateCounter + updateCounter;
             totCounter = totCounter + i;
             totDataUpdate = totDataUpdate + dataUpdated;
-            console.log (`# of total updates is ${totUpdateCounter} of ${totCounter} = ${((totUpdateCounter/totCounter)*100).toFixed(2)}%`);
-            console.log (`# of total data updates is ${totDataUpdate} of ${totUpdateCounter} = ${((totDataUpdate/totUpdateCounter)*100).toFixed(2)}%`);
+            console.log(`# of total updates is ${totUpdateCounter} of ${totCounter} = ${((totUpdateCounter/totCounter)*100).toFixed(2)}%`);
+            console.log(`# of total data updates is ${totDataUpdate} of ${totUpdateCounter} = ${((totDataUpdate/totUpdateCounter)*100).toFixed(2)}%`);
             //console.log (`# of total data updates is ${totDataUpdate} of ${totCounter} = ${((totDataUpdate/totCounter)*100).toFixed(2)}%`);
+            // Clear counters now, this allows any late returns to get counted on the next iteration
+            // SJWMD is usually slow to return data
+            updateCounter = 0;
+            oldLastRefresh = 0;
+            dataUpdated = 0;
             clearInterval(timer);
             // wait for the final update to finish before resetting
             setTimeout(function () {
               updateAllLakes();
-            }, 900000); // wait 15 minutes (plus 7.1 minutes to cycle through 213 lakes)
+            }, 900000); // wait 15 minutes (plus 7.1 minutes@2secondinterval to cycle through 213 lakes)
           }
 
         }, 2 * 1000); // 2 second interval

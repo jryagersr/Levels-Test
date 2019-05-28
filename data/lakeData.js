@@ -1335,6 +1335,7 @@ module.exports = [
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 659.0,
+        topOfFloodControl: 695.0,
         lat: 36.455453,
         long: -92.645632,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1609150&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
@@ -1350,6 +1351,7 @@ module.exports = [
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 660.0,
+        topOfFloodControl: 665.0,
         lat: 38.136876,
         long: -92.806876,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=5043030&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
@@ -1365,6 +1367,7 @@ module.exports = [
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 553.75,
+        topOfFloodControl: 580.0,
         lat: 36.361878,
         long: -92.233743,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=2211150&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
@@ -1380,6 +1383,7 @@ module.exports = [
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 839.0,
+        topOfFloodControl: 874.0,
         lat: 37.893713,
         long: -93.312066,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=15222030&p_parameter_type=Flow:Stor:Precip:Stage:Elev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
@@ -1410,6 +1414,7 @@ module.exports = [
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 706.02,
+        topOfFloodControl: 739.6,
         lat: 38.270197,
         long: -93.413133,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=15347030&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
@@ -2423,6 +2428,7 @@ module.exports = [
         seaLevelDelta: 0,
         normalPool: 710.0,
         topOfFloodControl: 732.0,
+        topOfDam: 745.0,
         lat: 36.892862,
         long: -95.964192,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=5338051&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
