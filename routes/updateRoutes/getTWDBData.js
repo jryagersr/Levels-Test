@@ -19,6 +19,7 @@ module.exports = {
             if (error) {
                 callback(error);
             }
+            //console.log ("TWDB Call", lakeName);
             _.each(body.split("\r\n"), function (line) {
                 // Split the text body into readable lines
                 var splitLine;
@@ -31,11 +32,13 @@ module.exports = {
                     // format timestamp for db
                     let timestamp = new Date(splitLine[0] + " 6:00");
                     // Push each line into data object
-                    data.push({
-                        time: timestamp,
-                        elev: splitLine[1],
-                        flow: "N/A"
-                    });
+
+                    if (splitLine[1] !== 0) // If elev not 0 (ie, unposted data)
+                        data.push({
+                            time: timestamp,
+                            elev: splitLine[1],
+                            flow: "N/A"
+                        });
                 }
             });
             callback(null, data.reverse()); // reverse the data 

@@ -18,11 +18,6 @@ module.exports = {
     }
     request(options, function (error, response, html) {
 
-      // do something
-
-      //}
-
-
       // Define our data template
       var data = [];
       // Make request for Alabama Power Company site, returns html
@@ -61,11 +56,12 @@ module.exports = {
         }
 
       });
-      data.push({
-        elev: apcElev,
-        time: apcTime,
-        flow: apcFlow
-      });
+      if (apcElev !== 0)  // If elev not 0 (ie, unposted data)
+        data.push({
+          elev: apcElev,
+          time: apcTime,
+          flow: apcFlow
+        });
       callback(null, data);
     });
   }

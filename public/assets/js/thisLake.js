@@ -1,4 +1,3 @@
-
 // Pull the lake name from the end of the current URL
 let parsedURL = window.location.href.split("/");
 let lakeRoute = parsedURL[parsedURL.length - 1];
@@ -51,13 +50,18 @@ function buildTable(data) {
 }
 
 // Function to build chart on page
-function buildElevChart(data) {
+function buildElevChart(data, lake) {
     // Our data must be parsed into separate flat arrays for the chart
     let labelBatch = [];
     let dataElevBatch = [];
+    let dataNPBatch = []; // Storage for Normal Pool batch data
     let sumOfElevs = 0;
     let divisor = 1;
     let k = 0; // our iterator after starting elevation
+    let chartMinElev = 100000; // y-axis Max elev value
+    let chartMaxElev = 0; // y-axis Min elev value
+    let chartMinElevLimit = 0; // y-axis Min elev Limit (for chart)
+    let chartMaxElevLimit = 0; // y-axis Max elev Limit (for chart)
     // find our starting elevation
     for (var i = 0; data.length; i++) {
         if (typeof data[i].elev == "number") {
@@ -78,26 +82,52 @@ function buildElevChart(data) {
             }
             // else we're on a new day. so push data and reset averages
             else {
+                if ((sumOfElevs / divisor) > chartMaxElev) // if value is greater than max, replace max
+                    chartMaxElev = sumOfElevs / divisor; // update Max Elev average
+                if ((sumOfElevs / divisor) < chartMinElev) // if value is less thank min, replace min
+                    chartMinElev = sumOfElevs / divisor; // update Min Elev average
                 labelBatch.push(data[k - 1].date);
                 dataElevBatch.push((sumOfElevs / divisor).toFixed(2)); // calculate average
+                dataNPBatch.push(lake.normalPool); // Normal Pool line batch (currently trying to get it to display)
+                                         
                 sumOfElevs = data[k].elev;
                 divisor = 1;
             }
         }
         // when a week of data has been reached stop
-        if (labelBatch.length > 6) {
+        if (labelBatch.length > 10) {
             break;
         }
     }
     // push the final day's values after looping
+    labelBatch.push(data[k - 1].date); // put final day date value in array
+    dataElevBatch.push((sumOfElevs / divisor).toFixed(2)); // calculate average final day and push
+
     labelBatch.reverse();
     dataElevBatch.reverse();
+
+    // Set y axis limits for Flow Chart
+    chartMinElevLimit = Math.round(chartMinElev) - 2; // set the chart lower limit
+    chartMaxElevLimit = Math.round(chartMaxElev) + 2; // set the chart upper limit
 
     var ctx = document.getElementById('myElevChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
     grd.addColorStop(0, 'rgb(0,140,255)');
     grd.addColorStop(1, 'rgb(0,55,255)');
     var chart = new Chart(ctx, {
+        // The type of chart we want to create
+        type: 'line',
+
+        // The data for our dataset for second line. Currently not working.
+        data: {
+            labels: labelBatch,
+            datasets: [{
+                label: "Normal Pool",
+                // backgroundColor: 'rgb(179,221,255)',
+                borderColor: 'rgb(255, 140, 0)',
+                data: dataNPBatch
+            }]
+        },
         // The type of chart we want to create
         type: 'line',
 
@@ -129,8 +159,16 @@ function buildElevChart(data) {
                     scaleLabel: {
                         display: false,
                         labelString: 'Level (feet)',
-                        fontSize: 20
-                    }
+                        fontSize: 20,
+                    },
+                    ticks: {
+                        min: chartMinElevLimit, // Set chart bottom at 1ft less than min elev value
+                        max: chartMaxElevLimit, // Set chart top at 1ft more than min elev value
+                        //stepSize: Math.round((chartMaxElev - chartMinElev) / 2), // Set the y-axis step value to  ft.
+                        //autoSkip: true,
+                        //maxTicksLimit: 8,
+                    },
+                    stacked: false
                 }]
             }
         }
@@ -146,6 +184,10 @@ function buildFlowChart(data) {
     let sumOfFlows = 0;
     let divisor = 1;
     let k = 0; // our iterator after starting flow
+    let chartMinFlow = 1000000; // y-axis Max elev value
+    let chartMaxFlow = 0; // y-axis Min elev value
+    let chartMinFlowLimit = 0; // y-axis Min elev value
+    let chartMaxFlowLimit = 0; // y-axis Max elev value
     // find our starting flow
     for (var i = 0; data.length; i++) {
         if (typeof data[i].flow == "number") {
@@ -168,6 +210,11 @@ function buildFlowChart(data) {
                 }
                 // else we're on a new day. so push data and reset averages
                 else {
+                    let avgFlow = sumOfFlows / divisor;
+                    if (avgFlow >= chartMaxFlow) // if value is greater than max, replace max
+                        chartMaxFlow = avgFlow; // set the max flow for calculating Chart y-axis Max later
+                    if (avgFlow <= chartMinFlow) // if value is less thank min, replace min
+                        chartMinFlow = avgFlow; // set the max flow for calculating Chart y-axis Min later
                     labelBatch.push(data[k - 1].date);
                     dataFlowBatch.push((sumOfFlows / divisor).toFixed(2)); // calculate average
                     sumOfFlows = data[k].flow;
@@ -176,13 +223,30 @@ function buildFlowChart(data) {
             }
         }
         // when a week of data has been reached stop
-        if (labelBatch.length > 6) {
+        if (labelBatch.length > 10) {
             break;
         }
     }
     // push the final day's values after looping
+    labelBatch.push(data[k - 1].date); // Push final day data Date
+    dataFlowBatch.push((sumOfFlows / divisor).toFixed(2)); // calculate average for final day and push
+    //check the final day's values for Min and MaxLimit
+    if ((sumOfFlows / divisor) <= chartMinFlow)
+        chartMinFlow = (sumOfFlows / divisor);
+    if ((sumOfFlows / divisor) >= chartMaxFlow)
+        chartMaxFlow = (sumOfFlows / divisor);
+
     labelBatch.reverse();
     dataFlowBatch.reverse();
+
+    // Set y axis limits for Flow Chart
+    chartMinFlowLimit = chartMinFlow - 1000; // set lower chart limit
+    chartMaxFlowLimit = ((((chartMaxFlow - (chartMaxFlow % 1000)) / 1000) * 1.2) * 1000); // set the chart upper limit
+
+    if (chartMinFlowLimit < 1000) chartMinFlowLimit = 0;
+    if (chartMaxFlowLimit < 2000)
+        chartMaxFlowLimit = 4000;
+
 
     var ctx = document.getElementById('myFlowChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
@@ -221,6 +285,13 @@ function buildFlowChart(data) {
                         display: false,
                         labelString: 'Flow (feet)',
                         fontSize: 20
+                    },
+                    ticks: {
+                        min: chartMinFlowLimit, // Set chart bottom at calculated value
+                        max: chartMaxFlowLimit, // Set chart top at calculated value
+                        //stepSize: 6, // Set the y-axis step value 
+                        //autoSkip: true,
+                        //maxTicksLimit: 8,
                     }
                 }]
             }
@@ -232,12 +303,12 @@ function buildFlowChart(data) {
 // Declare variable to hold currentLake object
 var currentLake = {};
 $.ajax({
-    url: "/api/find-one-lake",
-    method: "GET",
-    data: {
-        lakeName: lakeRoute
-    }
-})
+        url: "/api/find-one-lake",
+        method: "GET",
+        data: {
+            lakeName: lakeRoute
+        }
+    })
     .then(function (data) {
         currentLake = data;
         // Set lake title on page
@@ -270,7 +341,7 @@ $.ajax({
             })
 
             // build elevation chart
-            buildElevChart(currentLake.data);
+            buildElevChart(currentLake.data, currentLake);
 
             // build flow chart if flows are available
             if (currentLake.data[0].flow !== "N/A") {
