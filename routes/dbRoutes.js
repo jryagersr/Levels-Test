@@ -691,10 +691,10 @@ function updateAllLakes() {
             // wait for the final update to finish before resetting
             setTimeout(function () {
               updateAllLakes();
-            }, 900000); // wait 15 minutes (plus 7.1 minutes@2secondinterval to cycle through 213 lakes)
+            }, 18 * 60000); // wait 15 minutes (plus 7.1 minutes@2secondinterval to cycle through 213 lakes)
           }
 
-        }, .5 * 1000); // 2 second interval
+        }, 2 * 1000); // 2 second interval
       }
     })
 }

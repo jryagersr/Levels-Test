@@ -1093,7 +1093,7 @@ module.exports = [
                         ramp: "Pinnacle",
                         state: "NC",
                         txDetail: "Qualifier 8",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-norman-nc-may-25-2019-steve-addington-matt-stout-weigh-in-13-61-lbs-for-the-win-next-lake-norman-catt-is-june-15th/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
                     },
                     {
@@ -2121,7 +2121,7 @@ module.exports = [
                         ramp: "Tamarac",
                         state: "NC",
                         txDetail: "Final",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-yadkin-spring-final-high-rock-lake-nc-may-25-2019-george-lambeth-herby-young-rack-up-22-77-lbs-2960-00/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
                     }
                 ]

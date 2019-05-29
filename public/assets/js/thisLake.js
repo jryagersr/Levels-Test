@@ -120,10 +120,10 @@ function buildElevChart(data, lake) {
     dataElevBatch.reverse();
 
     // Set y axis limits for Flow Chart
-    chartMinElevLimit = Math.round(chartMinElev) - 2; // set the chart lower limit
-    if (chartMinElevLimit > lake.normalPool) chartMinElevLimit = lake.normalPool - 3; // make sure normal pool line shows.
-    chartMaxElevLimit = Math.round(chartMaxElev) + 2; // set the chart upper limit
-    if (chartMaxElevLimit < lake.normalPool) chartMaxElevLimit = lake.normalPool + 3; // make sure normal pool line shows.
+    chartMinElevLimit = Math.round(chartMinElev) - 3; // set the chart lower limit
+    if (chartMinElevLimit > lake.normalPool) chartMinElevLimit = lake.normalPool - 2; // make sure normal pool line shows.
+    chartMaxElevLimit = Math.round(chartMaxElev) + 3; // set the chart upper limit
+    if (chartMaxElevLimit < lake.normalPool) chartMaxElevLimit = lake.normalPool + 2; // make sure normal pool line shows.
 
     var ctx = document.getElementById('myElevChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
@@ -150,20 +150,23 @@ function buildElevChart(data, lake) {
                 label: "Normal Pool",
                 // backgroundColor: 'rgb(179,221,255)',
                 borderColor: 'rgb(100, 140, 100)',
-                data: dataNPBatch
+                data: dataNPBatch,
+                tension: 0 // disables bezier curves
             },
             {
                 type: 'line',
                 label: "Top Flood",
                 // backgroundColor: 'rgb(179,221,255)',
                 borderColor: 'rgb(172, 83, 83)',
-                data: dataFCBatch
+                data: dataFCBatch,
+                tension: 0 // disables bezier curves
             },
             {
                 label: "Top of Dam",
                 // backgroundColor: 'rgb(179,221,255)',
                 borderColor: 'rgb(0, 0, 0)',
-                data: dataTDBatch
+                data: dataTDBatch,
+                tension: 0 // disables bezier curves
             }
         ]
         },
