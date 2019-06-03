@@ -1532,7 +1532,7 @@ module.exports = [
                         ramp: "Waterfront",
                         state: "NC",
                         txDetail: "Final",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-tidewater-nc-va-final-may-26-2019-jeremy-gatewood-charlie-reed-brought-in-20-07-lbs-take-home-1820-00-we-are-looking-forward-to-the-next-tidewater-trail-come-join-us/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-tidewater/"
                     }
                 ]

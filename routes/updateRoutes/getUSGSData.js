@@ -11,6 +11,7 @@ module.exports = {
     let displayBatch = [];
     let lakePool = 0;
     let elevationAdjust = 0;
+    let dataErrorTrue = false;
     var request = require("request");
     var data = [];
 
@@ -19,13 +20,18 @@ module.exports = {
         callback(error);
       }
 
-      if (typeof body == 'string') {
 
-        // clear displayBatch
-        displayBatch = [];
-  
+      // clear displayBatch
+      displayBatch = [];
+
+      try {
         data = JSON.parse(body);
+      } catch (error) {
+        console.error(error);
+        dataErrorTrue = true;
+      }
 
+      if (!dataErrorTrue) {
         // Check to see if the sensor is returning data
         if (data.value.timeSeries.length > 0) {
           let valuesIndex = 0;
@@ -93,10 +99,10 @@ module.exports = {
           // For each value push an object into displayBatch
           // Set our counter K variable before incrementing for flowUSGS to use
           // k = j;
-          if (elevValues.length <= 100) // If we only get 93 data values when we requested 96 hours, then it's hourly
-            jIncrement = 1;
-          else if (['Hudson', 'Lawtonka'].includes(bodyOfWater)) jIncrement = 2;
-          else if (!['Atchafalaya River Basin'].includes(bodyOfWater)) jIncrement = 4;
+          if (elevValues.length <= 100) jIncrement = 1; // If we only get 93 data values when we requested 96 hours, then it's hourly
+          if (['Hudson', 'Lawtonka', 'Missouri River (STL)'].includes(bodyOfWater)) jIncrement = 2;
+          if (!['Atchafalaya River Basin', 'Arkansas River (Pine Bluff)', 'Mississippi River (Knox)'].includes(bodyOfWater)) jIncrement = 4;
+          if (['Monroe'].includes(bodyOfWater)) jIncrement = 12;
           for (j = 0; j < elevValues.length; j += jIncrement) {
             let element = elevValues[j];
             let elev = element.value;
@@ -126,7 +132,7 @@ module.exports = {
         callback(null, displayBatch);
       } else {
         console.log(`Data ( ${body}) is bad for ${bodyOfWater} (USGS)`);
-        callback(null, exportData);
+        callback(null, body);
       }
     })
   }

@@ -77,7 +77,7 @@ module.exports = [
         topOfFloodControl: 605.0, // guess
         lat: 34.458445,
         long: -86.206939,
-        elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/GUH_O.xml?1545499372503",
+        elevURL: "https://soa.tva.gov/api/river/observed-data/GVDA1",
         flowURL: "",
         href: "/lakes/guntersville",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
@@ -221,7 +221,7 @@ module.exports = [
         topOfFloodControl: 475.0, //guess
         lat: 34.907393,
         long: -88.040723,
-        elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/PKH_O.xml?1545582182415",
+        elevURL: "https://soa.tva.gov/api/river/observed-data/PICT1",
         flowURL: "",
         href: "/lakes/pickwick",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
@@ -285,7 +285,7 @@ module.exports = [
         topOfFloodControl: 560.0, // guess
         lat: 34.651033,
         long: -87.017641,
-        elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/WEH_O.xml?1545585488936",
+        elevURL: "https://soa.tva.gov/api/river/observed-data/WHLA1",
         flowURL: "",
         href: "/lakes/wheeler",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
@@ -301,7 +301,7 @@ module.exports = [
         topOfFloodControl: 517.0, // guess
         lat: 34.818539,
         long: -87.489826,
-        elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/WLH_O.xml?1545585733788",
+        elevURL: "https://soa.tva.gov/api/river/observed-data/WLSA1",
         flowURL: "",
         href: "/lakes/wilson",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
@@ -371,6 +371,21 @@ module.exports = [
     // ARKANSAS  ---------------------------------------------------------------------------------------------------------
 
     {
+        bodyOfWater: "Arkansas River (Pine Bluff)", // lake name
+        state: ["Arkansas"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 31.0,
+        lat: 34.290278,
+        long: -91.995556,
+        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07294800&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
+        flowURL: "",
+        href: "/lakes/arkansasrvrpinebluff",
+        dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
         bodyOfWater: "Beaver", // lake name
         state: ["Arkansas"],
         data: [],
@@ -394,6 +409,8 @@ module.exports = [
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
         normalPool: 338.0,
+        topOfFloodControl: 338.5,
+        topOfDam: 339.0,
         lat: 35.370016,
         long: -93.399838,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1776150&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN",
@@ -1215,6 +1232,7 @@ module.exports = [
     },
 
     // KENTUCKY  ---------------------------------------------------------------------------------------------------------
+    
     {
         bodyOfWater: "Barkley", // lake name
         state: ["Kentucky", "Tennessee"],
@@ -1225,10 +1243,44 @@ module.exports = [
         normalPool: 358.0,
         lat: 36.999930,
         long: -88.189288,
-        elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/BAH_O.xml?1545583937120",
+        elevURL: "https://soa.tva.gov/api/river/observed-data/BARK2",
         flowURL: "",
         href: "/lakes/barkley",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "Barren", // lake name
+        state: ["Kentucky"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0.0,
+        normalPool: 552.0,
+        topOfFloodControl: 590.0,
+        topOfDam: 618.0,
+        lat: 36.882939,
+        long: -86.103359,
+        elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=245109&p_parameter_type=Flow:Stor:Precip:Stage:Elev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+        flowURL: "",
+        href: "/lakes/barrenriver",
+        dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "Cumberland", // lake name
+        state: ["Kentucky"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0.0,
+        normalPool: 723.0,
+        topOfFloodControl: 760.0,
+        topOfDam: 773.0,
+        lat:36.874419,
+        long: -85.074948,
+        elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=3228010&p_parameter_type=Flow:Stor:Precip:Stage:Elev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+        flowURL: "",
+        href: "/lakes/cumberland",
+        dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
     },
     {
         bodyOfWater: "Kentucky", // lake name
@@ -1240,12 +1292,79 @@ module.exports = [
         normalPool: 359.0,
         lat: 36.982417,
         long: -88.245251,
-        elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/KYH_O.xml?1545580918909",
+        elevURL: "https://soa.tva.gov/api/river/observed-data/KYDK2",
         flowURL: "",
         href: "/lakes/kentucky",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
     },
-
+    {
+        bodyOfWater: "Green", // lake name
+        state: ["Kentucky"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0.0,
+        normalPool: 675.0,
+        topOfFloodControl: 713.0,
+        topOfDam: 734.0,
+        lat: 37.244688,
+        long: -85.299316,
+        elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1108109&p_parameter_type=Flow:Stor:Precip:Stage:Elev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+        flowURL: "",
+        href: "/lakes/greenriver",
+        dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "Nolin", // lake name
+        state: ["Kentucky"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0.0,
+        normalPool: 515.0,
+        topOfFloodControl: 560.0,
+        topOfDam: 581.0,
+        lat: 37.276667,
+        long: -86.245278,
+        elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1144109&p_parameter_type=Flow:Stor:Precip:Stage:Elev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+        flowURL: "",
+        href: "/lakes/nolin",
+        dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "Rough", // lake name
+        state: ["Kentucky"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0.0,
+        normalPool: 495.0,
+        topOfFloodControl: 524.0,
+        topOfDam: 554.0,
+        lat:37.610606,
+        long: -86.483290,
+        elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1162109&p_parameter_type=Flow:Stor:Precip:Stage:Elev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+        flowURL: "",
+        href: "/lakes/rough",
+        dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "Taylorsville", // lake name
+        state: ["Kentucky"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0.0,
+        normalPool: 547.0,
+        topOfFloodControl: 592.0,
+        topOfDam: 623.0,
+        lat: 38.015323,
+        long: -85.268569,
+        elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=163109&p_parameter_type=Flow:Stor:Precip:Stage:Elev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+        flowURL: "",
+        href: "/lakes/taylorsville",
+        dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+    },
     // LOUISIANA  ---------------------------------------------------------------------------------------------------------
     {
         bodyOfWater: "Atchafalaya River Basin", // lake name
@@ -1261,7 +1380,8 @@ module.exports = [
         flowURL: "",
         href: "/lakes/atchafalayrvrbasinmelville",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-    },{
+    },
+    {
         bodyOfWater: "Fausse Point", // lake name
         state: ["Louisiana"],
         data: [],
@@ -1276,8 +1396,120 @@ module.exports = [
         href: "/lakes/faussepoint",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
     },
+    {
+        bodyOfWater: "Mississippi River (Knox)", // lake name
+        state: ["Louisiana"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 60.0,
+        lat: 31.073611,
+        long: -91.581944,
+        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07294800&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
+        flowURL: "",
+        href: "/lakes/mississippirvrknox",
+        dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+    },
 
     // MICHIGAN  ---------------------------------------------------------------------------------------------------------
+    
+    {
+        bodyOfWater: "Austin", // lake name
+        state: ["Michigan"],
+        data: [],
+        refreshInterval: 90, //minutes
+        elevDataInterval: 4, // Time between elevation data 4 = 15min, 2 = 30 min 1 = 60 min
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 845.65,
+        normalPool: 853.0,
+        lat: 42.180782,
+        long: -85.557856,
+        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04097188&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
+        flowURL: "",
+        href: "/lakes/austin",
+        dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "Higgins", // lake name
+        state: ["Michigan"],
+        data: [],
+        refreshInterval: 90, //minutes
+        elevDataInterval: 4, // Time between elevation data 4 = 15min, 2 = 30 min 1 = 60 min
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 1149.6,
+        normalPool: 1155.0,
+        lat: 44.496205,
+        long: -84.749850,
+        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=442805084411001&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
+        flowURL: "",
+        href: "/lakes/higgins",
+        dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "Houghton", // lake name
+        state: ["Michigan"],
+        data: [],
+        refreshInterval: 90, //minutes
+        elevDataInterval: 4, // Time between elevation data 4 = 15min, 2 = 30 min 1 = 60 min
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 1136.5,
+        normalPool: 1145.0,
+        lat: 44.333380,
+        long: -84.756237,
+        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=442400084472801&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
+        flowURL: "",
+        href: "/lakes/houghton",
+        dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "Intermediate", // lake name
+        state: ["Michigan"],
+        data: [],
+        refreshInterval: 90, //minutes
+        elevDataInterval: 4, // Time between elevation data 4 = 15min, 2 = 30 min 1 = 60 min
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 599.38,
+        normalPool: 606.0,
+        lat:45.034359,
+        long: -85.242023,
+        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=450415085153501&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
+        flowURL: "",
+        href: "/lakes/intermediate",
+        dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "Mullet", // lake name
+        state: ["Michigan"],
+        data: [],
+        refreshInterval: 90, //minutes
+        elevDataInterval: 4, // Time between elevation data 4 = 15min, 2 = 30 min 1 = 60 min
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0.0,
+        normalPool: 594.0,
+        lat: 45.519105,
+        long: -84.528138,
+        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04129950&period=PT168H&parameterCd=62615&siteType=LK&siteStatus=all",
+        flowURL: "",
+        href: "/lakes/intermediate",
+        dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "Otsego", // lake name
+        state: ["Michigan"],
+        data: [],
+        refreshInterval: 90, //minutes
+        elevDataInterval: 4, // Time between elevation data 4 = 15min, 2 = 30 min 1 = 60 min
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 1187.4,
+        normalPool: 1191.0,
+        lat: 42.769369,
+        long: -74.887660,
+        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=445512084415301&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
+        flowURL: "",
+        href: "/lakes/otsego",
+        dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+    },
     {
         bodyOfWater: "St Clair", // lake name
         state: ["Michigan"],
@@ -1292,6 +1524,22 @@ module.exports = [
         flowURL: "",
         href: "/lakes/stclair",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "St Helen", // lake name
+        state: ["Michigan"],
+        data: [],
+        refreshInterval: 90, //minutes
+        elevDataInterval: 4, // Time between elevation data 4 = 15min, 2 = 30 min 1 = 60 min
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 1148.4,
+        normalPool: 1155.0,
+        lat: 44.365965,
+        long:  -84.463713,
+        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=442409084274001&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
+        flowURL: "",
+        href: "/lakes/sthelen",
+        dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
 
     // MINNESOTA  ---------------------------------------------------------------------------------------------------------
@@ -1518,6 +1766,36 @@ module.exports = [
         flowURL: "",
         href: "/lakes/columbus",
         dataSource: ["ACE"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "Mississippi River (STL)", // lake name
+        state: ["Misouri"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0, // data reported as a delta to Full Pool -100
+        normalPool: 30.0,
+        lat: 38.629000,
+        long: -90.179778,
+        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07010000&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
+        flowURL: "",
+        href: "/lakes/mississippirvrstl",
+        dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "Missouri River (STL)", // lake name
+        state: ["Missouri"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0, // data reported as a delta to Full Pool -100
+        normalPool: 30.0,
+        lat: 38.629000,
+        long: -90.179778,
+        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07010000&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
+        flowURL: "",
+        href: "/lakes/missourirvrstl",
+        dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
     {
         bodyOfWater: "Pool B", // lake name
@@ -1970,8 +2248,6 @@ module.exports = [
         adTxSrc: "",
         adTxUrl: ""
     },
-    // Fontana Data is not correct for TVA. It says Fontana will be 'sluicing' util further notice. Not sure what that means.
-    //need to skip text until reaching the dat of the first level.
     {
         bodyOfWater: "Fontana", // lake name
         state: ["North Carolina"],
@@ -1982,7 +2258,7 @@ module.exports = [
         normalPool: 1703.0,
         lat: 35.442211,
         long: -83.707785,
-        elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/FNH_R.xml?1547937374477",
+        elevURL: "https://soa.tva.gov/api/river/observed-data/FONN7",
         flowURL: "",
         href: "/lakes/fontana",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
@@ -2419,6 +2695,7 @@ module.exports = [
     },
 
     // OKLAHOMA  ---------------------------------------------------------------------------------------------------------
+    
     {
         bodyOfWater: "Copan", // lake name
         state: ["Oklahoma"],
@@ -2893,7 +3170,7 @@ module.exports = [
         normalPool: 682.0,
         lat: 35.229058,
         long: -85.077891,
-        elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/CHH_O.xml?1548263632238",
+        elevURL: "https://soa.tva.gov/api/river/observed-data/CKDT1",
         flowURL: "",
         href: "/lakes/chickamauga",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
@@ -2908,7 +3185,7 @@ module.exports = [
         normalPool: 990.0,
         lat: 35.998267,
         long: -83.380776,
-        elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/DGH_O.xml?1545588002667",
+        elevURL: "https://soa.tva.gov/api/river/observed-data/DUGT1",
         flowURL: "",
         href: "/lakes/douglas",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
@@ -2923,7 +3200,7 @@ module.exports = [
         normalPool: 651.0,
         lat: 36.594828,
         long: -85.363089,
-        elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/DHH_O.xml?1545582944732",
+        elevURL: "https://soa.tva.gov/api/river/observed-data/DLHT1",
         flowURL: "",
         href: "/lakes/dalehollow",
         dataSource: ["TVA"], // array of calls to make to retrieve data
@@ -2938,7 +3215,7 @@ module.exports = [
         normalPool: 633.5,
         lat: 35.022662,
         long: -85.544745,
-        elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/NJH_O.xml?1545584741938",
+        elevURL: "https://soa.tva.gov/api/river/observed-data/NKJT1",
         flowURL: "",
         href: "/lakes/nicakjack",
         dataSource: ["TVA"], // array of calls to make to retrieve data
@@ -2953,7 +3230,7 @@ module.exports = [
         normalPool: 489.0,
         lat: 36.124047,
         long: -86.600873,
-        elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/JPH_O.xml?1545583512033",
+        elevURL: "https://soa.tva.gov/api/river/observed-data/JPHT1",
         flowURL: "",
         href: "/lakes/percypriest",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
@@ -2968,7 +3245,7 @@ module.exports = [
         normalPool: 814.0,
         lat: 35.735481,
         long: -84.248521,
-        elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/TEH_O.xml?1548483187456",
+        elevURL: "https://soa.tva.gov/api/river/observed-data/TDTT1",
         flowURL: "",
         href: "/lakes/tellico",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
@@ -2983,7 +3260,7 @@ module.exports = [
         normalPool: 889.0,
         lat: 35.215233,
         long: -86.240669,
-        elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/TFH_O.xml?1548482740011",
+        elevURL: "https://soa.tva.gov/api/river/observed-data/TMFT1",
         flowURL: "",
         href: "/lakes/timsford",
         dataSource: ["TVA"], // array of calls to make to retrieve data
@@ -2998,7 +3275,7 @@ module.exports = [
         normalPool: 741.0,
         lat: 35.691108,
         long: -84.726450,
-        elevURL: "http://r7j8v4x4.map2.ssl.hwcdn.net/WBH_O.xml?1545586001367",
+        elevURL: "https://soa.tva.gov/api/river/observed-data/WBOT1",
         flowURL: "",
         href: "/lakes/wattsbar",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data

@@ -131,44 +131,43 @@ function buildElevChart(data, lake) {
     grd.addColorStop(1, 'rgb(0,55,255)');
     var chart = new Chart(ctx, {
         // The type of chart we want to create
-       
+
         type: 'line',
 
         // The data for our dataset
         data: {
             labels: labelBatch,
-            datasets: [
+            datasets: [{
+                    type: 'line',
+                    label: "Level",
+                    // backgroundColor: 'rgb(179,221,255)',
+                    borderColor: 'rgb(0, 140, 255)',
+                    data: dataElevBatch
+                },
                 {
-                type: 'line',
-                label: "Level",
-                // backgroundColor: 'rgb(179,221,255)',
-                borderColor: 'rgb(0, 140, 255)',
-                data: dataElevBatch
-            },
-            {
-                type: 'line',
-                label: "Normal Pool",
-                // backgroundColor: 'rgb(179,221,255)',
-                borderColor: 'rgb(100, 140, 100)',
-                data: dataNPBatch,
-                tension: 0 // disables bezier curves
-            },
-            {
-                type: 'line',
-                label: "Top Flood",
-                // backgroundColor: 'rgb(179,221,255)',
-                borderColor: 'rgb(172, 83, 83)',
-                data: dataFCBatch,
-                tension: 0 // disables bezier curves
-            },
-            {
-                label: "Top of Dam",
-                // backgroundColor: 'rgb(179,221,255)',
-                borderColor: 'rgb(0, 0, 0)',
-                data: dataTDBatch,
-                tension: 0 // disables bezier curves
-            }
-        ]
+                    type: 'line',
+                    label: "Normal Pool",
+                    // backgroundColor: 'rgb(179,221,255)',
+                    borderColor: 'rgb(100, 140, 100)',
+                    data: dataNPBatch,
+                    tension: 0 // disables bezier curves
+                },
+                {
+                    type: 'line',
+                    label: "Top Flood",
+                    // backgroundColor: 'rgb(179,221,255)',
+                    borderColor: 'rgb(172, 83, 83)',
+                    data: dataFCBatch,
+                    tension: 0 // disables bezier curves
+                },
+                {
+                    label: "Top of Dam",
+                    // backgroundColor: 'rgb(179,221,255)',
+                    borderColor: 'rgb(0, 0, 0)',
+                    data: dataTDBatch,
+                    tension: 0 // disables bezier curves
+                }
+            ]
         },
 
         // Configuration options go here
@@ -242,8 +241,8 @@ function buildFlowChart(data) {
                     let avgFlow = sumOfFlows / divisor;
                     if (avgFlow >= chartMaxFlow) // if value is greater than max, replace max
                         chartMaxFlow = avgFlow; // set the max flow for calculating Chart y-axis Max later
-                    if (avgFlow <= chartMinFlow) // if value is less thank min, replace min
-                        chartMinFlow = avgFlow; // set the max flow for calculating Chart y-axis Min later
+                    //if (avgFlow <= chartMinFlow) // if value is less thank min, replace min
+                        //chartMinFlow = avgFlow; // set the max flow for calculating Chart y-axis Min later
                     labelBatch.push(data[k - 1].date);
                     dataFlowBatch.push((sumOfFlows / divisor).toFixed(2)); // calculate average
                     sumOfFlows = data[k].flow;
@@ -259,10 +258,10 @@ function buildFlowChart(data) {
     // push the final day's values after looping
     labelBatch.push(data[k - 1].date); // Push final day data Date
     dataFlowBatch.push((sumOfFlows / divisor).toFixed(2)); // calculate average for final day and push
-    
+
     //check the final day's values for Min and MaxLimit
-    if ((sumOfFlows / divisor) <= chartMinFlow)
-        chartMinFlow = (sumOfFlows / divisor);
+    //if ((sumOfFlows / divisor) <= chartMinFlow)
+        //chartMinFlow = (sumOfFlows / divisor);
     if ((sumOfFlows / divisor) >= chartMaxFlow)
         chartMaxFlow = (sumOfFlows / divisor);
 
@@ -273,7 +272,8 @@ function buildFlowChart(data) {
     chartMinFlowLimit = chartMinFlow - 1000; // set lower chart limit
     chartMaxFlowLimit = ((((chartMaxFlow - (chartMaxFlow % 1000)) / 1000) * 1.2) * 1000); // set the chart upper limit
 
-    if (chartMinFlowLimit < 1000) chartMinFlowLimit = 0;
+    //if (chartMinFlowLimit < 1000) chartMinFlowLimit = 0;
+    chartMinFlowLimit = 0; // Flow Min limit should just be set to 0
     if (chartMaxFlowLimit < 4000)
         chartMaxFlowLimit = 4000;
 
