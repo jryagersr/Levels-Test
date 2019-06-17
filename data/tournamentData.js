@@ -315,7 +315,7 @@ module.exports = [
                     ramp: "Occonneechee",
                     state: "NC-VA",
                     txDetail: "Anglers Choice",
-                    resultsLink: "",
+                    resultsLink: "https://www.anglerschoicemarine.com/fckimages/RESULTS_2019_June8_KERR.pdf",
                     entryLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule"
                 },
                 {
@@ -428,7 +428,7 @@ module.exports = [
                         ramp: "Nutbush",
                         state: "NC",
                         txDetail: "CATT Championship",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/2019-catt-academy-championship-kerr-lake-nc-june-1-2-2019-cavin-young-rob-wells-weigh-in-a-2-day-catch-of-37-14-lbs-they-collect-24800-00/",
                         entryLink: "https://www.cattteamtrail.com/shop/tournaments/2019-kerr-lake-catt-championship/"
                     }
                 ]
@@ -595,7 +595,7 @@ module.exports = [
                         ramp: "Lighthouse",
                         state: "NC",
                         txDetail: "Gold 4",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-east-roanoke-river-june-8-2019-1st-place-kevin-jones-tyler-jones-with-18-24-lbs/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-east/"
                     },
                     {
@@ -835,7 +835,7 @@ module.exports = [
                         ramp: "Riverfront",
                         state: "VA",
                         txDetail: "Gold",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-james-river-va-june-8-2019-robert-whitehurst-parker-hinks-do-it-again-22-01-lbs-2000-00/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-james-river/"
                     },
                     {
@@ -934,39 +934,6 @@ module.exports = [
                         resultsLink: "https://www.cattteamtrail.com/news/tournament-results-spring-final-kerr-lake-va-nc-april-28-2019-corey-leonard-paul-rigsbee-weigh-in-16-40-lbs-cash-a-4000-00-check-boom/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
                     }
-                ]
-            },
-            {
-                trail: "Monticello",
-                tournaments: [
-
-                    {
-                        date: "2019-02-23",
-                        lake: "Monticello",
-                        ramp: "Hwy 99",
-                        state: "SC",
-                        txDetail: "Qualifier 1",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-monticello-sc-feb-23-2019-farr-sexton-squeake-out-the-win/",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-monticello/"
-                    },
-                    {
-                        date: "2019-04-20",
-                        lake: "Monticello",
-                        ramp: "Hwy 99",
-                        state: "SC",
-                        txDetail: "Qualifier 3",
-                        resultsLink: "",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-monticello/"
-                    },
-                    {
-                        date: "2019-05-25",
-                        lake: "Monticello",
-                        ramp: "Hwy 99",
-                        state: "SC",
-                        txDetail: "Qualifier 4",
-                        resultsLink: "",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-monticello/"
-                    },
                 ]
             },
             {
@@ -1190,7 +1157,7 @@ module.exports = [
                         ramp: "Flemingtown",
                         state: "NC-VA",
                         txDetail: "Qualifier 6",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-old-north-kerr-lake-nc-va-june-8-2019-adam-blake-richardson-win/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
                     },
                     {
@@ -1201,57 +1168,6 @@ module.exports = [
                         txDetail: "Final",
                         resultsLink: "",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
-                    }
-                ]
-            },
-            {
-                trail: "Robinson",
-                tournaments: [
-
-                    {
-                        date: "2018-12-15",
-                        lake: "Robinson",
-                        ramp: "Easterling",
-                        state: "SC",
-                        txDetail: "Qualifier 1",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-robinson-dec-15-2018-hall-fales-win-a-tight-one-everyone-weighes-in/",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-robinson/"
-                    },
-                    {
-                        date: "2019-01-05",
-                        lake: "Robinson",
-                        ramp: "Easterling",
-                        state: "SC",
-                        txDetail: "Qualifier 2",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-robinson-jan-5-2018-lawhon-garrison-win-next-robinson-catt-is-jan-12th/",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-robinson/"
-                    },
-                    {
-                        date: "2019-01-12",
-                        lake: "Robinson",
-                        ramp: "Easterling",
-                        state: "SC",
-                        txDetail: "Qualifier 3",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-robinson-jan-12-2019-fletcher-faile-claim-the-top-spot/",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-robinson/"
-                    },
-                    {
-                        date: "2019-01-19",
-                        lake: "Robinson",
-                        ramp: "Easterling",
-                        state: "SC",
-                        txDetail: "Qualifier 4",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-robinson-sc-jan-19-2019-butler-gainey-win-win-points/",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-robinson/"
-                    },
-                    {
-                        date: "2019-01-26",
-                        lake: "Robinson",
-                        ramp: "Easterling",
-                        state: "SC",
-                        txDetail: "Final",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-robinson-fall-final-jan-26-2019-mike-clint-byrd-claim-1st-place/",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-robinson/"
                     }
                 ]
             },
@@ -1423,57 +1339,6 @@ module.exports = [
                         txDetail: "Final",
                         resultsLink: "https://www.cattteamtrail.com/news/tournament-results-smith-mtn-va-spring-final-april-20-2019-david-mills-shane-mills-weigh-in-20-56-lbs-2180-00/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-smith-mountain/"
-                    }
-                ]
-            },
-            {
-                trail: "Sparkleberry",
-                tournaments: [
-
-                    {
-                        date: "2018-12-29",
-                        lake: "Swamp",
-                        ramp: "Packs",
-                        state: "SC",
-                        txDetail: "Qualifier 1",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-sparkleberry-swamp-quest-dec-29-2018-deberry-miller-weigh-in-23-35-lbs-next-swamp-quest-is-jam-19th-at-packs/",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-sparkleberry-swamp-quest/"
-                    },
-                    {
-                        date: "2019-01-17",
-                        lake: "Swamp",
-                        ramp: "Packs",
-                        state: "SC",
-                        txDetail: "Qualifier 2",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-sparkleberry-swamp-quest-jan-19-2019-geddungs-peavy-drop-the-hammer-24-54-lbs-to-win-www-phantomoutdoors-com/",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-sparkleberry-swamp-quest/"
-                    },
-                    {
-                        date: "2019-02-17",
-                        lake: "Swamp",
-                        ramp: "Packs",
-                        state: "SC",
-                        txDetail: "Qualifier 3",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-sparkleberry-swamp-quest-feb-17-2019-kirby-deberry-smack-em/",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-sparkleberry-swamp-quest/"
-                    },
-                    {
-                        date: "2019-03-03",
-                        lake: "Swamp",
-                        ramp: "Packs",
-                        state: "SC",
-                        txDetail: "Qualifier 4",
-                        resultsLink: "https://www.cattteamtrail.com/tournament-results/tournament-results-sparkleberry-swamp-quest-mar-3-2019-geddings-peavy-weigh-em-up/",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-sparkleberry-swamp-quest/"
-                    },
-                    {
-                        date: "2019-03-16",
-                        lake: "Swamp",
-                        ramp: "Packs",
-                        state: "SC",
-                        txDetail: "Final",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-sparkleberry-swamp-quest-final-mar-16-2019-geddings-peavy-dominate/",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-sparkleberry-swamp-quest/"
                     }
                 ]
             },
@@ -1703,7 +1568,7 @@ module.exports = [
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Q2",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-wateree-sc-june-1-2019-alan-fletcher-donald-hinson-win-with-17-91-lbs/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
                     },
                     {
@@ -1712,7 +1577,7 @@ module.exports = [
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Gold 3",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-wateree-sc-june-8-2019-lee-morris-robert-ross-win-their-2nd-summer-qualifier-19-79-lbs-1225-00/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
                     },
                     {
@@ -1902,7 +1767,7 @@ module.exports = [
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 9",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-wateree-open-june-1-2019-michael-richardson-shane-cantley-widen-their-point-lead-1st-place-20-54-lbs-next-wateree-open-june-8/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
                     {
@@ -1911,7 +1776,7 @@ module.exports = [
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 10",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-wateree-open-sc-june-8-2019-lee-morris-robert-ross-double-up-19-79-lbs-900-00-2125-00-total/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
                     {
@@ -2387,7 +2252,7 @@ module.exports = [
                     ramp: "Water Street",
                     state: "NC",
                     txDetail: "",
-                    resultsLink: "",
+                    resultsLink: "https://www.ncbasschallenge.com/tournament-results/vann-and-lewis-go-back-to-back-with-roanoke-win/",
                     entryLink: "https://www.ncbasschallenge.com/2019-tournament-schedule/"
                 },
                 {
@@ -3713,8 +3578,8 @@ module.exports = [
                     ramp: "Crosspoint",
                     state: "NC",
                     txDetail: "",
-                    resultsLink: "",
-                    entryLink: ""
+                    resultsLink: "https://www.facebook.com/119889178084587/photos/a.1303365486403611/2665809523492527/?type=3",
+                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
                 },
                 {
                     date: "2019-05-29",
@@ -3722,8 +3587,8 @@ module.exports = [
                     ramp: "Crosspoint",
                     state: "NC",
                     txDetail: "",
-                    resultsLink: "",
-                    entryLink: ""
+                    resultsLink: "https://www.facebook.com/photo.php?fbid=10213917086698095&set=a.10213404514084100&type=3",
+                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
                 },
                 {
                     date: "2019-06-05",
@@ -3731,8 +3596,8 @@ module.exports = [
                     ramp: "Crosspoint",
                     state: "NC",
                     txDetail: "",
-                    resultsLink: "",
-                    entryLink: ""
+                    resultsLink: "https://www.facebook.com/photo.php?fbid=10213962634356758&set=pcb.10213962634996774&type=3&__tn__=HH-RH-R&eid=ARCuI3rue3hY7rXhYyE1DmWdNcMwE8fjZmzmLfpdugPzvWHYOt2AvzsiNwr8R4x5l9ZHDOU8LPxolvQg",
+                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
                 },
                 {
                     date: "2019-06-12",
@@ -3741,7 +3606,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "",
                     resultsLink: "",
-                    entryLink: ""
+                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
                 },
                 {
                     date: "2019-06-19",
@@ -3750,7 +3615,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "",
                     resultsLink: "",
-                    entryLink: ""
+                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
                 },
                 {
                     date: "2019-06-26",
@@ -3759,7 +3624,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "",
                     resultsLink: "",
-                    entryLink: ""
+                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
                 },
                 {
                     date: "2019-07-03",
@@ -3768,7 +3633,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "",
                     resultsLink: "",
-                    entryLink: ""
+                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
                 },
                 {
                     date: "2019-07-10",
@@ -3777,7 +3642,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "",
                     resultsLink: "",
-                    entryLink: ""
+                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
                 },
                 {
                     date: "2019-07-17",
@@ -3786,7 +3651,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "",
                     resultsLink: "",
-                    entryLink: ""
+                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
                 },
                 {
                     date: "2019-07-24",
@@ -3795,8 +3660,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "",
                     resultsLink: "",
-                    entryLink: ""
-                },
+                    entryLink:"https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"},
                 {
                     date: "2019-07-31",
                     lake: "Harris",
@@ -3804,7 +3668,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "",
                     resultsLink: "",
-                    entryLink: ""
+                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
                 },
                 {
                     date: "2019-08-07",
@@ -3813,7 +3677,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "",
                     resultsLink: "",
-                    entryLink: ""
+                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
                 },
                 {
                     date: "2019-08-14",
@@ -3822,7 +3686,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "",
                     resultsLink: "",
-                    entryLink: ""
+                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
                 },
                 {
                     date: "2019-08-21",
@@ -3831,7 +3695,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "",
                     resultsLink: "",
-                    entryLink: ""
+                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
                 },
                 {
                     date: "2019-08-28",
@@ -3840,7 +3704,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "",
                     resultsLink: "",
-                    entryLink: ""
+                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
                 }
             ]
         }]
@@ -4075,7 +3939,7 @@ module.exports = [
                     ramp: "BLORA",
                     state: "TX",
                     txDetail: "2 Day Texas Team Trail Champ",
-                    resultsLink: "",
+                    resultsLink: "http://texasteamtrail.com/uploads/pdf/2019_TXTT_Belton_Championship_Final_Results.pdf",
                     entryLink: "http://texasteamtrail.com/tournaments"
                 }
             ]

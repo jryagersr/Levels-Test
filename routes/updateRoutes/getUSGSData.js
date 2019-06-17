@@ -18,6 +18,7 @@ module.exports = {
     request(usgsURL, function (error, response, body) {
       if (error) {
         callback(error);
+        return;
       }
 
 

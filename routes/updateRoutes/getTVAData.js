@@ -21,7 +21,6 @@ module.exports = {
         callback(error);
       }
 
-
       let dataErrorTrue = false;
       try {
         data = JSON.parse(body);
@@ -34,7 +33,6 @@ module.exports = {
 
         _.each(data, function (dataSet) {
           if (dataSet[0] !== "Day") {
-
             // format timestamp for database
             let splitTime = dataSet[1].split(" ");
             let splitDate = dataSet[0].split("/");

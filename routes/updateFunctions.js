@@ -18,7 +18,7 @@ module.exports = {
   // ===============================================================================
 
   // check to see if an update is needed (true = update is needed);
-  checkForUpdate: function (lastRefresh, refreshInterval, dataLength,) {
+  checkForUpdate: function (lastRefresh, refreshInterval, dataLength, ) {
     // set today's date for comparison and find minute difference
     let today = new Date();
     let diffMins = 2400; // default setting to force update
@@ -43,15 +43,18 @@ module.exports = {
   // function to update and return one lake
   updateAndReturnOneLake: function (bodyOfWater, lastRefresh, data, callback) {
     // if new data exists, set the last Refresh time
-    if (typeof data.length == "undefined") {
-      console.log(data)
+    let updateData = data;
+    lakeUpdateFlag = false;
+    if (typeof updateData == "undefined") {
+      console.log(`Undefined data sent to uAROL ${bodyOfWater}`)
+      return;
     }
-    if (data.length > 0) {
-      if (lastRefresh !== data[0].time){
+    if (updateData.length > 0) {
+      if (lastRefresh !== data[0].time.toString()) {
         //console.log(`${bodyOfWater} Updated `)
-        //updateMade = updateMade++;
+        lakeUpdateFlag = true;
+        lastRefresh = updateData[0].time.toString();
       }
-      lastRefresh = data[0].time;
     }
     // use updateData to update the lake data
     db.model("Lake").findOneAndUpdate({
@@ -59,7 +62,7 @@ module.exports = {
       }, {
         $push: {
           "data": {
-            $each: data,
+            $each: updateData,
             $sort: {
               time: -1
             },
@@ -74,37 +77,36 @@ module.exports = {
         useFindAndModify: false,
         new: true
       })
-      .exec(function (err, data) {
+      .exec(function (err, updateData) {
         if (err) {
           console.log(err);
         } else {
-          let updatedLake = data;
 
           // Check to make sure there is enough data before de-duping
-          if (updatedLake.data.length > 1) {
+          if (updateData.data.length > 1) {
             // while the first two entries still have dupes
             //console.log(updatedLake.bodyOfWater);
             // loop through the data, beginning at first index
-            for (var i = 1; i < updatedLake.data.length; i++) {
+            for (var i = 1; i < updateData.data.length; i++) {
               // check to see if there are two duplicate entrys
               // convert timestamps to strings to avoid millisecond differences
-              if (updatedLake.data[i].time.toString() == updatedLake.data[i - 1].time.toString()) {
+              if (updateData.data[i].time.toString() == updateData.data[i - 1].time.toString()) {
                 // remove the oldest entry
-                updatedLake.data.splice(i - 1, 1);
+                updateData.data.splice(i - 1, 1);
               }
             }
           }
           // log that the lake was updated and return it
-            //console.log(`UPDATE COMPLETE for ${updatedLake.bodyOfWater} (${updatedLake.dataSource[0]})`);
-         
+          //console.log(`UPDATE COMPLETE for ${updateData.bodyOfWater} (${updateData.dataSource[0]})`);
 
-          callback(null, updatedLake);
+
+          callback(null, lakeUpdateFlag, updateData);
           // update the database with the 'clean' data
           db.model("Lake").updateOne({
               'bodyOfWater': bodyOfWater
             }, {
               $set: {
-                "data": updatedLake.data
+                "data": updateData.data
               }
             })
             .exec(function (err) {

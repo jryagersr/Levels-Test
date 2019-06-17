@@ -1,4 +1,3 @@
-
 let sponsors;
 
 if (typeof lakeRoute == 'undefined') {
@@ -7,10 +6,11 @@ if (typeof lakeRoute == 'undefined') {
 
 // call the backend and return sponsor data array
 $.ajax({
-    url: "/api/sponsors",
-    method: "GET",
-})
+        url: "/api/sponsors",
+        method: "GET",
+    })
     .then(function (data) {
+        let today = new Date();
         sponsors = data;
 
         // ad Logo functions
@@ -22,7 +22,8 @@ $.ajax({
         // Loop through our ads and append them to the page in format: <li><a><img></a></li>
         sponsors.forEach(function (element) {
             if (element.type == 'logo') {
-                if (element.location.includes("all") || element.location.includes(lakeRoute)) {
+                if ((element.location.includes("all") || element.location.includes(lakeRoute) &&
+                        (new Date(element.startDate) <= today && new Date(element.endDate) >= today))) {
                     var a = $("<a target='_blank'>");
                     a.attr("href", element.href);
                     var adImg = $("<img class='ad-logo'>");
@@ -46,7 +47,8 @@ $.ajax({
 
             // Loop through our ads and append them to the page in format: <li><a><img></a></li>
             sponsors.forEach(function (element) {
-                if (element.type == 'tournament') {
+                if ((element.type == 'tournament') &&
+                    (new Date(element.startDate) <= today && new Date(element.endDate) >= today)) {
                     if (element.location.includes("all") || element.location.includes(lakeRoute)) {
                         var a = $("<a target='_blank'>");
                         a.attr("href", element.href);
@@ -81,14 +83,14 @@ $.ajax({
                 x[i].classList.add("inactive");
             }
             slideIndex++;
-            if (slideIndex > x.length) { slideIndex = 1 }
+            if (slideIndex > x.length) {
+                slideIndex = 1
+            }
             x[slideIndex - 1].classList.remove("inactive");
             x[slideIndex - 1].classList.add("active");
-            setTimeout(function(){ 
+            setTimeout(function () {
                 carousel(x, className, slideIndex);
-             }, 3500);
+            }, 3500);
         }
 
     });
-
-
