@@ -9,12 +9,21 @@ module.exports = {
   // function to get ACE data
   getACEData: function (a2wURL, bodyOfWater, normalPool, elevInterval, callback) {
     var request = require("request");
+    var data = [];
     request(a2wURL, function (error, response, body) {
       if (error) {
         callback(error);
       } else {
-        if (typeof body !== 'json') {
-          let data = JSON.parse(body);
+        let dataErrorTrue = false;
+        try {
+          data = JSON.parse(body);
+        } catch (error) {
+          console.error(error);
+          dataErrorTrue = true;
+        }
+
+        if (!dataErrorTrue) {
+          // let data = JSON.parse(body);
           let elevEntries = [];
           let flowEntries = [];
           let exportData = [];
@@ -116,7 +125,7 @@ module.exports = {
           }
         } else {
           console.log(`Data is bad for ${bodyOfWater} (ACE)`);
-          callback(null, exportData);
+          callback(null, body);
         }
 
       }

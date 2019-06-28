@@ -17,9 +17,17 @@ module.exports = {
         request(options, function (error, response, body) {
             if (error) {
                 callback(error);
+                return;
             }
-            if (typeof body !== 'json') {
-                let dukeLakes = JSON.parse(body);
+            let dataErrorTrue = false;
+            try {
+              dukeLakes = JSON.parse(body);
+            } catch (error) {
+              console.error(error);
+              dataErrorTrue = true;
+            }
+      
+            if (!dataErrorTrue) {
                 let today = new Date();
 
                 dukeLakes.reverse().forEach(function (lake) {

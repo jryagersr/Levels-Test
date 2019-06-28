@@ -165,105 +165,105 @@ module.exports = [
     {
         organization: "Alabama Bass Trail",
         trails: [{
-            trail: "North",
-            tournaments: [{
-                    date: "2019-02-23",
-                    lake: "Smith",
-                    ramp: "Smith Dam",
-                    state: "AL",
-                    txDetail: "",
-                    resultsLink: "https://www.alabamabasstrail.org/tournament-series/lsl-results/",
-                    entryLink: "https://www.alabamabasstrail.org/tournament-series/north-division/lsl-overview/"
-                },
-                {
-                    date: "2019-03-23",
-                    lake: "Wheeler",
-                    ramp: "Ingalls Harbor",
-                    state: "AL",
-                    txDetail: "",
-                    resultsLink: "https://www.alabamabasstrail.org/tournament-series/wl-results/",
-                    entryLink: "https://www.alabamabasstrail.org/tournament-series/north-division/wl-overview/"
-                },
-                {
-                    date: "2019-04-27",
-                    lake: "Weiss",
-                    ramp: "Leesburg",
-                    state: "AL",
-                    txDetail: "",
-                    resultsLink: "https://www.alabamabasstrail.org/tournament-series/wel-results/",
-                    entryLink: "https://www.alabamabasstrail.org/tournament-series/north-division/wel-overview/"
-                },
-                {
-                    date: "2019-05-11",
-                    lake: "Pickwick",
-                    ramp: "McFarland",
-                    state: "AL",
-                    txDetail: "",
-                    resultsLink: "https://www.alabamabasstrail.org/tournament-series/pl-results/",
-                    entryLink: "https://www.alabamabasstrail.org/tournament-series/north-division/pl-overview/"
-                },
-                {
-                    date: "2019-06-08",
-                    lake: "Neely Henry",
-                    ramp: "Coosa Landing",
-                    state: "AL",
-                    txDetail: "",
-                    resultsLink: "https://www.alabamabasstrail.org/tournament-series/nhl-results/",
-                    entryLink: "https://www.alabamabasstrail.org/tournament-series/north-division/nhl-overview/"
-                }
-            ]
-        },
-         {
-            trail: "South",
-            tournaments: [
-                {
-                    date: "2019-02-16",
-                    lake: "Martin",
-                    ramp: "Wind Creek SP",
-                    state: "AL",
-                    txDetail: "",
-                    resultsLink: "https://www.alabamabasstrail.org/tournament-series/lm-results/",
-                    entryLink: "https://www.alabamabasstrail.org/tournament-series/south-division/lm-overview/"
-                },
-                {
-                    date: "2019-03-30",
-                    lake: "Jordan",
-                    ramp: "Wetumpka",
-                    state: "AL",
-                    txDetail: "",
-                    resultsLink: "https://www.alabamabasstrail.org/tournament-series/jl-results/",
-                    entryLink: "https://www.alabamabasstrail.org/tournament-series/south-division/jl-overview/"
-                },
-                {
-                    date: "2019-04-27",
-                    lake: "Alabama River",
-                    ramp: "Cooter's Pond",
-                    state: "AL",
-                    txDetail: "",
-                    resultsLink: "https://www.alabamabasstrail.org/tournament-series/ar-results/",
-                    entryLink: "https://www.alabamabasstrail.org/tournament-series/south-division/ar-overview/"
-                },
-                {
-                    date: "2019-05-18",
-                    lake: "Lay",
-                    ramp: "Beeswax",
-                    state: "AL",
-                    txDetail: "",
-                    resultsLink: "https://www.alabamabasstrail.org/tournament-series/ll-results/",
-                    entryLink: "https://www.alabamabasstrail.org/tournament-series/south-division/ll-overview/"
-                },
-                {
-                    date: "2019-06-15",
-                    lake: "Eufaula",
-                    ramp: "Lakepoint SP",
-                    state: "AL",
-                    txDetail: "",
-                    resultsLink: "https://www.alabamabasstrail.org/tournament-series/le-results/",
-                    entryLink: "https://www.alabamabasstrail.org/tournament-series/south-division/le-overview/"
-                }
+                trail: "North",
+                tournaments: [{
+                        date: "2019-02-23",
+                        lake: "Smith",
+                        ramp: "Smith Dam",
+                        state: "AL",
+                        txDetail: "",
+                        resultsLink: "https://www.alabamabasstrail.org/tournament-series/lsl-results/",
+                        entryLink: "https://www.alabamabasstrail.org/tournament-series/north-division/lsl-overview/"
+                    },
+                    {
+                        date: "2019-03-23",
+                        lake: "Wheeler",
+                        ramp: "Ingalls Harbor",
+                        state: "AL",
+                        txDetail: "",
+                        resultsLink: "https://www.alabamabasstrail.org/tournament-series/wl-results/",
+                        entryLink: "https://www.alabamabasstrail.org/tournament-series/north-division/wl-overview/"
+                    },
+                    {
+                        date: "2019-04-27",
+                        lake: "Weiss",
+                        ramp: "Leesburg",
+                        state: "AL",
+                        txDetail: "",
+                        resultsLink: "https://www.alabamabasstrail.org/tournament-series/wel-results/",
+                        entryLink: "https://www.alabamabasstrail.org/tournament-series/north-division/wel-overview/"
+                    },
+                    {
+                        date: "2019-05-11",
+                        lake: "Pickwick",
+                        ramp: "McFarland",
+                        state: "AL",
+                        txDetail: "",
+                        resultsLink: "https://www.alabamabasstrail.org/tournament-series/pl-results/",
+                        entryLink: "https://www.alabamabasstrail.org/tournament-series/north-division/pl-overview/"
+                    },
+                    {
+                        date: "2019-06-08",
+                        lake: "Neely Henry",
+                        ramp: "Coosa Landing",
+                        state: "AL",
+                        txDetail: "",
+                        resultsLink: "https://www.alabamabasstrail.org/tournament-series/nhl-results/",
+                        entryLink: "https://www.alabamabasstrail.org/tournament-series/north-division/nhl-overview/"
+                    }
+                ]
+            },
+            {
+                trail: "South",
+                tournaments: [{
+                        date: "2019-02-16",
+                        lake: "Martin",
+                        ramp: "Wind Creek SP",
+                        state: "AL",
+                        txDetail: "",
+                        resultsLink: "https://www.alabamabasstrail.org/tournament-series/lm-results/",
+                        entryLink: "https://www.alabamabasstrail.org/tournament-series/south-division/lm-overview/"
+                    },
+                    {
+                        date: "2019-03-30",
+                        lake: "Jordan",
+                        ramp: "Wetumpka",
+                        state: "AL",
+                        txDetail: "",
+                        resultsLink: "https://www.alabamabasstrail.org/tournament-series/jl-results/",
+                        entryLink: "https://www.alabamabasstrail.org/tournament-series/south-division/jl-overview/"
+                    },
+                    {
+                        date: "2019-04-27",
+                        lake: "Alabama River",
+                        ramp: "Cooter's Pond",
+                        state: "AL",
+                        txDetail: "",
+                        resultsLink: "https://www.alabamabasstrail.org/tournament-series/ar-results/",
+                        entryLink: "https://www.alabamabasstrail.org/tournament-series/south-division/ar-overview/"
+                    },
+                    {
+                        date: "2019-05-18",
+                        lake: "Lay",
+                        ramp: "Beeswax",
+                        state: "AL",
+                        txDetail: "",
+                        resultsLink: "https://www.alabamabasstrail.org/tournament-series/ll-results/",
+                        entryLink: "https://www.alabamabasstrail.org/tournament-series/south-division/ll-overview/"
+                    },
+                    {
+                        date: "2019-06-15",
+                        lake: "Eufaula",
+                        ramp: "Lakepoint SP",
+                        state: "AL",
+                        txDetail: "",
+                        resultsLink: "https://www.alabamabasstrail.org/tournament-series/le-results/",
+                        entryLink: "https://www.alabamabasstrail.org/tournament-series/south-division/le-overview/"
+                    }
 
-            ]
-        }]
+                ]
+            }
+        ]
     },
     {
         organization: "Anglers",
@@ -315,7 +315,7 @@ module.exports = [
                     ramp: "Occonneechee",
                     state: "NC-VA",
                     txDetail: "Anglers Choice",
-                    resultsLink: "",
+                    resultsLink: "https://www.anglerschoicemarine.com/fckimages/RESULTS_2019_June8_KERR.pdf",
                     entryLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule"
                 },
                 {
@@ -336,7 +336,7 @@ module.exports = [
     {
         organization: "Bojangles",
         trails: [{
-            trail: "Wow",
+            trail: "Pro-Am",
             tournaments: [
 
                 {
@@ -345,7 +345,7 @@ module.exports = [
                     ramp: "Summit",
                     state: "NC",
                     txDetail: "",
-                    resultsLink: "",
+                    resultsLink: "http://bojanglesproam.com/Schedule.html",
                     entryLink: "http://bojanglesproam.com/"
                 },
                 {
@@ -354,7 +354,7 @@ module.exports = [
                     ramp: "Wilmington",
                     state: "NC",
                     txDetail: "",
-                    resultsLink: "",
+                    resultsLink: "http://bojanglesproam.com/Schedule.html",
                     entryLink: "http://bojanglesproam.com/"
                 },
                 {
@@ -363,7 +363,7 @@ module.exports = [
                     ramp: "Edenton",
                     state: "NC",
                     txDetail: "",
-                    resultsLink: "",
+                    resultsLink: "http://bojanglesproam.com/Schedule.html",
                     entryLink: "http://bojanglesproam.com/"
                 },
                 {
@@ -372,7 +372,7 @@ module.exports = [
                     ramp: "Flemingtown",
                     state: "NC",
                     txDetail: "",
-                    resultsLink: "",
+                    resultsLink: "http://bojanglesproam.com/Schedule.html",
                     entryLink: "http://bojanglesproam.com/"
                 },
                 {
@@ -381,7 +381,7 @@ module.exports = [
                     ramp: "Plymouth",
                     state: "NC",
                     txDetail: "",
-                    resultsLink: "",
+                    resultsLink: "http://bojanglesproam.com/Schedule.html",
                     entryLink: "http://bojanglesproam.com/"
                 },
                 {
@@ -390,7 +390,7 @@ module.exports = [
                     ramp: "New Bern",
                     state: "NC",
                     txDetail: "",
-                    resultsLink: "",
+                    resultsLink: "http://bojanglesproam.com/Schedule.html",
                     entryLink: "http://bojanglesproam.com/"
                 },
                 {
@@ -399,7 +399,7 @@ module.exports = [
                     ramp: "Plymouth",
                     state: "NC",
                     txDetail: "",
-                    resultsLink: "",
+                    resultsLink: "http://bojanglesproam.com/Schedule.html",
                     entryLink: "http://bojanglesproam.com/"
                 },
                 {
@@ -408,7 +408,7 @@ module.exports = [
                     ramp: "TBD",
                     state: "NC",
                     txDetail: "2 Day Championship Div 1",
-                    resultsLink: "",
+                    resultsLink: "http://bojanglesproam.com/Schedule.html",
                     entryLink: "http://bojanglesproam.com/"
                 }
             ]
@@ -428,7 +428,7 @@ module.exports = [
                         ramp: "Nutbush",
                         state: "NC",
                         txDetail: "CATT Championship",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/2019-catt-academy-championship-kerr-lake-nc-june-1-2-2019-cavin-young-rob-wells-weigh-in-a-2-day-catch-of-37-14-lbs-they-collect-24800-00/",
                         entryLink: "https://www.cattteamtrail.com/shop/tournaments/2019-kerr-lake-catt-championship/"
                     }
                 ]
@@ -595,7 +595,7 @@ module.exports = [
                         ramp: "Lighthouse",
                         state: "NC",
                         txDetail: "Gold 4",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-east-roanoke-river-june-8-2019-1st-place-kevin-jones-tyler-jones-with-18-24-lbs/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-east/"
                     },
                     {
@@ -761,7 +761,7 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-hickory/"
                     },
                     {
-                        date: "2019-06-01",
+                        date: "2019-06-22",
                         lake: "Hickory",
                         ramp: "Whittenburg",
                         state: "NC",
@@ -835,7 +835,7 @@ module.exports = [
                         ramp: "Riverfront",
                         state: "VA",
                         txDetail: "Gold",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-james-river-va-june-8-2019-robert-whitehurst-parker-hinks-do-it-again-22-01-lbs-2000-00/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-james-river/"
                     },
                     {
@@ -934,39 +934,6 @@ module.exports = [
                         resultsLink: "https://www.cattteamtrail.com/news/tournament-results-spring-final-kerr-lake-va-nc-april-28-2019-corey-leonard-paul-rigsbee-weigh-in-16-40-lbs-cash-a-4000-00-check-boom/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
                     }
-                ]
-            },
-            {
-                trail: "Monticello",
-                tournaments: [
-
-                    {
-                        date: "2019-02-23",
-                        lake: "Monticello",
-                        ramp: "Hwy 99",
-                        state: "SC",
-                        txDetail: "Qualifier 1",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-monticello-sc-feb-23-2019-farr-sexton-squeake-out-the-win/",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-monticello/"
-                    },
-                    {
-                        date: "2019-04-20",
-                        lake: "Monticello",
-                        ramp: "Hwy 99",
-                        state: "SC",
-                        txDetail: "Qualifier 3",
-                        resultsLink: "",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-monticello/"
-                    },
-                    {
-                        date: "2019-05-25",
-                        lake: "Monticello",
-                        ramp: "Hwy 99",
-                        state: "SC",
-                        txDetail: "Qualifier 4",
-                        resultsLink: "",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-monticello/"
-                    },
                 ]
             },
             {
@@ -1093,7 +1060,7 @@ module.exports = [
                         ramp: "Pinnacle",
                         state: "NC",
                         txDetail: "Qualifier 8",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-norman-nc-may-25-2019-steve-addington-matt-stout-weigh-in-13-61-lbs-for-the-win-next-lake-norman-catt-is-june-15th/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
                     },
                     {
@@ -1160,7 +1127,7 @@ module.exports = [
                     {
                         date: "2019-04-06",
                         lake: "Harris",
-                        ramp: "Crosspointe",
+                        ramp: "Crosspoint",
                         state: "NC",
                         txDetail: "Qualifier 3",
                         resultsLink: "https://www.cattteamtrail.com/news/tournament-results-old-north-shearon-harris-nc-april-6-2019/",
@@ -1181,7 +1148,7 @@ module.exports = [
                         ramp: "Farrington",
                         state: "NC",
                         txDetail: "Qualifier 5",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-old-north-jordan-lake-nc-may-18-2019-scott-smith-tony-woodard-smack-em-28-12-lbs-7-43-bf-with-only-32-teams-they-collected-2717-00/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
                     },
                     {
@@ -1190,7 +1157,7 @@ module.exports = [
                         ramp: "Flemingtown",
                         state: "NC-VA",
                         txDetail: "Qualifier 6",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-old-north-kerr-lake-nc-va-june-8-2019-adam-blake-richardson-win/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
                     },
                     {
@@ -1201,57 +1168,6 @@ module.exports = [
                         txDetail: "Final",
                         resultsLink: "",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
-                    }
-                ]
-            },
-            {
-                trail: "Robinson",
-                tournaments: [
-
-                    {
-                        date: "2018-12-15",
-                        lake: "Robinson",
-                        ramp: "Easterling",
-                        state: "SC",
-                        txDetail: "Qualifier 1",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-robinson-dec-15-2018-hall-fales-win-a-tight-one-everyone-weighes-in/",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-robinson/"
-                    },
-                    {
-                        date: "2019-01-05",
-                        lake: "Robinson",
-                        ramp: "Easterling",
-                        state: "SC",
-                        txDetail: "Qualifier 2",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-robinson-jan-5-2018-lawhon-garrison-win-next-robinson-catt-is-jan-12th/",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-robinson/"
-                    },
-                    {
-                        date: "2019-01-12",
-                        lake: "Robinson",
-                        ramp: "Easterling",
-                        state: "SC",
-                        txDetail: "Qualifier 3",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-robinson-jan-12-2019-fletcher-faile-claim-the-top-spot/",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-robinson/"
-                    },
-                    {
-                        date: "2019-01-19",
-                        lake: "Robinson",
-                        ramp: "Easterling",
-                        state: "SC",
-                        txDetail: "Qualifier 4",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-robinson-sc-jan-19-2019-butler-gainey-win-win-points/",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-robinson/"
-                    },
-                    {
-                        date: "2019-01-26",
-                        lake: "Robinson",
-                        ramp: "Easterling",
-                        state: "SC",
-                        txDetail: "Final",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-robinson-fall-final-jan-26-2019-mike-clint-byrd-claim-1st-place/",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-robinson/"
                     }
                 ]
             },
@@ -1427,57 +1343,6 @@ module.exports = [
                 ]
             },
             {
-                trail: "Sparkleberry",
-                tournaments: [
-
-                    {
-                        date: "2018-12-29",
-                        lake: "Swamp",
-                        ramp: "Packs",
-                        state: "SC",
-                        txDetail: "Qualifier 1",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-sparkleberry-swamp-quest-dec-29-2018-deberry-miller-weigh-in-23-35-lbs-next-swamp-quest-is-jam-19th-at-packs/",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-sparkleberry-swamp-quest/"
-                    },
-                    {
-                        date: "2019-01-17",
-                        lake: "Swamp",
-                        ramp: "Packs",
-                        state: "SC",
-                        txDetail: "Qualifier 2",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-sparkleberry-swamp-quest-jan-19-2019-geddungs-peavy-drop-the-hammer-24-54-lbs-to-win-www-phantomoutdoors-com/",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-sparkleberry-swamp-quest/"
-                    },
-                    {
-                        date: "2019-02-17",
-                        lake: "Swamp",
-                        ramp: "Packs",
-                        state: "SC",
-                        txDetail: "Qualifier 3",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-sparkleberry-swamp-quest-feb-17-2019-kirby-deberry-smack-em/",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-sparkleberry-swamp-quest/"
-                    },
-                    {
-                        date: "2019-03-03",
-                        lake: "Swamp",
-                        ramp: "Packs",
-                        state: "SC",
-                        txDetail: "Qualifier 4",
-                        resultsLink: "https://www.cattteamtrail.com/tournament-results/tournament-results-sparkleberry-swamp-quest-mar-3-2019-geddings-peavy-weigh-em-up/",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-sparkleberry-swamp-quest/"
-                    },
-                    {
-                        date: "2019-03-16",
-                        lake: "Swamp",
-                        ramp: "Packs",
-                        state: "SC",
-                        txDetail: "Final",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-sparkleberry-swamp-quest-final-mar-16-2019-geddings-peavy-dominate/",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-sparkleberry-swamp-quest/"
-                    }
-                ]
-            },
-            {
                 trail: "Tidewater",
                 tournaments: [
 
@@ -1532,7 +1397,7 @@ module.exports = [
                         ramp: "Waterfront",
                         state: "NC",
                         txDetail: "Final",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-tidewater-nc-va-final-may-26-2019-jeremy-gatewood-charlie-reed-brought-in-20-07-lbs-take-home-1820-00-we-are-looking-forward-to-the-next-tidewater-trail-come-join-us/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-tidewater/"
                     }
                 ]
@@ -1547,11 +1412,11 @@ module.exports = [
                         ramp: "Bucksport",
                         state: "SC",
                         txDetail: "Qualifier 1",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-waccamaw-river-sc-may-18-2019-britt-brown-danny-martin-win-with-17-48-lbs-7-09-lb-bf-1553-00/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-waccamaw-river/"
                     },
                     {
-                        date: "2019-06-22",
+                        date: "2019-06-15",
                         lake: "Waccamaw Rvr",
                         ramp: "Bucksport",
                         state: "SC",
@@ -1683,7 +1548,145 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
                     }
                 ]
-            },
+            }, 
+            {
+                trail: "Wateree Summer",
+                tournaments: [ 
+                    
+                    {
+                        date: "2019-05-25",
+                        lake: "Wateree",
+                        ramp: "Clearwater",
+                        state: "SC",
+                        txDetail: "Q1",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-wateree-may-25-2019-lee-morris-robert-ross-double-up-20-69-lbs-takes-it-all/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
+                    },
+                    {
+                        date: "2019-06-01",
+                        lake: "Wateree",
+                        ramp: "Clearwater",
+                        state: "SC",
+                        txDetail: "Q2",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-wateree-sc-june-1-2019-alan-fletcher-donald-hinson-win-with-17-91-lbs/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
+                    },
+                    {
+                        date: "2019-06-08",
+                        lake: "Wateree",
+                        ramp: "Clearwater",
+                        state: "SC",
+                        txDetail: "Gold 3",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-wateree-sc-june-8-2019-lee-morris-robert-ross-win-their-2nd-summer-qualifier-19-79-lbs-1225-00/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
+                    },
+                    {
+                        date: "2019-06-15",
+                        lake: "Wateree",
+                        ramp: "Clearwater",
+                        state: "SC",
+                        txDetail: "Q4",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
+                    },
+                    {
+                        date: "2019-06-22",
+                        lake: "Wateree",
+                        ramp: "Clearwater",
+                        state: "SC",
+                        txDetail: "Gold 5",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
+                    },
+                    {
+                        date: "2019-06-29",
+                        lake: "Wateree",
+                        ramp: "Clearwater",
+                        state: "SC",
+                        txDetail: "Q6",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
+                    },
+                    {
+                        date: "2019-07-13",
+                        lake: "Wateree",
+                        ramp: "Clearwater",
+                        state: "SC",
+                        txDetail: "Q7",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
+                    },
+                    {
+                        date: "2019-07-20",
+                        lake: "Wateree",
+                        ramp: "Clearwater",
+                        state: "SC",
+                        txDetail: "Final",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
+                    }
+                ]
+            }, 
+            {
+                trail: "Wateree Fall",
+                tournaments: [ 
+                    
+                    {
+                        date: "2019-09-28",
+                        lake: "Wateree",
+                        ramp: "Clearwater",
+                        state: "SC",
+                        txDetail: "Q1",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
+                    },
+                    {
+                        date: "2019-10-12",
+                        lake: "Wateree",
+                        ramp: "Clearwater",
+                        state: "SC",
+                        txDetail: "Gold 2",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
+                    },
+                    {
+                        date: "2019-10-19",
+                        lake: "Wateree",
+                        ramp: "Clearwater",
+                        state: "SC",
+                        txDetail: "Q3",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
+                    },
+                    {
+                        date: "2019-10-26",
+                        lake: "Wateree",
+                        ramp: "Clearwater",
+                        state: "SC",
+                        txDetail: "Gold 4",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
+                    },
+                    {
+                        date: "2019-11-09",
+                        lake: "Wateree",
+                        ramp: "Clearwater",
+                        state: "SC",
+                        txDetail: "Q5",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
+                    },
+                    {
+                        date: "2019-11-16",
+                        lake: "Wateree",
+                        ramp: "Clearwater",
+                        state: "SC",
+                        txDetail: "Final",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
+                    }
+                ]
+            },  
             {
                 trail: "Wateree Open",
                 tournaments: [
@@ -1696,7 +1699,8 @@ module.exports = [
                         txDetail: "Open 1",
                         resultsLink: "https://www.cattteamtrail.com/news/catt-lake-wateree-open-results-feb-9-2019-williams-english-take-the-1st-open-with-19-19-lbs/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
-                    }, {
+                    },
+                    {
                         date: "2019-02-23",
                         lake: "Wateree",
                         ramp: "Colonial Creek",
@@ -1754,7 +1758,7 @@ module.exports = [
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 8",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-wateree-open-may-25-2019-lee-morris-robert-ross-take-home-a-cool-1000-00-20-96-lbs/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
                     {
@@ -1763,7 +1767,7 @@ module.exports = [
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 9",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-wateree-open-june-1-2019-michael-richardson-shane-cantley-widen-their-point-lead-1st-place-20-54-lbs-next-wateree-open-june-8/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
                     {
@@ -1772,7 +1776,7 @@ module.exports = [
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 10",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-wateree-open-sc-june-8-2019-lee-morris-robert-ross-double-up-19-79-lbs-900-00-2125-00-total/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
                     {
@@ -1973,16 +1977,16 @@ module.exports = [
                         ramp: "Tamarac",
                         state: "NC",
                         txDetail: "Qualifier 7",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/tournament-results/tournament-results-yadkin-high-rock-lake-nc-may-18-2019-tony-brewer-scott-faulkner-weigh-in-23-63-lbs-derek-livingston-andrew-wallace-win-the-2019-yadkin-spring-points-will-fish-the-final-fr/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
                     },
                     {
-                        date: "2019-06-01",
+                        date: "2019-05-25",
                         lake: "High Rock",
                         ramp: "Tamarac",
                         state: "NC",
                         txDetail: "Final",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-yadkin-spring-final-high-rock-lake-nc-may-25-2019-george-lambeth-herby-young-rack-up-22-77-lbs-2960-00/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
                     }
                 ]
@@ -2238,7 +2242,7 @@ module.exports = [
                     ramp: "Lawsons Creek",
                     state: "NC",
                     txDetail: "",
-                    resultsLink: "",
+                    resultsLink: "https://www.ncbasschallenge.com/tournament-results/vann-lewis-win-big-on-the-neuse/",
                     entryLink: "https://www.ncbasschallenge.com/2019-tournament-schedule/"
                 },
                 {
@@ -2248,7 +2252,7 @@ module.exports = [
                     ramp: "Water Street",
                     state: "NC",
                     txDetail: "",
-                    resultsLink: "",
+                    resultsLink: "https://www.ncbasschallenge.com/tournament-results/vann-and-lewis-go-back-to-back-with-roanoke-win/",
                     entryLink: "https://www.ncbasschallenge.com/2019-tournament-schedule/"
                 },
                 {
@@ -3381,8 +3385,8 @@ module.exports = [
                         ramp: "Green Pond",
                         state: "SC",
                         txDetail: "FLW",
-                        resultsLink: "",
-                        entryLink: ""
+                        resultsLink: "https://www.flwfishing.com/results/2019-02-16-hartwell",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-02-16-hartwell"
                     },
                     {
                         date: "2019-03-09",
@@ -3390,8 +3394,8 @@ module.exports = [
                         ramp: "John C Land",
                         state: "SC",
                         txDetail: "FLW",
-                        resultsLink: "",
-                        entryLink: ""
+                        resultsLink: "https://www.flwfishing.com/results/2019-03-09-santee-cooper",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-03-09-santee-cooper"
                     },
                     {
                         date: "2019-03-30",
@@ -3399,8 +3403,8 @@ module.exports = [
                         ramp: "Wildwood Park",
                         state: "SC",
                         txDetail: "FLW",
-                        resultsLink: "",
-                        entryLink: ""
+                        resultsLink: "https://www.flwfishing.com/results/2019-03-30-clarks-hill",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-03-30-clarks-hill"
                     },
                     {
                         date: "2019-05-18",
@@ -3408,8 +3412,8 @@ module.exports = [
                         ramp: "Buster Boyd",
                         state: "SC",
                         txDetail: "FLW",
-                        resultsLink: "",
-                        entryLink: ""
+                        resultsLink: "https://www.flwfishing.com/results/2019-05-18-wylie",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-05-18-wylie"
                     },
                     {
                         date: "2019-09-28",
@@ -3417,8 +3421,8 @@ module.exports = [
                         ramp: "Green Pond",
                         state: "SC",
                         txDetail: "FLW",
-                        resultsLink: "",
-                        entryLink: ""
+                        resultsLink: "https://www.flwfishing.com/results/2019-09-28-hartwell",
+                        entryLink: "https://www.flwfishing.com/tournaments/2019-09-28-hartwell"
                     }
                 ]
             }, {
@@ -3546,7 +3550,7 @@ module.exports = [
                         ramp: "Ebenezer",
                         state: "NC",
                         txDetail: "T4",
-                        resultsLink: "",
+                        resultsLink: "https://www.fomntt.com/pageflow.cfm?callpage=results&schid=5642&getyear=2019",
                         entryLink: "https://www.fomntt.com/pageflow.cfm?callpage=divisioninfo&divid=32&getyear=2019"
                     },
                     {
@@ -3563,6 +3567,149 @@ module.exports = [
         ]
     },
     {
+        organization: "Harris Wildcat",
+        trails: [{
+            trail: "Weds Night (5-9pm)",
+            tournaments: [
+
+                {
+                    date: "2019-05-22",
+                    lake: "Harris",
+                    ramp: "Crosspoint",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "https://www.facebook.com/119889178084587/photos/a.1303365486403611/2665809523492527/?type=3",
+                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
+                },
+                {
+                    date: "2019-05-29",
+                    lake: "Harris",
+                    ramp: "Crosspoint",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "https://www.facebook.com/photo.php?fbid=10213917086698095&set=a.10213404514084100&type=3",
+                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
+                },
+                {
+                    date: "2019-06-05",
+                    lake: "Harris",
+                    ramp: "Crosspoint",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "https://www.facebook.com/photo.php?fbid=10213962634356758&set=pcb.10213962634996774&type=3&__tn__=HH-RH-R&eid=ARCuI3rue3hY7rXhYyE1DmWdNcMwE8fjZmzmLfpdugPzvWHYOt2AvzsiNwr8R4x5l9ZHDOU8LPxolvQg",
+                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
+                },
+                {
+                    date: "2019-06-12",
+                    lake: "Harris",
+                    ramp: "Crosspoint",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "",
+                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
+                },
+                {
+                    date: "2019-06-19",
+                    lake: "Harris",
+                    ramp: "Crosspoint",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "",
+                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
+                },
+                {
+                    date: "2019-06-26",
+                    lake: "Harris",
+                    ramp: "Crosspoint",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "",
+                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
+                },
+                {
+                    date: "2019-07-03",
+                    lake: "Harris",
+                    ramp: "Crosspoint",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "",
+                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
+                },
+                {
+                    date: "2019-07-10",
+                    lake: "Harris",
+                    ramp: "Crosspoint",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "",
+                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
+                },
+                {
+                    date: "2019-07-17",
+                    lake: "Harris",
+                    ramp: "Crosspoint",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "",
+                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
+                },
+                {
+                    date: "2019-07-24",
+                    lake: "Harris",
+                    ramp: "Crosspoint",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "",
+                    entryLink:"https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"},
+                {
+                    date: "2019-07-31",
+                    lake: "Harris",
+                    ramp: "Crosspoint",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "",
+                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
+                },
+                {
+                    date: "2019-08-07",
+                    lake: "Harris",
+                    ramp: "Crosspoint",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "",
+                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
+                },
+                {
+                    date: "2019-08-14",
+                    lake: "Harris",
+                    ramp: "Crosspoint",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "",
+                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
+                },
+                {
+                    date: "2019-08-21",
+                    lake: "Harris",
+                    ramp: "Crosspoint",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "",
+                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
+                },
+                {
+                    date: "2019-08-28",
+                    lake: "Harris",
+                    ramp: "Crosspoint",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "",
+                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
+                }
+            ]
+        }]
+    },
+    {
         organization: "PBC",
         trails: [{
                 trail: "Spring Team",
@@ -3571,7 +3718,7 @@ module.exports = [
                     {
                         date: "2019-03-02",
                         lake: "Harris",
-                        ramp: "Cross Pointe",
+                        ramp: "Crosspoint",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
                         resultsLink: "http://piedmontbassclassics.com/32-19PBCResults.html",
@@ -3589,7 +3736,7 @@ module.exports = [
                     {
                         date: "2019-03-30",
                         lake: "Harris",
-                        ramp: "Crosspointe",
+                        ramp: "Crosspoint",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
                         resultsLink: "http://piedmontbassclassics.com/330-19PBCResults.html",
@@ -3665,7 +3812,7 @@ module.exports = [
                     {
                         date: "2019-03-23",
                         lake: "Harris",
-                        ramp: "Crosspointe",
+                        ramp: "Crosspoint",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
                         resultsLink: "http://piedmontbassclassics.com/323-19Results.html?fbclid=IwAR1ro4qK-pWrvKJL6oth8SjA7ZdWnEyDPLhUBwbeOVBly_dSy_d1Tiwk2xQ",
@@ -3792,7 +3939,7 @@ module.exports = [
                     ramp: "BLORA",
                     state: "TX",
                     txDetail: "2 Day Texas Team Trail Champ",
-                    resultsLink: "",
+                    resultsLink: "http://texasteamtrail.com/uploads/pdf/2019_TXTT_Belton_Championship_Final_Results.pdf",
                     entryLink: "http://texasteamtrail.com/tournaments"
                 }
             ]

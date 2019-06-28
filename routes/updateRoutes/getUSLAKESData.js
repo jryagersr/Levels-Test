@@ -13,32 +13,16 @@ module.exports = {
         // Set the base of the request depending on which lake we want
         var url = "";
         switch (bodyOfWater) {
-            
-            case "Columbus":
-                url = "http://columbus.lakesonline.com/Level/Calendar"
-                break;
 
-            case "Oconee":
-                url = "http://oconee.uslakes.info/Level/Calendar"
-                break;
+           // case "Columbus":
+           //     url = "http://columbus.lakesonline.com/Level/Calendar"
+           //     break;
 
             case "Oneida":
                 url = "http://oneida.uslakes.info/Level/Calendar"
                 break;
 
-            case "Gaston":
-                url = "http://gaston.uslakes.info/Level/Calendar"
-                break;
 
-            case "Smith Mountain":
-                url = "http://smithmountain.uslakes.info/Level/Calendar"
-                break;
-
-            case "Sinclair":
-                url = "http://sinclair.uslakes.info/Level/Calendar"
-                break;
-
-               
         }
 
         // Get today's date to build request url
@@ -67,6 +51,7 @@ module.exports = {
         // Make request for previous months lakelevels.info site, returns html
         request(url + date2, function (error, response, html) {
 
+            //console.log('getUSLAKES ', bodyOfWater);
             // Load the HTML into cheerio and save it to a variable
             var $ = cheerio.load(html);
             // Simple day increment counter to build date later
