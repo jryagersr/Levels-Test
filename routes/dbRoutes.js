@@ -66,7 +66,7 @@ module.exports = function (app) {
             let currentLake = data[0];
 
             //check to see if update is needed (function returns true if update is needed)
-            if (update.checkForUpdate(currentLake.lastRefresh, currentLake.refreshInterval, currentLake.data.length)) {
+            if (update.checkForUpdate(currentLake.bodyOfWater, currentLake.lastRefresh, currentLake.refreshInterval, currentLake.data.length)) {
               // update current lake
               // determine which data source and run function
               switch (currentLake.dataSource[0]) {
@@ -312,8 +312,8 @@ module.exports = function (app) {
                 default:
                   console.log(`No data source for ${currentLake.bodyOfWater}`);
                   res.json(currentLake);
-                  //console.log("Data source could not be found.");
-                  //res.send("Data source could not be found.");
+                //console.log("Data source could not be found.");
+                //res.send("Data source could not be found.");
               }
             }
             // if no update is needed, send currentLake to client

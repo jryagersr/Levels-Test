@@ -27,7 +27,7 @@ module.exports = {
       let msMinute = 60 * 1000;
       let msDay = 60 * 60 * 24 * 1000;
       let lastUpdate = new Date(lastRefresh);
-      let diffDays = Math.floor((today - lastUpdate) / msDay); // calculate diff in days
+      let diffDays = (today - lastUpdate) / msDay; // calculate diff in days
       if (diffDays > 1) {
         return true;
       }
