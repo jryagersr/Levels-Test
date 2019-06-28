@@ -13,7 +13,7 @@ module.exports = [
                     ramp: "Ivy Hill",
                     state: "NC-VA",
                     txDetail: "T1",
-                    resultsLink: "",
+                    resultsLink: "https://www.facebook.com/photo.php?fbid=2028937993894733&set=pcb.700546083675581&type=3&ifg=1&__tn__=HH-R&eid=ARAU5tU51hg9nXRw-CvRHeOVAgKQEq87J9wPY59o5RRfe5EUAh5MkNnY4Qwjao8xnrWASbr3yu2weVLn",
                     entryLink: "https://www.facebook.com/groups/657334777996712/permalink/657734494623407/"
                 },
                 {
@@ -22,7 +22,7 @@ module.exports = [
                     ramp: "Triple Springs",
                     state: "NC",
                     txDetail: "T2",
-                    resultsLink: "",
+                    resultsLink: "https://www.facebook.com/photo.php?fbid=2061324943989371&set=gm.712589225804600&type=3&eid=ARArTtpXaPJATcjWhBQz6jI5waZC6pxbj7kvFzwLEL_V3Ycaes0D-PkfB57PlYxXmSBlCu9KDNFioBFs&ifg=1",
                     entryLink: "https://www.facebook.com/groups/657334777996712/permalink/657734494623407/"
                 },
                 {
@@ -31,7 +31,7 @@ module.exports = [
                     ramp: "Triple Springs",
                     state: "NC",
                     txDetail: "T3",
-                    resultsLink: "",
+                    resultsLink: "https://www.facebook.com/photo.php?fbid=2081564258632106&set=pcb.719975758399280&type=3&ifg=1&__tn__=HH-R&eid=ARBXmrGm2BbtcJ2kor_3SeDcTDWlNeC_ywtYZ6slXCbQvIUha260Iei932mBSzsgUc1pR4W7wc9mPulS",
                     entryLink: "https://www.facebook.com/groups/657334777996712/permalink/657734494623407/"
                 },
                 {
@@ -40,7 +40,7 @@ module.exports = [
                     ramp: "Ivy Hill",
                     state: "NC-VA",
                     txDetail: "T4",
-                    resultsLink: "",
+                    resultsLink: "https://www.facebook.com/photo.php?fbid=2162957983826066&set=gm.750401242023398&type=3&eid=ARA10BDyiDuRh-kqLXKajxPEREr-h40lx9sWRugObqgZ56mS_gf_SBLeEsn5I-BeasDpHvQ1WOtMGk_Y&ifg=1",
                     entryLink: "https://www.facebook.com/groups/657334777996712/permalink/657734494623407/"
                 },
                 {
@@ -448,6 +448,48 @@ module.exports = [
                 ]
             },
             {
+                trail: "Anna",
+                tournaments: [
+
+                    {
+                        date: "2019-08-17",
+                        lake: "Anna",
+                        ramp: "Sturgeon Creek",
+                        state: "VA",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-anna/"
+                    },
+                    {
+                        date: "2019-09-07",
+                        lake: "Anna",
+                        ramp: "Sturgeon Creek",
+                        state: "VA",
+                        txDetail: "Qualifier 2",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-anna/"
+                    },
+                    {
+                        date: "2019-09-28",
+                        lake: "Anna",
+                        ramp: "Sturgeon Creek",
+                        state: "VA",
+                        txDetail: "Qualifier 3",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-anna/"
+                    },
+                    {
+                        date: "2019-11-02",
+                        lake: "Anna",
+                        ramp: "Sturgeon Creek",
+                        state: "VA",
+                        txDetail: "Final",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-anna/"
+                    }
+                ]
+            },
+            {
                 trail: "Coastal (SC)",
                 tournaments: [
 
@@ -724,7 +766,7 @@ module.exports = [
                         ramp: "Broyles",
                         state: "SC",
                         txDetail: "Qualifier 4",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/13176/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-hartwell/"
                     },
                     {
@@ -733,7 +775,7 @@ module.exports = [
                         ramp: "Broyles",
                         state: "SC",
                         txDetail: "Final",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/tournament-results/catt-lake-hartwell/tournament-results-lake-hartwell-sc-june-1-2019/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-hartwell/"
                     }
                 ]
@@ -766,7 +808,7 @@ module.exports = [
                         ramp: "Whittenburg",
                         state: "NC",
                         txDetail: "Qualifier 5",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-hickory-nc-june-22-2019-jason-eaker-mike-seawright-weigh-in-23-98-lbs-big-summer-time-bag/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-hickory/"
                     },
                     {
@@ -937,6 +979,48 @@ module.exports = [
                 ]
             },
             {
+                trail: "Kerr Fall",
+                tournaments: [
+
+                    {
+                        date: "2019-09-29",
+                        lake: "Kerr",
+                        ramp: "Occonneechee",
+                        state: "NC-VA",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
+                    },
+                    {
+                        date: "2019-10-27",
+                        lake: "Kerr",
+                        ramp: "Occonneechee",
+                        state: "NC",
+                        txDetail: "Qualifier 2",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
+                    },
+                    {
+                        date: "2019-11-10",
+                        lake: "Kerr",
+                        ramp: "Occonneechee",
+                        state: "NC-VA",
+                        txDetail: "Qualifier 3",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
+                    },
+                    {
+                        date: "2019-11-24",
+                        lake: "Kerr",
+                        ramp: "Occonneechee",
+                        state: "NC-VA",
+                        txDetail: "Final",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
+                    }
+                ]
+            },
+            {
                 trail: "Murray",
                 tournaments: [
 
@@ -1069,7 +1153,7 @@ module.exports = [
                         ramp: "Pinnacle",
                         state: "NC",
                         txDetail: "Qualifier 9",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-norman-nc-june-15-2019-mike-seawright-jason-eaker-tote-13-92-lbs-to-the-scales-next-lake-norman-catt-is-july-27th-2019-fall-catt-schedule-coming-soon-cage-tournament-inf/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
                     },
                     {
@@ -1301,6 +1385,57 @@ module.exports = [
                 ]
             },
             {
+                trail: "Savannah River Fall",
+                tournaments: [
+
+                    {
+                        date: "2019-06-29",
+                        lake: "Savannah Rvr",
+                        ramp: "Hardeeville",
+                        state: "SC",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-savannah-river/"
+                    },
+                    {
+                        date: "2019-07-13",
+                        lake: "Savannah Rvr",
+                        ramp: "Stokes Bluff",
+                        state: "SC",
+                        txDetail: "Qualifier 2",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-savannah-river/"
+                    },
+                    {
+                        date: "2019-08-10",
+                        lake: "Savannah Rvr",
+                        ramp: "Hardeesville",
+                        state: "GA",
+                        txDetail: "Qualifier 3",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-savannah-river/"
+                    },
+                    {
+                        date: "2019-09-21",
+                        lake: "Savannah Rvr",
+                        ramp: "Stokes Bluff",
+                        state: "GA",
+                        txDetail: "Qualifier 4",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-savannah-river/"
+                    },
+                    {
+                        date: "2019-10-19",
+                        lake: "Savannah Rvr",
+                        ramp: "Stokes Bluff",
+                        state: "SC",
+                        txDetail: "Final",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-savannah-river/"
+                    }
+                ]
+            },
+            {
                 trail: "Smith Mountain",
                 tournaments: [
 
@@ -1421,7 +1556,7 @@ module.exports = [
                         ramp: "Bucksport",
                         state: "SC",
                         txDetail: "Qualifier 2",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-waccamaw-river-sc-danny-allen-reid-mcdowell-weigh-up-14-40-lbs-collect-1584-00/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-waccamaw-river/"
                     },
                     {
@@ -1548,11 +1683,11 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
                     }
                 ]
-            }, 
+            },
             {
                 trail: "Wateree Summer",
-                tournaments: [ 
-                    
+                tournaments: [
+
                     {
                         date: "2019-05-25",
                         lake: "Wateree",
@@ -1586,7 +1721,7 @@ module.exports = [
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Q4",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-wateree-sc-june-15-2019-jimmy-macfarland-calvin-griggs-blow-away-the-field/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
                     },
                     {
@@ -1595,7 +1730,7 @@ module.exports = [
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Gold 5",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-wateree-sc-june-22-2019-walt-almond-chad-rabon-weigh-in-20-13-lbs-for-the-win-chad-gainey-jeffrey-furr-bring-in-the-bf-5-23-lbs/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
                     },
                     {
@@ -1626,11 +1761,11 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
                     }
                 ]
-            }, 
+            },
             {
                 trail: "Wateree Fall",
-                tournaments: [ 
-                    
+                tournaments: [
+
                     {
                         date: "2019-09-28",
                         lake: "Wateree",
@@ -1686,7 +1821,7 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
                     }
                 ]
-            },  
+            },
             {
                 trail: "Wateree Open",
                 tournaments: [
@@ -1785,7 +1920,7 @@ module.exports = [
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 11",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-wateree-open-june-15-2019-tanner-alan-flecther-win-with-13-63-lbs-next-wateree-open-june-22-clearwater-cove-marina/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
                     {
@@ -1794,7 +1929,7 @@ module.exports = [
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 12",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-wateree-open-june-22-2019-walt-almond-chad-rabon-double-up-next-wateree-open-is-july-20-at-clearwater-cove-marina/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
                     {
@@ -1990,6 +2125,75 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
                     }
                 ]
+            },
+            {
+                trail: "Yadkin Fall",
+                tournaments: [
+
+                    {
+                        date: "2019-08-17",
+                        lake: "High Rock",
+                        ramp: "Tamarac",
+                        state: "NC",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
+                    },
+                    {
+                        date: "2019-09-08",
+                        lake: "High Rock",
+                        ramp: "Tamarac",
+                        state: "NC",
+                        txDetail: "Qualifier 2",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
+                    },
+                    {
+                        date: "2019-10-06",
+                        lake: "Badin",
+                        ramp: "Circle Drive",
+                        state: "NC",
+                        txDetail: "Qualifier 3",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
+                    },
+                    {
+                        date: "2019-10-19",
+                        lake: "Badin",
+                        ramp: "Circle Drive",
+                        state: "NC",
+                        txDetail: "Qualifier 4",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
+                    },
+                    {
+                        date: "2019-11-03",
+                        lake: "High Rock",
+                        ramp: "Tamarac",
+                        state: "NC",
+                        txDetail: "Qualifier 5",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
+                    },
+                    {
+                        date: "2019-11-09",
+                        lake: "High Rock",
+                        ramp: "Tamarac",
+                        state: "NC",
+                        txDetail: "Qualifier 6",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
+                    },
+                    {
+                        date: "2019-11-24",
+                        lake: "High Rock",
+                        ramp: "Tamarac",
+                        state: "NC",
+                        txDetail: "Final",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
+                    }
+                ]
             }
         ]
     },
@@ -2179,7 +2383,7 @@ module.exports = [
                     ramp: "Ledge Rock",
                     state: "NC",
                     txDetail: "Bass For Cash Series",
-                    resultsLink: "",
+                    resultsLink: "http://bassforcash.com/2019/06/24/farjardo-hooks-win-4290-at-falls-lake-event/",
                     entryLink: "http://bassforcash.com/schedule/"
                 },
                 {
@@ -3499,7 +3703,7 @@ module.exports = [
                         ramp: "Henderson Pt",
                         state: "NC-VA",
                         txDetail: "T2",
-                        resultsLink: "",
+                        resultsLink: "https://www.fomntt.com/pageflow.cfm?callpage=results&schid=5886&getyear=2019",
                         entryLink: "https://www.fomntt.com/pageflow.cfm?callpage=divisioninfo&divid=88&getyear=2019"
                     },
                     {
@@ -3508,7 +3712,7 @@ module.exports = [
                         ramp: "Upper Barton's",
                         state: "NC",
                         txDetail: "T3",
-                        resultsLink: "",
+                        resultsLink: "https://www.fomntt.com/pageflow.cfm?callpage=results&schid=5887&getyear=2019",
                         entryLink: "https://www.fomntt.com/pageflow.cfm?callpage=divisioninfo&divid=88&getyear=2019"
                     }
                 ]
@@ -3559,7 +3763,7 @@ module.exports = [
                         ramp: "Ledgerock",
                         state: "NC",
                         txDetail: "T5",
-                        resultsLink: "",
+                        resultsLink: "https://www.fomntt.com/pageflow.cfm?callpage=results&schid=5643&getyear=2019",
                         entryLink: "https://www.fomntt.com/pageflow.cfm?callpage=divisioninfo&divid=32&getyear=2019"
                     }
                 ]
@@ -3574,7 +3778,7 @@ module.exports = [
 
                 {
                     date: "2019-05-22",
-                    lake: "Harris",
+                    lake: "Shearon Harris",
                     ramp: "Crosspoint",
                     state: "NC",
                     txDetail: "",
@@ -3583,7 +3787,7 @@ module.exports = [
                 },
                 {
                     date: "2019-05-29",
-                    lake: "Harris",
+                    lake: "Shearon Harris",
                     ramp: "Crosspoint",
                     state: "NC",
                     txDetail: "",
@@ -3601,43 +3805,34 @@ module.exports = [
                 },
                 {
                     date: "2019-06-12",
-                    lake: "Harris",
+                    lake: "Shearon Harris",
                     ramp: "Crosspoint",
                     state: "NC",
                     txDetail: "",
-                    resultsLink: "",
+                    resultsLink: "https://www.facebook.com/permalink.php?story_fbid=2717760064964139&id=119889178084587&comment_tracking=%7B%22tn%22%3A%22O%22%7D",
                     entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
                 },
                 {
                     date: "2019-06-19",
-                    lake: "Harris",
+                    lake: "Shearon Harris",
                     ramp: "Crosspoint",
                     state: "NC",
                     txDetail: "",
-                    resultsLink: "",
+                    resultsLink: "https://www.facebook.com/119889178084587/photos/a.1303365486403611/2736205699786242/?type=3&eid=ARCUGFVAfUub8fkX8RqyLsr3Q9jUzmAQR7MQ5f6yxv0SNHgINNRTrfS9ex3Q4dPGWYmDJT11yCzrmxJ8&__tn__=EHH-R",
                     entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
                 },
                 {
                     date: "2019-06-26",
-                    lake: "Harris",
+                    lake: "Shearon Harris",
                     ramp: "Crosspoint",
                     state: "NC",
                     txDetail: "",
-                    resultsLink: "",
-                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
-                },
-                {
-                    date: "2019-07-03",
-                    lake: "Harris",
-                    ramp: "Crosspoint",
-                    state: "NC",
-                    txDetail: "",
-                    resultsLink: "",
+                    resultsLink: "https://www.facebook.com/119889178084587/photos/a.1303365486403611/2754502801289865/?type=3&eid=ARDERMZ9vGarXNReLR9SmZXyZOsSw79XTvje3Rjo7uUQ7U_KFoTrQVoY291jzc8_IiaoD3OfHxOXOsd_&__tn__=EHH-R",
                     entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
                 },
                 {
                     date: "2019-07-10",
-                    lake: "Harris",
+                    lake: "Shearon Harris",
                     ramp: "Crosspoint",
                     state: "NC",
                     txDetail: "",
@@ -3646,7 +3841,7 @@ module.exports = [
                 },
                 {
                     date: "2019-07-17",
-                    lake: "Harris",
+                    lake: "Shearon Harris",
                     ramp: "Crosspoint",
                     state: "NC",
                     txDetail: "",
@@ -3655,15 +3850,16 @@ module.exports = [
                 },
                 {
                     date: "2019-07-24",
-                    lake: "Harris",
+                    lake: "Shearon Harris",
                     ramp: "Crosspoint",
                     state: "NC",
                     txDetail: "",
                     resultsLink: "",
-                    entryLink:"https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"},
+                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
+                },
                 {
                     date: "2019-07-31",
-                    lake: "Harris",
+                    lake: "Shearon Harris",
                     ramp: "Crosspoint",
                     state: "NC",
                     txDetail: "",
@@ -3672,7 +3868,7 @@ module.exports = [
                 },
                 {
                     date: "2019-08-07",
-                    lake: "Harris",
+                    lake: "Shearon Harris",
                     ramp: "Crosspoint",
                     state: "NC",
                     txDetail: "",
@@ -3681,7 +3877,7 @@ module.exports = [
                 },
                 {
                     date: "2019-08-14",
-                    lake: "Harris",
+                    lake: "Shearon Harris",
                     ramp: "Crosspoint",
                     state: "NC",
                     txDetail: "",
@@ -3690,7 +3886,7 @@ module.exports = [
                 },
                 {
                     date: "2019-08-21",
-                    lake: "Harris",
+                    lake: "Shearon Harris",
                     ramp: "Crosspoint",
                     state: "NC",
                     txDetail: "",
@@ -3699,7 +3895,7 @@ module.exports = [
                 },
                 {
                     date: "2019-08-28",
-                    lake: "Harris",
+                    lake: "Shearon Harris",
                     ramp: "Crosspoint",
                     state: "NC",
                     txDetail: "",
