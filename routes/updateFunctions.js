@@ -41,16 +41,16 @@ module.exports = {
   },
 
   // function to update and return one lake
-  updateAndReturnOneLake: function (bodyOfWater, lastRefresh, data, callback) {
+  updateAndReturnOneLake: function (bodyOfWater, lastRefresh, UROLdata, callback) {
     // if new data exists, set the last Refresh time
-    let updateData = data;
+    let updateData = UROLdata;
     lakeUpdateFlag = false;
     if (typeof updateData == "undefined") {
       console.log(`Undefined data sent to uAROL ${bodyOfWater}`)
       return;
     }
     if (updateData.length > 0) {
-      if (lastRefresh !== data[0].time.toString()) {
+      if (lastRefresh !== UROLdata[0].time.toString()) {
         //console.log(`${bodyOfWater} Updated `)
         lakeUpdateFlag = true;
         lastRefresh = updateData[0].time.toString();

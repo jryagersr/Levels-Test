@@ -51,7 +51,7 @@ module.exports = {
         // Make request for previous months lakelevels.info site, returns html
         request(url + date2, function (error, response, html) {
 
-            if (typeof body !== 'undefined') {
+            if (typeof html !== 'undefined') {
             //console.log('getUSLAKES ', bodyOfWater);
             // Load the HTML into cheerio and save it to a variable
             var $ = cheerio.load(html);
