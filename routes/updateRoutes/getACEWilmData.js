@@ -1,5 +1,5 @@
 const request = require("request")
-//const cheerio = require("cheerio");
+const cheerio = require("cheerio");
 const db = require("../../models")();
 const update = require('../updateFunctions');
 
@@ -16,14 +16,24 @@ module.exports = {
         'User-Agent': 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; rv:1.9.2.16) Gecko/20110319 Firefox/3.6.16'
       }
     }
+    let dataErrorTrue = false;
     request(options, function (error, response, html) {
       if (error) {
         callback(error);
       } else {
-        //console.log("ACEWilm Call", bodyOfWater);
-
         // Define our data template
         var data = [];
+        try {
+          var $ = cheerio.load(html);
+        } catch (error) {
+          console.error(error);
+          dataErrorTrue = true;
+        }
+      }
+
+      if (!dataErrorTrue) {
+        //console.log("ACEWilm Call", bodyOfWater);
+
 
         let acewilmElev = "";
         let acewilmTime = "";
@@ -60,7 +70,9 @@ module.exports = {
             time: acewilmTime,
             flow: "N/A"
           });
-        callback(null, data);
+        callback(false, data);
+      } else {
+        callback(true, html)
       }
     });
 

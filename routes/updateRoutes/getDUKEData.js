@@ -14,19 +14,19 @@ module.exports = {
             url: newUrl,
             type: "xml"
         }
+        let dataErrorTrue = false;
         request(options, function (error, response, body) {
             if (error) {
                 callback(error);
                 return;
             }
-            let dataErrorTrue = false;
             try {
-              dukeLakes = JSON.parse(body);
+                dukeLakes = JSON.parse(body);
             } catch (error) {
-              console.error(error);
-              dataErrorTrue = true;
+                console.error(error);
+                dataErrorTrue = true;
             }
-      
+
             if (!dataErrorTrue) {
                 let today = new Date();
 
@@ -41,13 +41,12 @@ module.exports = {
                                 flow: "N/A"
                             })
                         }
-                    } 
+                    }
                 });
-                callback(null, data);
-            }
-            else {
+                callback(false, data);
+            } else {
                 console.log(`Data is bad for ${lakeName} (DUKE)`);
-                callback(null, body);
+                callback(true, body);
             }
         })
     }

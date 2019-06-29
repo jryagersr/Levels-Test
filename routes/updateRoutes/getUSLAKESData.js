@@ -51,6 +51,7 @@ module.exports = {
         // Make request for previous months lakelevels.info site, returns html
         request(url + date2, function (error, response, html) {
 
+            if (typeof body !== 'undefined') {
             //console.log('getUSLAKES ', bodyOfWater);
             // Load the HTML into cheerio and save it to a variable
             var $ = cheerio.load(html);
@@ -72,10 +73,14 @@ module.exports = {
                     dd++;
                 }
             })
+        } else{
+            callback(false, html)
+        }
 
             // Make second request for current month's lakelevels.info site
             request(url + date, function (error, response, html) {
 
+                if (typeof body !== 'undefined') {
                 // Load the HTML into cheerio and save it to a variable
                 var $ = cheerio.load(html);
                 // Simple day increment counter to build date later
@@ -95,7 +100,10 @@ module.exports = {
                         dd++;
                     }
                 })
-                callback(null, data);
+                callback(false, data);
+            } else{
+                callback(true, html)
+            }
             });
         });
     }

@@ -99,10 +99,10 @@ module.exports = {
               });
           }
         });
-        callback(null, data.reverse());
+        callback(false, data.reverse());
       } else {
         console.log(`Data is bad for ${bodyOfWater} (TVA)`);
-        callback(null, body);
+        callback(true, body);
       }
     });
   }

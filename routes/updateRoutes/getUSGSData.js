@@ -130,10 +130,10 @@ module.exports = {
           }
 
         }
-        callback(null, displayBatch);
+        callback(false, displayBatch);
       } else {
         console.log(`Data ( ${body}) is bad for ${bodyOfWater} (USGS)`);
-        callback(null, body);
+        callback(true, body);
       }
     })
   }

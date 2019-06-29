@@ -75,7 +75,9 @@ module.exports = {
               time: apcTime,
               flow: apcFlow
             });
-          callback(null, data);
+          callback(false, data);
+        } else {
+          callback(true, html)
         }
       }
     });

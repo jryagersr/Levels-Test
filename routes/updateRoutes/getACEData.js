@@ -23,7 +23,6 @@ module.exports = {
         }
 
         if (!dataErrorTrue) {
-          // let data = JSON.parse(body);
           let elevEntries = [];
           let flowEntries = [];
           let exportData = [];
@@ -121,11 +120,11 @@ module.exports = {
               }
 
             }
-            callback(null, exportData);
+            callback(false, exportData);
           }
         } else {
           console.log(`Data is bad for ${bodyOfWater} (ACE)`);
-          callback(null, body);
+          callback(true, body);
         }
 
       }

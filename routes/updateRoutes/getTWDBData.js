@@ -19,29 +19,33 @@ module.exports = {
             if (error) {
                 callback(error);
             }
-            //console.log ("TWDB Call", lakeName);
-            _.each(body.split("\r\n"), function (line) {
-                // Split the text body into readable lines
-                var splitLine;
-                line = line.trim();
-                // Check to see if this is a data line
-                if (!isNaN(line[0])) {
-                    splitLine = line.split(/[,]+/); // split the line
-                    // Index 0=date, 1=elevation, there is no flow or time
+            if (typeof body !== 'undefined') {
+                //console.log ("TWDB Call", lakeName);
+                _.each(body.split("\r\n"), function (line) {
+                    // Split the text body into readable lines
+                    var splitLine;
+                    line = line.trim();
+                    // Check to see if this is a data line
+                    if (!isNaN(line[0])) {
+                        splitLine = line.split(/[,]+/); // split the line
+                        // Index 0=date, 1=elevation, there is no flow or time
 
-                    // format timestamp for db
-                    let timestamp = new Date(splitLine[0] + " 6:00");
-                    // Push each line into data object
+                        // format timestamp for db
+                        let timestamp = new Date(splitLine[0] + " 6:00");
+                        // Push each line into data object
 
-                    if (splitLine[1] !== 0) // If elev not 0 (ie, unposted data)
-                        data.push({
-                            time: timestamp,
-                            elev: splitLine[1],
-                            flow: "N/A"
-                        });
-                }
-            });
-            callback(null, data.reverse()); // reverse the data 
+                        if (splitLine[1] !== 0) // If elev not 0 (ie, unposted data)
+                            data.push({
+                                time: timestamp,
+                                elev: splitLine[1],
+                                flow: "N/A"
+                            });
+                    }
+                });
+                callback(false, data.reverse()); // reverse the data 
+            } else {
+                callback(true, body);
+            }
         });
     }
 }

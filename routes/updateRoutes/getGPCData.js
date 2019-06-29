@@ -102,7 +102,10 @@ module.exports = {
               time: gpcTime,
               flow: "N/A"
             });
-          callback(null, data);
+          callback(false, data);
+        }
+        else {
+          callback(true, html)
         }
       }
     });

@@ -19,32 +19,37 @@ module.exports = {
             if (error) {
                 callback(error);
             }
-            if (typeof body == 'string')
-            {
-            if (body.substring(129, 24) !== "Data file not accessible") {
-                let j = body.length - 15;
-                j++;
-                // Get the most recent 30 days data
-                for (i = 0; i < 30; i++) {
-                    // find next end of row
-                    for (j = j - 5; body.substr(j, 5) !== "</tr>" && j > 0; j--) {}
+            if (typeof body == 'string') {
+                if (body.substring(129, 24) !== "Data file not accessible") {
+                    let j = body.length - 15;
+                    j++;
+                    // Get the most recent 30 days data
+                    for (i = 0; i < 30; i++) {
+                        // find next end of row
+                        for (j = j - 5; body.substr(j, 5) !== "</tr>" && j > 0; j--) {}
 
-                    // set timestamp for db
-                    let timestamp = new Date(body.substr(j - 116, 10) + " " + body.substr(j - 97, 8));
-                    let elev = Number(body.substr(j - 77, 5));
+                        // set timestamp for db
+                        let timestamp = new Date(body.substr(j - 116, 10) + " " + body.substr(j - 97, 8));
+                        let elev = Number(body.substr(j - 77, 5));
 
-                    if (elev !== 0) // If elev not 0 (ie, unposted data)
-                        data.push({
-                            time: timestamp,
-                            elev: elev,
-                            flow: "N/A"
-                        });
-                    j--;
-                };
+                        if (elev !== 0) // If elev not 0 (ie, unposted data)
+                            data.push({
+                                time: timestamp,
+                                elev: elev,
+                                flow: "N/A"
+                            });
+                        j--;
+                    };
 
-                callback(null, data);
-            } else console.log(`Data file not accessible ${lakeName}`)
-        } else console.log(`Invalid data returned`)
+                    callback(false, data);
+                } else {
+                    console.log(`Data file not accessible ${lakeName}`)
+                    callback(true, html)
+                }
+            } else {
+                console.log(`Invalid data returned`)
+                callback(true, html)
+            }
         });
     }
 }

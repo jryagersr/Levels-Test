@@ -18,7 +18,7 @@ module.exports = {
     }
     request(options, function (error, response, body) {
       if (error) {
-        callback(error);
+        callback(true, body);
       }
 
       let dataErrorTrue = false;
@@ -26,6 +26,7 @@ module.exports = {
         data = JSON.parse(body);
       } catch (error) {
         console.error(error);
+        console.log(body);
         dataErrorTrue = true;
       }
 
@@ -61,10 +62,10 @@ module.exports = {
         });
 
 
-        callback(null, waterData.reverse());
+        callback(false, waterData.reverse());
       } else {
         console.log(`Data is bad for ${bodyOfWater} (TVA)`);
-        callback(null, body);
+        callback(true, body);
       }
     });
   }
