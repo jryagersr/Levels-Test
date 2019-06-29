@@ -49,7 +49,7 @@ module.exports = {
         var data = []
 
         // Make request for previous months lakelevels.info site, returns html
-        request(url + date2, function (error, response, html) {
+        request(url + date2, function (error,  html) {
 
             if (typeof html !== 'undefined') {
             //console.log('getUSLAKES ', bodyOfWater);
@@ -80,7 +80,7 @@ module.exports = {
             // Make second request for current month's lakelevels.info site
             request(url + date, function (error, response, html) {
 
-                if (typeof body !== 'undefined') {
+                if (typeof html !== 'undefined') {
                 // Load the HTML into cheerio and save it to a variable
                 var $ = cheerio.load(html);
                 // Simple day increment counter to build date later
