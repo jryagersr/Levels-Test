@@ -690,7 +690,7 @@ function updateAllLakes() {
             }, 14 * 60000); // wait 14 minutes (plus 27 minutes @ .5 second interval to cycle through 213 lakes)
           }
 
-        }, .05 * 1000); // five hundreths of a second interval
+        }, .5 * 1000); // half second interval
       }
     })
 }
