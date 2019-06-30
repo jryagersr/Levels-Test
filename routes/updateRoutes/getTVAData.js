@@ -49,14 +49,15 @@ module.exports = {
             } else if (splitTime[1] === "PM")
               hour = parseInt(hour) + 12;
             let timestamp = new Date(year, month, day, hour);
-            //Get the comma out of the flow
 
+            //Get the comma out of the flow and elev
+            let tvaElev = Number(dataSet[2].trim().replace(",", ""));
             let tvaFlow = Number(dataSet[4].trim().replace(",", ""));
 
             waterData.push({
               time: timestamp,
               flow: tvaFlow,
-              elev: dataSet[2]
+              elev: tvaElev
             });
           };
         });
