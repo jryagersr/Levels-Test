@@ -1331,6 +1331,23 @@ module.exports = [
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
     },
     {
+        bodyOfWater: "Laurel River Lake", // lake name
+        state: ["Kentucky"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0.0,
+        normalPool: 1018.5,
+        topOfFloodControl: 1030.0,
+        topOfDam: 1035.0,
+        lat: 36.956047, 
+        long: -84.217414,
+        elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=3248010&p_parameter_type=Flow:Stor:Precip:Stage:Elev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+        flowURL: "",
+        href: "/lakes/laurelrvr",
+        dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
         bodyOfWater: "Nolin", // lake name
         state: ["Kentucky"],
         data: [],
