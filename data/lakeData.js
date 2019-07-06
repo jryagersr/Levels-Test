@@ -260,6 +260,22 @@ module.exports = [
         dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
     },
     {
+        bodyOfWater: "Upper Bear Creek", // lake name
+        state: ["Alabama"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 594.0,
+        topOfFloodControl: 605.0, // guess
+        lat: 34.271946,
+        long:  -87.693886,
+        elevURL: "https://soa.tva.gov/api/river/observed-data/UBRA1",
+        flowURL: "",
+        href: "/lakes/upperbear",
+        dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
         bodyOfWater: "Weiss", // lake name
         state: ["Alabama"],
         data: [],
@@ -3212,7 +3228,55 @@ module.exports = [
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
     // TENNESSEE  ---------------------------------------------------------------------------------------------------------
+    
+    // No data yet for Little Bear
+    /*{
+        bodyOfWater: "Big Bear", // lake name
+        state: ["Tennessee"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 651.0,
+        lat: 34.399166,
+        long: -87.987778,
+        elevURL: "https://soa.tva.gov/api/river/observed-data/BCRT1",
+        flowURL: "",
+        href: "/lakes/bigbear",
+        dataSource: ["TVA"], // array of calls to make to retrieve data
+    },*/
     {
+        bodyOfWater: "Center Hill", // lake name
+        state: ["Tennessee"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 648.0,
+        topOfFloodControl: 685.0,
+        topOfDam: 696.0,
+        lat: 36.095028,
+        long:  -85.825874,
+        elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=2915010&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+        flowURL: "",
+        href: "/lakes/centerhill",
+        dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "Cherokee", // lake name
+        state: ["Tennessee"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 1073.0,
+        lat: 36.16888809,
+        long: -83.5008316,
+        elevURL: "https://soa.tva.gov/api/river/observed-data/CRKT1",
+        flowURL: "",
+        href: "/lakes/cherokee",
+        dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
+    }, {
         bodyOfWater: "Chickamauga", // lake name
         state: ["Tennessee"],
         data: [],
@@ -3257,6 +3321,22 @@ module.exports = [
         href: "/lakes/dalehollow",
         dataSource: ["TVA"], // array of calls to make to retrieve data
     },
+    // No data yet for Little Bear
+    /*{
+        bodyOfWater: "Little Bear", // lake name
+        state: ["Tennessee"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 620.0,
+        lat: 34.454667,
+        long:  -87.974812,
+        elevURL: "https://soa.tva.gov/api/river/observed-data/LBRAT1",
+        flowURL: "",
+        href: "/lakes/littlebear",
+        dataSource: ["TVA"], // array of calls to make to retrieve data
+    },*/
     {
         bodyOfWater: "Nickajack", // lake name
         state: ["Tennessee"],
@@ -3273,6 +3353,36 @@ module.exports = [
         dataSource: ["TVA"], // array of calls to make to retrieve data
     },
     {
+        bodyOfWater: "Norris", // lake name
+        state: ["Tennessee"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 1020.5,
+        lat: 36.22305679,
+        long: -84.08999634,
+        elevURL: "https://soa.tva.gov/api/river/observed-data/NRST1",
+        flowURL: "",
+        href: "/lakes/norris",
+        dataSource: ["TVA"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "Old Hickory", // lake name
+        state: ["Tennessee"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 445.5,
+        lat: 36.29777908,
+        long: -86.65499878,
+        elevURL: "https://soa.tva.gov/api/river/observed-data/OHHT1",
+        flowURL: "",
+        href: "/lakes/oldhickory",
+        dataSource: ["TVA"], // array of calls to make to retrieve data
+    },
+    {
         bodyOfWater: "Percy Priest", // lake name
         state: ["Tennessee"],
         data: [],
@@ -3285,6 +3395,21 @@ module.exports = [
         elevURL: "https://soa.tva.gov/api/river/observed-data/JPHT1",
         flowURL: "",
         href: "/lakes/percypriest",
+        dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "South Holston", // lake name
+        state: ["Tennessee"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 1729.0,
+        lat: 36.52027893,
+        long: -82.09527588,
+        elevURL: "https://soa.tva.gov/api/river/observed-data/SHDT1",
+        flowURL: "",
+        href: "/lakes/southholston",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
     },
     {
@@ -3330,6 +3455,21 @@ module.exports = [
         elevURL: "https://soa.tva.gov/api/river/observed-data/WBOT1",
         flowURL: "",
         href: "/lakes/wattsbar",
+        dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "Watauga", // lake name
+        state: ["Tennessee"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 741.0,
+        lat: 36.32916641,
+        long: -82.12527466,
+        elevURL: "https://soa.tva.gov/api/river/observed-data/WTGT1",
+        flowURL: "",
+        href: "/lakes/watauga",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
     },
 

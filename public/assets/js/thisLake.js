@@ -92,7 +92,7 @@ function buildElevChart(data, lake) {
                 dataElevBatch.push((sumOfElevs / divisor).toFixed(2)); // calculate average
                 dataNPBatch.push(lake.normalPool); // Normal Pool line batch 
                 dataFCBatch.push(lake.topOfFloodControl); // Top of Flood Control Pool line batch
-                dataTDBatch.push(lake.topOfDam); // Top of Dam line batch
+                //dataTDBatch.push(lake.topOfDam); // Top of Dam line batch
 
                 sumOfElevs = data[k].elev;
                 divisor = 1;
@@ -108,7 +108,7 @@ function buildElevChart(data, lake) {
     dataElevBatch.push((sumOfElevs / divisor).toFixed(2)); // calculate average final day and push
     dataNPBatch.push(lake.normalPool); // Normal Pool line batch (currently trying to get it to display)
     dataFCBatch.push(lake.topOfFloodControl); // Normal Pool line batch (currently trying to get it to display)
-    dataTDBatch.push(lake.topOfDam); // Top of Dam line batch (currently trying to get it to display)
+    //dataTDBatch.push(lake.topOfDam); // Top of Dam line batch (currently trying to get it to display)
 
     //check the final day's values for Min and MaxLimit
     if ((sumOfElevs / divisor) > chartMaxElev) // if value is greater than max, replace max
@@ -160,13 +160,13 @@ function buildElevChart(data, lake) {
                     data: dataFCBatch,
                     tension: 0 // disables bezier curves
                 },
-                {
+               /* {
                     label: "Top of Dam",
                     // backgroundColor: 'rgb(179,221,255)',
                     borderColor: 'rgb(0, 0, 0)',
                     data: dataTDBatch,
                     tension: 0 // disables bezier curves
-                }
+                }*/
             ]
         },
 
