@@ -48,7 +48,7 @@ module.exports = {
                 }
             } else {
                 console.log(`Invalid data returned`)
-                callback(true, html)
+                callback(true, body)
             }
         });
     }
