@@ -60,6 +60,31 @@ var LakeSchema = new Schema({
   adLogoUrl: {
     type: String
   },
+  barometric: {
+    type: Number
+  },
+  wxTemp: {
+    type: Number
+  },
+  humidity: {
+    type: Number
+  },
+  windSpeed: {
+    type: Number
+  },
+  windDirection: {
+    type: String
+  },
+  conditions: {
+    type: String
+  },
+  wxDate: {
+    type: String
+  },
+  wxTime: {
+    type: String
+  },
+
 });
 
 // This creates our model from the above schema, using mongoose's model method

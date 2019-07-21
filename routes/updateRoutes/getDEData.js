@@ -2,14 +2,17 @@ const request = require("request")
 const cheerio = require("cheerio");
 const db = require("../../models")();
 const update = require('../updateFunctions');
+const weather = require("../updateRoutes/getWeatherData");
 
 
 module.exports = {
 
-  // APC UPDATE FUNCTION
+  // DE UPDATE FUNCTION
   // ===============================================================================
   // function to get Dominion Energy data
-  getDEData: function (deURL, bodyOfWater, callback) {
+  getDEData: function (currentLake, callback) {
+    let deURL = currentLake.elevURL;
+    let bodyOfWater = currentLake.bodyOfWater;
     var options = {
       url: deURL,
       headers: {
@@ -29,7 +32,7 @@ module.exports = {
       //console.log(html)
 
       if (error) {
-        callback(error);
+        callback(true, error, html);
       } else {
         let dataErrorTrue = false;
         try {
@@ -43,8 +46,8 @@ module.exports = {
           let deElev = "";
           let deTime = "";
           let deDate = "";
-          let splitName = "";
-          let splitDate = "";
+          //let splitName = "";
+          //let splitDate = "";
           let splitData = "";
 
           // With cheerio, find each <td> on the page
@@ -52,8 +55,8 @@ module.exports = {
           $(`.dom-alt-rows`).each(function (i, element) {
             var value = $(`.dom-alt-rows`).text();
             splitData = value.split('\n');
-            deDate = splitData[3].trim();
-            deElev = splitData[5].trim();
+            deDate = splitData[10].trim();
+            deElev = splitData[12].trim();
             deDate = deDate.split("/");
 
 
@@ -70,7 +73,7 @@ module.exports = {
 
             //Calculate the average water level
             deElev = deElev.split("-");
-            deElev = (Number(deElev[0].trim()) + Number(deElev[1].trim())) / 2;
+            deElev = (Number(deElev[0].trim()));
             deElev = deElev.toFixed(2);
 
           });

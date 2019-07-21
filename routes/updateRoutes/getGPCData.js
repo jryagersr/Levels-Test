@@ -2,6 +2,7 @@ const request = require("request")
 const cheerio = require("cheerio");
 const db = require("../../models")();
 const update = require('../updateFunctions');
+const weather = require("../updateRoutes/getWeatherData");
 
 
 module.exports = {
@@ -9,7 +10,9 @@ module.exports = {
   // APC UPDATE FUNCTION
   // ===============================================================================
   // function to get Georgia Power Company data
-  getGPCData: function (gpcURL, bodyOfWater, callback) {
+  getGPCData: function (currentLake, callback) {
+    let gpcURL = currentLake.elevURL;
+    let bodyOfWater = currentLake.bodyOfWater;
     var options = {
       url: gpcURL,
       headers: {
@@ -103,8 +106,7 @@ module.exports = {
               flow: "N/A"
             });
           callback(false, data);
-        }
-        else {
+        } else {
           callback(true, html)
         }
       }

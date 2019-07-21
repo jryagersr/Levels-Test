@@ -119,11 +119,11 @@ function buildElevChart(data, lake) {
     labelBatch.reverse();
     dataElevBatch.reverse();
 
-    // Set y axis limits for Flow Chart
-    chartMinElevLimit = Math.round(chartMinElev) - 3; // set the chart lower limit
-    if (chartMinElevLimit > lake.normalPool) chartMinElevLimit = lake.normalPool - 2; // make sure normal pool line shows.
-    chartMaxElevLimit = Math.round(chartMaxElev) + 3; // set the chart upper limit
-    if (chartMaxElevLimit < lake.normalPool) chartMaxElevLimit = lake.normalPool + 2; // make sure normal pool line shows.
+    // Set y axis limits for Elev Chart
+    chartMinElevLimit = Math.round(chartMinElev) - .5; // set the chart lower limit
+    //if (chartMinElevLimit > lake.normalPool) chartMinElevLimit = lake.normalPool - .5; // make sure normal pool line shows.
+    chartMaxElevLimit = Math.round(chartMaxElev) + .5; // set the chart upper limit
+    //if (chartMaxElevLimit < lake.normalPool) chartMaxElevLimit = lake.normalPool + .5; // make sure normal pool line shows.
 
     var ctx = document.getElementById('myElevChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
@@ -160,13 +160,13 @@ function buildElevChart(data, lake) {
                     data: dataFCBatch,
                     tension: 0 // disables bezier curves
                 },
-               /* {
-                    label: "Top of Dam",
-                    // backgroundColor: 'rgb(179,221,255)',
-                    borderColor: 'rgb(0, 0, 0)',
-                    data: dataTDBatch,
-                    tension: 0 // disables bezier curves
-                }*/
+                /* {
+                     label: "Top of Dam",
+                     // backgroundColor: 'rgb(179,221,255)',
+                     borderColor: 'rgb(0, 0, 0)',
+                     data: dataTDBatch,
+                     tension: 0 // disables bezier curves
+                 }*/
             ]
         },
 
@@ -457,6 +457,7 @@ function buildBaroChart(data) {
 // Get current lake from database
 // Declare variable to hold currentLake object
 var currentLake = {};
+var rampData = {};
 $.ajax({
         url: "/api/find-one-lake",
         method: "GET",
@@ -470,6 +471,50 @@ $.ajax({
         $("#lakeTitle").append(currentLake.bodyOfWater);
         $("#lakeSponsor").append(currentLake.bodyOfWater);
         $("#lakeFeaturedTournament").append(currentLake.bodyOfWater);
+
+        // Set the current weather conditions
+        $("#currentWeatherConditions").append(currentLake.conditions);
+        $("#currentWeatherTemp").append(currentLake.wxTemp);
+        $("#currentWeatherHumidity").append(currentLake.humidity);
+        $("#currentWeatherBarometric").append(currentLake.barometric);
+        $("#currentWeatherWindSpeed").append(currentLake.windSpeed);
+        $("#currentWeatherWindDirection").append(currentLake.windDirection);
+        $("#currentWeatherDate").append(currentLake.wxDate);
+        $("#currentWeatherTime").append(currentLake.wxTime);
+
+        // API call for ramp data for Ramps
+        $.ajax({
+                url: "/api/ramps",
+                method: "GET",
+            })
+            .then(function (data) {
+                rampData = data;
+                rampData.forEach(function (ramp, i) {
+                    // if match send the lat lon to client
+                    let rampDirectionsLink = "https://www.google.com/maps/dir//" + ramp.lat + "," + ramp.long;
+
+
+                    if (ramp.id == lakeRoute) {
+                        // Create the HTML Well (Section) and Add the table content for each reserved table
+                        var rampSection = $("<tr>");
+                        rampSection.addClass("well");
+                        rampSection.attr("id", "rampWell-" + i + 1);
+
+                        // Set href as rampDirectionsLink
+                        rampSection.attr("data-url", rampDirectionsLink); // Add data attribute to the row with entryLink url
+                        rampSection.addClass("clickable-row"); // Add clickable row css styles
+
+                        $("#rampSection").append(rampSection);
+                        // Append the data values to the table row
+                        $("#rampWell-" + i + 1).append("<td><b>" + ramp.rampName + "</b></td>");
+                        $("#rampWell-" + i + 1).append("<td> <a href='" + rampDirectionsLink + "' target='_blank'> Click </a> </td>");
+                    }
+                });
+            });
+
+        //build barometric chart for lake location
+        //buildBaroChart(baroData)
+
 
         if (currentLake.data.length > 0) {
             currentLake.data.forEach(function (entry, i) {
@@ -502,10 +547,6 @@ $.ajax({
             if (currentLake.data[0].flow !== "N/A") {
                 buildFlowChart(currentLake.data);
             }
-
-            //build barometric chart for lake location
-            //buildBaroChart(baroData)
-
 
             // Hide loading gif
             hideLoader();

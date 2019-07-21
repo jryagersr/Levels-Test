@@ -13,8 +13,8 @@ const sjrwmd = require("./updateRoutes/getSJRWMDData");
 const tva = require("./updateRoutes/getTVAData");
 const twdb = require("./updateRoutes/getTWDBData");
 const usgs = require("./updateRoutes/getUSGSData");
-const uslakes = require("./updateRoutes/getUSLAKESData");
-const request = require("request"); // for weather data
+const uslakes = require("./updateRoutes/getLAKESData");
+const weather = require("./updateRoutes/getWeatherData");
 // Import update functions
 var update = require('./updateFunctions');
 
@@ -51,6 +51,7 @@ module.exports = function (app) {
     // match off of href because this value has no caps and no spaces
     // matching off lakename alone requires modifying our entire database
     let hrefMatch = "/lakes/" + lakeName;
+    let noLakeDataSource = false;
     db.model("Lake").find({
         "href": hrefMatch
       })
@@ -66,244 +67,210 @@ module.exports = function (app) {
             let currentLake = data[0];
 
             //check to see if update is needed (function returns true if update is needed)
-            if (update.checkForUpdate(currentLake.bodyOfWater, currentLake.lastRefresh, currentLake.refreshInterval, currentLake.data.length)) {
+            //if not retrieve data and update the db, then return the retrieved data
+            if (update.checkForUpdate(currentLake)) {
               // update current lake
               // determine which data source and run function
               switch (currentLake.dataSource[0]) {
 
                 case "ACE":
-                  ace.getACEData(currentLake.elevURL, currentLake.bodyOfWater, currentLake.normalPool, currentLake.elevDataInterval, function (error, ACEdata) {
+                  ace.getACEData(currentLake, function (error, ACEdata) {
                     if (error) {
                       console.log(ACEdata);
                       // if successful return the data
                     } else {
                       // update the current lake
-                      update.updateAndReturnOneLake(currentLake.bodyOfWater, currentLake.lastRefresh, ACEdata, function (error, ACElakeDataFlag, ACEdata) {
+                      update.updateAndReturnOneLake(currentLake, ACEdata, function (error, ACElakeDataFlag, ACEdata) {
                         if (error) {
                           console.log(ACEdata);
-                          // if successful return the data
-                        } else {
-                          // send updated lake to client
-                          res.json(ACEdata);
                         }
+                        res.json(ACEdata);
                       })
                     }
                   });
                   break;
 
                 case "ACEWilm":
-                  acewilm.getACEWilmData(currentLake.elevURL, currentLake.bodyOfWater, function (error, ACEWilmdata) {
+                  acewilm.getACEWilmData(currentLake, function (error, ACEWilmdata) {
                     if (error) {
                       console.log(ACEWilmdata);
                       // if successful return the data
                     } else {
                       // update the current lake
-                      update.updateAndReturnOneLake(currentLake.bodyOfWater, currentLake.lastRefresh, ACEWilmdata, function (error, ACEWilmlakeDataFlag, ACEWilmdata) {
+                      update.updateAndReturnOneLake(currentLake, ACEWilmdata, function (error, ACEWilmlakeDataFlag, ACEWilmdata) {
                         if (error) {
                           console.log(ACEWilmdata);
-                          // if successful return the data
-                        } else {
-                          // send updated lake to client
-                          res.json(ACEWilmdata);
                         }
+                        res.json(ACEWilmdata);
                       })
                     }
                   });
                   break;
 
                 case "APC":
-                  apc.getAPCData(currentLake.elevURL, currentLake.bodyOfWater, function (error, APCdata) {
+                  apc.getAPCData(currentLake, function (error, APCdata) {
                     if (error) {
                       console.log(APCdata);
                       // if successful return the data
                     } else {
                       // update the current lake
-                      update.updateAndReturnOneLake(currentLake.bodyOfWater, currentLake.lastRefresh, APCdata, function (error, APClakeDataFlag, APCdata) {
+                      update.updateAndReturnOneLake(currentLake, APCdata, function (error, APClakeDataFlag, APCdata) {
                         if (error) {
                           console.log(APCdata);
-                        } else {
-                          // send updated lake to client
-                          res.json(APCdata);
                         }
+                        res.json(APCdata);
                       })
                     }
                   });
                   break;
 
                 case "CUBE":
-                  cube.getCUBEData(currentLake.bodyOfWater, function (error, CUBEdata) {
+                  cube.getCUBEData(currentLake, function (error, CUBEdata) {
                     if (error) {
                       response.send(CUBEdata);
                     } else {
                       // if successful return the data
                       // update the current lake
-                      update.updateAndReturnOneLake(currentLake.bodyOfWater, currentLake.lastRefresh, CUBEdata, function (error, CUBElakeDataFlag, CUBEdata) {
+                      update.updateAndReturnOneLake(currentLake, CUBEdata, function (error, CUBElakeDataFlag, CUBEdata) {
                         if (error) {
                           console.log(CUBEdata);
-                          // if successful return the data
-                        } else {
-                          // send updated lake to client
-                          res.json(CUBEdata);
                         }
+                        res.json(CUBEdata);
                       })
                     }
                   })
                   break;
 
                 case "DE":
-                  de.getDEData(currentLake.elevURL, currentLake.bodyOfWater, function (error, DEdata) {
+                  de.getDEData(currentLake, function (error, DEdata) {
                     if (error) {
                       console.log(DEdata);
                       // if successful return the data
                     } else {
                       // update the current lake
-                      update.updateAndReturnOneLake(currentLake.bodyOfWater, currentLake.lastRefresh, DEdata, function (error, DElakeDataFlag, DEdata) {
+                      update.updateAndReturnOneLake(currentLake, DEdata, function (error, DElakeDataFlag, DEdata) {
                         if (error) {
                           console.log(DEdata);
-                        } else {
-                          // send updated lake to client
-                          res.json(DEdata);
                         }
+                        res.json(DEdata);
                       })
                     }
                   });
                   break;
 
                 case "DUKE":
-                  duke.getDUKEData(currentLake.bodyOfWater, currentLake.elevURL, currentLake.seaLevelDelta, function (error, DUKEdata) {
+                  duke.getDUKEData(currentLake, function (error, DUKEdata) {
                     if (error) {
                       console.log(DUKEdata);
                       // if successful return the data
                     } else {
                       // update the current lake
-                      update.updateAndReturnOneLake(currentLake.bodyOfWater, currentLake.lastRefresh, DUKEdata, function (error, DUKElakeDataFlag, DUKEdata) {
+                      update.updateAndReturnOneLake(currentLake, DUKEdata, function (error, DUKElakeDataFlag, DUKEdata) {
                         if (error) {
                           console.log(DUKEdata);
-                          // if successful return the data
-                        } else {
-                          // send updated lake to client
-                          res.json(DUKEdata);
                         }
+                        res.json(currentLake);
                       })
                     }
                   });
                   break;
 
                 case "GPC":
-                  gpc.getGPCData(currentLake.elevURL, currentLake.bodyOfWater, function (error, GPCdata) {
+                  gpc.getGPCData(currentLake, function (error, GPCdata) {
                     if (error) {
                       console.log(GPCdata);
                       // if successful return the data
                     } else {
                       // update the current lake
-                      update.updateAndReturnOneLake(currentLake.bodyOfWater, currentLake.lastRefresh, GPCdata, function (error, GPClakeDataFlag, GPCdata) {
+                      update.updateAndReturnOneLake(currentLake, GPCdata, function (error, GPClakeDataFlag, GPCdata) {
                         if (error) {
                           console.log(GPCdata);
-                        } else {
-                          // send updated lake to client
-                          res.json(GPCdata);
                         }
+                        res.json(GPCdata);
                       })
                     }
                   });
                   break;
 
                 case "SJRWMD":
-                  sjrwmd.getSJRWMDData(currentLake.bodyOfWater, currentLake.elevURL, function (error, SJRWMDdata) {
+                  sjrwmd.getSJRWMDData(currentLake, function (error, SJRWMDdata) {
                     if (error) {
                       console.log(SJRWMDdata);
                       // if successful return the data
                     } else {
                       // update the current lake
-                      update.updateAndReturnOneLake(currentLake.bodyOfWater, currentLake.lastRefresh, SJRWMDdata, function (error, SJRWMDlakeDataFlag, SJRWMDdata) {
+                      update.updateAndReturnOneLake(currentLake, SJRWMDdata, function (error, SJRWMDlakeDataFlag, SJRWMDdata) {
                         if (error) {
                           console.log(SJRWMDdata);
-                          // if successful return the data
-                        } else {
-                          // send updated lake to client
-                          res.json(SJRWMDdata);
                         }
+                        res.json(SJRWMDdata);
                       })
                     }
                   });
                   break;
 
                 case "TVA":
-                  tva.getTVAData(currentLake.elevURL, currentLake.bodyOfWater, function (error, TVAdata) {
+                  tva.getTVAData(currentLake, function (error, TVAdata) {
                     if (error) {
                       console.log(TVAdata);
                       // if successful return the data
                     } else {
                       // update the current lake
-                      update.updateAndReturnOneLake(currentLake.bodyOfWater, currentLake.lastRefresh, TVAdata, function (error, TVAlakeDataFlag, TVAdata) {
+                      update.updateAndReturnOneLake(currentLake, TVAdata, function (error, TVAlakeDataFlag, TVAdata) {
                         if (error) {
                           console.log(TVAdata);
-                          // if successful return the data
-                        } else {
-                          // send updated lake to client
-                          res.json(TVAdata);
                         }
+                        res.json(TVAdata);
                       })
                     }
                   });
                   break;
 
                 case "TWDB":
-                  twdb.getTWDBData(currentLake.bodyOfWater, currentLake.elevURL, function (error, TWDBdata) {
+                  twdb.getTWDBData(currentLake, function (error, TWDBdata) {
                     if (error) {
                       console.log(TWDBdata);
                       // if successful return the data
                     } else {
                       // update the current lake
-                      update.updateAndReturnOneLake(currentLake.bodyOfWater, currentLake.lastRefresh, TWDBdata, function (error, TWDBlakeDataFlag, TWDBdata) {
+                      update.updateAndReturnOneLake(currentLake, TWDBdata, function (error, TWDBlakeDataFlag, TWDBdata) {
                         if (error) {
                           console.log(TWDBdata);
-                          // if successful return the data
-                        } else {
-                          // send updated lake to client
-                          res.json(TWDBdata);
-
                         }
+                        res.json(TWDBdata);
                       })
                     }
                   });
                   break;
 
-                case "USLAKES":
-                  uslakes.getUSLAKESData(currentLake.bodyOfWater, function (error, USLAKESdata) {
+                case "LAKES":
+                  uslakes.getLAKESData(currentLake, function (error, LAKESdata) {
                     if (error) {
-                      console.log(USLAKESdata);
-                    } 
-                    else {
+                      console.log(LAKESdata);
+                    } else {
                       // update the current lake
-                      update.updateAndReturnOneLake(currentLake.bodyOfWater, currentLake.lastRefresh, USLAKESdata, function (error, USLAKESlakeDataFlag, data) {
+                      update.updateAndReturnOneLake(currentLake, LAKESdata, function (error, USLAKESlakeDataFlag, LAKESdata) {
                         if (error) {
-                          console.log(USLAKESdata);
-                          // if successful return the data
-                        } else {
-                          // send updated lake to client
-                          res.json(USLAKESdata);
+                          console.log(LAKESdata);
                         }
+                        res.json(LAKESdata);
                       })
                     }
                   });
                   break;
 
                 case "USGS":
-                  usgs.getUSGSData(currentLake.elevURL, currentLake.bodyOfWater, currentLake.seaLevelDelta, function (error, USGSdata) {
+                  usgs.getUSGSData(currentLake, function (error, USGSdata) {
                     if (error) {
                       console.log(USGSdata);
                       // if successful return the data
                     } else {
                       // update the current lake
-                      update.updateAndReturnOneLake(currentLake.bodyOfWater, currentLake.lastRefresh, USGSdata, function (error, USGSlakeDataFlag, USGSdata) {
+                      update.updateAndReturnOneLake(currentLake, USGSdata, function (error, USGSlakeDataFlag, USGSdata) {
                         if (error) {
                           console.log(USGSdata);
-                          // if successful return the data
-                        } else {
-                          // send updated lake to client
-                          res.json(USGSdata);
                         }
+                        res.json(USGSdata);
                       })
                     }
                   });
@@ -311,21 +278,56 @@ module.exports = function (app) {
 
                 default:
                   console.log(`No data source for ${currentLake.bodyOfWater}`);
-                  res.json(currentLake);
-                //console.log("Data source could not be found.");
-                //res.send("Data source could not be found.");
+                  noLakeDataSource = true;
               }
-            }
-            // if no update is needed, send currentLake to client
-            else {
+
+            } else {
+              // if no update is needed, send currentLake to client
               currentLake.data.sort(function (a, b) {
                 // Turn your strings into dates, and then subtract them
                 // to get a value that is either negative, positive, or zero.
                 return new Date(b.time) - new Date(a.time);
               });
-              res.json(currentLake);
-              //console.log(`No single lake update needed for ${currentLake.bodyOfWater}`);
             }
+            // Update the current conditions and forecast for this lake
+
+            // Get weather data
+            // Need to add code to check refreshInterval for weatherData
+
+            //if (checkForUpdate(currentLake.lastRefresh, currentLake.refreshInterval, currentLake.data.length)) {
+            // 
+
+
+            weather.getWeatherData(currentLake, function (error, currentConditions) {
+              let currentConditionsData = currentConditions;
+              if (error) {
+                console.log(`Weather retrieval error ${error}`)
+                callbackError = true;
+              } else {
+                if (currentConditions != 'undefined') {
+                  // Set weather
+                  let today = new Date()
+                  let compassSector = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW", "N"];
+                  currentLake.barometric = currentConditionsData.main.pressure;
+                  currentLake.wxTemp = currentConditionsData.main.temp;
+                  currentLake.humidity = currentConditionsData.main.humidity;
+                  currentLake.windSpeed = currentConditionsData.wind.speed;
+                  currentLake.windDirection = compassSector[(currentConditionsData.wind.deg / 22.5).toFixed(0) - 1];
+                  currentLake.conditions = currentConditionsData.weather[0].description;
+                  currentLake.conditions = currentLake.conditions.charAt(0).toUpperCase() + currentLake.conditions.slice(1);
+                  currentLake.wxDate = today.toLocaleDateString();
+                  currentLake.wxTime = today.toLocaleTimeString('en-US');
+
+                  // if no lakeData update needed, make the callback, otherwise it will be made in the switch callback
+                  if (!update.checkForUpdate(currentLake) || noLakeDataSource) {
+                    res.json(currentLake);
+                  }
+
+                } else {
+                  console.log(`Data error for weather ${currentLake.bodyOfWater}`);
+                }
+              }
+            });
           }
         }
       })
@@ -384,7 +386,7 @@ function updateAllLakes() {
           let currentLake = data[i];
 
           //check to see if update is needed (function returns true if update is needed)
-          if (update.checkForUpdate(currentLake.lastRefresh, currentLake.refreshInterval, currentLake.data.length)) {
+          if (update.checkForUpdate(currentLake)) {
             //console.log(`lastRefresh ${currentLake.lastRefresh} data.length ${currentLake.data.length} ${currentLake.bodyOfWater}`)
             // update current lake
             // determine which data source and run function
@@ -393,19 +395,18 @@ function updateAllLakes() {
             switch (currentLake.dataSource[0]) {
 
               case "ACE":
-                ace.getACEData(currentLake.elevURL, currentLake.bodyOfWater, currentLake.normalPool, currentLake.elevDataInterval, function (error, ACEdata) {
+                ace.getACEData(currentLake, function (error, ACEdata) {
                   if (error) {
                     console.log(currentLake.bodyOfWater + " ACE data error")
                     // if successful return the data
                   } else {
                     // update the current lake
-                    update.updateAndReturnOneLake(currentLake.bodyOfWater, currentLake.lastRefresh, ACEdata, function (error, ACElakeDataFlag, ACEdata) {
+                    update.updateAndReturnOneLake(currentLake, ACEdata, function (error, ACElakeDataFlag, ACEdata) {
                       if (error) {
                         console.log(ACEdata);
                       }
                       if (ACElakeDataFlag) {
                         dataUpdated++;
-                        getWeatherData = true;
                         //console.log(`Updated ${currentLake.bodyOfWater}`)
                       } //else console.log(`No Update ${currentLake.bodyOfWater}`)
                     })
@@ -414,13 +415,13 @@ function updateAllLakes() {
                 break;
 
               case "ACEWilm":
-                acewilm.getACEWilmData(currentLake.elevURL, currentLake.bodyOfWater, function (error, ACEWilmdata) {
+                acewilm.getACEWilmData(currentLake, function (error, ACEWilmdata) {
                   if (error) {
                     console.log(currentLake.bodyOfWater + " ACEWilm data error")
                     // if successful return the data
                   } else {
                     // update the current lake
-                    update.updateAndReturnOneLake(currentLake.bodyOfWater, currentLake.lastRefresh, ACEWilmdata, function (error, ACEWilmlakeDataFlag, ACEWilmdata) {
+                    update.updateAndReturnOneLake(currentLake, ACEWilmdata, function (error, ACEWilmlakeDataFlag, ACEWilmdata) {
                       if (error) {
                         console.log(ACEWilmdata);
                       }
@@ -434,13 +435,13 @@ function updateAllLakes() {
                 break;
 
               case "APC":
-                apc.getAPCData(currentLake.elevURL, currentLake.bodyOfWater, function (error, APCdata) {
+                apc.getAPCData(currentLake, function (error, APCdata) {
                   if (error) {
                     console.log(currentLake.bodyOfWater + " APC data error")
                     // if successful return the data
                   } else {
                     // update the current lake
-                    update.updateAndReturnOneLake(currentLake.bodyOfWater, currentLake.lastRefresh, APCdata, function (error, APClakeDataFlag, APCdata) {
+                    update.updateAndReturnOneLake(currentLake, APCdata, function (error, APClakeDataFlag, APCdata) {
                       if (error) {
                         console.log(APCdata);
                       }
@@ -454,13 +455,13 @@ function updateAllLakes() {
                 break;
 
               case "CUBE":
-                cube.getCUBEData(currentLake.bodyOfWater, function (error, CUBEdata) {
+                cube.getCUBEData(currentLake, function (error, CUBEdata) {
                   if (error) {
                     console.log(currentLake.bodyOfWater + " CUBE data error")
                   } else {
                     // if successful return the data
                     // update the current lake
-                    update.updateAndReturnOneLake(currentLake.bodyOfWater, currentLake.lastRefresh, CUBEdata, function (error, CUBElakeDataFlag, CUBEdata) {
+                    update.updateAndReturnOneLake(currentLake, CUBEdata, function (error, CUBElakeDataFlag, CUBEdata) {
                       if (error) {
                         console.log(CUBEdata);
                       }
@@ -474,13 +475,13 @@ function updateAllLakes() {
                 break;
 
               case "DE":
-                de.getDEData(currentLake.elevURL, currentLake.bodyOfWater, function (error, DEdata) {
+                de.getDEData(currentLake, function (error, DEdata) {
                   if (error) {
                     console.log(currentLake.bodyOfWater + " DE data error")
                     // if successful return the data
                   } else {
                     // update the current lake
-                    update.updateAndReturnOneLake(currentLake.bodyOfWater, currentLake.lastRefresh, DEdata, function (error, DElakeDataFlag, DEdata) {
+                    update.updateAndReturnOneLake(currentLake, DEdata, function (error, DElakeDataFlag, DEdata) {
                       if (error) {
                         console.log(DUKEdata);
                       }
@@ -494,13 +495,13 @@ function updateAllLakes() {
                 break;
 
               case "DUKE":
-                duke.getDUKEData(currentLake.bodyOfWater, currentLake.elevURL, currentLake.seaLevelDelta, function (error, DUKEdata) {
+                duke.getDUKEData(currentLake, function (error, DUKEdata) {
                   if (error) {
                     console.log(currentLake.bodyOfWater + " DUKE data error")
                     // if successful return the data
                   } else {
                     // update the current lake
-                    update.updateAndReturnOneLake(currentLake.bodyOfWater, currentLake.lastRefresh, DUKEdata, function (error, DUKElakeDataFlag, DUKEdata) {
+                    update.updateAndReturnOneLake(currentLake, DUKEdata, function (error, DUKElakeDataFlag, DUKEdata) {
                       if (error) {
                         console.log(DUKEdata);
                       }
@@ -514,13 +515,13 @@ function updateAllLakes() {
                 break;
 
               case "GPC":
-                gpc.getGPCData(currentLake.elevURL, currentLake.bodyOfWater, function (error, GPCdata) {
+                gpc.getGPCData(currentLake, function (error, GPCdata) {
                   if (error) {
                     console.log(currentLake.bodyOfWater + " GPC data error")
                     // if successful return the data
                   } else {
                     // update the current lake
-                    update.updateAndReturnOneLake(currentLake.bodyOfWater, currentLake.lastRefresh, GPCdata, function (error, GPClakeDataFlag, GPCdata) {
+                    update.updateAndReturnOneLake(currentLake, GPCdata, function (error, GPClakeDataFlag, GPCdata) {
                       if (error) {
                         console.log(GPCdata);
                       }
@@ -534,13 +535,13 @@ function updateAllLakes() {
                 break;
 
               case "SJRWMD":
-                sjrwmd.getSJRWMDData(currentLake.bodyOfWater, currentLake.elevURL, function (error, SJRWMDdata) {
+                sjrwmd.getSJRWMDData(currentLake, function (error, SJRWMDdata) {
                   if (error) {
-                    console.log(currentLake.bodyOfWater + " SKRWMD data error")
+                    console.log(currentLake.bodyOfWater + " SJRWMD data error")
                     // if successful return the data
                   } else {
                     // update the current lake
-                    update.updateAndReturnOneLake(currentLake.bodyOfWater, currentLake.lastRefresh, SJRWMDdata, function (error, SJRWMDlakeDataFlag, SJRWMDdata) {
+                    update.updateAndReturnOneLake(currentLake, SJRWMDdata, function (error, SJRWMDlakeDataFlag, SJRWMDdata) {
                       if (error) {
                         console.log(SJRWMDdata);
                       }
@@ -554,13 +555,13 @@ function updateAllLakes() {
                 break;
 
               case "TVA":
-                tva.getTVAData(currentLake.elevURL, currentLake.bodyOfWater, function (error, TVAdata) {
+                tva.getTVAData(currentLake, function (error, TVAdata) {
                   if (error) {
                     console.log(currentLake.bodyOfWater + " TVA data error")
                     // if successful return the data
                   } else {
                     // update the current lake
-                    update.updateAndReturnOneLake(currentLake.bodyOfWater, currentLake.lastRefresh, TVAdata, function (error, TVAlakeDataFlag, TVAdata) {
+                    update.updateAndReturnOneLake(currentLake, TVAdata, function (error, TVAlakeDataFlag, TVAdata) {
                       if (error) {
                         console.log(TVAdata);
                       }
@@ -574,13 +575,13 @@ function updateAllLakes() {
                 break;
 
               case "TWDB":
-                twdb.getTWDBData(currentLake.bodyOfWater, currentLake.elevURL, function (error, TWDBdata) {
+                twdb.getTWDBData(currentLake, function (error, TWDBdata) {
                   if (error) {
                     console.log(currentLake.bodyOfWater + " TWDB data error")
                     // if successful return the data
                   } else {
                     // update the current lake
-                    update.updateAndReturnOneLake(currentLake.bodyOfWater, currentLake.lastRefresh, TWDBdata, function (error, TWDBlakeDataFlag, TWDBdata) {
+                    update.updateAndReturnOneLake(currentLake, TWDBdata, function (error, TWDBlakeDataFlag, TWDBdata) {
                       if (error) {
                         console.log(TWDBdata);
                       }
@@ -593,18 +594,18 @@ function updateAllLakes() {
                 });
                 break;
 
-              case "USLAKES":
-                uslakes.getUSLAKESData(currentLake.bodyOfWater, function (error, USLAKESdata) {
+              case "LAKES":
+                uslakes.getLAKESData(currentLake, function (error, LAKESdata) {
                   if (error) {
-                    console.log(currentLake.bodyOfWater + " USLAKES data error")
+                    console.log(currentLake.bodyOfWater + " LAKES data error")
                     // if successful return the data
                   } else {
                     // update the current lake
-                    update.updateAndReturnOneLake(currentLake.bodyOfWater, currentLake.lastRefresh, USLAKESdata, function (error, USLAKESlakeDataFlag, USLAKESdata) {
+                    update.updateAndReturnOneLake(currentLake, USLAKESdata, function (error, LAKESlakeDataFlag, LAKESdata) {
                       if (error) {
-                        console.log(USLAKESdata);
+                        console.log(LAKESdata);
                       }
-                      if (USLAKESlakeDataFlag) {
+                      if (LAKESlakeDataFlag) {
                         dataUpdated++;
                         //console.log(`Updated ${currentLake.bodyOfWater}`)
                       } //else console.log(`No Update ${currentLake.bodyOfWater}`)
@@ -614,13 +615,13 @@ function updateAllLakes() {
                 break;
 
               case "USGS":
-                usgs.getUSGSData(currentLake.elevURL, currentLake.bodyOfWater, currentLake.seaLevelDelta, function (error, USGSdata) {
+                usgs.getUSGSData(currentLake, function (error, USGSdata) {
                   if (error) {
                     console.log(currentLake.bodyOfWater + " USGS data error")
                     // if successful return the data
                   } else {
                     // update the current lake
-                    update.updateAndReturnOneLake(currentLake.bodyOfWater, currentLake.lastRefresh, USGSdata, function (error, USGSlakeDataFlag, USGSdata) {
+                    update.updateAndReturnOneLake(currentLake, USGSdata, function (error, USGSlakeDataFlag, USGSdata) {
                       if (error) {
                         console.log(USGSdata);
                       }
@@ -644,7 +645,7 @@ function updateAllLakes() {
             //  console.log(`${i}. No update needed for ${currentLake.bodyOfWater} (${currentLake.dataSource[0]})`);
           }
 
-          ///*
+          /*//
           //Retrieve Weather Data 
           //Weather data URLs
           let apiKey = "d620419cfbb975f425c6262fefeef8f3";

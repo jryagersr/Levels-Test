@@ -1,4 +1,3 @@
-
 module.exports = [
 
     // ALABAMA  ---------------------------------------------------------------------------------------------------------
@@ -18,6 +17,18 @@ module.exports = [
         flowURL: "",
         href: "/lakes/aliceville",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Bankhead", // lake name
@@ -34,6 +45,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/bankhead",
         dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Bouldin", // lake name
@@ -44,12 +66,23 @@ module.exports = [
         seaLevelDelta: 0,
         normalPool: 252.0,
         topOfFloodControl: 260.0, //guess
-        lat: 32.567057,
-        long: -86.270391,
+        lat: 32.588974,
+        long: -86.284355,
         elevURL: "http://apcshorelines.com/our-lakes/walter-bouldin",
         flowURL: "",
         href: "/lakes/bouldin",
         dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Eufaula (AL)", // lake name
@@ -66,6 +99,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/eufaulaal",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Guntersville", // lake name
@@ -82,6 +126,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/guntersville",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Harris", // lake name
@@ -92,12 +147,23 @@ module.exports = [
         seaLevelDelta: 0,
         normalPool: 793.0,
         topOfFloodControl: 803.0, // guess
-        lat: 33.310325,
-        long: -87.399978,
+        lat: 33.277985,
+        long: -85.615988,
         elevURL: "http://apcshorelines.com/our-lakes/harris",
         flowURL: "",
         href: "/lakes/harris",
         dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Holt", // lake name
@@ -114,6 +180,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/holt",
         dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Jordan (AL)", // lake name
@@ -130,6 +207,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/jordanal",
         dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Lay", // lake name
@@ -146,6 +234,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/lay",
         dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Logan Martin", // lake name
@@ -162,6 +261,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/loganmartin",
         dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Mitchell", // lake name
@@ -178,6 +288,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/mitchell",
         dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Neely Henry", // lake name
@@ -194,6 +315,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/neelyhenry",
         dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Martin", // lake name
@@ -210,6 +342,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/martin",
         dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Pickwick", // lake name
@@ -226,6 +369,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/pickwick",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Smith", // lake name
@@ -242,6 +396,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/smith",
         dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Thurlow", // lake name
@@ -258,6 +423,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/thurlow",
         dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Upper Bear Creek", // lake name
@@ -269,11 +445,22 @@ module.exports = [
         normalPool: 594.0,
         topOfFloodControl: 605.0, // guess
         lat: 34.271946,
-        long:  -87.693886,
+        long: -87.693886,
         elevURL: "https://soa.tva.gov/api/river/observed-data/UBRA1",
         flowURL: "",
         href: "/lakes/upperbear",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Weiss", // lake name
@@ -290,6 +477,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/weiss",
         dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Wheeler", // lake name
@@ -306,6 +504,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/wheeler",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Wilson", // lake name
@@ -322,6 +531,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/wilson",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Yates", // lake name
@@ -332,12 +552,23 @@ module.exports = [
         seaLevelDelta: 0,
         normalPool: 344.0,
         topOfFloodControl: 352.0, // guess
-        lat: 34.818539,
-        long: -87.489826,
+        lat: 32.582247,
+        long: -85.890676,
         elevURL: "http://apcshorelines.com/our-lakes/yates",
         flowURL: "",
         href: "/lakes/yates",
         dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     // Arizona  ---------------------------------------------------------------------------------------------------------
     {
@@ -354,6 +585,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/alamo",
         dataSource: ["ACE"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Havasu", // lake name
@@ -369,6 +611,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/havasu",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     /*
                 {
@@ -401,6 +654,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/arkansasrvrpinebluff",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Beaver", // lake name
@@ -416,7 +680,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/beaver",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
-        resultsLink: "undefined",
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Dardanelle", // lake name
@@ -434,6 +708,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/dardenelle",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Greers Ferry", // lake name
@@ -449,6 +734,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/greersferry",
         dataSource: ["ACE"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Hamilton", // lake name
@@ -464,6 +760,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/hamilton",
         dataSource: ["USGS"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Ouachita", // lake name
@@ -479,6 +786,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/ouachita",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     // CALIFORNIA  ---------------------------------------------------------------------------------------------------------
     // Everything I can find on Camanche lake says water elevation is 135'
@@ -497,6 +815,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/camanche",
         dataSource: ["ACE"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Canyon", // lake name
@@ -512,6 +841,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/canyon",
         dataSource: ["ACE"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Clear", // lake name
@@ -527,6 +867,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/clear",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Don Pedro", // lake name
@@ -542,6 +893,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/donpedro",
         dataSource: ["ACE"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Folsom", // lake name
@@ -557,6 +919,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/folsom",
         dataSource: ["ACE"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Iron Gate", // lake name
@@ -572,6 +945,17 @@ module.exports = [
         flowURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=11516530&period=PT168H&parameterCd=00060&siteType=ST&siteStatus=all",
         href: "/lakes/irongate",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Mendocino", // lake name
@@ -587,6 +971,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/mendocino",
         dataSource: ["ACE"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "New Hogan", // lake name
@@ -602,6 +997,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/newhogan",
         dataSource: ["ACE"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Pine Flat", // lake name
@@ -617,6 +1023,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/pineflat",
         dataSource: ["ACE"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     // Everything I can find on Sonoma lake says water elevation is 358'
     // ACE is reporting a elevation of 446' Guessing the pool should be about 458
@@ -634,6 +1051,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/sonoma",
         dataSource: ["ACE"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Success", // lake name
@@ -649,6 +1077,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/success",
         dataSource: ["ACE"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
 
     // COLORADO  ---------------------------------------------------------------------------------------------------------
@@ -666,6 +1105,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/riflegap",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Trinidad", // lake name
@@ -681,6 +1131,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/trinidad",
         dataSource: ["USGS"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     // FLORIDA  ---------------------------------------------------------------------------------------------------------
     {
@@ -697,6 +1158,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/bigharris",
         dataSource: ["SJRWMD", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Dora (HC)", // lake name
@@ -712,6 +1184,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/dora",
         dataSource: ["SJRWMD"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Eustis (HC)", // lake name
@@ -727,6 +1210,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/eustis",
         dataSource: ["SJRWMD", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Griffin (HC)", // lake name
@@ -742,6 +1236,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/griffin",
         dataSource: ["SJRWMD"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Hatchineha", // lake name
@@ -757,6 +1262,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/hatchineha",
         dataSource: ["ACE"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Istokpoga", // lake name
@@ -772,6 +1288,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/istokpoga",
         dataSource: ["ACE"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Kenansville", // lake name
@@ -787,6 +1314,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/kenansville",
         dataSource: ["SJRWMD", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Kissimmee", // lake name
@@ -802,6 +1340,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/kissimmee",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Minnehaha", // lake name
@@ -817,6 +1366,43 @@ module.exports = [
         flowURL: "",
         href: "/lakes/minnehaha",
         dataSource: ["USGS"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
+    },
+    {
+        bodyOfWater: "Minneola", // lake name
+        state: ["Florida"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 125.0,
+        normalPool: 225.0,
+        lat: 28.574229,
+        long: -81.767274,
+        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02236840&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
+        flowURL: "",
+        href: "/lakes/minneola",
+        dataSource: ["USGS"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Okeechobee", // lake name
@@ -832,6 +1418,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/okeechobee",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Seminole", // lake name
@@ -847,6 +1444,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/seminole",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Stick Marsh (Farm 13)", // lake name
@@ -862,6 +1470,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/stickmarsh",
         dataSource: ["SJRWMD", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Talquin", // lake name
@@ -877,6 +1496,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/talquin",
         dataSource: ["USGS"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "East Toho", // lake name
@@ -892,6 +1522,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/easttoho",
         dataSource: ["ACE"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Toho", // lake name
@@ -907,6 +1548,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/toho",
         dataSource: ["ACE"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
 
     // GEORGIA ---------------------------------------------------------------------------------------------------------
@@ -924,6 +1576,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/allatoona",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Lanier", // lake name
@@ -939,6 +1602,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/lanier",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Oconee", // lake name
@@ -954,6 +1628,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/oconee",
         dataSource: ["GPC", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Sinclair", // lake name
@@ -969,6 +1654,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/sinclair",
         dataSource: ["GPC", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "West Point", // lake name
@@ -984,6 +1680,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/westpoint",
         dataSource: ["USGS"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
 
     // ILLINOIS  ---------------------------------------------------------------------------------------------------------
@@ -1001,6 +1708,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/carlyle",
         dataSource: ["ACE"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Clinton (IL)", // lake name
@@ -1016,6 +1734,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/clintonil",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Rend", // lake name
@@ -1032,6 +1761,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/rend",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
 
     // INDIANA  ---------------------------------------------------------------------------------------------------------
@@ -1050,6 +1790,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/brookville",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Eagle Creek", // lake name
@@ -1066,6 +1817,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/eaglecreek",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Mississinewa", // lake name
@@ -1082,6 +1844,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/mississinewa",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Monroe", // lake name
@@ -1099,6 +1872,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/monroe",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Ohio River (Evansville)", // lake name
@@ -1115,6 +1899,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/ohioriverin",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Patoka", // lake name
@@ -1131,6 +1926,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/patoka",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Raccoon", // lake name
@@ -1147,6 +1953,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/raccoon",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Salmonie", // lake name
@@ -1163,6 +1980,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/salmonie",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
 
     // IOWA  ---------------------------------------------------------------------------------------------------------
@@ -1180,6 +2008,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/redrock",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "West Okoboji", // lake name
@@ -1195,6 +2034,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/westokoboji",
         dataSource: ["USGS"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
 
     // KANSAS  ---------------------------------------------------------------------------------------------------------
@@ -1213,6 +2063,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/clinton",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Melvern", // lake name
@@ -1229,6 +2090,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/melvern",
         dataSource: ["USGS"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Perry", // lake name
@@ -1245,6 +2117,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/perry",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Pomona", // lake name
@@ -1261,6 +2144,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/pomona",
         dataSource: ["USGS"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
 
     // KENTUCKY  ---------------------------------------------------------------------------------------------------------
@@ -1279,6 +2173,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/barkley",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Barren", // lake name
@@ -1296,7 +2201,44 @@ module.exports = [
         flowURL: "",
         href: "/lakes/barrenriver",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
+    /*{
+        bodyOfWater: "Cedar Creek", // lake name
+        state: ["Kentucky"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0.0,
+        normalPool: 552.0,
+        topOfFloodControl: 590.0,
+        topOfDam: 618.0,
+        lat: 37.488874,
+        long: -84.550225,
+        elevURL: "",
+        flowURL: "",
+        href: "/lakes/cedarcreekky",
+        dataSource: ["LAKES", "loadAds"], // array of calls to make to retrieve data
+
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
+    },*/
     {
         bodyOfWater: "Cumberland", // lake name
         state: ["Kentucky"],
@@ -1313,6 +2255,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/cumberland",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Kentucky", // lake name
@@ -1328,6 +2281,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/kentucky",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Green", // lake name
@@ -1345,9 +2309,20 @@ module.exports = [
         flowURL: "",
         href: "/lakes/greenriver",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
-        bodyOfWater: "Laurel River Lake", // lake name
+        bodyOfWater: "Laurel", // lake name
         state: ["Kentucky"],
         data: [],
         refreshInterval: 90, //minutes
@@ -1356,12 +2331,23 @@ module.exports = [
         normalPool: 1018.5,
         topOfFloodControl: 1030.0,
         topOfDam: 1035.0,
-        lat: 36.956047, 
+        lat: 36.956047,
         long: -84.217414,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=3248010&p_parameter_type=Flow:Stor:Precip:Stage:Elev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
         flowURL: "",
-        href: "/lakes/laurelrvr",
+        href: "/lakes/laurelriver",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Nolin", // lake name
@@ -1379,6 +2365,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/nolin",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Rough", // lake name
@@ -1396,6 +2393,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/rough",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Taylorsville", // lake name
@@ -1413,6 +2421,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/taylorsville",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     // LOUISIANA  ---------------------------------------------------------------------------------------------------------
     {
@@ -1429,6 +2448,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/atchafalayrvrbasinmelville",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Fausse Point", // lake name
@@ -1444,21 +2474,69 @@ module.exports = [
         flowURL: "",
         href: "/lakes/faussepoint",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
-        bodyOfWater: "Mississippi River (Knox)", // lake name
+        bodyOfWater: "Mississippi River (Btn Rge)", // lake name
         state: ["Louisiana"],
         data: [],
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
-        seaLevelDelta: 0,
-        normalPool: 60.0,
-        lat: 31.073611,
-        long: -91.581944,
-        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07294800&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
+        seaLevelDelta: 0, // data reported as a delta to Full Pool -100
+        normalPool: 46.0,
+        lat: 38.629000,
+        long: -90.179778,
+        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07374000&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
         flowURL: "",
-        href: "/lakes/mississippirvrknox",
+        href: "/lakes/mississippirvrbaton",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
+    },
+    {
+        bodyOfWater: "Mississippi River (Nawluns)", // lake name
+        state: ["Louisiana"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0, // data reported as a delta to Full Pool -100
+        normalPool: 6.0,
+        lat: 38.629000,
+        long: -90.179778,
+        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07374510&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
+        flowURL: "",
+        href: "/lakes/mississippirvrnawluns",
+        dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
 
     // MICHIGAN  ---------------------------------------------------------------------------------------------------------
@@ -1478,6 +2556,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/austin",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Higgins", // lake name
@@ -1494,6 +2583,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/higgins",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Houghton", // lake name
@@ -1510,6 +2610,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/houghton",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Intermediate", // lake name
@@ -1526,6 +2637,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/intermediate",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Mullet", // lake name
@@ -1540,8 +2662,20 @@ module.exports = [
         long: -84.528138,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04129950&period=PT168H&parameterCd=62615&siteType=LK&siteStatus=all",
         flowURL: "",
-        href: "/lakes/intermediate",
+        href: "/lakes/mullet",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
+
     },
     {
         bodyOfWater: "Otsego", // lake name
@@ -1558,6 +2692,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/otsego",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "St Clair", // lake name
@@ -1573,6 +2718,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/stclair",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "St Helen", // lake name
@@ -1589,6 +2745,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/sthelen",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
 
     // MINNESOTA  ---------------------------------------------------------------------------------------------------------
@@ -1606,6 +2773,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/millelacs",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Minnetonka", // lake name
@@ -1621,6 +2799,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/minnetonka",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
 
     // MISSOURI  ---------------------------------------------------------------------------------------------------------
@@ -1639,6 +2828,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/bullshoals",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Lake of the Ozarks", // lake name
@@ -1655,6 +2855,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/lakeoftheozarks",
         dataSource: ["ACE"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Norfork", // lake name
@@ -1671,6 +2882,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/norfork",
         dataSource: ["ACE"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Pomme De Terre", // lake name
@@ -1687,6 +2909,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/pommedeterre",
         dataSource: ["ACE"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Table Rock", // lake name
@@ -1702,6 +2935,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/tablerock",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Truman", // lake name
@@ -1718,6 +2962,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/truman",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Stockton", // lake name
@@ -1733,6 +2988,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/stockton",
         dataSource: ["ACE"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
 
     // MISSISSIPPI  ---------------------------------------------------------------------------------------------------------
@@ -1751,6 +3017,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/aberdeen",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Amory", // lake name
@@ -1768,6 +3045,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/amory",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        barometric: 0,
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Bay Springs", // lake name
@@ -1785,6 +3073,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/baysprings",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Beaver Lake (MS)", // lake name
@@ -1800,6 +3099,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/beaverlakems",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Columbus", // lake name
@@ -1815,21 +3125,43 @@ module.exports = [
         flowURL: "",
         href: "/lakes/columbus",
         dataSource: ["ACE"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
-        bodyOfWater: "Mississippi River (STL)", // lake name
-        state: ["Misouri"],
+        bodyOfWater: "Mississippi River (Vicks)", // lake name
+        state: ["Mississippi"],
         data: [],
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0, // data reported as a delta to Full Pool -100
-        normalPool: 30.0,
+        normalPool: 26.0,
         lat: 38.629000,
         long: -90.179778,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07010000&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
         flowURL: "",
-        href: "/lakes/mississippirvrstl",
+        href: "/lakes/mississippirvrvicks",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Missouri River (STL)", // lake name
@@ -1845,6 +3177,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/missourirvrstl",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Pool B", // lake name
@@ -1862,6 +3205,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/poolb",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Queen", // lake name
@@ -1877,6 +3231,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/queen",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Ross Barnett", // lake name
@@ -1892,6 +3257,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/rossbarnett",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Saucer Creek", // lake name
@@ -1907,6 +3283,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/saucercreek",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
 
     // NEBRASKA  ---------------------------------------------------------------------------------------------------------
@@ -1941,6 +3328,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/mojave",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Wild Horse", // lake name
@@ -1956,6 +3354,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/wildhorse",
         dataSource: ["USGS"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
 
     // NEW JERSEY  ---------------------------------------------------------------------------------------------------------
@@ -1975,6 +3384,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/boonton",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Oradell", // lake name
@@ -1991,6 +3411,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/oradell",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Spruce Run", // lake name
@@ -2007,6 +3438,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/sprucerun",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Swimming Rvr", // lake name
@@ -2023,6 +3465,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/swimmingrvr",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Tappan", // lake name
@@ -2039,6 +3492,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/tappan",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Wanaque", // lake name
@@ -2055,6 +3519,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/wanaque",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Woodcliff", // lake name
@@ -2071,6 +3546,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/woodcliff",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
 
     // NEW MEXICO  ---------------------------------------------------------------------------------------------------------
@@ -2088,6 +3574,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/brantley",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Conchas", // lake name
@@ -2103,6 +3600,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/conchas",
         dataSource: ["ACE"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
 
     {
@@ -2119,6 +3627,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/elephantbutte",
         dataSource: ["TWDB", "loadAds"], // array of calls to make to retrieve data Texas Water Development District
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Ft Sumner", // lake name
@@ -2134,6 +3653,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/ftsumner",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Santa Rosa", // lake name
@@ -2149,6 +3679,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/santarosa",
         dataSource: ["ACE"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Ute", // lake name
@@ -2164,6 +3705,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/ute",
         dataSource: ["USGS"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
 
     // NEW YORK  ---------------------------------------------------------------------------------------------------------
@@ -2181,21 +3733,43 @@ module.exports = [
         flowURL: "",
         href: "/lakes/champlain",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Oneida", // lake name
         state: ["New York"],
         data: [],
-        refreshInterval: 1450, //minutes
+        refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 370.0,
         lat: 43.190682,
         long: -75.841113,
-        elevURL: "/api/alabama",
+        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04247000&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
         flowURL: "",
         href: "/lakes/oneida",
-        dataSource: ["USLAKES", "loadAds"], // array of calls to make to retrieve data
+        dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Ontario", // lake name
@@ -2204,13 +3778,24 @@ module.exports = [
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
-        normalPool: 95.50,
+        normalPool: 243.0,
         lat: 44.561815,
         long: -73.363063,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04220259&period=Pt168H&parameterCd=72214&siteType=LK&siteStatus=all",
         flowURL: "",
         href: "/lakes/ontariony",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
 
     // NORTH CAROLINA  ---------------------------------------------------------------------------------------------------------
@@ -2229,6 +3814,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/badin",
         dataSource: ["CUBE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Belews", // lake name
@@ -2244,6 +3840,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/belews",
         dataSource: ["loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Blewett Falls", // lake name
@@ -2259,6 +3866,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/blewettfalls",
         dataSource: ["DUKE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     //Found this on ACE. Format is different for streams (smh), there is no .elev, it is .stage will add later 
     {
@@ -2275,6 +3893,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/capefearfayett",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Falls", // lake name
@@ -2292,6 +3921,17 @@ module.exports = [
         tempURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02087182&period=Pt168H&parameterCd=00010&siteType=LK&siteStatus=all",
         href: "/lakes/falls",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Fontana", // lake name
@@ -2307,6 +3947,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/fontana",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Gaston", // lake name
@@ -2322,6 +3973,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/gaston",
         dataSource: ["ACEWilm", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Hickory", // lake name
@@ -2337,6 +3999,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/hickory",
         dataSource: ["DUKE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
 
     {
@@ -2353,6 +4026,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/highrock",
         dataSource: ["CUBE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Hyco", // lake name
@@ -2368,6 +4052,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/hyco",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Jocassee", // lake name
@@ -2383,6 +4078,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/jocassee",
         dataSource: ["DUKE"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Jordan", // lake name
@@ -2401,6 +4107,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/jordan",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Kerr", // lake name
@@ -2421,6 +4138,17 @@ module.exports = [
         href: "/lakes/kerr",
         //dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Mayo", // lake name
@@ -2437,6 +4165,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/mayo",
         dataSource: ["loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Neuse River (Kinston)", // lake name
@@ -2452,6 +4191,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/neuse",
         dataSource: ["USGS"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Norman", // lake name
@@ -2467,6 +4217,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/norman",
         dataSource: ["DUKE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     /* {
          bodyOfWater: "Randleman", // lake name
@@ -2482,6 +4243,17 @@ module.exports = [
          flowURL: "",
          href: "/lakes/randleman",
          dataSource: ["loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
      },*/
     {
         bodyOfWater: "Rhodhiss", // lake name
@@ -2497,6 +4269,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/rhodhiss",
         dataSource: ["DUKE"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Roanoke Rapids", // lake name
@@ -2512,6 +4295,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/roanokerapids",
         dataSource: ["ACEWilm", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Roanoke River (Halifax)", // lake name
@@ -2527,6 +4321,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/roanokehfax",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Roanoke River (Hwy 45)", // lake name
@@ -2542,6 +4347,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/roanoke45",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Roanoke River (Roanoke Rapids)", // lake name
@@ -2557,6 +4373,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/roanokervrrap",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Roanoke River (Scotland Neck)", // lake name
@@ -2572,6 +4399,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/roanokescot",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Roanoke River (Williamston)", // lake name
@@ -2587,6 +4425,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/roanokewill",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Shearon Harris", // lake name
@@ -2602,6 +4451,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/shearonharris",
         dataSource: ["loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Tillery", // lake name
@@ -2617,6 +4477,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/tillery",
         dataSource: ["DUKE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Tuckertown", // lake name
@@ -2632,6 +4503,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/tuckertown",
         dataSource: ["CUBE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "W Scott Kerr", // lake name
@@ -2649,6 +4531,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/wscottkerr",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Wylie", // lake name
@@ -2664,6 +4557,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/wylie",
         dataSource: ["DUKE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
 
     /*{
@@ -2679,6 +4583,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/indianoh",
         dataSource: ["USGS"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },*/
 
 
@@ -2698,6 +4613,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/ohiorivercin",
         dataSource: ["USGS"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Ohio River (Tanners)", // lake name
@@ -2713,6 +4639,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/ohiorivertan",
         dataSource: ["USGS"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Misquito Lake", // lake name
@@ -2728,6 +4665,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/misquito",
         dataSource: ["USGS"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
 
     // OKLAHOMA  ---------------------------------------------------------------------------------------------------------
@@ -2748,6 +4696,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/copan",
         dataSource: ["ACE"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Ellsworth", // lake name
@@ -2764,6 +4723,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/ellsworth",
         dataSource: ["USGS"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Eufaula (OK)", // lake name
@@ -2780,6 +4750,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/eufaulaok",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Eucha", // lake name
@@ -2797,6 +4778,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/eucha",
         dataSource: ["USGS"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Ft Gibson", // lake name
@@ -2813,6 +4805,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/ftgibson",
         dataSource: ["ACE"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Grand", // lake name
@@ -2829,6 +4832,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/grand",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Hudson", // lake name
@@ -2846,6 +4860,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/hudson",
         dataSource: ["USGS"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Hulah", // lake name
@@ -2862,6 +4887,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/hulah",
         dataSource: ["ACE"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Kaw", // lake name
@@ -2878,6 +4914,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/kaw",
         dataSource: ["ACE"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Keystone", // lake name
@@ -2895,6 +4942,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/keystone",
         dataSource: ["ACE"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Lawtonka", // lake name
@@ -2911,6 +4969,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/lawtonka",
         dataSource: ["USGS"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "McGee Creek", // lake name
@@ -2927,6 +4996,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/mcgee",
         dataSource: ["ACE"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Oologah", // lake name
@@ -2943,6 +5023,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/oologah",
         dataSource: ["ACE"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Robert S Kerr", // lake name
@@ -2959,6 +5050,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/robertkerr",
         dataSource: ["ACE"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Skiatook", // lake name
@@ -2975,6 +5077,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/skiatook",
         dataSource: ["ACE"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Tenkiller", // lake name
@@ -2991,6 +5104,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/tenkiller",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
 
     // OREGON  ---------------------------------------------------------------------------------------------------------
@@ -3009,6 +5133,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/lostcreek",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Klamath", // lake name
@@ -3024,6 +5159,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/klamath",
         dataSource: ["USGS"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     // PENNSYLVANIA  ---------------------------------------------------------------------------------------------------------
     {
@@ -3040,6 +5186,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/curwensville",
         dataSource: ["USGS"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Raystown", // lake name
@@ -3055,6 +5212,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/raystown",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Shenango", // lake name
@@ -3070,6 +5238,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/shenango",
         dataSource: ["USGS"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
 
     // SOUTH CAROLINA  ---------------------------------------------------------------------------------------------------------
@@ -3087,6 +5266,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/clarkshill",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Cooper River", // lake name
@@ -3102,6 +5292,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/cooperriver",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Hartwell", // lake name
@@ -3117,6 +5318,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/hartwell",
         dataSource: ["USGS"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Keowee", // lake name
@@ -3132,6 +5344,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/Keowee",
         dataSource: ["DUKE"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Murray", // lake name
@@ -3147,6 +5370,17 @@ module.exports = [
         flowURL: "", // Until I can fix it "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02168504&period=PT168H&parameterCd=00060&siteType=ST&siteStatus=all",
         href: "/lakes/murray",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Santee (Marion)", // lake name
@@ -3162,6 +5396,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/santee1",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Santee (Moultrie)", // lake name
@@ -3177,6 +5422,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/santee2",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Wateree", // lake name
@@ -3192,6 +5448,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/wateree",
         dataSource: ["DUKE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Wylie", // lake name
@@ -3207,6 +5474,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/wylie",
         dataSource: ["DUKE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
 
     // SOUTH Dakota  ---------------------------------------------------------------------------------------------------------
@@ -3224,11 +5502,22 @@ module.exports = [
         long: -82.25,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06435000&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
         flowURL: "",
-        href: "/lakes/clarkshill",
+        href: "/lakes/bellefouche",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     // TENNESSEE  ---------------------------------------------------------------------------------------------------------
-    
+
     // No data yet for Little Bear
     /*{
         bodyOfWater: "Big Bear", // lake name
@@ -3244,6 +5533,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/bigbear",
         dataSource: ["TVA"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },*/
     {
         bodyOfWater: "Center Hill", // lake name
@@ -3256,11 +5556,22 @@ module.exports = [
         topOfFloodControl: 685.0,
         topOfDam: 696.0,
         lat: 36.095028,
-        long:  -85.825874,
+        long: -85.825874,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=2915010&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
         flowURL: "",
         href: "/lakes/centerhill",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Cherokee", // lake name
@@ -3276,7 +5587,19 @@ module.exports = [
         flowURL: "",
         href: "/lakes/cherokee",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
-    }, {
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
+    },
+    {
         bodyOfWater: "Chickamauga", // lake name
         state: ["Tennessee"],
         data: [],
@@ -3290,6 +5613,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/chickamauga",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Douglas", // lake name
@@ -3305,6 +5639,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/douglas",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Dale Hollow", // lake name
@@ -3320,6 +5665,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/dalehollow",
         dataSource: ["TVA"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     // No data yet for Little Bear
     /*{
@@ -3336,7 +5692,42 @@ module.exports = [
         flowURL: "",
         href: "/lakes/littlebear",
         dataSource: ["TVA"], // array of calls to make to retrieve data
+
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },*/
+    {
+        bodyOfWater: "Mississippi River (Knox)", // lake name
+        state: ["Tennessee"],
+        data: [],
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 60.0,
+        lat: 31.073611,
+        long: -91.581944,
+        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07294800&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
+        flowURL: "",
+        href: "/lakes/mississippirvrknox",
+        dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
+    },
     {
         bodyOfWater: "Nickajack", // lake name
         state: ["Tennessee"],
@@ -3351,6 +5742,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/nicakjack",
         dataSource: ["TVA"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Norris", // lake name
@@ -3366,6 +5768,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/norris",
         dataSource: ["TVA"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Old Hickory", // lake name
@@ -3381,6 +5794,18 @@ module.exports = [
         flowURL: "",
         href: "/lakes/oldhickory",
         dataSource: ["TVA"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
+
     },
     {
         bodyOfWater: "Percy Priest", // lake name
@@ -3396,6 +5821,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/percypriest",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "South Holston", // lake name
@@ -3411,6 +5847,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/southholston",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Tellico", // lake name
@@ -3426,6 +5873,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/tellico",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Tims Ford", // lake name
@@ -3441,6 +5899,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/timsford",
         dataSource: ["TVA"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Watts Bar", // lake name
@@ -3456,6 +5925,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/wattsbar",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Watauga", // lake name
@@ -3471,6 +5951,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/watauga",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
 
     // TEXAS  ---------------------------------------------------------------------------------------------------------
@@ -3488,6 +5979,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/amistad",
         dataSource: ["TWDB", "loadAds"], // array of calls to make to retrieve data Texas Water Development District
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Cedar Creek", // lake name
@@ -3503,6 +6005,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/cedarcreek",
         dataSource: ["USGS"], // array of calls to make to retrieve data Texas Water Development District
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Conroe", // lake name
@@ -3518,6 +6031,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/conroe",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Falcon", // lake name
@@ -3533,6 +6057,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/falcon",
         dataSource: ["TWDB", "loadAds"], // array of calls to make to retrieve data Texas Water Development District
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Fork", // lake name
@@ -3548,6 +6083,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/fork",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "LBJ", // lake name
@@ -3563,6 +6109,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/LBJ",
         dataSource: ["TWDB"], // array of calls to make to retrieve data Texas Water Development District
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Palestine", // lake name
@@ -3578,6 +6135,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/palestine",
         dataSource: ["USGS"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Ray Roberts", // lake name
@@ -3593,6 +6161,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/rayroberts",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Rayburn", // lake name
@@ -3608,6 +6187,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/rayburn",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Tawakoni", // lake name
@@ -3623,6 +6213,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/tawakoni",
         dataSource: ["USGS"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Toledo Bend", // lake name
@@ -3638,6 +6239,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/toledobend",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Texoma", // lake name
@@ -3654,6 +6266,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/texoma",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Travis", // lake name
@@ -3669,6 +6292,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/travis",
         dataSource: ["ACE"], // array of calls to make to retrieve data 
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
 
     // UTAH ---------------------------------------------------------------------------------------------------------
@@ -3686,6 +6320,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/deercreek",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
 
     // Vermont  ---------------------------------------------------------------------------------------------------------
@@ -3704,6 +6349,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/memphremagog",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Waterbury", // lake name
@@ -3719,10 +6375,48 @@ module.exports = [
         flowURL: "",
         href: "/lakes/waterbury",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
 
     // VIRGINIA ---------------------------------------------------------------------------------------------------------
     // Kerr found under North Carolina
+
+    {
+        bodyOfWater: "Anna", // lake name
+        state: ["Virginia"],
+        data: [],
+        refreshInterval: 1450, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 257.0,
+        lat: 38.113010,
+        long: -77.836099,
+        elevURL: "https://www.dominionenergy.com/company/making-energy/nuclear/north-anna-power-station/waste-heat-treatment-facility",
+        flowURL: "",
+        href: "/lakes/anna",
+        dataSource: ["DE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
+    },
     {
         bodyOfWater: "James River (Jamestown Ferry Pier)", // lake name
         state: ["Virginia"],
@@ -3737,6 +6431,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/james",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Leesville", // lake name
@@ -3752,6 +6457,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/leesville",
         dataSource: ["ACEWilm", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Philpott", // lake name
@@ -3768,6 +6484,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/philpott",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Potomac River (Alexandria)", // lake name
@@ -3783,6 +6510,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/potomac",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Smith Mountain", // lake name
@@ -3798,6 +6536,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/smithmountain",
         dataSource: ["ACEWilm", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
 
     // WEST VIRGINIA ---------------------------------------------------------------------------------------------------------
@@ -3815,6 +6564,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/bluestone",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Burnsville", // lake name
@@ -3830,6 +6590,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/burnsville",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Stonewall Jackson", // lake name
@@ -3845,6 +6616,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/stonewalljackson",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Sutton", // lake name
@@ -3860,6 +6642,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/sutton",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Summersville", // lake name
@@ -3875,6 +6668,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/summersville",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
 
     // WISCONSIN  ---------------------------------------------------------------------------------------------------------
@@ -3892,6 +6696,17 @@ module.exports = [
         flowURL: "",
         href: "/lakes/geneva",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     },
     {
         bodyOfWater: "Winnebago", // lake name
@@ -3907,5 +6722,16 @@ module.exports = [
         flowURL: "",
         href: "/lakes/winnebago",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
     }
 ]

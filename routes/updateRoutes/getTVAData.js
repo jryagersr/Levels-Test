@@ -2,6 +2,7 @@ const request = require("request");
 const _ = require("underscore");
 const db = require("../../models")();
 const update = require('../updateFunctions');
+const weather = require("../updateRoutes/getWeatherData");
 
 
 module.exports = {
@@ -9,24 +10,28 @@ module.exports = {
   // TVA UPDATE FUNCTION
   // ===============================================================================
   // function to get TVA data
-  getTVAData: function (newUrl, bodyOfWater, callback) {
+  getTVAData: function (currentLake, callback) {
     var data = [];
     var waterData = [];
+    let thisLake = currentLake;
+    let newUrl = thisLake.elevURL;
+    let bodyOfWater = thisLake.bodyOfWater;
+
     var options = {
       url: newUrl,
       type: "xml"
     }
     request(options, function (error, response, body) {
       if (error) {
-        callback(true, body);
+        callback(true, error, body);
       }
 
       let dataErrorTrue = false;
       try {
         data = JSON.parse(body);
       } catch (error) {
-        console.error(error);
-        console.log(body);
+        //console.error(error);
+        //console.log(body);
         dataErrorTrue = true;
       }
 
@@ -41,7 +46,7 @@ module.exports = {
             let month = parseInt(splitDate[0]) - 1; //JS counts numbers from 0-11 (ex. 0 = January)
             let day = splitDate[1];
             let hour = splitTime[0];
-            
+
             if (splitTime[0] === "Midnight") {
               hour = 0;
             } else if (splitTime[0] == "Noon") {

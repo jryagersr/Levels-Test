@@ -1,5 +1,6 @@
 const db = require("../../models")();
 const update = require('../updateFunctions');
+const weather = require("../updateRoutes/getWeatherData");
 
 
 module.exports = {
@@ -7,15 +8,18 @@ module.exports = {
   // USGS GET FUNCTION
   // ===============================================================================
   // function to get USGS data
-  getUSGSData: function (usgsURL, bodyOfWater, seaLevelDelta, callback) {
+  getUSGSData: function (currentLake, callback) {
     let displayBatch = [];
     let lakePool = 0;
     let elevationAdjust = 0;
     let dataErrorTrue = false;
     var request = require("request");
     var data = [];
+    var thisLake = currentLake;
+    let bodyOfWater = thisLake.bodyOfWater;
+    let seaLevelDelta = thisLake.seaLevelDelta;
 
-    request(usgsURL, function (error, response, body) {
+    request(thisLake.elevURL, function (error, response, body) {
       if (error) {
         callback(error);
         return;

@@ -1,4 +1,3 @@
-
 // Holds our display data to send into buildTable function
 let displayBatch = [];
 
@@ -35,7 +34,7 @@ module.exports = function (app) {
     res.json(data);
   })
 
-  
+
 
   // ===============================================================================
   // GET DATA ROUTES
@@ -46,6 +45,13 @@ module.exports = function (app) {
     // Import our txData from tournamentData.js file
     var txData = require("../data/tournamentData");
     response.json(txData);
+  });
+
+  // This reads the ramp file for the thisLake Page
+  app.get("/api/ramps", function (request, response) {
+    // Import our rampData from rampData.js file
+    var rampData = require("../data/rampData");
+    response.json(rampData);
   });
 
   // retrieve zipData file

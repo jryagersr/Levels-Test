@@ -1,6 +1,7 @@
 const request = require("request");
 const db = require("../../models")();
 const update = require('../updateFunctions');
+const weather = require("../updateRoutes/getWeatherData");
 
 
 module.exports = {
@@ -8,7 +9,10 @@ module.exports = {
     // DUKE UPDATE FUNCTION
     // ===============================================================================
     // function to get DUKE data
-    getDUKEData: function (lakeName, newUrl, seaLevelDelta, callback) {
+    getDUKEData: function (currentLake, callback) {
+        let bodyOfWater = currentLake.bodyOfWater;
+        let newUrl = currentLake.elevURL;
+        let seaLevelDelta = currentLake.seaLevelDelta;
         var data = [];
         var options = {
             url: newUrl,
@@ -45,7 +49,7 @@ module.exports = {
                 });
                 callback(false, data);
             } else {
-                console.log(`Data is bad for ${lakeName} (DUKE)`);
+                console.log(`Data is bad for ${bodyOfWater} (DUKE)`);
                 callback(true, body);
             }
         })

@@ -1,14 +1,8 @@
 const db = require("../models")();
 // Import all data source update functions
-const ace = require("./updateRoutes/getACEData");
-//const acewilm = require("./updateRoutes/getACEWilmData");
-const cube = require("./updateRoutes/getCUBEData");
-const duke = require("./updateRoutes/getDUKEData");
-const sjrwmd = require("./updateRoutes/getSJRWMDData");
-const tva = require("./updateRoutes/getTVAData");
-const twdb = require("./updateRoutes/getTWDBData");
-const usgs = require("./updateRoutes/getUSGSData");
-const uslakes = require("./updateRoutes/getUSLAKESData");
+
+const weather = require("./updateRoutes/getWeatherData");
+var update = require('./updateFunctions');
 
 
 module.exports = {
@@ -18,7 +12,11 @@ module.exports = {
   // ===============================================================================
 
   // check to see if an update is needed (true = update is needed);
-  checkForUpdate: function (lastRefresh, refreshInterval, dataLength, ) {
+  checkForUpdate: function (currentLake) {
+    let lastRefresh = currentLake.lastRefresh;
+    let refreshInterval = currentLake.refreshInterval;
+    let dataLength = currentLake.data.length;
+
     // set today's date for comparison and find minute difference
     let today = new Date();
     let diffMins = 2400; // default setting to force update
@@ -41,81 +39,136 @@ module.exports = {
   },
 
   // function to update and return one lake
-  updateAndReturnOneLake: function (bodyOfWater, lastRefresh, UROLdata, callback) {
+  updateAndReturnOneLake: function (currentLake, UROLdata, callback) {
     // if new data exists, set the last Refresh time
     let updateData = UROLdata;
+    let lastRefresh = currentLake.lastRefresh;
+    let bodyOfWater = currentLake.bodyOfWater;
+    let callbackError = false;
+
     lakeUpdateFlag = false;
     if (typeof updateData == "undefined") {
-      console.log(`Undefined data sent to uAROL ${bodyOfWater}`)
-      return;
-    }
-    if (updateData.length > 0) {
-      if (lastRefresh !== UROLdata[0].time.toString()) {
-        //console.log(`${bodyOfWater} Updated `)
-        lakeUpdateFlag = true;
-        lastRefresh = updateData[0].time.toString();
-      }
-    }
-    // use updateData to update the lake data
-    db.model("Lake").findOneAndUpdate({
-        "bodyOfWater": bodyOfWater
-      }, {
-        $push: {
-          "data": {
-            $each: updateData,
-            $sort: {
-              time: -1
-            },
-            position: 0
-          }
-        },
-        $set: {
-          "lastRefresh": lastRefresh
-        }
-      }, {
-        upsert: true,
-        useFindAndModify: false,
-        new: true
-      })
-      .exec(function (err, updateData) {
-        if (err) {
-          console.log(err);
+      console.log(`Undefined data sent to uAROL ${bodyOfWater}`);
+      callbackError = true;
+      callback(callbackError, lakeUpdateFlag, updateData);
+    } else {
+      // Update the current conditions and forecast for this lake
+
+      // Get weather data
+      //if (checkForUpdate(currentLake.lastRefresh, currentLake.refreshInterval, currentLake.data.length)) {
+      // Get 
+      weather.getWeatherData(currentLake, function (error, currentConditions) {
+        let currentConditionsData = currentConditions;
+        if (error) {
+          console.log(`Weather retrieval error ${error}`)
+          callbackError = true;
         } else {
+          if (currentConditionsData != 'undefined') {
+            // Set weather
+            let today = new Date()
+            let compassSector = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW", "N"];
+            currentLake.barometric = currentConditionsData.main.pressure;
+            currentLake.wxTemp = currentConditionsData.main.temp;
+            currentLake.humidity = currentConditionsData.main.humidity;
+            currentLake.windSpeed = currentConditionsData.wind.speed;
+            currentLake.windDirection = compassSector[(currentConditionsData.wind.deg / 22.5).toFixed(0) - 1];
+            currentLake.conditions = currentConditionsData.weather[0].description;
+            currentLake.conditions = currentLake.conditions.charAt(0).toUpperCase() + currentLake.conditions.slice(1);
+            currentLake.wxDate = today.toLocaleDateString();
+            currentLake.wxTime = today.toLocaleTimeString('en-US');
 
-          // Check to make sure there is enough data before de-duping
-          if (updateData.data.length > 1) {
-            // while the first two entries still have dupes
-            //console.log(updatedLake.bodyOfWater);
-            // loop through the data, beginning at first index
-            for (var i = 1; i < updateData.data.length; i++) {
-              // check to see if there are two duplicate entrys
-              // convert timestamps to strings to avoid millisecond differences
-              if (updateData.data[i].time.toString() == updateData.data[i - 1].time.toString()) {
-                // remove the oldest entry
-                updateData.data.splice(i - 1, 1);
-              }
-            }
+          } else {
+            console.log(`Data error for weather ${currentLake.bodyOfWater}`);
           }
-          // log that the lake was updated and return it
-          //console.log(`UPDATE COMPLETE for ${updateData.bodyOfWater} (${updateData.dataSource[0]})`);
-
-
-          callback(null, lakeUpdateFlag, updateData);
-          // update the database with the 'clean' data
-          db.model("Lake").updateOne({
-              'bodyOfWater': bodyOfWater
+        }
+        if (updateData.length > 0) {
+          if (lastRefresh !== UROLdata[0].time.toString()) {
+            //console.log(`${bodyOfWater} Updated `)
+            lakeUpdateFlag = true;
+            lastRefresh = updateData[0].time.toString();
+          }
+          // use updateData to update the lake data
+          db.model("Lake").findOneAndUpdate({
+              "bodyOfWater": bodyOfWater
             }, {
+              $push: {
+                "data": {
+                  $each: updateData,
+                  $sort: {
+                    time: -1
+                  },
+                  position: 0
+                }
+              },
               $set: {
-                "data": updateData.data
+                "lastRefresh": lastRefresh
               }
+            }, {
+              upsert: true,
+              useFindAndModify: false,
+              new: true
             })
-            .exec(function (err) {
+            .exec(function (err, updateData) {
               if (err) {
-                console.log(error);
+                console.log(err);
+                callbackError = true;
+                callback(callbackError, lakeUpdateFlag, currentLake);
+              } else {
+
+                // Check to make sure there is enough data before de-duping
+                if (updateData.data.length > 1) {
+                  // while the first two entries still have dupes
+                  //console.log(updatedLake.bodyOfWater);
+                  // loop through the data, beginning at first index
+                  for (var i = 1; i < updateData.data.length; i++) {
+                    // check to see if there are two duplicate entrys
+                    // convert timestamps to strings to avoid millisecond differences
+                    if (updateData.data[i].time.toString() == updateData.data[i - 1].time.toString()) {
+                      // remove the oldest entry
+                      updateData.data.splice(i - 1, 1);
+                    }
+                  }
+                }
+                // update the database with the 'clean' data
+                db.model("Lake").updateOne({
+                    'bodyOfWater': bodyOfWater
+                  }, {
+                    $set: {
+                      "data": updateData.data
+                    }
+                  })
+                  .exec(function (err) {
+                    if (err) {
+                      console.log(error);
+                    } else {
+
+
+                      // Set weather
+                      let today = new Date()
+                      let compassSector = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW", "N"];
+                      updateData.barometric = currentLake.barometric;
+                      updateData.wxTemp = currentLake.wxTemp;
+                      updateData.humidity = currentLake.humidity;
+                      updateData.windSpeed = currentLake.windSpeed;
+                      updateData.windDirection = currentLake.windDirection;
+                      updateData.conditions = currentLake.conditions;
+                      updateData.wxDate = currentLake.wxDate;
+                      updateData.wxTime = currentLake.wxTime;
+
+                      callbackError = false;
+
+                      callback(callbackError, lakeUpdateFlag, updateData);
+
+                    }
+                  })
+                // log that the lake was updated and return it
+                //console.log(`UPDATE COMPLETE for ${updateData.bodyOfWater} (${updateData.dataSource[0]})`);
+
               }
-            })
+            });
         }
       });
+    }
   }
 
 }

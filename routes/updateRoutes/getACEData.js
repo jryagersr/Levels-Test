@@ -1,5 +1,6 @@
 const db = require("../../models")();
 const update = require('../updateFunctions');
+const weather = require("../updateRoutes/getWeatherData");
 
 
 module.exports = {
@@ -7,10 +8,13 @@ module.exports = {
   // ACE (A2W) UPDATE FUNCTION
   // ===============================================================================
   // function to get ACE data
-  getACEData: function (a2wURL, bodyOfWater, normalPool, elevInterval, callback) {
+  getACEData: function (currentLake, callback) {
     var request = require("request");
     var data = [];
-    request(a2wURL, function (error, response, body) {
+    var thisLake = currentLake;
+    let bodyOfWater = thisLake.bodyOfWater;
+
+    request(thisLake.elevURL, function (error, response, body) {
       if (error) {
         callback(error);
       } else {

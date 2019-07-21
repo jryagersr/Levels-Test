@@ -2,6 +2,7 @@ const request = require("request");
 const _ = require("underscore");
 const db = require("../../models")();
 const update = require('../updateFunctions');
+const weather = require("../updateRoutes/getWeatherData");
 
 
 module.exports = {
@@ -9,7 +10,9 @@ module.exports = {
     // TWDB UPDATE FUNCTION
     // ===============================================================================
     // function to get TWDB data
-    getTWDBData: function (lakeName, newUrl, callback) {
+    getTWDBData: function (currentLake, callback) {
+        let newUrl = currentLake.elevURL;
+        let bodyOfWater = currentLake.bodyOfWater;
         var data = [];
 
         var options = {
@@ -20,7 +23,7 @@ module.exports = {
                 callback(error);
             }
             if (typeof body !== 'undefined') {
-                //console.log ("TWDB Call", lakeName);
+                //console.log ("TWDB Call", bodyOfWater);
                 _.each(body.split("\r\n"), function (line) {
                     // Split the text body into readable lines
                     var splitLine;

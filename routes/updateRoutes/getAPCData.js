@@ -9,7 +9,9 @@ module.exports = {
   // APC UPDATE FUNCTION
   // ===============================================================================
   // function to get CUBE data
-  getAPCData: function (apcURL, bodyOfWater, callback) {
+  getAPCData: function (currentLake, callback) {
+    let apcURL = currentLake.elevURL;
+    let bodyOfWater = currentLake.bodyOfWater;
     var options = {
       url: apcURL,
       headers: {

@@ -266,69 +266,56 @@ module.exports = [
         ]
     },
     {
-        organization: "Anglers",
+        organization: "Anglers Choice Bass Club",
         trails: [{
             trail: "Team Trail",
             tournaments: [
 
                 {
-                    date: "2019-03-16",
-                    lake: "Smith Mtn",
-                    ramp: "Parkway",
-                    state: "VA",
+                    date: "2019-07-20",
+                    lake: "Mayo",
+                    ramp: "Triple Springs",
+                    state: "NC",
                     txDetail: "Anglers Choice",
-                    resultsLink: "https://www.anglerschoicemarine.com/fckimages/RESULTS_MAR16_2019_SML.pdf",
-                    entryLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule"
+                    resultsLink: "",
+                    entryLink: "https://www.facebook.com/groups/390430154432590/"
                 },
                 {
-                    date: "2019-04-06",
-                    lake: "Kerr",
-                    ramp: "Occonneechee",
-                    state: "NC-VA",
+                    date: "2019-08-03",
+                    lake: "Mayo",
+                    ramp: "Triple Springs",
+                    state: "NC",
                     txDetail: "Anglers Choice",
-                    resultsLink: "https://www.anglerschoicemarine.com/fckimages/RESULTS_2019_Kerr%204-6(1).pdf",
-                    entryLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule"
+                    resultsLink: "",
+                    entryLink: "https://www.facebook.com/groups/390430154432590/"
                 },
                 {
                     date: "2019-04-07",
                     lake: "Kerr",
-                    ramp: "Occonneechee",
+                    ramp: "Ivy Hill",
                     state: "NC-VA",
                     txDetail: "Anglers Choice",
-                    resultsLink: "https://www.anglerschoicemarine.com/fckimages/2019_RESULTS_Kerr_4-7-19.pdf",
-                    entryLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule"
+                    resultsLink: "",
+                    entryLink: "https://www.facebook.com/groups/390430154432590/"
                 },
                 {
-                    date: "2019-05-04",
-                    lake: "Smith Mtn",
-                    ramp: "Parkway",
-                    state: "VA",
+                    date: "2019-09-14",
+                    lake: "McIntosh",
+                    ramp: "Ramp",
+                    state: "NC",
                     txDetail: "Anglers Choice",
-                    resultsLink: "https://www.anglerschoicemarine.com/fckimages/RESULTS_SML_May4-19.pdf",
-                    entryLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule"
+                    resultsLink: "",
+                    entryLink: "https://www.facebook.com/groups/390430154432590/"
                 },
                 {
-                    organizer: "Anglers",
-                    trail: "Team Trail",
                     date: "2019-06-08",
                     lake: "Kerr",
-                    ramp: "Occonneechee",
+                    ramp: "Ivy Hill",
                     state: "NC-VA",
                     txDetail: "Anglers Choice",
                     resultsLink: "https://www.anglerschoicemarine.com/fckimages/RESULTS_2019_June8_KERR.pdf",
-                    entryLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule"
+                    entryLink: "https://www.facebook.com/groups/390430154432590/"
                 },
-                {
-                    organizer: "Anglers",
-                    trail: "Team Trail",
-                    date: "2019-10-12",
-                    lake: "Kerr",
-                    ramp: "Occonneechee",
-                    state: "NC-VA",
-                    txDetail: "2-Day Classic",
-                    resultsLink: "",
-                    entryLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule"
-                }
             ]
         }]
     },
@@ -442,7 +429,7 @@ module.exports = [
                         ramp: "Bucksport",
                         state: "SC",
                         txDetail: "Phantom Outdoors",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/phantom-outdoors-5000-invitational/",
                         entryLink: "https://www.cattteamtrail.com/divisions/phantom-outdoors-5000-invitational/"
                     }
                 ]
@@ -457,7 +444,7 @@ module.exports = [
                         ramp: "Sturgeon Creek",
                         state: "VA",
                         txDetail: "Qualifier 1",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-lake-anna/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-anna/"
                     },
                     {
@@ -466,7 +453,7 @@ module.exports = [
                         ramp: "Sturgeon Creek",
                         state: "VA",
                         txDetail: "Qualifier 2",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-lake-anna/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-anna/"
                     },
                     {
@@ -475,7 +462,7 @@ module.exports = [
                         ramp: "Sturgeon Creek",
                         state: "VA",
                         txDetail: "Qualifier 3",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-lake-anna/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-anna/"
                     },
                     {
@@ -484,7 +471,7 @@ module.exports = [
                         ramp: "Sturgeon Creek",
                         state: "VA",
                         txDetail: "Final",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-lake-anna/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-anna/"
                     }
                 ]
@@ -646,7 +633,7 @@ module.exports = [
                         ramp: "Lighthouse ",
                         state: "NC",
                         txDetail: "Gold 5",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-east/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-east/"
                     },
                     {
@@ -655,7 +642,7 @@ module.exports = [
                         state: "NC",
                         ramp: "Lighthouse",
                         txDetail: "Gold 6",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-east/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-east/"
                     },
                     {
@@ -664,7 +651,7 @@ module.exports = [
                         ramp: "Lighthouse",
                         state: "NC",
                         txDetail: "Gold 7",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-east/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-east/"
                     },
                     {
@@ -673,7 +660,7 @@ module.exports = [
                         ramp: "Lighthouse",
                         state: "NC",
                         txDetail: "Final",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-east/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-east/"
                     }
                 ]
@@ -706,7 +693,7 @@ module.exports = [
                         ramp: "Summit",
                         state: "NC",
                         txDetail: "Qualifier 3",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-gaston-nc-va-june-30-2019-ivan-janet-morris-smoke-the-field-20-51-lbs-bf-5-49-lbs-1725-00/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-gaston/"
                     },
                     {
@@ -715,7 +702,7 @@ module.exports = [
                         ramp: "Summit",
                         state: "NC",
                         txDetail: "Qualifier 4",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-lake-gaston/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-gaston/"
                     },
                     {
@@ -724,7 +711,7 @@ module.exports = [
                         ramp: "Summit ",
                         state: "NC",
                         txDetail: "Qualifier 5",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-lake-gaston/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-gaston/"
                     },
                     {
@@ -733,7 +720,7 @@ module.exports = [
                         state: "NC",
                         ramp: "Summit",
                         txDetail: "2 Day Final",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-lake-gaston/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-gaston/"
                     }
                 ]
@@ -817,7 +804,7 @@ module.exports = [
                         ramp: "Whittenburg",
                         state: "NC",
                         txDetail: "Qualifier 6",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-lake-hickory/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-hickory/"
                     },
                     {
@@ -826,7 +813,7 @@ module.exports = [
                         ramp: "Whittenburg",
                         state: "NC",
                         txDetail: "Qualifier 7",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-lake-hickory/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-hickory/"
                     },
                     {
@@ -835,7 +822,7 @@ module.exports = [
                         ramp: "Whittenburg",
                         state: "NC",
                         txDetail: "Final",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-lake-hickory/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-hickory/"
                     }
                 ]
@@ -886,7 +873,7 @@ module.exports = [
                         ramp: "Riverfront",
                         state: "VA",
                         txDetail: "Gold",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-james-river/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-james-river/"
                     },
                     {
@@ -895,7 +882,7 @@ module.exports = [
                         ramp: "Riverfront",
                         state: "VA",
                         txDetail: "Gold",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-james-river/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-james-river/"
                     },
                     {
@@ -904,7 +891,7 @@ module.exports = [
                         ramp: "Riverfront",
                         state: "VA",
                         txDetail: "Gold",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-james-river/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-james-river/"
                     },
                     {
@@ -913,7 +900,7 @@ module.exports = [
                         ramp: "Osborne",
                         state: "VA",
                         txDetail: "Final 2-Day",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-james-river/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-james-river/"
                     }
                 ]
@@ -988,7 +975,7 @@ module.exports = [
                         ramp: "Occonneechee",
                         state: "NC-VA",
                         txDetail: "Qualifier 1",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
                     },
                     {
@@ -997,7 +984,7 @@ module.exports = [
                         ramp: "Occonneechee",
                         state: "NC",
                         txDetail: "Qualifier 2",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
                     },
                     {
@@ -1006,7 +993,7 @@ module.exports = [
                         ramp: "Occonneechee",
                         state: "NC-VA",
                         txDetail: "Qualifier 3",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
                     },
                     {
@@ -1015,7 +1002,7 @@ module.exports = [
                         ramp: "Occonneechee",
                         state: "NC-VA",
                         txDetail: "Final",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
                     }
                 ]
@@ -1162,7 +1149,7 @@ module.exports = [
                         ramp: "Pinnacle",
                         state: "NC",
                         txDetail: "Qualifier 10",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
                     },
                     {
@@ -1171,7 +1158,7 @@ module.exports = [
                         ramp: "Pinnacle",
                         state: "NC",
                         txDetail: "Qualifier 11",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
 
                     },
@@ -1181,7 +1168,7 @@ module.exports = [
                         ramp: "Pinnacle",
                         state: "NC",
                         txDetail: "Final",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
                     }
                 ]
@@ -1250,7 +1237,7 @@ module.exports = [
                         ramp: "Farrington",
                         state: "NC",
                         txDetail: "Final",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-old-north-final-jordan-lake-nc-june-29-2019-josh-hooks-jaimie-fajardo-take-home-5500-00/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
                     }
                 ]
@@ -1394,7 +1381,7 @@ module.exports = [
                         ramp: "Hardeeville",
                         state: "SC",
                         txDetail: "Qualifier 1",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-savannah-river-ga-june-29-2019-christopher-chavis-nick-hager-take-1st-place-16-20-lbs-bf-5-92-lbs-next-savannah-river-catt-is-july-13-at-stokes-bluff/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-savannah-river/"
                     },
                     {
@@ -1403,7 +1390,7 @@ module.exports = [
                         ramp: "Stokes Bluff",
                         state: "SC",
                         txDetail: "Qualifier 2",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-savannah-river-july-13-2019-gary-lee-fishing-solo-takes-the-win/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-savannah-river/"
                     },
                     {
@@ -1412,7 +1399,7 @@ module.exports = [
                         ramp: "Hardeesville",
                         state: "GA",
                         txDetail: "Qualifier 3",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-savannah-river/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-savannah-river/"
                     },
                     {
@@ -1421,7 +1408,7 @@ module.exports = [
                         ramp: "Stokes Bluff",
                         state: "GA",
                         txDetail: "Qualifier 4",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-savannah-river/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-savannah-river/"
                     },
                     {
@@ -1430,7 +1417,7 @@ module.exports = [
                         ramp: "Stokes Bluff",
                         state: "SC",
                         txDetail: "Final",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-savannah-river/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-savannah-river/"
                     }
                 ]
@@ -1565,7 +1552,7 @@ module.exports = [
                         ramp: "Georgtown-Carroll CC",
                         state: "SC",
                         txDetail: "Gold 3",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-waccamaw-river/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-waccamaw-river/"
                     },
                     {
@@ -1574,7 +1561,7 @@ module.exports = [
                         ramp: "Bucksport",
                         state: "SC",
                         txDetail: "Gold 4",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-waccamaw-river/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-waccamaw-river/"
                     },
                     {
@@ -1583,7 +1570,7 @@ module.exports = [
                         ramp: "Bucksport",
                         state: "SC",
                         txDetail: "Qualifier 5",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-waccamaw-river/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-waccamaw-river/"
                     },
                     {
@@ -1592,7 +1579,7 @@ module.exports = [
                         ramp: "Bucksport",
                         state: "SC",
                         txDetail: "Final",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-waccamaw-river/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-waccamaw-river/"
                     }
                 ]
@@ -1739,7 +1726,7 @@ module.exports = [
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Q6",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-wateree-june-29-2019-chad-gainey-mack-kitchens-bring-in-18-29-lbs-take-home-1000-00-next-last-wateree-summer-catt-is-july-13th/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
                     },
                     {
@@ -1748,7 +1735,7 @@ module.exports = [
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Q7",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-wateree-july-13-2019-jimmy-mcfarland-calvin-griggs-win-18-76-lbs-bf-4-85-lbs-lee-morris-robert-ross-win-the-wateree-summer-points/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
                     },
                     {
@@ -1757,7 +1744,7 @@ module.exports = [
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Final",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
                     }
                 ]
@@ -1772,7 +1759,7 @@ module.exports = [
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Q1",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
                     },
                     {
@@ -1781,7 +1768,7 @@ module.exports = [
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Gold 2",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
                     },
                     {
@@ -1790,7 +1777,7 @@ module.exports = [
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Q3",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
                     },
                     {
@@ -1799,7 +1786,7 @@ module.exports = [
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Gold 4",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
                     },
                     {
@@ -1808,7 +1795,7 @@ module.exports = [
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Q5",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
                     },
                     {
@@ -1817,7 +1804,7 @@ module.exports = [
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Final",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree/"
                     }
                 ]
@@ -1938,7 +1925,7 @@ module.exports = [
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 13",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
                     {
@@ -1947,7 +1934,7 @@ module.exports = [
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 14",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
                     {
@@ -1956,7 +1943,7 @@ module.exports = [
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 15",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
                     {
@@ -1965,7 +1952,7 @@ module.exports = [
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 16",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
                     {
@@ -1974,7 +1961,7 @@ module.exports = [
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 17",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     },
                     {
@@ -1983,7 +1970,7 @@ module.exports = [
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Final",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wateree-opens/"
                     }
                 ]
@@ -2136,7 +2123,7 @@ module.exports = [
                         ramp: "Tamarac",
                         state: "NC",
                         txDetail: "Qualifier 1",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
                     },
                     {
@@ -2145,7 +2132,7 @@ module.exports = [
                         ramp: "Tamarac",
                         state: "NC",
                         txDetail: "Qualifier 2",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
                     },
                     {
@@ -2154,7 +2141,7 @@ module.exports = [
                         ramp: "Circle Drive",
                         state: "NC",
                         txDetail: "Qualifier 3",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
                     },
                     {
@@ -2163,7 +2150,7 @@ module.exports = [
                         ramp: "Circle Drive",
                         state: "NC",
                         txDetail: "Qualifier 4",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
                     },
                     {
@@ -2172,7 +2159,7 @@ module.exports = [
                         ramp: "Tamarac",
                         state: "NC",
                         txDetail: "Qualifier 5",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
                     },
                     {
@@ -2181,7 +2168,7 @@ module.exports = [
                         ramp: "Tamarac",
                         state: "NC",
                         txDetail: "Qualifier 6",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
                     },
                     {
@@ -2190,7 +2177,7 @@ module.exports = [
                         ramp: "Tamarac",
                         state: "NC",
                         txDetail: "Final",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
                     }
                 ]
@@ -2465,7 +2452,7 @@ module.exports = [
                     ramp: "Tunis",
                     state: "NC",
                     txDetail: "",
-                    resultsLink: "",
+                    resultsLink: "https://www.ncbasschallenge.com/tournament-results/jamie-and-ryan-revis-win-on-chowan-with-20-lbs/",
                     entryLink: "https://www.ncbasschallenge.com/2019-tournament-schedule/"
                 },
                 {
@@ -2474,7 +2461,7 @@ module.exports = [
                     ramp: "Lawsons Creek",
                     state: "NC",
                     txDetail: "",
-                    resultsLink: "",
+                    resultsLink: "https://www.ncbasschallenge.com/tournament-results",
                     entryLink: "https://www.ncbasschallenge.com/202019-to-rnament-schedule/"
                 },
                 {
@@ -2483,7 +2470,7 @@ module.exports = [
                     ramp: "Water Street",
                     state: "NC",
                     txDetail: "2-Day",
-                    resultsLink: "",
+                    resultsLink: "https://www.ncbasschallenge.com/tournament-results",
                     entryLink: "https://www.ncbasschallenge.com/2019-tournament-schedule/"
                 }
             ]
@@ -3836,7 +3823,7 @@ module.exports = [
                     ramp: "Crosspoint",
                     state: "NC",
                     txDetail: "",
-                    resultsLink: "",
+                    resultsLink: "https://www.facebook.com/119889178084587/photos/p.2789661791107299/2789661791107299/?type=1",
                     entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
                 },
                 {
@@ -3845,7 +3832,7 @@ module.exports = [
                     ramp: "Crosspoint",
                     state: "NC",
                     txDetail: "",
-                    resultsLink: "",
+                    resultsLink: "https://www.facebook.com/119889178084587/photos/a.1303365486403611/2807410315999113/?type=3&eid=ARD3XjrmBe-hF8Cq2Fsl5W1W3i39TcgqYhV9i-Zr37qHPJC6os-3We7sdFtR7gLVIdsiXcB7hfZRHoTb&__tn__=EEHH-R",
                     entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
                 },
                 {
@@ -3907,84 +3894,7 @@ module.exports = [
     },
     {
         organization: "PBC",
-        trails: [{
-                trail: "Spring Team",
-                tournaments: [
-
-                    {
-                        date: "2019-03-02",
-                        lake: "Harris",
-                        ramp: "Crosspoint",
-                        state: "NC",
-                        txDetail: "Piedmont Bass Classic",
-                        resultsLink: "http://piedmontbassclassics.com/32-19PBCResults.html",
-                        entryLink: "http://piedmontbassclassics.com/2019PBC10KSpringTrailMainPage.html"
-                    },
-                    {
-                        date: "2019-03-16",
-                        lake: "Falls",
-                        ramp: "Ledge Rock",
-                        state: "NC",
-                        txDetail: "Piedmont Bass Classic",
-                        resultsLink: "http://piedmontbassclassics.com/316-19PBCResults.html",
-                        entryLink: "http://piedmontbassclassics.com/2019PBC10KSpringTrailMainPage.html"
-                    },
-                    {
-                        date: "2019-03-30",
-                        lake: "Harris",
-                        ramp: "Crosspoint",
-                        state: "NC",
-                        txDetail: "Piedmont Bass Classic",
-                        resultsLink: "http://piedmontbassclassics.com/330-19PBCResults.html",
-                        entryLink: "http://piedmontbassclassics.com/2019PBC10KSpringTrailMainPage.html"
-                    },
-                    {
-                        date: "2019-04-13",
-                        lake: "Jordan",
-                        ramp: "Farrington",
-                        state: "NC",
-                        txDetail: "Piedmont Bass Classic",
-                        resultsLink: "http://piedmontbassclassics.com/413-19PBCResults.html",
-                        entryLink: "http://piedmontbassclassics.com/2019PBC10KSpringTrailMainPage.html"
-                    },
-                    {
-                        date: "2019-04-27",
-                        lake: "Kerr",
-                        ramp: "Flemingtown",
-                        state: "NC-VA",
-                        txDetail: "Piedmont Bass Classic",
-                        resultsLink: "http://piedmontbassclassics.com/427-19PBCResults.html",
-                        entryLink: "http://piedmontbassclassics.com/2019PBC10KSpringTrailMainPage.html"
-                    },
-                    {
-                        date: "2019-05-11",
-                        lake: "Jordan",
-                        ramp: "Farrington",
-                        state: "NC",
-                        txDetail: "Piedmont Bass Classic",
-                        resultsLink: "http://piedmontbassclassics.com/511-19PBCResults.html",
-                        entryLink: "http://piedmontbassclassics.com/2019PBC10KSpringTrailMainPage.html"
-                    },
-                    {
-                        date: "2019-06-01",
-                        lake: "Falls",
-                        ramp: "Ledge Rock",
-                        state: "NC",
-                        txDetail: "Piedmont Bass Classic",
-                        resultsLink: "http://piedmontbassclassics.com/61-19PBCResults.html",
-                        entryLink: "http://piedmontbassclassics.com/2019PBC10KSpringTrailMainPage.html"
-                    },
-                    {
-                        date: "2019-06-15",
-                        lake: "Jordan",
-                        ramp: "Farrington",
-                        state: "NC",
-                        txDetail: "Championship",
-                        resultsLink: "http://piedmontbassclassics.com/615-19PBCResults.html",
-                        entryLink: "http://piedmontbassclassics.com/2019PBC10KSpringTrailMainPage.html"
-                    }
-                ]
-            },
+        trails: [
             {
                 trail: "Cashion",
                 tournaments: [{
@@ -4040,6 +3950,92 @@ module.exports = [
                         txDetail: "Piedmont Bass Classic",
                         resultsLink: "http://piedmontbassclassics.com/518-19Results.html",
                         entryLink: "http://piedmontbassclassics.com/2019CashionRodsHartsCustomSetsSpringTrailMainPage.html"
+                    }
+                ]
+            },{
+                trail: "End of Year",
+                tournaments: [
+
+                    {
+                        date: "2019-07-13",
+                        lake: "Falls",
+                        ramp: "Ledge Rock",
+                        state: "NC",
+                        txDetail: "Piedmont Bass Classic",
+                        resultsLink: "http://piedmontbassclassics.com/713-19PBCResults.html",
+                        entryLink: "http://piedmontbassclassics.com/2019CashionEOYMainPage.html"
+                    },
+                    {
+                        date: "2019-07-27",
+                        lake: "Jordan",
+                        ramp: "Farrington",
+                        state: "NC",
+                        txDetail: "Piedmont Bass Classic",
+                        resultsLink: "http://piedmontbassclassics.com/727-19PBCResults.html",
+                        entryLink: "http://piedmontbassclassics.com/2019CashionEOYMainPage.html"
+                    },
+                    {
+                        date: "2019-08-10",
+                        lake: "Falls",
+                        ramp: "Ledge Rock",
+                        state: "NC",
+                        txDetail: "Piedmont Bass Classic",
+                        resultsLink: "http://piedmontbassclassics.com/810-19PBCResults.html",
+                        entryLink: "http://piedmontbassclassics.com/2019CashionEOYMainPage.html"
+                    },
+                    {
+                        date: "2019-08-24",
+                        lake: "Jordan",
+                        ramp: "Farrington",
+                        state: "NC",
+                        txDetail: "Piedmont Bass Classic",
+                        resultsLink: "http://piedmontbassclassics.com/824-19PBCResults.html",
+                        entryLink: "http://piedmontbassclassics.com/2019CashionEOYMainPage.html"
+                    },
+                    {
+                        date: "2019-09-07",
+                        lake: "Falls",
+                        ramp: "Ledge Rock",
+                        state: "NC",
+                        txDetail: "Piedmont Bass Classic",
+                        resultsLink: "http://piedmontbassclassics.com/97-19PBCResults.html",
+                        entryLink: "http://piedmontbassclassics.com/2019CashionEOYMainPage.html"
+                    },
+                    {
+                        date: "2019-09-21",
+                        lake: "Kerr",
+                        ramp: "Flemington",
+                        state: "NC-VA",
+                        txDetail: "Piedmont Bass Classic",
+                        resultsLink: "http://piedmontbassclassics.com/921-19PBCResults.html",
+                        entryLink: "http://piedmontbassclassics.com/2019CashionEOYMainPage.html"
+                    },
+                    {
+                        date: "2019-10-05",
+                        lake: "Shearon Harris",
+                        ramp: "Crosspointe",
+                        state: "NC",
+                        txDetail: "Piedmont Bass Classic",
+                        resultsLink: "http://piedmontbassclassics.com/105-19PBCResults.html",
+                        entryLink: "http://piedmontbassclassics.com/2019CashionEOYMainPage.html"
+                    },
+                    {
+                        date: "2019-10-19",
+                        lake: "Falls",
+                        ramp: "Ledge Rock",
+                        state: "NC",
+                        txDetail: "Championship",
+                        resultsLink: "http://piedmontbassclassics.com/1019-19PBCResults.html",
+                        entryLink: "http://piedmontbassclassics.com/2019CashionEOYMainPage.html"
+                    },
+                    {
+                        date: "2019-10-26",
+                        lake: "Jordan",
+                        ramp: "Farrington",
+                        state: "NC",
+                        txDetail: "Championship",
+                        resultsLink: "http://piedmontbassclassics.com/1026819-19PBCResults.html",
+                        entryLink: "http://piedmontbassclassics.com/2019CashionEOYMainPage.html"
                     }
                 ]
             },

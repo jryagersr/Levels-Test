@@ -2,6 +2,7 @@ const request = require("request")
 const cheerio = require("cheerio");
 const db = require("../../models")();
 const update = require('../updateFunctions');
+const weather = require("../updateRoutes/getWeatherData");
 
 
 module.exports = {
@@ -9,7 +10,9 @@ module.exports = {
   //  ACEWilm UPDATE FUNCTION
   // ===============================================================================
   // function to get ACE Wilmington data
-  getACEWilmData: function (acewilmURL, bodyOfWater, callback) {
+  getACEWilmData: function (currentLake, callback) {
+    let acewilmURL = currentLake.elevURL;
+    let bodyOfWater = currentLake.bodyOfWater;
     var options = {
       url: acewilmURL,
       headers: {

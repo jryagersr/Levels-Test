@@ -1,6 +1,7 @@
 const request = require("request");
 const db = require("../../models")();
 const update = require('../updateFunctions');
+const weather = require("../updateRoutes/getWeatherData");
 
 
 module.exports = {
@@ -8,7 +9,9 @@ module.exports = {
     // SJRWMD UPDATE FUNCTION
     // ===============================================================================
     // function to get SJRWMD data
-    getSJRWMDData: function (lakeName, newUrl, callback) {
+    getSJRWMDData: function (currentLake, callback) {
+        let newUrl = currentLake.elevURL;
+        let bodyOfWater = currentLake.bodyOfWater;
         var data = [];
 
         var options = {
@@ -43,7 +46,7 @@ module.exports = {
 
                     callback(false, data);
                 } else {
-                    console.log(`Data file not accessible ${lakeName}`)
+                    console.log(`Data file not accessible ${bodyOfWater}`)
                     callback(true, html)
                 }
             } else {
