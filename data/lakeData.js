@@ -3037,8 +3037,8 @@ module.exports = [
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0, // data reported as a delta to Full Pool -100
         normalPool: 220.0,
-        lat: 34.064983,
-        long: -88.425800,
+        lat: 34.012268,
+        long: -88.480589,
         //need to use value index of 1 to get the headwaters data (lake) rather than tailwater )index 0
         //check timeseries[0].values[0].method[0].methodDiscription for "Headwater"
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02433496&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
@@ -3065,8 +3065,8 @@ module.exports = [
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0, // data reported as a delta to Full Pool -100
         normalPool: 407.0,
-        lat: 34.574800,
-        long: -88.313900,
+        lat: 34.537964,
+        long: -88.323099,
         //need to use value index of 1 to get the headwaters data (lake) rather than tailwater )index 0
         //check timeseries[0].values[0].method[0].methodDiscription for "Headwater"
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02430005&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
@@ -3093,8 +3093,8 @@ module.exports = [
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0, // data reported as a delta to Full Pool -100
         normalPool: 299.0,
-        lat: 34.463072,
-        long: -88.364861,
+        lat: 34.366119,
+        long: -88.406651,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02430626&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
         flowURL: "",
         href: "/lakes/beaverlakems",
@@ -3197,8 +3197,8 @@ module.exports = [
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0, // data reported as a delta to Full Pool -100
         normalPool: 245.0,
-        lat: 34.064983,
-        long: -88.425800,
+        lat: 34.066494,
+        long: -88.422357,
         //need to use value index of 1 to get the headwaters data (lake) rather than tailwater )index 0
         //check timeseries[0].values[0].method[0].methodDiscription for "Headwater"
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02433151&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
@@ -3225,8 +3225,8 @@ module.exports = [
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0, // data reported as a delta to Full Pool -100
         normalPool: 270.0,
-        lat: 34.257778,
-        long: -88.424722,
+        lat: 34.259535,
+        long: -88.426363,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02431011&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
         flowURL: "",
         href: "/lakes/queen",
@@ -3277,8 +3277,8 @@ module.exports = [
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0, // data reported as a delta to Full Pool -100
         normalPool: 330.0,
-        lat: 34.463072,
-        long: -88.364861,
+        lat: 34.464446,
+        long: -88.361100,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02430161&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
         flowURL: "",
         href: "/lakes/saucercreek",
@@ -3370,60 +3370,6 @@ module.exports = [
     // NEW JERSEY  ---------------------------------------------------------------------------------------------------------
 
     {
-        bodyOfWater: "Boonton", // lake name
-        state: ["New Jersey"],
-        data: [],
-        refreshInterval: 90, //minutes
-        elevDataInterval: 4, // Time between elevation data 4 = 15min, 2 = 30 min 1 = 60 min
-        lastRefresh: "12/31/18", // a Date 
-        seaLevelDelta: 0,
-        normalPool: 305.5,
-        lat: 40.876346,
-        long: -74.411533,
-        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=01380900&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        flowURL: "",
-        href: "/lakes/boonton",
-        dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-
-        wxRefreshInterval: 30, //minutes
-        wxlastRefresh: "12/31/18", // a Date 
-        barometric: 0,
-        wxTemp: 0,
-        humidity: 0,
-        windSpeed: 0,
-        windDirection: "",
-        conditions: "",
-        wxDate: "",
-        wxTime: "",
-    },
-    {
-        bodyOfWater: "Oradell", // lake name
-        state: ["New Jersey"],
-        data: [],
-        refreshInterval: 90, //minutes
-        lastRefresh: "12/31/18", // a Date 
-        elevDataInterval: 4, // Time between elevation data 4 = 15min, 2 = 30 min 1 = 60 min
-        seaLevelDelta: 0,
-        normalPool: 21.0,
-        lat: 40.963163,
-        long: -74.018331,
-        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=01378480&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        flowURL: "",
-        href: "/lakes/oradell",
-        dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-
-        wxRefreshInterval: 30, //minutes
-        wxlastRefresh: "12/31/18", // a Date 
-        barometric: 0,
-        wxTemp: 0,
-        humidity: 0,
-        windSpeed: 0,
-        windDirection: "",
-        conditions: "",
-        wxDate: "",
-        wxTime: "",
-    },
-    {
         bodyOfWater: "Spruce Run", // lake name
         state: ["New Jersey"],
         data: [],
@@ -3437,114 +3383,6 @@ module.exports = [
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=01396790&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
         flowURL: "",
         href: "/lakes/sprucerun",
-        dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-
-        wxRefreshInterval: 30, //minutes
-        wxlastRefresh: "12/31/18", // a Date 
-        barometric: 0,
-        wxTemp: 0,
-        humidity: 0,
-        windSpeed: 0,
-        windDirection: "",
-        conditions: "",
-        wxDate: "",
-        wxTime: "",
-    },
-    {
-        bodyOfWater: "Swimming Rvr", // lake name
-        state: ["New Jersey"],
-        data: [],
-        refreshInterval: 90, //minutes
-        lastRefresh: "12/31/18", // a Date 
-        elevDataInterval: 4, // Time between elevation data 4 = 15min, 2 = 30 min 1 = 60 min
-        seaLevelDelta: 0,
-        normalPool: 34.5,
-        lat: 40.318890,
-        long: -74.118060,
-        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=01396790&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        flowURL: "",
-        href: "/lakes/swimmingrvr",
-        dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-
-        wxRefreshInterval: 30, //minutes
-        wxlastRefresh: "12/31/18", // a Date 
-        barometric: 0,
-        wxTemp: 0,
-        humidity: 0,
-        windSpeed: 0,
-        windDirection: "",
-        conditions: "",
-        wxDate: "",
-        wxTime: "",
-    },
-    {
-        bodyOfWater: "Tappan", // lake name
-        state: ["New Jersey"],
-        data: [],
-        refreshInterval: 90, //minutes
-        lastRefresh: "12/31/18", // a Date 
-        elevDataInterval: 4, // Time between elevation data 4 = 15min, 2 = 30 min 1 = 60 min
-        seaLevelDelta: 0,
-        normalPool: 56.0,
-        lat: 32.572133,
-        long: -104.388761,
-        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=01376950&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        flowURL: "",
-        href: "/lakes/tappan",
-        dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-
-        wxRefreshInterval: 30, //minutes
-        wxlastRefresh: "12/31/18", // a Date 
-        barometric: 0,
-        wxTemp: 0,
-        humidity: 0,
-        windSpeed: 0,
-        windDirection: "",
-        conditions: "",
-        wxDate: "",
-        wxTime: "",
-    },
-    {
-        bodyOfWater: "Wanaque", // lake name
-        state: ["New Jersey"],
-        data: [],
-        refreshInterval: 90, //minutes
-        lastRefresh: "12/31/18", // a Date 
-        elevDataInterval: 4, // Time between elevation data 4 = 15min, 2 = 30 min 1 = 60 min
-        seaLevelDelta: 0,
-        normalPool: 302.0,
-        lat: 32.572133,
-        long: -104.388761,
-        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=01386990&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        flowURL: "",
-        href: "/lakes/wanaque",
-        dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-
-        wxRefreshInterval: 30, //minutes
-        wxlastRefresh: "12/31/18", // a Date 
-        barometric: 0,
-        wxTemp: 0,
-        humidity: 0,
-        windSpeed: 0,
-        windDirection: "",
-        conditions: "",
-        wxDate: "",
-        wxTime: "",
-    },
-    {
-        bodyOfWater: "Woodcliff", // lake name
-        state: ["New Jersey"],
-        data: [],
-        refreshInterval: 90, //minutes
-        lastRefresh: "12/31/18", // a Date
-        elevDataInterval: 4, // Time between elevation data 4 = 15min, 2 = 30 min 1 = 60 min 
-        seaLevelDelta: 0,
-        normalPool: 98.0,
-        lat: 41.055357,
-        long: -74.299193,
-        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=01377450&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        flowURL: "",
-        href: "/lakes/woodcliff",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
 
         wxRefreshInterval: 30, //minutes
@@ -3640,7 +3478,7 @@ module.exports = [
         wxTime: "",
     },
     {
-        bodyOfWater: "Ft Sumner", // lake name
+        bodyOfWater: "Sumner", // lake name
         state: ["New Mexico"],
         data: [],
         refreshInterval: 90, //minutes
@@ -3651,7 +3489,7 @@ module.exports = [
         long: -104.389870,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08384000&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
         flowURL: "",
-        href: "/lakes/ftsumner",
+        href: "/lakes/sumner",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
 
         wxRefreshInterval: 30, //minutes
@@ -5944,7 +5782,7 @@ module.exports = [
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
-        normalPool: 741.0,
+        normalPool: 1,959.0,
         lat: 36.32916641,
         long: -82.12527466,
         elevURL: "https://soa.tva.gov/api/river/observed-data/WTGT1",
