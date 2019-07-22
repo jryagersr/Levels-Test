@@ -2494,8 +2494,8 @@ module.exports = [
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0, // data reported as a delta to Full Pool -100
         normalPool: 46.0,
-        lat: 38.629000,
-        long: -90.179778,
+        lat: 30.453610,
+        long: -91.197405,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07374000&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
         flowURL: "",
         href: "/lakes/mississippirvrbaton",
