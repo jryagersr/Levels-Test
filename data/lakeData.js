@@ -5782,7 +5782,7 @@ module.exports = [
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
-        normalPool: 1,959.0,
+        normalPool: 1959.0,
         lat: 36.32916641,
         long: -82.12527466,
         elevURL: "https://soa.tva.gov/api/river/observed-data/WTGT1",
