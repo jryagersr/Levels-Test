@@ -99,7 +99,7 @@ function buildElevChart(data, lake) {
             }
         }
         // when a week of data has been reached stop
-        if (labelBatch.length > 10) {
+        if (labelBatch.length > 6) {
             break;
         }
     }
@@ -251,7 +251,7 @@ function buildFlowChart(data) {
             }
         }
         // when a week of data has been reached stop
-        if (labelBatch.length > 10) {
+        if (labelBatch.length > 6) {
             break;
         }
     }
