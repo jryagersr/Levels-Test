@@ -316,7 +316,7 @@ module.exports = function (app) {
                   currentLake.conditions = currentConditionsData.weather[0].description;
                   currentLake.conditions = currentLake.conditions.charAt(0).toUpperCase() + currentLake.conditions.slice(1);
                   currentLake.wxDate = today.toLocaleDateString();
-                  currentLake.wxTime = today.toLocaleTimeString('en-US');
+                  currentLake.wxTime = today.toLocaleTimeString('en-US') + " (" + currentConditionsData.name + ")";
 
                   // if no lakeData update needed, make the callback, otherwise it will be made in the switch callback
                   if (!update.checkForUpdate(currentLake) || noLakeDataSource) {

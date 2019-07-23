@@ -11076,7 +11076,6 @@ module.exports = [
         topElev: 0,
         lat: 0,
         long: 0,
-
     },
     {
         bodyOfWater: "Jocassee", // lake name
