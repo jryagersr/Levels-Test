@@ -288,8 +288,8 @@ module.exports = function (app) {
                 // to get a value that is either negative, positive, or zero.
                 return new Date(b.time) - new Date(a.time);
               });
-            }
-            // Update the current conditions and forecast for this lake
+            // Need to update the current conditions and forecast for this lake since the elev data did not need an update
+            // If the lake data needs updating, the weather is updated in upDateAndReturnOneLake
 
             // Get weather data
             // Need to add code to check refreshInterval for weatherData
@@ -304,7 +304,7 @@ module.exports = function (app) {
                 console.log(`Weather retrieval error ${error}`)
                 callbackError = true;
               } else {
-                if (currentConditions != 'undefined') {
+                if (dbRoutesCurrentConditions !== 'undefined') {
                   // Set weather
                   let today = new Date()
                   let compassSector = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW", "N"];
@@ -328,6 +328,7 @@ module.exports = function (app) {
                 }
               }
             });
+            }
           }
         }
       })

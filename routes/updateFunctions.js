@@ -58,12 +58,12 @@ module.exports = {
       //if (checkForUpdate(currentLake.lastRefresh, currentLake.refreshInterval, currentLake.data.length)) {
       // Get 
       weather.getWeatherData(currentLake, function (error, currentConditions) {
-        let currentConditionsData = currentConditions;
+        const currentConditionsData = currentConditions;
         if (error) {
           console.log(`Weather retrieval error ${error}`)
           callbackError = true;
         } else {
-          if (currentConditionsData != 'undefined') {
+          if (currentConditionsData !== 'undefined') {
             // Set weather
             let today = new Date()
             let compassSector = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW", "N"];
@@ -81,6 +81,7 @@ module.exports = {
             console.log(`Data error for weather ${currentLake.bodyOfWater}`);
           }
         }
+        // update the data base
         if (updateData.length > 0) {
           if (lastRefresh !== UROLdata[0].time.toString()) {
             //console.log(`${bodyOfWater} Updated `)
