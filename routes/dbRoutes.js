@@ -304,7 +304,7 @@ module.exports = function (app) {
                 console.log(`Weather retrieval error ${error}`)
                 callbackError = true;
               } else {
-                if (dbRoutesCurrentConditions !== 'undefined') {
+                if (currentConditions !== 'undefined') {
                   // Set weather
                   let today = new Date()
                   let compassSector = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW", "N"];

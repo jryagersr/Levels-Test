@@ -4383,7 +4383,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Wylie", // lake name
-        state: ["North Carolina"],
+        state: ["North Carolina", "South Carolina"],
         data: [],
         refreshInterval: 1450, //minutes
         lastRefresh: "12/31/18", // a Date 
@@ -5180,7 +5180,7 @@ module.exports = [
         long: -82.93,
         elevURL: "https://lakes.duke-energy.com/Data/Detail/3_Month/10.txt",
         flowURL: "",
-        href: "/lakes/Keowee",
+        href: "/lakes/keowee",
         dataSource: ["DUKE"], // array of calls to make to retrieve data
 
         wxRefreshInterval: 30, //minutes
@@ -5281,36 +5281,10 @@ module.exports = [
         seaLevelDelta: 125,
         normalPool: 225.0,
         lat: 34.41,
-        long: 80.79,
+        long: -80.79,
         elevURL: "https://lakes.duke-energy.com/Data/Detail/3_Month/17.txt",
         flowURL: "",
         href: "/lakes/wateree",
-        dataSource: ["DUKE", "loadAds"], // array of calls to make to retrieve data
-
-        wxRefreshInterval: 30, //minutes
-        wxlastRefresh: "12/31/18", // a Date 
-        barometric: 0,
-        wxTemp: 0,
-        humidity: 0,
-        windSpeed: 0,
-        windDirection: "",
-        conditions: "",
-        wxDate: "",
-        wxTime: "",
-    },
-    {
-        bodyOfWater: "Wylie", // lake name
-        state: ["South Carolina"],
-        data: [],
-        refreshInterval: 1450, //minutes
-        lastRefresh: "12/31/18", // a Date 
-        seaLevelDelta: 400.0,
-        normalPool: 500.0,
-        lat: 35.08,
-        long: -81.06,
-        elevURL: "https://lakes.duke-energy.com/Data/Detail/3_Month/18.txt",
-        flowURL: "",
-        href: "/lakes/wylie",
         dataSource: ["DUKE", "loadAds"], // array of calls to make to retrieve data
 
         wxRefreshInterval: 30, //minutes
@@ -5336,8 +5310,8 @@ module.exports = [
         normalPool: 2964.0,
         topOfFlood: 2975.0,
         topOfDam: 2989.75,
-        lat: 33.75,
-        long: -82.25,
+        lat: 44.702749,
+        long: -103.688619,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=06435000&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
         flowURL: "",
         href: "/lakes/bellefouche",
@@ -5679,8 +5653,8 @@ module.exports = [
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 1729.0,
-        lat: 36.52027893,
-        long: -82.09527588,
+        lat: 36.522045,
+        long: -82.081206,
         elevURL: "https://soa.tva.gov/api/river/observed-data/SHDT1",
         flowURL: "",
         href: "/lakes/southholston",

@@ -1239,7 +1239,7 @@ module.exports = [
         bottomElev: 0,
         topElev: 0,
         lat: 32.542814,
-        long:  -85.897998
+        long: -85.897998
     },
     {
         bodyOfWater: "Upper Bear Creek", // lake name
@@ -1461,7 +1461,7 @@ module.exports = [
         rampAccess: "Paved",
         courtesyDock: "Yes",
         bottomElev: 0,
-        topElev: 0,        
+        topElev: 0,
         lat: 32.577367,
         long: -85.893086,
     },
@@ -4175,7 +4175,7 @@ module.exports = [
         lat: 39.537932,
         long: -85.005607
 
-    },{
+    }, {
         bodyOfWater: "Brookville", // lake name
         id: "brookville",
         rampName: "Hanna Creek",
@@ -4871,7 +4871,7 @@ module.exports = [
         courtesyDock: "",
         bottomElev: 0,
         topElev: 0,
-        lat:  38.936261,
+        lat: 38.936261,
         long: -95.388367
 
     },
@@ -7006,7 +7006,7 @@ module.exports = [
         long: -85.157753
     },
     // LOUISIANA  ---------------------------------------------------------------------------------------------------------
-    
+
     {
         bodyOfWater: "Atchafalaya River Basin", // lake name
         id: "atchafalayrvrbasinmelville",
@@ -7643,7 +7643,7 @@ module.exports = [
 
 
     // MINNESOTA  ---------------------------------------------------------------------------------------------------------
-    
+
     {
         bodyOfWater: "Mille Lacs", // lake name
         id: "millelacs",
@@ -7884,7 +7884,7 @@ module.exports = [
     },
 
     // MISSOURI  ---------------------------------------------------------------------------------------------------------
-    
+
     {
         bodyOfWater: "Bull Shoals", // lake name
         id: "bullshoals",
@@ -9165,7 +9165,7 @@ module.exports = [
     // NEVADA  ---------------------------------------------------------------------------------------------------------
     {
         bodyOfWater: "Mojave", // lake name
-        id:"mojave",
+        id: "mojave",
         rampName: "Katherine",
         rampType: "",
         rampParking: "",
@@ -9180,7 +9180,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Wild Horse", // lake name
-        id:"wildhorse",
+        id: "wildhorse",
         rampName: "Wildhorse",
         rampType: "",
         rampParking: "",
@@ -9196,10 +9196,10 @@ module.exports = [
 
     // NEW JERSEY  ---------------------------------------------------------------------------------------------------------
 
-    
+
     {
         bodyOfWater: "Spruce Run", // lake name
-        id:"sprucerun",
+        id: "sprucerun",
         rampName: "Spruce Run",
         rampType: "",
         rampParking: "",
@@ -9241,7 +9241,7 @@ module.exports = [
         lat: 32.561208,
         long: -104.388125
     },
- 
+
     {
         bodyOfWater: "Conchas", // lake name
         id: "conchas",
@@ -9912,6 +9912,33 @@ module.exports = [
         topElev: 0,
         lat: 36.471367,
         long: -79.123811
+    },
+    {
+        bodyOfWater: "Jocassee", // lake name
+        id: "jocassee",
+        rampName: "Jocassee Lake Rd",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.953379,
+        long: -82.946531
+    },
+    {
+        bodyOfWater: "Jocasee", // lake name
+        rampName: "",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 0,
+        long: 0,
     },
     {
         bodyOfWater: "Jordan", // lake name
@@ -10957,7 +10984,7 @@ module.exports = [
         bottomElev: 0,
         topElev: 0,
         lat: 35.974240,
-        long: -95.309343 
+        long: -95.309343
     },
     {
         bodyOfWater: "Ft Gibson", // lake name
@@ -11685,7 +11712,7 @@ module.exports = [
         courtesyDock: "",
         bottomElev: 0,
         topElev: 0,
-        lat:  34.332320,
+        lat: 34.332320,
         long: -95.907492
     },
     {
@@ -12335,7 +12362,7 @@ module.exports = [
         topElev: 0,
         lat: 33.650262,
         long: -82.539134
-    }, 
+    },
     {
         bodyOfWater: "Clarks Hill", // lake name
         id: "clarkshill",
@@ -12534,6 +12561,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Cooper River", // lake name
+        id: "cooperriver",
         rampName: "Remleys Point",
         rampType: "",
         rampParking: "",
@@ -12547,6 +12575,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Cooper River", // lake name
+        id: "cooperriver",
         rampName: "Shem Creek",
         rampType: "",
         rampParking: "",
@@ -12560,6 +12589,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Cooper River", // lake name
+        id: "cooperriver",
         rampName: "Cypress Gardens",
         rampType: "",
         rampParking: "",
@@ -12573,6 +12603,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Cooper River", // lake name
+        id: "cooperriver",
         rampName: "Bushy Park",
         rampType: "",
         rampParking: "",
@@ -12586,6 +12617,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Cooper River", // lake name
+        id: "cooperriver",
         rampName: "Hendricks Park",
         rampType: "",
         rampParking: "",
@@ -12599,6 +12631,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
         rampName: "Watsadler Campground",
         rampType: "",
         rampParking: "",
@@ -12612,6 +12645,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
         rampName: "Elrod Ferry",
         rampType: "",
         rampParking: "",
@@ -12625,6 +12659,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
         rampName: "Powderbag Creek",
         rampType: "",
         rampParking: "",
@@ -12638,6 +12673,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
         rampName: "Long Point",
         rampType: "",
         rampParking: "",
@@ -12651,6 +12687,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
         rampName: "Gum Branch",
         rampType: "",
         rampParking: "",
@@ -12660,10 +12697,11 @@ module.exports = [
         bottomElev: 0,
         topElev: 0,
         lat: 34.384895,
-        long:-82.884678
-    }, 
+        long: -82.884678
+    },
     {
         bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
         rampName: "Hart State Park",
         rampType: "",
         rampParking: "",
@@ -12677,6 +12715,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
         rampName: "Hartwell Marina",
         rampType: "",
         rampParking: "",
@@ -12690,6 +12729,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
         rampName: "Hartwell Marina 2",
         rampType: "",
         rampParking: "",
@@ -12703,6 +12743,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
         rampName: "New Prospect",
         rampType: "",
         rampParking: "",
@@ -12716,6 +12757,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
         rampName: "Carter's Ferry",
         rampType: "",
         rampParking: "",
@@ -12729,6 +12771,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
         rampName: "Crawfords Ferry",
         rampType: "",
         rampParking: "",
@@ -12742,6 +12785,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
         rampName: "Mary Ann Branch",
         rampType: "",
         rampParking: "",
@@ -12755,6 +12799,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
         rampName: "Reed Creek Heights",
         rampType: "",
         rampParking: "",
@@ -12768,6 +12813,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
         rampName: "Payne's Creek",
         rampType: "",
         rampParking: "",
@@ -12781,6 +12827,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
         rampName: "Harbor Light Marina",
         rampType: "",
         rampParking: "",
@@ -12794,6 +12841,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
         rampName: "Tugaloo",
         rampType: "",
         rampParking: "",
@@ -12807,6 +12855,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
         rampName: "Poplar Springs",
         rampType: "",
         rampParking: "",
@@ -12820,6 +12869,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
         rampName: "Holcomb",
         rampType: "",
         rampParking: "",
@@ -12833,6 +12883,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
         rampName: "Bruce Creek",
         rampType: "",
         rampParking: "",
@@ -12846,6 +12897,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
         rampName: "Jenkins Ferry",
         rampType: "",
         rampParking: "",
@@ -12859,6 +12911,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
         rampName: "Spring Branch",
         rampType: "",
         rampParking: "",
@@ -12872,6 +12925,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
         rampName: "Choestoea",
         rampType: "",
         rampParking: "",
@@ -12885,6 +12939,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
         rampName: "Chicksaw",
         rampType: "",
         rampParking: "",
@@ -12898,6 +12953,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
         rampName: "Lake Hartwell State Park",
         rampType: "",
         rampParking: "",
@@ -12911,6 +12967,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
         rampName: "Fair Play",
         rampType: "",
         rampParking: "",
@@ -12924,6 +12981,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
         rampName: "Durham",
         rampType: "",
         rampParking: "",
@@ -12937,6 +12995,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
         rampName: "Glenn Ferry",
         rampType: "",
         rampParking: "",
@@ -12950,6 +13009,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
         rampName: "Hatton's Ford",
         rampType: "",
         rampParking: "",
@@ -12963,6 +13023,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
         rampName: "Double Springs",
         rampType: "",
         rampParking: "",
@@ -12976,6 +13037,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
         rampName: "Broyles",
         rampType: "",
         rampParking: "",
@@ -12989,6 +13051,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
         rampName: "Townville",
         rampType: "",
         rampParking: "",
@@ -13002,6 +13065,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
         rampName: "Friendship",
         rampType: "",
         rampParking: "",
@@ -13015,6 +13079,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
         rampName: "Oconee",
         rampType: "",
         rampParking: "",
@@ -13028,6 +13093,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
         rampName: "Martins Creek",
         rampType: "",
         rampParking: "",
@@ -13041,6 +13107,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
         rampName: "Seneca Creek",
         rampType: "",
         rampParking: "",
@@ -13054,7 +13121,8 @@ module.exports = [
     },
     {
         bodyOfWater: "Hartwell", // lake name
-        rampName: "",
+        id: "hartwell",
+        rampName: "Lawrence Bridge",
         rampType: "",
         rampParking: "",
         rampFee: "",
@@ -13062,12 +13130,13 @@ module.exports = [
         courtesyDock: "",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
+        lat: 34.734844,
+        long: -82.874887
     },
     {
         bodyOfWater: "Hartwell", // lake name
-        rampName: "",
+        id: "hartwell",
+        rampName: "Twelve Mile",
         rampType: "",
         rampParking: "",
         rampFee: "",
@@ -13075,12 +13144,13 @@ module.exports = [
         courtesyDock: "",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
+        lat: 34.704395,
+        long: -82.836606
     },
     {
         bodyOfWater: "Hartwell", // lake name
-        rampName: "",
+        id: "hartwell",
+        rampName: "Twin Lakes",
         rampType: "",
         rampParking: "",
         rampFee: "",
@@ -13088,26 +13158,13 @@ module.exports = [
         courtesyDock: "",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
+        lat: 34.622293,
+        long: -82.853519
     },
     {
-        bodyOfWater: "Jocassee", // lake name
-        id: "jocassee",
-        rampName: "Jocassee Lake Rd",
-        rampType: "Concrete",
-        rampParking: "Good",
-        rampFee: "",
-        rampAccess: "Paved",
-        courtesyDock: "Yes",
-        bottomElev: 0,
-        topElev: 0,
-        lat: 34.953379,
-        long: -82.946531
-    },
-    {
-        bodyOfWater: "Jocasee", // lake name
-        rampName: "",
+        bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
+        rampName: "Eighteen Mile Ramp",
         rampType: "",
         rampParking: "",
         rampFee: "",
@@ -13115,11 +13172,222 @@ module.exports = [
         courtesyDock: "",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
+        lat: 34.573798,
+        long: -82.827982
+    },
+    {
+        bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
+        rampName: "Portman Marina",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.524762,
+        long: -82.804315
+    },
+    {
+        bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
+        rampName: "Ashbury",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.535690,
+        long: -82.785236
+    },
+    {
+        bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
+        rampName: "Denver",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.561561,
+        long: -82.741833
+    },
+    {
+        bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
+        rampName: "Hurricane Creek",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.568577,
+        long: -82.713946
+    },
+    {
+        bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
+        rampName: "Anderson Beach",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.571464,
+        long: -82.684286
+    },
+    {
+        bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
+        rampName: "Brown Road",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.566216,
+        long: -82.673658
+    },
+    {
+        bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
+        rampName: "Green Pond",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.516166,
+        long: -82.789631
+    },
+    {
+        bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
+        rampName: "River Forks",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.473860,
+        long: -82.815694
+    },
+    {
+        bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
+        rampName: "Richland Creek",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.461807,
+        long: -82.811748
+    },
+    {
+        bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
+        rampName: "Jarrett",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.447770,
+        long: -82.840364
+    },
+    {
+        bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
+        rampName: "Springfield Campground",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.442524,
+        long: -82.824320
+    },
+    {
+        bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
+        rampName: "Sadlers Creek",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.427702,
+        long: -82.822585
+    },
+    {
+        bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
+        rampName: "Big Water Marina",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.394802,
+        long: -82.817276
+    },
+    {
+        bodyOfWater: "Hartwell", // lake name
+        id: "hartwell",
+        rampName: "Singing Pines",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.376549,
+        long: -82.815342
     },
     {
         bodyOfWater: "Keowee", // lake name
+        id: "keowee",
+        rampName: "Lake Keowee Marina",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.711634,
+        long: -82.948386
+    },
+    {
+        bodyOfWater: "Keowee", // lake name
+        id: "keowee",
         rampName: "South Cove",
         rampType: "Concrete",
         rampParking: "Good",
@@ -13128,12 +13396,181 @@ module.exports = [
         courtesyDock: "Yes",
         bottomElev: 0,
         topElev: 0,
-        lat: 34.711478,
-        long: -82.966693
+        lat: 34.711751,
+        long: -82.962997
+    },
+    {
+        bodyOfWater: "Keowee", // lake name
+        id: "keowee",
+        rampName: "Cane Creek",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.735823,
+        long: -82.985496
+    },
+    {
+        bodyOfWater: "Keowee", // lake name
+        id: "keowee",
+        rampName: "Crooked Creek",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.765867,
+        long: -82.968818
+    },
+    {
+        bodyOfWater: "Keowee", // lake name
+        id: "keowee",
+        rampName: "Kershaw",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.828036,
+        long: -82.941248
+    },
+    {
+        bodyOfWater: "Keowee", // lake name
+        id: "keowee",
+        rampName: "Keowee Town Landing",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.856654,
+        long: -82.908746
+    },
+    {
+        bodyOfWater: "Keowee", // lake name
+        id: "keowee",
+        rampName: "Fall Creek Landing",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.901811,
+        long: -82.910768
+    },
+    {
+        bodyOfWater: "Keowee", // lake name
+        id: "keowee",
+        rampName: "Big Fall Creek Landing",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.904050,
+        long: -82.910758
+    },
+    {
+        bodyOfWater: "Keowee", // lake name
+        id: "keowee",
+        rampName: "Jocassee Point",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.948957,
+        long: -82.919221
+    },
+    {
+        bodyOfWater: "Keowee", // lake name
+        id: "keowee",
+        rampName: "Toxaway",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.937296,
+        long: -82.890506
+    },
+    {
+        bodyOfWater: "Keowee", // lake name
+        id: "keowee",
+        rampName: "Camp Cedar Creek",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.916662,
+        long: -82.891240
+    },
+    {
+        bodyOfWater: "Keowee", // lake name
+        id: "keowee",
+        rampName: "Crowe Creek",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.899696,
+        long: -82.849237
+    },
+    {
+        bodyOfWater: "Keowee", // lake name
+        id: "keowee",
+        rampName: "Mile Creek",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.851993,
+        long: -82.882991
+    },
+    {
+        bodyOfWater: "Keowee", // lake name
+        id: "keowee",
+        rampName: "Warpath Landing",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.811577,
+        long: -82.882424
     },
     {
         bodyOfWater: "Murray", // lake name
-        rampName: "",
+        id: "murray",
+        rampName: "Hammock Bay",
         rampType: "",
         rampParking: "",
         rampFee: "",
@@ -13141,12 +13578,265 @@ module.exports = [
         courtesyDock: "",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
+        lat: 34.010694,
+        long: -81.362795
+    },
+    {
+        bodyOfWater: "Murray", // lake name
+        id: "murray",
+        rampName: "Shull Island",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.046928,
+        long: -81.360423
+    },
+    {
+        bodyOfWater: "Murray", // lake name
+        id: "murray",
+        rampName: "Siesta Cove Marina",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.046437,
+        long: -81.375720
+    },
+    {
+        bodyOfWater: "Murray", // lake name
+        id: "murray",
+        rampName: "Southshore Marina",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.019313,
+        long: -81.434639
+    },
+    {
+        bodyOfWater: "Murray", // lake name
+        id: "murray",
+        rampName: "Charlie's Fishermans Wharf",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.022023,
+        long: -81.438665
+    },
+    {
+        bodyOfWater: "Murray", // lake name
+        id: "murray",
+        rampName: "SCE&G 3",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.070238,
+        long: -81.483884
+    },
+    {
+        bodyOfWater: "Murray", // lake name
+        id: "murray",
+        rampName: "SCE&G 4",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.078741,
+        long: -81.520042
+    },
+    {
+        bodyOfWater: "Murray", // lake name
+        id: "murray",
+        rampName: "Big Man's Marina",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.079676,
+        long: -81.560246
+    },
+    {
+        bodyOfWater: "Murray", // lake name
+        id: "murray",
+        rampName: "Little River Landing",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.066802,
+        long: -81.631887
+    },
+    {
+        bodyOfWater: "Murray", // lake name
+        id: "murray",
+        rampName: "Prosperity Hwy",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.098671,
+        long: -81.567997
+    },
+    {
+        bodyOfWater: "Murray", // lake name
+        id: "murray",
+        rampName: "Kempson Bridge",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.140163,
+        long: -81.630400
+    },
+    {
+        bodyOfWater: "Murray", // lake name
+        id: "murray",
+        rampName: "Riverwinds Marina",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.101727,
+        long: -81.569576
+    },
+    {
+        bodyOfWater: "Murray", // lake name
+        id: "murray",
+        rampName: "Lake Murray Park",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.115680,
+        long: -81.472836
+    },
+    {
+        bodyOfWater: "Murray", // lake name
+        id: "murray",
+        rampName: "Buffalo Creek",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.102222,
+        long: -81.478971
+    },
+    {
+        bodyOfWater: "Murray", // lake name
+        id: "murray",
+        rampName: "Dreher Island",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.089792,
+        long: -81.413181
+    },
+    {
+        bodyOfWater: "Murray", // lake name
+        id: "murray",
+        rampName: "Hilton",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.094327,
+        long: -81.328976
+    },
+    {
+        bodyOfWater: "Murray", // lake name
+        id: "murray",
+        rampName: "Shealy's Landing",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.129119,
+        long: -81.253206
+    },
+    {
+        bodyOfWater: "Murray", // lake name
+        id: "murray",
+        rampName: "Marina Bay",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.116943,
+        long: -81.253743
+    },
+    {
+        bodyOfWater: "Murray", // lake name
+        id: "murray",
+        rampName: "Dam",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.065034,
+        long: -81.222308
     },
     {
         bodyOfWater: "Santee (Marion)", // lake name
-        rampName: "",
+        id: "santee1",
+        rampName: "Mac's Landing",
         rampType: "",
         rampParking: "",
         rampFee: "",
@@ -13154,12 +13844,181 @@ module.exports = [
         courtesyDock: "",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
+        lat: 33.408219,
+        long: -80.147954
+    },
+    {
+        bodyOfWater: "Santee (Marion)", // lake name
+        id: "santee1",
+        rampName: "Rocks Pond",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 33.403655,
+        long: -80.233064
+    },
+    {
+        bodyOfWater: "Santee (Marion)", // lake name
+        id: "santee1",
+        rampName: "Ferguson Landing",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 33.430458,
+        long: -80.281168
+    },
+    {
+        bodyOfWater: "Santee (Marion)", // lake name
+        id: "santee1",
+        rampName: "Cathead Landing",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 33.415930,
+        long: -80.322532
+    },
+    {
+        bodyOfWater: "Santee (Marion)", // lake name
+        id: "santee1",
+        rampName: "Mill Creek Marina",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 33.444883,
+        long: -80.400181
+    },
+    {
+        bodyOfWater: "Santee (Marion)", // lake name
+        id: "santee1",
+        rampName: "Santee State Park",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 33.512742,
+        long: -80.474992
+    },
+    {
+        bodyOfWater: "Santee (Marion)", // lake name
+        id: "santee1",
+        rampName: "Cypress View",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 33.551918,
+        long: -80.501598
+    },
+    {
+        bodyOfWater: "Santee (Marion)", // lake name
+        id: "santee1",
+        rampName: "Stumphole Landing",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 33.578810,
+        long: -80.531664
+    },
+    {
+        bodyOfWater: "Santee (Marion)", // lake name
+        id: "santee1",
+        rampName: "Lowfalls Landing",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 33.632446,
+        long: -80.543640
+    },
+    {
+        bodyOfWater: "Santee (Marion)", // lake name
+        id: "santee1",
+        rampName: "Pack's Landing",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 33.659381,
+        long: -80.515046
+    },
+    {
+        bodyOfWater: "Santee (Marion)", // lake name
+        id: "santee1",
+        rampName: "John C Land",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 33.524221,
+        long: -80.308361
+    },
+    {
+        bodyOfWater: "Santee (Marion)", // lake name
+        id: "santee1",
+        rampName: "Scarborough's Marina",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 33.536877,
+        long: -80.224793
+    },
+    {
+        bodyOfWater: "Santee (Marion)", // lake name
+        id: "santee1",
+        rampName: "C Alex Harvin",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 33.559071,
+        long: -80.203917
     },
     {
         bodyOfWater: "Santee (Moultrie)", // lake name
-        rampName: "",
+        id: "santee2",
+        rampName: "Somerset Point",
         rampType: "",
         rampParking: "",
         rampFee: "",
@@ -13167,12 +14026,27 @@ module.exports = [
         courtesyDock: "",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
+        lat: 33.246804,
+        long: -80.033650
+    },
+    {
+        bodyOfWater: "Santee (Moultrie)", // lake name
+        id: "santee2",
+        rampName: "Blacks Camp",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 33.349758,
+        long: -80.116011
     },
     {
         bodyOfWater: "Wateree", // lake name
-        rampName: "",
+        id: "wateree",
+        rampName: "Dam",
         rampType: "",
         rampParking: "",
         rampFee: "",
@@ -13180,15 +14054,397 @@ module.exports = [
         courtesyDock: "",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
+        lat: 34.336037,
+        long: -80.707388
     },
-    
+    {
+        bodyOfWater: "Wateree", // lake name
+        id: "wateree",
+        rampName: "Colonel Creek",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.369013,
+        long: -80.797894
+    },
+    {
+        bodyOfWater: "Wateree", // lake name
+        id: "wateree",
+        rampName: "Fox Creek",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.391210,
+        long: -80.829321
+    },
+    {
+        bodyOfWater: "Wateree", // lake name
+        id: "wateree",
+        rampName: "Dutchman Creek Marina",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.424350,
+        long: -80.867809
+    },
+    {
+        bodyOfWater: "Wateree", // lake name
+        id: "wateree",
+        rampName: "Wateree Creek",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.469495,
+        long: -80.913808
+    },
+    {
+        bodyOfWater: "Wateree", // lake name
+        id: "wateree",
+        rampName: "Wateree Lake Marina",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.435388,
+        long: -80.777277
+    },
+    {
+        bodyOfWater: "Wateree", // lake name
+        id: "wateree",
+        rampName: "Wateree Marina",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.433935,
+        long: -80.769845
+    },
+    {
+        bodyOfWater: "Wateree", // lake name
+        id: "wateree",
+        rampName: "Clearwater Cove",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.379396,
+        long: -80.728734
+    },
+    {
+        bodyOfWater: "Wateree", // lake name
+        id: "wateree",
+        rampName: "Lakeside Marina",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.364109,
+        long: -80.699217
+    },
+
+    // SOUTH DAKOTA  ---------------------------------------------------------------------------------------------------------
+
+    {
+        bodyOfWater: "Belle Fouche", // lake name
+        id: "bellefouche",
+        rampName: "Rocky Point",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 44.724683,
+        long: -103.702497
+    },
+    {
+        bodyOfWater: "Belle Fouche", // lake name
+        id: "bellefouche",
+        rampName: "Belle Fouche",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 44.723819,
+        long: -103.698372
+    },
+
     // TENNESSEE  ---------------------------------------------------------------------------------------------------------
+
+    {
+        bodyOfWater: "Center Hill", // lake name
+        id: "centerhill",
+        rampName: "Indian Creek Camp",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.045831,
+        long: -85.856444
+    },
+    {
+        bodyOfWater: "Center Hill", // lake name
+        id: "centerhill",
+        rampName: "Caney Cove",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.020969,
+        long: -85.822743
+    },
+    {
+        bodyOfWater: "Center Hill", // lake name
+        id: "centerhill",
+        rampName: "Sligo Marina",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.966918,
+        long: -85.717208
+    },
+    {
+        bodyOfWater: "Center Hill", // lake name
+        id: "centerhill",
+        rampName: "Pates Ford Marina",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.883040,
+        long: -85.673139
+    },
+    {
+        bodyOfWater: "Center Hill", // lake name
+        id: "centerhill",
+        rampName: "Cookville",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.001417,
+        long: -85.653299
+    },
+    {
+        bodyOfWater: "Center Hill", // lake name
+        id: "centerhill",
+        rampName: "Hurricane Marina",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.039148,
+        long: -85.759305
+    },
+    {
+        bodyOfWater: "Cherokee", // lake name
+        id: "cherokee",
+        rampName: "Dam",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.155812,
+        long: -83.513433
+    },
+    {
+        bodyOfWater: "Cherokee", // lake name
+        id: "cherokee",
+        rampName: "New Black Oak Marina",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.153193,
+        long: -83.486792
+    },
+    {
+        bodyOfWater: "Cherokee", // lake name
+        id: "cherokee",
+        rampName: "Cedar Hill",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.195227,
+        long: -83.427790
+    },
+    {
+        bodyOfWater: "Cherokee", // lake name
+        id: "cherokee",
+        rampName: "Hamblen",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.268117,
+        long: -83.274089
+    },
+    {
+        bodyOfWater: "Cherokee", // lake name
+        id: "cherokee",
+        rampName: "Fall Creek",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.290272,
+        long: -83.226540
+    },
+    {
+        bodyOfWater: "Cherokee", // lake name
+        id: "cherokee",
+        rampName: "Walnut Bend",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.352314,
+        long: -83.165104
+    },
+    {
+        bodyOfWater: "Cherokee", // lake name
+        id: "cherokee",
+        rampName: "Lee Valley",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.369005,
+        long: -83.081721
+    },
+    {
+        bodyOfWater: "Cherokee", // lake name
+        id: "cherokee",
+        rampName: "Lee Hwy",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.362685,
+        long: -83.164734
+    },
+    {
+        bodyOfWater: "Cherokee", // lake name
+        id: "cherokee",
+        rampName: "25E",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.266605,
+        long: -83.286013
+    },
+    {
+        bodyOfWater: "Cherokee", // lake name
+        id: "cherokee",
+        rampName: "German Creek",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.304252,
+        long: -83.347234
+    },
+    {
+        bodyOfWater: "Cherokee", // lake name
+        id: "cherokee",
+        rampName: "May Springs",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.215142,
+        long: -83.463386
+    },
     {
         bodyOfWater: "Chickamauga", // lake name
         id: "chickamauga",
-        rampName: "",
+        rampName: "Chickamauga Marina",
         rampType: "",
         rampParking: "",
         rampFee: "",
@@ -13196,13 +14452,97 @@ module.exports = [
         courtesyDock: "",
         bottomElev: 0,
         topElev: 0,
-        lat: 0,
-        long: 0,
+        lat: 35.095087,
+        long: -85.218588
+    },
+    {
+        bodyOfWater: "Chickamauga", // lake name
+        id: "chickamauga",
+        rampName: "Island Cove Marina",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.136471,
+        long: -85.122787
+    },
+    {
+        bodyOfWater: "Chickamauga", // lake name
+        id: "chickamauga",
+        rampName: "Bay Point",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.167984,
+        long: -85.121590
+    },
+    {
+        bodyOfWater: "Chickamauga", // lake name
+        id: "chickamauga",
+        rampName: "Bear Branch",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.382426,
+        long: -85.015167
+    },
+    {
+        bodyOfWater: "Chickamauga", // lake name
+        id: "chickamauga",
+        rampName: "Blythe Ferry",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.409521,
+        long: -85.008756
     },
     {
         bodyOfWater: "Chickamauga", // lake name
         id: "chickamauga",
         rampName: "Dam",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.097430,
+        long: -85.219736
+    },
+    {
+        bodyOfWater: "Chickamauga", // lake name
+        id: "chickamauga",
+        rampName: "Booker T Washington",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.110595,
+        long: -85.179916
+    },
+    {
+        bodyOfWater: "Chickamauga", // lake name
+        id: "chickamauga",
+        rampName: "Eagle Bluff",
         rampType: "Concrete",
         rampParking: "Good",
         rampFee: "",
@@ -13210,8 +14550,8 @@ module.exports = [
         courtesyDock: "Yes",
         bottomElev: 0,
         topElev: 0,
-        lat: 35.097504,
-        long: -85.219710
+        lat: 35.140348,
+        long: -85.163044
     },
     {
         bodyOfWater: "Chickamauga", // lake name
@@ -13244,7 +14584,7 @@ module.exports = [
     {
         bodyOfWater: "Chickamauga", // lake name
         id: "chickamauga",
-        rampName: "Wolftever",
+        rampName: "Wolftever Creek",
         rampType: "Concrete",
         rampParking: "Good",
         rampFee: "",
@@ -13252,8 +14592,190 @@ module.exports = [
         courtesyDock: "Yes",
         bottomElev: 0,
         topElev: 0,
-        lat: 35.343691,
-        long: -85.039673
+        lat: 35.150280,
+        long: -85.107959
+    },
+    {
+        bodyOfWater: "Chickamauga", // lake name
+        id: "chickamauga",
+        rampName: "B & B Marina",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.326884,
+        long: -84.828868
+    },
+    {
+        bodyOfWater: "Chickamauga", // lake name
+        id: "chickamauga",
+        rampName: "Agency Creek",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.374131,
+        long: -84.906832
+    },
+    {
+        bodyOfWater: "Chickamauga", // lake name
+        id: "chickamauga",
+        rampName: "Cottonport Marina",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.485047,
+        long: -84.878812
+    },
+    {
+        bodyOfWater: "Chickamauga", // lake name
+        id: "chickamauga",
+        rampName: "Watts Bar Dam",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.604816,
+        long: -84.774478
+    },
+    {
+        bodyOfWater: "Chickamauga", // lake name
+        id: "chickamauga",
+        rampName: "Dayton",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.491546,
+        long: -85.003776
+    },
+    {
+        bodyOfWater: "Chickamauga", // lake name
+        id: "chickamauga",
+        rampName: "Armstrong Slough",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.453819,
+        long: -84.991140
+    },
+    {
+        bodyOfWater: "Chickamauga", // lake name
+        id: "chickamauga",
+        rampName: "Blythes Ferry",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.414481,
+        long: -85.011584
+    },
+    {
+        bodyOfWater: "Chickamauga", // lake name
+        id: "chickamauga",
+        rampName: "Patterson",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.377118,
+        long: -85.089181
+    },
+    {
+        bodyOfWater: "Chickamauga", // lake name
+        id: "chickamauga",
+        rampName: "Lee Pike",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.299802,
+        long: -85.088008
+    },
+    {
+        bodyOfWater: "Chickamauga", // lake name
+        id: "chickamauga",
+        rampName: "Armstrong",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.271031,
+        long: -85.122490
+    },
+    {
+        bodyOfWater: "Chickamauga", // lake name
+        id: "chickamauga",
+        rampName: "Pine Harbor Marina",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.276263,
+        long: -85.131296
+    },
+    {
+        bodyOfWater: "Chickamauga", // lake name
+        id: "chickamauga",
+        rampName: "Holly Park",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.283788,
+        long: -85.142241
+    },
+    {
+        bodyOfWater: "Chickamauga", // lake name
+        id: "chickamauga",
+        rampName: "Harbor Lights Marina",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.211838,
+        long: -85.120356
     },
     {
         bodyOfWater: "Douglas", // lake name
@@ -13268,6 +14790,20 @@ module.exports = [
         topElev: 0,
         lat: 35.958672,
         long: -83.534468
+    },
+    {
+        bodyOfWater: "Douglas", // lake name
+        id: "douglas",
+        rampName: "Gator Point",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.941376,
+        long: -83.491838
     },
     {
         bodyOfWater: "Douglas", // lake name
@@ -13298,9 +14834,65 @@ module.exports = [
         long: -83.414940
     },
     {
+        bodyOfWater: "Douglas", // lake name
+        id: "douglas",
+        rampName: "Swann's Marina",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.035252,
+        long: -83.332927
+    },
+    {
+        bodyOfWater: "Douglas", // lake name
+        id: "douglas",
+        rampName: "Flat Creek",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.936812,
+        long: -83.511182
+    },
+    {
+        bodyOfWater: "Douglas", // lake name
+        id: "douglas",
+        rampName: "Oak Grove",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.036035,
+        long: -83.351071
+    },
+    {
+        bodyOfWater: "Douglas", // lake name
+        id: "douglas",
+        rampName: "Nolichucky River",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.088696,
+        long: -83.249148
+    },
+    {
         bodyOfWater: "Dale Hollow", // lake name
         id: "dalehollow",
-        rampName: "State Park",
+        rampName: "State Park Marina",
         rampType: "Concrete",
         rampParking: "Good",
         rampFee: "",
@@ -13310,6 +14902,244 @@ module.exports = [
         topElev: 0,
         lat: 36.637284,
         long: -85.283564
+    },
+    {
+        bodyOfWater: "Dale Hollow", // lake name
+        id: "dalehollow",
+        rampName: "Horse Creek Marina",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.511087,
+        long: -85.452369
+    },
+    {
+        bodyOfWater: "Dale Hollow", // lake name
+        id: "dalehollow",
+        rampName: "Mitchell Creek Marina",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.513853,
+        long: -85.386872
+    },
+    {
+        bodyOfWater: "Dale Hollow", // lake name
+        id: "dalehollow",
+        rampName: "Willow Grove",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.585765,
+        long: -85.345232
+    },
+    {
+        bodyOfWater: "Dale Hollow", // lake name
+        id: "dalehollow",
+        rampName: "Lily Dale",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 336.605326,
+        long: -85.299699
+    },
+    {
+        bodyOfWater: "Dale Hollow", // lake name
+        id: "dalehollow",
+        rampName: "Sunset Marina",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.532727,
+        long: -85.161529
+    },
+    {
+        bodyOfWater: "Dale Hollow", // lake name
+        id: "dalehollow",
+        rampName: "Cove Creek Campground",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.546801,
+        long: -85.212570
+    },
+    {
+        bodyOfWater: "Dale Hollow", // lake name
+        id: "dalehollow",
+        rampName: "Star Point",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.585615,
+        long: -85.243424
+    },
+    {
+        bodyOfWater: "Dale Hollow", // lake name
+        id: "dalehollow",
+        rampName: "Sulphur Creek",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.674775,
+        long: -85.339105
+    },
+    {
+        bodyOfWater: "Dale Hollow", // lake name
+        id: "dalehollow",
+        rampName: "Wolf River",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.623851,
+        long: -85.208832
+    },
+    {
+        bodyOfWater: "Dale Hollow", // lake name
+        id: "dalehollow",
+        rampName: "Hendricks Creek",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.631120,
+        long: -85.375413
+    },
+    {
+        bodyOfWater: "Dale Hollow", // lake name
+        id: "dalehollow",
+        rampName: "Pleasant Grove Park",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.538732,
+        long: -85.439591
+    },
+    {
+        bodyOfWater: "Nickajack", // lake name
+        id: "Nickajack",
+        rampName: "Cherokee Trail",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.109668,
+        long: -85.365337
+    },
+    {
+        bodyOfWater: "Nickajack", // lake name
+        id: "Nickajack",
+        rampName: "Raccoon Mountain",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.059799,
+        long: -85.416372
+    },
+    {
+        bodyOfWater: "Nickajack", // lake name
+        id: "Nickajack",
+        rampName: "Hwy 41",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.020483,
+        long: -85.460590
+    },
+    {
+        bodyOfWater: "Nickajack", // lake name
+        id: "Nickajack",
+        rampName: "Bennett Hollow",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.079226,
+        long: -85.536696
+    },
+    {
+        bodyOfWater: "Nickajack", // lake name
+        id: "Nickajack",
+        rampName: "Hales Bar Road",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.037723,
+        long: -85.536901
+    },
+    {
+        bodyOfWater: "Nickajack", // lake name
+        id: "Nickajack",
+        rampName: "Marion County Park",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.028860,
+        long: -85.563203
     },
     {
         bodyOfWater: "Nickajack", // lake name
@@ -13340,9 +15170,513 @@ module.exports = [
         long: -85.460584
     },
     {
+        bodyOfWater: "Norris", // lake name
+        id: "Norris",
+        rampName: "Norris Dam Marina",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.225783,
+        long: -84.097031
+    },
+    {
+        bodyOfWater: "Norris", // lake name
+        id: "Norris",
+        rampName: "Twin Cove Marina",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.286315,
+        long: -84.175301
+    },
+    {
+        bodyOfWater: "Norris", // lake name
+        id: "Norris",
+        rampName: "Cove Creek",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.255865,
+        long: -84.081542
+    },
+    {
+        bodyOfWater: "Norris", // lake name
+        id: "Norris",
+        rampName: "Indian River Marina",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.335482,
+        long: -84.131835
+    },
+    {
+        bodyOfWater: "Norris", // lake name
+        id: "Norris",
+        rampName: "Big Creek",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.352179, 
+        long: -84.124742
+    },
+    {
+        bodyOfWater: "Norris", // lake name
+        id: "Norris",
+        rampName: "Shanghai",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.335605,
+        long: -84.039154
+    },
+    {
+        bodyOfWater: "Norris", // lake name
+        id: "Norris",
+        rampName: "Sugar Hollow Marina",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.351352,
+        long: -84.036425
+    },
+    {
+        bodyOfWater: "Norris", // lake name
+        id: "Norris",
+        rampName: "Deerfield Cove Marina",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.345562,
+        long: -84.001532
+    },
+    {
+        bodyOfWater: "Norris", // lake name
+        id: "Norris",
+        rampName: "Flat Hollow Marina",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.394553,
+        long: -83.930747
+    },
+    {
+        bodyOfWater: "Norris", // lake name
+        id: "Norris",
+        rampName: "Helms Ferry",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.405923,
+        long: -83.843395
+    },
+    {
+        bodyOfWater: "Norris", // lake name
+        id: "Norris",
+        rampName: "Lost Creek Campground",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.327947,
+        long: -83.856010
+    },
+    {
+        bodyOfWater: "Norris", // lake name
+        id: "Norris",
+        rampName: "Lakeview",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.336084,
+        long: -83.785092
+    },
+    {
+        bodyOfWater: "Norris", // lake name
+        id: "Norris",
+        rampName: "Hickory Star Marina",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.263764,
+        long: -83.883031
+    },
+    {
+        bodyOfWater: "Norris", // lake name
+        id: "Norris",
+        rampName: "Waterside Marina",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.241435,
+        long: -83.981262
+    },
+    {
+        bodyOfWater: "Norris", // lake name
+        id: "Norris",
+        rampName: "Stardust Marina",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.267230,
+        long: -84.019059
+    },
+    {
+        bodyOfWater: "Norris", // lake name
+        id: "Norris",
+        rampName: "Aderson Park",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.267230,
+        long: -84.019059
+    },
+    {
+        bodyOfWater: "Old Hickory", // lake name
+        id: "oldhickory",
+        rampName: "Rockland",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.300008,
+        long: -86.646615
+    },
+    {
+        bodyOfWater: "Old Hickory", // lake name
+        id: "oldhickory",
+        rampName: "Walton's Ferry",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.258603,
+        long: -86.628875
+    },
+    {
+        bodyOfWater: "Old Hickory", // lake name
+        id: "oldhickory",
+        rampName: "Old Hickory",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.249700,
+        long: -86.604112
+    },
+    {
+        bodyOfWater: "Old Hickory", // lake name
+        id: "oldhickory",
+        rampName: "Mallard Point",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.290121,
+        long: -86.608451
+    },
+    {
+        bodyOfWater: "Old Hickory", // lake name
+        id: "oldhickory",
+        rampName: "Sanders Ferry",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.296752,
+        long: -86.613349
+    },
+    {
+        bodyOfWater: "Old Hickory", // lake name
+        id: "oldhickory",
+        rampName: "Stark Knob",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.281670,
+        long: -86.575425
+    },
+    {
+        bodyOfWater: "Old Hickory", // lake name
+        id: "oldhickory",
+        rampName: "Marina Point",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.315275,
+        long: -86.576156
+    },
+    {
+        bodyOfWater: "Old Hickory", // lake name
+        id: "oldhickory",
+        rampName: "Saundersville",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.317285,
+        long: -86.559531
+    },
+    {
+        bodyOfWater: "Old Hickory", // lake name
+        id: "oldhickory",
+        rampName: "Avondale",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.323450,
+        long: -86.541186
+    },
+    {
+        bodyOfWater: "Old Hickory", // lake name
+        id: "oldhickory",
+        rampName: "Benders Ferry",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.301740,
+        long: -86.513639
+    },
+    {
+        bodyOfWater: "Old Hickory", // lake name
+        id: "oldhickory",
+        rampName: "Douglas Bend",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.348154,
+        long: -86.513677
+    },
+    {
+        bodyOfWater: "Old Hickory", // lake name
+        id: "oldhickory",
+        rampName: "Old Hickory Gallatin",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.357435,
+        long: -86.472943
+    },
+    {
+        bodyOfWater: "Old Hickory", // lake name
+        id: "oldhickory",
+        rampName: "Woods Ferry",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.340161,
+        long: -86.446620
+    },
+    {
+        bodyOfWater: "Old Hickory", // lake name
+        id: "oldhickory",
+        rampName: "Odoms Bend",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.342963,
+        long: -86.433431
+    },
+    {
+        bodyOfWater: "Old Hickory", // lake name
+        id: "oldhickory",
+        rampName: "Wilson",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.340571,
+        long: -86.373693
+    },
+    {
+        bodyOfWater: "Old Hickory", // lake name
+        id: "oldhickory",
+        rampName: "Martha Gallatin",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.335756,
+        long: -86.438769
+    },
+    {
+        bodyOfWater: "Old Hickory", // lake name
+        id: "oldhickory",
+        rampName: "Davis Corner",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.280651,
+        long: -86.447913
+    },
+    {
+        bodyOfWater: "Old Hickory", // lake name
+        id: "oldhickory",
+        rampName: "Lone Branch",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.283651,
+        long: -86.50203
+    },
+    {
+        bodyOfWater: "Old Hickory", // lake name
+        id: "oldhickory",
+        rampName: "Shutes Branch",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.247964,
+        long: -86.570871
+    },
+    {
+        bodyOfWater: "Old Hickory", // lake name
+        id: "oldhickory",
+        rampName: "Old Hickory Beach",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.286003,
+        long: -86.659946
+    },
+    {
         bodyOfWater: "Percy Priest", // lake name
         id: "percypriest",
-        rampName: "Cook's",
+        rampName: "Cook",
         rampType: "Concrete",
         rampParking: "Good",
         rampFee: "",
@@ -13352,7 +15686,6 @@ module.exports = [
         topElev: 0,
         lat: 36.131473,
         long: -86.595446,
-
     },
     {
         bodyOfWater: "Percy Priest", // lake name
@@ -13427,20 +15760,6 @@ module.exports = [
     {
         bodyOfWater: "Percy Priest", // lake name
         id: "percypriest",
-        rampName: "Stewart",
-        rampType: "Concrete",
-        rampParking: "Good",
-        rampFee: "",
-        rampAccess: "Paved",
-        courtesyDock: "Yes",
-        bottomElev: 0,
-        topElev: 0,
-        lat: 36.032986,
-        long: -86.494408
-    },
-    {
-        bodyOfWater: "Percy Priest", // lake name
-        id: "percypriest",
         rampName: "Jefferson Springs",
         rampType: "Concrete",
         rampParking: "Good",
@@ -13451,6 +15770,258 @@ module.exports = [
         topElev: 0,
         lat: 36.001683,
         long: -86.472469
+    },
+    {
+        bodyOfWater: "Percy Priest", // lake name
+        id: "percypriest",
+        rampName: "Dam",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.149006,
+        long: -86.619019
+    },
+    {
+        bodyOfWater: "Percy Priest", // lake name
+        id: "percypriest",
+        rampName: "Hamilton Creek",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.110387,
+        long: -86.617792
+    },
+    {
+        bodyOfWater: "Percy Priest", // lake name
+        id: "percypriest",
+        rampName: "Anderson Road Campground",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.109643,
+        long: -86.609389
+    },
+    {
+        bodyOfWater: "Percy Priest", // lake name
+        id: "percypriest",
+        rampName: "Smith Springs",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.090566,
+        long: -86.602273
+    },
+    {
+        bodyOfWater: "Percy Priest", // lake name
+        id: "percypriest",
+        rampName: "Hurricane Creek",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.049808,
+        long: -86.562311
+    },
+    {
+        bodyOfWater: "Percy Priest", // lake name
+        id: "percypriest",
+        rampName: "Poole Knobs",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.054613,
+        long: -86.511064
+    },
+    {
+        bodyOfWater: "Percy Priest", // lake name
+        id: "percypriest",
+        rampName: "Lamar",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.037357,
+        long: -86.474332
+    },
+    {
+        bodyOfWater: "Percy Priest", // lake name
+        id: "percypriest",
+        rampName: "East Fork",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.981369,
+        long: -86.445519
+    },
+    {
+        bodyOfWater: "Percy Priest", // lake name
+        id: "percypriest",
+        rampName: "Stewart Creek",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.032903,
+        long: -86.494461
+    },
+    {
+        bodyOfWater: "South Holston", // lake name
+        id: "southholston",
+        rampName: "Little Oak Campground",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.518179,
+        long: -82.064226
+    },
+    {
+        bodyOfWater: "South Holston", // lake name
+        id: "southholston",
+        rampName: "TVA 421",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.559186,
+        long: -82.041799
+    },
+    {
+        bodyOfWater: "South Holston", // lake name
+        id: "southholston",
+        rampName: "Whitaker Hollow",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.646709,
+        long: -81.922694
+    },
+    {
+        bodyOfWater: "South Holston", // lake name
+        id: "southholston",
+        rampName: "Avens",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.635039,
+        long: -81.960607
+    },
+    {
+        bodyOfWater: "South Holston", // lake name
+        id: "southholston",
+        rampName: "Bakers Marine",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.611838,
+        long: -81.996308
+    },
+    {
+        bodyOfWater: "South Holston", // lake name
+        id: "southholston",
+        rampName: "County Park",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.599417,
+        long: -82.015207
+    },
+    {
+        bodyOfWater: "South Holston", // lake name
+        id: "southholston",
+        rampName: "Painter Creek Marina",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.585635,
+        long: -82.042101
+    },
+    {
+        bodyOfWater: "South Holston", // lake name
+        id: "southholston",
+        rampName: "Observation Knob",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.580776,
+        long: -82.041497
+    },
+    {
+        bodyOfWater: "South Holston", // lake name
+        id: "southholston",
+        rampName: "Laurel Marina",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.557728,
+        long: -82.049706
     },
     {
         bodyOfWater: "Tellico", // lake name
@@ -13465,6 +16036,20 @@ module.exports = [
         topElev: 0,
         lat: 35.778882,
         long: -84.248471
+    },
+    {
+        bodyOfWater: "Tellico", // lake name
+        id: "tellico",
+        rampName: "Dam 2",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.780020,
+        long: -84.258295
     },
     {
         bodyOfWater: "Tellico", // lake name
@@ -13537,6 +16122,160 @@ module.exports = [
         long: -84.246449
     },
     {
+        bodyOfWater: "Tellico", // lake name
+        id: "tellico",
+        rampName: "Lakeland",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.798139,
+        long: -84.181567
+    },
+    {
+        bodyOfWater: "Tellico", // lake name
+        id: "tellico",
+        rampName: "Choto Marina",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.807031,
+        long: -84.146886
+    },
+    {
+        bodyOfWater: "Tellico", // lake name
+        id: "tellico",
+        rampName: "Concord",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.861630,
+        long: -84.126867
+    },
+    {
+        bodyOfWater: "Tellico", // lake name
+        id: "tellico",
+        rampName: "Carl Cowan",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.850588,
+        long: -84.096289
+    },
+    {
+        bodyOfWater: "Tellico", // lake name
+        id: "tellico",
+        rampName: "Lotterdale Cove",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.676304,
+        long: -84.237354
+    },
+    {
+        bodyOfWater: "Tellico", // lake name
+        id: "tellico",
+        rampName: "Morganton",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.639998,
+        long: -84.218508
+    },
+    {
+        bodyOfWater: "Tellico", // lake name
+        id: "tellico",
+        rampName: "Harrison Branch",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.552034,
+        long: -84.091868
+    },
+    {
+        bodyOfWater: "Tellico", // lake name
+        id: "tellico",
+        rampName: "Citico",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.539094,
+        long: -84.083523
+    },
+    {
+        bodyOfWater: "Tellico", // lake name
+        id: "tellico",
+        rampName: "Toqua",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.562772,
+        long: -84.189129
+    },
+    {
+        bodyOfWater: "Tellico", // lake name
+        id: "tellico",
+        rampName: "Notchy Creek",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.543147,
+        long: -84.235364
+    },
+    {
+        bodyOfWater: "Tellico", // lake name
+        id: "tellico",
+        rampName: "Poplar Springs",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 35.751451,
+        long: -84.268810
+    },
+    {
         bodyOfWater: "Tims Ford", // lake name
         id: "timsford",
         rampName: "",
@@ -13549,7 +16288,6 @@ module.exports = [
         topElev: 0,
         lat: 0,
         long: 0,
-
     },
     {
         bodyOfWater: "Watts Bar", // lake name
@@ -13564,7 +16302,20 @@ module.exports = [
         topElev: 0,
         lat: 0,
         long: 0,
-
+    },
+    {
+        bodyOfWater: "Watauga", // lake name
+        id: "watauga",
+        rampName: "",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 0,
+        long: 0,
     },
 
     // TEXAS  ---------------------------------------------------------------------------------------------------------
@@ -13753,7 +16504,7 @@ module.exports = [
     },
 
     // Vermont  ---------------------------------------------------------------------------------------------------------
-  
+
     {
         bodyOfWater: "Memphremagog", // lake name
         id: "memphremagog",
@@ -13797,7 +16548,7 @@ module.exports = [
         topElev: 0,
         lat: 38.003654,
         long: -77.790218
-    }, 
+    },
     {
         bodyOfWater: "Anna", // lake name
         id: "anna",
@@ -13811,7 +16562,7 @@ module.exports = [
         topElev: 0,
         lat: 38.026044,
         long: -77.753419
-    }, 
+    },
     {
         bodyOfWater: "Anna", // lake name
         id: "anna",
@@ -13825,7 +16576,7 @@ module.exports = [
         topElev: 0,
         lat: 38.078180,
         long: -77.797222
-    }, 
+    },
     {
         bodyOfWater: "Anna", // lake name
         id: "anna",
