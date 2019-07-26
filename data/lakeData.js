@@ -5749,7 +5749,7 @@ module.exports = [
         wxDate: "",
         wxTime: "",
     },
-    {
+    /*{
         bodyOfWater: "Watauga", // lake name
         state: ["Tennessee"],
         data: [],
@@ -5774,7 +5774,7 @@ module.exports = [
         conditions: "",
         wxDate: "",
         wxTime: "",
-    },
+    },*/
 
     // TEXAS  ---------------------------------------------------------------------------------------------------------
     {
@@ -5863,8 +5863,8 @@ module.exports = [
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 301.10,
-        lat: 26.779704,
-        long: -99.225982,
+        lat: 26.609208,
+        long: -99.189832,
         elevURL: "https://waterdatafortexas.org/reservoirs/individual/falcon-30day.csv",
         flowURL: "",
         href: "/lakes/falcon",
@@ -5941,8 +5941,8 @@ module.exports = [
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 344.0,
-        lat: 31.130035,
-        long: -94.210815,
+        lat: 32.109076,
+        long: -95.458323,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08031400&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
         flowURL: "",
         href: "/lakes/palestine",
@@ -6118,7 +6118,7 @@ module.exports = [
     },
 
     // UTAH ---------------------------------------------------------------------------------------------------------
-    {
+    /*{
         bodyOfWater: "Deer Creek", // lake name
         state: ["Utah"],
         data: [],
@@ -6143,7 +6143,7 @@ module.exports = [
         conditions: "",
         wxDate: "",
         wxTime: "",
-    },
+    },*/
 
     // Vermont  ---------------------------------------------------------------------------------------------------------
     // Champlain found under New York
@@ -6155,8 +6155,8 @@ module.exports = [
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 679.0,
-        lat: 44.3865,
-        long: -72.7622,
+        lat: 45.249336,
+        long: -72.181510,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04295500&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
         flowURL: "",
         href: "/lakes/memphremagog",
@@ -6241,7 +6241,7 @@ module.exports = [
         long: -76.36,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02042770&period=PT168H&parameterCd=62620&siteType=ST&siteStatus=all",
         flowURL: "",
-        href: "/lakes/james",
+        href: "/lakes/jamesriver",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
 
         wxRefreshInterval: 30, //minutes
@@ -6263,8 +6263,8 @@ module.exports = [
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 620.0,
-        lat: 36.96,
-        long: -76.36,
+        lat: 37.086518,
+        long: -79.403691,
         elevURL: "http://epec.saw.usace.army.mil/dailyrep.txt",
         flowURL: "",
         href: "/lakes/leesville",

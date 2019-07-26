@@ -58,7 +58,7 @@ module.exports = {
       //if (checkForUpdate(currentLake.lastRefresh, currentLake.refreshInterval, currentLake.data.length)) {
       // Get 
       weather.getWeatherData(currentLake, function (error, currentConditions) {
-        const currentConditionsData = currentConditions;
+        var currentConditionsData = currentConditions;
         if (error) {
           console.log(`Weather retrieval error ${error}`)
           callbackError = true;

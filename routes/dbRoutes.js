@@ -299,7 +299,7 @@ module.exports = function (app) {
 
 
             weather.getWeatherData(currentLake, function (error, currentConditions) {
-              let currentConditionsData = currentConditions;
+              var currentConditionsData = currentConditions;
               if (error) {
                 console.log(`Weather retrieval error ${error}`)
                 callbackError = true;

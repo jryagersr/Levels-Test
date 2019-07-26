@@ -277,7 +277,7 @@ module.exports = [
                     ramp: "Triple Springs",
                     state: "NC",
                     txDetail: "Anglers Choice",
-                    resultsLink: "",
+                    resultsLink: "https://www.facebook.com/photo.php?fbid=2218733094915221&set=pcb.2691133614254336&type=3&ifg=1&__tn__=HH-R&eid=ARCE7HLdtnzJyaVhALGUl47w7kjzJB5y3uLAklaCSbHDbdHltKKlqDPew-qkIKa1JIBLBYhQXu5KjqOB",
                     entryLink: "https://www.facebook.com/groups/390430154432590/"
                 },
                 {
@@ -3841,7 +3841,7 @@ module.exports = [
                     ramp: "Crosspoint",
                     state: "NC",
                     txDetail: "",
-                    resultsLink: "",
+                    resultsLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=%2Cd%2CP-R&eid=ARBwp5si2bM2ink7gY7cNwkMXUe9B3z5Vn-t9tYHXCnkn-hGxmF81TbtYpjRBaWoet3n_9kscFhpxNr1",
                     entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
                 },
                 {
