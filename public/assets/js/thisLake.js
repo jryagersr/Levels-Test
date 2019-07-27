@@ -146,7 +146,7 @@ function buildElevChart(data, lake) {
                 },
                 {
                     type: 'line',
-                    label: "Normal Pool",
+                    label: "Normal",
                     // backgroundColor: 'rgb(179,221,255)',
                     borderColor: 'rgb(100, 140, 100)',
                     data: dataNPBatch,
@@ -154,7 +154,7 @@ function buildElevChart(data, lake) {
                 },
                 {
                     type: 'line',
-                    label: "Top Flood",
+                    label: "Flood",
                     // backgroundColor: 'rgb(179,221,255)',
                     borderColor: 'rgb(172, 83, 83)',
                     data: dataFCBatch,

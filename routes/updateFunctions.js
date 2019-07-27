@@ -130,6 +130,18 @@ module.exports = {
                     }
                   }
                 }
+                      // Set weather
+                      let today = new Date()
+                      let compassSector = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW", "N"];
+                      updateData.barometric = currentLake.barometric;
+                      updateData.wxTemp = currentLake.wxTemp;
+                      updateData.humidity = currentLake.humidity;
+                      updateData.windSpeed = currentLake.windSpeed;
+                      updateData.windDirection = currentLake.windDirection;
+                      updateData.conditions = currentLake.conditions;
+                      updateData.wxDate = currentLake.wxDate;
+                      updateData.wxTime = currentLake.wxTime;
+
                 // update the database with the 'clean' data
                 db.model("Lake").updateOne({
                     'bodyOfWater': bodyOfWater
@@ -143,18 +155,6 @@ module.exports = {
                       console.log(error);
                     } else {
 
-
-                      // Set weather
-                      let today = new Date()
-                      let compassSector = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW", "N"];
-                      updateData.barometric = currentLake.barometric;
-                      updateData.wxTemp = currentLake.wxTemp;
-                      updateData.humidity = currentLake.humidity;
-                      updateData.windSpeed = currentLake.windSpeed;
-                      updateData.windDirection = currentLake.windDirection;
-                      updateData.conditions = currentLake.conditions;
-                      updateData.wxDate = currentLake.wxDate;
-                      updateData.wxTime = currentLake.wxTime;
 
                       callbackError = false;
 
