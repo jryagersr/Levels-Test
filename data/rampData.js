@@ -9598,6 +9598,20 @@ module.exports = [
     {
         bodyOfWater: "Ontario", // lake name
         id: "ontariony",
+        rampName: "Chaumont Bay",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 44.068264,
+        long: -76.148689
+    },
+    {
+        bodyOfWater: "Ontario", // lake name
+        id: "ontariony",
         rampName: "Three Mile Bay",
         rampType: "Concrete",
         rampParking: "Good",
@@ -9608,6 +9622,104 @@ module.exports = [
         topElev: 0,
         lat: 44.081018,
         long: -76.196663
+    },
+    {
+        bodyOfWater: "Ontario", // lake name
+        id: "ontariony",
+        rampName: "Long Point",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 44.029454,
+        long: -76.214851
+    },
+    {
+        bodyOfWater: "Ontario", // lake name
+        id: "ontariony",
+        rampName: "Hidden Harbor Marina",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 43.974534,
+        long: -76.275602
+    },
+    {
+        bodyOfWater: "Ontario", // lake name
+        id: "ontariony",
+        rampName: "Flanders",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 44.011651,
+        long: -76.287858
+    },
+    {
+        bodyOfWater: "Ontario", // lake name
+        id: "ontariony",
+        rampName: "Pond's Marina",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 44.059386,
+        long: -76.300258
+    },
+    {
+        bodyOfWater: "Ontario", // lake name
+        id: "ontariony",
+        rampName: "Martin's Marina",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 44.079244,
+        long: -76.310568
+    },
+    {
+        bodyOfWater: "Ontario", // lake name
+        id: "ontariony",
+        rampName: "Kent Creek",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 44.074497,
+        long: -76.327852
+    },
+    {
+        bodyOfWater: "Ontario", // lake name
+        id: "ontariony",
+        rampName: "Stony Point",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 44.071456,
+        long: -76.356374
     },
     {
         bodyOfWater: "Ontario", // lake name
@@ -9626,6 +9738,48 @@ module.exports = [
     {
         bodyOfWater: "Ontario", // lake name
         id: "ontariony",
+        rampName: "Precision Marina",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 44.168603,
+        long: -76.251044
+    },
+    {
+        bodyOfWater: "Ontario", // lake name
+        id: "ontariony",
+        rampName: "Thousand Island Marina",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 44.172077,
+        long: -76.244423
+    },
+    {
+        bodyOfWater: "Ontario", // lake name
+        id: "ontariony",
+        rampName: "Cedar Point SP",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 44.204701,
+        long: -76.197197
+    },
+    {
+        bodyOfWater: "Ontario", // lake name
+        id: "ontariony",
         rampName: "Clayton Village",
         rampType: "Concrete",
         rampParking: "Good",
@@ -9636,6 +9790,132 @@ module.exports = [
         topElev: 0,
         lat: 44.237478,
         long: -76.089663
+    },
+    {
+        bodyOfWater: "Ontario", // lake name
+        id: "ontariony",
+        rampName: "Clayton Marina",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 44.240953,
+        long: -76.071700
+    },
+    {
+        bodyOfWater: "Ontario", // lake name
+        id: "ontariony",
+        rampName: "Northern Marina",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 44.257447,
+        long: -76.035752
+    },
+    {
+        bodyOfWater: "Ontario", // lake name
+        id: "ontariony",
+        rampName: "Collins Landing",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 44.300848,
+        long: -75.981311
+    },
+    {
+        bodyOfWater: "Ontario", // lake name
+        id: "ontariony",
+        rampName: "Henderson",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 43.850347,
+        long: -76.206430
+    },
+    {
+        bodyOfWater: "Ontario", // lake name
+        id: "ontariony",
+        rampName: "Westcott Beach",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 43.901211,
+        long: -76.126413
+    },
+    {
+        bodyOfWater: "Ontario", // lake name
+        id: "ontariony",
+        rampName: "Black River Dexter",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 44.005479,
+        long: -76.046208
+    },
+    {
+        bodyOfWater: "Ontario", // lake name
+        id: "ontariony",
+        rampName: "Fish Island Park",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 44.005917,
+        long: -76.040388
+    },
+    {
+        bodyOfWater: "Ontario", // lake name
+        id: "ontariony",
+        rampName: "Kittos Marina",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 44.003782,
+        long: -76.171182
+    },
+    {
+        bodyOfWater: "Ontario", // lake name
+        id: "ontariony",
+        rampName: "Schermerhorn Park",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 44.066525,
+        long: -76.141432
     },
 
     // NORTH CAROLINA  ---------------------------------------------------------------------------------------------------------
