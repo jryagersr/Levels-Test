@@ -3617,8 +3617,8 @@ module.exports = [
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 243.0,
-        lat: 44.561815,
-        long: -73.363063,
+        lat: 43.997063,
+        long: -76.474127,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04220259&period=Pt168H&parameterCd=72214&siteType=LK&siteStatus=all",
         flowURL: "",
         href: "/lakes/ontariony",
