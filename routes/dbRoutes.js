@@ -298,26 +298,14 @@ module.exports = function (app) {
               // 
 
 
-              weather.getWeatherData(currentLake, function (error, currentConditions) {
-                var currentConditionsData = currentConditions;
+              weather.getWeatherData(currentLake, function (error, lakeWeather) {
+                currentLake = lakeWeather;
                 if (error) {
                   console.log(`Weather retrieval error ${error}`)
-                  callbackError = true;
+                  res.json(currentLake);
                 } else {
-                  if (currentConditions !== 'undefined') {
-                    // Set weather
-                    let today = new Date()
-                    let compassSector = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW", "N"];
-                    currentLake.barometric = currentConditionsData.main.pressure;
-                    currentLake.wxTemp = currentConditionsData.main.temp;
-                    currentLake.humidity = currentConditionsData.main.humidity;
-                    currentLake.windSpeed = currentConditionsData.wind.speed;
-                    currentLake.windDirection = compassSector[(currentConditionsData.wind.deg / 22.5).toFixed(0) - 1];
-                    currentLake.conditions = currentConditionsData.weather[0].description;
-                    currentLake.conditions = currentLake.conditions.charAt(0).toUpperCase() + currentLake.conditions.slice(1);
-                    currentLake.wxDate = today.toLocaleDateString();
-                    currentLake.wxTime = today.toLocaleTimeString('en-US') + " (" + currentConditionsData.name + ")";
-
+                  if (lakeWeather !== 'undefined') {
+                    
                     // if no lakeData update needed, make the callback, otherwise it will be made in the switch callback
                     if (!update.checkForUpdate(currentLake)) {
                       res.json(currentLake);
@@ -337,26 +325,15 @@ module.exports = function (app) {
               // 
 
 
-              weather.getWeatherData(currentLake, function (error, currentConditions) {
-                var currentConditionsData = currentConditions;
+              weather.getWeatherData(currentLake, function (error, lakeWeather) {
+                currentLake = lakeWeather;
                 if (error) {
                   console.log(`Weather retrieval error ${error}`)
-                  callbackError = true;
+                  //return currentLake data (likely ramps only)
+                  res.json(currentLake);
                 } else {
-                  if (currentConditions !== 'undefined') {
-                    // Set weather
-                    let today = new Date()
-                    let compassSector = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW", "N"];
-                    currentLake.barometric = currentConditionsData.main.pressure;
-                    currentLake.wxTemp = currentConditionsData.main.temp;
-                    currentLake.humidity = currentConditionsData.main.humidity;
-                    currentLake.windSpeed = currentConditionsData.wind.speed;
-                    currentLake.windDirection = compassSector[(currentConditionsData.wind.deg / 22.5).toFixed(0) - 1];
-                    currentLake.conditions = currentConditionsData.weather[0].description;
-                    currentLake.conditions = currentLake.conditions.charAt(0).toUpperCase() + currentLake.conditions.slice(1);
-                    currentLake.wxDate = today.toLocaleDateString();
-                    currentLake.wxTime = today.toLocaleTimeString('en-US') + " (" + currentConditionsData.name + ")";
-
+                  if (currentLake !== 'undefined') {
+                   
                     //return currentLake data (ramps and weather)
                     res.json(currentLake);
 

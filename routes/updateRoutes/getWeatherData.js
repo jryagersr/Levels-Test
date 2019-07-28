@@ -8,10 +8,12 @@ module.exports = {
   getWeatherData: function (currentLake, callback) {
     var request = require("request");
     var data = []; //Retrieve Weather Data 
+    var lakeWeather = currentLake;
+
     //Weather data URLs
     let apiKey = "d620419cfbb975f425c6262fefeef8f3";
-    let weatherURL = "http://api.openweathermap.org/data/2.5/weather?lat=" + currentLake.lat + "&lon=" + currentLake.long + "&units=imperial&APPID=" + apiKey;
-    let forecastUrl = "http://api.openweathermap.org/data/2.5/forecast?lat=" + currentLake.lat + "&lon=" + currentLake.long + "&units=imperial&APPID=" + apiKey;
+    let weatherURL = "http://api.openweathermap.org/data/2.5/weather?lat=" + lakeWeather.lat + "&lon=" + lakeWeather.long + "&units=imperial&APPID=" + apiKey;
+    let forecastUrl = "http://api.openweathermap.org/data/2.5/forecast?lat=" + lakeWeather.lat + "&lon=" + lakeWeather.long + "&units=imperial&APPID=" + apiKey;
     request(weatherURL, function (error, response, body) {
       if (error) {
         callback(false, error);
@@ -27,14 +29,27 @@ module.exports = {
         if (!dataErrorTrue) {
 
           if (typeof data == "undefined") {
-            console.log(`No baro data for ${bodyOfWater}`);
+            console.log(`No Wx data for ${bodyOfWater}`);
             // send empty array to front end
-          } else {
+          } else { 
+            
+            // Set weather
+            let today = new Date()
+            let compassSector = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW", "N"];
+            lakeWeather.barometric = data.main.pressure;
+            lakeWeather.wxTemp = data.main.temp;
+            lakeWeather.humidity = data.main.humidity;
+            lakeWeather.windSpeed = data.wind.speed;
+            lakeWeather.windDirection = compassSector[(data.wind.deg / 22.5).toFixed(0) - 1];
+            lakeWeather.conditions = data.weather[0].description;
+            lakeWeather.conditions = lakeWeather.conditions.charAt(0).toUpperCase() + lakeWeather.conditions.slice(1);
+            lakeWeather.wxDate = today.toLocaleDateString();
+            lakeWeather.wxTime = today.toLocaleTimeString('en-US') + " (" + data.name + ")";
 
-            callback(false, data);
+            callback(false, lakeWeather);
           }
         } else {
-          console.log(`Data is bad for ${bodyOfWater} (Weather)`);
+          console.log(`Wx data is bad for ${lakeWeather.bodyOfWater}`);
           callback(true, body);
         }
 

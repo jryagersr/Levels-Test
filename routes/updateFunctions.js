@@ -57,26 +57,14 @@ module.exports = {
       // Get weather data
       //if (checkForUpdate(currentLake.lastRefresh, currentLake.refreshInterval, currentLake.data.length)) {
       // Get 
-      weather.getWeatherData(currentLake, function (error, currentConditions) {
-        var currentConditionsData = currentConditions;
+      weather.getWeatherData(currentLake, function (error, lakeWeather) {
+        currentLake = lakeWeather;
         if (error) {
           console.log(`Weather retrieval error ${error}`)
           callbackError = true;
         } else {
-          if (currentConditionsData !== 'undefined') {
-            // Set weather
-            let today = new Date()
-            let compassSector = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW", "N"];
-            currentLake.barometric = currentConditionsData.main.pressure;
-            currentLake.wxTemp = currentConditionsData.main.temp;
-            currentLake.humidity = currentConditionsData.main.humidity;
-            currentLake.windSpeed = currentConditionsData.wind.speed;
-            currentLake.windDirection = compassSector[(currentConditionsData.wind.deg / 22.5).toFixed(0) - 1];
-            currentLake.conditions = currentConditionsData.weather[0].description;
-            currentLake.conditions = currentLake.conditions.charAt(0).toUpperCase() + currentLake.conditions.slice(1);
-            currentLake.wxDate = today.toLocaleDateString();
-            currentLake.wxTime = today.toLocaleTimeString('en-US');
-
+          if (currentLake!== 'undefined') {
+           
           } else {
             console.log(`Data error for weather ${currentLake.bodyOfWater}`);
           }

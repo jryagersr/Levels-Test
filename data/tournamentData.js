@@ -331,7 +331,7 @@ module.exports = [
     {
         organization: "Anglers Choice Bass Club",
         trails: [{
-            trail: "Team Trail",
+            trail: "Open Tx",
             tournaments: [
 
                 {
