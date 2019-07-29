@@ -408,7 +408,7 @@ module.exports = [
         wxDate: "",
         wxTime: "",
     },
-    {
+    /*{
         bodyOfWater: "Thurlow", // lake name
         state: ["Alabama"],
         data: [],
@@ -434,7 +434,7 @@ module.exports = [
         conditions: "",
         wxDate: "",
         wxTime: "",
-    },
+    },*/
     {
         bodyOfWater: "Upper Bear Creek", // lake name
         state: ["Alabama"],
@@ -1727,7 +1727,7 @@ module.exports = [
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
-        normalPool: 875.0,
+        normalPool: 690.0,
         lat: 40.143002,
         long: -88.873364,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=05578300&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
