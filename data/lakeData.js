@@ -390,8 +390,8 @@ module.exports = [
         seaLevelDelta: 0,
         normalPool: 510.0,
         topOfFloodControl: 518.0, // guess
-        lat: 34.027963,
-        long: -87.125180,
+        lat: 33.954552,
+        long: -87.111485,
         elevURL: "http://apcshorelines.com/our-lakes/smith",
         flowURL: "",
         href: "/lakes/smith",
