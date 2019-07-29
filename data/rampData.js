@@ -1071,6 +1071,160 @@ module.exports = [
         long: -87.108731
     },
     {
+        bodyOfWater: "Smith", // lake name
+        id: "smith",
+        rampName: "Squirrel's Marina",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 33.967049,
+        long: -87.141101
+    },
+    {
+        bodyOfWater: "Smith", // lake name
+        id: "smith",
+        rampName: "Clear Creek",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.016850,
+        long: -87.273184
+    },
+    {
+        bodyOfWater: "Smith", // lake name
+        id: "smith",
+        rampName: "Stoney Point",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.042333,
+        long: -87.257902
+    },
+    {
+        bodyOfWater: "Smith", // lake name
+        id: "smith",
+        rampName: "Corinth",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.105008,
+        long: -87.327944
+    },
+    {
+        bodyOfWater: "Smith", // lake name
+        id: "smith",
+        rampName: "Hullet Branch",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.114439,
+        long: -87.295360
+    },
+    {
+        bodyOfWater: "Smith", // lake name
+        id: "smith",
+        rampName: "Duncan Bridge Marina",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.000684,
+        long: -87.219033
+    },
+    {
+        bodyOfWater: "Smith", // lake name
+        id: "smith",
+        rampName: "Helicon Rd",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.082701,
+        long: -87.167791
+    },
+    {
+        bodyOfWater: "Smith", // lake name
+        id: "smith",
+        rampName: "Speegles Marina",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.080840,
+        long: -86.974462
+    },
+    {
+        bodyOfWater: "Smith", // lake name
+        id: "smith",
+        rampName: "Smith Park",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.083887,
+        long: -86.957292
+    },
+    {
+        bodyOfWater: "Smith", // lake name
+        id: "smith",
+        rampName: "Trident Marina",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.031383,
+        long: -87.056864
+    },
+    {
+        bodyOfWater: "Smith", // lake name
+        id: "smith",
+        rampName: "Spring Branch",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 33.968601,
+        long: -87.086444
+    },
+    {
         bodyOfWater: "Pickwick", // lake name
         id: "pickwick",
         rampName: "Goat Island",
@@ -1519,24 +1673,6 @@ module.exports = [
         lat: 34.491345,
         long: -114.358135
     },
-    /*
-                {
-                    bodyOfWater: "Roosevelt", // lake name
-                    data: [],
-                    refreshInterval: 90, //minutes
-                    lastRefresh: "12/31/18", // a Date 
-                    seaLevelDelta: 0.0, // ft but data reported as a delta gage height
-                    normalPool: 2094.0,
-                    elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=52327029&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN",
-                    flowURL: "none",
-                    href: "/lakes/rooseveltaz",
-                    dataSource: ["USGS"], // array of calls to make to retrieve data
-                    resultsLink: "undefined",
-                    entryLink: "",
-                    adLogoSrc: "",
-                    adLogoUrl: ""
-                }*/
-
 
     // ARKANSAS  ---------------------------------------------------------------------------------------------------------
 
@@ -1707,34 +1843,6 @@ module.exports = [
         topElev: 0,
         lat: 36.167638,
         long: -94.016222
-    },
-    {
-        bodyOfWater: "Bull Shoals", // lake name
-        id: "bullshoals",
-        rampName: "Boat Dock",
-        rampType: "",
-        rampParking: "",
-        rampFee: "",
-        rampAccess: "",
-        courtesyDock: "",
-        bottomElev: 0,
-        topElev: 0,
-        lat: 36.383660,
-        long: -92.599721
-    },
-    {
-        bodyOfWater: "Bull Shoals", // lake name
-        id: "bullshoals",
-        rampName: "Theodosia",
-        rampType: "",
-        rampParking: "",
-        rampFee: "",
-        rampAccess: "",
-        courtesyDock: "",
-        bottomElev: 0,
-        topElev: 0,
-        lat: 36.578588,
-        long: -92.650429
     },
     {
         bodyOfWater: "Hamilton", // lake name
@@ -2002,6 +2110,146 @@ module.exports = [
         long: -93.178494,
     },
     {
+        bodyOfWater: "Ouachita", // lake name
+        id: "ouachita",
+        rampName: "Crystal Springs",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.542981,
+        long: -93.349213
+    },
+    {
+        bodyOfWater: "Ouachita", // lake name
+        id: "ouachita",
+        rampName: "McNeice Marine",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.576057,
+        long: -93.427033
+    },
+    {
+        bodyOfWater: "Ouachita", // lake name
+        id: "ouachita",
+        rampName: "Denby Point",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.551097,
+        long: -93.484720
+    },
+    {
+        bodyOfWater: "Ouachita", // lake name
+        id: "ouachita",
+        rampName: "Turtle Creek",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.551095,
+        long: -93.510710
+    },
+    {
+        bodyOfWater: "Ouachita", // lake name
+        id: "ouachita",
+        rampName: "Big Fir",
+        rampType: "Concrete",
+        rampParking: "Poor",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "No",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.606225,
+        long: -93.408328
+    },
+    {
+        bodyOfWater: "Ouachita", // lake name
+        id: "ouachita",
+        rampName: "Little Fir",
+        rampType: "Concrete",
+        rampParking: "Fair",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "No",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.633135,
+        long: -93.470098
+    },
+    {
+        bodyOfWater: "Ouachita", // lake name
+        id: "ouachita",
+        rampName: "Fishing Village",
+        rampType: "Concrete",
+        rampParking: "Fair",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "No",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.626023,
+        long: -93.542112
+    },
+    {
+        bodyOfWater: "Ouachita", // lake name
+        id: "ouachita",
+        rampName: "Buckville",
+        rampType: "Concrete",
+        rampParking: "Poor",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "No",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.610296,
+        long: -93.348208
+    },
+    {
+        bodyOfWater: "Ouachita", // lake name
+        id: "ouachita",
+        rampName: "Rabbit Trail",
+        rampType: "Concrete",
+        rampParking: "Fair",
+        rampFee: "",
+        rampAccess: "No",
+        courtesyDock: "No",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.637290,
+        long: -93.333060
+    },
+    {
+        bodyOfWater: "Ouachita", // lake name
+        id: "ouachita",
+        rampName: "Rabbit Trail",
+        rampType: "Concrete",
+        rampParking: "Fair",
+        rampFee: "",
+        rampAccess: "No",
+        courtesyDock: "No",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 34.637290,
+        long: -93.333060
+    },
+    {
         bodyOfWater: "Table Rock", // lake name
         id: "tablerock",
         rampName: "Aunts Creek",
@@ -2101,6 +2349,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Table Rock", // lake name
+        id: "tablerock",
         rampName: "Cape Fair",
         rampType: "Concrete",
         rampParking: "Poor",
@@ -7923,6 +8172,20 @@ module.exports = [
         topElev: 0,
         lat: 36.573624,
         long: -92.653169
+    },
+    {
+        bodyOfWater: "Bull Shoals", // lake name
+        id: "bullshoals",
+        rampName: "Boat Dock",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.383660,
+        long: -92.599721
     },
     {
         bodyOfWater: "Bull Shoals", // lake name
