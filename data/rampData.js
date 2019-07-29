@@ -1710,6 +1710,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Bull Shoals", // lake name
+        id: "bullshoals",
         rampName: "Boat Dock",
         rampType: "",
         rampParking: "",
@@ -1723,7 +1724,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Bull Shoals", // lake name
-        id: "beaver",
+        id: "bullshoals",
         rampName: "Theodosia",
         rampType: "",
         rampParking: "",
@@ -2620,6 +2621,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Sonoma", // lake name
+        id: "sonoma",
         rampName: "Marina",
         rampType: "",
         rampParking: "",
@@ -3717,6 +3719,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Oconee", // lake name
+        id: "oconee",
         rampName: "Parks Ferry",
         rampType: "Concrete",
         rampParking: "Good",
@@ -9004,6 +9007,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Ross Barnett", // lake name
+        id: "rossbarnett",
         rampName: "Browns Landing",
         rampType: "",
         rampParking: "",
@@ -9222,7 +9226,6 @@ module.exports = [
         lat: 35.424495,
         long: -104.192849
     },
-
     {
         bodyOfWater: "Elephant Butte", // lake name
         id: "elephantbutte",
@@ -10524,6 +10527,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Jocasee", // lake name
+        id: "jocassee",
         rampName: "Devils Point",
         rampType: "",
         rampParking: "",
@@ -10537,6 +10541,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Jocasee", // lake name
+        id: "jocassee",
         rampName: "Devils Fork",
         rampType: "",
         rampParking: "",
@@ -10550,6 +10555,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Jocasee", // lake name
+        id: "jocassee",
         rampName: "Devils Fork 2",
         rampType: "",
         rampParking: "",
