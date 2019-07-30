@@ -2678,33 +2678,6 @@ module.exports = [
 
     },
     {
-        bodyOfWater: "Otsego", // lake name
-        state: ["Michigan"],
-        data: [],
-        refreshInterval: 90, //minutes
-        elevDataInterval: 4, // Time between elevation data 4 = 15min, 2 = 30 min 1 = 60 min
-        lastRefresh: "12/31/18", // a Date 
-        seaLevelDelta: 1187.4,
-        normalPool: 1191.0,
-        lat: 42.769369,
-        long: -74.887660,
-        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=445512084415301&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
-        flowURL: "",
-        href: "/lakes/otsego",
-        dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-
-        wxRefreshInterval: 30, //minutes
-        wxlastRefresh: "12/31/18", // a Date 
-        barometric: 0,
-        wxTemp: 0,
-        humidity: 0,
-        windSpeed: 0,
-        windDirection: "",
-        conditions: "",
-        wxDate: "",
-        wxTime: "",
-    },
-    {
         bodyOfWater: "St Clair", // lake name
         state: ["Michigan"],
         data: [],
@@ -3596,6 +3569,33 @@ module.exports = [
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04247000&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
         flowURL: "",
         href: "/lakes/oneida",
+        dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+
+        wxRefreshInterval: 30, //minutes
+        wxlastRefresh: "12/31/18", // a Date 
+        barometric: 0,
+        wxTemp: 0,
+        humidity: 0,
+        windSpeed: 0,
+        windDirection: "",
+        conditions: "",
+        wxDate: "",
+        wxTime: "",
+    },
+    {
+        bodyOfWater: "Otsego", // lake name
+        state: ["Otsego"],
+        data: [],
+        refreshInterval: 90, //minutes
+        elevDataInterval: 4, // Time between elevation data 4 = 15min, 2 = 30 min 1 = 60 min
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 1187.4,
+        normalPool: 1191.0,
+        lat: 42.769369,
+        long: -74.887660,
+        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=445512084415301&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
+        flowURL: "",
+        href: "/lakes/otsego",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
 
         wxRefreshInterval: 30, //minutes
