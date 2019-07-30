@@ -8179,8 +8179,48 @@ module.exports = [
         lat: 42.585832,
         long: -82.641589
     },
-
-
+    {
+        bodyOfWater: "St Helen", // lake name
+        id: "sthelen",
+        rampName: "Airport Road",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 44.364744,
+        long: -84.431806
+    },
+    {
+        bodyOfWater: "St Helen", // lake name
+        id: "sthelen",
+        rampName: "D & B Lakeview Marina",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 44.374102,
+        long:  -84.421667
+    },
+    {
+        bodyOfWater: "St Helen", // lake name
+        id: "sthelen",
+        rampName: "Artesia Beach",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 44.357666,
+        long: -84.492372
+    },
 
     // MINNESOTA  ---------------------------------------------------------------------------------------------------------
 
