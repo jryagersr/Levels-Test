@@ -21242,7 +21242,7 @@ module.exports = [
         topElev: 0,
         lat: 43.795936,
         long: -88.435196
-    }
+    },
     {
         bodyOfWater: "Winnebago", // lake name
         id: "winnebago",
