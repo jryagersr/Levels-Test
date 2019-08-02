@@ -10284,8 +10284,8 @@ module.exports = [
         }]
     },
     {
-        bodyOfWater: "Ontario", // lake name
-        id: "ontariony",
+        bodyOfWater: "1000 Islands", // lake name
+        id: "thousandislands",
         data: [],
         refreshInterval: 30, //minutes
         lastRefresh: "12/31/18", // a Date 
@@ -16264,7 +16264,7 @@ module.exports = [
 
         }] 
     },
-    /*{
+    {
         bodyOfWater: "Watauga", // lake name
         id: "watauga",
         data: [],
@@ -16341,7 +16341,7 @@ module.exports = [
             }],
 
         }] 
-    },*/
+    },
 
     // TEXAS  ---------------------------------------------------------------------------------------------------------
     {

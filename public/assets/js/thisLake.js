@@ -88,7 +88,7 @@ function buildElevChart(data, lake) {
                     chartMaxElev = sumOfElevs / divisor; // update Max Elev average
                 if ((sumOfElevs / divisor) < chartMinElev) // if value is less thank min, replace min
                     chartMinElev = sumOfElevs / divisor; // update Min Elev average
-                labelBatch.push(data[k - 1].date);
+                labelBatch.push(data[k - 1].date.substring(0, data[k - 1].date.length - 5));
                 dataElevBatch.push((sumOfElevs / divisor).toFixed(2)); // calculate average
                 dataNPBatch.push(lake.normalPool); // Normal Pool line batch 
                 dataFCBatch.push(lake.topOfFloodControl); // Top of Flood Control Pool line batch
@@ -104,7 +104,7 @@ function buildElevChart(data, lake) {
         }
     }
     // push the final day's values after looping
-    labelBatch.push(data[k - 1].date); // put final day date value in array
+    labelBatch.push(data[k - 1].date.substring(0, data[k - 1].date.length - 5)); // put final day date value in array
     dataElevBatch.push((sumOfElevs / divisor).toFixed(2)); // calculate average final day and push
     dataNPBatch.push(lake.normalPool); // Normal Pool line batch (currently trying to get it to display)
     dataFCBatch.push(lake.topOfFloodControl); // Normal Pool line batch (currently trying to get it to display)
@@ -120,9 +120,9 @@ function buildElevChart(data, lake) {
     dataElevBatch.reverse();
 
     // Set y axis limits for Elev Chart
-    chartMinElevLimit = Math.round(chartMinElev) - .5; // set the chart lower limit
+    chartMinElevLimit = Math.round(chartMinElev) - 1; // set the chart lower limit
     //if (chartMinElevLimit > lake.normalPool) chartMinElevLimit = lake.normalPool - .5; // make sure normal pool line shows.
-    chartMaxElevLimit = Math.round(chartMaxElev) + .5; // set the chart upper limit
+    chartMaxElevLimit = Math.round(chartMaxElev) + 1; // set the chart upper limit
     //if (chartMaxElevLimit < lake.normalPool) chartMaxElevLimit = lake.normalPool + .5; // make sure normal pool line shows.
 
     var ctx = document.getElementById('myElevChart').getContext('2d');
@@ -167,6 +167,116 @@ function buildElevChart(data, lake) {
                      data: dataTDBatch,
                      tension: 0 // disables bezier curves
                  }*/
+            ]
+        },
+
+        // Configuration options go here
+        options: {
+            responsive: true,
+            scales: {
+                xAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: false,
+                        labelString: 'Date',
+                        fontSize: 20
+                    }
+                }],
+                yAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: false,
+                        labelString: 'Level (feet)',
+                        fontSize: 20,
+                    },
+                    ticks: {
+                        min: chartMinElevLimit, // Set chart bottom at 1ft less than min elev value
+                        max: chartMaxElevLimit, // Set chart top at 1ft more than min elev value
+                        //stepSize: Math.round((chartMaxElev - chartMinElev) / 2), // Set the y-axis step value to  ft.
+                        //autoSkip: true,
+                        //maxTicksLimit: 8,
+                    },
+                    stacked: false
+                }]
+            }
+        }
+    });
+}
+// Function to build chart on page
+function buildRiverChart(data, lake) {
+    // Our data must be parsed into separate flat arrays for the chart
+    let labelBatch = [];
+    let dataElevBatch = [];
+    let dataNPBatch = []; // Storage for Normal Pool batch data
+    let k = 0; // our iterator after starting elevation
+    let chartMinElev = 100000; // y-axis Max elev value
+    let chartMaxElev = 0; // y-axis Min elev value
+    let chartMinElevLimit = 0; // y-axis Min elev Limit (for chart)
+    let chartMaxElevLimit = 0; // y-axis Max elev Limit (for chart)
+    // find our starting elevation
+    for (var i = 0; data.length; i++) {
+        if (typeof data[i].elev == "number") {
+            k = i;
+            break;
+        }
+    }
+    // Loop through our data for 24 data points if we have it
+    for (k; k < data.length; k++) {
+        // if we're past the first entry
+        if (k > 0) {
+            labelBatch.push(data[k - 1].time);
+            dataElevBatch.push((data[k - 1].elev).toFixed(2)); // push elev
+            dataNPBatch.push(lake.normalPool); // Normal Pool line batch 
+
+            if (data[k - 1].elev > chartMaxElev) // if value is greater than max, replace max
+                chartMaxElev = data[k - 1].elev; // update Max Elev average
+            if (data[k - 1].elev < chartMinElev) // if value is less thank min, replace min
+                chartMinElev = data[k - 1].elev; // update Min Elev average
+
+        }
+        // when a week of data has been reached stop
+        if (labelBatch.length > 23) {
+            break;
+        }
+    }
+
+    labelBatch.reverse();
+    dataElevBatch.reverse();
+
+
+    // Set y axis limits for Elev Chart
+    chartMinElevLimit = Math.round(chartMinElev) - 1; // set the chart lower limit
+    //if (chartMinElevLimit > lake.normalPool) chartMinElevLimit = lake.normalPool - .5; // make sure normal pool line shows.
+    chartMaxElevLimit = Math.round(chartMaxElev) + 1; // set the chart upper limit
+    //if (chartMaxElevLimit < lake.normalPool) chartMaxElevLimit = lake.normalPool + .5; // make sure normal pool line shows.
+
+    var ctx = document.getElementById('myRiverChart').getContext('2d');
+    var grd = ctx.createLinearGradient(0, 0, 170, 0);
+    grd.addColorStop(0, 'rgb(0,140,255)');
+    grd.addColorStop(1, 'rgb(0,55,255)');
+    var chart = new Chart(ctx, {
+        // The type of chart we want to create
+
+        type: 'line',
+
+        // The data for our dataset
+        data: {
+            labels: labelBatch,
+            datasets: [{
+                    type: 'line',
+                    label: "Level",
+                    // backgroundColor: 'rgb(179,221,255)',
+                    borderColor: 'rgb(0, 140, 255)',
+                    data: dataElevBatch
+                },
+                {
+                    type: 'line',
+                    label: "Normal",
+                    // backgroundColor: 'rgb(179,221,255)',
+                    borderColor: 'rgb(100, 140, 100)',
+                    data: dataNPBatch,
+                    tension: 0 // disables bezier curves
+                }
             ]
         },
 
@@ -544,8 +654,12 @@ $.ajax({
             buildElevChart(currentLake.data, currentLake);
 
             // build flow chart if flows are available
-            if (currentLake.data[0].flow !== "N/A") {
-                buildFlowChart(currentLake.data);
+            if (currentLake.bodyOfWater.includes("River")) {
+                buildRiverChart(currentLake.data, currentLake)
+            } else {
+                if (currentLake.data[0].flow !== "N/A") {
+                    buildFlowChart(currentLake.data);
+                }
             }
 
             // Hide loading gif
@@ -559,3 +673,26 @@ $.ajax({
             $("#currentNormal").append("normal pool " + currentLake.normalPool);
         }
     })
+
+
+
+// jQuery tab click javascript code
+// ===========================================
+
+    // hide all tabs
+    $(".tab-wrapper").hide();
+    // show only overview
+    $('#overviewTab').show();
+
+    // listen for click on '.tab-btn' class
+    $( ".tab-btn" ).click(function(event) {        // remove active from any .tab-wrapper
+        $(".tab-btn").removeClass("active");
+        // hide all .tab-wrapper
+        $(".tab-wrapper").hide();
+        // add active to button that was clicked
+        let clickedTab = event.target.id
+        $(clickedTab).addClass("active");
+        // show associated .tab-wrapper 
+        let clickedWrapper = event.target.name;
+        $("#" + clickedWrapper).show();
+      });

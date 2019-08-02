@@ -16,6 +16,9 @@ var LakeSchema = new Schema({
   data: {
     type: Array
   },
+  ccWxData: {
+    type: Array
+  },
   refreshInterval: {
     type: Number,
   },

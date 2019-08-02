@@ -304,7 +304,7 @@ module.exports = function (app) {
                   console.log(`Weather retrieval error ${error}`)
                   res.json(currentLake);
                 } else {
-                  if (lakeWeather !== 'undefined') {
+                  if (currentLake !== 'undefined') {
                     
                     // if no lakeData update needed, make the callback, otherwise it will be made in the switch callback
                     if (!update.checkForUpdate(currentLake)) {
@@ -336,7 +336,6 @@ module.exports = function (app) {
                    
                     //return currentLake data (ramps and weather)
                     res.json(currentLake);
-
 
                   } else {
                     console.log(`Data error for weather ${currentLake.bodyOfWater}`);

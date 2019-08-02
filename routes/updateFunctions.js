@@ -13,8 +13,8 @@ module.exports = {
 
   // check to see if an update is needed (true = update is needed);
   checkForUpdate: function (currentLake) {
-    let lastRefresh = currentLake.lastRefresh;
-    let refreshInterval = currentLake.refreshInterval;
+    let lastRefresh = currentLake.lastRefresh; // to prevent re-entrant code problems
+    let refreshInterval = currentLake.refreshInterval; //
     let dataLength = currentLake.data.length;
 
     // set today's date for comparison and find minute difference
@@ -59,12 +59,15 @@ module.exports = {
       // Get 
       weather.getWeatherData(currentLake, function (error, lakeWeather) {
         currentLake = lakeWeather;
+        let wxData = [];
+        let weatherData = false;
         if (error) {
           console.log(`Weather retrieval error ${error}`)
           callbackError = true;
         } else {
-          if (currentLake!== 'undefined') {
-           
+          if (currentLake !== 'undefined') {
+            weatherData = true;
+
           } else {
             console.log(`Data error for weather ${currentLake.bodyOfWater}`);
           }
@@ -76,7 +79,46 @@ module.exports = {
             lakeUpdateFlag = true;
             lastRefresh = updateData[0].time.toString();
           }
+          // Set up the Current Conditions data to be pushed as an object (Time, Baro, Temp, Humidity Wind, WDirection)
+
+          wxData.push({
+            time: updateData[0].time,
+            baro: currentLake.barometric,
+            temp: currentLake.wxTemp,
+            humidity: currentLake.humidity,
+            windspeed: currentLake.windSpeed,
+            winddirection: currentLake.windDirection
+          });
+
+          // push the current conditions into ccWxData[]
+
           // use updateData to update the lake data
+          db.model("Lake").findOneAndUpdate({
+            "bodyOfWater": bodyOfWater
+          }, {
+            $push: {
+              "ccWxData": {
+                $each: wxData,
+                $sort: {
+                  time: -1
+                },
+                position: 0
+              }
+            },
+          }, {
+            upsert: true,
+            useFindAndModify: false,
+            new: true
+          })
+          .exec(function (err, ccWxData) {
+            if (err) {
+              console.log(err);
+            } else {
+              //console.log(wxData)
+            }
+          });
+
+          // use updateData to update the lake time elev, flow, data
           db.model("Lake").findOneAndUpdate({
               "bodyOfWater": bodyOfWater
             }, {
@@ -118,17 +160,17 @@ module.exports = {
                     }
                   }
                 }
-                      // Set weather
-                      let today = new Date()
-                      let compassSector = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW", "N"];
-                      updateData.barometric = currentLake.barometric;
-                      updateData.wxTemp = currentLake.wxTemp;
-                      updateData.humidity = currentLake.humidity;
-                      updateData.windSpeed = currentLake.windSpeed;
-                      updateData.windDirection = currentLake.windDirection;
-                      updateData.conditions = currentLake.conditions;
-                      updateData.wxDate = currentLake.wxDate;
-                      updateData.wxTime = currentLake.wxTime;
+                if (weatherData) {
+                  // Set weather
+                  updateData.barometric = currentLake.barometric;
+                  updateData.wxTemp = currentLake.wxTemp;
+                  updateData.humidity = currentLake.humidity;
+                  updateData.windSpeed = currentLake.windSpeed;
+                  updateData.windDirection = currentLake.windDirection;
+                  updateData.conditions = currentLake.conditions;
+                  updateData.wxDate = currentLake.wxDate;
+                  updateData.wxTime = currentLake.wxTime;
+                }
 
                 // update the database with the 'clean' data
                 db.model("Lake").updateOne({

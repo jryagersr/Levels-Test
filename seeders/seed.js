@@ -10,7 +10,7 @@ mongoose.connect(
   "mongodb://localhost/BassSavvyTestDb"
 );
 
-db.model('Weather')
+/*db.model('Weather')
   .deleteMany({})
   .then(() => db.model('Weather').collection.insertMany(weatherSeed))
   .then(data => {
@@ -20,7 +20,7 @@ db.model('Weather')
   .catch(err => {
     console.error(err);
     process.exit(1);
-  });
+  });*/
 
 db.model('Lake')
   .deleteMany({})
