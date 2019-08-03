@@ -13,6 +13,8 @@ function hideLoader() {
 // Hide loader gif after 20 seconds if page content hasn't loaded
 setTimeout(hideLoader, 20 * 1000);
 
+
+/******************************************************************************************************************/
 // Function to build table on page
 function buildTable(data) {
     for (var i = 0; i < data.length; i++) {
@@ -49,6 +51,8 @@ function buildTable(data) {
     buildElevChart(data);
 }
 
+
+/******************************************************************************************************************/
 // Function to build chart on page
 function buildElevChart(data, lake) {
     // Our data must be parsed into separate flat arrays for the chart
@@ -99,7 +103,7 @@ function buildElevChart(data, lake) {
             }
         }
         // when a week of data has been reached stop
-        if (labelBatch.length > 6) {
+        if (labelBatch.length > 9) {
             break;
         }
     }
@@ -120,9 +124,11 @@ function buildElevChart(data, lake) {
     dataElevBatch.reverse();
 
     // Set y axis limits for Elev Chart
-    chartMinElevLimit = Math.round(chartMinElev) - 1; // set the chart lower limit
+    let minMaxDiff = chartMaxElev - chartMinElev;
+    if (minMaxDiff < 1) chartGap = minMaxDiff / 2;
+    chartMinElevLimit = Math.round(chartMinElev) - chartGap; // set the chart lower limit
     //if (chartMinElevLimit > lake.normalPool) chartMinElevLimit = lake.normalPool - .5; // make sure normal pool line shows.
-    chartMaxElevLimit = Math.round(chartMaxElev) + 1; // set the chart upper limit
+    chartMaxElevLimit = Math.round(chartMaxElev) + chartGap; // set the chart upper limit
     //if (chartMaxElevLimit < lake.normalPool) chartMaxElevLimit = lake.normalPool + .5; // make sure normal pool line shows.
 
     var ctx = document.getElementById('myElevChart').getContext('2d');
@@ -202,17 +208,19 @@ function buildElevChart(data, lake) {
         }
     });
 }
+
+/******************************************************************************************************************/
 // Function to build chart on page
 function buildRiverChart(data, lake) {
+    $("#riverChart").show();
     // Our data must be parsed into separate flat arrays for the chart
     let labelBatch = [];
-    let dataElevBatch = [];
-    let dataNPBatch = []; // Storage for Normal Pool batch data
+    let dataRiverBatch = [];
     let k = 0; // our iterator after starting elevation
-    let chartMinElev = 100000; // y-axis Max elev value
-    let chartMaxElev = 0; // y-axis Min elev value
-    let chartMinElevLimit = 0; // y-axis Min elev Limit (for chart)
-    let chartMaxElevLimit = 0; // y-axis Max elev Limit (for chart)
+    let chartMinRiver = 100000; // y-axis Max elev value
+    let chartMaxRiver = 0; // y-axis Min elev value
+    let chartMinRiverLimit = 0; // y-axis Min elev Limit (for chart)
+    let chartMaxRiverLimit = 0; // y-axis Max elev Limit (for chart)
     // find our starting elevation
     for (var i = 0; data.length; i++) {
         if (typeof data[i].elev == "number") {
@@ -224,14 +232,13 @@ function buildRiverChart(data, lake) {
     for (k; k < data.length; k++) {
         // if we're past the first entry
         if (k > 0) {
-            labelBatch.push(data[k - 1].time);
-            dataElevBatch.push((data[k - 1].elev).toFixed(2)); // push elev
-            dataNPBatch.push(lake.normalPool); // Normal Pool line batch 
+            labelBatch.push(data[k - 1].time.substr(0, data[k - 1].time.length - 9) + data[k - 1].time.substr( data[k - 1].time.length - 2, 2));
+            dataRiverBatch.push((data[k - 1].elev).toFixed(2)); // push elev
 
-            if (data[k - 1].elev > chartMaxElev) // if value is greater than max, replace max
-                chartMaxElev = data[k - 1].elev; // update Max Elev average
-            if (data[k - 1].elev < chartMinElev) // if value is less thank min, replace min
-                chartMinElev = data[k - 1].elev; // update Min Elev average
+            if (data[k - 1].elev > chartMaxRiver) // if value is greater than max, replace max
+                chartMaxRiver = data[k - 1].elev; // update Max Elev average
+            if (data[k - 1].elev < chartMinRiver) // if value is less thank min, replace min
+                chartMinRiver = data[k - 1].elev; // update Min Elev average
 
         }
         // when a week of data has been reached stop
@@ -241,13 +248,14 @@ function buildRiverChart(data, lake) {
     }
 
     labelBatch.reverse();
-    dataElevBatch.reverse();
+    dataRiverBatch.reverse();
 
-
-    // Set y axis limits for Elev Chart
-    chartMinElevLimit = Math.round(chartMinElev) - 1; // set the chart lower limit
+    // Set y axis limits for River Chart
+    let minMaxDiff = chartMaxRiver - chartMinRiver;
+    if (minMaxDiff < 1) chartGap = minMaxDiff / 2;
+    chartMinRiverLimit = Math.round(chartMinRiver - chartGap); // set the chart lower limit
     //if (chartMinElevLimit > lake.normalPool) chartMinElevLimit = lake.normalPool - .5; // make sure normal pool line shows.
-    chartMaxElevLimit = Math.round(chartMaxElev) + 1; // set the chart upper limit
+    chartMaxRiverLimit = Math.round(chartMaxRiver + chartGap); // set the chart upper limit
     //if (chartMaxElevLimit < lake.normalPool) chartMaxElevLimit = lake.normalPool + .5; // make sure normal pool line shows.
 
     var ctx = document.getElementById('myRiverChart').getContext('2d');
@@ -267,15 +275,7 @@ function buildRiverChart(data, lake) {
                     label: "Level",
                     // backgroundColor: 'rgb(179,221,255)',
                     borderColor: 'rgb(0, 140, 255)',
-                    data: dataElevBatch
-                },
-                {
-                    type: 'line',
-                    label: "Normal",
-                    // backgroundColor: 'rgb(179,221,255)',
-                    borderColor: 'rgb(100, 140, 100)',
-                    data: dataNPBatch,
-                    tension: 0 // disables bezier curves
+                    data: dataRiverBatch
                 }
             ]
         },
@@ -300,8 +300,8 @@ function buildRiverChart(data, lake) {
                         fontSize: 20,
                     },
                     ticks: {
-                        min: chartMinElevLimit, // Set chart bottom at 1ft less than min elev value
-                        max: chartMaxElevLimit, // Set chart top at 1ft more than min elev value
+                        min: chartMinRiverLimit, // Set chart bottom at 1ft less than min elev value
+                        max: chartMaxRiverLimit, // Set chart top at 1ft more than min elev value
                         //stepSize: Math.round((chartMaxElev - chartMinElev) / 2), // Set the y-axis step value to  ft.
                         //autoSkip: true,
                         //maxTicksLimit: 8,
@@ -313,6 +313,8 @@ function buildRiverChart(data, lake) {
     });
 }
 
+
+/******************************************************************************************************************/
 // Function to build flow chart on page
 function buildFlowChart(data) {
     $("#flowChart").show();
@@ -438,97 +440,178 @@ function buildFlowChart(data) {
         }
     });
 }
-// Function to build flow chart on page
-function buildBaroChart(data) {
-    $("#baroChart").show();
+
+/******************************************************************************************************************/
+// Function to build tempc hart on page
+function buildTempChart(tempData) {
+    $("#tempChart").show();
     // Our data must be parsed into separate flat arrays for the chart
     let labelBatch = [];
-    let dataFlowBatch = [];
-    let sumOfFlows = 0;
-    let divisor = 1;
-    let k = 0; // our iterator after starting flow
-    let chartMinFlow = 1000000; // y-axis Max elev value
-    let chartMaxFlow = 0; // y-axis Min elev value
-    let chartMinFlowLimit = 0; // y-axis Min elev value
-    let chartMaxFlowLimit = 0; // y-axis Max elev value
-    // find our starting flow
-    for (var i = 0; data.length; i++) {
-        if (typeof data[i].flow == "number") {
-            sumOfFlows = data[i].flow
+    let dataTempBatch = [];
+    let k = 0; // our iterator after starting elevation
+    let chartMinTemp = 100000; // y-axis Max elev value
+    let chartMaxTemp = 0; // y-axis Min elev value
+    let chartMinTempLimit = 0; // y-axis Min elev Limit (for chart)
+    let chartMaxTempLimit = 0; // y-axis Max elev Limit (for chart)
+    // find our starting elevation
+    for (var i = 0; tempData.data.length; i++) {
+        if (typeof tempData.ccWxData[i].baro == "number") {
             k = i;
             break;
         }
     }
     // Loop through our data for 24 data points if we have it
-    for (k; k < data.length; k++) {
+    for (k; k < tempData.data.length; k++) {
         // if we're past the first entry
         if (k > 0) {
-            // if the data is available and not "Missing" or "N/A"
-            if (data[k].flow !== "Missing" && data[k].flow !== "N/A") {
-                // if we're still on the same day and not on the last entry
-                if (data[k].date === data[k - 1].date) {
-                    // add to our average variables
-                    sumOfFlows += data[k].flow;
-                    divisor++
-                }
-                // else we're on a new day. so push data and reset averages
-                else {
-                    let avgFlow = sumOfFlows / divisor;
-                    if (avgFlow >= chartMaxFlow) // if value is greater than max, replace max
-                        chartMaxFlow = avgFlow; // set the max flow for calculating Chart y-axis Max later
-                    //if (avgFlow <= chartMinFlow) // if value is less thank min, replace min
-                    //chartMinFlow = avgFlow; // set the max flow for calculating Chart y-axis Min later
-                    labelBatch.push(data[k - 1].date);
-                    dataFlowBatch.push((sumOfFlows / divisor).toFixed(2)); // calculate average
-                    sumOfFlows = data[k].flow;
-                    divisor = 1;
-                }
-            }
+            labelBatch.push(tempData.data[k - 1].time.substr(0, tempData.data[k - 1].time.length - 9) + tempData.data[k - 1].time.substr( tempData.data[k - 1].time.length - 2, 2));
+            dataTempBatch.push(tempData.ccWxData[k - 1].temp); // push elev
+
+            if (tempData.ccWxData[k - 1].temp > chartMaxTemp) // if value is greater than max, replace max
+                chartMaxTemp = tempData.ccWxData[k - 1].temp; // update Max Elev average
+            if (tempData.ccWxData[k - 1].temp < chartMinTemp) // if value is less thank min, replace min
+                chartMinTemp = tempData.ccWxData[k - 1].temp; // update Min Elev average
+
         }
         // when a week of data has been reached stop
-        if (labelBatch.length > 10) {
+        if (labelBatch.length > 23) {
             break;
         }
     }
-    // push the final day's values after looping
-    labelBatch.push(data[k - 1].date); // Push final day data Date
-    dataFlowBatch.push((sumOfFlows / divisor).toFixed(2)); // calculate average for final day and push
-
-    //check the final day's values for Min and MaxLimit
-    //if ((sumOfFlows / divisor) <= chartMinFlow)
-    //chartMinFlow = (sumOfFlows / divisor);
-    if ((sumOfFlows / divisor) >= chartMaxFlow)
-        chartMaxFlow = (sumOfFlows / divisor);
 
     labelBatch.reverse();
-    dataFlowBatch.reverse();
+    dataTempBatch.reverse();
 
-    // Set y axis limits for Flow Chart
-    chartMinFlowLimit = chartMinFlow - 1000; // set lower chart limit
-    chartMaxFlowLimit = ((((chartMaxFlow - (chartMaxFlow % 1000)) / 1000) * 1.2) * 1000); // set the chart upper limit
+    // Set y axis limits for Temp Chart
+    let minMaxDiff = chartMaxTemp - chartMinTemp;
+    if (minMaxDiff < 1) chartGap = minMaxDiff / 2;
+    chartMinTempLimit = Math.round(chartMinTemp) - 5; // set the chart lower limit
+    //if (chartMinElevLimit > lake.normalPool) chartMinElevLimit = lake.normalPool - .5; // make sure normal pool line shows.
+    chartMaxTempLimit = Math.round(chartMaxTemp) + 5; // set the chart upper limit
+    //if (chartMaxElevLimit < lake.normalPool) chartMaxElevLimit = lake.normalPool + .5; // make sure normal pool line shows.
 
-    //if (chartMinFlowLimit < 1000) chartMinFlowLimit = 0;
-    chartMinFlowLimit = 0; // Flow Min limit should just be set to 0
-    if (chartMaxFlowLimit < 4000)
-        chartMaxFlowLimit = 4000;
-
-
-    var ctx = document.getElementById('myFlowChart').getContext('2d');
+    var ctx = document.getElementById('myTempChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
     grd.addColorStop(0, 'rgb(0,140,255)');
     grd.addColorStop(1, 'rgb(0,55,255)');
     var chart = new Chart(ctx, {
         // The type of chart we want to create
+
         type: 'line',
 
         // The data for our dataset
         data: {
             labels: labelBatch,
             datasets: [{
-                label: "Flow",
+                type: 'line',
+                label: "Temp (F)",
                 // backgroundColor: 'rgb(179,221,255)',
                 borderColor: 'rgb(0, 140, 255)',
-                data: dataFlowBatch
+                data: dataTempBatch
+            }, ]
+        },
+
+        // Configuration options go here
+        options: {
+            responsive: true,
+            scales: {
+                xAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: false,
+                        labelString: 'Date',
+                        fontSize: 20
+                    }
+                }],
+                yAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: false,
+                        labelString: 'Level (feet)',
+                        fontSize: 20,
+                    },
+                    ticks: {
+                        min: chartMinTempLimit, // Set chart bottom at 1ft less than min elev value
+                        max: chartMaxTempLimit, // Set chart top at 1ft more than min elev value
+                        //stepSize: Math.round((chartMaxElev - chartMinElev) / 2), // Set the y-axis step value to  ft.
+                        //autoSkip: true,
+                        //maxTicksLimit: 8,
+                    },
+                    stacked: false
+                }]
+            }
+        }
+    });
+}
+
+/******************************************************************************************************************/
+// Function to build baro chart on page
+function buildBaroChart(baroData) {
+    $("#baroChart").show();
+    // Our data must be parsed into separate flat arrays for the chart
+    let labelBatch = [];
+    let dataBaroBatch = [];
+    let k = 0; // our iterator after starting elevation
+    let chartMinBaro = 100000; // y-axis Max elev value
+    let chartMaxBaro = 0; // y-axis Min elev value
+    let chartMinBaroLimit = 0; // y-axis Min elev Limit (for chart)
+    let chartMaxBaroLimit = 0; // y-axis Max elev Limit (for chart)
+    // find our starting elevation
+    for (var i = 0; baroData.data.length; i++) {
+        if (typeof baroData.ccWxData[i].baro == "number") {
+            k = i;
+            break;
+        }
+    }
+    // Loop through our data for 24 data points if we have it
+    for (k; k < baroData.data.length; k++) {
+        // if we're past the first entry
+        if (k > 0) {
+            labelBatch.push(baroData.data[k - 1].time.substr(0, baroData.data[k - 1].time.length - 9) + baroData.data[k - 1].time.substr( baroData.data[k - 1].time.length - 2, 2));
+            dataBaroBatch.push(baroData.ccWxData[k - 1].baro); // push elev
+
+            if (baroData.ccWxData[k - 1].baro > chartMaxBaro) // if value is greater than max, replace max
+                chartMaxBaro = baroData.ccWxData[k - 1].baro; // update Max Elev average
+            if (baroData.ccWxData[k - 1].baro < chartMinBaro) // if value is less thank min, replace min
+                chartMinBaro = baroData.ccWxData[k - 1].baro; // update Min Elev average
+
+        }
+        // when a week of data has been reached stop
+        if (labelBatch.length > 23) {
+            break;
+        }
+    }
+
+    labelBatch.reverse();
+    dataBaroBatch.reverse();
+
+
+    // Set y axis limits for Baro Chart
+    let minMaxDiff = chartMaxBaro - chartMinBaro;
+    if (minMaxDiff < 1) chartGap = minMaxDiff / 2;
+    chartMinBaroLimit = Math.round(chartMinBaro) - 1; // set the chart lower limit
+    //if (chartMinElevLimit > lake.normalPool) chartMinElevLimit = lake.normalPool - .5; // make sure normal pool line shows.
+    chartMaxBaroLimit = Math.round(chartMaxBaro) + 1; // set the chart upper limit
+    //if (chartMaxElevLimit < lake.normalPool) chartMaxElevLimit = lake.normalPool + .5; // make sure normal pool line shows.
+
+    var ctx = document.getElementById('myBaroChart').getContext('2d');
+    var grd = ctx.createLinearGradient(0, 0, 170, 0);
+    grd.addColorStop(0, 'rgb(0,140,255)');
+    grd.addColorStop(1, 'rgb(0,55,255)');
+    var chart = new Chart(ctx, {
+        // The type of chart we want to create
+
+        type: 'line',
+
+        // The data for our dataset
+        data: {
+            labels: labelBatch,
+            datasets: [{
+                type: 'line',
+                label: "Pressure (mb)",
+                // backgroundColor: 'rgb(179,221,255)',
+                borderColor: 'rgb(0, 140, 255)',
+                data: dataBaroBatch
             }]
         },
 
@@ -548,22 +631,128 @@ function buildBaroChart(data) {
                     display: true,
                     scaleLabel: {
                         display: false,
-                        labelString: 'Flow (feet)',
-                        fontSize: 20
+                        labelString: 'Level (feet)',
+                        fontSize: 20,
                     },
                     ticks: {
-                        min: chartMinFlowLimit, // Set chart bottom at calculated value
-                        max: chartMaxFlowLimit, // Set chart top at calculated value
-                        //stepSize: 6, // Set the y-axis step value 
+                        min: chartMinBaroLimit, // Set chart bottom at 1ft less than min elev value
+                        max: chartMaxBaroLimit, // Set chart top at 1ft more than min elev value
+                        //stepSize: Math.round((chartMaxElev - chartMinElev) / 2), // Set the y-axis step value to  ft.
                         //autoSkip: true,
                         //maxTicksLimit: 8,
-                    }
+                    },
+                    stacked: false
                 }]
             }
         }
     });
 }
 
+/******************************************************************************************************************/
+// Function to build baro chart on page
+function buildWindChart(windData) {
+    $("#windChart").show();
+    // Our data must be parsed into separate flat arrays for the chart
+    let labelBatch = [];
+    let dataWindBatch = [];
+    let k = 0; // our iterator after starting elevation
+    let chartMinWind = 100000; // y-axis Max elev value
+    let chartMaxWind = 0; // y-axis Min elev value
+    let chartMinWindLimit = 0; // y-axis Min elev Limit (for chart)
+    let chartMaxWindLimit = 0; // y-axis Max elev Limit (for chart)
+    // find our starting elevation
+    for (var i = 0; windData.data.length; i++) {
+        if (typeof windData.ccWxData[i].windspeed == "number") {
+            k = i;
+            break;
+        }
+    }
+    // Loop through our data for 24 data points if we have it
+    for (k; k < windData.data.length; k++) {
+        // if we're past the first entry
+        if (k > 0) {
+            labelBatch.push(windData.data[k - 1].time.substr(0, windData.data[k - 1].time.length - 9) + windData.data[k - 1].time.substr( windData.data[k - 1].time.length - 2, 2));
+            dataWindBatch.push(windData.ccWxData[k - 1].windspeed); // push elev
+
+            if (windData.ccWxData[k - 1].windspeed > chartMaxWind) // if value is greater than max, replace max
+                chartMaxWind = windData.ccWxData[k - 1].windspeed; // update Max Elev average
+            if (windData.ccWxData[k - 1].windspeed < chartMinWind) // if value is less thank min, replace min
+                chartMinWind = windData.ccWxData[k - 1].windspeed; // update Min Elev average
+
+        }
+        // when a week of data has been reached stop
+        if (labelBatch.length > 23) {
+            break;
+        }
+    }
+
+    labelBatch.reverse();
+    dataWindBatch.reverse();
+
+
+    // Set y axis limits for Baro Chart
+    let minMaxDiff = chartMaxWind - chartMinWind;
+    if (minMaxDiff < 1) chartGap = minMaxDiff / 2;
+    chartMinWindLimit = Math.round(chartMinWind - chartGap - 1); // set the chart lower limit
+    //if (chartMinElevLimit > lake.normalPool) chartMinElevLimit = lake.normalPool - .5; // make sure normal pool line shows.
+    chartMaxWindLimit = Math.round(chartMaxWind + chartGap + 1); // set the chart upper limit
+    //if (chartMaxElevLimit < lake.normalPool) chartMaxElevLimit = lake.normalPool + .5; // make sure normal pool line shows.
+
+    var ctx = document.getElementById('myWindChart').getContext('2d');
+    var grd = ctx.createLinearGradient(0, 0, 170, 0);
+    grd.addColorStop(0, 'rgb(0,140,255)');
+    grd.addColorStop(1, 'rgb(0,55,255)');
+    var chart = new Chart(ctx, {
+        // The type of chart we want to create
+
+        type: 'line',
+
+        // The data for our dataset
+        data: {
+            labels: labelBatch,
+            datasets: [{
+                type: 'line',
+                label: "Pressure (mb)",
+                // backgroundColor: 'rgb(179,221,255)',
+                borderColor: 'rgb(0, 140, 255)',
+                data: dataWindBatch
+            }]
+        },
+
+        // Configuration options go here
+        options: {
+            responsive: true,
+            scales: {
+                xAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: false,
+                        labelString: 'Date',
+                        fontSize: 20
+                    }
+                }],
+                yAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: false,
+                        labelString: 'Level (feet)',
+                        fontSize: 20,
+                    },
+                    ticks: {
+                        min: chartMinWindLimit, // Set chart bottom at 1ft less than min elev value
+                        max: chartMaxWindLimit, // Set chart top at 1ft more than min elev value
+                        //stepSize: Math.round((chartMaxElev - chartMinElev) / 2), // Set the y-axis step value to  ft.
+                        //autoSkip: true,
+                        //maxTicksLimit: 8,
+                    },
+                    stacked: false
+                }]
+            }
+        }
+    });
+}
+
+/******************************************************************************************************************/
 // Get current lake from database
 // Declare variable to hold currentLake object
 var currentLake = {};
@@ -579,6 +768,14 @@ $.ajax({
         currentLake = data;
         // Set lake title on page
         $("#lakeTitle").append(currentLake.bodyOfWater);
+
+        // Set current date, time elev, and pool on page
+        $("#currentTime").append(currentLake.data[0].time);
+        $("#currentDate").append(currentLake.data[0].date);
+        $("#currentLevel").append(currentLake.data[0].elev);
+        $("#currentDelta").append((currentLake.data[0].elev - currentLake.normalPool).toFixed(2));
+        $("#currentNormal").append("normal pool " + currentLake.normalPool);
+
         $("#lakeSponsor").append(currentLake.bodyOfWater);
         $("#lakeFeaturedTournament").append(currentLake.bodyOfWater);
 
@@ -587,7 +784,7 @@ $.ajax({
         $("#currentWeatherTemp").append(currentLake.wxTemp);
         $("#currentWeatherHumidity").append(currentLake.humidity);
         $("#currentWeatherBarometric").append(currentLake.barometric);
-        $("#currentWeatherWindSpeed").append(currentLake.windSpeed);
+        $("#currentWeatherWindSpeed").append(currentLake.windspeed);
         $("#currentWeatherWindDirection").append(currentLake.windDirection);
         $("#currentWeatherDate").append(currentLake.wxDate);
         $("#currentWeatherTime").append(currentLake.wxTime);
@@ -661,38 +858,43 @@ $.ajax({
                     buildFlowChart(currentLake.data);
                 }
             }
+            // Add Weather charts
+            // Add AirTemp
+            buildTempChart(currentLake);
+
+            // Add AirTemp
+            buildWindChart(currentLake);
+
+            // Add Barometric pressure
+            buildBaroChart(currentLake);
 
             // Hide loading gif
             hideLoader();
 
-            // Set current date, time elev, and pool on page
-            $("#currentTime").append(currentLake.data[0].time);
-            $("#currentDate").append(currentLake.data[0].date);
-            $("#currentLevel").append(currentLake.data[0].elev);
-            $("#currentDelta").append((currentLake.data[0].elev - currentLake.normalPool).toFixed(2));
-            $("#currentNormal").append("normal pool " + currentLake.normalPool);
         }
     })
 
 
 
+
+/******************************************************************************************************************/
 // jQuery tab click javascript code
 // ===========================================
 
-    // hide all tabs
-    $(".tab-wrapper").hide();
-    // show only overview
-    $('#overviewTab').show();
+// hide all tabs
+$(".tab-wrapper").hide();
+// show only overview
+$('#currentTab').show();
 
-    // listen for click on '.tab-btn' class
-    $( ".tab-btn" ).click(function(event) {        // remove active from any .tab-wrapper
-        $(".tab-btn").removeClass("active");
-        // hide all .tab-wrapper
-        $(".tab-wrapper").hide();
-        // add active to button that was clicked
-        let clickedTab = event.target.id
-        $(clickedTab).addClass("active");
-        // show associated .tab-wrapper 
-        let clickedWrapper = event.target.name;
-        $("#" + clickedWrapper).show();
-      });
+// listen for click on '.tab-btn' class
+$(".tab-btn").click(function (event) { // remove active from any .tab-wrapper
+    $(".tab-btn").removeClass("active");
+    // hide all .tab-wrapper
+    $(".tab-wrapper").hide();
+    // add active to button that was clicked
+    let clickedTab = event.target.id
+    $(clickedTab).addClass("active");
+    // show associated .tab-wrapper 
+    let clickedWrapper = event.target.name;
+    $("#" + clickedWrapper).show();
+});

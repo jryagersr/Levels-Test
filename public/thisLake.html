@@ -86,28 +86,36 @@
 
   <div class="container-fluid text-center">
 
+
     <ul class="nav nav-tabs">
       <li class="nav-item">
-        <button class="tab-btn nav-link active" id='overviewTabBtn' name="overviewTab">Overview</button>
+        <button class="tab-btn nav-link active" id='currentTabBtn' name="currentTab">Current</button>
       </li>
       <li class="nav-item">
         <button class="tab-btn nav-link" id='chartTabBtn' name="chartTab">Charts</button>
       </li>
-      <li class="nav-item">
-        <button class="tab-btn nav-link" id='weatherTabBtn' name="weatherTab">Weather</button>
+      <!-- <li class="nav-item">
+        <button class="tab-btn nav-link" id='weatherTabBtn' name="weatherTab">Wx</button>
       </li>
       <li class="nav-item">
-          <button class="tab-btn nav-link" id='rampsTabBtn' name="rampsTab">Ramps</button>
-        </li>
+        <button class="tab-btn nav-link" id='txTabBtn' name="txTab">Tx</button>
+      </li>-->
       <li class="nav-item">
-        <button class="tab-btn nav-link" id='historicalTabBtn' name="historicalTab">Historical</button>
+        <button class="tab-btn nav-link" id='rampsTabBtn' name="rampsTab">Ramps</button>
+      </li>
+      <li class="nav-item">
+        <button class="tab-btn nav-link" id='dataTabBtn' name="dataTab">Data</button>
       </li>
     </ul>
 
     <div id="adLogoWell">
     </div>
 
-    <div class="tab-wrapper" id='overviewTab'>
+    <div class="current-wrapper">
+      <h1 class="current-header-title"><span id="lakeTitle"></span></h1>
+    </div>
+
+    <div class="tab-wrapper" id='currentTab'>
       <div class="current-wrapper">
         <h1 class="current-header-title"><span id="lakeTitle"></span></h1>
         <p class="current-subtext current-subtext" id="currentNormal"></p>
@@ -123,6 +131,7 @@
         <p class="current-subtext">as of <span id="currentDate"></span> at <span id="currentTime"></span></p>
         <p class="current-subtext">All lake levels are provisional, do not use for navigational purposes.</p>
       </div>
+
 
       <div id="adTxWell"></div>
       <div id="featuredTxWell"></div>
@@ -145,21 +154,34 @@
     <br>
     <div class="tab-wrapper" id='chartTab'>
 
-    <div class="chart-container">
-      <h3><b>Average Daily Level (ft)</b></h3>
-      <canvas id="myElevChart"></canvas>
+      <div class="chart-container">
+        <h3><b>Average Daily Level (ft)</b></h3>
+        <canvas id="myElevChart"></canvas>
+      </div>
+      <div class="chart-container" id="flowChart" style="display:none">
+        <h3><b>Avg Daily Flow (cfs)</b></h3>
+        <canvas id="myFlowChart"></canvas>
+      </div>
+      <div class="chart-container" id="riverChart" style="display:none">
+        <h3><b>Hourly Level (ft)</b></h3>
+        <canvas id="myRiverChart"></canvas>
+      </div>
+      <div class="chart-container" id="baroChart" style="display:none">
+        <h3><b>Barometric Pressure</b></h3>
+        <canvas id="myBaroChart"></canvas>
+      </div>
+      <div class="chart-container" id="tempChart" style="display:none">
+        <h3><b>Air Temperature</b></h3>
+        <canvas id="myTempChart"></canvas>
+      </div>
+      <div class="chart-container" id="windChart" style="display:none">
+        <h3><b>Wind Speed</b></h3>
+        <canvas id="myWindChart"></canvas>
+      </div>
     </div>
-    <div class="chart-container" id="flowChart" style="display:none">
-      <h3><b>Average Daily Flow (cfs)</b></h3>
-      <canvas id="myFlowChart"></canvas>
-    </div>
-    <div class="chart-container" id="riverChart" style="display:none">
-      <h3><b>Hourly Elev (ft)</b></h3>
-      <canvas id="myRiverChart"></canvas>
-    </div>  
-    </div>
-    
-    <div class="tab-wrapper" id='weatherTab'>
+  </div>
+
+  <div class="tab-wrapper" id='weatherTab'>
 
     <div class="chart-container" id="baroChart" style="display:none">
       <h3><b>Barometric Pressure</b></h3>
@@ -183,11 +205,11 @@
     </table>
   </div>
 
-    <br>
+  <br>
 
-    <div class="tab-wrapper" id='historicalTab'>
+  <div class="tab-wrapper" id='dataTab'>
 
-    <h3><b>Historical Data</b></h3>
+    <h3><b>Data</b></h3>
     <table class="table thead-dark table-striped mx-auto">
       <thead>
         <tr>
