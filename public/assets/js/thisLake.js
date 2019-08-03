@@ -124,6 +124,7 @@ function buildElevChart(data, lake) {
     dataElevBatch.reverse();
 
     // Set y axis limits for Elev Chart
+    let chartGap = 2;
     let minMaxDiff = chartMaxElev - chartMinElev;
     if (minMaxDiff < 1) chartGap = minMaxDiff / 2;
     chartMinElevLimit = Math.round(chartMinElev) - chartGap; // set the chart lower limit
@@ -232,7 +233,7 @@ function buildRiverChart(data, lake) {
     for (k; k < data.length; k++) {
         // if we're past the first entry
         if (k > 0) {
-            labelBatch.push(data[k - 1].time.substr(0, data[k - 1].time.length - 9) + data[k - 1].time.substr( data[k - 1].time.length - 2, 2));
+            labelBatch.push(data[k - 1].time.substr(0, data[k - 1].time.length - 9) + data[k - 1].time.substr(data[k - 1].time.length - 2, 2));
             dataRiverBatch.push((data[k - 1].elev).toFixed(2)); // push elev
 
             if (data[k - 1].elev > chartMaxRiver) // if value is greater than max, replace max
@@ -251,8 +252,9 @@ function buildRiverChart(data, lake) {
     dataRiverBatch.reverse();
 
     // Set y axis limits for River Chart
+    let chartGap = 2;
     let minMaxDiff = chartMaxRiver - chartMinRiver;
-    if (minMaxDiff < 1) chartGap = minMaxDiff / 2;
+    if (minMaxDiff < 1) chartGap = minMaxDiff * 2;
     chartMinRiverLimit = Math.round(chartMinRiver - chartGap); // set the chart lower limit
     //if (chartMinElevLimit > lake.normalPool) chartMinElevLimit = lake.normalPool - .5; // make sure normal pool line shows.
     chartMaxRiverLimit = Math.round(chartMaxRiver + chartGap); // set the chart upper limit
@@ -271,13 +273,12 @@ function buildRiverChart(data, lake) {
         data: {
             labels: labelBatch,
             datasets: [{
-                    type: 'line',
-                    label: "Level",
-                    // backgroundColor: 'rgb(179,221,255)',
-                    borderColor: 'rgb(0, 140, 255)',
-                    data: dataRiverBatch
-                }
-            ]
+                type: 'line',
+                label: "Level",
+                // backgroundColor: 'rgb(179,221,255)',
+                borderColor: 'rgb(0, 140, 255)',
+                data: dataRiverBatch
+            }]
         },
 
         // Configuration options go here
@@ -464,7 +465,7 @@ function buildTempChart(tempData) {
     for (k; k < tempData.data.length; k++) {
         // if we're past the first entry
         if (k > 0) {
-            labelBatch.push(tempData.data[k - 1].time.substr(0, tempData.data[k - 1].time.length - 9) + tempData.data[k - 1].time.substr( tempData.data[k - 1].time.length - 2, 2));
+            labelBatch.push(tempData.data[k - 1].time.substr(0, tempData.data[k - 1].time.length - 9) + tempData.data[k - 1].time.substr(tempData.data[k - 1].time.length - 2, 2));
             dataTempBatch.push(tempData.ccWxData[k - 1].temp); // push elev
 
             if (tempData.ccWxData[k - 1].temp > chartMaxTemp) // if value is greater than max, replace max
@@ -483,6 +484,7 @@ function buildTempChart(tempData) {
     dataTempBatch.reverse();
 
     // Set y axis limits for Temp Chart
+    let chartGap = 2;
     let minMaxDiff = chartMaxTemp - chartMinTemp;
     if (minMaxDiff < 1) chartGap = minMaxDiff / 2;
     chartMinTempLimit = Math.round(chartMinTemp) - 5; // set the chart lower limit
@@ -567,7 +569,7 @@ function buildBaroChart(baroData) {
     for (k; k < baroData.data.length; k++) {
         // if we're past the first entry
         if (k > 0) {
-            labelBatch.push(baroData.data[k - 1].time.substr(0, baroData.data[k - 1].time.length - 9) + baroData.data[k - 1].time.substr( baroData.data[k - 1].time.length - 2, 2));
+            labelBatch.push(baroData.data[k - 1].time.substr(0, baroData.data[k - 1].time.length - 9) + baroData.data[k - 1].time.substr(baroData.data[k - 1].time.length - 2, 2));
             dataBaroBatch.push(baroData.ccWxData[k - 1].baro); // push elev
 
             if (baroData.ccWxData[k - 1].baro > chartMaxBaro) // if value is greater than max, replace max
@@ -587,6 +589,7 @@ function buildBaroChart(baroData) {
 
 
     // Set y axis limits for Baro Chart
+    let chartGap = 2;
     let minMaxDiff = chartMaxBaro - chartMinBaro;
     if (minMaxDiff < 1) chartGap = minMaxDiff / 2;
     chartMinBaroLimit = Math.round(chartMinBaro) - 1; // set the chart lower limit
@@ -671,7 +674,7 @@ function buildWindChart(windData) {
     for (k; k < windData.data.length; k++) {
         // if we're past the first entry
         if (k > 0) {
-            labelBatch.push(windData.data[k - 1].time.substr(0, windData.data[k - 1].time.length - 9) + windData.data[k - 1].time.substr( windData.data[k - 1].time.length - 2, 2));
+            labelBatch.push(windData.data[k - 1].time.substr(0, windData.data[k - 1].time.length - 9) + windData.data[k - 1].time.substr(windData.data[k - 1].time.length - 2, 2));
             dataWindBatch.push(windData.ccWxData[k - 1].windspeed); // push elev
 
             if (windData.ccWxData[k - 1].windspeed > chartMaxWind) // if value is greater than max, replace max
@@ -691,6 +694,7 @@ function buildWindChart(windData) {
 
 
     // Set y axis limits for Baro Chart
+    let chartGap = 2;
     let minMaxDiff = chartMaxWind - chartMinWind;
     if (minMaxDiff < 1) chartGap = minMaxDiff / 2;
     chartMinWindLimit = Math.round(chartMinWind - chartGap - 1); // set the chart lower limit
@@ -851,13 +855,13 @@ $.ajax({
             buildElevChart(currentLake.data, currentLake);
 
             // build flow chart if flows are available
-            if (currentLake.bodyOfWater.includes("River")) {
-                buildRiverChart(currentLake.data, currentLake)
-            } else {
-                if (currentLake.data[0].flow !== "N/A") {
-                    buildFlowChart(currentLake.data);
-                }
+
+            buildRiverChart(currentLake.data, currentLake)
+
+            if (currentLake.data[0].flow !== "N/A") {
+                buildFlowChart(currentLake.data);
             }
+
             // Add Weather charts
             // Add AirTemp
             buildTempChart(currentLake);
