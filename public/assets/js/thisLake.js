@@ -50,6 +50,109 @@ function buildTable(data) {
     }
     buildElevChart(data);
 }
+/******************************************************************************************************************/
+// Function to build chart on page
+function buildRiverChart(data, lake) {
+    $("#riverChart").show();
+    // Our data must be parsed into separate flat arrays for the chart
+    let labelBatch = [];
+    let dataRiverBatch = [];
+    let k = 0; // our iterator after starting elevation
+    let chartMinRiver = 100000; // y-axis Max elev value
+    let chartMaxRiver = 0; // y-axis Min elev value
+    let chartMinRiverLimit = 0; // y-axis Min elev Limit (for chart)
+    let chartMaxRiverLimit = 0; // y-axis Max elev Limit (for chart)
+    // find our starting elevation
+    for (var i = 0; data.length; i++) {
+        if (typeof data[i].elev == "number") {
+            k = i;
+            break;
+        }
+    }
+    // Loop through our data for 24 data points if we have it
+    for (k; k < data.length; k++) {
+        // if we're past the first entry
+        if (k > 0) {
+            labelBatch.push(data[k - 1].time.substr(0, data[k - 1].time.length - 9) + data[k - 1].time.substr(data[k - 1].time.length - 2, 2));
+            dataRiverBatch.push((data[k - 1].elev).toFixed(2)); // push elev
+
+            if (data[k - 1].elev > chartMaxRiver) // if value is greater than max, replace max
+                chartMaxRiver = data[k - 1].elev; // update Max Elev average
+            if (data[k - 1].elev < chartMinRiver) // if value is less thank min, replace min
+                chartMinRiver = data[k - 1].elev; // update Min Elev average
+
+        }
+        // when a week of data has been reached stop
+        if (labelBatch.length > 23) {
+            break;
+        }
+    }
+
+    labelBatch.reverse();
+    dataRiverBatch.reverse();
+
+    // Set y axis limits for River Chart
+    let chartGap = 2;
+    let minMaxDiff = chartMaxRiver - chartMinRiver;
+    if (minMaxDiff < 1) chartGap = minMaxDiff * 2;
+    chartMinRiverLimit = Math.round(chartMinRiver - chartGap); // set the chart lower limit
+    //if (chartMinElevLimit > lake.normalPool) chartMinElevLimit = lake.normalPool - .5; // make sure normal pool line shows.
+    chartMaxRiverLimit = Math.round(chartMaxRiver + chartGap); // set the chart upper limit
+    //if (chartMaxElevLimit < lake.normalPool) chartMaxElevLimit = lake.normalPool + .5; // make sure normal pool line shows.
+
+    var ctx = document.getElementById('myRiverChart').getContext('2d');
+    var grd = ctx.createLinearGradient(0, 0, 170, 0);
+    grd.addColorStop(0, 'rgb(0,140,255)');
+    grd.addColorStop(1, 'rgb(0,55,255)');
+    var chart = new Chart(ctx, {
+        // The type of chart we want to create
+
+        type: 'line',
+
+        // The data for our dataset
+        data: {
+            labels: labelBatch,
+            datasets: [{
+                type: 'line',
+                label: "Level",
+                // backgroundColor: 'rgb(179,221,255)',
+                borderColor: 'rgb(0, 140, 255)',
+                data: dataRiverBatch
+            }]
+        },
+
+        // Configuration options go here
+        options: {
+            responsive: true,
+            scales: {
+                xAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: false,
+                        labelString: 'Date',
+                        fontSize: 20
+                    }
+                }],
+                yAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: false,
+                        labelString: 'Level (feet)',
+                        fontSize: 20,
+                    },
+                    ticks: {
+                        min: chartMinRiverLimit, // Set chart bottom at 1ft less than min elev value
+                        max: chartMaxRiverLimit, // Set chart top at 1ft more than min elev value
+                        //stepSize: Math.round((chartMaxElev - chartMinElev) / 2), // Set the y-axis step value to  ft.
+                        //autoSkip: true,
+                        //maxTicksLimit: 8,
+                    },
+                    stacked: false
+                }]
+            }
+        }
+    });
+}
 
 
 /******************************************************************************************************************/
@@ -211,19 +314,19 @@ function buildElevChart(data, lake) {
 
 /******************************************************************************************************************/
 // Function to build chart on page
-function buildRiverChart(data, lake) {
-    $("#riverChart").show();
+function buildHourlyFlowChart(data, lake) {
+    $("#hourlyFlowChart").show();
     // Our data must be parsed into separate flat arrays for the chart
     let labelBatch = [];
-    let dataRiverBatch = [];
+    let dataFlowBatch = [];
     let k = 0; // our iterator after starting elevation
-    let chartMinRiver = 100000; // y-axis Max elev value
-    let chartMaxRiver = 0; // y-axis Min elev value
-    let chartMinRiverLimit = 0; // y-axis Min elev Limit (for chart)
-    let chartMaxRiverLimit = 0; // y-axis Max elev Limit (for chart)
+    let chartMinFlow = 100000; // y-axis Max elev value
+    let chartMaxFlow = 0; // y-axis Min elev value
+    let chartMinFlowLimit = 0; // y-axis Min elev Limit (for chart)
+    let chartMaxFlowLimit = 0; // y-axis Max elev Limit (for chart)
     // find our starting elevation
     for (var i = 0; data.length; i++) {
-        if (typeof data[i].elev == "number") {
+        if (typeof data[i].flow == "number") {
             k = i;
             break;
         }
@@ -233,12 +336,12 @@ function buildRiverChart(data, lake) {
         // if we're past the first entry
         if (k > 0) {
             labelBatch.push(data[k - 1].time.substr(0, data[k - 1].time.length - 9) + data[k - 1].time.substr(data[k - 1].time.length - 2, 2));
-            dataRiverBatch.push((data[k - 1].elev).toFixed(2)); // push elev
+            dataFlowBatch.push((data[k - 1].flow).toFixed(2)); // push elev
 
-            if (data[k - 1].elev > chartMaxRiver) // if value is greater than max, replace max
-                chartMaxRiver = data[k - 1].elev; // update Max Elev average
-            if (data[k - 1].elev < chartMinRiver) // if value is less thank min, replace min
-                chartMinRiver = data[k - 1].elev; // update Min Elev average
+            if (data[k - 1].flow > chartMaxFlow) // if value is greater than max, replace max
+                chartMaxFlow = data[k - 1].flow; // update Max Elev average
+            if (data[k - 1].flow < chartMinFlow) // if value is less thank min, replace min
+                chartMinFlow = data[k - 1].flow; // update Min Elev average
 
         }
         // when a week of data has been reached stop
@@ -248,18 +351,18 @@ function buildRiverChart(data, lake) {
     }
 
     labelBatch.reverse();
-    dataRiverBatch.reverse();
+    dataFlowBatch.reverse();
 
     // Set y axis limits for River Chart
     let chartGap = 2;
-    let minMaxDiff = chartMaxRiver - chartMinRiver;
+    let minMaxDiff = chartMaxFlow - chartMinFlow;
     if (minMaxDiff < 1) chartGap = minMaxDiff * 2;
-    chartMinRiverLimit = Math.round(chartMinRiver - chartGap); // set the chart lower limit
+    chartMinFlowLimit = Math.round(chartMinFlow - chartGap); // set the chart lower limit
     //if (chartMinElevLimit > lake.normalPool) chartMinElevLimit = lake.normalPool - .5; // make sure normal pool line shows.
-    chartMaxRiverLimit = Math.round(chartMaxRiver + chartGap); // set the chart upper limit
+    chartMaxFlowLimit = Math.round(chartMaxFlow + chartGap); // set the chart upper limit
     //if (chartMaxElevLimit < lake.normalPool) chartMaxElevLimit = lake.normalPool + .5; // make sure normal pool line shows.
 
-    var ctx = document.getElementById('myRiverChart').getContext('2d');
+    var ctx = document.getElementById('myHourlyFlowChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
     grd.addColorStop(0, 'rgb(0,140,255)');
     grd.addColorStop(1, 'rgb(0,55,255)');
@@ -276,7 +379,7 @@ function buildRiverChart(data, lake) {
                 label: "Level",
                 // backgroundColor: 'rgb(179,221,255)',
                 borderColor: 'rgb(0, 140, 255)',
-                data: dataRiverBatch
+                data: dataFlowBatch
             }]
         },
 
@@ -300,8 +403,8 @@ function buildRiverChart(data, lake) {
                         fontSize: 20,
                     },
                     ticks: {
-                        min: chartMinRiverLimit, // Set chart bottom at 1ft less than min elev value
-                        max: chartMaxRiverLimit, // Set chart top at 1ft more than min elev value
+                        min: chartMinFlowLimit, // Set chart bottom at 1ft less than min elev value
+                        max: chartMaxFlowLimit, // Set chart top at 1ft more than min elev value
                         //stepSize: Math.round((chartMaxElev - chartMinElev) / 2), // Set the y-axis step value to  ft.
                         //autoSkip: true,
                         //maxTicksLimit: 8,
@@ -572,9 +675,9 @@ function buildHumidityChart(humidityData) {
             dataHumidityBatch.push(humidityData.ccWxData[k - 1].humidity); // push elev
 
             if (humidityData.ccWxData[k - 1].humidity > chartMaxHumidity) // if value is greater than max, replace max
-                chartMaxHumidity  = humidityData.ccWxData[k - 1].humidity; // update Max Elev average
+                chartMaxHumidity = humidityData.ccWxData[k - 1].humidity; // update Max Elev average
             if (humidityData.ccWxData[k - 1].temp < chartMinHumidity) // if value is less thank min, replace min
-                chartMinHumidity  = humidityData.ccWxData[k - 1].humidity; // update Min Elev average
+                chartMinHumidity = humidityData.ccWxData[k - 1].humidity; // update Min Elev average
 
         }
         // when a week of data has been reached stop
@@ -952,12 +1055,16 @@ $.ajax({
             // build elevation chart
             buildElevChart(currentLake.data, currentLake);
 
-            // build flow chart if flows are available
-
+            // build hourly elevation chart (river tide) chart
             buildRiverChart(currentLake.data, currentLake)
 
+            // build flow chart if flows are available
             if (currentLake.data[0].flow !== "N/A") {
                 buildFlowChart(currentLake.data);
+            }
+            // build hourly flow chart if flows are available
+            if (currentLake.data[0].flow !== "N/A") {
+                buildHourlyFlowChart(currentLake.data);
             }
 
             // Add Weather charts
