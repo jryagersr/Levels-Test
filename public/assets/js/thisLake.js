@@ -886,7 +886,7 @@ $.ajax({
         $("#currentWeatherTemp").append(currentLake.wxTemp);
         $("#currentWeatherHumidity").append(currentLake.humidity);
         $("#currentWeatherBarometric").append(currentLake.barometric);
-        $("#currentWeatherWindSpeed").append(currentLake.windspeed);
+        $("#currentWeatherWindSpeed").append(currentLake.windSpeed);
         $("#currentWeatherWindDirection").append(currentLake.windDirection);
         $("#currentWeatherDate").append(currentLake.wxDate);
         $("#currentWeatherTime").append(currentLake.wxTime);
