@@ -456,7 +456,7 @@ function buildTempChart(tempData) {
     let chartMaxTempLimit = 0; // y-axis Max elev Limit (for chart)
     // find our starting elevation
     for (var i = 0; tempData.data.length; i++) {
-        if (typeof tempData.ccWxData[i].baro == "number") {
+        if (typeof tempData.ccWxData[i].temp == "number") {
             k = i;
             break;
         }
