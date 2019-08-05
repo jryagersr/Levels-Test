@@ -62,7 +62,7 @@ module.exports = {
         let wxData = [];
         let weatherData = false;
         if (error) {
-          console.log(`Weather retrieval error ${error}`)
+          console.log(`Weather retrieval error (updateFunction) ${error}`)
           callbackError = true;
         } else {
           if (currentLake !== 'undefined') {

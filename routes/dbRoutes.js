@@ -301,7 +301,7 @@ module.exports = function (app) {
               weather.getWeatherData(currentLake, function (error, lakeWeather) {
                 currentLake = lakeWeather;
                 if (error) {
-                  console.log(`Weather retrieval error ${error}`)
+                  console.log(`Weather retrieval error (no updata source) ${error}`)
                   res.json(currentLake);
                 } else {
                   if (currentLake !== 'undefined') {
@@ -328,7 +328,7 @@ module.exports = function (app) {
               weather.getWeatherData(currentLake, function (error, lakeWeather) {
                 currentLake = lakeWeather;
                 if (error) {
-                  console.log(`Weather retrieval error ${error}`)
+                  console.log(`Weather retrieval error (no data source) ${error}`)
                   //return currentLake data (likely ramps only)
                   res.json(currentLake);
                 } else {

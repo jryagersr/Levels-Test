@@ -126,7 +126,7 @@ function buildElevChart(data, lake) {
     // Set y axis limits for Elev Chart
     let chartGap = 2;
     let minMaxDiff = chartMaxElev - chartMinElev;
-    if (minMaxDiff < 1) chartGap = minMaxDiff / 2;
+    if (minMaxDiff < 1) chartGap = minMaxDiff ;
     chartMinElevLimit = Math.round(chartMinElev) - chartGap; // set the chart lower limit
     //if (chartMinElevLimit > lake.normalPool) chartMinElevLimit = lake.normalPool - .5; // make sure normal pool line shows.
     chartMaxElevLimit = Math.round(chartMaxElev) + chartGap; // set the chart upper limit
@@ -547,6 +547,105 @@ function buildTempChart(tempData) {
 }
 
 /******************************************************************************************************************/
+// Function to build tempc hart on page
+function buildHumidityChart(humidityData) {
+    $("#humidityChart").show();
+    // Our data must be parsed into separate flat arrays for the chart
+    let labelBatch = [];
+    let dataHumidityBatch = [];
+    let k = 0; // our iterator after starting elevation
+    let chartMinHumidity = 100000; // y-axis Max elev value
+    let chartMaxHumidity = 0; // y-axis Min elev value
+    let chartMinHumidityLimit = 0; // y-axis Min elev Limit (for chart)
+    let chartMaxHumidityLimit = 0; // y-axis Max elev Limit (for chart)
+    // find our starting elevation
+    for (var i = 0; humidityData.data.length; i++) {
+        if (typeof humidityData.ccWxData[i].humidity == "number") {
+            k = i;
+            break;
+        }
+    }
+    // Loop through our data for 24 data points if we have it
+    for (k; k < humidityData.data.length; k++) {
+        // if we're past the first entry
+        if (k > 0) {
+            labelBatch.push(humidityData.data[k - 1].time.substr(0, humidityData.data[k - 1].time.length - 9) + humidityData.data[k - 1].time.substr(humidityData.data[k - 1].time.length - 2, 2));
+            dataHumidityBatch.push(humidityData.ccWxData[k - 1].humidity); // push elev
+
+            if (humidityData.ccWxData[k - 1].humidity > chartMaxHumidity) // if value is greater than max, replace max
+                chartMaxHumidity  = humidityData.ccWxData[k - 1].humidity; // update Max Elev average
+            if (humidityData.ccWxData[k - 1].temp < chartMinHumidity) // if value is less thank min, replace min
+                chartMinHumidity  = humidityData.ccWxData[k - 1].humidity; // update Min Elev average
+
+        }
+        // when a week of data has been reached stop
+        if (labelBatch.length > 23) {
+            break;
+        }
+    }
+
+    labelBatch.reverse();
+    dataHumidityBatch.reverse();
+
+    // Set y axis limits for Temp Chart
+    //if (chartMaxElevLimit < lake.normalPool) chartMaxElevLimit = lake.normalPool + .5; // make sure normal pool line shows.
+    chartMinHumidityLimit = 0; // set the chart lower limit
+    chartMaxHumidityLimit = 110; // set the chart upper limit
+
+    var ctx = document.getElementById('myHumidityChart').getContext('2d');
+    var grd = ctx.createLinearGradient(0, 0, 170, 0);
+    grd.addColorStop(0, 'rgb(0,140,255)');
+    grd.addColorStop(1, 'rgb(0,55,255)');
+    var chart = new Chart(ctx, {
+        // The type of chart we want to create
+
+        type: 'line',
+
+        // The data for our dataset
+        data: {
+            labels: labelBatch,
+            datasets: [{
+                type: 'line',
+                label: "Humidity %",
+                // backgroundColor: 'rgb(179,221,255)',
+                borderColor: 'rgb(0, 140, 255)',
+                data: dataHumidityBatch
+            }, ]
+        },
+
+        // Configuration options go here
+        options: {
+            responsive: true,
+            scales: {
+                xAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: false,
+                        labelString: 'Date',
+                        fontSize: 20
+                    }
+                }],
+                yAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: false,
+                        labelString: 'Level (feet)',
+                        fontSize: 20,
+                    },
+                    ticks: {
+                        min: chartMinHumidityLimit, // Set chart bottom at 1ft less than min elev value
+                        max: chartMaxHumidityLimit, // Set chart top at 1ft more than min elev value
+                        //stepSize: Math.round((chartMaxElev - chartMinElev) / 2), // Set the y-axis step value to  ft.
+                        //autoSkip: true,
+                        //maxTicksLimit: 8,
+                    },
+                    stacked: false
+                }]
+            }
+        }
+    });
+}
+/******************************************************************************************************************/
 // Function to build baro chart on page
 function buildBaroChart(baroData) {
     $("#baroChart").show();
@@ -866,7 +965,10 @@ $.ajax({
             // Add AirTemp
             buildTempChart(currentLake);
 
-            // Add AirTemp
+            // Add Humidity
+            buildHumidityChart(currentLake);
+
+            // Add Windspeed
             buildWindChart(currentLake);
 
             // Add Barometric pressure
