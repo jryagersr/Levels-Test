@@ -60,7 +60,6 @@ function buildElevChart(data, lake) {
     let dataElevBatch = [];
     let dataNPBatch = []; // Storage for Normal Pool batch data
     let dataFCBatch = []; // Storage for Top of Flood Control batch data
-    let dataTDBatch = []; // Storage for Top of Flood Control batch data
     let sumOfElevs = 0;
     let divisor = 1;
     let k = 0; // our iterator after starting elevation
@@ -126,7 +125,7 @@ function buildElevChart(data, lake) {
     // Set y axis limits for Elev Chart
     let chartGap = 2;
     let minMaxDiff = chartMaxElev - chartMinElev;
-    if (minMaxDiff < 1) chartGap = minMaxDiff ;
+    if (minMaxDiff < 1) chartGap = minMaxDiff + 1;
     chartMinElevLimit = Math.round(chartMinElev) - chartGap; // set the chart lower limit
     //if (chartMinElevLimit > lake.normalPool) chartMinElevLimit = lake.normalPool - .5; // make sure normal pool line shows.
     chartMaxElevLimit = Math.round(chartMaxElev) + chartGap; // set the chart upper limit
