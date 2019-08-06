@@ -393,7 +393,9 @@ function buildRiverChart(data, lake) {
     // Set y axis limits for River Chart
     let chartGap = 2;
     let minMaxDiff = chartMaxRiver - chartMinRiver;
-    if (minMaxDiff < 1) chartGap = minMaxDiff * 2;
+    if (minMaxDiff < 1)
+        chartGap = minMaxDiff * 2;
+    else chartGap = minMaxDiff / 2;
     chartMinRiverLimit = Math.round(chartMinRiver - chartGap); // set the chart lower limit
     //if (chartMinElevLimit > lake.normalPool) chartMinElevLimit = lake.normalPool - .5; // make sure normal pool line shows.
     chartMaxRiverLimit = Math.round(chartMaxRiver + chartGap); // set the chart upper limit
