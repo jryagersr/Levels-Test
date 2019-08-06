@@ -50,109 +50,6 @@ function buildTable(data) {
     }
     buildElevChart(data);
 }
-/******************************************************************************************************************/
-// Function to build chart on page
-function buildRiverChart(data, lake) {
-    $("#riverChart").show();
-    // Our data must be parsed into separate flat arrays for the chart
-    let labelBatch = [];
-    let dataRiverBatch = [];
-    let k = 0; // our iterator after starting elevation
-    let chartMinRiver = 100000; // y-axis Max elev value
-    let chartMaxRiver = 0; // y-axis Min elev value
-    let chartMinRiverLimit = 0; // y-axis Min elev Limit (for chart)
-    let chartMaxRiverLimit = 0; // y-axis Max elev Limit (for chart)
-    // find our starting elevation
-    for (var i = 0; data.length; i++) {
-        if (typeof data[i].elev == "number") {
-            k = i;
-            break;
-        }
-    }
-    // Loop through our data for 24 data points if we have it
-    for (k; k < data.length; k++) {
-        // if we're past the first entry
-        if (k > 0) {
-            labelBatch.push(data[k - 1].time.substr(0, data[k - 1].time.length - 9) + data[k - 1].time.substr(data[k - 1].time.length - 2, 2));
-            dataRiverBatch.push((data[k - 1].elev).toFixed(2)); // push elev
-
-            if (data[k - 1].elev > chartMaxRiver) // if value is greater than max, replace max
-                chartMaxRiver = data[k - 1].elev; // update Max Elev average
-            if (data[k - 1].elev < chartMinRiver) // if value is less thank min, replace min
-                chartMinRiver = data[k - 1].elev; // update Min Elev average
-
-        }
-        // when a week of data has been reached stop
-        if (labelBatch.length > 23) {
-            break;
-        }
-    }
-
-    labelBatch.reverse();
-    dataRiverBatch.reverse();
-
-    // Set y axis limits for River Chart
-    let chartGap = 2;
-    let minMaxDiff = chartMaxRiver - chartMinRiver;
-    if (minMaxDiff < 1) chartGap = minMaxDiff * 2;
-    chartMinRiverLimit = Math.round(chartMinRiver - chartGap); // set the chart lower limit
-    //if (chartMinElevLimit > lake.normalPool) chartMinElevLimit = lake.normalPool - .5; // make sure normal pool line shows.
-    chartMaxRiverLimit = Math.round(chartMaxRiver + chartGap); // set the chart upper limit
-    //if (chartMaxElevLimit < lake.normalPool) chartMaxElevLimit = lake.normalPool + .5; // make sure normal pool line shows.
-
-    var ctx = document.getElementById('myRiverChart').getContext('2d');
-    var grd = ctx.createLinearGradient(0, 0, 170, 0);
-    grd.addColorStop(0, 'rgb(0,140,255)');
-    grd.addColorStop(1, 'rgb(0,55,255)');
-    var chart = new Chart(ctx, {
-        // The type of chart we want to create
-
-        type: 'line',
-
-        // The data for our dataset
-        data: {
-            labels: labelBatch,
-            datasets: [{
-                type: 'line',
-                label: "Level",
-                // backgroundColor: 'rgb(179,221,255)',
-                borderColor: 'rgb(0, 140, 255)',
-                data: dataRiverBatch
-            }]
-        },
-
-        // Configuration options go here
-        options: {
-            responsive: true,
-            scales: {
-                xAxes: [{
-                    display: true,
-                    scaleLabel: {
-                        display: false,
-                        labelString: 'Date',
-                        fontSize: 20
-                    }
-                }],
-                yAxes: [{
-                    display: true,
-                    scaleLabel: {
-                        display: false,
-                        labelString: 'Level (feet)',
-                        fontSize: 20,
-                    },
-                    ticks: {
-                        min: chartMinRiverLimit, // Set chart bottom at 1ft less than min elev value
-                        max: chartMaxRiverLimit, // Set chart top at 1ft more than min elev value
-                        //stepSize: Math.round((chartMaxElev - chartMinElev) / 2), // Set the y-axis step value to  ft.
-                        //autoSkip: true,
-                        //maxTicksLimit: 8,
-                    },
-                    stacked: false
-                }]
-            }
-        }
-    });
-}
 
 
 /******************************************************************************************************************/
@@ -286,16 +183,21 @@ function buildElevChart(data, lake) {
                 xAxes: [{
                     display: true,
                     scaleLabel: {
-                        display: false,
+                        display: true,
                         labelString: 'Date',
                         fontSize: 20
+                    },
+                    ticks: {
+                        autoSkip: true,
+                        maxTicksLimit: 12,
+                        fontSize: 10
                     }
                 }],
                 yAxes: [{
                     display: true,
                     scaleLabel: {
-                        display: false,
-                        labelString: 'Level (feet)',
+                        display: true,
+                        labelString: 'Feet (MSL)',
                         fontSize: 20,
                     },
                     ticks: {
@@ -312,109 +214,6 @@ function buildElevChart(data, lake) {
     });
 }
 
-/******************************************************************************************************************/
-// Function to build chart on page
-function buildHourlyFlowChart(data, lake) {
-    $("#hourlyFlowChart").show();
-    // Our data must be parsed into separate flat arrays for the chart
-    let labelBatch = [];
-    let dataFlowBatch = [];
-    let k = 0; // our iterator after starting elevation
-    let chartMinFlow = 100000; // y-axis Max elev value
-    let chartMaxFlow = 0; // y-axis Min elev value
-    let chartMinFlowLimit = 0; // y-axis Min elev Limit (for chart)
-    let chartMaxFlowLimit = 0; // y-axis Max elev Limit (for chart)
-    // find our starting elevation
-    for (var i = 0; data.length; i++) {
-        if (typeof data[i].flow == "number") {
-            k = i;
-            break;
-        }
-    }
-    // Loop through our data for 24 data points if we have it
-    for (k; k < data.length; k++) {
-        // if we're past the first entry
-        if (k > 0) {
-            labelBatch.push(data[k - 1].time.substr(0, data[k - 1].time.length - 9) + data[k - 1].time.substr(data[k - 1].time.length - 2, 2));
-            dataFlowBatch.push((data[k - 1].flow).toFixed(2)); // push elev
-
-            if (data[k - 1].flow > chartMaxFlow) // if value is greater than max, replace max
-                chartMaxFlow = data[k - 1].flow; // update Max Elev average
-            if (data[k - 1].flow < chartMinFlow) // if value is less thank min, replace min
-                chartMinFlow = data[k - 1].flow; // update Min Elev average
-
-        }
-        // when a week of data has been reached stop
-        if (labelBatch.length > 23) {
-            break;
-        }
-    }
-
-    labelBatch.reverse();
-    dataFlowBatch.reverse();
-
-    // Set y axis limits for River Chart
-    let chartGap = 2;
-    let minMaxDiff = chartMaxFlow - chartMinFlow;
-    if (minMaxDiff < 1) chartGap = minMaxDiff * 2;
-    chartMinFlowLimit = Math.round(chartMinFlow - chartGap); // set the chart lower limit
-    //if (chartMinElevLimit > lake.normalPool) chartMinElevLimit = lake.normalPool - .5; // make sure normal pool line shows.
-    chartMaxFlowLimit = Math.round(chartMaxFlow + chartGap); // set the chart upper limit
-    //if (chartMaxElevLimit < lake.normalPool) chartMaxElevLimit = lake.normalPool + .5; // make sure normal pool line shows.
-
-    var ctx = document.getElementById('myHourlyFlowChart').getContext('2d');
-    var grd = ctx.createLinearGradient(0, 0, 170, 0);
-    grd.addColorStop(0, 'rgb(0,140,255)');
-    grd.addColorStop(1, 'rgb(0,55,255)');
-    var chart = new Chart(ctx, {
-        // The type of chart we want to create
-
-        type: 'line',
-
-        // The data for our dataset
-        data: {
-            labels: labelBatch,
-            datasets: [{
-                type: 'line',
-                label: "Level",
-                // backgroundColor: 'rgb(179,221,255)',
-                borderColor: 'rgb(0, 140, 255)',
-                data: dataFlowBatch
-            }]
-        },
-
-        // Configuration options go here
-        options: {
-            responsive: true,
-            scales: {
-                xAxes: [{
-                    display: true,
-                    scaleLabel: {
-                        display: false,
-                        labelString: 'Date',
-                        fontSize: 20
-                    }
-                }],
-                yAxes: [{
-                    display: true,
-                    scaleLabel: {
-                        display: false,
-                        labelString: 'Level (feet)',
-                        fontSize: 20,
-                    },
-                    ticks: {
-                        min: chartMinFlowLimit, // Set chart bottom at 1ft less than min elev value
-                        max: chartMaxFlowLimit, // Set chart top at 1ft more than min elev value
-                        //stepSize: Math.round((chartMaxElev - chartMinElev) / 2), // Set the y-axis step value to  ft.
-                        //autoSkip: true,
-                        //maxTicksLimit: 8,
-                    },
-                    stacked: false
-                }]
-            }
-        }
-    });
-}
 
 
 /******************************************************************************************************************/
@@ -519,16 +318,21 @@ function buildFlowChart(data) {
                 xAxes: [{
                     display: true,
                     scaleLabel: {
-                        display: false,
-                        labelString: 'Date',
+                        display: true,
+                        labelString: 'Time',
                         fontSize: 20
+                    },
+                    ticks: {
+                        autoSkip: true,
+                        maxTicksLimit: 12,
+                        fontSize: 10
                     }
                 }],
                 yAxes: [{
                     display: true,
                     scaleLabel: {
-                        display: false,
-                        labelString: 'Flow (feet)',
+                        display: true,
+                        labelString: 'Cubic Feet per Second',
                         fontSize: 20
                     },
                     ticks: {
@@ -544,6 +348,224 @@ function buildFlowChart(data) {
     });
 }
 
+/******************************************************************************************************************/
+// Function to build chart on page
+// Actually Hourly Elevation but called River because it can show daily tides on a River
+function buildRiverChart(data, lake) {
+    $("#riverChart").show();
+    // Our data must be parsed into separate flat arrays for the chart
+    let labelBatch = [];
+    let dataRiverBatch = [];
+    let k = 0; // our iterator after starting elevation
+    let chartMinRiver = 100000; // y-axis Max elev value
+    let chartMaxRiver = 0; // y-axis Min elev value
+    let chartMinRiverLimit = 0; // y-axis Min elev Limit (for chart)
+    let chartMaxRiverLimit = 0; // y-axis Max elev Limit (for chart)
+    // find our starting elevation
+    for (var i = 0; data.length; i++) {
+        if (typeof data[i].elev == "number") {
+            k = i;
+            break;
+        }
+    }
+    // Loop through our data for 24 data points if we have it
+    for (k; k < data.length; k++) {
+        // if we're past the first entry
+        if (k > 0) {
+            labelBatch.push(data[k - 1].time.substr(0, data[k - 1].time.length - 9) + data[k - 1].time.substr(data[k - 1].time.length - 2, 2));
+            dataRiverBatch.push((data[k - 1].elev).toFixed(2)); // push elev
+
+            if (data[k - 1].elev > chartMaxRiver) // if value is greater than max, replace max
+                chartMaxRiver = data[k - 1].elev; // update Max Elev average
+            if (data[k - 1].elev < chartMinRiver) // if value is less thank min, replace min
+                chartMinRiver = data[k - 1].elev; // update Min Elev average
+
+        }
+        // when a week of data has been reached stop
+        if (labelBatch.length > 23) {
+            break;
+        }
+    }
+
+    labelBatch.reverse();
+    dataRiverBatch.reverse();
+
+    // Set y axis limits for River Chart
+    let chartGap = 2;
+    let minMaxDiff = chartMaxRiver - chartMinRiver;
+    if (minMaxDiff < 1) chartGap = minMaxDiff * 2;
+    chartMinRiverLimit = Math.round(chartMinRiver - chartGap); // set the chart lower limit
+    //if (chartMinElevLimit > lake.normalPool) chartMinElevLimit = lake.normalPool - .5; // make sure normal pool line shows.
+    chartMaxRiverLimit = Math.round(chartMaxRiver + chartGap); // set the chart upper limit
+    //if (chartMaxElevLimit < lake.normalPool) chartMaxElevLimit = lake.normalPool + .5; // make sure normal pool line shows.
+
+    var ctx = document.getElementById('myRiverChart').getContext('2d');
+    var grd = ctx.createLinearGradient(0, 0, 170, 0);
+    grd.addColorStop(0, 'rgb(0,140,255)');
+    grd.addColorStop(1, 'rgb(0,55,255)');
+    var chart = new Chart(ctx, {
+        // The type of chart we want to create
+
+        type: 'line',
+
+        // The data for our dataset
+        data: {
+            labels: labelBatch,
+            datasets: [{
+                type: 'line',
+                label: "Level",
+                // backgroundColor: 'rgb(179,221,255)',
+                borderColor: 'rgb(0, 140, 255)',
+                data: dataRiverBatch
+            }]
+        },
+
+        // Configuration options go here
+        options: {
+            responsive: true,
+            scales: {
+                xAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Time',
+                        fontSize: 20
+                    },
+                    ticks: {
+                        autoSkip: true,
+                        maxTicksLimit: 12,
+                        fontSize: 10
+                    }
+                }],
+                yAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Feet (MSL)',
+                        fontSize: 20,
+                    },
+                    ticks: {
+                        min: chartMinRiverLimit, // Set chart bottom at 1ft less than min elev value
+                        max: chartMaxRiverLimit, // Set chart top at 1ft more than min elev value
+                        //stepSize: Math.round((chartMaxElev - chartMinElev) / 2), // Set the y-axis step value to  ft.
+                        //autoSkip: true,
+                        //maxTicksLimit: 8,
+                    },
+                    stacked: false
+                }]
+            }
+        }
+    });
+}
+
+/******************************************************************************************************************/
+// Function to build chart on page
+function buildHourlyFlowChart(data, lake) {
+    $("#hourlyFlowChart").show();
+    // Our data must be parsed into separate flat arrays for the chart
+    let labelBatch = [];
+    let dataFlowBatch = [];
+    let k = 0; // our iterator after starting elevation
+    let chartMinFlow = 100000; // y-axis Max elev value
+    let chartMaxFlow = 0; // y-axis Min elev value
+    let chartMinFlowLimit = 0; // y-axis Min elev Limit (for chart)
+    let chartMaxFlowLimit = 0; // y-axis Max elev Limit (for chart)
+    // find our starting elevation
+    for (var i = 0; data.length; i++) {
+        if (typeof data[i].flow == "number") {
+            k = i;
+            break;
+        }
+    }
+    // Loop through our data for 24 data points if we have it
+    for (k; k < data.length; k++) {
+        // if we're past the first entry
+        if (k > 0) {
+            labelBatch.push(data[k - 1].time.substr(0, data[k - 1].time.length - 9) + data[k - 1].time.substr(data[k - 1].time.length - 2, 2));
+            dataFlowBatch.push((data[k - 1].flow).toFixed(2)); // push elev
+
+            if (data[k - 1].flow > chartMaxFlow) // if value is greater than max, replace max
+                chartMaxFlow = data[k - 1].flow; // update Max Elev average
+            if (data[k - 1].flow < chartMinFlow) // if value is less thank min, replace min
+                chartMinFlow = data[k - 1].flow; // update Min Elev average
+
+        }
+        // when a week of data has been reached stop
+        if (labelBatch.length > 23) {
+            break;
+        }
+    }
+
+    labelBatch.reverse();
+    dataFlowBatch.reverse();
+
+    // Set y axis limits for River Chart
+    let chartGap = 2;
+    let minMaxDiff = chartMaxFlow - chartMinFlow;
+    if (minMaxDiff < 1) chartGap = minMaxDiff * 2;
+    chartMinFlowLimit = Math.round(chartMinFlow - chartGap); // set the chart lower limit
+    //if (chartMinElevLimit > lake.normalPool) chartMinElevLimit = lake.normalPool - .5; // make sure normal pool line shows.
+    chartMaxFlowLimit = Math.round(chartMaxFlow + chartGap); // set the chart upper limit
+    //if (chartMaxElevLimit < lake.normalPool) chartMaxElevLimit = lake.normalPool + .5; // make sure normal pool line shows.
+
+    var ctx = document.getElementById('myHourlyFlowChart').getContext('2d');
+    var grd = ctx.createLinearGradient(0, 0, 170, 0);
+    grd.addColorStop(0, 'rgb(0,140,255)');
+    grd.addColorStop(1, 'rgb(0,55,255)');
+    var chart = new Chart(ctx, {
+        // The type of chart we want to create
+
+        type: 'line',
+
+        // The data for our dataset
+        data: {
+            labels: labelBatch,
+            datasets: [{
+                type: 'line',
+                label: "Level",
+                // backgroundColor: 'rgb(179,221,255)',
+                borderColor: 'rgb(0, 140, 255)',
+                data: dataFlowBatch
+            }]
+        },
+
+        // Configuration options go here
+        options: {
+            responsive: true,
+            scales: {
+                xAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Date',
+                        fontSize: 20
+                    },
+                    ticks: {
+                        autoSkip: true,
+                        maxTicksLimit: 12,
+                        fontSize: 10
+                    }
+                }],
+                yAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: false,
+                        labelString: 'Cubic Feet per Second',
+                        fontSize: 20,
+                    },
+                    ticks: {
+                        min: chartMinFlowLimit, // Set chart bottom at 1ft less than min elev value
+                        max: chartMaxFlowLimit, // Set chart top at 1ft more than min elev value
+                        //stepSize: Math.round((chartMaxElev - chartMinElev) / 2), // Set the y-axis step value to  ft.
+                        //autoSkip: true,
+                        //maxTicksLimit: 8,
+                    },
+                    stacked: false
+                }]
+            }
+        }
+    });
+}
 /******************************************************************************************************************/
 // Function to build tempc hart on page
 function buildTempChart(tempData) {
@@ -622,16 +644,21 @@ function buildTempChart(tempData) {
                 xAxes: [{
                     display: true,
                     scaleLabel: {
-                        display: false,
-                        labelString: 'Date',
+                        display: true,
+                        labelString: 'Time',
                         fontSize: 20
+                    },
+                    ticks: {
+                        autoSkip: true,
+                        maxTicksLimit: 12,
+                        fontSize: 10
                     }
                 }],
                 yAxes: [{
                     display: true,
                     scaleLabel: {
-                        display: false,
-                        labelString: 'Level (feet)',
+                        display: true,
+                        labelString: 'Degrees Fahrenheit',
                         fontSize: 20,
                     },
                     ticks: {
@@ -722,16 +749,21 @@ function buildHumidityChart(humidityData) {
                 xAxes: [{
                     display: true,
                     scaleLabel: {
-                        display: false,
-                        labelString: 'Date',
+                        display: true,
+                        labelString: 'Time',
                         fontSize: 20
+                    },
+                    ticks: {
+                        autoSkip: true,
+                        maxTicksLimit: 12,
+                        fontSize: 10
                     }
                 }],
                 yAxes: [{
                     display: true,
                     scaleLabel: {
-                        display: false,
-                        labelString: 'Level (feet)',
+                        display: true,
+                        labelString: '% Saturation',
                         fontSize: 20,
                     },
                     ticks: {
@@ -826,16 +858,21 @@ function buildBaroChart(baroData) {
                 xAxes: [{
                     display: true,
                     scaleLabel: {
-                        display: false,
-                        labelString: 'Date',
+                        display: true,
+                        labelString: 'Time',
                         fontSize: 20
+                    },
+                    ticks: {
+                        autoSkip: true,
+                        maxTicksLimit: 12,
+                        fontSize: 10
                     }
                 }],
                 yAxes: [{
                     display: true,
                     scaleLabel: {
-                        display: false,
-                        labelString: 'Level (feet)',
+                        display: true,
+                        labelString: 'Pressure mb',
                         fontSize: 20,
                     },
                     ticks: {
@@ -931,16 +968,80 @@ function buildWindChart(windData) {
                 xAxes: [{
                     display: true,
                     scaleLabel: {
-                        display: false,
-                        labelString: 'Date',
+                        display: true,
+                        labelString: 'Time',
+                        fontSize: 20,
+                    },
+                    ticks: {
+                        autoSkip: true,
+                        maxTicksLimit: 12,
+                        fontSize: 10
+                    }
+                }],
+                yAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'MPH',
+                        fontSize: 20,
+                    },
+                    ticks: {
+                        min: chartMinWindLimit, // Set chart bottom at 1ft less than min elev value
+                        max: chartMaxWindLimit, // Set chart top at 1ft more than min elev value
+                        //stepSize: Math.round((chartMaxElev - chartMinElev) / 2), // Set the y-axis step value to  ft.
+                        //autoSkip: true,
+                        //maxTicksLimit: 8,
+                    },
+                    stacked: false
+                }]
+            }
+        }
+    });
+}
+
+/******************************************************************************************************************/
+// Function to build baro chart on page
+function buildWindDirectionChart(windData) {
+    $("#windDirectionChart").show();
+
+
+    var ctx = document.getElementById('myWindDirectionChart').getContext('2d');
+    var grd = ctx.createLinearGradient(0, 0, 170, 0);
+    grd.addColorStop(0, 'rgb(0,140,255)');
+    grd.addColorStop(1, 'rgb(0,55,255)');
+    let labelBatch = ['N','S', 'E', 'W'];
+    let dataWindDirectionBatch = [{x: -10, y: 0}, {x: 0, y: 10}, { x: 10, y: 5 }];
+    var scatterChart = new Chart(ctx, {
+        type: 'scatter',
+        // The data for our dataset
+        data: {
+            labels: labelBatch,
+            datasets: [{
+                type: 'line',
+                label: "Direction",
+                // backgroundColor: 'rgb(179,221,255)',
+                borderColor: 'rgb(0, 140, 255)',
+                data: dataWindDirectionBatch
+            }]
+        },
+
+        // Configuration options go here
+        options: {
+            responsive: true,
+            scales: {
+                xAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Time',
                         fontSize: 20
                     }
                 }],
                 yAxes: [{
                     display: true,
                     scaleLabel: {
-                        display: false,
-                        labelString: 'Level (feet)',
+                        display: true,
+                        labelString: 'MPH',
                         fontSize: 20,
                     },
                     ticks: {
@@ -1071,14 +1172,17 @@ $.ajax({
             // Add AirTemp
             buildTempChart(currentLake);
 
+            // Add Barometric pressure
+            buildBaroChart(currentLake);
+
             // Add Humidity
             buildHumidityChart(currentLake);
 
             // Add Windspeed
             buildWindChart(currentLake);
 
-            // Add Barometric pressure
-            buildBaroChart(currentLake);
+            // Add Windspeed
+            //buildWindDirectionChart(currentLake);
 
             // Hide loading gif
             hideLoader();
