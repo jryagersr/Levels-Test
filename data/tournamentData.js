@@ -349,7 +349,7 @@ module.exports = [
                     ramp: "Triple Springs",
                     state: "NC",
                     txDetail: "Anglers Choice",
-                    resultsLink: "",
+                    resultsLink: "https://www.facebook.com/photo.php?fbid=2239430359512161&set=pcb.386806328623269&type=3&ifg=1&__tn__=HH-R&eid=ARClNkI3xAzOpT7AiN9C0MAkycU2kBEt4xBOi0bQgASArEs1GlxthALDV5ciWOH8jxmngoPbYp-nLgWT",
                     entryLink: "/assets/tximages/acbcotimage.png"
                 },
                 {
@@ -2580,7 +2580,7 @@ module.exports = [
                     ramp: "Plymouth",
                     state: "NC",
                     txDetail: "Bass For Cash Series",
-                    resultsLink: "",
+                    resultsLink: "http://bassforcash.com/2019/07/30/don-lassiter-justin-phelps-win-4190-at-event-5-on-roanoke-river/?fbclid=IwAR1ULJx3kWhWbee_fo3iPRaK6FQPlls4WMKO5YRHk80bJGJuSv4QHrujbjw",
                     entryLink: "http://bassforcash.com/schedule/"
                 },
                 {
@@ -4051,7 +4051,7 @@ module.exports = [
                     ramp: "Crosspoint",
                     state: "NC",
                     txDetail: "",
-                    resultsLink: "",
+                    resultsLink: "https://www.facebook.com/119889178084587/photos/a.1303365486403611/2843254535748024/?type=3&eid=ARBkhlfigiLfI3Q8fNUMbeySTxiS28LJhhk9ugywEefa5tSRpfXZ5-QPM-u5j7RbIzedCJ5_9BwU8bMJ&__tn__=EEHH-R",
                     entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
                 },
                 {

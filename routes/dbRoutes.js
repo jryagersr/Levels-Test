@@ -76,7 +76,7 @@ module.exports = function (app) {
                 case "ACE":
                   ace.getACEData(currentLake, function (error, ACEdata) {
                     if (error) {
-                      console.log(ACEdata);
+                      console.log(currentLake.bodyOfWater + "- getACEData returned" ACEdata);
                       // if successful return the data
                     } else {
                       // update the current lake

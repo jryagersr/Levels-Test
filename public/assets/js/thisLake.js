@@ -890,18 +890,19 @@ function buildBaroChart(baroData) {
 }
 
 /******************************************************************************************************************/
-// Function to build baro chart on page
+// Function to build Wind Speed chart 
 function buildWindChart(windData) {
     $("#windChart").show();
     // Our data must be parsed into separate flat arrays for the chart
     let labelBatch = [];
     let dataWindBatch = [];
-    let k = 0; // our iterator after starting elevation
-    let chartMinWind = 100000; // y-axis Max elev value
-    let chartMaxWind = 0; // y-axis Min elev value
-    let chartMinWindLimit = 0; // y-axis Min elev Limit (for chart)
-    let chartMaxWindLimit = 0; // y-axis Max elev Limit (for chart)
-    // find our starting elevation
+    let k = 0; // our iterator after starting wind speed
+    let chartMinWind = 100000; // y-axis Max wind speed value
+    let chartMaxWind = 0; // y-axis Min wind speed value
+    let chartMinWindLimit = 0; // y-axis Min wind speed Limit (for chart)
+    let chartMaxWindLimit = 0; // y-axis Max wind speed Limit (for chart)
+
+    // find our starting data
     for (var i = 0; windData.data.length; i++) {
         if (typeof windData.ccWxData[i].windspeed == "number") {
             k = i;
@@ -913,15 +914,15 @@ function buildWindChart(windData) {
         // if we're past the first entry
         if (k > 0) {
             labelBatch.push(windData.data[k - 1].time.substr(0, windData.data[k - 1].time.length - 9) + windData.data[k - 1].time.substr(windData.data[k - 1].time.length - 2, 2));
-            dataWindBatch.push(windData.ccWxData[k - 1].windspeed); // push elev
+            dataWindBatch.push(windData.ccWxData[k - 1].windspeed); // push wind speeed
 
             if (windData.ccWxData[k - 1].windspeed > chartMaxWind) // if value is greater than max, replace max
-                chartMaxWind = windData.ccWxData[k - 1].windspeed; // update Max Elev average
+                chartMaxWind = windData.ccWxData[k - 1].windspeed; // update Max Wind
             if (windData.ccWxData[k - 1].windspeed < chartMinWind) // if value is less thank min, replace min
-                chartMinWind = windData.ccWxData[k - 1].windspeed; // update Min Elev average
+                chartMinWind = windData.ccWxData[k - 1].windspeed; // update Min Wind
 
         }
-        // when a week of data has been reached stop
+        // when a day of data has been reached stop
         if (labelBatch.length > 23) {
             break;
         }
@@ -936,9 +937,7 @@ function buildWindChart(windData) {
     let minMaxDiff = chartMaxWind - chartMinWind;
     if (minMaxDiff < 1) chartGap = minMaxDiff / 2;
     chartMinWindLimit = 0; // set the chart lower limit
-    //if (chartMinElevLimit > lake.normalPool) chartMinElevLimit = lake.normalPool - .5; // make sure normal pool line shows.
     chartMaxWindLimit = Math.round(chartMaxWind + chartGap + 1); // set the chart upper limit
-    //if (chartMaxElevLimit < lake.normalPool) chartMaxElevLimit = lake.normalPool + .5; // make sure normal pool line shows.
 
     var ctx = document.getElementById('myWindChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
@@ -954,7 +953,7 @@ function buildWindChart(windData) {
             labels: labelBatch,
             datasets: [{
                 type: 'line',
-                label: "Pressure (mb)",
+                label: "Wind Speed (MPH)",
                 // backgroundColor: 'rgb(179,221,255)',
                 borderColor: 'rgb(0, 140, 255)',
                 data: dataWindBatch
@@ -986,8 +985,8 @@ function buildWindChart(windData) {
                         fontSize: 20,
                     },
                     ticks: {
-                        min: chartMinWindLimit, // Set chart bottom at 1ft less than min elev value
-                        max: chartMaxWindLimit, // Set chart top at 1ft more than min elev value
+                        min: chartMinWindLimit, // Set chart bottom 
+                        max: chartMaxWindLimit, // Set chart top 
                         //stepSize: Math.round((chartMaxElev - chartMinElev) / 2), // Set the y-axis step value to  ft.
                         //autoSkip: true,
                         //maxTicksLimit: 8,
@@ -1000,19 +999,53 @@ function buildWindChart(windData) {
 }
 
 /******************************************************************************************************************/
-// Function to build baro chart on page
+// Function to build wind direction chart
 function buildWindDirectionChart(windData) {
     $("#windDirectionChart").show();
+    // Our data must be parsed into separate flat arrays for the chart
+    let labelBatch = [];
+    let dataWindBatch = [];
+    let windDirectionIndex = 0;
+    let k = 0; // our iterator after starting data
+    let compassSector = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
+    let displayCompassSector = ["N", " ", "NE", " ", "E", " ", "SE", " ", "S", " ", "SW", " ", "W", " ", "NW", " "];
 
+    // find our starting data
+
+    for (var i = 0; windData.data.length; i++) {
+        if (typeof windData.ccWxData[i].winddirection == "string") {
+            k = i;
+            break;
+        }
+    }
+
+    // Loop through our data for 24 data points if we have it
+    for (k; k < windData.data.length; k++) {
+        // if we're past the first entry
+        if (k > 0) {
+            labelBatch.push(windData.data[k - 1].time.substr(0, windData.data[k - 1].time.length - 9) + windData.data[k - 1].time.substr(windData.data[k - 1].time.length - 2, 2));
+            windDirectionIndex = compassSector.indexOf(windData.ccWxData[k - 1].winddirection);
+            dataWindBatch.push(windDirectionIndex); // push wind direction
+
+        }
+        // when a week of data has been reached stop
+        if (labelBatch.length > 23) {
+            break;
+        }
+    }
+
+    labelBatch.reverse();
+    dataWindBatch.reverse();
 
     var ctx = document.getElementById('myWindDirectionChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
     grd.addColorStop(0, 'rgb(0,140,255)');
     grd.addColorStop(1, 'rgb(0,55,255)');
-    let labelBatch = ['N','S', 'E', 'W'];
-    let dataWindDirectionBatch = [{x: -10, y: 0}, {x: 0, y: 10}, { x: 10, y: 5 }];
-    var scatterChart = new Chart(ctx, {
-        type: 'scatter',
+    var chart = new Chart(ctx, {
+        // The type of chart we want to create
+
+        type: 'line',
+
         // The data for our dataset
         data: {
             labels: labelBatch,
@@ -1021,7 +1054,8 @@ function buildWindDirectionChart(windData) {
                 label: "Direction",
                 // backgroundColor: 'rgb(179,221,255)',
                 borderColor: 'rgb(0, 140, 255)',
-                data: dataWindDirectionBatch
+                showLine: false,
+                data: dataWindBatch
             }]
         },
 
@@ -1032,24 +1066,34 @@ function buildWindDirectionChart(windData) {
                 xAxes: [{
                     display: true,
                     scaleLabel: {
-                        display: true,
+                        display: false,
                         labelString: 'Time',
-                        fontSize: 20
+                        fontSize: 20,
+                    },
+                    ticks: {
+                        autoSkip: true,
+                        maxTicksLimit: 12,
+                        fontSize: 10
                     }
                 }],
                 yAxes: [{
                     display: true,
                     scaleLabel: {
                         display: true,
-                        labelString: 'MPH',
+                        labelString: 'Direction',
                         fontSize: 20,
                     },
                     ticks: {
-                        min: chartMinWindLimit, // Set chart bottom at 1ft less than min elev value
-                        max: chartMaxWindLimit, // Set chart top at 1ft more than min elev value
-                        //stepSize: Math.round((chartMaxElev - chartMinElev) / 2), // Set the y-axis step value to  ft.
-                        //autoSkip: true,
-                        //maxTicksLimit: 8,
+                        // Include a dollar sign in the ticks
+                        callback: function (value, index, values) {
+                            return displayCompassSector[value];
+                        },
+
+                        min: 0, // Set chart bottom 
+                        max: 16, // Set chart top 
+                        stepSize: 1,
+                        fontSize: 9,
+                        autoSkip: true
                     },
                     stacked: false
                 }]
@@ -1182,7 +1226,7 @@ $.ajax({
             buildWindChart(currentLake);
 
             // Add Windspeed
-            //buildWindDirectionChart(currentLake);
+            buildWindDirectionChart(currentLake);
 
             // Hide loading gif
             hideLoader();
