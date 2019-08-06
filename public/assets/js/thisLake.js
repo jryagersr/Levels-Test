@@ -257,7 +257,7 @@ function buildFlowChart(data) {
                         chartMaxFlow = avgFlow; // set the max flow for calculating Chart y-axis Max later
                     //if (avgFlow <= chartMinFlow) // if value is less thank min, replace min
                     //chartMinFlow = avgFlow; // set the max flow for calculating Chart y-axis Min later
-                    labelBatch.push(data[k - 1].date);
+                    labelBatch.push(data[k - 1].date.substring(0, data[k - 1].date.length - 5));
                     dataFlowBatch.push((sumOfFlows / divisor).toFixed(2)); // calculate average
                     sumOfFlows = data[k].flow;
                     divisor = 1;
@@ -270,7 +270,7 @@ function buildFlowChart(data) {
         }
     }
     // push the final day's values after looping
-    labelBatch.push(data[k - 1].date); // Push final day data Date
+    labelBatch.push(data[k - 1].date.substring(0, data[k - 1].date.length - 5)); // Push final day data Date
     dataFlowBatch.push((sumOfFlows / divisor).toFixed(2)); // calculate average for final day and push
 
     //check the final day's values for Min and MaxLimit
