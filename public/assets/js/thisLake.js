@@ -183,7 +183,7 @@ function buildElevChart(data, lake) {
                 xAxes: [{
                     display: true,
                     scaleLabel: {
-                        display: true,
+                        display: false,
                         labelString: 'Date',
                         fontSize: 20
                     },
@@ -318,7 +318,7 @@ function buildFlowChart(data) {
                 xAxes: [{
                     display: true,
                     scaleLabel: {
-                        display: true,
+                        display: false,
                         labelString: 'Time',
                         fontSize: 20
                     },
@@ -427,7 +427,7 @@ function buildRiverChart(data, lake) {
                 xAxes: [{
                     display: true,
                     scaleLabel: {
-                        display: true,
+                        display: false,
                         labelString: 'Time',
                         fontSize: 20
                     },
@@ -536,7 +536,7 @@ function buildHourlyFlowChart(data, lake) {
                 xAxes: [{
                     display: true,
                     scaleLabel: {
-                        display: true,
+                        display: false,
                         labelString: 'Date',
                         fontSize: 20
                     },
@@ -644,7 +644,7 @@ function buildTempChart(tempData) {
                 xAxes: [{
                     display: true,
                     scaleLabel: {
-                        display: true,
+                        display: false,
                         labelString: 'Time',
                         fontSize: 20
                     },
@@ -749,7 +749,7 @@ function buildHumidityChart(humidityData) {
                 xAxes: [{
                     display: true,
                     scaleLabel: {
-                        display: true,
+                        display: false,
                         labelString: 'Time',
                         fontSize: 20
                     },
@@ -858,7 +858,7 @@ function buildBaroChart(baroData) {
                 xAxes: [{
                     display: true,
                     scaleLabel: {
-                        display: true,
+                        display: false,
                         labelString: 'Time',
                         fontSize: 20
                     },
@@ -935,7 +935,7 @@ function buildWindChart(windData) {
     let chartGap = 2;
     let minMaxDiff = chartMaxWind - chartMinWind;
     if (minMaxDiff < 1) chartGap = minMaxDiff / 2;
-    chartMinWindLimit = Math.round(chartMinWind - chartGap - 1); // set the chart lower limit
+    chartMinWindLimit = 0; // set the chart lower limit
     //if (chartMinElevLimit > lake.normalPool) chartMinElevLimit = lake.normalPool - .5; // make sure normal pool line shows.
     chartMaxWindLimit = Math.round(chartMaxWind + chartGap + 1); // set the chart upper limit
     //if (chartMaxElevLimit < lake.normalPool) chartMaxElevLimit = lake.normalPool + .5; // make sure normal pool line shows.
@@ -968,7 +968,7 @@ function buildWindChart(windData) {
                 xAxes: [{
                     display: true,
                     scaleLabel: {
-                        display: true,
+                        display: false,
                         labelString: 'Time',
                         fontSize: 20,
                     },
