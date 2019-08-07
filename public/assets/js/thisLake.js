@@ -483,13 +483,13 @@ function buildHourlyFlowChart(data, lake) {
     for (k; k < data.length; k++) {
         // if we're past the first entry
         if (k > 0) {
-            labelBatch.push(data[k - 1].time.substr(0, data[k - 1].time.length - 9) + data[k - 1].time.substr(data[k - 1].time.length - 2, 2));
-            dataFlowBatch.push((data[k - 1].flow).toFixed(2)); // push elev
+            labelBatch.push(data[k].time.substr(0, data[k].time.length - 9) + data[k].time.substr(data[k].time.length - 2, 2));
+            dataFlowBatch.push((data[k].flow).toFixed(2)); // push elev
 
-            if (data[k - 1].flow > chartMaxFlow) // if value is greater than max, replace max
-                chartMaxFlow = data[k - 1].flow; // update Max Elev average
-            if (data[k - 1].flow < chartMinFlow) // if value is less thank min, replace min
-                chartMinFlow = data[k - 1].flow; // update Min Elev average
+            if (data[k].flow > chartMaxFlow) // if value is greater than max, replace max
+                chartMaxFlow = data[k].flow; // update Max Elev average
+            if (data[k].flow < chartMinFlow) // if value is less thank min, replace min
+                chartMinFlow = data[k].flow; // update Min Elev average
 
         }
         // when a week of data has been reached stop
