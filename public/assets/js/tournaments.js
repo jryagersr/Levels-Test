@@ -119,7 +119,7 @@ function flattenData(data, callback) {
                     }
                 }
                 else {
-                    // If tx date is in the pase (exclude all future dates)
+                    // If tx date is in the past (exclude all future dates)
                     if (Date.parse(txDate) < Date.parse(todaysDate)) {
                         // Push our data into a flat array for easier sort later
                         flatBatch.push({

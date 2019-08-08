@@ -98,7 +98,10 @@
       </li>-->
       <li class="nav-item">
         <button class="tab-btn nav-link" id='txTabBtn' name="txTab">Tx</button>
-      </li>
+      </li> 
+      <li class="nav-item">
+          <button class="tab-btn nav-link" id='txResultsTabBtn' name="txResultsTab">TxResults</button>
+        </li>
       <li class="nav-item">
         <button class="tab-btn nav-link" id='rampsTabBtn' name="rampsTab">Ramps</button>
       </li>
@@ -234,7 +237,6 @@
             <th scope="col">Org</th>
             <th scope="col">Trail</th>
             <th scope="col">Date</th>
-            <th scope="col">Location</th>
             <th scope="col">Ramp</th>
           </tr>
         </thead>
@@ -243,6 +245,24 @@
       </table>
     </div>
   
+
+    <div class="tab-wrapper" id='txResultsTab'>
+
+        <h3><b>Tournament Results</b></h3>
+        <table class="table thead-dark table-striped mx-auto">
+          <thead>
+            <tr>
+              <th scope="col">Org</th>
+              <th scope="col">Trail</th>
+              <th scope="col">Date</th>
+              <th scope="col">Ramp</th>
+            </tr>
+          </thead>
+          <tbody id="txResultsSection">
+          </tbody>
+        </table>
+      </div>
+    
 
   <div class="tab-wrapper" id='dataTab'>
 

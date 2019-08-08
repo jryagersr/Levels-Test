@@ -1134,9 +1134,8 @@ function flattenData(data, type, callback) {
                             resultsLink: element.trails[k].tournaments[l].resultsLink
                         })
                     }
-                }
-                else {
-                    // If tx date is in the pase (exclude all future dates)
+                } else {
+                    // If tx date is in the past (exclude all future dates)
                     if (Date.parse(txDate) < Date.parse(todaysDate)) {
                         // Push our data into a flat array for easier sort later
                         flatBatch.push({
@@ -1192,6 +1191,9 @@ $.ajax({
     })
     .then(function (data) {
         currentLake = data;
+
+        //Current Tab
+
         // Set lake title on page
         $("#lakeTitle").append(currentLake.bodyOfWater);
 
@@ -1214,6 +1216,9 @@ $.ajax({
         $("#currentWeatherWindDirection").append(currentLake.windDirection);
         $("#currentWeatherDate").append(currentLake.wxDate);
         $("#currentWeatherTime").append(currentLake.wxTime);
+
+
+        //Ramp Tab
 
         // API call for ramp data for Ramps
         $.ajax({
@@ -1245,6 +1250,8 @@ $.ajax({
                 });
             });
 
+        // Data Tab
+
         // Stuff the lakeWell
 
         if (currentLake.data.length > 0) {
@@ -1271,62 +1278,100 @@ $.ajax({
                 $("#lakeWell-" + i + 1).append("<td>" + entry.flow + "</td>");
             })
 
+            //Tx and Tx Results Tabs
+
             // Get Tx data and fill txData Tab
             // API call for tx data for Filtering Tournaments
             var lakeTxData = {};
+            var lakeTxResultsData = {};
             $.ajax({
                     url: "/api/tournaments",
                     method: "GET",
                 })
                 .then(function (data) {
                     lakeTxData = data;
-                    let tableRow = 1; 
-                    dateSort = false;
-                    
+                    lakeTxResultsData = data;
+                    let tableRow = 1;
+                    sortType = 0; // set sort to chronological order
+
+                    //Tx Tab
+
                     // Flatten our data so it's easier to work with
-                    flattenData(lakeTxData, 0, function () {
+                    flattenData(lakeTxData, sortType, function () {
                         // sort by date when page loads (needs to be changed to be variable);
-                        var newBatch = flatBatch.sort(sort_by('date', dateSort, function (a) {
+                        var newBatch = flatBatch.sort(sort_by('date', sortType, function (a) {
                             return a.toUpperCase()
                         }));
                         // display our newly flattened data for the first time (sorted by date);
-                     
                         txBatch = newBatch;
 
-                    txBatch.forEach(function (txOrg, i) {
+                        txBatch.forEach(function (txOrg, i) {
 
-                     
+                            if ((txOrg.lakeID == lakeRoute)) {
+                                // Create the HTML Well (Section) and Add the table content for each reserved table
+                                var txSection = $("<tr>");
+                                txSection.addClass("well");
+                                txSection.attr("id", "txWell-" + tableRow + 1);
 
-                                if ((txOrg.lakeID == lakeRoute)) {
-                                    // Create the HTML Well (Section) and Add the table content for each reserved table
-                                    var txSection = $("<tr>");
-                                    txSection.addClass("well");
-                                    txSection.attr("id", "txWell-" + tableRow + 1);
+                                // Set href as entryLink
+                                txSection.attr("data-url", txOrg.entryLink); // Add data attribute to the row with entryLink url
+                                txSection.addClass("clickable-row"); // Add clickable row css styles
 
-                                    // Set href as rampDirectionsLink
-                                    txSection.attr("data-url", txOrg.entryLink); // Add data attribute to the row with entryLink url
-                                    txSection.addClass("clickable-row"); // Add clickable row css styles
-                                    txSection.attr("data-url", txOrg.entryLink); // Add data attribute to the row with entryLink url
+                                $("#txSection").append(txSection);
+                                // Append the data values to the table row
+                                $("#txWell-" + tableRow + 1).append("<td>" + txOrg.organizer + "</td>");
+                                $("#txWell-" + tableRow + 1).append("<td>" + txOrg.trail + "</td>");
+                                $("#txWell-" + tableRow + 1).append("<td>" + txOrg.date + "</td>");
+                                $("#txWell-" + tableRow + 1).append("<td>" + txOrg.ramp + "</td>");
 
-                                    $("#txSection").append(txSection);
-                                    // Append the data values to the table row
-                                    $("#txWell-" + tableRow + 1).append("<td>" + txOrg.organizer + "</td>");
-                                    $("#txWell-" + tableRow + 1).append("<td>" + txOrg.trail + "</td>");
-                                    $("#txWell-" + tableRow + 1).append("<td>" + txOrg.date + "</td>");
-                                    $("#txWell-" + tableRow + 1).append("<td>" + txOrg.lake + "</td>");
-                                    $("#txWell-" + tableRow + 1).append("<td>" + txOrg.ramp + "</td>");
-                                
-                                    tableRow++;
-                                }
-                    });
-                            
+                                tableRow++;
+                            }
+                        });
+
                     });
 
-                    // Sort by Date
-                    dateSort = true;
+                    //TxResults Tab
 
+                    sortType = 1;
+
+                    // Flatten our data so it's easier to work with
+                    flattenData(lakeTxResultsData, sortType, function () {
+                        // sort by date when page loads (needs to be changed to be variable);
+                        var newBatch = flatBatch.sort(sort_by('date', sortType, function (a) {
+                            return a.toUpperCase()
+                        }));
+
+                        // display our newly flattened data for the first time (sorted by date);
+                        txBatch = newBatch;
+
+                        txBatch.forEach(function (txOrg, i) {
+
+                            if ((txOrg.lakeID == lakeRoute)) {
+                                // Create the HTML Well (Section) and Add the table content for each reserved table
+                                var txResultsSection = $("<tr>");
+                                txResultsSection.addClass("well");
+                                txResultsSection.attr("id", "txWell-" + tableRow + 1);
+
+                                // Set href as resultsLink
+                                txResultsSection.attr("data-url", txOrg.resultsLink); // Add data attribute to the row with resultsLink url
+                                txResultsSection.addClass("clickable-row-results"); // ADd clickable results row css styles
+
+                                $("#txResultsSection").append(txResultsSection);
+                                // Append the data values to the table row
+                                $("#txWell-" + tableRow + 1).append("<td>" + txOrg.organizer + "</td>");
+                                $("#txWell-" + tableRow + 1).append("<td>" + txOrg.trail + "</td>");
+                                $("#txWell-" + tableRow + 1).append("<td>" + txOrg.date + "</td>");
+                                $("#txWell-" + tableRow + 1).append("<td>" + txOrg.ramp + "</td>");
+
+                                tableRow++;
+                            }
+                        });
+
+                    });
                 });
 
+
+            // Charts tab
 
             // build elevation chart
             buildElevChart(currentLake.data, currentLake);
@@ -1388,4 +1433,15 @@ $(".tab-btn").click(function (event) { // remove active from any .tab-wrapper
     // show associated .tab-wrapper 
     let clickedWrapper = event.target.name;
     $("#" + clickedWrapper).show();
+});
+
+
+// // Capture table row clicks
+$('tbody').on("click", "tr", function () {
+    if ($(this).data("url")) {
+        window.open(
+            $(this).data("url"),
+            '_blank' // <- This is what makes it open in a new window.
+        );
+    }
 });

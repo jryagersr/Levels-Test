@@ -83,7 +83,7 @@ h1, h2, h3 {
     }
 }
 
-/* Home Page Stles */
+/* Home Page Styles */
 
 
 .home-container {
@@ -510,6 +510,18 @@ h1, h2, h3 {
 #adLogoWell, #adTxWell {
     height: auto;
     margin-bottom: 10px;
+}
+
+.clickable-row { 
+    cursor: pointer; 
+    color: rgb(75, 94, 177);
+    text-decoration: underline;
+}
+
+.clickable-row-results {
+    cursor: pointer;
+    color: rgb(107, 0, 0);
+    text-decoration: underline;
 }
 
 .current-wrapper {
