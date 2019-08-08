@@ -35,7 +35,7 @@ module.exports = {
             
             // Set weather
             let today = new Date()
-            let compassSector = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW", "N"];
+            let compassSector = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
             lakeWeather.barometric = data.main.pressure;
             lakeWeather.wxTemp = data.main.temp;
             lakeWeather.humidity = data.main.humidity;

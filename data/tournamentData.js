@@ -10,6 +10,7 @@ module.exports = [
                 {
                     date: "2019-03-30",
                     lake: "Kerr",
+                    lakeID: "kerr",
                     ramp: "Ivy Hill",
                     state: "NC-VA",
                     txDetail: "T1",
@@ -19,6 +20,7 @@ module.exports = [
                 {
                     date: "2019-04-20",
                     lake: "Mayo",
+                    lakeID: "mayo",
                     ramp: "Triple Springs",
                     state: "NC",
                     txDetail: "T2",
@@ -28,6 +30,7 @@ module.exports = [
                 {
                     date: "2019-05-04",
                     lake: "Mayo",
+                    lakeID: "mayo",
                     ramp: "Triple Springs",
                     state: "NC",
                     txDetail: "T3",
@@ -37,6 +40,7 @@ module.exports = [
                 {
                     date: "2019-06-22",
                     lake: "Kerr",
+                    lakeID: "kerr",
                     ramp: "Ivy Hill",
                     state: "NC-VA",
                     txDetail: "T4",
@@ -46,6 +50,7 @@ module.exports = [
                 {
                     date: "2019-10-19",
                     lake: "Mayo",
+                    lakeID: "mayo",
                     ramp: "Triple Springs",
                     state: "NC",
                     txDetail: "Championship",
@@ -64,6 +69,7 @@ module.exports = [
                     {
                         date: "2019-02-02",
                         lake: "Norman",
+                        lakeID: "norman",
                         ramp: "Pinnacle",
                         state: "NC",
                         txDetail: "T1",
@@ -73,6 +79,7 @@ module.exports = [
                     {
                         date: "2019-03-09",
                         lake: "Wylie",
+                        lakeID: "wylie",
                         ramp: "South Point",
                         state: "SC",
                         txDetail: "T2",
@@ -82,6 +89,7 @@ module.exports = [
                     {
                         date: "2019-05-04",
                         lake: "Hickory",
+                        lakeID: "hickory",
                         ramp: "Whittenburg",
                         state: "NC",
                         txDetail: "T3",
@@ -91,6 +99,7 @@ module.exports = [
                     {
                         date: "2019-06-15",
                         lake: "High Rock",
+                        lakeID: "highrock",
                         ramp: "Tamarac",
                         state: "NC",
                         txDetail: "T4",
@@ -100,6 +109,7 @@ module.exports = [
                     {
                         date: "2019-09-28",
                         lake: "Kerr",
+                        lakeID: "kerr",
                         ramp: "Nutbush",
                         state: "NC",
                         txDetail: "Championship",
@@ -116,6 +126,7 @@ module.exports = [
                     {
                         date: "2019-03-16",
                         lake: "Kerr",
+                        lakeID: "kerr",
                         ramp: "NutBush",
                         state: "NC-VA",
                         txDetail: "T1",
@@ -125,6 +136,8 @@ module.exports = [
                     {
                         date: "2019-03-23",
                         lake: "Gaston",
+                        lakeID: "gaston",
+                        lakeID: "gaston",
                         ramp: "Holly Grove",
                         state: "NC-VA",
                         txDetail: "T2",
@@ -134,6 +147,7 @@ module.exports = [
                     {
                         date: "2019-05-18",
                         lake: "Kerr",
+                        lakeID: "kerr",
                         ramp: "NutBush",
                         state: "NC",
                         txDetail: "T3",
@@ -143,6 +157,7 @@ module.exports = [
                     {
                         date: "2019-06-29",
                         lake: "Gaston",
+                        lakeID: "gaston",
                         ramp: "Holly Grove",
                         state: "NC-VA",
                         txDetail: "T4",
@@ -152,6 +167,7 @@ module.exports = [
                     {
                         date: "2019-09-28",
                         lake: "Kerr",
+                        lakeID: "kerr",
                         ramp: "NutBush",
                         state: "NC-VA",
                         txDetail: "2-Day Championship",
@@ -169,6 +185,7 @@ module.exports = [
                 tournaments: [{
                         date: "2019-02-23",
                         lake: "Smith",
+                        lakeID: "smith",
                         ramp: "Smith Dam",
                         state: "AL",
                         txDetail: "",
@@ -178,6 +195,7 @@ module.exports = [
                     {
                         date: "2019-03-23",
                         lake: "Wheeler",
+                        lakeID: "wheeler",
                         ramp: "Ingalls Harbor",
                         state: "AL",
                         txDetail: "",
@@ -187,6 +205,7 @@ module.exports = [
                     {
                         date: "2019-04-27",
                         lake: "Weiss",
+                        lakeID: "weiss",
                         ramp: "Leesburg",
                         state: "AL",
                         txDetail: "",
@@ -196,6 +215,7 @@ module.exports = [
                     {
                         date: "2019-05-11",
                         lake: "Pickwick",
+                        lakeID: "pickwick",
                         ramp: "McFarland",
                         state: "AL",
                         txDetail: "",
@@ -205,6 +225,7 @@ module.exports = [
                     {
                         date: "2019-06-08",
                         lake: "Neely Henry",
+                        lakeID: "neelyhenry",
                         ramp: "Coosa Landing",
                         state: "AL",
                         txDetail: "",
@@ -218,6 +239,7 @@ module.exports = [
                 tournaments: [{
                         date: "2019-02-16",
                         lake: "Martin",
+                        lakeID: "martin",
                         ramp: "Wind Creek SP",
                         state: "AL",
                         txDetail: "",
@@ -227,6 +249,7 @@ module.exports = [
                     {
                         date: "2019-03-30",
                         lake: "Jordan",
+                        lakeID: "jordanal",
                         ramp: "Wetumpka",
                         state: "AL",
                         txDetail: "",
@@ -245,6 +268,7 @@ module.exports = [
                     {
                         date: "2019-05-18",
                         lake: "Lay",
+                        lakeID: "lay",
                         ramp: "Beeswax",
                         state: "AL",
                         txDetail: "",
@@ -254,6 +278,7 @@ module.exports = [
                     {
                         date: "2019-06-15",
                         lake: "Eufaula",
+                        lakeID: "eufaulaal",
                         ramp: "Lakepoint SP",
                         state: "AL",
                         txDetail: "",
@@ -274,6 +299,7 @@ module.exports = [
                 {
                     date: "2019-03-16",
                     lake: "Smith Mtn",
+                    lakeID: "smithmountain",
                     ramp: "Parkway",
                     state: "VA",
                     txDetail: "Anglers Choice",
@@ -283,6 +309,7 @@ module.exports = [
                 {
                     date: "2019-04-06",
                     lake: "Kerr",
+                    lakeID: "kerr",
                     ramp: "Occonneechee",
                     state: "NC-VA",
                     txDetail: "Anglers Choice",
@@ -292,6 +319,7 @@ module.exports = [
                 {
                     date: "2019-04-07",
                     lake: "Kerr",
+                    lakeID: "kerr",
                     ramp: "Occonneechee",
                     state: "NC-VA",
                     txDetail: "Anglers Choice",
@@ -301,6 +329,7 @@ module.exports = [
                 {
                     date: "2019-05-04",
                     lake: "Smith Mtn",
+                    lakeID: "smithmountain",
                     ramp: "Parkway",
                     state: "VA",
                     txDetail: "Anglers Choice",
@@ -310,6 +339,7 @@ module.exports = [
                 {
                     date: "2019-06-08",
                     lake: "Kerr",
+                    lakeID: "kerr",
                     ramp: "Occonneechee",
                     state: "NC-VA",
                     txDetail: "Anglers Choice",
@@ -319,6 +349,7 @@ module.exports = [
                 {
                     date: "2019-10-12",
                     lake: "Kerr",
+                    lakeID: "kerr",
                     ramp: "Occonneechee",
                     state: "NC-VA",
                     txDetail: "2-Day Classic",
@@ -337,6 +368,7 @@ module.exports = [
                 {
                     date: "2019-07-20",
                     lake: "Mayo",
+                    lakeID: "mayo",
                     ramp: "Triple Springs",
                     state: "NC",
                     txDetail: "Anglers Choice",
@@ -346,6 +378,7 @@ module.exports = [
                 {
                     date: "2019-08-03",
                     lake: "Mayo",
+                    lakeID: "mayo",
                     ramp: "Triple Springs",
                     state: "NC",
                     txDetail: "Anglers Choice",
@@ -355,6 +388,7 @@ module.exports = [
                 {
                     date: "2019-08-10",
                     lake: "Kerr",
+                    lakeID: "kerr",
                     ramp: "Ivy Hill",
                     state: "NC-VA",
                     txDetail: "Anglers Choice",
@@ -373,6 +407,7 @@ module.exports = [
                 {
                     date: "2019-06-08",
                     lake: "Kerr",
+                    lakeID: "kerr",
                     ramp: "Ivy Hill",
                     state: "NC-VA",
                     txDetail: "Anglers Choice",
@@ -400,6 +435,7 @@ module.exports = [
                 {
                     date: "2019-11-23",
                     lake: "Neuse River",
+                    lakeID: "neuse",
                     ramp: "Lason Creek",
                     state: "NC",
                     txDetail: "",
@@ -418,6 +454,7 @@ module.exports = [
                 {
                     date: "2020-04-04",
                     lake: "Neuse River",
+                    lakeID: "neuse",
                     ramp: "Lawson Creek",
                     state: "NC",
                     txDetail: "",
@@ -436,6 +473,7 @@ module.exports = [
                 {
                     date: "2020-06-06",
                     lake: "Neuse River",
+                    lakeID: "neuse",
                     ramp: "Lawson Creek",
                     state: "NC",
                     txDetail: "",
@@ -463,6 +501,7 @@ module.exports = [
                 {
                     date: "2020-08-09",
                     lake: "Neuse River",
+                    lakeID: "neuse",
                     ramp: "Lawson Creek",
                     state: "NC",
                     txDetail: "",
@@ -500,6 +539,7 @@ module.exports = [
                 {
                     date: "2019-03-16",
                     lake: "Gaston",
+                    lakeID: "gaston",
                     ramp: "Summit",
                     state: "NC",
                     txDetail: "",
@@ -527,6 +567,7 @@ module.exports = [
                 {
                     date: "2019-05-18",
                     lake: "Kerr",
+                    lakeID: "kerr",
                     ramp: "Flemingtown",
                     state: "NC",
                     txDetail: "",
@@ -536,6 +577,7 @@ module.exports = [
                 {
                     date: "2019-06-15",
                     lake: "Roanoke Rvr",
+                    lakeID: "roanokewill",
                     ramp: "Plymouth",
                     state: "NC",
                     txDetail: "",
@@ -554,6 +596,7 @@ module.exports = [
                 {
                     date: "2019-08-17",
                     lake: "Roanoke Rvr",
+                    lakeID: "roanokewill",
                     ramp: "Plymouth",
                     state: "NC",
                     txDetail: "",
@@ -583,6 +626,7 @@ module.exports = [
                     {
                         date: "2019-06-01",
                         lake: "Kerr",
+                        lakeID: "kerr",
                         ramp: "Nutbush",
                         state: "NC",
                         txDetail: "CATT Championship",
@@ -612,6 +656,7 @@ module.exports = [
                     {
                         date: "2019-08-17",
                         lake: "Anna",
+                        lakeID: "anna",
                         ramp: "Sturgeon Creek",
                         state: "VA",
                         txDetail: "Qualifier 1",
@@ -621,6 +666,7 @@ module.exports = [
                     {
                         date: "2019-09-07",
                         lake: "Anna",
+                        lakeID: "anna",
                         ramp: "Sturgeon Creek",
                         state: "VA",
                         txDetail: "Qualifier 2",
@@ -630,6 +676,7 @@ module.exports = [
                     {
                         date: "2019-09-28",
                         lake: "Anna",
+                        lakeID: "anna",
                         ramp: "Sturgeon Creek",
                         state: "VA",
                         txDetail: "Qualifier 3",
@@ -639,6 +686,7 @@ module.exports = [
                     {
                         date: "2019-11-02",
                         lake: "Anna",
+                        lakeID: "anna",
                         ramp: "Sturgeon Creek",
                         state: "VA",
                         txDetail: "Final",
@@ -663,6 +711,7 @@ module.exports = [
                     {
                         date: "2019-02-16",
                         lake: "Cooper Rvr",
+                        lakeID: "cooperriver",
                         ramp: "Cypress Gardens",
                         state: "SC",
                         txDetail: "Qualifier 2",
@@ -705,6 +754,7 @@ module.exports = [
                     {
                         date: "2019-02-23",
                         lake: "Cooper Rvr",
+                        lakeID: "cooperriver",
                         ramp: "Cypress Gardens",
                         state: "SC",
                         txDetail: "Qualifier 1",
@@ -714,6 +764,7 @@ module.exports = [
                     {
                         date: "2019-03-09",
                         lake: "Cooper Rvr",
+                        lakeID: "cooperriver",
                         ramp: "Cypress Gardens",
                         state: "SC",
                         txDetail: "Qualifier 2",
@@ -723,6 +774,7 @@ module.exports = [
                     {
                         date: "2019-03-23",
                         lake: "Cooper Rvr",
+                        lakeID: "cooperriver",
                         ramp: "Cypress Gardens",
                         state: "SC",
                         txDetail: "Qualifier 3",
@@ -732,6 +784,7 @@ module.exports = [
                     {
                         date: "2019-04-06",
                         lake: "Cooper Rvr",
+                        lakeID: "cooperriver",
                         ramp: "Cypress Gardens",
                         state: "SC",
                         txDetail: "Qualifier 4",
@@ -741,6 +794,7 @@ module.exports = [
                     {
                         date: "2019-04-20",
                         lake: "Cooper Rvr",
+                        lakeID: "cooperriver",
                         ramp: "Cypress Gardens",
                         state: "SC",
                         txDetail: "Qualifier 5",
@@ -750,6 +804,7 @@ module.exports = [
                     {
                         date: "2019-05-04",
                         lake: "Cooper Rvr",
+                        lakeID: "cooperriver",
                         ramp: "Cypress Gardens",
                         state: "SC",
                         txDetail: "Final",
@@ -843,6 +898,7 @@ module.exports = [
                     {
                         date: "2019-03-24",
                         lake: "Gaston",
+                        lakeID: "gaston",
                         ramp: "Summit",
                         state: "NC",
                         txDetail: "Qualifier 1",
@@ -852,6 +908,7 @@ module.exports = [
                     {
                         date: "2019-05-05",
                         lake: "Gaston",
+                        lakeID: "gaston",
                         ramp: "Summit",
                         state: "NC",
                         txDetail: "Qualifier 2",
@@ -861,6 +918,7 @@ module.exports = [
                     {
                         date: "2019-06-30",
                         lake: "Gaston",
+                        lakeID: "gaston",
                         ramp: "Summit",
                         state: "NC",
                         txDetail: "Qualifier 3",
@@ -870,6 +928,7 @@ module.exports = [
                     {
                         date: "2019-08-03",
                         lake: "Gaston",
+                        lakeID: "gaston",
                         ramp: "Summit",
                         state: "NC",
                         txDetail: "Qualifier 4",
@@ -879,6 +938,7 @@ module.exports = [
                     {
                         date: "2019-09-21",
                         lake: "Gaston",
+                        lakeID: "gaston",
                         ramp: "Summit ",
                         state: "NC",
                         txDetail: "Qualifier 5",
@@ -888,6 +948,7 @@ module.exports = [
                     {
                         date: "2019-11-02",
                         lake: "Gaston",
+                        lakeID: "gaston",
                         state: "NC",
                         ramp: "Summit",
                         txDetail: "2 Day Final",
@@ -903,6 +964,7 @@ module.exports = [
                     {
                         date: "2019-03-23",
                         lake: "Hartwell",
+                        lakeID: "hartwell",
                         ramp: "Broyles",
                         state: "SC",
                         txDetail: "Qualifier 1",
@@ -912,6 +974,7 @@ module.exports = [
                     {
                         date: "2019-04-06",
                         lake: "Hartwell",
+                        lakeID: "hartwell",
                         ramp: "Broyles",
                         state: "SC",
                         txDetail: "Qualifier 2",
@@ -921,6 +984,7 @@ module.exports = [
                     {
                         date: "2019-05-11",
                         lake: "Hartwell",
+                        lakeID: "hartwell",
                         ramp: "Broyles",
                         state: "SC",
                         txDetail: "Qualifier 4",
@@ -930,6 +994,7 @@ module.exports = [
                     {
                         date: "2019-06-01",
                         lake: "Hartwell",
+                        lakeID: "hartwell",
                         ramp: "Broyles",
                         state: "SC",
                         txDetail: "Final",
@@ -945,6 +1010,7 @@ module.exports = [
                     {
                         date: "2019-01-19",
                         lake: "Hickory",
+                        lakeID: "hickory",
                         ramp: "Whittenburg",
                         state: "NC",
                         txDetail: "Qualifier 1",
@@ -954,6 +1020,7 @@ module.exports = [
                     {
                         date: "2019-05-11",
                         lake: "Hickory",
+                        lakeID: "hickory",
                         ramp: "Whittenburg",
                         state: "NC",
                         txDetail: "Qualifier 4",
@@ -963,6 +1030,7 @@ module.exports = [
                     {
                         date: "2019-06-22",
                         lake: "Hickory",
+                        lakeID: "hickory",
                         ramp: "Whittenburg",
                         state: "NC",
                         txDetail: "Qualifier 5",
@@ -972,6 +1040,7 @@ module.exports = [
                     {
                         date: "2019-07-13",
                         lake: "Hickory",
+                        lakeID: "hickory",
                         ramp: "Whittenburg",
                         state: "NC",
                         txDetail: "Qualifier 6",
@@ -981,6 +1050,7 @@ module.exports = [
                     {
                         date: "2019-08-17",
                         lake: "Hickory",
+                        lakeID: "hickory",
                         ramp: "Whittenburg",
                         state: "NC",
                         txDetail: "Qualifier 7",
@@ -990,6 +1060,7 @@ module.exports = [
                     {
                         date: "2019-09-14",
                         lake: "Hickory",
+                        lakeID: "hickory",
                         ramp: "Whittenburg",
                         state: "NC",
                         txDetail: "Final",
@@ -1005,6 +1076,7 @@ module.exports = [
                     {
                         date: "2019-03-23",
                         lake: "James Rvr",
+                        lakeID: "jamesriver",
                         ramp: "Riverfront",
                         state: "VA",
                         txDetail: "Gold",
@@ -1014,6 +1086,7 @@ module.exports = [
                     {
                         date: "2019-04-27",
                         lake: "James Rvr",
+                        lakeID: "jamesriver",
                         ramp: "Osborne",
                         state: "VA",
                         txDetail: "Gold",
@@ -1023,6 +1096,7 @@ module.exports = [
                     {
                         date: "2019-05-11",
                         lake: "James Rvr",
+                        lakeID: "jamesriver",
                         ramp: "Riverfront",
                         state: "VA",
                         txDetail: "Gold",
@@ -1032,6 +1106,7 @@ module.exports = [
                     {
                         date: "2019-06-08",
                         lake: "James Rvr",
+                        lakeID: "jamesriver",
                         ramp: "Riverfront",
                         state: "VA",
                         txDetail: "Gold",
@@ -1041,6 +1116,7 @@ module.exports = [
                     {
                         date: "2019-07-13",
                         lake: "James Rvr",
+                        lakeID: "jamesriver",
                         ramp: "Riverfront",
                         state: "VA",
                         txDetail: "Gold",
@@ -1050,6 +1126,7 @@ module.exports = [
                     {
                         date: "2019-08-10",
                         lake: "James Rvr",
+                        lakeID: "jamesriver",
                         ramp: "Riverfront",
                         state: "VA",
                         txDetail: "Gold",
@@ -1059,6 +1136,7 @@ module.exports = [
                     {
                         date: "2019-09-14",
                         lake: "James Rvr",
+                        lakeID: "jamesriver",
                         ramp: "Riverfront",
                         state: "VA",
                         txDetail: "Gold",
@@ -1068,6 +1146,7 @@ module.exports = [
                     {
                         date: "2019-10-05",
                         lake: "James Rvr",
+                        lakeID: "jamesriver",
                         ramp: "Osborne",
                         state: "VA",
                         txDetail: "Final 2-Day",
@@ -1083,6 +1162,7 @@ module.exports = [
                     {
                         date: "2019-02-09",
                         lake: "Kerr",
+                        lakeID: "kerr",
                         ramp: "Occonneechee",
                         state: "NC-VA",
                         txDetail: "Qualifier 1",
@@ -1092,6 +1172,7 @@ module.exports = [
                     {
                         date: "2019-02-24",
                         lake: "Kerr",
+                        lakeID: "kerr",
                         ramp: "Occonneechee",
                         state: "NC",
                         txDetail: "Qualifier 2",
@@ -1101,6 +1182,7 @@ module.exports = [
                     {
                         date: "2019-03-17",
                         lake: "Kerr",
+                        lakeID: "kerr",
                         ramp: "Occonneechee",
                         state: "NC-VA",
                         txDetail: "Gold 3",
@@ -1110,6 +1192,7 @@ module.exports = [
                     {
                         date: "2019-03-31",
                         lake: "Kerr",
+                        lakeID: "kerr",
                         ramp: "Occonneechee",
                         state: "NC-VA",
                         txDetail: "Gold 4",
@@ -1119,6 +1202,7 @@ module.exports = [
                     {
                         date: "2019-04-14",
                         lake: "Kerr",
+                        lakeID: "kerr",
                         ramp: "Occonneechee",
                         state: "NC-VA",
                         txDetail: "Qualifier 5",
@@ -1128,6 +1212,7 @@ module.exports = [
                     {
                         date: "2019-04-28",
                         lake: "Kerr",
+                        lakeID: "kerr",
                         ramp: "Occonneechee",
                         state: "NC",
                         txDetail: "Final",
@@ -1143,6 +1228,7 @@ module.exports = [
                     {
                         date: "2019-09-29",
                         lake: "Kerr",
+                        lakeID: "kerr",
                         ramp: "Occonneechee",
                         state: "NC-VA",
                         txDetail: "Qualifier 1",
@@ -1152,6 +1238,7 @@ module.exports = [
                     {
                         date: "2019-10-27",
                         lake: "Kerr",
+                        lakeID: "kerr",
                         ramp: "Occonneechee",
                         state: "NC",
                         txDetail: "Qualifier 2",
@@ -1161,6 +1248,7 @@ module.exports = [
                     {
                         date: "2019-11-10",
                         lake: "Kerr",
+                        lakeID: "kerr",
                         ramp: "Occonneechee",
                         state: "NC-VA",
                         txDetail: "Qualifier 3",
@@ -1170,6 +1258,7 @@ module.exports = [
                     {
                         date: "2019-11-24",
                         lake: "Kerr",
+                        lakeID: "kerr",
                         ramp: "Occonneechee",
                         state: "NC-VA",
                         txDetail: "Final",
@@ -1185,6 +1274,7 @@ module.exports = [
                     {
                         date: "2019-01-19",
                         lake: "Murray",
+                        lakeID: "murray",
                         ramp: "Dreher",
                         state: "SC",
                         txDetail: "Qualifier 1",
@@ -1194,6 +1284,7 @@ module.exports = [
                     {
                         date: "2019-01-26",
                         lake: "Murray",
+                        lakeID: "murray",
                         ramp: "Dreher",
                         state: "SC",
                         txDetail: "Qualifier 2",
@@ -1203,6 +1294,7 @@ module.exports = [
                     {
                         date: "2019-02-16",
                         lake: "Murray",
+                        lakeID: "murray",
                         ramp: "Dreher",
                         state: "SC",
                         txDetail: "Gold 3",
@@ -1212,6 +1304,7 @@ module.exports = [
                     {
                         date: "2019-02-23",
                         lake: "Murray",
+                        lakeID: "murray",
                         ramp: "Dreher",
                         state: "SC",
                         txDetail: "Gold 4",
@@ -1221,6 +1314,7 @@ module.exports = [
                     {
                         date: "2019-03-02",
                         lake: "Murray",
+                        lakeID: "murray",
                         ramp: "Dreher",
                         state: "SC",
                         txDetail: "Qualifier 5",
@@ -1230,6 +1324,7 @@ module.exports = [
                     {
                         date: "2019-03-16",
                         lake: "Murray",
+                        lakeID: "murray",
                         ramp: "Dreher",
                         state: "SC",
                         txDetail: "Qualifier 6",
@@ -1239,6 +1334,7 @@ module.exports = [
                     {
                         date: "2019-03-23",
                         lake: "Murray",
+                        lakeID: "murray",
                         ramp: "Dreher",
                         state: "SC",
                         txDetail: "Qualifier 7",
@@ -1248,6 +1344,7 @@ module.exports = [
                     {
                         date: "2019-04-06",
                         lake: "Murray",
+                        lakeID: "murray",
                         ramp: "Dreher",
                         state: "SC",
                         txDetail: "Qualifier 8",
@@ -1257,6 +1354,7 @@ module.exports = [
                     {
                         date: "2019-04-13",
                         lake: "Murray",
+                        lakeID: "murray",
                         ramp: "Dreher",
                         state: "SC",
                         txDetail: "Final",
@@ -1272,6 +1370,7 @@ module.exports = [
                     {
                         date: "2019-02-09",
                         lake: "Norman",
+                        lakeID: "norman",
                         ramp: "Pinnacle",
                         state: "NC",
                         txDetail: "Qualifier 1",
@@ -1281,6 +1380,7 @@ module.exports = [
                     {
                         date: "2019-03-02",
                         lake: "Norman",
+                        lakeID: "norman",
                         ramp: "Pinnacle",
                         state: "NC",
                         txDetail: "Qualifier 3",
@@ -1290,6 +1390,7 @@ module.exports = [
                     {
                         date: "2019-04-28",
                         lake: "Norman",
+                        lakeID: "norman",
                         ramp: "Pinnacle",
                         state: "NC",
                         txDetail: "Qualifier 5",
@@ -1299,6 +1400,7 @@ module.exports = [
                     {
                         date: "2019-05-25",
                         lake: "Norman",
+                        lakeID: "norman",
                         ramp: "Pinnacle",
                         state: "NC",
                         txDetail: "Qualifier 8",
@@ -1308,6 +1410,7 @@ module.exports = [
                     {
                         date: "2019-06-15",
                         lake: "Norman",
+                        lakeID: "norman",
                         ramp: "Pinnacle",
                         state: "NC",
                         txDetail: "Qualifier 9",
@@ -1317,6 +1420,7 @@ module.exports = [
                     {
                         date: "2019-07-27",
                         lake: "Norman",
+                        lakeID: "norman",
                         ramp: "Pinnacle",
                         state: "NC",
                         txDetail: "Qualifier 10",
@@ -1326,6 +1430,7 @@ module.exports = [
                     {
                         date: "2019-08-31",
                         lake: "Norman",
+                        lakeID: "norman",
                         ramp: "Pinnacle",
                         state: "NC",
                         txDetail: "Qualifier 11",
@@ -1336,6 +1441,7 @@ module.exports = [
                     {
                         date: "2019-09-07",
                         lake: "Norman",
+                        lakeID: "norman",
                         ramp: "Pinnacle",
                         state: "NC",
                         txDetail: "Final",
@@ -1351,6 +1457,7 @@ module.exports = [
                     {
                         date: "2019-03-09",
                         lake: "Kerr",
+                        lakeID: "kerr",
                         ramp: "Flemingtown",
                         state: "NC-VA",
                         txDetail: "Qualifier 1",
@@ -1360,6 +1467,7 @@ module.exports = [
                     {
                         date: "2019-03-23",
                         lake: "Falls",
+                        lakeID: "falls",
                         ramp: "Ledge Rock",
                         state: "NC",
                         txDetail: "Qualifier 2",
@@ -1368,7 +1476,8 @@ module.exports = [
                     },
                     {
                         date: "2019-04-06",
-                        lake: "Harris",
+                        lake: "Shearon Harris",
+                        lakeID: "shearonharris",
                         ramp: "Crosspoint",
                         state: "NC",
                         txDetail: "Qualifier 3",
@@ -1378,6 +1487,7 @@ module.exports = [
                     {
                         date: "2019-04-28",
                         lake: "Falls",
+                        lakeID: "falls",
                         ramp: "Ledge Rock",
                         state: "NC",
                         txDetail: "Qualifier 4",
@@ -1387,6 +1497,7 @@ module.exports = [
                     {
                         date: "2019-05-18",
                         lake: "Jordan",
+                        lakeID: "jordan",
                         ramp: "Farrington",
                         state: "NC",
                         txDetail: "Qualifier 5",
@@ -1396,6 +1507,7 @@ module.exports = [
                     {
                         date: "2019-06-08",
                         lake: "Kerr",
+                        lakeID: "kerr",
                         ramp: "Flemingtown",
                         state: "NC-VA",
                         txDetail: "Qualifier 6",
@@ -1405,6 +1517,7 @@ module.exports = [
                     {
                         date: "2019-06-29",
                         lake: "Jordan",
+                        lakeID: "jordan",
                         ramp: "Farrington",
                         state: "NC",
                         txDetail: "Final",
@@ -1420,6 +1533,7 @@ module.exports = [
                     {
                         date: "2019-02-09",
                         lake: "Santee Cooper",
+                        lakeID: "santee1",
                         ramp: "John C Land",
                         state: "SC",
                         txDetail: "Qualifier 1",
@@ -1429,6 +1543,7 @@ module.exports = [
                     {
                         date: "2019-02-16",
                         lake: "Santee Cooper",
+                        lakeID: "santee1",
                         ramp: "John C Land",
                         state: "SC",
                         txDetail: "Qualifier 2",
@@ -1438,6 +1553,7 @@ module.exports = [
                     {
                         date: "2019-02-23",
                         lake: "Santee Cooper",
+                        lakeID: "santee1",
                         ramp: "John C Land",
                         state: "SC",
                         txDetail: "Gold 3",
@@ -1447,6 +1563,7 @@ module.exports = [
                     {
                         date: "2019-03-23",
                         lake: "Santee Cooper",
+                        lakeID: "santee1",
                         ramp: "John C Land",
                         state: "SC",
                         txDetail: "Gold 4",
@@ -1456,6 +1573,7 @@ module.exports = [
                     {
                         date: "2019-03-30",
                         lake: "Santee Cooper",
+                        lakeID: "santee1",
                         ramp: "John C Land",
                         state: "SC",
                         txDetail: "Qualifier 5",
@@ -1465,6 +1583,7 @@ module.exports = [
                     {
                         date: "2019-04-13",
                         lake: "Santee Cooper",
+                        lakeID: "santee1",
                         ramp: "John C Land",
                         state: "SC",
                         txDetail: "Gold 6",
@@ -1474,6 +1593,7 @@ module.exports = [
                     {
                         date: "2019-05-04",
                         lake: "Santee Cooper",
+                        lakeID: "santee1",
                         ramp: "John C Land",
                         state: "SC",
                         txDetail: "Qualifier 7",
@@ -1483,6 +1603,7 @@ module.exports = [
                     {
                         date: "2019-05-11",
                         lake: "Santee Cooper",
+                        lakeID: "santee1",
                         ramp: "John C Land",
                         state: "SC",
                         txDetail: "Final",
@@ -1600,6 +1721,7 @@ module.exports = [
                     {
                         date: "2019-02-10",
                         lake: "SML",
+                        lakeID: "smithmountain",
                         ramp: "Parkway",
                         state: "VA",
                         txDetail: "Qualifier 1",
@@ -1609,6 +1731,7 @@ module.exports = [
                     {
                         date: "2019-03-03",
                         lake: "SML",
+                        lakeID: "smithmountain",
                         ramp: "Parkway",
                         state: "VA",
                         txDetail: "Qualifier 2",
@@ -1618,6 +1741,7 @@ module.exports = [
                     {
                         date: "2019-03-31",
                         lake: "SML",
+                        lakeID: "smithmountain",
                         ramp: "Parkway",
                         state: "VA",
                         txDetail: "Qualifier 3",
@@ -1627,6 +1751,7 @@ module.exports = [
                     {
                         date: "2019-04-20",
                         lake: "SML",
+                        lakeID: "smithmountain",
                         ramp: "SML State Park",
                         state: "VA",
                         txDetail: "Final",
@@ -1762,6 +1887,7 @@ module.exports = [
                     {
                         date: "2019-02-16",
                         lake: "Wateree",
+                        lakeID: "wateree",
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Qual 1",
@@ -1771,6 +1897,7 @@ module.exports = [
                     {
                         date: "2019-02-23",
                         lake: "Wateree",
+                        lakeID: "wateree",
                         ramp: "Colonial Creek",
                         state: "SC",
                         txDetail: "Qual 2",
@@ -1780,6 +1907,7 @@ module.exports = [
                     {
                         date: "2019-03-02",
                         lake: "Wateree",
+                        lakeID: "wateree",
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Qual 3",
@@ -1789,6 +1917,7 @@ module.exports = [
                     {
                         date: "2019-03-09",
                         lake: "Wateree",
+                        lakeID: "wateree",
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 4",
@@ -1798,6 +1927,7 @@ module.exports = [
                     {
                         date: "2019-03-16",
                         lake: "Wateree",
+                        lakeID: "wateree",
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 5",
@@ -1807,6 +1937,7 @@ module.exports = [
                     {
                         date: "2019-03-23",
                         lake: "Wateree",
+                        lakeID: "wateree",
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 6",
@@ -1816,6 +1947,7 @@ module.exports = [
                     {
                         date: "2019-03-30",
                         lake: "Wateree",
+                        lakeID: "wateree",
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 7",
@@ -1825,6 +1957,7 @@ module.exports = [
                     {
                         date: "2019-04-06",
                         lake: "Wateree",
+                        lakeID: "wateree",
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 8",
@@ -1834,6 +1967,7 @@ module.exports = [
                     {
                         date: "2019-04-13",
                         lake: "Wateree",
+                        lakeID: "wateree",
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Final",
@@ -1849,6 +1983,7 @@ module.exports = [
                     {
                         date: "2019-05-25",
                         lake: "Wateree",
+                        lakeID: "wateree",
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Q1",
@@ -1858,6 +1993,7 @@ module.exports = [
                     {
                         date: "2019-06-01",
                         lake: "Wateree",
+                        lakeID: "wateree",
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Q2",
@@ -1867,6 +2003,7 @@ module.exports = [
                     {
                         date: "2019-06-08",
                         lake: "Wateree",
+                        lakeID: "wateree",
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Gold 3",
@@ -1876,6 +2013,7 @@ module.exports = [
                     {
                         date: "2019-06-15",
                         lake: "Wateree",
+                        lakeID: "wateree",
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Q4",
@@ -1885,6 +2023,7 @@ module.exports = [
                     {
                         date: "2019-06-22",
                         lake: "Wateree",
+                        lakeID: "wateree",
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Gold 5",
@@ -1894,6 +2033,7 @@ module.exports = [
                     {
                         date: "2019-06-29",
                         lake: "Wateree",
+                        lakeID: "wateree",
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Q6",
@@ -1903,6 +2043,7 @@ module.exports = [
                     {
                         date: "2019-07-13",
                         lake: "Wateree",
+                        lakeID: "wateree",
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Q7",
@@ -1912,6 +2053,7 @@ module.exports = [
                     {
                         date: "2019-07-20",
                         lake: "Wateree",
+                        lakeID: "wateree",
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Final",
@@ -1927,6 +2069,7 @@ module.exports = [
                     {
                         date: "2019-09-28",
                         lake: "Wateree",
+                        lakeID: "wateree",
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Q1",
@@ -1936,6 +2079,7 @@ module.exports = [
                     {
                         date: "2019-10-12",
                         lake: "Wateree",
+                        lakeID: "wateree",
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Gold 2",
@@ -1945,6 +2089,7 @@ module.exports = [
                     {
                         date: "2019-10-19",
                         lake: "Wateree",
+                        lakeID: "wateree",
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Q3",
@@ -1954,6 +2099,7 @@ module.exports = [
                     {
                         date: "2019-10-26",
                         lake: "Wateree",
+                        lakeID: "wateree",
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Gold 4",
@@ -1963,6 +2109,7 @@ module.exports = [
                     {
                         date: "2019-11-09",
                         lake: "Wateree",
+                        lakeID: "wateree",
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Q5",
@@ -1972,6 +2119,7 @@ module.exports = [
                     {
                         date: "2019-11-16",
                         lake: "Wateree",
+                        lakeID: "wateree",
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Final",
@@ -1987,6 +2135,7 @@ module.exports = [
                     {
                         date: "2019-02-09",
                         lake: "Wateree",
+                        lakeID: "wateree",
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 1",
@@ -1996,6 +2145,7 @@ module.exports = [
                     {
                         date: "2019-02-23",
                         lake: "Wateree",
+                        lakeID: "wateree",
                         ramp: "Colonial Creek",
                         state: "SC",
                         txDetail: "Open 2",
@@ -2004,6 +2154,7 @@ module.exports = [
                     }, {
                         date: "2019-03-09",
                         lake: "Wateree",
+                        lakeID: "wateree",
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 3",
@@ -2012,6 +2163,7 @@ module.exports = [
                     }, {
                         date: "2019-03-23",
                         lake: "Wateree",
+                        lakeID: "wateree",
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 4",
@@ -2021,6 +2173,7 @@ module.exports = [
                     {
                         date: "2019-04-06",
                         lake: "Wateree",
+                        lakeID: "wateree",
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 5",
@@ -2030,6 +2183,7 @@ module.exports = [
                     {
                         date: "2019-04-13",
                         lake: "Wateree",
+                        lakeID: "wateree",
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 6",
@@ -2039,6 +2193,7 @@ module.exports = [
                     {
                         date: "2019-05-11",
                         lake: "Wateree",
+                        lakeID: "wateree",
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 7",
@@ -2048,6 +2203,7 @@ module.exports = [
                     {
                         date: "2019-05-25",
                         lake: "Wateree",
+                        lakeID: "wateree",
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 8",
@@ -2057,6 +2213,7 @@ module.exports = [
                     {
                         date: "2019-06-01",
                         lake: "Wateree",
+                        lakeID: "wateree",
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 9",
@@ -2066,6 +2223,7 @@ module.exports = [
                     {
                         date: "2019-06-08",
                         lake: "Wateree",
+                        lakeID: "wateree",
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 10",
@@ -2075,6 +2233,7 @@ module.exports = [
                     {
                         date: "2019-06-15",
                         lake: "Wateree",
+                        lakeID: "wateree",
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 11",
@@ -2084,6 +2243,7 @@ module.exports = [
                     {
                         date: "2019-06-22",
                         lake: "Wateree",
+                        lakeID: "wateree",
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 12",
@@ -2093,6 +2253,7 @@ module.exports = [
                     {
                         date: "2019-07-20",
                         lake: "Wateree",
+                        lakeID: "wateree",
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 13",
@@ -2102,6 +2263,7 @@ module.exports = [
                     {
                         date: "2019-09-28",
                         lake: "Wateree",
+                        lakeID: "wateree",
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 14",
@@ -2111,6 +2273,7 @@ module.exports = [
                     {
                         date: "2019-10-12",
                         lake: "Wateree",
+                        lakeID: "wateree",
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 15",
@@ -2120,6 +2283,7 @@ module.exports = [
                     {
                         date: "2019-10-19",
                         lake: "Wateree",
+                        lakeID: "wateree",
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 16",
@@ -2129,6 +2293,7 @@ module.exports = [
                     {
                         date: "2019-11-09",
                         lake: "Wateree",
+                        lakeID: "wateree",
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Open 17",
@@ -2138,6 +2303,7 @@ module.exports = [
                     {
                         date: "2019-11-16",
                         lake: "Wateree",
+                        lakeID: "wateree",
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "Final",
@@ -2153,6 +2319,7 @@ module.exports = [
                     {
                         date: "2019-02-02",
                         lake: "Wylie",
+                        lakeID: "wylie",
                         ramp: "Buster Boyd",
                         state: "SC",
                         txDetail: "Qualifier 1",
@@ -2162,6 +2329,7 @@ module.exports = [
                     {
                         date: "2019-03-10",
                         lake: "Wylie",
+                        lakeID: "wylie",
                         ramp: "Buster Boyd",
                         state: "NC-SC",
                         txDetail: "Qualifier 2",
@@ -2171,6 +2339,7 @@ module.exports = [
                     {
                         date: "2019-03-30",
                         lake: "Wylie",
+                        lakeID: "wylie",
                         ramp: "Buster Boyd",
                         state: "NC-SC",
                         txDetail: "Qualifier 3",
@@ -2180,6 +2349,7 @@ module.exports = [
                     {
                         date: "2019-04-13",
                         lake: "Wylie",
+                        lakeID: "wylie",
                         ramp: "Buster Boyd",
                         state: "NC-SC",
                         txDetail: "Qualifier 4",
@@ -2198,6 +2368,7 @@ module.exports = [
                     {
                         date: "2019-04-27",
                         lake: "Wylie",
+                        lakeID: "wylie",
                         ramp: "Buster Boyd",
                         state: "NC-SC",
                         txDetail: "Final",
@@ -2213,6 +2384,7 @@ module.exports = [
                     {
                         date: "2019-02-09",
                         lake: "Tillery",
+                        lakeID: "tillery",
                         ramp: "Swift Island",
                         state: "NC",
                         txDetail: "Qualifier 1",
@@ -2222,6 +2394,7 @@ module.exports = [
                     {
                         date: "2019-03-03",
                         lake: "Badin",
+                        lakeID: "badin",
                         ramp: "Alcoa",
                         state: "NC",
                         txDetail: "Qualifier 2",
@@ -2231,6 +2404,7 @@ module.exports = [
                     {
                         date: "2019-03-23",
                         lake: "High Rock",
+                        lakeID: "highrock",
                         ramp: "Tamarac",
                         state: "NC",
                         txDetail: "Qualifier 3",
@@ -2240,6 +2414,7 @@ module.exports = [
                     {
                         date: "2019-04-06",
                         lake: "Tuckertown",
+                        lakeID: "tuckertown",
                         ramp: "Flat Rock",
                         state: "NC",
                         txDetail: "Qualifier 4",
@@ -2249,6 +2424,7 @@ module.exports = [
                     {
                         date: "2019-04-07",
                         lake: "High Rock",
+                        lakeID: "highrock",
                         ramp: "Tamarac",
                         state: "NC",
                         txDetail: "Qualifier 5",
@@ -2258,6 +2434,7 @@ module.exports = [
                     {
                         date: "2019-05-11",
                         lake: "Tuckertown",
+                        lakeID: "tuckertown",
                         ramp: "Flat Rock",
                         state: "NC",
                         txDetail: "Qualifier 6",
@@ -2267,6 +2444,7 @@ module.exports = [
                     {
                         date: "2019-05-18",
                         lake: "High Rock",
+                        lakeID: "highrock",
                         ramp: "Tamarac",
                         state: "NC",
                         txDetail: "Qualifier 7",
@@ -2276,6 +2454,7 @@ module.exports = [
                     {
                         date: "2019-05-25",
                         lake: "High Rock",
+                        lakeID: "highrock",
                         ramp: "Tamarac",
                         state: "NC",
                         txDetail: "Final",
@@ -2291,6 +2470,7 @@ module.exports = [
                     {
                         date: "2019-08-17",
                         lake: "High Rock",
+                        lakeID: "highrock",
                         ramp: "Tamarac",
                         state: "NC",
                         txDetail: "Qualifier 1",
@@ -2300,6 +2480,7 @@ module.exports = [
                     {
                         date: "2019-09-08",
                         lake: "High Rock",
+                        lakeID: "highrock",
                         ramp: "Tamarac",
                         state: "NC",
                         txDetail: "Qualifier 2",
@@ -2309,6 +2490,7 @@ module.exports = [
                     {
                         date: "2019-10-06",
                         lake: "Badin",
+                        lakeID: "badin",
                         ramp: "Circle Drive",
                         state: "NC",
                         txDetail: "Qualifier 3",
@@ -2318,6 +2500,7 @@ module.exports = [
                     {
                         date: "2019-10-19",
                         lake: "Badin",
+                        lakeID: "badin",
                         ramp: "Circle Drive",
                         state: "NC",
                         txDetail: "Qualifier 4",
@@ -2327,6 +2510,7 @@ module.exports = [
                     {
                         date: "2019-11-03",
                         lake: "High Rock",
+                        lakeID: "highrock",
                         ramp: "Tamarac",
                         state: "NC",
                         txDetail: "Qualifier 5",
@@ -2336,6 +2520,7 @@ module.exports = [
                     {
                         date: "2019-11-09",
                         lake: "High Rock",
+                        lakeID: "highrock",
                         ramp: "Tamarac",
                         state: "NC",
                         txDetail: "Qualifier 6",
@@ -2345,6 +2530,7 @@ module.exports = [
                     {
                         date: "2019-11-24",
                         lake: "High Rock",
+                        lakeID: "highrock",
                         ramp: "Tamarac",
                         state: "NC",
                         txDetail: "Final",
@@ -2364,6 +2550,7 @@ module.exports = [
                     {
                         date: "2019-02-02",
                         lake: "Santee",
+                        lakeID: "santee1",
                         ramp: "Blacks Camp",
                         state: "SC",
                         txDetail: "CBC",
@@ -2373,6 +2560,7 @@ module.exports = [
                     {
                         date: "2019-03-02",
                         lake: "Santee Cooper",
+                        lakeID: "santee1",
                         ramp: "John C Land",
                         state: "SC",
                         txDetail: "CBC SC",
@@ -2382,6 +2570,7 @@ module.exports = [
                     {
                         date: "2019-03-30",
                         lake: "Murray",
+                        lakeID: "murray",
                         ramp: "Dreher Island",
                         state: "SC",
                         txDetail: "CBC SC",
@@ -2391,6 +2580,7 @@ module.exports = [
                     {
                         date: "2019-04-27",
                         lake: "Wateree",
+                        lakeID: "wateree",
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "CBC SC",
@@ -2400,6 +2590,7 @@ module.exports = [
                     {
                         date: "2019-10-25",
                         lake: "Santee",
+                        lakeID: "santee1",
                         ramp: "John C Land",
                         state: "SC",
                         txDetail: "CBC SC",
@@ -2415,6 +2606,7 @@ module.exports = [
                     {
                         date: "2019-02-16",
                         lake: "Norman",
+                        lakeID: "norman",
                         ramp: "Pinnacle",
                         state: "NC",
                         txDetail: "CBC NC",
@@ -2424,6 +2616,7 @@ module.exports = [
                     {
                         date: "2019-03-16",
                         lake: "James",
+                        lakeID: "james",
                         ramp: "Black Bear",
                         state: "NC",
                         txDetail: "CBC NC",
@@ -2433,6 +2626,7 @@ module.exports = [
                     {
                         date: "2019-04-20",
                         lake: "Hickory",
+                        lakeID: "hickory",
                         ramp: "Whittenburg",
                         state: "NC",
                         txDetail: "CBC NC",
@@ -2442,6 +2636,7 @@ module.exports = [
                     {
                         date: "2019-05-04",
                         lake: "Kerr",
+                        lakeID: "kerr",
                         ramp: "Nutbush",
                         state: "NC-VA",
                         txDetail: "CBC NC",
@@ -2461,6 +2656,7 @@ module.exports = [
                     {
                         date: "2019-05-10",
                         lake: "Jordan",
+                        lakeID: "jordan",
                         ramp: "New Hope",
                         state: "NC",
                         txDetail: "Warriors On the Water",
@@ -2476,6 +2672,7 @@ module.exports = [
                     {
                         date: "2019-03-16",
                         lake: "Jordan",
+                        lakeID: "jordan",
                         ramp: "Ebenezer",
                         state: "NC",
                         txDetail: "Fishers of Men Open Invitational",
@@ -2491,6 +2688,7 @@ module.exports = [
                     {
                         date: "2019-04-20",
                         lake: "Kerr",
+                        lakeID: "kerr",
                         ramp: "Nutbush",
                         state: "NC-VA",
                         txDetail: "BFCS Combined Boys & Girls Club",
@@ -2506,6 +2704,7 @@ module.exports = [
                     {
                         date: "2019-06-01",
                         lake: "SML",
+                        lakeID: "smithmountain",
                         ramp: "Parkway Marina",
                         state: "VA",
                         txDetail: "Anglers Choice Marine",
@@ -2540,6 +2739,7 @@ module.exports = [
                 {
                     date: "2019-03-30",
                     lake: "Jordan",
+                    lakeID: "jordan",
                     ramp: "Farrington",
                     state: "NC",
                     txDetail: "Bass For Cash Series",
@@ -2549,6 +2749,7 @@ module.exports = [
                 {
                     date: "2019-04-20",
                     lake: "Kerr",
+                    lakeID: "kerr",
                     ramp: "Nutbush",
                     state: "NC-VA",
                     txDetail: "BFCS Combined Boys & Girls Club",
@@ -2558,6 +2759,7 @@ module.exports = [
                 {
                     date: "2019-05-04",
                     lake: "Gaston",
+                    lakeID: "gaston",
                     ramp: "Summit",
                     state: "NC-VA",
                     txDetail: "Bass For Cash Series",
@@ -2568,6 +2770,7 @@ module.exports = [
 
                     date: "2019-06-22",
                     lake: "Falls",
+                    lakeID: "falls",
                     ramp: "Ledge Rock",
                     state: "NC",
                     txDetail: "Bass For Cash Series",
@@ -2577,6 +2780,7 @@ module.exports = [
                 {
                     date: "2019-07-27",
                     lake: "Roanoke Rvr",
+                    lakeID: "roanokewill",
                     ramp: "Plymouth",
                     state: "NC",
                     txDetail: "Bass For Cash Series",
@@ -2613,6 +2817,7 @@ module.exports = [
                 {
                     date: "2019-03-24",
                     lake: "Roanoke",
+                    lakeID: "roanaokewill",
                     ramp: "Water Street",
                     state: "NC",
                     txDetail: "",
@@ -2631,6 +2836,7 @@ module.exports = [
                 {
                     date: "2019-05-19",
                     lake: "Neuse Rvr",
+                    lakeID: "neuse",
                     ramp: "Lawsons Creek",
                     state: "NC",
                     txDetail: "",
@@ -2641,6 +2847,7 @@ module.exports = [
 
                     date: "2019-06-02",
                     lake: "Roanoke Rvr",
+                    lakeID: "roanokewill",
                     ramp: "Water Street",
                     state: "NC",
                     txDetail: "",
@@ -2659,6 +2866,7 @@ module.exports = [
                 {
                     date: "2019-08-04",
                     lake: "Neuse Rvr",
+                    lakeID: "neuse",
                     ramp: "Lawsons Creek",
                     state: "NC",
                     txDetail: "",
@@ -2668,6 +2876,7 @@ module.exports = [
                 {
                     date: "2019-08-31",
                     lake: "Roanoke Rvr",
+                    lakeID: "roanokewill",
                     ramp: "Water Street",
                     state: "NC",
                     txDetail: "2-Day",
@@ -2686,6 +2895,7 @@ module.exports = [
                 tournaments: [{
                         date: "2019-02-23",
                         lake: "Ouachita",
+                        lakeID: "ouachita",
                         ramp: "Mountain Harbor",
                         state: "AR",
                         txDetail: "FLW",
@@ -2695,6 +2905,7 @@ module.exports = [
                     {
                         date: "2019-03-23",
                         lake: "Dardanelle",
+                        lakeID: "dardanelle",
                         ramp: "Lake Dardanelle SP",
                         state: "AR",
                         txDetail: "FLW",
@@ -2704,6 +2915,7 @@ module.exports = [
                     {
                         date: "2019-04-13",
                         lake: "Hamilton",
+                        lakeID: "hamilton",
                         ramp: "Hulsey Hatchery",
                         state: "AR",
                         txDetail: "FLW",
@@ -2713,6 +2925,7 @@ module.exports = [
                     {
                         date: "2019-05-18",
                         lake: "Greers Ferry",
+                        lakeID: "greersferry",
                         ramp: "Devil's Fork",
                         state: "AR",
                         txDetail: "FLW",
@@ -2721,7 +2934,8 @@ module.exports = [
                     },
                     {
                         date: "2019-09-07",
-                        lake: "Lake Dardanelle",
+                        lake: "Dardanelle",
+                        lakeID: "dardanelle",
                         ramp: "Lake Dardanelle SP",
                         state: "AR",
                         txDetail: "FLW",
@@ -2735,6 +2949,7 @@ module.exports = [
                 tournaments: [{
                         date: "2019-03-09",
                         lake: "Martin",
+                        lakeID: "martin",
                         ramp: "Wind Creek",
                         state: "AL",
                         txDetail: "FLW",
@@ -2744,6 +2959,7 @@ module.exports = [
                     {
                         date: "2019-03-23",
                         lake: "Eufaula",
+                        lakeID: "eufaulaal",
                         ramp: "Lakepoint SP",
                         state: "AL",
                         txDetail: "FLW",
@@ -2753,6 +2969,7 @@ module.exports = [
                     {
                         date: "2019-05-11",
                         lake: "Lay",
+                        lakeID: "lay",
                         ramp: "Beeswax",
                         state: "AL",
                         txDetail: "FLW",
@@ -2762,6 +2979,7 @@ module.exports = [
                     {
                         date: "2019-06-29",
                         lake: "Neely Henry",
+                        lakeID: "neelyhenry",
                         ramp: "Coosa",
                         state: "AL",
                         txDetail: "FLW",
@@ -2771,6 +2989,7 @@ module.exports = [
                     {
                         date: "2019-09-28",
                         lake: "Eufaula",
+                        lakeID: "eufaulaal",
                         ramp: "Lakepoint SP",
                         state: "AL",
                         txDetail: "FLW",
@@ -2792,6 +3011,7 @@ module.exports = [
                     },
                     {
                         date: "2019-06-08",
+                        lakeID: "ohiorivertan",
                         lake: "Ohio Rvr",
                         ramp: "Lawrenceburg",
                         state: "IN",
@@ -2811,6 +3031,7 @@ module.exports = [
                     {
                         date: "2019-08-17",
                         lake: "Ohio Rvr",
+                        lakeID: "ohiorivertan",
                         ramp: "Lawrenceburg",
                         state: "IN",
                         txDetail: "FLW",
@@ -2820,6 +3041,7 @@ module.exports = [
                     {
                         date: "2019-09-21",
                         lake: "Mosquito",
+                        lakeID: "mosquito",
                         ramp: "Mosquito Lake SP",
                         state: "OH",
                         txDetail: "FLW",
@@ -2833,6 +3055,7 @@ module.exports = [
                 tournaments: [{
                         date: "2019-02-23",
                         lake: "Lanier",
+                        lakeID: "lanier",
                         ramp: "Laurel Park",
                         state: "GA",
                         txDetail: "FLW",
@@ -2842,6 +3065,7 @@ module.exports = [
                     {
                         date: "2019-03-23",
                         lake: "Oconee",
+                        lakeID: "oconee",
                         ramp: "Sugar Creek",
                         state: "GA",
                         txDetail: "FLW",
@@ -2851,6 +3075,7 @@ module.exports = [
                     {
                         date: "2019-04-13",
                         lake: "Sinclair",
+                        lakeID: "sinclair",
                         ramp: "Dennis Station",
                         state: "GA",
                         txDetail: "FLW",
@@ -2860,6 +3085,7 @@ module.exports = [
                     {
                         date: "2019-06-22",
                         lake: "Eufaula",
+                        lakeID: "eufaulaal",
                         ramp: "Lakepoint SP",
                         state: "AL",
                         txDetail: "FLW",
@@ -2869,6 +3095,7 @@ module.exports = [
                     {
                         date: "2019-09-28",
                         lake: "Lanier",
+                        lakeID: "lanier",
                         ramp: "Laurel Park",
                         state: "GA",
                         txDetail: "FLW",
@@ -2882,6 +3109,7 @@ module.exports = [
                 tournaments: [{
                         date: "2019-02-16",
                         lake: "Guntersville",
+                        lakeID: "guntersville",
                         ramp: "Goose Pond",
                         state: "AL",
                         txDetail: "FLW",
@@ -2891,6 +3119,7 @@ module.exports = [
                     {
                         date: "2019-03-16",
                         lake: "Wheeler",
+                        lakeID: "wheeler",
                         ramp: "Joe Wheeler",
                         state: "AL",
                         txDetail: "FLW",
@@ -2900,6 +3129,7 @@ module.exports = [
                     {
                         date: "2019-04-06",
                         lake: "Lewis Smith",
+                        lakeID: "lewissmith",
                         ramp: "Smith Lake Dam",
                         state: "AL",
                         txDetail: "FLW",
@@ -2909,6 +3139,7 @@ module.exports = [
                     {
                         date: "2019-05-04",
                         lake: "Neeley Henry",
+                        lakeID: "neelyhenry",
                         ramp: "Coosa",
                         state: "AL",
                         txDetail: "FLW",
@@ -2918,6 +3149,7 @@ module.exports = [
                     {
                         date: "2019-09-14",
                         lake: "Guntersville",
+                        lakeID: "guntersville",
                         ramp: "Guntersville SP",
                         state: "AL",
                         txDetail: "FLW",
@@ -2931,6 +3163,7 @@ module.exports = [
                 tournaments: [{
                         date: "2019-01-26",
                         lake: "Toledo Bend",
+                        lakeID: "toledobend",
                         ramp: "Cypress Bend",
                         state: "LA",
                         txDetail: "FLW",
@@ -2939,7 +3172,8 @@ module.exports = [
                     },
                     {
                         date: "2019-03-02",
-                        lake: "Sam Rayburn",
+                        lake: "Rayburn",
+                        lakeID: "rayburn",
                         ramp: "Umphrey",
                         state: "TX",
                         txDetail: "FLW",
@@ -2949,6 +3183,7 @@ module.exports = [
                     {
                         date: "2019-04-13",
                         lake: "Toledo Bend",
+                        lakeID: "toledobend",
                         ramp: "Cypress Bend",
                         state: "LA",
                         txDetail: "FLW",
@@ -2957,7 +3192,8 @@ module.exports = [
                     },
                     {
                         date: "2019-06-08",
-                        lake: "Sam Rayburn",
+                        lake: "Rayburn",
+                        lakeID: "rayburn",
                         ramp: "Umphrey",
                         state: "TX",
                         txDetail: "FLW",
@@ -2966,7 +3202,8 @@ module.exports = [
                     },
                     {
                         date: "2019-09-21",
-                        lake: "Sam Rayburn",
+                        lake: "Rayburn",
+                        lakeID: "rayburn",
                         ramp: "Umphrey",
                         state: "TX",
                         txDetail: "FLW",
@@ -2980,6 +3217,7 @@ module.exports = [
                 tournaments: [{
                         date: "2019-01-26",
                         lake: "Okeechobee",
+                        lakeID: "okeechobee",
                         ramp: "Roland Martin",
                         state: "FL",
                         txDetail: "FLW",
@@ -2989,6 +3227,7 @@ module.exports = [
                     {
                         date: "2019-02-16",
                         lake: "Okeechobee",
+                        lakeID: "okeechobee",
                         ramp: "C.Scott Driver",
                         state: "FL",
                         txDetail: "FLW",
@@ -2998,6 +3237,7 @@ module.exports = [
                     {
                         date: "2019-03-16",
                         lake: "Okeechobee",
+                        lakeID: "okeechobee",
                         ramp: "C.Scott Driver",
                         state: "FL",
                         txDetail: "FLW",
@@ -3007,6 +3247,7 @@ module.exports = [
                     {
                         date: "2019-03-30",
                         lake: "Okeechobee",
+                        lakeID: "okeechobee",
                         ramp: "Roland Martin",
                         state: "FL",
                         txDetail: "FLW",
@@ -3016,6 +3257,7 @@ module.exports = [
                     {
                         date: "2019-09-21",
                         lake: "Okeechobee",
+                        lakeID: "okeechobee",
                         ramp: "Roland Martin",
                         state: "FL",
                         txDetail: "FLW",
@@ -3080,8 +3322,9 @@ module.exports = [
                     {
                         date: "2019-05-04",
                         lake: "Rough River Lake",
+                        lakeID: "rough",
                         ramp: "RR State Park",
-                        state: "IN",
+                        state: "KY",
                         txDetail: "FLW",
                         resultsLink: "https://www.flwfishing.com/results/2019-05-04-rough-river-lake-rescheduled",
                         entryLink: "https://www.flwfishing.com/tournaments/2019-05-04-rough-river-lake-rescheduled"
@@ -3089,6 +3332,7 @@ module.exports = [
                     {
                         date: "2019-06-29",
                         lake: "Monroe",
+                        lakeID: "monroe",
                         ramp: "Cutright",
                         state: "IN",
                         txDetail: "FLW",
@@ -3098,6 +3342,7 @@ module.exports = [
                     {
                         date: "2019-06-30",
                         lake: "Monroe",
+                        lakeID: "monroe",
                         ramp: "Cutright",
                         state: "IN",
                         txDetail: "FLW",
@@ -3129,6 +3374,7 @@ module.exports = [
                 tournaments: [{
                         date: "2019-04-27",
                         lake: "Rend",
+                        lakeID: "rend",
                         ramp: "Wayne Fitzgerall",
                         state: "IL",
                         txDetail: "FLW",
@@ -3147,6 +3393,7 @@ module.exports = [
                     {
                         date: "2019-06-29",
                         lake: "Rend",
+                        lakeID: "rend",
                         ramp: "Wayne Fitzgerall",
                         state: "IL",
                         txDetail: "FLW",
@@ -3180,6 +3427,7 @@ module.exports = [
                     {
                         date: "2019-03-23",
                         lake: "Kentucky-Barkley",
+                        lakeID: "kentucky",
                         ramp: "Kentucky Dam",
                         state: "KY",
                         txDetail: "FLW",
@@ -3189,6 +3437,7 @@ module.exports = [
                     {
                         date: "2019-05-18",
                         lake: "Kentucky-Barkley",
+                        lakeID: "kentucky",
                         ramp: "Moors Resort",
                         state: "KY",
                         txDetail: "FLW",
@@ -3198,6 +3447,7 @@ module.exports = [
                     {
                         date: "2019-06-15",
                         lake: "Kentucky-Barkley",
+                        lakeID: "kentucky",
                         ramp: "Paris Landing",
                         state: "TN",
                         txDetail: "FLW",
@@ -3206,6 +3456,7 @@ module.exports = [
                     }, {
                         date: "2019-06-16",
                         lake: "Kentucky-Barkley",
+                        lakeID: "kentucky",
                         ramp: "Paris Landing",
                         state: "TN",
                         txDetail: "FLW",
@@ -3215,6 +3466,7 @@ module.exports = [
                     {
                         date: "2019-09-14",
                         lake: "Kentucky-Barkley",
+                        lakeID: "kentucky",
                         ramp: "Moors Resort",
                         state: "KY",
                         txDetail: "FLW",
@@ -3228,6 +3480,7 @@ module.exports = [
                 tournaments: [{
                         date: "2019-06-22",
                         lake: "St Clair",
+                        lakeID: "stclair",
                         ramp: "Harley Ensign",
                         state: "MI",
                         txDetail: "FLW",
@@ -3237,6 +3490,7 @@ module.exports = [
                     {
                         date: "2019-07-13",
                         lake: "St Clair",
+                        lakeID: "stclair",
                         ramp: "Harley Ensign",
                         state: "MI",
                         txDetail: "FLW",
@@ -3246,6 +3500,7 @@ module.exports = [
                     {
                         date: "2019-08-03",
                         lake: "St Clair",
+                        lakeID: "stclair",
                         ramp: "Harley Ensign",
                         state: "MI",
                         txDetail: "FLW",
@@ -3277,8 +3532,9 @@ module.exports = [
                 tournaments: [{
                         date: "2019-03-10",
                         lake: "Ross Barnett",
+                        lakeID: "rossbarnett",
                         ramp: "Tommy's",
-                        state: "FL",
+                        state: "MS",
                         txDetail: "FLW",
                         resultsLink: "https://www.flwfishing.com/results/2019-03-10-ross-barnett-rescheduled",
                         entryLink: "https://www.flwfishing.com/tournaments/2019-03-10-ross-barnett-rescheduled"
@@ -3286,8 +3542,9 @@ module.exports = [
                     {
                         date: "2019-04-06",
                         lake: "Pickwick",
+                        lakeID: "pickwick",
                         ramp: "JP Coleman",
-                        state: "FL",
+                        state: "MS",
                         txDetail: "FLW",
                         resultsLink: "https://www.flwfishing.com/results/2019-04-06-pickwick",
                         entryLink: "https://www.flwfishing.com/tournaments/2019-04-06-pickwick"
@@ -3295,8 +3552,9 @@ module.exports = [
                     {
                         date: "2019-05-18",
                         lake: "Pickwick",
+                        lakeID: "pickwick",
                         ramp: "JP Coleman",
-                        state: "FL",
+                        state: "MS",
                         txDetail: "FLW",
                         resultsLink: "https://www.flwfishing.com/results/2019-05-18-pickwick",
                         entryLink: "https://www.flwfishing.com/tournaments/2019-05-18-pickwick"
@@ -3304,8 +3562,9 @@ module.exports = [
                     {
                         date: "2019-06-15",
                         lake: "Ross Barnett",
+                        lakeID: "rossbarnett",
                         ramp: "Tommy's",
-                        state: "FL",
+                        state: "MS",
                         txDetail: "FLW",
                         resultsLink: "https://www.flwfishing.com/results/2019-06-15-ross-barnett",
                         entryLink: "https://www.flwfishing.com/tournaments/2019-06-15-ross-barnett"
@@ -3313,8 +3572,9 @@ module.exports = [
                     {
                         date: "2019-09-28",
                         lake: "Pickwick",
+                        lakeID: "pickwick",
                         ramp: "JP Coleman",
-                        state: "FL",
+                        state: "MS",
                         txDetail: "FLW",
                         resultsLink: "https://www.flwfishing.com/results/2019-09-28-pickwick",
                         entryLink: "https://www.flwfishing.com/tournaments/2019-09-28-pickwick"
@@ -3326,6 +3586,7 @@ module.exports = [
                 tournaments: [{
                         date: "2019-02-23",
                         lake: "Dale Hollow",
+                        lakeID: "dalehollow",
                         ramp: "Star Point",
                         state: "TN",
                         txDetail: "FLW",
@@ -3335,6 +3596,7 @@ module.exports = [
                     {
                         date: "2019-03-16",
                         lake: "Dale Hollow",
+                        lakeID: "dalehollow",
                         ramp: "Star Point",
                         state: "TN",
                         txDetail: "FLW",
@@ -3344,6 +3606,7 @@ module.exports = [
                     {
                         date: "2019-05-04",
                         lake: "Cumberland",
+                        lakeID: "cumberland",
                         ramp: "General Burnside",
                         state: "TN",
                         txDetail: "FLW",
@@ -3362,6 +3625,7 @@ module.exports = [
                     {
                         date: "2019-09-07",
                         lake: "Cherokee",
+                        lakeID: "cherokee",
                         ramp: "County Line Hwy 25",
                         state: "TN",
                         txDetail: "FLW",
@@ -3375,6 +3639,7 @@ module.exports = [
                 tournaments: [{
                         date: "2019-03-09",
                         lake: "Percy Priest",
+                        lakeID: "percypriest",
                         ramp: "Fate Sanders",
                         state: "TN",
                         txDetail: "FLW",
@@ -3384,6 +3649,7 @@ module.exports = [
                     {
                         date: "2019-03-30",
                         lake: "Center Hill",
+                        lakeID: "centerhill",
                         ramp: "Ragland Bottom",
                         state: "TN",
                         txDetail: "FLW",
@@ -3393,6 +3659,7 @@ module.exports = [
                     {
                         date: "2019-05-11",
                         lake: "Tim's Ford",
+                        lakeID: "timsford",
                         ramp: "Tim's Ford BC",
                         state: "TN",
                         txDetail: "FLW",
@@ -3402,6 +3669,7 @@ module.exports = [
                     {
                         date: "2019-06-08",
                         lake: "Old Hickory",
+                        lakeID: "oldhickory",
                         ramp: "Bulls Creek",
                         state: "TN",
                         txDetail: "FLW",
@@ -3411,6 +3679,7 @@ module.exports = [
                     {
                         date: "2019-09-21",
                         lake: "Old Hickory",
+                        lakeID: "oldhickory",
                         ramp: "Bulls Creek",
                         state: "TN",
                         txDetail: "FLW",
@@ -3426,6 +3695,7 @@ module.exports = [
                     {
                         date: "2019-02-23",
                         lake: "Norman",
+                        lakeID: "Norman",
                         ramp: "Pinnacle",
                         state: "NC",
                         txDetail: "FLW",
@@ -3435,6 +3705,7 @@ module.exports = [
                     {
                         date: "2019-03-23",
                         lake: "Wylie",
+                        lakeID: "wylie",
                         ramp: "Buster Boyd",
                         state: "NC",
                         txDetail: "FLW",
@@ -3444,6 +3715,7 @@ module.exports = [
                     {
                         date: "2019-04-27",
                         lake: "Kerr",
+                        lakeID: "kerr",
                         ramp: "Nutbush",
                         state: "NC",
                         txDetail: "FLW",
@@ -3453,6 +3725,7 @@ module.exports = [
                     {
                         date: "2019-06-08",
                         lake: "High Rock",
+                        lakeID: "highrock",
                         ramp: "Tamarac",
                         state: "NC",
                         txDetail: "FLW",
@@ -3462,7 +3735,8 @@ module.exports = [
                     {
                         date: "2019-09-21",
                         lake: "Norman",
-                        ramp: "Pinnacle",
+                        lakeID: "oldhickory",
+                        ramp: "norman",
                         state: "NC",
                         txDetail: "FLW",
                         resultsLink: "https://www.flwfishing.com/results/2019-09-21-norman",
@@ -3493,6 +3767,7 @@ module.exports = [
                     {
                         date: "2019-07-13",
                         lake: "Champlain",
+                        lakeID: "champlain",
                         ramp: "Dock Street Landing",
                         state: "NY",
                         txDetail: "FLW",
@@ -3502,6 +3777,7 @@ module.exports = [
                     {
                         date: "2019-08-03",
                         lake: "Oneida",
+                        lakeID: "onieda",
                         ramp: "Oneida Shores CP",
                         state: "NY",
                         txDetail: "FLW",
@@ -3511,6 +3787,7 @@ module.exports = [
                     {
                         date: "2019-09-14",
                         lake: "1000 Islands",
+                        lakeID: "thousandislands",
                         ramp: "Clayton Village",
                         state: "NY",
                         txDetail: "FLW",
@@ -3533,6 +3810,7 @@ module.exports = [
                     {
                         date: "2019-04-27",
                         lake: "Eufaula",
+                        lakeID: "eufaulaok",
                         ramp: "North Point",
                         state: "OK",
                         txDetail: "FLW",
@@ -3542,6 +3820,7 @@ module.exports = [
                     {
                         date: "2019-04-28",
                         lake: "Eufaula",
+                        lakeID: "eufaulaok",
                         ramp: "North Point",
                         state: "OK",
                         txDetail: "FLW",
@@ -3551,6 +3830,7 @@ module.exports = [
                     {
                         date: "2019-06-22",
                         lake: "Ft Gibson",
+                        lakeID: "ftgibson",
                         ramp: "Taylor's Ferry",
                         state: "OK",
                         txDetail: "FLW",
@@ -3560,6 +3840,7 @@ module.exports = [
                     {
                         date: "2019-09-07",
                         lake: "Grand",
+                        lakeID: "grand",
                         ramp: "Wolf Creek",
                         state: "OK",
                         txDetail: "FLW",
@@ -3576,6 +3857,7 @@ module.exports = [
                     {
                         date: "2019-03-16",
                         lake: "Table Rock",
+                        lakeID: "tablerock",
                         ramp: "TR State Park",
                         state: "MO",
                         txDetail: "FLW",
@@ -3585,6 +3867,7 @@ module.exports = [
                     {
                         date: "2019-05-04",
                         lake: "Stockton",
+                        lakeID: "stockton",
                         ramp: "Ruark Bluff",
                         state: "MO",
                         txDetail: "FLW",
@@ -3593,6 +3876,7 @@ module.exports = [
                     }, {
                         date: "2019-05-18",
                         lake: "Lake of the Ozarks",
+                        lakeID: "lakeoftheozarks",
                         ramp: "Public Beach #2",
                         state: "MO",
                         txDetail: "FLW",
@@ -3602,6 +3886,7 @@ module.exports = [
                     {
                         date: "2019-06-29",
                         lake: "Truman",
+                        lakeID: "truman",
                         ramp: "Long Shoal",
                         state: "MO",
                         txDetail: "FLW",
@@ -3611,6 +3896,7 @@ module.exports = [
                     {
                         date: "2019-09-14",
                         lake: "Lake of the Ozarks",
+                        lakeID: "lakeoftheozarks",
                         ramp: "Public Beach #2",
                         state: "MO",
                         txDetail: "FLW",
@@ -3626,6 +3912,7 @@ module.exports = [
                     {
                         date: "2019-04-13",
                         lake: "Kerr",
+                        lakeID: "kerr",
                         ramp: "Nutbush",
                         state: "NC-VA",
                         txDetail: "FLW",
@@ -3635,6 +3922,7 @@ module.exports = [
                     {
                         date: "2019-05-11",
                         lake: "Smith Mtn",
+                        lakeID: "smithmountain",
                         ramp: "Parkway",
                         state: "VA",
                         txDetail: "FLW",
@@ -3644,6 +3932,7 @@ module.exports = [
                     {
                         date: "2019-06-22",
                         lake: "High Rock",
+                        lakeID: "highrock",
                         ramp: "Tamarac",
                         state: "NC",
                         txDetail: "FLW",
@@ -3653,6 +3942,7 @@ module.exports = [
                     {
                         date: "2019-07-13",
                         lake: "James Rvr",
+                        lakeID: "jamesriver",
                         ramp: "Osborne",
                         state: "VA",
                         txDetail: "FLW",
@@ -3662,6 +3952,7 @@ module.exports = [
                     {
                         date: "2019-09-07",
                         lake: "Smith Mtn",
+                        lakeID: "smithmountain",
                         ramp: "Parkway",
                         state: "VA",
                         txDetail: "FLW",
@@ -3675,6 +3966,7 @@ module.exports = [
                 tournaments: [{
                         date: "2019-02-09",
                         lake: "Keowee",
+                        lakeID: "keowee",
                         ramp: "South Cove",
                         state: "SC",
                         txDetail: "FLW",
@@ -3684,6 +3976,7 @@ module.exports = [
                     {
                         date: "2019-03-02",
                         lake: "Clarks Hill",
+                        lakeID: "clarkshill",
                         ramp: "Wildwood Park",
                         state: "GA",
                         txDetail: "FLW",
@@ -3693,6 +3986,7 @@ module.exports = [
                     {
                         date: "2019-04-06",
                         lake: "Hartwell",
+                        lakeID: "hartwell",
                         ramp: "Tugaloo",
                         state: "GA",
                         txDetail: "FLW",
@@ -3702,6 +3996,7 @@ module.exports = [
                     {
                         date: "2019-05-11",
                         lake: "Hartwell",
+                        lakeID: "hartwell",
                         ramp: "Green Pond",
                         state: "SC",
                         txDetail: "FLW",
@@ -3711,6 +4006,7 @@ module.exports = [
                     {
                         date: "2019-09-14",
                         lake: "Hartwell",
+                        lakeID: "hartwell",
                         ramp: "Green Pond",
                         state: "SC",
                         txDetail: "FLW",
@@ -3726,6 +4022,7 @@ module.exports = [
                     {
                         date: "2019-04-06",
                         lake: "Kerr",
+                        lakeID: "kerr",
                         ramp: "Nutbush",
                         state: "NC-VA",
                         txDetail: "FLW",
@@ -3735,6 +4032,7 @@ module.exports = [
                     {
                         date: "2019-06-29",
                         lake: "Smith Mtn",
+                        lakeID: "smithmountain",
                         ramp: "Parkway",
                         state: "VA",
                         txDetail: "FLW",
@@ -3744,6 +4042,7 @@ module.exports = [
                     {
                         date: "2019-07-27",
                         lake: "Potomac",
+                        lakeID: "potomac",
                         ramp: "Smallwood",
                         state: "MD-VA",
                         txDetail: "FLW",
@@ -3753,6 +4052,7 @@ module.exports = [
                     {
                         date: "2019-08-17",
                         lake: "Potomac",
+                        lakeID: "potomac",
                         ramp: "Smallwood",
                         state: "MD-VA",
                         txDetail: "FLW",
@@ -3762,6 +4062,7 @@ module.exports = [
                     {
                         date: "2019-09-14",
                         lake: "James Rvr",
+                        lakeID: "jamesriver",
                         ramp: "Osborne",
                         state: "VA",
                         txDetail: "FLW",
@@ -3774,6 +4075,7 @@ module.exports = [
                 tournaments: [{
                         date: "2019-02-16",
                         lake: "Hartwell",
+                        lakeID: "hartwell",
                         ramp: "Green Pond",
                         state: "SC",
                         txDetail: "FLW",
@@ -3783,6 +4085,7 @@ module.exports = [
                     {
                         date: "2019-03-09",
                         lake: "Santee Cooper",
+                        lakeID: "Santee1",
                         ramp: "John C Land",
                         state: "SC",
                         txDetail: "FLW",
@@ -3792,6 +4095,7 @@ module.exports = [
                     {
                         date: "2019-03-30",
                         lake: "Clarks Hill",
+                        lakeID: "clarkshill",
                         ramp: "Wildwood Park",
                         state: "SC",
                         txDetail: "FLW",
@@ -3801,6 +4105,7 @@ module.exports = [
                     {
                         date: "2019-05-18",
                         lake: "Wylie",
+                        lakeID: "wylie",
                         ramp: "Buster Boyd",
                         state: "SC",
                         txDetail: "FLW",
@@ -3810,6 +4115,7 @@ module.exports = [
                     {
                         date: "2019-09-28",
                         lake: "Hartwell",
+                        lakeID: "hartwell",
                         ramp: "Green Pond",
                         state: "SC",
                         txDetail: "FLW",
@@ -3831,6 +4137,7 @@ module.exports = [
                     {
                         date: "2019-03-30",
                         lake: "South Holston",
+                        lakeID: "southholston",
                         ramp: "Observation Knob",
                         state: "TN",
                         txDetail: "FLW",
@@ -3840,6 +4147,7 @@ module.exports = [
                     {
                         date: "2019-04-27",
                         lake: "Douglas",
+                        lakeID: "douglas",
                         ramp: "Mountain Cove",
                         state: "TN",
                         txDetail: "FLW",
@@ -3849,6 +4157,7 @@ module.exports = [
                     {
                         date: "2019-05-18",
                         lake: "Cherokee",
+                        lakeID: "cherokee",
                         ramp: "Hamblen",
                         state: "TN",
                         txDetail: "FLW",
@@ -3858,6 +4167,7 @@ module.exports = [
                     {
                         date: "2019-09-14",
                         lake: "Watts Bar",
+                        lakeID: "wattsbar",
                         ramp: "Tom Fuller",
                         state: "TN",
                         txDetail: "FLW",
@@ -3878,7 +4188,8 @@ module.exports = [
 
                     {
                         date: "2019-04-20",
-                        lake: "Harris",
+                        lake: "Shearon Harris",
+                        lakeID: "shearonharris",
                         ramp: "Holleman's",
                         state: "NC",
                         txDetail: "T1",
@@ -3888,6 +4199,7 @@ module.exports = [
                     {
                         date: "2019-05-11",
                         lake: "Kerr",
+                        lakeID: "kerr",
                         ramp: "Henderson Pt",
                         state: "NC-VA",
                         txDetail: "T2",
@@ -3897,6 +4209,7 @@ module.exports = [
                     {
                         date: "2019-06-15",
                         lake: "Falls",
+                        lakeID: "falls",
                         ramp: "Upper Barton's",
                         state: "NC",
                         txDetail: "T3",
@@ -3912,6 +4225,7 @@ module.exports = [
                     {
                         date: "2019-03-23",
                         lake: "Kerr",
+                        lakeID: "kerr",
                         ramp: "Henderson Pt",
                         state: "NC-VA",
                         txDetail: "T1",
@@ -3921,6 +4235,7 @@ module.exports = [
                     {
                         date: "2019-04-06",
                         lake: "Gaston",
+                        lakeID: "gaston",
                         ramp: "Summit",
                         state: "NC-VA",
                         txDetail: "T2",
@@ -3930,6 +4245,7 @@ module.exports = [
                     {
                         date: "2019-04-27",
                         lake: "Mayo",
+                        lakeID: "mayo",
                         ramp: "Triple Springs",
                         state: "NC",
                         txDetail: "T3",
@@ -3939,6 +4255,7 @@ module.exports = [
                     {
                         date: "2019-05-18",
                         lake: "Jordan",
+                        lakeID: "jordan",
                         ramp: "Ebenezer",
                         state: "NC",
                         txDetail: "T4",
@@ -3948,6 +4265,7 @@ module.exports = [
                     {
                         date: "2019-06-15",
                         lake: "Falls",
+                        lakeID: "falls",
                         ramp: "Ledgerock",
                         state: "NC",
                         txDetail: "T5",
@@ -3967,6 +4285,7 @@ module.exports = [
                 {
                     date: "2019-05-22",
                     lake: "Shearon Harris",
+                    lakeID: "shearonharris",
                     ramp: "Crosspoint",
                     state: "NC",
                     txDetail: "",
@@ -3976,6 +4295,7 @@ module.exports = [
                 {
                     date: "2019-05-29",
                     lake: "Shearon Harris",
+                    lakeID: "shearonharris",
                     ramp: "Crosspoint",
                     state: "NC",
                     txDetail: "",
@@ -3984,7 +4304,8 @@ module.exports = [
                 },
                 {
                     date: "2019-06-05",
-                    lake: "Harris",
+                    lake: "Shearon Harris",
+                    lakeID: "shearonharris",
                     ramp: "Crosspoint",
                     state: "NC",
                     txDetail: "",
@@ -3994,6 +4315,7 @@ module.exports = [
                 {
                     date: "2019-06-12",
                     lake: "Shearon Harris",
+                    lakeID: "shearonharris",
                     ramp: "Crosspoint",
                     state: "NC",
                     txDetail: "",
@@ -4003,6 +4325,7 @@ module.exports = [
                 {
                     date: "2019-06-19",
                     lake: "Shearon Harris",
+                    lakeID: "shearonharris",
                     ramp: "Crosspoint",
                     state: "NC",
                     txDetail: "",
@@ -4012,6 +4335,7 @@ module.exports = [
                 {
                     date: "2019-06-26",
                     lake: "Shearon Harris",
+                    lakeID: "shearonharris",
                     ramp: "Crosspoint",
                     state: "NC",
                     txDetail: "",
@@ -4021,6 +4345,7 @@ module.exports = [
                 {
                     date: "2019-07-10",
                     lake: "Shearon Harris",
+                    lakeID: "shearonharris",
                     ramp: "Crosspoint",
                     state: "NC",
                     txDetail: "",
@@ -4030,6 +4355,7 @@ module.exports = [
                 {
                     date: "2019-07-17",
                     lake: "Shearon Harris",
+                    lakeID: "shearonharris",
                     ramp: "Crosspoint",
                     state: "NC",
                     txDetail: "",
@@ -4039,6 +4365,7 @@ module.exports = [
                 {
                     date: "2019-07-24",
                     lake: "Shearon Harris",
+                    lakeID: "shearonharris",
                     ramp: "Crosspoint",
                     state: "NC",
                     txDetail: "",
@@ -4048,6 +4375,7 @@ module.exports = [
                 {
                     date: "2019-07-31",
                     lake: "Shearon Harris",
+                    lakeID: "shearonharris",
                     ramp: "Crosspoint",
                     state: "NC",
                     txDetail: "",
@@ -4057,6 +4385,7 @@ module.exports = [
                 {
                     date: "2019-08-07",
                     lake: "Shearon Harris",
+                    lakeID: "shearonharris",
                     ramp: "Crosspoint",
                     state: "NC",
                     txDetail: "",
@@ -4066,6 +4395,7 @@ module.exports = [
                 {
                     date: "2019-08-14",
                     lake: "Shearon Harris",
+                    lakeID: "shearonharris",
                     ramp: "Crosspoint",
                     state: "NC",
                     txDetail: "",
@@ -4075,6 +4405,7 @@ module.exports = [
                 {
                     date: "2019-08-21",
                     lake: "Shearon Harris",
+                    lakeID: "shearonharris",
                     ramp: "Crosspoint",
                     state: "NC",
                     txDetail: "",
@@ -4084,6 +4415,7 @@ module.exports = [
                 {
                     date: "2019-08-28",
                     lake: "Shearon Harris",
+                    lakeID: "shearonharris",
                     ramp: "Crosspoint",
                     state: "NC",
                     txDetail: "",
@@ -4101,6 +4433,7 @@ module.exports = [
                 tournaments: [{
                         date: "2019-02-23",
                         lake: "Jordan",
+                        lakeID: "jordan",
                         ramp: "Farrington",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
@@ -4110,6 +4443,7 @@ module.exports = [
                     {
                         date: "2019-03-09",
                         lake: "Falls",
+                        lakeID: "falls",
                         ramp: "Ledge Rock",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
@@ -4118,7 +4452,8 @@ module.exports = [
                     },
                     {
                         date: "2019-03-23",
-                        lake: "Harris",
+                        lake: "Shearon Harris",
+                        lakeID: "shearonharris",
                         ramp: "Crosspoint",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
@@ -4128,6 +4463,7 @@ module.exports = [
                     {
                         date: "2019-04-06",
                         lake: "Jordan",
+                        lakeID: "jordan",
                         ramp: "Farrington",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
@@ -4137,6 +4473,7 @@ module.exports = [
                     {
                         date: "2019-05-04",
                         lake: "Kerr",
+                        lakeID: "kerr",
                         ramp: "Flemingtown",
                         state: "NC-VA",
                         txDetail: "Piedmont Bass Classic",
@@ -4146,6 +4483,7 @@ module.exports = [
                     {
                         date: "2019-05-18",
                         lake: "Falls",
+                        lakeID: "falls",
                         ramp: "Ledge Rock",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
@@ -4160,6 +4498,7 @@ module.exports = [
                     {
                         date: "2019-07-13",
                         lake: "Falls",
+                        lakeID: "falls",
                         ramp: "Ledge Rock",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
@@ -4169,6 +4508,7 @@ module.exports = [
                     {
                         date: "2019-07-27",
                         lake: "Jordan",
+                        lakeID: "jordan",
                         ramp: "Farrington",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
@@ -4178,6 +4518,7 @@ module.exports = [
                     {
                         date: "2019-08-10",
                         lake: "Falls",
+                        lakeID: "falls",
                         ramp: "Ledge Rock",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
@@ -4187,6 +4528,7 @@ module.exports = [
                     {
                         date: "2019-08-24",
                         lake: "Jordan",
+                        lakeID: "jordan",
                         ramp: "Farrington",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
@@ -4196,6 +4538,7 @@ module.exports = [
                     {
                         date: "2019-09-07",
                         lake: "Falls",
+                        lakeID: "falls",
                         ramp: "Ledge Rock",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
@@ -4205,6 +4548,7 @@ module.exports = [
                     {
                         date: "2019-09-21",
                         lake: "Kerr",
+                        lakeID: "kerr",
                         ramp: "Flemington",
                         state: "NC-VA",
                         txDetail: "Piedmont Bass Classic",
@@ -4214,6 +4558,7 @@ module.exports = [
                     {
                         date: "2019-10-05",
                         lake: "Shearon Harris",
+                        lakeID: "shearonharris",
                         ramp: "Crosspointe",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
@@ -4223,6 +4568,7 @@ module.exports = [
                     {
                         date: "2019-10-19",
                         lake: "Falls",
+                        lakeID: "falls",
                         ramp: "Ledge Rock",
                         state: "NC",
                         txDetail: "Championship",
@@ -4232,6 +4578,7 @@ module.exports = [
                     {
                         date: "2019-10-26",
                         lake: "Jordan",
+                        lakeID: "jordan",
                         ramp: "Farrington",
                         state: "NC",
                         txDetail: "Championship",
@@ -4250,6 +4597,7 @@ module.exports = [
             tournaments: [{
                     date: "2019-03-02",
                     lake: "Badin",
+                    lakeID: "badin",
                     ramp: "Alcoa Access",
                     state: "NC",
                     txDetail: "Tarheel Bass Series 1",
@@ -4259,6 +4607,7 @@ module.exports = [
                 {
                     date: "2019-04-27",
                     lake: "Norman",
+                    lakeID: "norman",
                     ramp: "Pinnacle",
                     state: "NC",
                     txDetail: "Tarheel Bass Series 2",
@@ -4268,6 +4617,7 @@ module.exports = [
                 {
                     date: "2019-05-18",
                     lake: "High Rock",
+                    lakeID: "highrock",
                     ramp: "Tamarac",
                     state: "NC",
                     txDetail: "Tarheel Bass Series 3",
@@ -4277,6 +4627,7 @@ module.exports = [
                 {
                     date: "2019-06-15",
                     lake: "Falls",
+                    lakeID: "falls",
                     ramp: "Ledge Rock",
                     state: "NC",
                     txDetail: "Tarheel Bass Series 4",
@@ -4293,6 +4644,7 @@ module.exports = [
             tournaments: [{
                     date: "2019-03-02",
                     lake: "Travis",
+                    lakeID: "travis",
                     ramp: "Jones Bros",
                     state: "TX",
                     txDetail: "Texas Team Trail",
@@ -4302,6 +4654,7 @@ module.exports = [
                 {
                     date: "2019-04-06",
                     lake: "Texoma",
+                    lakeID: "texoma",
                     ramp: "Highport",
                     state: "TX",
                     txDetail: "Texas Team Trail",
@@ -4311,6 +4664,7 @@ module.exports = [
                 {
                     date: "2019-05-10",
                     lake: "Rayburn",
+                    lakeID: "rayburn",
                     ramp: "Umphrey",
                     state: "TX",
                     txDetail: "Texas Team Trail",
@@ -4320,6 +4674,7 @@ module.exports = [
                 {
                     date: "2019-05-11",
                     lake: "Rayburn",
+                    lakeID: "rayburn",
                     ramp: "Umphrey",
                     state: "TX",
                     txDetail: "Texas Team Trail",

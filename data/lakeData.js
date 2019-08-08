@@ -4658,7 +4658,7 @@ module.exports = [
         wxTime: "",
     },
     {
-        bodyOfWater: "Misquito Lake", // lake name
+        bodyOfWater: "Mosquito Lake", // lake name
         state: ["Ohio"],
         data: [],
         ccWxData: [],
