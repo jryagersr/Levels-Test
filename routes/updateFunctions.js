@@ -116,7 +116,7 @@ module.exports = {
           db.model("Lake").updateOne({
               'bodyOfWater': bodyOfWater
             }, {
-              $set: {
+              $push: {
                 "ccWxData": wxData
               }
             })
@@ -130,7 +130,7 @@ module.exports = {
 
 
           if (lakeWeather.ccWxData.length > 24)
-          lakeWeather.ccWxData.pop();
+            lakeWeather.ccWxData.pop();
 
           // Get weather forecast data
 

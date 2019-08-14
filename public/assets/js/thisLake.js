@@ -264,6 +264,13 @@ function buildFlowChart(data) {
                 }
             }
         }
+        if ((data[k].flow == "Missing" || data[k].flow == "N/A") && data[k].date !== data[k - 1].date) {
+            labelBatch.push(data[k - 1].date.substring(0, data[k - 1].date.length - 5));
+            dataFlowBatch.push((sumOfFlows / divisor).toFixed(2)); // calculate average
+            sumOfFlows = 0;
+            divisor = 0;
+        }
+
         // when a week of data has been reached stop
         if (labelBatch.length > 6) {
             break;
@@ -483,14 +490,16 @@ function buildHourlyFlowChart(data, lake) {
     for (k; k < data.length; k++) {
         // if we're past the first entry
         if (k > 0) {
-            labelBatch.push(data[k].time.substr(0, data[k].time.length - 9) + data[k].time.substr(data[k].time.length - 2, 2));
-            dataFlowBatch.push((data[k].flow).toFixed(2)); // push elev
+            if (data[k].flow !== "Missing" && data[k].flow !== "N/A") {
+                labelBatch.push(data[k].time.substr(0, data[k].time.length - 9) + data[k].time.substr(data[k].time.length - 2, 2));
+                dataFlowBatch.push((data[k].flow).toFixed(2)); // push elev
 
-            if (data[k].flow > chartMaxFlow) // if value is greater than max, replace max
-                chartMaxFlow = data[k].flow; // update Max Elev average
-            if (data[k].flow < chartMinFlow) // if value is less thank min, replace min
-                chartMinFlow = data[k].flow; // update Min Elev average
+                if (data[k].flow > chartMaxFlow) // if value is greater than max, replace max
+                    chartMaxFlow = data[k].flow; // update Max Elev average
+                if (data[k].flow < chartMinFlow) // if value is less thank min, replace min
+                    chartMinFlow = data[k].flow; // update Min Elev average
 
+            }
         }
         // when a week of data has been reached stop
         if (labelBatch.length > 23) {
@@ -569,7 +578,7 @@ function buildHourlyFlowChart(data, lake) {
     });
 }
 /******************************************************************************************************************/
-// Function to build tempc hart on page
+// Function to build temp chart on page
 function buildTempChart(tempData) {
     $("#tempChart").show();
     // Our data must be parsed into separate flat arrays for the chart
@@ -1257,6 +1266,8 @@ $.ajax({
                 let timestamp = new Date(entry.time);
                 entry.date = timestamp.toLocaleDateString();
                 entry.time = timestamp.toLocaleTimeString();
+                //remove seconds from time
+                entry.time = entry.time.substr(0, entry.time.lastIndexOf(":00")) + entry.time.substr(entry.time.length - 2, 2)
                 if (entry.elev !== "N/A" && entry.elev !== "Missing") {
                     entry.elev = Number(entry.elev);
                 }
@@ -1314,9 +1325,9 @@ $.ajax({
                                 j++;
                                 if (i == 0) {
                                     var weatherSection = $("<tr>");
-                    weatherSection.addClass("well");
-                    weatherSection.attr("id", "weatherWell-" + wxTableRow + 1);
-                    $("#weatherSection").append(weatherSection);
+                                    weatherSection.addClass("well");
+                                    weatherSection.attr("id", "weatherWell-" + wxTableRow + 1);
+                                    $("#weatherSection").append(weatherSection);
                                 }
                                 break;
                             }
