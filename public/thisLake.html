@@ -93,9 +93,9 @@
       <li class="nav-item">
         <button class="tab-btn nav-link" id='chartTabBtn' name="chartTab">Charts</button>
       </li>
-      <!-- <li class="nav-item">
+      <li class="nav-item">
         <button class="tab-btn nav-link" id='weatherTabBtn' name="weatherTab">Wx</button>
-      </li>-->
+      </li>
       <li class="nav-item">
         <button class="tab-btn nav-link" id='txTabBtn' name="txTab">Tx</button>
       </li> 
@@ -205,12 +205,21 @@
 
   <div class="tab-wrapper" id='weatherTab'>
 
-    <div class="chart-container" id="baroChart" style="display:none">
-      <h3><b>Barometric Pressure</b></h3>
-      <canvas id="myBaroChart"></canvas>
+      <h3><b>5 Day / 3 Hour Forecast</b></h3>
+      <table class="table thead-dark table-striped mx-auto">
+        <thead>
+          <tr>
+            <th scope="col">Day</th>
+            <th scope="col">Hour</th>
+            <th scope="col">Cond</th>
+            <th scope="col">Temp</th>
+            <th scope="col">Wind</th>
+          </tr>
+        </thead>
+        <tbody id="weatherSection">
+        </tbody>
+      </table>
     </div>
-    <br>
-  </div>
 
   <div class="tab-wrapper" id='rampsTab'>
 

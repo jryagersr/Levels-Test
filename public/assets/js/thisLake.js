@@ -123,12 +123,12 @@ function buildElevChart(data, lake) {
     dataElevBatch.reverse();
 
     // Set y axis limits for Elev Chart
-    let chartGap = 2;
     let minMaxDiff = chartMaxElev - chartMinElev;
+    let chartGap = (minMaxDiff + 5) * .2;
     if (minMaxDiff < 1) chartGap = minMaxDiff + 1;
-    chartMinElevLimit = Math.round(chartMinElev) - chartGap; // set the chart lower limit
+    chartMinElevLimit = Math.round(chartMinElev) - Math.round(chartGap); // set the chart lower limit
     //if (chartMinElevLimit > lake.normalPool) chartMinElevLimit = lake.normalPool - .5; // make sure normal pool line shows.
-    chartMaxElevLimit = Math.round(chartMaxElev) + chartGap; // set the chart upper limit
+    chartMaxElevLimit = Math.round(chartMaxElev) + Math.round(chartGap); // set the chart upper limit
     //if (chartMaxElevLimit < lake.normalPool) chartMaxElevLimit = lake.normalPool + .5; // make sure normal pool line shows.
 
     var ctx = document.getElementById('myElevChart').getContext('2d');
@@ -391,14 +391,14 @@ function buildRiverChart(data, lake) {
     dataRiverBatch.reverse();
 
     // Set y axis limits for River Chart
-    let chartGap = 2;
+    let chartGap = chartMaxRiver * .2;
     let minMaxDiff = chartMaxRiver - chartMinRiver;
     if (minMaxDiff < 1)
         chartGap = minMaxDiff * 2;
     else chartGap = minMaxDiff / 2;
-    chartMinRiverLimit = Math.round(chartMinRiver - chartGap); // set the chart lower limit
+    chartMinRiverLimit = Math.round(chartMinRiver) - Math.round(chartGap + 1); // set the chart lower limit
     //if (chartMinElevLimit > lake.normalPool) chartMinElevLimit = lake.normalPool - .5; // make sure normal pool line shows.
-    chartMaxRiverLimit = Math.round(chartMaxRiver + chartGap); // set the chart upper limit
+    chartMaxRiverLimit = Math.round(chartMaxRiver) + Math.round(chartGap + 1); // set the chart upper limit
     //if (chartMaxElevLimit < lake.normalPool) chartMaxElevLimit = lake.normalPool + .5; // make sure normal pool line shows.
 
     var ctx = document.getElementById('myRiverChart').getContext('2d');
@@ -502,12 +502,12 @@ function buildHourlyFlowChart(data, lake) {
     dataFlowBatch.reverse();
 
     // Set y axis limits for River Chart
-    let chartGap = 2;
+    let chartGap = chartMaxFlow * .2;
     let minMaxDiff = chartMaxFlow - chartMinFlow;
     if (minMaxDiff < 1) chartGap = minMaxDiff * 2;
-    chartMinFlowLimit = Math.round(chartMinFlow - chartGap); // set the chart lower limit
+    chartMinFlowLimit = 0; // set the chart lower limit
     //if (chartMinElevLimit > lake.normalPool) chartMinElevLimit = lake.normalPool - .5; // make sure normal pool line shows.
-    chartMaxFlowLimit = Math.round(chartMaxFlow + chartGap); // set the chart upper limit
+    chartMaxFlowLimit = Math.round(chartMaxFlow) + Math.round(chartGap); // set the chart upper limit
     //if (chartMaxElevLimit < lake.normalPool) chartMaxElevLimit = lake.normalPool + .5; // make sure normal pool line shows.
 
     var ctx = document.getElementById('myHourlyFlowChart').getContext('2d');
@@ -601,7 +601,7 @@ function buildTempChart(tempData) {
 
         }
         // when a week of data has been reached stop
-        if (labelBatch.length > 23) {
+        if (labelBatch.length > 23 || k > tempData.ccWxData.length - 1) {
             break;
         }
     }
@@ -610,7 +610,6 @@ function buildTempChart(tempData) {
     dataTempBatch.reverse();
 
     // Set y axis limits for Temp Chart
-    let chartGap = 2;
     let minMaxDiff = chartMaxTemp - chartMinTemp;
     if (minMaxDiff < 1) chartGap = minMaxDiff / 2;
     chartMinTempLimit = Math.round(chartMinTemp) - 5; // set the chart lower limit
@@ -710,7 +709,7 @@ function buildHumidityChart(humidityData) {
 
         }
         // when a week of data has been reached stop
-        if (labelBatch.length > 23) {
+        if (labelBatch.length > 23 || k > humidityData.ccWxData.length - 1) {
             break;
         }
     }
@@ -814,7 +813,7 @@ function buildBaroChart(baroData) {
 
         }
         // when a week of data has been reached stop
-        if (labelBatch.length > 23) {
+        if (labelBatch.length > 23 || k > baroData.ccWxData.length - 1) {
             break;
         }
     }
@@ -824,7 +823,6 @@ function buildBaroChart(baroData) {
 
 
     // Set y axis limits for Baro Chart
-    let chartGap = 2;
     let minMaxDiff = chartMaxBaro - chartMinBaro;
     if (minMaxDiff < 1) chartGap = minMaxDiff / 2;
     chartMinBaroLimit = Math.round(chartMinBaro) - 1; // set the chart lower limit
@@ -925,7 +923,7 @@ function buildWindChart(windData) {
 
         }
         // when a day of data has been reached stop
-        if (labelBatch.length > 23) {
+        if (labelBatch.length > 23 || k > windData.ccWxData.length - 1) {
             break;
         }
     }
@@ -935,11 +933,11 @@ function buildWindChart(windData) {
 
 
     // Set y axis limits for Baro Chart
-    let chartGap = 2;
+    let chartGap = chartMaxWind * .2;
     let minMaxDiff = chartMaxWind - chartMinWind;
     if (minMaxDiff < 1) chartGap = minMaxDiff / 2;
     chartMinWindLimit = 0; // set the chart lower limit
-    chartMaxWindLimit = Math.round(chartMaxWind + chartGap + 1); // set the chart upper limit
+    chartMaxWindLimit = Math.round(chartMaxWind) + Math.round(chartGap + 1); // set the chart upper limit
 
     var ctx = document.getElementById('myWindChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
@@ -1031,7 +1029,7 @@ function buildWindDirectionChart(windData) {
 
         }
         // when a week of data has been reached stop
-        if (labelBatch.length > 23) {
+        if (labelBatch.length > 23 || k > windData.ccWxData.length - 1) {
             break;
         }
     }
@@ -1278,6 +1276,67 @@ $.ajax({
                 $("#lakeWell-" + i + 1).append("<td>" + entry.flow + "</td>");
             })
 
+            // Weather Tab (5 Day/3 Hour) Forecast)
+
+            let wxTableRow = 1;
+            let j = 0;
+            let lastForecastDate = "";
+
+            currentLake.wxForecastData.forEach(function (element, i) {
+
+                if ((element !== "undefined")) {
+                    // Create the HTML Well (Section) and Add the table content for each reserved table
+                    var weatherSection = $("<tr>");
+                    weatherSection.addClass("well");
+                    weatherSection.attr("id", "weatherWell-" + wxTableRow + 1);
+                    $("#weatherSection").append(weatherSection);
+
+                    // if the first element or a Day forecast element 
+                    if (i == 0 || typeof currentLake.wxForecastData[i].day == 'number') {
+
+                        // If not the first day, then bump j past the lastday that was displayed so it will not be duped
+                        if (i != 0) {
+                            j++; // increment the for loop counter past the last Day Forecast element
+                            i++; // increment the element counter so the previous Day Forecast does not get re-processed
+                        }
+                        // Append the Days remaining forecast to the well
+                        for (j; j < currentLake.wxForecastData.length; j++) {
+
+                            if (typeof currentLake.wxForecastData[j].day == 'number') {
+
+                                $("#weatherWell-" + wxTableRow + 1).append("<td>" + currentLake.wxForecastData[j].time.substring(11, 5) + "</td>");
+                                $("#weatherWell-" + wxTableRow + 1).append("<td>" + "Forecast" + "</td>");
+                                $("#weatherWell-" + wxTableRow + 1).append("<td>" + currentLake.wxForecastData[j].conditions + "</td>");
+                                $("#weatherWell-" + wxTableRow + 1).append("<td>" + currentLake.wxForecastData[j].high.toFixed(0) + '/' + currentLake.wxForecastData[j].low.toFixed(0) + "</td>");
+                                $("#weatherWell-" + wxTableRow + 1).append("<td>" + Math.round(currentLake.wxForecastData[j].windspeed) + ' ' + currentLake.wxForecastData[j].winddirection + "</td>");
+
+                                wxTableRow++;
+                                j++;
+                                if (i == 0) {
+                                    var weatherSection = $("<tr>");
+                    weatherSection.addClass("well");
+                    weatherSection.attr("id", "weatherWell-" + wxTableRow + 1);
+                    $("#weatherSection").append(weatherSection);
+                                }
+                                break;
+                            }
+                        }
+
+                    }
+                    // If element is a 'Day' data line, do not display a duplicate
+                    if (typeof element.day !== 'number') {
+                        // Append the 3 hour data values to the table row
+                        $("#weatherWell-" + wxTableRow + 1).append("<td>" + "" + "</td>");
+                        $("#weatherWell-" + wxTableRow + 1).append("<td>" + element.time.substr(11, 5) + "</td>");
+                        $("#weatherWell-" + wxTableRow + 1).append("<td>" + element.conditions + "</td>");
+                        $("#weatherWell-" + wxTableRow + 1).append("<td>" + element.temp.toFixed(0) + "</td>");
+                        $("#weatherWell-" + wxTableRow + 1).append("<td>" + Math.round(element.windspeed) + ' ' + element.winddirection + "</td>");
+                    }
+
+                }
+                wxTableRow++;
+            });
+
             //Tx and Tx Results Tabs
 
             // Get Tx data and fill txData Tab
@@ -1303,7 +1362,7 @@ $.ajax({
                             return a.toUpperCase()
                         }));
                         // display our newly flattened data for the first time (sorted by date);
-                        txBatch = newBatch;
+                        let txBatch = newBatch;
 
                         txBatch.forEach(function (txOrg, i) {
 
@@ -1342,7 +1401,7 @@ $.ajax({
                         }));
 
                         // display our newly flattened data for the first time (sorted by date);
-                        txBatch = newBatch;
+                        let txBatch = newBatch;
 
                         txBatch.forEach(function (txOrg, i) {
 
@@ -1350,7 +1409,7 @@ $.ajax({
                                 // Create the HTML Well (Section) and Add the table content for each reserved table
                                 var txResultsSection = $("<tr>");
                                 txResultsSection.addClass("well");
-                                txResultsSection.attr("id", "txWell-" + tableRow + 1);
+                                txResultsSection.attr("id", "txResultsWell-" + tableRow + 1);
 
                                 // Set href as resultsLink
                                 txResultsSection.attr("data-url", txOrg.resultsLink); // Add data attribute to the row with resultsLink url
@@ -1358,10 +1417,10 @@ $.ajax({
 
                                 $("#txResultsSection").append(txResultsSection);
                                 // Append the data values to the table row
-                                $("#txWell-" + tableRow + 1).append("<td>" + txOrg.organizer + "</td>");
-                                $("#txWell-" + tableRow + 1).append("<td>" + txOrg.trail + "</td>");
-                                $("#txWell-" + tableRow + 1).append("<td>" + txOrg.date + "</td>");
-                                $("#txWell-" + tableRow + 1).append("<td>" + txOrg.ramp + "</td>");
+                                $("#txResultsWell-" + tableRow + 1).append("<td>" + txOrg.organizer + "</td>");
+                                $("#txResultsWell-" + tableRow + 1).append("<td>" + txOrg.trail + "</td>");
+                                $("#txResultsWell-" + tableRow + 1).append("<td>" + txOrg.date + "</td>");
+                                $("#txResultsWell-" + tableRow + 1).append("<td>" + txOrg.ramp + "</td>");
 
                                 tableRow++;
                             }
@@ -1403,6 +1462,7 @@ $.ajax({
 
             // Add Windspeed
             buildWindDirectionChart(currentLake);
+
 
             // Hide loading gif
             hideLoader();

@@ -2793,16 +2793,16 @@ module.exports = [
                     ramp: "Pembroke",
                     state: "NC",
                     txDetail: "Bass For Cash Series",
-                    resultsLink: "",
+                    resultsLink: "http://bassforcash.com/2019/08/13/lanier-mullinax-win-4600-at-cypress-landing-pembroke/?fbclid=IwAR2flJRyP3AQ67ARlxzmjSVmFJuA3F7kg9m_rtUFkMvszXEoXhzsjXFPERo",
                     entryLink: "http://bassforcash.com/schedule/"
                 },
                 {
                     date: "2019-09-14",
-                    lake: "TBD",
-                    ramp: "TBD",
+                    lake: "Jordan",
+                    ramp: "Farrington",
                     state: "NC",
                     txDetail: "Super 2-Day",
-                    resultsLink: "",
+                    resultsLink: "http://bassforcash.com/category/bass-for-cash-series/",
                     entryLink: "http://bassforcash.com/schedule/"
                 }
             ]
@@ -4389,17 +4389,7 @@ module.exports = [
                     ramp: "Crosspoint",
                     state: "NC",
                     txDetail: "",
-                    resultsLink: "",
-                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
-                },
-                {
-                    date: "2019-08-14",
-                    lake: "Shearon Harris",
-                    lakeID: "shearonharris",
-                    ramp: "Crosspoint",
-                    state: "NC",
-                    txDetail: "",
-                    resultsLink: "",
+                    resultsLink: "https://www.facebook.com/permalink.php?story_fbid=2861764867230324&id=119889178084587&comment_tracking=%7B%22tn%22%3A%22O%22%7D",
                     entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
                 },
                 {
@@ -4426,9 +4416,65 @@ module.exports = [
         }]
     },
     {
+        organization: "Percy Priest Wildcat",
+        trails: [{
+            trail: "Sat Morn (5:30-10:30)",
+            tournaments: [{
+                    date: "2019-08-17",
+                    lake: "Percy Priest",
+                    lakeID: "percypriest",
+                    ramp: "Jefferson Springs",
+                    state: "TN",
+                    txDetail: "",
+                    resultsLink: "",
+                    entryLink: "/assets/tximages/percypriestsatmorn.png"
+                },
+                {
+                    date: "2019-08-24",
+                    lake: "Percy Priest",
+                    lakeID: "percypriest",
+                    ramp: "Jefferson Springs",
+                    state: "TN",
+                    txDetail: "",
+                    resultsLink: "",
+                    entryLink: "/assets/tximages/percypriestsatmorn.png"
+                },
+                {
+                    date: "2019-08-31",
+                    lake: "Percy Priest",
+                    lakeID: "percypriest",
+                    ramp: "Jefferson Springs",
+                    state: "TN",
+                    txDetail: "",
+                    resultsLink: "",
+                    entryLink: "/assets/tximages/percypriestsatmorn.png"
+                },
+                {
+                    date: "2019-09-07",
+                    lake: "Percy Priest",
+                    lakeID: "percypriest",
+                    ramp: "Jefferson Springs",
+                    state: "TN",
+                    txDetail: "",
+                    resultsLink: "",
+                    entryLink: "/assets/tximages/percypriestsatmorn.png"
+                },
+                {
+                    date: "2019-09-14",
+                    lake: "Percy Priest",
+                    lakeID: "percypriest",
+                    ramp: "Jefferson Springs",
+                    state: "TN",
+                    txDetail: "",
+                    resultsLink: "",
+                    entryLink: "/assets/tximages/percypriestsatmorn.png"
+                }
+            ]
+        }]
+    },
+    {
         organization: "PBC",
-        trails: [
-            {
+        trails: [{
                 trail: "Cashion",
                 tournaments: [{
                         date: "2019-02-23",
@@ -4491,8 +4537,9 @@ module.exports = [
                         entryLink: "http://piedmontbassclassics.com/2019CashionRodsHartsCustomSetsSpringTrailMainPage.html"
                     }
                 ]
-            },{
-                trail: "End of Year",
+            },
+            {
+                trail: "EoY",
                 tournaments: [
 
                     {
@@ -4502,7 +4549,7 @@ module.exports = [
                         ramp: "Ledge Rock",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
-                        resultsLink: "http://piedmontbassclassics.com/713-19PBCResults.html",
+                        resultsLink: "http://piedmontbassclassics.com/713-19EOYResults.html",
                         entryLink: "http://piedmontbassclassics.com/2019CashionEOYMainPage.html"
                     },
                     {
@@ -4512,7 +4559,7 @@ module.exports = [
                         ramp: "Farrington",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
-                        resultsLink: "http://piedmontbassclassics.com/727-19PBCResults.html",
+                        resultsLink: "http://piedmontbassclassics.com/727-19EOYResults.html",
                         entryLink: "http://piedmontbassclassics.com/2019CashionEOYMainPage.html"
                     },
                     {
@@ -4522,7 +4569,7 @@ module.exports = [
                         ramp: "Ledge Rock",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
-                        resultsLink: "http://piedmontbassclassics.com/810-19PBCResults.html",
+                        resultsLink: "http://piedmontbassclassics.com/810-19EOYResults.html",
                         entryLink: "http://piedmontbassclassics.com/2019CashionEOYMainPage.html"
                     },
                     {
@@ -4542,7 +4589,7 @@ module.exports = [
                         ramp: "Ledge Rock",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
-                        resultsLink: "http://piedmontbassclassics.com/97-19PBCResults.html",
+                        resultsLink: "http://piedmontbassclassics.com/97-19EOYResults.html",
                         entryLink: "http://piedmontbassclassics.com/2019CashionEOYMainPage.html"
                     },
                     {
@@ -4552,7 +4599,7 @@ module.exports = [
                         ramp: "Flemington",
                         state: "NC-VA",
                         txDetail: "Piedmont Bass Classic",
-                        resultsLink: "http://piedmontbassclassics.com/921-19PBCResults.html",
+                        resultsLink: "http://piedmontbassclassics.com/921-19EOYResults.html",
                         entryLink: "http://piedmontbassclassics.com/2019CashionEOYMainPage.html"
                     },
                     {
@@ -4562,7 +4609,7 @@ module.exports = [
                         ramp: "Crosspointe",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
-                        resultsLink: "http://piedmontbassclassics.com/105-19PBCResults.html",
+                        resultsLink: "http://piedmontbassclassics.com/105-19EOYResults.html",
                         entryLink: "http://piedmontbassclassics.com/2019CashionEOYMainPage.html"
                     },
                     {
@@ -4572,7 +4619,7 @@ module.exports = [
                         ramp: "Ledge Rock",
                         state: "NC",
                         txDetail: "Championship",
-                        resultsLink: "http://piedmontbassclassics.com/1019-19PBCResults.html",
+                        resultsLink: "http://piedmontbassclassics.com/1019-19EOYResults.html",
                         entryLink: "http://piedmontbassclassics.com/2019CashionEOYMainPage.html"
                     },
                     {
@@ -4582,7 +4629,7 @@ module.exports = [
                         ramp: "Farrington",
                         state: "NC",
                         txDetail: "Championship",
-                        resultsLink: "http://piedmontbassclassics.com/1026819-19PBCResults.html",
+                        resultsLink: "http://piedmontbassclassics.com/1026819-19EOYResults.html",
                         entryLink: "http://piedmontbassclassics.com/2019CashionEOYMainPage.html"
                     }
                 ]

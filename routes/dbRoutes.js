@@ -662,24 +662,7 @@ function updateAllLakes() {
             //  console.log(`${i}. No update needed for ${currentLake.bodyOfWater} (${currentLake.dataSource[0]})`);
           }
 
-          /*//
-          //Retrieve Weather Data 
-          //Weather data URLs
-          let apiKey = "d620419cfbb975f425c6262fefeef8f3";
-          let weatherUrl = "http://api.openweathermap.org/data/2.5/weather?lat=" + currentLake.lat + "&lon=" + currentLake.long + "&units=imperial&APPID=" + apiKey;
-          let forecastUrl = "http://api.openweathermap.org/data/2.5/forecast?lat=" + currentLake.lat + "&lon=" + currentLake.long + "&units=imperial&APPID=" + apiKey;
-
-          /*        //Fetch weather forecast data
-          //Fetch current weather Data       
-          request(forecastUrl, function (error, response, forecast) {
-            if (error) {
-              console.log(error);
-            } else {
-              //process forecast weather data
-            console.log(forecast)
-            }
-          })
-*/
+         
 
           // increment counter
           i++;

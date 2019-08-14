@@ -19,6 +19,9 @@ var LakeSchema = new Schema({
   ccWxData: {
     type: Array
   },
+  wxForecastData: {
+    type: Array
+  },
   refreshInterval: {
     type: Number,
   },

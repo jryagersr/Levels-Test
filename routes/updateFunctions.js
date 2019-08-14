@@ -2,6 +2,7 @@ const db = require("../models")();
 // Import all data source update functions
 
 const weather = require("./updateRoutes/getWeatherData");
+const forecast = require("./updateRoutes/getForecastData");
 var update = require('./updateFunctions');
 
 
@@ -55,10 +56,25 @@ module.exports = {
       // Update the current conditions and forecast for this lake
 
       // Get weather data
+
+
+
+
+
       //if (checkForUpdate(currentLake.lastRefresh, currentLake.refreshInterval, currentLake.data.length)) {
+      //if (checkForUpdate(currentLake.lastRefresh, currentLake.refreshInterval, currentLake.data.length)) {
+
+      // Need to decide when
+
+
       // Get 
-      weather.getWeatherData(currentLake, function (error, lakeWeather) {
-        currentLake = lakeWeather;
+
+
+
+
+
+      weather.getWeatherData(currentLake, function (error, data) {
+        lakeWeather = data;
         let wxData = [];
         let weatherData = false;
         if (error) {
@@ -69,10 +85,12 @@ module.exports = {
             weatherData = true;
 
           } else {
-            console.log(`Data error for weather ${currentLake.bodyOfWater}`);
+            console.log(`Data error for weather ${lakeWeather.bodyOfWater}`);
           }
         }
-        // update the data base
+
+        // update the data base with Current Weather
+        // This is the check to see if we have lake data to update, if not, no weather update either
         if (updateData.length > 0) {
           if (lastRefresh !== UROLdata[0].time.toString()) {
             //console.log(`${bodyOfWater} Updated `)
@@ -83,38 +101,77 @@ module.exports = {
 
           wxData.push({
             time: updateData[0].time,
-            baro: currentLake.barometric,
-            temp: currentLake.wxTemp,
-            humidity: currentLake.humidity,
-            windspeed: currentLake.windSpeed,
-            winddirection: currentLake.windDirection
+            baro: lakeWeather.barometric,
+            temp: lakeWeather.wxTemp,
+            humidity: lakeWeather.humidity,
+            windspeed: lakeWeather.windSpeed,
+            winddirection: lakeWeather.windDirection
           });
+
 
           // push the current conditions into ccWxData[]
 
-          // use updateData to update the lake data
-          db.model("Lake").findOneAndUpdate({
-            "bodyOfWater": bodyOfWater
-          }, {
-            $push: {
-              "ccWxData": {
-                $each: wxData,
-                $sort: {
-                  time: -1
-                },
-                position: 0
+
+          // use updateData to update the current conditions to the database
+          db.model("Lake").updateOne({
+              'bodyOfWater': bodyOfWater
+            }, {
+              $set: {
+                "ccWxData": wxData
               }
-            },
-          }, {
-            upsert: true,
-            useFindAndModify: false,
-            new: true
-          })
-          .exec(function (err, ccWxData) {
-            if (err) {
-              console.log(err);
+            })
+            .exec(function (err, ccWxData) {
+              if (err) {
+                console.log(err);
+              } else {
+                //console.log(wxData)
+              }
+            });
+
+
+          if (lakeWeather.ccWxData.length > 24)
+          lakeWeather.ccWxData.pop();
+
+          // Get weather forecast data
+
+
+
+
+          //if (checkForUpdate(currentLake.lastRefresh, currentLake.refreshInterval, currentLake.data.length)) {
+          // Should be every 180minutes
+
+
+
+
+
+          // Get 
+          forecast.getForecastData(currentLake, function (error, lakeForecast) {
+            let forecastLake = lakeForecast;
+            //let fxData = [];
+            let forecastData = false;
+            if (error) {
+              console.log(`Weather retrieval error (updateFunction) ${error}`)
+              callbackError = true;
             } else {
-              //console.log(wxData)
+
+              if (forecastLake !== 'undefined') {
+                currentLake = forecastLake;
+              }
+              db.model("Lake").updateOne({
+                  'bodyOfWater': bodyOfWater
+                }, {
+                  $set: {
+                    "wxForecastData": currentLake.wxForecastData
+                  }
+                })
+                .exec(function (err, wxForecastData) {
+                  if (err) {
+                    console.log(err);
+                  } else {
+                    //console.log(wxData)
+                  }
+                });
+
             }
           });
 
