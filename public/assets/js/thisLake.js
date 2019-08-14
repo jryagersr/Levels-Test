@@ -198,7 +198,7 @@ function buildElevChart(data, lake) {
                     scaleLabel: {
                         display: true,
                         labelString: 'Feet (MSL)',
-                        fontSize: 20,
+                        fontSize: 14,
                     },
                     ticks: {
                         min: chartMinElevLimit, // Set chart bottom at 1ft less than min elev value
@@ -339,8 +339,8 @@ function buildFlowChart(data) {
                     display: true,
                     scaleLabel: {
                         display: true,
-                        labelString: 'Cubic Feet per Second',
-                        fontSize: 20
+                        labelString: 'Cubic Ft/Second',
+                        fontSize: 14
                     },
                     ticks: {
                         min: chartMinFlowLimit, // Set chart bottom at calculated value
@@ -379,7 +379,7 @@ function buildRiverChart(data, lake) {
     for (k; k < data.length; k++) {
         // if we're past the first entry
         if (k > 0) {
-            labelBatch.push(data[k-1].time.substr(0, data[k-1].time.lastIndexOf(":00")) + data[k-1].time.substr(data[k-1].time.length - 2, 2));
+            labelBatch.push(data[k-1].time.substr(0, data[k-1].time.lastIndexOf(":")) + data[k-1].time.substr(data[k-1].time.length - 2, 2));
             dataRiverBatch.push((data[k - 1].elev).toFixed(2)); // push elev
 
             if (data[k - 1].elev > chartMaxRiver) // if value is greater than max, replace max
@@ -451,7 +451,7 @@ function buildRiverChart(data, lake) {
                     scaleLabel: {
                         display: true,
                         labelString: 'Feet (MSL)',
-                        fontSize: 20,
+                        fontSize: 14,
                     },
                     ticks: {
                         min: chartMinRiverLimit, // Set chart bottom at 1ft less than min elev value
@@ -491,7 +491,7 @@ function buildHourlyFlowChart(data, lake) {
         // if we're past the first entry
         if (k > 0) {
             if (data[k].flow !== "Missing" && data[k].flow !== "N/A") {
-                labelBatch.push(data[k].time.substr(0, data[k].time.lastIndexOf(":00")) + data[k].time.substr(data[k].time.length - 2, 2)); // Remove minutes
+                labelBatch.push(data[k].time.substr(0, data[k].time.lastIndexOf(":")) + data[k].time.substr(data[k].time.length - 2, 2)); // Remove minutes
                 dataFlowBatch.push((data[k].flow).toFixed(2)); // push elev
 
                 if (data[k].flow > chartMaxFlow) // if value is greater than max, replace max
@@ -533,7 +533,7 @@ function buildHourlyFlowChart(data, lake) {
             labels: labelBatch,
             datasets: [{
                 type: 'line',
-                label: "Level",
+                label: "Flow (cfs)",
                 // backgroundColor: 'rgb(179,221,255)',
                 borderColor: 'rgb(0, 140, 255)',
                 data: dataFlowBatch
@@ -560,9 +560,9 @@ function buildHourlyFlowChart(data, lake) {
                 yAxes: [{
                     display: true,
                     scaleLabel: {
-                        display: false,
-                        labelString: 'Cubic Feet per Second',
-                        fontSize: 20,
+                        display: true,
+                        labelString: 'Cubic Ft/Second',
+                        fontSize: 14,
                     },
                     ticks: {
                         min: chartMinFlowLimit, // Set chart bottom at 1ft less than min elev value
@@ -600,7 +600,7 @@ function buildTempChart(tempData) {
     for (k; k < tempData.data.length; k++) {
         // if we're past the first entry
         if (k > 0) {
-            labelBatch.push(tempData.data[k-1].time.substr(0, tempData.data[k-1].time.lastIndexOf(":00")) + tempData.data[k-1].time.substr(tempData.data[k-1].time.length - 2, 2));
+            labelBatch.push(tempData.data[k-1].time.substr(0, tempData.data[k-1].time.lastIndexOf(":")) + tempData.data[k-1].time.substr(tempData.data[k-1].time.length - 2, 2));
             dataTempBatch.push(tempData.ccWxData[k - 1].temp); // push elev
 
             if (tempData.ccWxData[k - 1].temp > chartMaxTemp) // if value is greater than max, replace max
@@ -667,8 +667,8 @@ function buildTempChart(tempData) {
                     display: true,
                     scaleLabel: {
                         display: true,
-                        labelString: 'Degrees Fahrenheit',
-                        fontSize: 20,
+                        labelString: 'Deg Fahrenheit',
+                        fontSize: 14,
                     },
                     ticks: {
                         min: chartMinTempLimit, // Set chart bottom at 1ft less than min elev value
@@ -707,7 +707,7 @@ function buildHumidityChart(humidityData) {
     for (k; k < humidityData.data.length; k++) {
         // if we're past the first entry
         if (k > 0) {
-            labelBatch.push(humidityData.data[k-1].time.substr(0, humidityData.data[k-1].time.lastIndexOf(":00")) + humidityData.data[k-1].time.substr(humidityData.data[k-1].time.length - 2, 2));
+            labelBatch.push(humidityData.data[k-1].time.substr(0, humidityData.data[k-1].time.lastIndexOf(":")) + humidityData.data[k-1].time.substr(humidityData.data[k-1].time.length - 2, 2));
             dataHumidityBatch.push(humidityData.ccWxData[k - 1].humidity); // push elev
 
             if (humidityData.ccWxData[k - 1].humidity > chartMaxHumidity) // if value is greater than max, replace max
@@ -771,8 +771,8 @@ function buildHumidityChart(humidityData) {
                     display: true,
                     scaleLabel: {
                         display: true,
-                        labelString: '% Saturation',
-                        fontSize: 20,
+                        labelString: '% Sat',
+                        fontSize: 14,
                     },
                     ticks: {
                         min: chartMinHumidityLimit, // Set chart bottom at 1ft less than min elev value
@@ -810,7 +810,7 @@ function buildBaroChart(baroData) {
     for (k; k < baroData.data.length; k++) {
         // if we're past the first entry
         if (k > 0) {
-            labelBatch.push(baroData.data[k].time.substr(0, baroData.data[k].time.lastIndexOf(":00")) + baroData.data[k].time.substr(baroData.data[k].time.length - 2, 2));
+            labelBatch.push(baroData.data[k].time.substr(0, baroData.data[k].time.lastIndexOf(":")) + baroData.data[k].time.substr(baroData.data[k].time.length - 2, 2));
             dataBaroBatch.push(baroData.ccWxData[k - 1].baro); // push elev
 
             if (baroData.ccWxData[k - 1].baro > chartMaxBaro) // if value is greater than max, replace max
@@ -879,7 +879,7 @@ function buildBaroChart(baroData) {
                     scaleLabel: {
                         display: true,
                         labelString: 'Pressure mb',
-                        fontSize: 20,
+                        fontSize: 14,
                     },
                     ticks: {
                         min: chartMinBaroLimit, // Set chart bottom at 1ft less than min elev value
@@ -919,7 +919,7 @@ function buildWindChart(windData) {
     for (k; k < windData.data.length; k++) {
         // if we're past the first entry
         if (k > 0) {
-            labelBatch.push(windData.data[k].time.substr(0, windData.data[k].time.lastIndexOf(":00")) + windData.data[k].time.substr(windData.data[k].time.length - 2, 2));
+            labelBatch.push(windData.data[k].time.substr(0, windData.data[k].time.lastIndexOf(":")) + windData.data[k].time.substr(windData.data[k].time.length - 2, 2));
             dataWindBatch.push(windData.ccWxData[k - 1].windspeed); // push wind speeed
 
             if (windData.ccWxData[k - 1].windspeed > chartMaxWind) // if value is greater than max, replace max
@@ -1028,7 +1028,7 @@ function buildWindDirectionChart(windData) {
     for (k; k < windData.data.length; k++) {
         // if we're past the first entry
         if (k > 0) {
-            labelBatch.push(windData.data[k].time.substr(0, windData.data[k].time.lastIndexOf(":00")) + windData.data[k].time.substr(windData.data[k].time.length - 2, 2));
+            labelBatch.push(windData.data[k].time.substr(0, windData.data[k].time.lastIndexOf(":")) + windData.data[k].time.substr(windData.data[k].time.length - 2, 2));
             windDirectionIndex = compassSector.indexOf(windData.ccWxData[k - 1].winddirection);
             dataWindBatch.push(windDirectionIndex); // push wind direction
 
@@ -1262,7 +1262,7 @@ $.ajax({
                 entry.date = timestamp.toLocaleDateString();
                 entry.time = timestamp.toLocaleTimeString();
                 //remove seconds from time
-                entry.time = entry.time.substr(0, entry.time.lastIndexOf(":00")) + entry.time.substr(entry.time.length - 2, 2)
+                entry.time = entry.time.substr(0, entry.time.lastIndexOf(":")) + entry.time.substr(entry.time.length - 2, 2)
                 if (entry.elev !== "N/A" && entry.elev !== "Missing") {
                     entry.elev = Number(entry.elev);
                 }
