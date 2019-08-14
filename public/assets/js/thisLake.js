@@ -379,7 +379,7 @@ function buildRiverChart(data, lake) {
     for (k; k < data.length; k++) {
         // if we're past the first entry
         if (k > 0) {
-            labelBatch.push(data[k - 1].time.substr(0, data[k - 1].time.length - 9) + data[k - 1].time.substr(data[k - 1].time.length - 2, 2));
+            labelBatch.push(data[k-1].time.substr(0, data[k-1].time.lastIndexOf(":00")) + data[k-1].time.substr(data[k-1].time.length - 2, 2));
             dataRiverBatch.push((data[k - 1].elev).toFixed(2)); // push elev
 
             if (data[k - 1].elev > chartMaxRiver) // if value is greater than max, replace max
@@ -491,7 +491,7 @@ function buildHourlyFlowChart(data, lake) {
         // if we're past the first entry
         if (k > 0) {
             if (data[k].flow !== "Missing" && data[k].flow !== "N/A") {
-                labelBatch.push(data[k].time.substr(0, data[k].time.length - 9) + data[k].time.substr(data[k].time.length - 2, 2));
+                labelBatch.push(data[k].time.substr(0, data[k].time.lastIndexOf(":00")) + data[k].time.substr(data[k].time.length - 2, 2)); // Remove minutes
                 dataFlowBatch.push((data[k].flow).toFixed(2)); // push elev
 
                 if (data[k].flow > chartMaxFlow) // if value is greater than max, replace max
@@ -600,7 +600,7 @@ function buildTempChart(tempData) {
     for (k; k < tempData.data.length; k++) {
         // if we're past the first entry
         if (k > 0) {
-            labelBatch.push(tempData.data[k - 1].time.substr(0, tempData.data[k - 1].time.length - 9) + tempData.data[k - 1].time.substr(tempData.data[k - 1].time.length - 2, 2));
+            labelBatch.push(tempData.data[k-1].time.substr(0, tempData.data[k-1].time.lastIndexOf(":00")) + tempData.data[k-1].time.substr(tempData.data[k-1].time.length - 2, 2));
             dataTempBatch.push(tempData.ccWxData[k - 1].temp); // push elev
 
             if (tempData.ccWxData[k - 1].temp > chartMaxTemp) // if value is greater than max, replace max
@@ -708,7 +708,7 @@ function buildHumidityChart(humidityData) {
     for (k; k < humidityData.data.length; k++) {
         // if we're past the first entry
         if (k > 0) {
-            labelBatch.push(humidityData.data[k - 1].time.substr(0, humidityData.data[k - 1].time.length - 9) + humidityData.data[k - 1].time.substr(humidityData.data[k - 1].time.length - 2, 2));
+            labelBatch.push(humidityData.data[k-1].time.substr(0, humidityData.data[k-1].time.lastIndexOf(":00")) + humidityData.data[k-1].time.substr(humidityData.data[k-1].time.length - 2, 2));
             dataHumidityBatch.push(humidityData.ccWxData[k - 1].humidity); // push elev
 
             if (humidityData.ccWxData[k - 1].humidity > chartMaxHumidity) // if value is greater than max, replace max
@@ -812,7 +812,7 @@ function buildBaroChart(baroData) {
     for (k; k < baroData.data.length; k++) {
         // if we're past the first entry
         if (k > 0) {
-            labelBatch.push(baroData.data[k - 1].time.substr(0, baroData.data[k - 1].time.length - 9) + baroData.data[k - 1].time.substr(baroData.data[k - 1].time.length - 2, 2));
+            labelBatch.push(baroData.data[k].time.substr(0, baroData.data[k].time.lastIndexOf(":00")) + baroData.data[k].time.substr(baroData.data[k].time.length - 2, 2));
             dataBaroBatch.push(baroData.ccWxData[k - 1].baro); // push elev
 
             if (baroData.ccWxData[k - 1].baro > chartMaxBaro) // if value is greater than max, replace max
@@ -922,7 +922,7 @@ function buildWindChart(windData) {
     for (k; k < windData.data.length; k++) {
         // if we're past the first entry
         if (k > 0) {
-            labelBatch.push(windData.data[k - 1].time.substr(0, windData.data[k - 1].time.length - 9) + windData.data[k - 1].time.substr(windData.data[k - 1].time.length - 2, 2));
+            labelBatch.push(windData.data[k].time.substr(0, windData.data[k].time.lastIndexOf(":00")) + windData.data[k].time.substr(windData.data[k].time.length - 2, 2));
             dataWindBatch.push(windData.ccWxData[k - 1].windspeed); // push wind speeed
 
             if (windData.ccWxData[k - 1].windspeed > chartMaxWind) // if value is greater than max, replace max
@@ -1032,7 +1032,7 @@ function buildWindDirectionChart(windData) {
     for (k; k < windData.data.length; k++) {
         // if we're past the first entry
         if (k > 0) {
-            labelBatch.push(windData.data[k - 1].time.substr(0, windData.data[k - 1].time.length - 9) + windData.data[k - 1].time.substr(windData.data[k - 1].time.length - 2, 2));
+            labelBatch.push(windData.data[k].time.substr(0, windData.data[k].time.lastIndexOf(":00")) + windData.data[k].time.substr(windData.data[k].time.length - 2, 2));
             windDirectionIndex = compassSector.indexOf(windData.ccWxData[k - 1].winddirection);
             dataWindBatch.push(windDirectionIndex); // push wind direction
 
