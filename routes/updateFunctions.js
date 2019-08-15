@@ -109,6 +109,11 @@ module.exports = {
           });
 
 
+          // if there are 24 in ccWxData, pop one off
+          if (lakeWeather.ccWxData.length > 23)
+            lakeWeather.ccWxData.pop();
+
+
           // push the current conditions into ccWxData[]
 
 
@@ -128,9 +133,6 @@ module.exports = {
               }
             });
 
-
-          if (lakeWeather.ccWxData.length > 24)
-            lakeWeather.ccWxData.pop();
 
           // Get weather forecast data
 

@@ -616,6 +616,7 @@ function buildTempChart(tempData) {
     }
 
     labelBatch.reverse();
+    dataTempBatch.reverse();
 
     // Set y axis limits for Temp Chart
     let minMaxDiff = chartMaxTemp - chartMinTemp;
@@ -723,6 +724,7 @@ function buildHumidityChart(humidityData) {
     }
 
     labelBatch.reverse();
+    dataHumidityBatch.reverse();
 
     // Set y axis limits for Temp Chart
     //if (chartMaxElevLimit < lake.normalPool) chartMaxElevLimit = lake.normalPool + .5; // make sure normal pool line shows.
@@ -826,6 +828,7 @@ function buildBaroChart(baroData) {
     }
 
     labelBatch.reverse();
+    dataBaroBatch.reverse();
 
 
     // Set y axis limits for Baro Chart
@@ -935,6 +938,7 @@ function buildWindChart(windData) {
     }
 
     labelBatch.reverse();
+    dataWindBatch.reverse();
 
 
     // Set y axis limits for Baro Chart
@@ -1040,6 +1044,7 @@ function buildWindDirectionChart(windData) {
     }
 
     labelBatch.reverse();
+    dataWindBatch.reverse();
 
     var ctx = document.getElementById('myWindDirectionChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
