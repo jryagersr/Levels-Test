@@ -511,9 +511,9 @@ function buildHourlyFlowChart(data, lake) {
     dataFlowBatch.reverse();
 
     // Set y axis limits for River Chart
-    let chartGap = chartMaxFlow * .2;
+    let chartGap = (chartMaxFlow * .2) + 1;
     let minMaxDiff = chartMaxFlow - chartMinFlow;
-    if (minMaxDiff < 1) chartGap = minMaxDiff * 2;
+    if (minMaxDiff < 1 && minMaxDiff !== 0) chartGap = minMaxDiff * 2;
     chartMinFlowLimit = 0; // set the chart lower limit
     //if (chartMinElevLimit > lake.normalPool) chartMinElevLimit = lake.normalPool - .5; // make sure normal pool line shows.
     chartMaxFlowLimit = Math.round(chartMaxFlow) + Math.round(chartGap); // set the chart upper limit
@@ -600,7 +600,7 @@ function buildTempChart(tempData) {
     for (k; k < tempData.data.length; k++) {
         // if we're past the first entry
         if (k > 0) {
-            labelBatch.push(tempData.data[k-1].time.substr(0, tempData.data[k-1].time.lastIndexOf(":")) + tempData.data[k-1].time.substr(tempData.data[k-1].time.length - 2, 2));
+            labelBatch.push(tempData.ccWxData[k-1].time);
             dataTempBatch.push(tempData.ccWxData[k - 1].temp); // push elev
 
             if (tempData.ccWxData[k - 1].temp > chartMaxTemp) // if value is greater than max, replace max
@@ -708,7 +708,7 @@ function buildHumidityChart(humidityData) {
     for (k; k < humidityData.data.length; k++) {
         // if we're past the first entry
         if (k > 0) {
-            labelBatch.push(humidityData.data[k-1].time.substr(0, humidityData.data[k-1].time.lastIndexOf(":")) + humidityData.data[k-1].time.substr(humidityData.data[k-1].time.length - 2, 2));
+            labelBatch.push(humidityData.ccWxData[k-1].time);
             dataHumidityBatch.push(humidityData.ccWxData[k - 1].humidity); // push elev
 
             if (humidityData.ccWxData[k - 1].humidity > chartMaxHumidity) // if value is greater than max, replace max
@@ -812,7 +812,7 @@ function buildBaroChart(baroData) {
     for (k; k < baroData.data.length; k++) {
         // if we're past the first entry
         if (k > 0) {
-            labelBatch.push(baroData.data[k].time.substr(0, baroData.data[k].time.lastIndexOf(":")) + baroData.data[k].time.substr(baroData.data[k].time.length - 2, 2));
+            labelBatch.push(baroData.ccWxData[k-1].time);
             dataBaroBatch.push(baroData.ccWxData[k - 1].baro); // push elev
 
             if (baroData.ccWxData[k - 1].baro > chartMaxBaro) // if value is greater than max, replace max
@@ -922,7 +922,7 @@ function buildWindChart(windData) {
     for (k; k < windData.data.length; k++) {
         // if we're past the first entry
         if (k > 0) {
-            labelBatch.push(windData.data[k].time.substr(0, windData.data[k].time.lastIndexOf(":")) + windData.data[k].time.substr(windData.data[k].time.length - 2, 2));
+            labelBatch.push(windData.ccWxData[k].time);
             dataWindBatch.push(windData.ccWxData[k - 1].windspeed); // push wind speeed
 
             if (windData.ccWxData[k - 1].windspeed > chartMaxWind) // if value is greater than max, replace max
@@ -932,7 +932,7 @@ function buildWindChart(windData) {
 
         }
         // when a day of data has been reached stop
-        if (labelBatch.length > 23 || k > windData.ccWxData.length - 1) {
+        if (labelBatch.length > 23 || k > windData.ccWxData.length - 2) {
             break;
         }
     }
@@ -991,7 +991,7 @@ function buildWindChart(windData) {
                     scaleLabel: {
                         display: true,
                         labelString: 'MPH',
-                        fontSize: 20,
+                        fontSize: 14,
                     },
                     ticks: {
                         min: chartMinWindLimit, // Set chart bottom 
@@ -1032,13 +1032,13 @@ function buildWindDirectionChart(windData) {
     for (k; k < windData.data.length; k++) {
         // if we're past the first entry
         if (k > 0) {
-            labelBatch.push(windData.data[k].time.substr(0, windData.data[k].time.lastIndexOf(":")) + windData.data[k].time.substr(windData.data[k].time.length - 2, 2));
+            labelBatch.push(windData.ccWxData[k].time);
             windDirectionIndex = compassSector.indexOf(windData.ccWxData[k - 1].winddirection);
             dataWindBatch.push(windDirectionIndex); // push wind direction
 
         }
         // when a week of data has been reached stop
-        if (labelBatch.length > 23 || k > windData.ccWxData.length - 1) {
+        if (labelBatch.length > 23 || k > windData.ccWxData.length - 2) {
             break;
         }
     }
@@ -1090,7 +1090,7 @@ function buildWindDirectionChart(windData) {
                     scaleLabel: {
                         display: true,
                         labelString: 'Direction',
-                        fontSize: 20,
+                        fontSize: 14,
                     },
                     ticks: {
                         // Include a dollar sign in the ticks
