@@ -600,7 +600,7 @@ function buildTempChart(tempData) {
     for (k; k < tempData.data.length; k++) {
         // if we're past the first entry
         if (k > 0) {
-            labelBatch.push(tempData.ccWxData[k-1].time);
+            labelBatch.push(tempData.ccWxData[k - 1].time);
             dataTempBatch.push(tempData.ccWxData[k - 1].temp); // push elev
 
             if (tempData.ccWxData[k - 1].temp > chartMaxTemp) // if value is greater than max, replace max
@@ -922,7 +922,7 @@ function buildWindChart(windData) {
     for (k; k < windData.data.length; k++) {
         // if we're past the first entry
         if (k > 0) {
-            labelBatch.push(windData.ccWxData[k].time);
+            labelBatch.push(windData.ccWxData[k - 1].time);
             dataWindBatch.push(windData.ccWxData[k - 1].windspeed); // push wind speeed
 
             if (windData.ccWxData[k - 1].windspeed > chartMaxWind) // if value is greater than max, replace max
@@ -1032,7 +1032,7 @@ function buildWindDirectionChart(windData) {
     for (k; k < windData.data.length; k++) {
         // if we're past the first entry
         if (k > 0) {
-            labelBatch.push(windData.ccWxData[k].time);
+            labelBatch.push(windData.ccWxData[k -1 ].time);
             windDirectionIndex = compassSector.indexOf(windData.ccWxData[k - 1].winddirection);
             dataWindBatch.push(windDirectionIndex); // push wind direction
 
@@ -1205,7 +1205,7 @@ $.ajax({
         $("#lakeTitle").append(currentLake.bodyOfWater);
 
         // Set current date, time elev, and pool on page
-        $("#currentTime").append(currentLake.data[0].time);
+        $("#currentTime").append(new Date(currentLake.data[0].time).toString().substr(0,21));
         $("#currentDate").append(currentLake.data[0].date);
         $("#currentLevel").append(currentLake.data[0].elev);
         $("#currentDelta").append((currentLake.data[0].elev - currentLake.normalPool).toFixed(2));
