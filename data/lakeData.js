@@ -7,7 +7,9 @@ module.exports = [
         state: ["Alabama"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -36,7 +38,9 @@ module.exports = [
         state: ["Alabama"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 60, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -65,7 +69,9 @@ module.exports = [
         state: ["Alabama"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 60, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -94,7 +100,9 @@ module.exports = [
         state: ["Alabama", "Georgia"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -123,7 +131,9 @@ module.exports = [
         state: ["Alabama"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -152,7 +162,9 @@ module.exports = [
         state: ["Alabama"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 60, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -181,7 +193,9 @@ module.exports = [
         state: ["Alabama"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 60, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -210,7 +224,9 @@ module.exports = [
         state: ["Alabama"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 60, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -239,7 +255,9 @@ module.exports = [
         state: ["Alabama"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 60, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -268,7 +286,9 @@ module.exports = [
         state: ["Alabama"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 60, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -297,7 +317,9 @@ module.exports = [
         state: ["Alabama"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 60, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -326,7 +348,9 @@ module.exports = [
         state: ["Alabama"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 60, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -355,7 +379,9 @@ module.exports = [
         state: ["Alabama"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 60, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -384,7 +410,9 @@ module.exports = [
         state: ["Alabama", "Mississippi", "Tennessee"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -413,7 +441,9 @@ module.exports = [
         state: ["Alabama"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 60, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -442,7 +472,9 @@ module.exports = [
         state: ["Alabama"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 60, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -471,7 +503,9 @@ module.exports = [
         state: ["Alabama"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -500,7 +534,9 @@ module.exports = [
         state: ["Alabama"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 60, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -529,7 +565,9 @@ module.exports = [
         state: ["Alabama"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -558,7 +596,9 @@ module.exports = [
         state: ["Alabama"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -587,7 +627,9 @@ module.exports = [
         state: ["Alabama"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 60, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -617,7 +659,9 @@ module.exports = [
         state: ["Arizona"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -645,7 +689,9 @@ module.exports = [
         state: ["Arizona", "California"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 400.54, // 1329ft but data reported as a delta to full pool
@@ -692,7 +738,9 @@ module.exports = [
         state: ["Arkansas"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -720,7 +768,9 @@ module.exports = [
         state: ["Arkansas"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
@@ -748,7 +798,9 @@ module.exports = [
         state: ["Arkansas"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
@@ -778,7 +830,9 @@ module.exports = [
         state: ["Arkansas"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
@@ -806,7 +860,9 @@ module.exports = [
         state: ["Arkansas"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
@@ -834,7 +890,9 @@ module.exports = [
         state: ["Arkansas"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
@@ -865,7 +923,9 @@ module.exports = [
         state: ["California"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 1450, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
@@ -893,7 +953,9 @@ module.exports = [
         state: ["California"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
@@ -921,7 +983,9 @@ module.exports = [
         state: ["California"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 1318.26, // 1329ft but data reported as a delta to full pool
@@ -949,7 +1013,9 @@ module.exports = [
         state: ["California"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
@@ -977,7 +1043,9 @@ module.exports = [
         state: ["California"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
@@ -1005,7 +1073,9 @@ module.exports = [
         state: ["California", "Oregon"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 2162.44, //but data reported as a delta to full pool
@@ -1033,7 +1103,9 @@ module.exports = [
         state: ["California"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
@@ -1061,7 +1133,9 @@ module.exports = [
         state: ["California"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
@@ -1089,7 +1163,9 @@ module.exports = [
         state: ["California"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
@@ -1119,7 +1195,9 @@ module.exports = [
         state: ["California"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
@@ -1147,7 +1225,9 @@ module.exports = [
         state: ["California"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
@@ -1177,7 +1257,9 @@ module.exports = [
         state: ["Colorado"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 11.0,
@@ -1205,7 +1287,9 @@ module.exports = [
         state: ["Colorado"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 11.36,
@@ -1234,7 +1318,9 @@ module.exports = [
         state: ["Florida"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 1450, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -1262,7 +1348,9 @@ module.exports = [
         state: ["Florida"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 1450, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -1290,7 +1378,9 @@ module.exports = [
         state: ["Florida"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 1450, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -1318,7 +1408,9 @@ module.exports = [
         state: ["Florida"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 1450, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -1346,7 +1438,9 @@ module.exports = [
         state: ["Florida"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -1374,7 +1468,9 @@ module.exports = [
         state: ["Florida"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -1402,7 +1498,9 @@ module.exports = [
         state: ["Florida"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 1450, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -1430,7 +1528,9 @@ module.exports = [
         state: ["Florida"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -1458,7 +1558,9 @@ module.exports = [
         state: ["Florida"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 125.0,
@@ -1486,7 +1588,9 @@ module.exports = [
         state: ["Florida"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 125.0,
@@ -1514,7 +1618,9 @@ module.exports = [
         state: ["Florida"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -1542,7 +1648,9 @@ module.exports = [
         state: ["Florida", "Georgia"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -1570,7 +1678,9 @@ module.exports = [
         state: ["Florida"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 1450, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -1598,7 +1708,9 @@ module.exports = [
         state: ["Florida"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -1626,7 +1738,9 @@ module.exports = [
         state: ["Florida"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -1654,7 +1768,9 @@ module.exports = [
         state: ["Florida"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -1684,7 +1800,9 @@ module.exports = [
         state: ["Georgia"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -1712,7 +1830,9 @@ module.exports = [
         state: ["Georgia"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -1740,7 +1860,9 @@ module.exports = [
         state: ["Georgia"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -1768,7 +1890,9 @@ module.exports = [
         state: ["Georgia"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -1796,7 +1920,9 @@ module.exports = [
         state: ["Alabama", "Georgia"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -1826,7 +1952,9 @@ module.exports = [
         state: ["Illinois"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0,
@@ -1854,7 +1982,9 @@ module.exports = [
         state: ["Illinois"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -1882,7 +2012,9 @@ module.exports = [
         state: ["Illinois"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         elevDataInterval: 2, // Time between elevation data 4 = 15min, 2 = 30 min 1 = 60 min
         lastRefresh: "12/31/18", // a Date 
@@ -1913,7 +2045,9 @@ module.exports = [
         state: ["Indiana"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -1942,7 +2076,9 @@ module.exports = [
         state: ["Indiana"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -1971,7 +2107,9 @@ module.exports = [
         state: ["Indiana"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -2000,7 +2138,9 @@ module.exports = [
         state: ["Indiana"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         elevDataInterval: 2, // Time between elevation data 4 = 15min, 2 = 30 min 1 = 60 min
@@ -2030,7 +2170,9 @@ module.exports = [
         state: ["Indiana"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0,
@@ -2057,9 +2199,11 @@ module.exports = [
     {
         bodyOfWater: "Patoka", // lake name
         state: ["Indiana"],
-        ccWxData: [],
-        wxForecastData: [],
         data: [],
+        ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
+        wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -2088,7 +2232,9 @@ module.exports = [
         state: ["Indiana"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -2117,7 +2263,9 @@ module.exports = [
         state: ["Indiana"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -2148,7 +2296,9 @@ module.exports = [
         state: ["Iowa"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 1398.0, // water level is reported as a delta to full pool
@@ -2176,7 +2326,9 @@ module.exports = [
         state: ["Iowa"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 1398.0, // water level is reported as a delta to full pool
@@ -2206,7 +2358,9 @@ module.exports = [
         state: ["Kansas"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -2235,7 +2389,9 @@ module.exports = [
         state: ["Kansas"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -2264,7 +2420,9 @@ module.exports = [
         state: ["Kansas"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -2293,7 +2451,9 @@ module.exports = [
         state: ["Kansas"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -2325,7 +2485,9 @@ module.exports = [
         state: ["Kentucky", "Tennessee"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -2353,7 +2515,9 @@ module.exports = [
         state: ["Kentucky"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0,
@@ -2383,7 +2547,9 @@ module.exports = [
         state: ["Kentucky"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0,
@@ -2411,7 +2577,9 @@ module.exports = [
         state: ["Kentucky"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0,
@@ -2441,7 +2609,9 @@ module.exports = [
         state: ["Kentucky", "Tennessee"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -2469,7 +2639,9 @@ module.exports = [
         state: ["Kentucky"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0,
@@ -2499,7 +2671,9 @@ module.exports = [
         state: ["Kentucky"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0,
@@ -2529,7 +2703,9 @@ module.exports = [
         state: ["Kentucky"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0,
@@ -2559,7 +2735,9 @@ module.exports = [
         state: ["Kentucky"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0,
@@ -2589,7 +2767,9 @@ module.exports = [
         state: ["Kentucky"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0,
@@ -2620,7 +2800,9 @@ module.exports = [
         state: ["Louisiana"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -2648,7 +2830,9 @@ module.exports = [
         state: ["Louisiana"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -2676,7 +2860,9 @@ module.exports = [
         state: ["Louisiana"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0, // data reported as a delta to Full Pool -100
@@ -2704,7 +2890,9 @@ module.exports = [
         state: ["Louisiana"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0, // data reported as a delta to Full Pool -100
@@ -2735,7 +2923,9 @@ module.exports = [
         state: ["Michigan"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         elevDataInterval: 4, // Time between elevation data 4 = 15min, 2 = 30 min 1 = 60 min
         lastRefresh: "12/31/18", // a Date 
@@ -2764,7 +2954,9 @@ module.exports = [
         state: ["Michigan"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         elevDataInterval: 4, // Time between elevation data 4 = 15min, 2 = 30 min 1 = 60 min
         lastRefresh: "12/31/18", // a Date 
@@ -2793,7 +2985,9 @@ module.exports = [
         state: ["Michigan"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         elevDataInterval: 4, // Time between elevation data 4 = 15min, 2 = 30 min 1 = 60 min
         lastRefresh: "12/31/18", // a Date 
@@ -2822,7 +3016,9 @@ module.exports = [
         state: ["Michigan"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         elevDataInterval: 4, // Time between elevation data 4 = 15min, 2 = 30 min 1 = 60 min
         lastRefresh: "12/31/18", // a Date 
@@ -2851,7 +3047,9 @@ module.exports = [
         state: ["Michigan"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         elevDataInterval: 4, // Time between elevation data 4 = 15min, 2 = 30 min 1 = 60 min
         lastRefresh: "12/31/18", // a Date 
@@ -2881,7 +3079,9 @@ module.exports = [
         state: ["Michigan"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -2909,7 +3109,9 @@ module.exports = [
         state: ["Michigan"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         elevDataInterval: 4, // Time between elevation data 4 = 15min, 2 = 30 min 1 = 60 min
         lastRefresh: "12/31/18", // a Date 
@@ -2940,7 +3142,9 @@ module.exports = [
         state: ["Minnesota"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 1240.40, // water level reprted as a delta to Full Pool - 100
@@ -2968,7 +3172,9 @@ module.exports = [
         state: ["Minnesota"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -2998,7 +3204,9 @@ module.exports = [
         state: ["Missouri", "Arkansas"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -3027,7 +3235,9 @@ module.exports = [
         state: ["Missouri"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 1450, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -3056,7 +3266,9 @@ module.exports = [
         state: ["Missouri"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -3085,7 +3297,9 @@ module.exports = [
         state: ["Missouri"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -3114,7 +3328,9 @@ module.exports = [
         state: ["Missouri", "Arkansas"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -3142,7 +3358,9 @@ module.exports = [
         state: ["Missouri"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -3171,7 +3389,9 @@ module.exports = [
         state: ["Missouri"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -3202,7 +3422,9 @@ module.exports = [
         state: ["Mississippi"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0, // data reported as a delta to Full Pool -100
@@ -3230,7 +3452,9 @@ module.exports = [
         state: ["Mississippi"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0, // data reported as a delta to Full Pool -100
@@ -3260,7 +3484,9 @@ module.exports = [
         state: ["Mississippi"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0, // data reported as a delta to Full Pool -100
@@ -3290,7 +3516,9 @@ module.exports = [
         state: ["Mississippi"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0, // data reported as a delta to Full Pool -100
@@ -3318,7 +3546,9 @@ module.exports = [
         state: ["Mississippi"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -3346,7 +3576,9 @@ module.exports = [
         state: ["Mississippi"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0, // data reported as a delta to Full Pool -100
@@ -3374,7 +3606,9 @@ module.exports = [
         state: ["Missouri"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0, // data reported as a delta to Full Pool -100
@@ -3402,7 +3636,9 @@ module.exports = [
         state: ["Mississippi"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0, // data reported as a delta to Full Pool -100
@@ -3432,7 +3668,9 @@ module.exports = [
         state: ["Mississippi"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0, // data reported as a delta to Full Pool -100
@@ -3460,7 +3698,9 @@ module.exports = [
         state: ["Mississippi"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -3488,7 +3728,9 @@ module.exports = [
         state: ["Mississippi"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0, // data reported as a delta to Full Pool -100
@@ -3518,7 +3760,9 @@ module.exports = [
          state: ["Nebraska"],
          data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
          refreshInterval: 90, //minutes
          lastRefresh: "12/31/18", // a Date 
          seaLevelDelta: 547.0, // data reported as a delta to Full Pool -100
@@ -3537,7 +3781,9 @@ module.exports = [
         state: ["Nevada"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 547.0, // data reported as a delta to Full Pool -100
@@ -3565,7 +3811,9 @@ module.exports = [
         state: ["Nevada"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -3596,7 +3844,9 @@ module.exports = [
         state: ["New Jersey"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         elevDataInterval: 4, // Time between elevation data 4 = 15min, 2 = 30 min 1 = 60 min
@@ -3627,7 +3877,9 @@ module.exports = [
         state: ["New Mexico"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -3655,7 +3907,9 @@ module.exports = [
         state: ["New Mexico"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -3684,7 +3938,9 @@ module.exports = [
         state: ["New Mexico"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 1450, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -3740,7 +3996,9 @@ module.exports = [
         state: ["New Mexico"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -3768,7 +4026,9 @@ module.exports = [
         state: ["New Mexico"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -3798,7 +4058,9 @@ module.exports = [
         state: ["New York", "Vermont"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -3826,7 +4088,9 @@ module.exports = [
         state: ["New York"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -3854,7 +4118,9 @@ module.exports = [
         state: ["Otsego"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         elevDataInterval: 4, // Time between elevation data 4 = 15min, 2 = 30 min 1 = 60 min
         lastRefresh: "12/31/18", // a Date 
@@ -3883,7 +4149,9 @@ module.exports = [
         state: ["New York"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -3913,7 +4181,9 @@ module.exports = [
         state: ["North Carolina"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 1450, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -3942,8 +4212,10 @@ module.exports = [
         state: ["North Carolina"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
-        refreshInterval: 90, //minutes
+        wxForecastDataLastRefresh: "12/31/18",
+        refreshInterval: 1450, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 722.0,
@@ -3970,7 +4242,9 @@ module.exports = [
         state: ["North Carolina"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 1450, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 78.0,
@@ -3999,7 +4273,9 @@ module.exports = [
         state: ["North Carolina"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0,
@@ -4027,7 +4303,9 @@ module.exports = [
         state: ["North Carolina"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -4057,7 +4335,9 @@ module.exports = [
         state: ["North Carolina"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0,
@@ -4085,7 +4365,9 @@ module.exports = [
         state: ["North Carolina", "Virginia"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 1450, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -4113,7 +4395,9 @@ module.exports = [
         state: ["North Carolina"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 1450, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 835.0,
@@ -4142,7 +4426,9 @@ module.exports = [
         state: ["North Carolina"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 1450, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -4170,7 +4456,9 @@ module.exports = [
         state: ["North Carolina"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0,
@@ -4198,7 +4486,9 @@ module.exports = [
         state: ["North Carolina", "South Carolina"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 1450, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 1000.0,
@@ -4226,7 +4516,9 @@ module.exports = [
         state: ["North Carolina"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date
         elevDataInterval: 4, // Time between elevation data 4 = 15min, 2 = 30 min 1 = 60 min
@@ -4257,7 +4549,9 @@ module.exports = [
         state: ["North Carolina", "Virginia"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         elevDataInterval: 4, // Time between elevation data 4 = 15min, 2 = 30 min 1 = 60 min
@@ -4290,8 +4584,10 @@ module.exports = [
         state: ["North Carolina"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
-        refreshInterval: 90, //minutes
+        wxForecastDataLastRefresh: "12/31/18",
+        refreshInterval: 1450, //minutes
         lastRefresh: "12/31/18", // a Date 
         elevDataInterval: 4, // Time between elevation data 4 = 15min, 2 = 30 min 1 = 60 min
         seaLevelDelta: 0,
@@ -4319,7 +4615,9 @@ module.exports = [
         state: ["North Carolina"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 10.90,
@@ -4347,7 +4645,9 @@ module.exports = [
         state: ["North Carolina"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 1450, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 1298.0, // data reported as a delta to full pool = 100
@@ -4403,7 +4703,9 @@ module.exports = [
         state: ["North Carolina"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 1450, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 885.0,
@@ -4431,7 +4733,9 @@ module.exports = [
         state: ["North Carolina"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 1450, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0,
@@ -4459,7 +4763,9 @@ module.exports = [
         state: ["North Carolina"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0,
@@ -4487,7 +4793,9 @@ module.exports = [
         state: ["North Carolina"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0,
@@ -4515,7 +4823,9 @@ module.exports = [
         state: ["North Carolina"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 43.84,
@@ -4543,7 +4853,9 @@ module.exports = [
         state: ["North Carolina"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 5.77,
@@ -4571,7 +4883,9 @@ module.exports = [
         state: ["North Carolina"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: -2.86,
@@ -4599,8 +4913,10 @@ module.exports = [
         state: ["North Carolina"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
-        refreshInterval: 90, //minutes
+        wxForecastDataLastRefresh: "12/31/18",
+        refreshInterval: 1450, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0,
         normalPool: 0.0,
@@ -4627,7 +4943,9 @@ module.exports = [
         state: ["North Carolina"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 1450, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 178.0,
@@ -4655,7 +4973,9 @@ module.exports = [
         state: ["North Carolina"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 1450, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -4683,7 +5003,9 @@ module.exports = [
         state: ["North Carolina"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         elevDataInterval: 4, // Time between elevation data 4 = 15min, 2 = 30 min 1 = 60 min
@@ -4713,7 +5035,9 @@ module.exports = [
         state: ["North Carolina", "South Carolina"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 1450, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 400.0,
@@ -4741,7 +5065,9 @@ module.exports = [
         bodyOfWater: "Indian Lake", // lake name
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0,
@@ -4773,6 +5099,9 @@ module.exports = [
         state: ["Ohio"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
+        wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         wxForecastData: [],
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
@@ -4801,7 +5130,9 @@ module.exports = [
         state: ["Ohio"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0,
@@ -4829,7 +5160,9 @@ module.exports = [
         state: ["Ohio"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0,
@@ -4860,7 +5193,9 @@ module.exports = [
         state: ["Oklahoma"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -4890,7 +5225,9 @@ module.exports = [
         state: ["Oklahoma"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -4919,7 +5256,9 @@ module.exports = [
         state: ["Oklahoma"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -4947,8 +5286,10 @@ module.exports = [
         bodyOfWater: "Eucha", // lake name
         state: ["Oklahoma"],
         data: [],
-        
-        wxForecastData: [],xData: [],
+        ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
+        wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         elevDataInterval: 4, // Time between elevation data 4 = 15min, 2 = 30 min 1 = 60 min
         lastRefresh: "12/31/18", // a Date 
@@ -4978,7 +5319,9 @@ module.exports = [
         state: ["Oklahoma"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -5007,7 +5350,9 @@ module.exports = [
         state: ["Oklahoma"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -5036,7 +5381,9 @@ module.exports = [
         state: ["Oklahoma"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         elevDataInterval: 2, // Time between elevation data 4 = 15min, 2 = 30 min 1 = 60 min
@@ -5066,7 +5413,9 @@ module.exports = [
         state: ["Oklahoma"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -5095,7 +5444,9 @@ module.exports = [
         state: ["Oklahoma"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -5124,7 +5475,9 @@ module.exports = [
         state: ["Oklahoma"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -5154,7 +5507,9 @@ module.exports = [
         state: ["Oklahoma"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -5183,7 +5538,9 @@ module.exports = [
         state: ["Oklahoma"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -5212,7 +5569,9 @@ module.exports = [
         state: ["Oklahoma"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -5241,7 +5600,9 @@ module.exports = [
         state: ["Oklahoma"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -5270,7 +5631,9 @@ module.exports = [
         state: ["Oklahoma"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -5299,7 +5662,9 @@ module.exports = [
         state: ["Oklahoma"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -5330,7 +5695,9 @@ module.exports = [
         state: ["Oregon"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
@@ -5359,7 +5726,9 @@ module.exports = [
         state: ["Oregon"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
@@ -5388,7 +5757,9 @@ module.exports = [
         state: ["Pennsylvania"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -5416,7 +5787,9 @@ module.exports = [
         state: ["Pennsylvania"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -5444,7 +5817,9 @@ module.exports = [
         state: ["Pennsylvania"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -5474,7 +5849,9 @@ module.exports = [
         state: ["South Carolina", "Georgia"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -5502,7 +5879,9 @@ module.exports = [
         state: ["South Carolina"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: -6.38, // Cooper River gage height is -6.38, it's a strange USGS site
@@ -5530,7 +5909,9 @@ module.exports = [
         state: ["South Carolina"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -5558,7 +5939,9 @@ module.exports = [
         state: ["South Carolina"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 1450, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 700.0,
@@ -5586,7 +5969,9 @@ module.exports = [
         state: ["South Carolina"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -5614,7 +5999,9 @@ module.exports = [
         state: ["South Carolina"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -5642,7 +6029,9 @@ module.exports = [
         state: ["South Carolina"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -5670,7 +6059,9 @@ module.exports = [
         state: ["South Carolina"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 1450, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 125,
@@ -5700,7 +6091,9 @@ module.exports = [
         state: ["South Dakota"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 2900.0,
@@ -5733,7 +6126,9 @@ module.exports = [
         state: ["Tennessee"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -5761,7 +6156,9 @@ module.exports = [
         state: ["Tennessee"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -5791,7 +6188,9 @@ module.exports = [
         state: ["Tennessee"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -5819,7 +6218,9 @@ module.exports = [
         state: ["Tennessee"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -5847,7 +6248,9 @@ module.exports = [
         state: ["Tennessee"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -5875,7 +6278,9 @@ module.exports = [
         state: ["Tennessee"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -5904,7 +6309,9 @@ module.exports = [
         state: ["Tennessee"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -5930,7 +6337,9 @@ module.exports = [
         state: ["Tennessee"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -5958,7 +6367,9 @@ module.exports = [
         state: ["Tennessee"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -5986,7 +6397,9 @@ module.exports = [
         state: ["Tennessee"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -6014,7 +6427,9 @@ module.exports = [
         state: ["Tennessee"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -6043,7 +6458,9 @@ module.exports = [
         state: ["Tennessee"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -6071,7 +6488,9 @@ module.exports = [
         state: ["Tennessee"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -6099,7 +6518,9 @@ module.exports = [
         state: ["Tennessee"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -6127,7 +6548,9 @@ module.exports = [
         state: ["Tennessee"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -6155,7 +6578,9 @@ module.exports = [
         state: ["Tennessee"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -6183,7 +6608,9 @@ module.exports = [
         state: ["Tennessee"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -6213,7 +6640,9 @@ module.exports = [
         state: ["Texas"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 1450, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -6241,7 +6670,9 @@ module.exports = [
         state: ["Texas"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -6269,7 +6700,9 @@ module.exports = [
         state: ["Texas"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -6297,7 +6730,9 @@ module.exports = [
         state: ["Texas"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 1450, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -6325,7 +6760,9 @@ module.exports = [
         state: ["Texas"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -6353,7 +6790,9 @@ module.exports = [
         state: ["Texas"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 1450, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -6381,7 +6820,9 @@ module.exports = [
         state: ["Texas"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -6409,7 +6850,9 @@ module.exports = [
         state: ["Texas"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -6437,7 +6880,9 @@ module.exports = [
         state: ["Texas"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -6465,7 +6910,9 @@ module.exports = [
         state: ["Texas"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -6493,7 +6940,9 @@ module.exports = [
         state: ["Texas", "Louisiana"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -6521,7 +6970,9 @@ module.exports = [
         state: ["Texas", "Oklahoma"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -6550,7 +7001,9 @@ module.exports = [
         state: ["Texas"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -6580,7 +7033,9 @@ module.exports = [
         state: ["Utah"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -6611,7 +7066,9 @@ module.exports = [
         state: ["Vermont"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -6639,7 +7096,9 @@ module.exports = [
         state: ["Vermont"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -6671,7 +7130,9 @@ module.exports = [
         state: ["Virginia"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 1450, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -6699,7 +7160,9 @@ module.exports = [
         state: ["Virginia"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -6727,7 +7190,9 @@ module.exports = [
         state: ["Virginia"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 1450, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -6755,7 +7220,9 @@ module.exports = [
         state: ["Virginia"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         elevDataInterval: 4, // Time between elevation data 4 = 15min, 2 = 30 min 1 = 60 min
@@ -6784,7 +7251,9 @@ module.exports = [
         state: ["Virginia"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -6812,7 +7281,9 @@ module.exports = [
         state: ["Virginia"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 1450, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -6842,7 +7313,9 @@ module.exports = [
         state: ["West Virginia"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0,
@@ -6870,7 +7343,9 @@ module.exports = [
         state: ["West Virginia"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0,
@@ -6898,7 +7373,9 @@ module.exports = [
         state: ["West Virginia"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0,
@@ -6926,7 +7403,9 @@ module.exports = [
         state: ["West Virginia"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0,
@@ -6954,7 +7433,9 @@ module.exports = [
         state: ["West Virginia"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
@@ -6984,7 +7465,9 @@ module.exports = [
         state: ["Wisconsin"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0,
@@ -7012,7 +7495,9 @@ module.exports = [
         state: ["Wisconsin"],
         data: [],
         ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 746.0,

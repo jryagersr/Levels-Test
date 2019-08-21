@@ -7,8 +7,8 @@ module.exports = {
   // function to get WEATHER data
   getWeatherData: function (currentLake, callback) {
     var request = require("request");
-    var wxData = []; //Retrieve Weather Data 
-    var lakeWeather = currentLake;
+    let wxData = []; //Retrieve Weather Data 
+    let lakeWeather = currentLake;
 
     //Weather data URLs
     let apiKey = "d620419cfbb975f425c6262fefeef8f3";
@@ -30,20 +30,37 @@ module.exports = {
           if (typeof wxData == "undefined") {
             console.log(`No Wx data for ${wxData.bodyOfWater}`);
             // send empty array to front end
-          } else { 
-            
+          } else {
+
             // Set weather
             let today = new Date()
             let compassSector = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
-            lakeWeather.barometric = wxData.main.pressure;
-            lakeWeather.wxTemp = wxData.main.temp;
-            lakeWeather.humidity = wxData.main.humidity;
-            lakeWeather.windSpeed = wxData.wind.speed;
-            lakeWeather.windDirection = compassSector[(wxData.wind.deg / 22.5).toFixed(0)];
-            lakeWeather.conditions = wxData.weather[0].description;
-            lakeWeather.conditions = lakeWeather.conditions.charAt(0).toUpperCase() + lakeWeather.conditions.slice(1);
-            lakeWeather.wxDate = today.toLocaleDateString();
-            lakeWeather.wxTime = today.toLocaleTimeString('en-US') + " (" + wxData.name + ")";
+
+            // if there are more than one day of entries, pop one off the array.
+            while (lakeWeather.ccWxData.length > 23)
+              lakeWeather.ccWxData.pop();
+
+            if (typeof wxData == "undefined") {
+              console.log(`No Wx data for ${wxData.bodyOfWater}`);
+            }
+
+            // push the current conditions into ccWxData[] and update the LastRefresh
+            let timeStamp = Date(wxData.dt);
+            //set timeStamp for current conditions to 0 minutes, 0 seconds
+            timeStamp = timeStamp.substring(0, timeStamp.indexOf(":")) + ":00:00 " + timeStamp.substring(timeStamp.indexOf(":") + 7, timeStamp.length);
+
+            lakeWeather.ccWxDataLastRefresh = timeStamp
+            lakeWeather.ccWxData.push({
+              conditions: wxData.weather[0].description.charAt(0).toUpperCase() + wxData.weather[0].description.slice(1),
+              date: Date(wxData.dt),
+              time: today.toLocaleTimeString('en-US'),
+              location: wxData.name, // for current Conditions Well
+              baro: wxData.main.pressure,
+              temp: wxData.main.temp,
+              humidity: wxData.main.humidity,
+              windspeed: wxData.wind.speed,
+              winddirection: compassSector[(wxData.wind.deg / 22.5).toFixed(0)]
+            });
 
             callback(false, lakeWeather);
           }

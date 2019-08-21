@@ -68,7 +68,7 @@ module.exports = function (app) {
 
             //check to see if update is needed (function returns true if update is needed)
             //if not retrieve data and update the db, then return the retrieved data
-            if (update.checkForUpdate(currentLake)) {
+            if (update.checkForUpdate(currentLake, 0)) {
               // update current lake
               // determine which data source and run function
               switch (currentLake.dataSource[0]) {
@@ -169,7 +169,7 @@ module.exports = function (app) {
                         if (error) {
                           console.log(DUKEdata);
                         }
-                        res.json(currentLake);
+                        res.json(DUKEdata);
                       })
                     }
                   });
@@ -277,73 +277,52 @@ module.exports = function (app) {
                   break;
 
                 default:
-                  console.log(`No data source for ${currentLake.bodyOfWater}`);
+                  console.log(`No data source for ${currentLake.bodyOfWater} (findOne)`);
                   noLakeDataSource = true;
+                  // Need to update the current conditions and forecast for this lake since the elev data did not need an update
+
+                  // If a Lake Levels update is needed and there is no source for data
+                  // We must still check for update of the current conditions
+
+                  // Check to see if Current Conditions needs to be updated
+                  if (update.checkForUpdate(currentLake, 1)) {
+                    //update the current conditions
+                    update.updateCurrentConditionsData(currentLake);
+                    //console.log(`${i}. Current Conditions update needed for ${currentLake.bodyOfWater} (${currentLake.dataSource[0]})`);
+                  }
+                  //Return the updated current conditions to the client
+                  res.json(currentLake);
               }
 
             } else {
-              // if no update is needed, send currentLake to client
+              // if a Lake Levels update is NOT needed
+              // Need to update the current conditions for this lake
+
+              // Check to see if Current Conditions needs to be updated
+              if (update.checkForUpdate(currentLake, 1)) {
+                // Update the current condiions 
+                update.updateCurrentConditionsData(currentLake);
+                //console.log(`${i}. Current Conditions update needed for ${currentLake.bodyOfWater} (${currentLake.dataSource[0]})`);
+              }
               currentLake.data.sort(function (a, b) {
                 // Turn your strings into dates, and then subtract them
                 // to get a value that is either negative, positive, or zero.
                 return new Date(b.time) - new Date(a.time);
               });
-              // Need to update the current conditions and forecast for this lake since the elev data did not need an update
-              // If the lake data needs updating, the weather is updated in upDateAndReturnOneLake
-
-              // Get weather data
-              // Need to add code to check refreshInterval for weatherData
-
-              //if (checkForUpdate(currentLake.lastRefresh, currentLake.refreshInterval, currentLake.data.length)) {
-              // 
-
-
-              weather.getWeatherData(currentLake, function (error, lakeWeather) {
-                currentLake = lakeWeather;
-                if (error) {
-                  console.log(`Weather retrieval error (no updata source) ${error}`)
-                  res.json(currentLake);
-                } else {
-                  if (currentLake !== 'undefined') {
-                    
-                    // if no lakeData update needed, make the callback, otherwise it will be made in the switch callback
-                    if (!update.checkForUpdate(currentLake)) {
-                      res.json(currentLake);
-                    }
-
-                  } else {
-                    console.log(`Data error for weather ${currentLake.bodyOfWater}`);
-                  }
-                }
-              });
+              // return the current conditions to the client
+              res.json(currentLake);
             }
+
+            // if no update is needed, send currentLake to client
+            // Need to update the current conditions and forecast for this lake since the elev data did not need an update
+
+            // Check to see if Current Conditions needs to be updated
+            /*             if (update.checkForUpdate(currentLake, 1)) {
+                           update.updateCurrentConditionsData(currentLake);
+                           //console.log(`${i}. Current Conditions update needed for ${currentLake.bodyOfWater} (${currentLake.dataSource[0]})`);
+            }*/
             if (noLakeDataSource) {
-              // Get weather data
-              // Need to add code to check refreshInterval for weatherData
 
-              //if (checkForUpdate(currentLake.lastRefresh, currentLake.refreshInterval, currentLake.data.length)) {
-              // 
-
-
-              weather.getWeatherData(currentLake, function (error, lakeWeather) {
-                currentLake = lakeWeather;
-                if (error) {
-                  console.log(`Weather retrieval error (no data source) ${error}`)
-                  //return currentLake data (likely ramps only)
-                  res.json(currentLake);
-                } else {
-                  if (currentLake !== 'undefined') {
-                   
-                    //return currentLake data (ramps and weather)
-                    res.json(currentLake);
-
-                  } else {
-                    console.log(`Data error for weather ${currentLake.bodyOfWater}`);
-                    //return currentLake Data (likely ramps only)
-                    res.json(currentLake);
-                  }
-                }
-              });
             }
           }
         }
@@ -402,8 +381,8 @@ function updateAllLakes() {
           // set currentLake equal to returned lake document
           let currentLake = data[i];
 
-          //check to see if update is needed (function returns true if update is needed)
-          if (update.checkForUpdate(currentLake)) {
+          //check to see if update is needed for lake elevation level (function returns true if update is needed)
+          if (update.checkForUpdate(currentLake, 0)) {
             //console.log(`lastRefresh ${currentLake.lastRefresh} data.length ${currentLake.data.length} ${currentLake.bodyOfWater}`)
             // update current lake
             // determine which data source and run function
@@ -652,17 +631,23 @@ function updateAllLakes() {
                 break;
 
               default:
-                //console.log(`No data source for ${currentLake.bodyOfWater}`);
+                //console.log(`No data source for ${currentLake.bodyOfWater} (updateAll)`);
                 //res.send("Data source could not be found.");
             }
           }
-          // if no update is needed log to console
-          else {
-
-            //  console.log(`${i}. No update needed for ${currentLake.bodyOfWater} (${currentLake.dataSource[0]})`);
+          // Check to see if Current Conditions needs to be updated
+          if (update.checkForUpdate(currentLake, 1)) {
+            update.updateCurrentConditionsData(currentLake);
+            //console.log(`${i}. Current Conditions update needed for ${currentLake.bodyOfWater} (${currentLake.dataSource[0]})`);
           }
 
-         
+          // Check to see if Weather Forecast needs to be updated
+          if (update.checkForUpdate(currentLake, 2)) {
+            update.updateForecastData(currentLake);
+            //console.log(`${i}. Forecast update needed for ${currentLake.bodyOfWater} (${currentLake.dataSource[0]})`);
+          }
+
+
 
           // increment counter
           i++;

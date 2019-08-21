@@ -7,12 +7,13 @@ module.exports = {
   // function to get WEATHER data
   getForecastData: function (currentLake, callback) {
     var request = require("request");
-    var data = []; //Retrieve Weather Data 
-    var lakeWeather = currentLake;
+    let fxData = []; //Retrieved Weather Data 
+    let lakeWeather = currentLake;
 
     //Weather data URLs
     let apiKey = "d620419cfbb975f425c6262fefeef8f3";
     let forecastURL = "http://api.openweathermap.org/data/2.5/forecast?lat=" + lakeWeather.lat + "&lon=" + lakeWeather.long + "&units=imperial&APPID=" + apiKey;
+    //request weather data
     request(forecastURL, function (error, response, body) {
       let forecastData = body;
       if (error) {
