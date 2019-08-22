@@ -52,7 +52,7 @@ module.exports = {
             lakeWeather.ccWxDataLastRefresh = timeStamp
             lakeWeather.ccWxData.push({
               conditions: wxData.weather[0].description.charAt(0).toUpperCase() + wxData.weather[0].description.slice(1),
-              date: Date(wxData.dt),
+              date: wxData.dt,
               time: today.toLocaleTimeString('en-US'),
               location: wxData.name, // for current Conditions Well
               baro: wxData.main.pressure,

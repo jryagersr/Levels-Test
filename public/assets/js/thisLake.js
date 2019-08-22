@@ -1217,7 +1217,7 @@ $.ajax({
 
         // Set the current weather conditions
         let ccIndex = currentLake.ccWxData.length - 1;
-        let dateIndex = currentLake.ccWxData[ccIndex].date.indexOf(":")
+        //let dateIndex = currentLake.ccWxData[ccIndex].date.indexOf(":")
 
         $("#currentWeatherConditions").append(currentLake.ccWxData[ccIndex].conditions);
         $("#currentWeatherTemp").append(currentLake.ccWxData[ccIndex].temp);
@@ -1225,7 +1225,8 @@ $.ajax({
         $("#currentWeatherBarometric").append(currentLake.ccWxData[ccIndex].baro);
         $("#currentWeatherWindSpeed").append(currentLake.ccWxData[ccIndex].windspeed);
         $("#currentWeatherWindDirection").append(currentLake.ccWxData[ccIndex].winddirection);
-        $("#currentWeatherDate").append(currentLake.ccWxData[ccIndex].date.substr(0, dateIndex - 2) + currentLake.ccWxData[ccIndex].time);
+        $("#currentWeatherDate").append(Date(currentLake.ccWxData[ccIndex].date)) ;
+        //+ currentLake.ccWxData[ccIndex].time);
         $("#currentWeatherTime").append(currentLake.ccWxData[ccIndex].location);
 
 
