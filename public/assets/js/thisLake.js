@@ -603,11 +603,11 @@ function buildTempChart(tempData) {
     let chartMaxTemp = 0; // y-axis Min elev value
     let chartMinTempLimit = 0; // y-axis Min elev Limit (for chart)
     let chartMaxTempLimit = 0; // y-axis Max elev Limit (for chart)
-   
+
     // Loop through our data for 24 data points if we have it
     for (k; k < tempData.ccWxData.length; k++) {
         if (typeof tempData.ccWxData[k].temp == "number") {
-        
+
             //labelBatch.push(tempData.ccWxData[k - 1].time);
             labelBatch.push(
                 tempData.ccWxData[k].time.substr(0, tempData.ccWxData[k].time.indexOf("M") - 8) + tempData.ccWxData[k].time.substr(tempData.ccWxData[k].time.indexOf("M") - 1, 2))
@@ -707,10 +707,10 @@ function buildHumidityChart(humidityData) {
     let chartMaxHumidity = 0; // y-axis Min elev value
     let chartMinHumidityLimit = 0; // y-axis Min elev Limit (for chart)
     let chartMaxHumidityLimit = 0; // y-axis Max elev Limit (for chart)
-    
+
     // Loop through our data for 24 data points if we have it
     for (k; k < humidityData.ccWxData.length; k++) {
-        
+
         if (typeof humidityData.ccWxData[k].humidity == "number") {
             labelBatch.push(humidityData.ccWxData[k].time.substr(0, humidityData.ccWxData[k].time.indexOf("M") - 8) + humidityData.ccWxData[k].time.substr(humidityData.ccWxData[k].time.indexOf("M") - 1, 2))
             dataHumidityBatch.push(humidityData.ccWxData[k].humidity); // push elev
@@ -805,13 +805,13 @@ function buildBaroChart(baroData) {
     let chartMaxBaro = 0; // y-axis Min elev value
     let chartMinBaroLimit = 0; // y-axis Min elev Limit (for chart)
     let chartMaxBaroLimit = 0; // y-axis Max elev Limit (for chart)
-   
+
     // Loop through our data for 24 data points if we have it
     for (k; k < baroData.ccWxData.length; k++) {
 
         if (typeof baroData.ccWxData[k].baro == "number") {
             labelBatch.push(baroData.ccWxData[k].time.substr(0, baroData.ccWxData[k].time.indexOf("M") - 8) + baroData.ccWxData[k].time.substr(baroData.ccWxData[k].time.indexOf("M") - 1, 2));
-            dataBaroBatch.push(baroData.ccWxData[k ].baro); // push elev
+            dataBaroBatch.push(baroData.ccWxData[k].baro); // push elev
 
             if (baroData.ccWxData[k].baro > chartMaxBaro) // if value is greater than max, replace max
                 chartMaxBaro = baroData.ccWxData[k].baro; // update Max Elev average
@@ -909,7 +909,7 @@ function buildWindChart(windData) {
     let chartMinWindLimit = 0; // y-axis Min wind speed Limit (for chart)
     let chartMaxWindLimit = 0; // y-axis Max wind speed Limit (for chart)
 
-       // Loop through our data for 24 data points if we have it
+    // Loop through our data for 24 data points if we have it
     for (k; k < windData.ccWxData.length; k++) {
 
         if (typeof windData.ccWxData[k].windspeed == "number") {
@@ -1010,7 +1010,7 @@ function buildWindDirectionChart(windData) {
     let compassSector = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
     let displayCompassSector = ["N", " ", "NE", " ", "E", " ", "SE", " ", "S", " ", "SW", " ", "W", " ", "NW", " "];
 
-    
+
 
     // Loop through our data for 24 data points if we have it
     for (k; k < windData.ccWxData.length; k++) {
@@ -1207,8 +1207,7 @@ $.ajax({
             $("#currentLevel").append(currentLake.data[0].elev);
             $("#currentDelta").append((currentLake.data[0].elev - currentLake.normalPool).toFixed(2));
             $("#currentNormal").append("normal pool " + currentLake.normalPool);
-        }
-        else {
+        } else {
             $("#currentLevel").append("No known source for level data");
         }
 
@@ -1217,7 +1216,8 @@ $.ajax({
 
         // Set the current weather conditions
         let ccIndex = currentLake.ccWxData.length - 1;
-        //let dateIndex = currentLake.ccWxData[ccIndex].date.indexOf(":")
+        let timeStamp = Date(currentLake.ccWxData[ccIndex].date);
+        timeStamp = timeStamp.substr(0, timeStamp.indexOf("GMT") - 1);
 
         $("#currentWeatherConditions").append(currentLake.ccWxData[ccIndex].conditions);
         $("#currentWeatherTemp").append(currentLake.ccWxData[ccIndex].temp);
@@ -1225,8 +1225,7 @@ $.ajax({
         $("#currentWeatherBarometric").append(currentLake.ccWxData[ccIndex].baro);
         $("#currentWeatherWindSpeed").append(currentLake.ccWxData[ccIndex].windspeed);
         $("#currentWeatherWindDirection").append(currentLake.ccWxData[ccIndex].winddirection);
-        $("#currentWeatherDate").append(Date(currentLake.ccWxData[ccIndex].date)) ;
-        //+ currentLake.ccWxData[ccIndex].time);
+        $("#currentWeatherDate").append(timeStamp);
         $("#currentWeatherTime").append(currentLake.ccWxData[ccIndex].location);
 
 
@@ -1467,7 +1466,7 @@ $.ajax({
             // build hourly elevation chart (river tide) chart
             // If elevation data is updated more than once a day
             if (currentLake.refreshInterval < 1450)
-            buildRiverChart(currentLake.data, currentLake)
+                buildRiverChart(currentLake.data, currentLake)
 
             // build flow chart if flows are available
             if (currentLake.data[0].flow !== "N/A") {
