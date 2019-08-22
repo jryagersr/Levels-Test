@@ -144,14 +144,14 @@ module.exports = {
 
   // function to update and return one lake
   updateCurrentConditionsData: function (currentLake) {
-    let ccLake = currentLake
-    let bodyOfWater = ccLake.bodyOfWater;
+    let cxLake = currentLake
+    let bodyOfWater = cxLake.bodyOfWater;
 
     // Update the current conditions and forecast for this lake
 
     // Get weather data
-    weather.getWeatherData(ccLake, function (error, data) {
-      ccLake = data;
+    weather.getWeatherData(cxLake, function (error, data) {
+      let ccLake = data;
       if (error) {
         console.log(`Weather retrieval error (updateFunction) ${error}`)
         callbackError = true;
@@ -163,18 +163,18 @@ module.exports = {
           console.log(`Data error for weather ${bodyOfWater}`);
         }
 
-        //ccLake.ccWxData.reverse();
-
         // if there are 24 in ccWxData, pop one off
-        if (ccLake.ccWxData == "undefined") {
-        let b = 2;
-        }
+
         // push the current conditions into ccWxData[] and update the LastRefresh
         let timeStamp = ccLake.ccWxDataLastRefresh;
+        if (timeStamp == "undefined") {
+        let b = 2;
+        }
         //set timeStamp for current conditions to 0 minutes, 0 seconds
+        //console.log (`${timeStamp} value ${ccLake.ccWxDataLastRefresh}`)
         timeStamp = timeStamp.substring(0, timeStamp.indexOf(":")) + ":00:00 " + timeStamp.substring(timeStamp.indexOf(":")+7, timeStamp.length);
 
-        console.log (`${bodyOfWater} Current Conditions updated (db) ${timeStamp}`)
+        //console.log (`${bodyOfWater} Current Conditions updated (db) ${timeStamp}`)
 
         db.model("Lake").updateOne({
             'bodyOfWater': bodyOfWater

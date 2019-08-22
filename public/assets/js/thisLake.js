@@ -609,8 +609,18 @@ function buildTempChart(tempData) {
         if (typeof tempData.ccWxData[k].temp == "number") {
 
             //labelBatch.push(tempData.ccWxData[k - 1].time);
-            labelBatch.push(
-                tempData.ccWxData[k].time.substr(0, tempData.ccWxData[k].time.indexOf("M") - 8) + tempData.ccWxData[k].time.substr(tempData.ccWxData[k].time.indexOf("M") - 1, 2))
+
+        //calculate the time as 12 hour AM PM.
+
+        let timeStamp = Date(tempData.ccWxData[k].date);
+        hour = Number(timeStamp.substr(timeStamp.indexOf("GMT") - 9, 2));
+        let suffix = "PM";
+        if (hour < 12)
+            suffix = "AM";
+        hour = ((hour + 11) % 12 + 1);
+
+            labelBatch.push(hour +suffix);
+               // tempData.ccWxData[k].time.substr(0, tempData.ccWxData[k].time.indexOf("M") - 8) + tempData.ccWxData[k].time.substr(tempData.ccWxData[k].time.indexOf("M") - 1, 2))
             dataTempBatch.push(tempData.ccWxData[k].temp); // push elev
 
             if (tempData.ccWxData[k].temp > chartMaxTemp) // if value is greater than max, replace max
@@ -1217,7 +1227,13 @@ $.ajax({
         // Set the current weather conditions
         let ccIndex = currentLake.ccWxData.length - 1;
         let timeStamp = Date(currentLake.ccWxData[ccIndex].date);
-        timeStamp = timeStamp.substr(0, timeStamp.indexOf("GMT") - 1);
+
+        //calculate the time as 12 hour AM PM.
+        hour = Number(timeStamp.substr(timeStamp.indexOf("GMT") - 9, 2));
+        let suffix = "PM";
+        if (hour < 12)
+            suffix = "AM";
+        hour = ((hour + 11) % 12 + 1);
 
         $("#currentWeatherConditions").append(currentLake.ccWxData[ccIndex].conditions);
         $("#currentWeatherTemp").append(currentLake.ccWxData[ccIndex].temp);
@@ -1225,7 +1241,7 @@ $.ajax({
         $("#currentWeatherBarometric").append(currentLake.ccWxData[ccIndex].baro);
         $("#currentWeatherWindSpeed").append(currentLake.ccWxData[ccIndex].windspeed);
         $("#currentWeatherWindDirection").append(currentLake.ccWxData[ccIndex].winddirection);
-        $("#currentWeatherDate").append(timeStamp);
+        $("#currentWeatherDate").append(timeStamp.substr(0, timeStamp.indexOf("GMT") - 14) + " " + hour +suffix);
         $("#currentWeatherTime").append(currentLake.ccWxData[ccIndex].location);
 
 
