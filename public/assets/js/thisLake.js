@@ -612,14 +612,15 @@ function buildTempChart(tempData) {
 
         //calculate the time as 12 hour AM PM.
 
-        let timeStamp = Date(tempData.ccWxData[k].date);
+        let timeStamp = tempData.ccWxData[k].date;
         hour = Number(timeStamp.substr(timeStamp.indexOf("GMT") - 9, 2));
         let suffix = "PM";
         if (hour < 12)
             suffix = "AM";
         hour = ((hour + 11) % 12 + 1);
+        console.log (`${timeStamp} plus hour ${hour} plus suffix ${suffix}`)
 
-            labelBatch.push(hour +suffix);
+            labelBatch.push(hour + suffix);
                // tempData.ccWxData[k].time.substr(0, tempData.ccWxData[k].time.indexOf("M") - 8) + tempData.ccWxData[k].time.substr(tempData.ccWxData[k].time.indexOf("M") - 1, 2))
             dataTempBatch.push(tempData.ccWxData[k].temp); // push elev
 
@@ -721,8 +722,16 @@ function buildHumidityChart(humidityData) {
     // Loop through our data for 24 data points if we have it
     for (k; k < humidityData.ccWxData.length; k++) {
 
-        if (typeof humidityData.ccWxData[k].humidity == "number") {
-            labelBatch.push(humidityData.ccWxData[k].time.substr(0, humidityData.ccWxData[k].time.indexOf("M") - 8) + humidityData.ccWxData[k].time.substr(humidityData.ccWxData[k].time.indexOf("M") - 1, 2))
+        if (typeof humidityData.ccWxData[k].humidity == "number") { //calculate the time as 12 hour AM PM.
+
+            let timeStamp = humidityData.ccWxData[k].date;
+            hour = Number(timeStamp.substr(timeStamp.indexOf("GMT") - 9, 2));
+            let suffix = "PM";
+            if (hour < 12)
+                suffix = "AM";
+            hour = ((hour + 11) % 12 + 1);
+
+            labelBatch.push(hour + suffix)
             dataHumidityBatch.push(humidityData.ccWxData[k].humidity); // push elev
 
             if (humidityData.ccWxData[k].humidity > chartMaxHumidity) // if value is greater than max, replace max
@@ -820,6 +829,13 @@ function buildBaroChart(baroData) {
     for (k; k < baroData.ccWxData.length; k++) {
 
         if (typeof baroData.ccWxData[k].baro == "number") {
+            let timeStamp = baroData.ccWxData[k].date;
+            hour = Number(timeStamp.substr(timeStamp.indexOf("GMT") - 9, 2));
+            let suffix = "PM";
+            if (hour < 12)
+                suffix = "AM";
+            hour = ((hour + 11) % 12 + 1);
+
             labelBatch.push(baroData.ccWxData[k].time.substr(0, baroData.ccWxData[k].time.indexOf("M") - 8) + baroData.ccWxData[k].time.substr(baroData.ccWxData[k].time.indexOf("M") - 1, 2));
             dataBaroBatch.push(baroData.ccWxData[k].baro); // push elev
 
@@ -923,6 +939,13 @@ function buildWindChart(windData) {
     for (k; k < windData.ccWxData.length; k++) {
 
         if (typeof windData.ccWxData[k].windspeed == "number") {
+            let timeStamp = windData.ccWxData[k].date;
+            hour = Number(timeStamp.substr(timeStamp.indexOf("GMT") - 9, 2));
+            let suffix = "PM";
+            if (hour < 12)
+                suffix = "AM";
+            hour = ((hour + 11) % 12 + 1);
+
             labelBatch.push(windData.ccWxData[k].time.substr(0, windData.ccWxData[k].time.indexOf("M") - 8) + windData.ccWxData[k].time.substr(windData.ccWxData[k].time.indexOf("M") - 1, 2));
             dataWindBatch.push(windData.ccWxData[k].windspeed); // push wind speeed
 
@@ -1026,6 +1049,13 @@ function buildWindDirectionChart(windData) {
     for (k; k < windData.ccWxData.length; k++) {
 
         if (typeof windData.ccWxData[k].winddirection == "string") {
+            let timeStamp = windData.ccWxData[k].date;
+            hour = Number(timeStamp.substr(timeStamp.indexOf("GMT") - 9, 2));
+            let suffix = "PM";
+            if (hour < 12)
+                suffix = "AM";
+            hour = ((hour + 11) % 12 + 1);
+
             labelBatch.push(windData.ccWxData[k].time.substr(0, windData.ccWxData[k].time.indexOf("M") - 8) + windData.ccWxData[k].time.substr(windData.ccWxData[k].time.indexOf("M") - 1, 2));
             // check to see if wind direction reported is null
             if (windData.ccWxData[k].winddirection == null) {
@@ -1117,9 +1147,7 @@ function flattenData(data, type, callback) {
     flatBatch = [];
     data.forEach(function (element) {
         for (k = 0; k < element.trails.length; k++) {
-            console.log(element.organization);
-            console.log(element.trails[k]);
-            console.log(element.trails[k].tournaments);
+           
             for (l = 0; l < element.trails[k].tournaments.length; l++) {
                 // Format the tx date to check against today's date
                 let txDate = new Date(element.trails[k].tournaments[l].date);

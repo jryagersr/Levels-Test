@@ -30,7 +30,7 @@ module.exports = {
         if (!dataErrorTrue) {
 
           if (typeof fxData.list == "undefined") {
-            console.log(`No Wx data for ${currentLake.bodyOfWater}`);
+            console.log(`No Wx data for ${currentLake.bodyOfWater} ${fxData}`);
             // send empty array to front end
           } else {
 
