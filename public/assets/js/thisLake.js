@@ -721,7 +721,7 @@ function buildHumidityChart(humidityData) {
 
         if (typeof humidityData.ccWxData[k].humidity == "number") { //calculate the time as 12 hour AM PM.
 
-            let timeStamp = humidityData.ccWxData[k].datetoLocaleString();
+            let timeStamp = humidityData.ccWxData[k].date.toLocaleString();
             hour = Number(timeStamp.substr(timeStamp.indexOf("GMT") - 9, 2));
             let suffix = "PM";
             if (hour < 12)
@@ -823,7 +823,7 @@ function buildBaroChart(baroData) {
     for (k; k < baroData.ccWxData.length; k++) {
 
         if (typeof baroData.ccWxData[k].baro == "number") {
-            let timeStamp = baroData.ccWxData[k].datetoLocaleString();
+            let timeStamp = baroData.ccWxData[k].date.toLocaleString();
             hour = Number(timeStamp.substr(timeStamp.indexOf("GMT") - 9, 2));
             let suffix = "PM";
             if (hour < 12)
@@ -929,7 +929,7 @@ function buildWindChart(windData) {
     for (k; k < windData.ccWxData.length; k++) {
 
         if (typeof windData.ccWxData[k].windspeed == "number") {
-            let timeStamp = windData.ccWxData[k].datetoLocaleString();
+            let timeStamp = windData.ccWxData[k].date.toLocaleString();
             hour = Number(timeStamp.substr(timeStamp.indexOf("GMT") - 9, 2));
             let suffix = "PM";
             if (hour < 12)
@@ -1039,7 +1039,7 @@ function buildWindDirectionChart(windData) {
     for (k; k < windData.ccWxData.length; k++) {
 
         if (typeof windData.ccWxData[k].winddirection == "string") {
-            let timeStamp = windData.ccWxData[k].date;
+            let timeStamp = windData.ccWxData[k].date.toLocaleString();
             hour = Number(timeStamp.substr(timeStamp.indexOf("GMT") - 9, 2));
             let suffix = "PM";
             if (hour < 12)
