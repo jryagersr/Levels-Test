@@ -837,7 +837,7 @@ function buildBaroChart(baroData) {
                 suffix = "AM";
             hour = ((hour + 11) % 12 + 1);
 
-            labelBatch.push(baroData.ccWxData[k].time.substr(0, baroData.ccWxData[k].time.indexOf("M") - 8) + baroData.ccWxData[k].time.substr(baroData.ccWxData[k].time.indexOf("M") - 1, 2));
+            labelBatch.push(hour + suffix);
             dataBaroBatch.push(baroData.ccWxData[k].baro); // push elev
 
             if (baroData.ccWxData[k].baro > chartMaxBaro) // if value is greater than max, replace max
@@ -946,7 +946,7 @@ function buildWindChart(windData) {
                 suffix = "AM";
             hour = ((hour + 11) % 12 + 1);
 
-            labelBatch.push(windData.ccWxData[k].time.substr(0, windData.ccWxData[k].time.indexOf("M") - 8) + windData.ccWxData[k].time.substr(windData.ccWxData[k].time.indexOf("M") - 1, 2));
+            labelBatch.push(hour + suffix);
             dataWindBatch.push(windData.ccWxData[k].windspeed); // push wind speeed
 
             if (windData.ccWxData[k].windspeed > chartMaxWind) // if value is greater than max, replace max
@@ -1059,7 +1059,7 @@ function buildWindDirectionChart(windData) {
                 suffix = "AM";
             hour = ((hour + 11) % 12 + 1);
 
-            labelBatch.push(windData.ccWxData[k].time.substr(0, windData.ccWxData[k].time.indexOf("M") - 8) + windData.ccWxData[k].time.substr(windData.ccWxData[k].time.indexOf("M") - 1, 2));
+            labelBatch.push(hour + suffix);
             // check to see if wind direction reported is null
             if (windData.ccWxData[k].winddirection == null) {
                 windDirection = 0;
