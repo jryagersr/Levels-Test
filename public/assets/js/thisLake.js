@@ -612,7 +612,7 @@ function buildTempChart(tempData) {
 
         //calculate the time as 12 hour AM PM.
 
-        let timeStamp = tempData.ccWxData[k].date;
+        let timeStamp = tempData.ccWxData[k].date.toLocaleString();
         hour = Number(timeStamp.substr(timeStamp.indexOf("GMT") - 9, 2));
         let suffix = "PM";
         if (hour < 12)
@@ -635,9 +635,6 @@ function buildTempChart(tempData) {
             break;
         }
     }
-
-    //labelBatch.reverse();
-    //dataTempBatch.reverse();
 
     // Set y axis limits for Temp Chart
     let minMaxDiff = chartMaxTemp - chartMinTemp;
@@ -724,7 +721,7 @@ function buildHumidityChart(humidityData) {
 
         if (typeof humidityData.ccWxData[k].humidity == "number") { //calculate the time as 12 hour AM PM.
 
-            let timeStamp = humidityData.ccWxData[k].date;
+            let timeStamp = humidityData.ccWxData[k].datetoLocaleString();
             hour = Number(timeStamp.substr(timeStamp.indexOf("GMT") - 9, 2));
             let suffix = "PM";
             if (hour < 12)
@@ -745,9 +742,6 @@ function buildHumidityChart(humidityData) {
             break;
         }
     }
-
-    //labelBatch.reverse();
-    //dataHumidityBatch.reverse();
 
     // Set y axis limits for Temp Chart
     //if (chartMaxElevLimit < lake.normalPool) chartMaxElevLimit = lake.normalPool + .5; // make sure normal pool line shows.
@@ -829,7 +823,7 @@ function buildBaroChart(baroData) {
     for (k; k < baroData.ccWxData.length; k++) {
 
         if (typeof baroData.ccWxData[k].baro == "number") {
-            let timeStamp = baroData.ccWxData[k].date;
+            let timeStamp = baroData.ccWxData[k].datetoLocaleString();
             hour = Number(timeStamp.substr(timeStamp.indexOf("GMT") - 9, 2));
             let suffix = "PM";
             if (hour < 12)
@@ -850,10 +844,6 @@ function buildBaroChart(baroData) {
             break;
         }
     }
-
-    //labelBatch.reverse();
-    //dataBaroBatch.reverse();
-
 
     // Set y axis limits for Baro Chart
     let minMaxDiff = chartMaxBaro - chartMinBaro;
@@ -939,7 +929,7 @@ function buildWindChart(windData) {
     for (k; k < windData.ccWxData.length; k++) {
 
         if (typeof windData.ccWxData[k].windspeed == "number") {
-            let timeStamp = windData.ccWxData[k].date;
+            let timeStamp = windData.ccWxData[k].datetoLocaleString();
             hour = Number(timeStamp.substr(timeStamp.indexOf("GMT") - 9, 2));
             let suffix = "PM";
             if (hour < 12)
@@ -1072,9 +1062,6 @@ function buildWindDirectionChart(windData) {
             break;
         }
     }
-
-    //labelBatch.reverse();
-    //dataWindBatch.reverse();
 
     var ctx = document.getElementById('myWindDirectionChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
