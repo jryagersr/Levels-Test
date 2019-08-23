@@ -610,18 +610,20 @@ function buildTempChart(tempData) {
 
             //labelBatch.push(tempData.ccWxData[k - 1].time);
 
-        //calculate the time as 12 hour AM PM.
+            //calculate the time as 12 hour AM PM.
 
-        let timeStamp = tempData.ccWxData[k].date.toLocaleString();
-        hour = Number(timeStamp.substr(timeStamp.indexOf("GMT") - 9, 2));
-        let suffix = "PM";
-        if (hour < 12)
-            suffix = "AM";
-        hour = ((hour + 11) % 12 + 1);
-        console.log (`${timeStamp} plus hour ${hour} plus suffix ${suffix}`)
+            let timeStamp = new Date(tempData.ccWxData[k].date);
+
+            //calculate the time as 12 hour AM PM.
+            hour = timeStamp.getHours();
+            let suffix = "PM";
+            if (hour < 12)
+                suffix = "AM";
+            hour = ((hour + 11) % 12 + 1);
+            console.log(`${timeStamp} plus hour ${hour} plus suffix ${suffix}`)
 
             labelBatch.push(hour + suffix);
-               // tempData.ccWxData[k].time.substr(0, tempData.ccWxData[k].time.indexOf("M") - 8) + tempData.ccWxData[k].time.substr(tempData.ccWxData[k].time.indexOf("M") - 1, 2))
+            // tempData.ccWxData[k].time.substr(0, tempData.ccWxData[k].time.indexOf("M") - 8) + tempData.ccWxData[k].time.substr(tempData.ccWxData[k].time.indexOf("M") - 1, 2))
             dataTempBatch.push(tempData.ccWxData[k].temp); // push elev
 
             if (tempData.ccWxData[k].temp > chartMaxTemp) // if value is greater than max, replace max
@@ -721,8 +723,10 @@ function buildHumidityChart(humidityData) {
 
         if (typeof humidityData.ccWxData[k].humidity == "number") { //calculate the time as 12 hour AM PM.
 
-            let timeStamp = humidityData.ccWxData[k].date.toLocaleString();
-            hour = Number(timeStamp.substr(timeStamp.indexOf("GMT") - 9, 2));
+            let timeStamp = new Date(humidityData.ccWxData[k].date);
+
+            //calculate the time as 12 hour AM PM.
+            hour = timeStamp.getHours();
             let suffix = "PM";
             if (hour < 12)
                 suffix = "AM";
@@ -823,8 +827,11 @@ function buildBaroChart(baroData) {
     for (k; k < baroData.ccWxData.length; k++) {
 
         if (typeof baroData.ccWxData[k].baro == "number") {
-            let timeStamp = baroData.ccWxData[k].date.toLocaleString();
-            hour = Number(timeStamp.substr(timeStamp.indexOf("GMT") - 9, 2));
+
+            let timeStamp = new Date(baroData.ccWxData[k].date);
+
+            //calculate the time as 12 hour AM PM.
+            hour = timeStamp.getHours();
             let suffix = "PM";
             if (hour < 12)
                 suffix = "AM";
@@ -929,8 +936,11 @@ function buildWindChart(windData) {
     for (k; k < windData.ccWxData.length; k++) {
 
         if (typeof windData.ccWxData[k].windspeed == "number") {
-            let timeStamp = windData.ccWxData[k].date.toLocaleString();
-            hour = Number(timeStamp.substr(timeStamp.indexOf("GMT") - 9, 2));
+
+            let timeStamp = new Date(windData.ccWxData[k].date);
+
+            //calculate the time as 12 hour AM PM.
+            hour = timeStamp.getHours();
             let suffix = "PM";
             if (hour < 12)
                 suffix = "AM";
@@ -1039,8 +1049,11 @@ function buildWindDirectionChart(windData) {
     for (k; k < windData.ccWxData.length; k++) {
 
         if (typeof windData.ccWxData[k].winddirection == "string") {
-            let timeStamp = windData.ccWxData[k].date.toLocaleString();
-            hour = Number(timeStamp.substr(timeStamp.indexOf("GMT") - 9, 2));
+
+            let timeStamp = new Date(windData.ccWxData[k].date);
+
+            //calculate the time as 12 hour AM PM.
+            hour = timeStamp.getHours();
             let suffix = "PM";
             if (hour < 12)
                 suffix = "AM";
@@ -1134,7 +1147,7 @@ function flattenData(data, type, callback) {
     flatBatch = [];
     data.forEach(function (element) {
         for (k = 0; k < element.trails.length; k++) {
-           
+
             for (l = 0; l < element.trails[k].tournaments.length; l++) {
                 // Format the tx date to check against today's date
                 let txDate = new Date(element.trails[k].tournaments[l].date);
@@ -1241,14 +1254,15 @@ $.ajax({
 
         // Set the current weather conditions
         let ccIndex = currentLake.ccWxData.length - 1;
-        let timeStamp = Date(currentLake.ccWxData[ccIndex].date);
+        let timeStamp = new Date(currentLake.ccWxData[ccIndex].date);
 
         //calculate the time as 12 hour AM PM.
-        hour = Number(timeStamp.substr(timeStamp.indexOf("GMT") - 9, 2));
+        hour = timeStamp.getHours();
         let suffix = "PM";
         if (hour < 12)
             suffix = "AM";
         hour = ((hour + 11) % 12 + 1);
+        let ccDate = timeStamp.toLocaleDateString();
 
         $("#currentWeatherConditions").append(currentLake.ccWxData[ccIndex].conditions);
         $("#currentWeatherTemp").append(currentLake.ccWxData[ccIndex].temp);
@@ -1256,7 +1270,7 @@ $.ajax({
         $("#currentWeatherBarometric").append(currentLake.ccWxData[ccIndex].baro);
         $("#currentWeatherWindSpeed").append(currentLake.ccWxData[ccIndex].windspeed);
         $("#currentWeatherWindDirection").append(currentLake.ccWxData[ccIndex].winddirection);
-        $("#currentWeatherDate").append(timeStamp.substr(0, timeStamp.indexOf("GMT") - 14) + " " + hour +suffix);
+        $("#currentWeatherDate").append(ccDate + " " + hour + suffix);
         $("#currentWeatherTime").append(currentLake.ccWxData[ccIndex].location);
 
 

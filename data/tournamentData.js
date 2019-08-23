@@ -4416,6 +4416,73 @@ module.exports = [
         }]
     },
     {
+        organization: "NC Bass Champs",
+        trails: [{
+            trail: "Fall Winter",
+            tournaments: [{
+                date: "2019-09-08",
+                lake: "Tar River",
+                lakeID: "tarriver",
+                ramp: "Tranters Creek",
+                state: "NC",
+                txDetail: "",
+                resultsLink: "https://www.ncbasschamps.com",
+                entryLink: "https://www.ncbasschamps.com"
+            },
+            {
+                date: "2019-10-20",
+                lake: "Roanoke River",
+                lakeID: "roanokewill",
+                ramp: "Plymouth",
+                state: "NC",
+                txDetail: "",
+                resultsLink: "https://www.ncbasschamps.com",
+                entryLink: "https://www.ncbasschamps.com"
+            },
+            {
+                date: "2019-11-24",
+                lake: "Chowan River",
+                lakeID: "chowan",
+                ramp: "Tunis Landing",
+                state: "NC",
+                txDetail: "",
+                resultsLink: "https://www.ncbasschamps.com",
+                entryLink: "https://www.ncbasschamps.com"
+            },
+            {
+                date: "2019-12-15",
+                lake: "Tar River",
+                lakeID: "tarriver",
+                ramp: "Havens Garden",
+                state: "NC",
+                txDetail: "",
+                resultsLink: "https://www.ncbasschamps.com",
+                entryLink: "https://www.ncbasschamps.com"
+            },
+            {
+                date: "2020-01-05",
+                lake: "Roanoke River",
+                lakeID: "roanokewill",
+                ramp: "Plymouth",
+                state: "NC",
+                txDetail: "",
+                resultsLink: "https://www.ncbasschamps.com",
+                entryLink: "https://www.ncbasschamps.com"
+            },
+            {
+                date: "2020-09-08",
+                lake: "Neuse River",
+                lakeID: "neuse",
+                ramp: "Lawson Creek",
+                state: "NC",
+                txDetail: "",
+                resultsLink: "https://www.ncbasschamps.com",
+                entryLink: "https://www.ncbasschamps.com"
+            },
+         ]
+        }]
+    },
+    {
         organization: "Percy Priest Wildcat",
         trails: [{
             trail: "Sat Morn (5:30-10:30)",

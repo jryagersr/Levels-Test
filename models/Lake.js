@@ -62,40 +62,7 @@ var LakeSchema = new Schema({
   },
   resultsLink: {
     type: String
-  },
-  entryLink: {
-    type: String
-  },
-  adLogoSrc: {
-    type: String
-  },
-  adLogoUrl: {
-    type: String
-  },
-  barometric: {
-    type: Number
-  },
-  wxTemp: {
-    type: Number
-  },
-  humidity: {
-    type: Number
-  },
-  windSpeed: {
-    type: Number
-  },
-  windDirection: {
-    type: String
-  },
-  conditions: {
-    type: String
-  },
-  wxDate: {
-    type: String
-  },
-  wxTime: {
-    type: String
-  },
+  }
 
 });
 

@@ -144,19 +144,21 @@ module.exports = {
 
   // function to update and return one lake
   updateCurrentConditionsData: function (currentLake) {
-    let cxLake = currentLake
-    let bodyOfWater = cxLake.bodyOfWater;
+    let ccLake = currentLake
+    let bodyOfWater = ccLake.bodyOfWater;
 
     // Update the current conditions and forecast for this lake
 
     // Get weather data
-    weather.getWeatherData(cxLake, function (error, data) {
-      let ccLake = data;
+    weather.getWeatherData(ccLake, function (error, data) {
+      let newLakeCC = data;
       if (error) {
         console.log(`Weather retrieval error (updateFunction) ${error}`)
         callbackError = true;
+        console.log(`Forecast Data for ${bodyOfWater} failed`)
+        return false;
       } else {
-        if (ccLake !== 'undefined') {
+        if (newLakeCC !== 'undefined') {
           weatherData = true;
 
         } else {
@@ -166,13 +168,11 @@ module.exports = {
         // if there are 24 in ccWxData, pop one off
 
         // push the current conditions into ccWxData[] and update the LastRefresh
-        let timeStamp = ccLake.ccWxDataLastRefresh;
-        if (timeStamp == "undefined") {
-        let b = 2;
-        }
+        let timeStamp = newLakeCC.ccWxDataLastRefresh;
+
         //set timeStamp for current conditions to 0 minutes, 0 seconds
         //console.log (`${timeStamp} value ${ccLake.ccWxDataLastRefresh}`)
-        timeStamp = timeStamp.substring(0, timeStamp.indexOf(":")) + ":00:00 " + timeStamp.substring(timeStamp.indexOf(":")+7, timeStamp.length);
+        timeStamp = timeStamp.substring(0, timeStamp.indexOf(":")) + ":00:00 " + timeStamp.substring(timeStamp.indexOf(":") + 7, timeStamp.length);
 
         //console.log (`${bodyOfWater} Current Conditions updated (db) ${timeStamp}`)
 
@@ -180,8 +180,8 @@ module.exports = {
             'bodyOfWater': bodyOfWater
           }, {
             $set: {
-              "ccWxData": ccLake.ccWxData,
-            
+              "ccWxData": newLakeCC.ccWxData,
+
               "ccWxDataLastRefresh": timeStamp
             }
           })
@@ -190,6 +190,7 @@ module.exports = {
               console.log(err);
             } else {
               //console.log(lakeWeather.ccWxData)
+              return true;
             }
           });
       }
@@ -209,36 +210,36 @@ module.exports = {
 
     // Get 
 
-      forecast.getForecastData(currentLake, function (error, lakeForecast) {
-        let forecastLake = lakeForecast;
-        //let fxData = [];
-        let bodyOfWater = forecastLake.bodyOfWater;
-        if (error) {
-          console.log(`Weather retrieval error (updateFunction) ${error}`)
-          callbackError = true;
-        } else {
+    forecast.getForecastData(currentLake, function (error, lakeForecast) {
+      let forecastLake = lakeForecast;
+      //let fxData = [];
+      let bodyOfWater = forecastLake.bodyOfWater;
+      if (error) {
+        console.log(`Weather retrieval error (updateFunction) ${error}`)
+        callbackError = true;
+      } else {
 
-          if (forecastLake !== 'undefined') {
-            currentLake = forecastLake;
-          }
-          db.model("Lake").updateOne({
-              'bodyOfWater': bodyOfWater
-            }, {
-              $set: {
-                "wxForecastData": currentLake.wxForecastData
-              }
-            })
-            .exec(function (err, wxForecastData) {
-              if (err) {
-                console.log(err);
-              } else {
-                //console.log(wxData)
-              }
-            });
-
+        if (forecastLake !== 'undefined') {
+          currentLake = forecastLake;
         }
-      });
-    
+        db.model("Lake").updateOne({
+            'bodyOfWater': bodyOfWater
+          }, {
+            $set: {
+              "wxForecastData": currentLake.wxForecastData
+            }
+          })
+          .exec(function (err, wxForecastData) {
+            if (err) {
+              console.log(err);
+            } else {
+              //console.log(wxData)
+            }
+          });
+
+      }
+    });
+
   }
 
 }
