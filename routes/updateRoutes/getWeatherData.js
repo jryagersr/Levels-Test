@@ -45,11 +45,11 @@ module.exports = {
             }
 
             // push the current conditions into ccWxData[] and update the LastRefresh
-            let timeStamp = Date(wxData.dt);
-            //set timeStamp for current conditions to 0 minutes, 0 seconds
-            timeStamp = timeStamp.substring(0, timeStamp.indexOf(":")) + ":00:00 " + timeStamp.substring(timeStamp.indexOf(":") + 7, timeStamp.length);
+            let wxTimeStamp = Date(wxData.dt);
+            //set timestamp for current conditions to 0 minutes, 0 seconds
+            wxTimeStamp = wxTimeStamp.substring(0, wxTimeStamp.indexOf(":")) + ":00:00 " + wxTimeStamp.substring(wxTimeStamp.indexOf(":") + 7, wxTimeStamp.length);
 
-            lakeWeather.ccWxDataLastRefresh = timeStamp
+            lakeWeather.ccWxDataLastRefresh = wxTimeStamp
             lakeWeather.ccWxData.push({
               conditions: wxData.weather[0].description.charAt(0).toUpperCase() + wxData.weather[0].description.slice(1),
               date: new Date(),

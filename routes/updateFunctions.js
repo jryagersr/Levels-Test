@@ -109,6 +109,7 @@ module.exports = {
                   if (updateData.data[i].time.toString() == updateData.data[i - 1].time.toString()) {
                     // remove the oldest entry
                     updateData.data.splice(i - 1, 1);
+                    i--;
                   }
                 }
               }
@@ -170,8 +171,10 @@ module.exports = {
         // push the current conditions into ccWxData[] and update the LastRefresh
         let timeStamp = newLakeCC.ccWxDataLastRefresh;
 
+        if (newLakeCC.ccWxDataLastRefresh == 'undefined') {
+          let aaa = 4;
+        }
         //set timeStamp for current conditions to 0 minutes, 0 seconds
-        //console.log (`${timeStamp} value ${ccLake.ccWxDataLastRefresh}`)
         timeStamp = timeStamp.substring(0, timeStamp.indexOf(":")) + ":00:00 " + timeStamp.substring(timeStamp.indexOf(":") + 7, timeStamp.length);
 
         //console.log (`${bodyOfWater} Current Conditions updated (db) ${timeStamp}`)
