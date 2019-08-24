@@ -65,7 +65,6 @@ module.exports = {
     } else {
       if (updateData.length > 0) {
         if (lastRefresh !== UROLdata[0].time.toString()) {
-          //console.log(`${bodyOfWater} Updated `)
           lakeUpdateFlag = true;
           lastRefresh = updateData[0].time.toString();
         }
