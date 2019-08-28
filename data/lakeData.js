@@ -1598,7 +1598,7 @@ module.exports = [
         dataSource: ["USGS"], // array of calls to make to retrieve data
     },
     {
-        bodyOfWater: "Wilson", // lake name
+        bodyOfWater: "Wilson (KS)", // lake name
         state: ["Kansas"],
         data: [],
         ccWxData: [],
