@@ -1597,6 +1597,27 @@ module.exports = [
         href: "/lakes/pomona",
         dataSource: ["USGS"], // array of calls to make to retrieve data
     },
+    {
+        bodyOfWater: "Wilson", // lake name
+        state: ["Kansas"],
+        data: [],
+        ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
+        wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 1516.0, // 1012.87 seems to be the delta added to the gage reading. Perhaps the gage elevation.
+        topOfFloodControl: 1554.0,
+        topOfDam: 1592.0,
+        lat: 38.955225,
+        long: -98.501366,
+        elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=5734030&p_parameter_type=Flow:Stor:Precip:Stage:Elev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+        flowURL: "",
+        href: "/lakes/wilsonks",
+        dataSource: ["ACE"], // array of calls to make to retrieve data 
+    },
 
     // KENTUCKY  ---------------------------------------------------------------------------------------------------------
 

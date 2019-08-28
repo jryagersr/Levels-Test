@@ -111,9 +111,9 @@ function buildElevChart(data, lake) {
     // push the final day's values after looping
     labelBatch.push(data[k - 1].date.substring(0, data[k - 1].date.length - 5)); // put final day date value in array
     dataElevBatch.push((sumOfElevs / divisor).toFixed(2)); // calculate average final day and push
-    dataNPBatch.push(lake.normalPool); // Normal Pool line batch (currently trying to get it to display)
-    dataFCBatch.push(lake.topOfFloodControl); // Normal Pool line batch (currently trying to get it to display)
-    //dataTDBatch.push(lake.topOfDam); // Top of Dam line batch (currently trying to get it to display)
+    dataNPBatch.push(lake.normalPool); // Normal Pool line batch 
+    dataFCBatch.push(lake.topOfFloodControl); // Normal Pool line batch 
+    //dataTDBatch.push(lake.topOfDam); // Top of Dam line batch 
 
     //check the final day's values for Min and MaxLimit
     if ((sumOfElevs / divisor) > chartMaxElev) // if value is greater than max, replace max
@@ -128,6 +128,7 @@ function buildElevChart(data, lake) {
     let minMaxDiff = chartMaxElev - chartMinElev;
     let chartGap = (minMaxDiff + 5) * .2;
     if (minMaxDiff < 1) chartGap = minMaxDiff + 1;
+    if (minMaxDiff > 20) chartGap = 1;
     chartMinElevLimit = Math.round(chartMinElev) - Math.round(chartGap); // set the chart lower limit
     //if (chartMinElevLimit > lake.normalPool) chartMinElevLimit = lake.normalPool - .5; // make sure normal pool line shows.
     chartMaxElevLimit = Math.round(chartMaxElev) + Math.round(chartGap); // set the chart upper limit
@@ -240,6 +241,7 @@ function buildFlowChart(data) {
             break;
         }
     }
+    let avgFlow = 0;
     // Loop through our data for 24 data points if we have it
     for (k; k < data.length; k++) {
         // if we're past the first entry
@@ -254,25 +256,40 @@ function buildFlowChart(data) {
                 }
                 // else we're on a new day. so push data and reset averages
                 else {
-                    let avgFlow = sumOfFlows / divisor;
+                    avgFlow = sumOfFlows / divisor;
                     if (avgFlow >= chartMaxFlow) // if value is greater than max, replace max
                         chartMaxFlow = avgFlow; // set the max flow for calculating Chart y-axis Max later
-                    //if (avgFlow <= chartMinFlow) // if value is less thank min, replace min
-                    //chartMinFlow = avgFlow; // set the max flow for calculating Chart y-axis Min later
+                    // no chartMinFlow, always 0
                     labelBatch.push(data[k - 1].date.substring(0, data[k - 1].date.length - 5));
                     dataFlowBatch.push((sumOfFlows / divisor).toFixed(2)); // calculate average
                     sumOfFlows = data[k].flow;
                     divisor = 1;
                 }
             }
-        }
-        if ((data[k].flow == "Missing" || data[k].flow == "N/A") && data[k].date !== data[k - 1].date) {
-            labelBatch.push(data[k - 1].date.substring(0, data[k - 1].date.length - 5));
-            dataFlowBatch.push((sumOfFlows / divisor).toFixed(2)); // calculate average
-            sumOfFlows = 0;
-            divisor = 0;
-        }
+            if ((data[k].flow == "Missing" || data[k].flow == "N/A") && data[k].date !== data[k - 1].date) {
+                labelBatch.push(data[k - 1].date.substring(0, data[k - 1].date.length - 5));
+                dataFlowBatch.push((sumOfFlows / divisor).toFixed(2)); // calculate average
 
+                if (data[k].date !== data[k - 1].date) {
+                    // if we are here, this lake has a plethora of "Missing" and "N/A"
+                    // andthe date has changed between entries,
+                    // we must set the chartMaxFlow 
+                    avgFlow = sumOfFlows / divisor;
+                    if (avgFlow >= chartMaxFlow) // if value is greater than max, replace max
+                        chartMaxFlow = avgFlow; // set the max flow for calculating Chart y-axis Max later
+                    // no chartMinFlow, always 0
+                }
+                if ((data[k].flow == "Missing" || data[k].flow == "N/A"))
+                    sumOfFlows = 0
+                else sumOfFlows = data[k].flow;
+                divisor = 1;
+            } else if (data[k].date !== data[k - 1].date) {
+                // dates are different and flow has good data so, set chartMaxFlow
+                if (avgFlow >= chartMaxFlow) // if value is greater than max, replace max
+                    chartMaxFlow = avgFlow; // set the max flow for calculating Chart y-axis Max later
+                // no chartMinFlow, always 0
+            }
+        }
         // when a week of data has been reached stop
         if (labelBatch.length > 6) {
             break;
@@ -504,7 +521,7 @@ function buildHourlyFlowChart(data, lake) {
             }
         }
         // when a week of data has been reached stop
-        if (labelBatch.length > 23) {
+        if (labelBatch.length > 47) {
             break;
         }
     }
@@ -620,7 +637,6 @@ function buildTempChart(tempData) {
             if (hour < 12)
                 suffix = "AM";
             hour = ((hour + 11) % 12 + 1);
-            console.log(`${timeStamp} plus hour ${hour} plus suffix ${suffix}`)
 
             labelBatch.push(hour + suffix);
             // tempData.ccWxData[k].time.substr(0, tempData.ccWxData[k].time.indexOf("M") - 8) + tempData.ccWxData[k].time.substr(tempData.ccWxData[k].time.indexOf("M") - 1, 2))
@@ -847,7 +863,7 @@ function buildBaroChart(baroData) {
 
         }
         // when a week of data has been reached stop
-        if (labelBatch.length > 23 || k > baroData.ccWxData.length - 1) {
+        if (labelBatch.length > 47 || k > baroData.ccWxData.length - 1) {
             break;
         }
     }
@@ -1213,6 +1229,15 @@ var sort_by = function (field, reverse, primer) {
 
 
 /******************************************************************************************************************/
+//
+//
+//
+//      Process the PAGE
+//
+//
+//
+//
+/******************************************************************************************************************/
 // Get current lake from database
 // Declare variable to hold currentLake object
 var currentLake = {};
@@ -1273,7 +1298,6 @@ $.ajax({
         $("#currentWeatherDate").append(ccDate + " " + hour + suffix);
         $("#currentWeatherTime").append(currentLake.ccWxData[ccIndex].location);
 
-
         /***************************************************************************** */
         //Ramp Tab
         /***************************************************************************** */
@@ -1288,7 +1312,6 @@ $.ajax({
                 rampData.forEach(function (ramp, i) {
                     // if match send the lat lon to client
                     let rampDirectionsLink = "https://www.google.com/maps/dir//" + ramp.lat + "," + ramp.long;
-
 
                     if (ramp.id == lakeRoute) {
                         // Create the HTML Well (Section) and Add the table content for each reserved table
@@ -1347,62 +1370,125 @@ $.ajax({
 
         let wxTableRow = 1;
         let j = 0;
-        let lastForecastDate = "";
+        let i = 0;
+        let fxData = currentLake.wxForecastData;
 
-        currentLake.wxForecastData.forEach(function (element, i) {
+        //fxdData.reverse();
 
+        let dayLines = [];
+        let dataLines = [];
+
+        fxData.forEach(function (element, i) {
             if ((element !== "undefined")) {
-                // Create the HTML Well (Section) and Add the table content for each reserved table
-                var weatherSection = $("<tr>");
-                weatherSection.addClass("well");
-                weatherSection.attr("id", "weatherWell-" + wxTableRow + 1);
-                $("#weatherSection").append(weatherSection);
+
 
                 // if the first element or a Day forecast element 
-                if (i == 0 || typeof currentLake.wxForecastData[i].day == 'number') {
+                if (typeof element.day == 'number') {
 
-                    // If not the first day, then bump j past the lastday that was displayed so it will not be duped
-                    if (i != 0) {
-                        j++; // increment the for loop counter past the last Day Forecast element
-                        i++; // increment the element counter so the previous Day Forecast does not get re-processed
+                    // This is a "Day" Line in the data, we must save it until it is time to push it in the well
+
+                    dayLines.push({
+                        conditions: element.conditions,
+                        day: element.day,
+                        high: element.high,
+                        humidity: element.humidity,
+                        low: element.low,
+                        temp: element.temp,
+                        time: element.time,
+                        winddirection: element.winddirection,
+                        windspeed: element.windspeed
+                    });
+
+                } else {
+                    // If element is a data line display the line
+                    if (typeof element.day !== 'number') {
+
+                        dataLines.push({
+                            conditions: element.conditions,
+                            humidity: element.humidity,
+                            temp: element.temp,
+                            time: element.time,
+                            winddirection: element.winddirection,
+                            windspeed: element.windspeed
+                        });
+
                     }
-                    // Append the Days remaining forecast to the well
-                    for (j; j < currentLake.wxForecastData.length; j++) {
-
-                        if (typeof currentLake.wxForecastData[j].day == 'number') {
-
-                            $("#weatherWell-" + wxTableRow + 1).append("<td>" + currentLake.wxForecastData[j].time.substring(11, 5) + "</td>");
-                            $("#weatherWell-" + wxTableRow + 1).append("<td>" + "Forecast" + "</td>");
-                            $("#weatherWell-" + wxTableRow + 1).append("<td>" + currentLake.wxForecastData[j].conditions + "</td>");
-                            $("#weatherWell-" + wxTableRow + 1).append("<td>" + currentLake.wxForecastData[j].high.toFixed(0) + '/' + currentLake.wxForecastData[j].low.toFixed(0) + "</td>");
-                            $("#weatherWell-" + wxTableRow + 1).append("<td>" + Math.round(currentLake.wxForecastData[j].windspeed) + ' ' + currentLake.wxForecastData[j].winddirection + "</td>");
-
-                            wxTableRow++;
-                            j++;
-                            if (i == 0) {
-                                var weatherSection = $("<tr>");
-                                weatherSection.addClass("well");
-                                weatherSection.attr("id", "weatherWell-" + wxTableRow + 1);
-                                $("#weatherSection").append(weatherSection);
-                            }
-                            break;
-                        }
-                    }
-
-                }
-                // If element is a 'Day' data line, do not display a duplicate
-                if (typeof element.day !== 'number') {
-                    // Append the 3 hour data values to the table row
-                    $("#weatherWell-" + wxTableRow + 1).append("<td>" + "" + "</td>");
-                    $("#weatherWell-" + wxTableRow + 1).append("<td>" + element.time.substr(11, 5) + "</td>");
-                    $("#weatherWell-" + wxTableRow + 1).append("<td>" + element.conditions + "</td>");
-                    $("#weatherWell-" + wxTableRow + 1).append("<td>" + element.temp.toFixed(0) + "</td>");
-                    $("#weatherWell-" + wxTableRow + 1).append("<td>" + Math.round(element.windspeed) + ' ' + element.winddirection + "</td>");
                 }
 
+                // Check to see if time is 00:00 (ie beginning of the day
+                // If so, then display the saved day
+
+                if (1 == 0) {
+
+                }
             }
             wxTableRow++;
         });
+
+        // Set the Day High and Low temp to the correct value (calculate)
+        for (i = 0; i < dayLines.length - 1; i++) {
+            dayLines[i].high = 0;
+            dayLines[i].low = 150;
+
+            for (j = 0; j < dataLines.length - 1; j++) {
+
+                if (dataLines[j].time.substr(5, 5) == dayLines[i].time.substr(5, 5)) {
+                    if (dataLines[j].temp > dayLines[i].high)
+                        dayLines[i].high = dataLines[j].temp;
+                    if (dataLines[j].temp < dayLines[i].low)
+                        dayLines[i].low = dataLines[j].temp;
+                }
+
+            };
+
+        };
+
+
+        // now stuff the Day and Data Lines in the correct order into the well
+        // // Create the HTML Well (Section) and Add the table content for each reserved table
+
+        // Append the Days remaining forecast to the well
+
+        for (i = 0; i < dayLines.length - 1; i++) {
+            var weatherSection = $("<tr>");
+            weatherSection.addClass("well");
+            weatherSection.attr("id", "weatherWell-" + wxTableRow + 1);
+            $("#weatherSection").append(weatherSection);
+
+            let weatherTimeStamp = (new Date(dayLines[i].time + "Z")).toString();
+
+            // Append the data lines
+            $("#weatherWell-" + wxTableRow + 1).append("<td>" + weatherTimeStamp.substr(4, 6) + "</td>");
+            $("#weatherWell-" + wxTableRow + 1).append("<td>" + "Forecast" + "</td>");
+            $("#weatherWell-" + wxTableRow + 1).append("<td>" + dayLines[i].conditions + "</td>");
+            $("#weatherWell-" + wxTableRow + 1).append("<td>" + dayLines[i].high.toFixed(0) + '/' + dayLines[i].low.toFixed(0) + "</td>");
+            $("#weatherWell-" + wxTableRow + 1).append("<td>" + Math.round(dayLines[i].windspeed) + ' ' + dayLines[i].winddirection + "</td>");
+
+            wxTableRow++;
+
+            for (j = 0; j < dataLines.length - 1; j++) {
+                let dayTime = new Date(dayLines[i].time + "Z").toString();
+                let dataTime = new Date(dataLines[j].time + "Z").toString();
+
+                if (dataTime.substr(5, 5) == dayTime.substr(5, 5)) {
+                    var weatherSection = $("<tr>");
+                    weatherSection.addClass("well");
+                    weatherSection.attr("id", "weatherWell-" + wxTableRow + 1);
+                    $("#weatherSection").append(weatherSection);
+
+                    let weatherTimeStamp = (new Date(dataLines[j].time + "Z")).toString();
+
+                    $("#weatherWell-" + wxTableRow + 1).append("<td>" + " " + "</td>");
+                    $("#weatherWell-" + wxTableRow + 1).append("<td>" + weatherTimeStamp.substr(16, 5) + "</td>");
+                    $("#weatherWell-" + wxTableRow + 1).append("<td>" + dataLines[j].conditions + "</td>");
+                    $("#weatherWell-" + wxTableRow + 1).append("<td>" + dataLines[j].temp.toFixed(0) + "</td>");
+                    $("#weatherWell-" + wxTableRow + 1).append("<td>" + Math.round(dataLines[j].windspeed) + ' ' + dataLines[j].winddirection + "</td>");
+
+                    wxTableRow++;
+                }
+            }
+
+        };
 
         /***************************************************************************** */
         //Tx and Tx Results Tabs

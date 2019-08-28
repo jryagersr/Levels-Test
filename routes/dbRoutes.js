@@ -1,6 +1,7 @@
 const express = require("express"),
   db = require("../models")();
 
+const request = require("request")
 // Import all data source update functions
 const ace = require('./updateRoutes/getACEData');
 const acewilm = require('./updateRoutes/getACEWilmData');
@@ -14,8 +15,9 @@ const tva = require("./updateRoutes/getTVAData");
 const twdb = require("./updateRoutes/getTWDBData");
 const usgs = require("./updateRoutes/getUSGSData");
 const uslakes = require("./updateRoutes/getLAKESData");
-const weather = require("./updateRoutes/getWeatherData");
-// Import update functions
+const http = require("http");
+
+// Import update functions for updating lake levels, weather and forecast
 var update = require('./updateFunctions');
 
 
@@ -76,13 +78,13 @@ module.exports = function (app) {
                 case "ACE":
                   ace.getACEData(currentLake, function (error, ACEdata) {
                     if (error) {
-                      console.log(currentLake.bodyOfWater + "- getACEData returned " + ACEdata);
+                      console.log(currentLake.bodyOfWater + "- ACEData error " + ACEdata);
                       // if successful return the data
                     } else {
                       // update the current lake
                       update.updateAndReturnOneLake(currentLake, ACEdata, function (error, ACElakeDataFlag, ACEdata) {
                         if (error) {
-                          console.log(ACEdata);
+                          console.log(`UAROL error  ${ACEdata}`);
                         }
                         res.json(ACEdata);
                       })
@@ -93,13 +95,13 @@ module.exports = function (app) {
                 case "ACEWilm":
                   acewilm.getACEWilmData(currentLake, function (error, ACEWilmdata) {
                     if (error) {
-                      console.log(ACEWilmdata);
+                      console.log(currentLake.bodyOfWater + "- ACEWilmData error " + ACEWilmdata);
                       // if successful return the data
                     } else {
                       // update the current lake
                       update.updateAndReturnOneLake(currentLake, ACEWilmdata, function (error, ACEWilmlakeDataFlag, ACEWilmdata) {
                         if (error) {
-                          console.log(ACEWilmdata);
+                          console.log(`UAROL error  ${ACEWilmdata}`);
                         }
                         res.json(ACEWilmdata);
                       })
@@ -110,13 +112,13 @@ module.exports = function (app) {
                 case "APC":
                   apc.getAPCData(currentLake, function (error, APCdata) {
                     if (error) {
-                      console.log(APCdata);
+                      console.log(currentLake.bodyOfWater + "- APCData error " + APCdata);
                       // if successful return the data
                     } else {
                       // update the current lake
                       update.updateAndReturnOneLake(currentLake, APCdata, function (error, APClakeDataFlag, APCdata) {
                         if (error) {
-                          console.log(APCdata);
+                          console.log(`UAROL error  ${APCdata}`);
                         }
                         res.json(APCdata);
                       })
@@ -127,13 +129,14 @@ module.exports = function (app) {
                 case "CUBE":
                   cube.getCUBEData(currentLake, function (error, CUBEdata) {
                     if (error) {
+                      console.log(currentLake.bodyOfWater + "- CUBEData error " + CUBEdata);
                       response.send(CUBEdata);
                     } else {
                       // if successful return the data
                       // update the current lake
                       update.updateAndReturnOneLake(currentLake, CUBEdata, function (error, CUBElakeDataFlag, CUBEdata) {
                         if (error) {
-                          console.log(CUBEdata);
+                          console.log(`UAROL error  ${CUBEdata}`);
                         }
                         res.json(CUBEdata);
                       })
@@ -144,13 +147,13 @@ module.exports = function (app) {
                 case "DE":
                   de.getDEData(currentLake, function (error, DEdata) {
                     if (error) {
-                      console.log(DEdata);
+                      console.log(currentLake.bodyOfWater + "- DEData error " + DEEdata);
                       // if successful return the data
                     } else {
                       // update the current lake
                       update.updateAndReturnOneLake(currentLake, DEdata, function (error, DElakeDataFlag, DEdata) {
                         if (error) {
-                          console.log(DEdata);
+                          console.log(`UAROL error  ${DEdata}`);
                         }
                         res.json(DEdata);
                       })
@@ -161,13 +164,13 @@ module.exports = function (app) {
                 case "DUKE":
                   duke.getDUKEData(currentLake, function (error, DUKEdata) {
                     if (error) {
-                      console.log(DUKEdata);
+                      console.log(currentLake.bodyOfWater + "- DUKEData error " + DUKEdata);
                       // if successful return the data
                     } else {
                       // update the current lake
                       update.updateAndReturnOneLake(currentLake, DUKEdata, function (error, DUKElakeDataFlag, DUKEdata) {
                         if (error) {
-                          console.log(DUKEdata);
+                          console.log(`UAROL error  ${DUKEdata}`);
                         }
                         res.json(DUKEdata);
                       })
@@ -178,13 +181,13 @@ module.exports = function (app) {
                 case "GPC":
                   gpc.getGPCData(currentLake, function (error, GPCdata) {
                     if (error) {
-                      console.log(GPCdata);
+                      console.log(currentLake.bodyOfWater + "- GPCData error " + GPCdata);
                       // if successful return the data
                     } else {
                       // update the current lake
                       update.updateAndReturnOneLake(currentLake, GPCdata, function (error, GPClakeDataFlag, GPCdata) {
                         if (error) {
-                          console.log(GPCdata);
+                          console.log(`UAROL error  ${GPCdata}`);
                         }
                         res.json(GPCdata);
                       })
@@ -195,13 +198,13 @@ module.exports = function (app) {
                 case "SJRWMD":
                   sjrwmd.getSJRWMDData(currentLake, function (error, SJRWMDdata) {
                     if (error) {
-                      console.log(SJRWMDdata);
+                      console.log(currentLake.bodyOfWater + "- SJRWMDData error " + SJRWMDdata);
                       // if successful return the data
                     } else {
                       // update the current lake
                       update.updateAndReturnOneLake(currentLake, SJRWMDdata, function (error, SJRWMDlakeDataFlag, SJRWMDdata) {
                         if (error) {
-                          console.log(SJRWMDdata);
+                          console.log(`UAROL error  ${SJRWMDdata}`);
                         }
                         res.json(SJRWMDdata);
                       })
@@ -212,13 +215,13 @@ module.exports = function (app) {
                 case "TVA":
                   tva.getTVAData(currentLake, function (error, TVAdata) {
                     if (error) {
-                      console.log(TVAdata);
+                      console.log(currentLake.bodyOfWater + "- TVAData error " + TVAdata);
                       // if successful return the data
                     } else {
                       // update the current lake
                       update.updateAndReturnOneLake(currentLake, TVAdata, function (error, TVAlakeDataFlag, TVAdata) {
                         if (error) {
-                          console.log(TVAdata);
+                          console.log(`UAROL error  ${TVAdata}`);
                         }
                         res.json(TVAdata);
                       })
@@ -229,13 +232,13 @@ module.exports = function (app) {
                 case "TWDB":
                   twdb.getTWDBData(currentLake, function (error, TWDBdata) {
                     if (error) {
-                      console.log(TWDBdata);
+                      console.log(currentLake.bodyOfWater + "- TWDBData error " + TWDBdata);
                       // if successful return the data
                     } else {
                       // update the current lake
                       update.updateAndReturnOneLake(currentLake, TWDBdata, function (error, TWDBlakeDataFlag, TWDBdata) {
                         if (error) {
-                          console.log(TWDBdata);
+                          console.log(`UAROL error  ${TWDBdata}`);
                         }
                         res.json(TWDBdata);
                       })
@@ -246,12 +249,12 @@ module.exports = function (app) {
                 case "LAKES":
                   uslakes.getLAKESData(currentLake, function (error, LAKESdata) {
                     if (error) {
-                      console.log(LAKESdata);
+                      console.log(currentLake.bodyOfWater + "- LAKESData error " + LAKESdata);
                     } else {
                       // update the current lake
                       update.updateAndReturnOneLake(currentLake, LAKESdata, function (error, USLAKESlakeDataFlag, LAKESdata) {
                         if (error) {
-                          console.log(LAKESdata);
+                          console.log(`UAROL error  ${LAKESdata}`);
                         }
                         res.json(LAKESdata);
                       })
@@ -262,13 +265,13 @@ module.exports = function (app) {
                 case "USGS":
                   usgs.getUSGSData(currentLake, function (error, USGSdata) {
                     if (error) {
-                      console.log(USGSdata);
+                      console.log(currentLake.bodyOfWater + "- USGSData error " + USGSdata);
                       // if successful return the data
                     } else {
                       // update the current lake
                       update.updateAndReturnOneLake(currentLake, USGSdata, function (error, USGSlakeDataFlag, USGSdata) {
                         if (error) {
-                          console.log(USGSdata);
+                          console.log(`UAROL error  ${USGSdata}`);
                         }
                         res.json(USGSdata);
                       })
@@ -288,7 +291,6 @@ module.exports = function (app) {
                   if (update.checkForUpdate(currentLake, 1)) {
                     //update the current conditions
                     update.updateCurrentConditionsData(currentLake);
-                    //console.log(`${i}. Current Conditions update needed for ${currentLake.bodyOfWater} (${currentLake.dataSource[0]})`);
                   }
                   //Return the updated current conditions to the client
                   res.json(currentLake);
@@ -300,9 +302,8 @@ module.exports = function (app) {
 
               // Check to see if Current Conditions needs to be updated
               if (update.checkForUpdate(currentLake, 1)) {
-                // Update the current condiions 
+                // Update the current conditions 
                 update.updateCurrentConditionsData(currentLake);
-                //console.log(`${i}. Current Conditions update needed for ${currentLake.bodyOfWater} (${currentLake.dataSource[0]})`);
               }
               currentLake.data.sort(function (a, b) {
                 // Turn your strings into dates, and then subtract them
@@ -317,9 +318,8 @@ module.exports = function (app) {
             // Need to update the current conditions and forecast for this lake since the elev data did not need an update
 
             // Check to see if Current Conditions needs to be updated
-                         if (update.checkForUpdate(currentLake, 1)) {
-                           update.updateCurrentConditionsData(currentLake);
-                           //console.log(`${i}. Current Conditions update needed for ${currentLake.bodyOfWater} (${currentLake.dataSource[0]})`);
+            if (update.checkForUpdate(currentLake, 1)) {
+              update.updateCurrentConditionsData(currentLake);
             }
             if (noLakeDataSource) {
 
@@ -366,6 +366,7 @@ var totUpdateCounter = 0;
 var totCounter = 0;
 let updateCounter = 0;
 let dataUpdated = 0;
+let startServerCount = 0;
 
 // function to update all lakes in the database
 function updateAllLakes() {
@@ -381,13 +382,14 @@ function updateAllLakes() {
           // set currentLake equal to returned lake document
           let currentLake = data[i];
 
-          //check to see if update is needed for lake elevation level (function returns true if update is needed)
+          //check to see if update is needed for lake elevation level 
+          //(function returns true if update is needed)
           if (update.checkForUpdate(currentLake, 0)) {
-            //console.log(`lastRefresh ${currentLake.lastRefresh} data.length ${currentLake.data.length} ${currentLake.bodyOfWater}`)
             // update current lake
             // determine which data source and run function
-            //console.log(`${i+1}. Update needed for ${currentLake.bodyOfWater} (${currentLake.dataSource[0]})`);
             updateCounter++;
+            if (currentLake.ccWxData == null)
+              console.log('here we are')
             switch (currentLake.dataSource[0]) {
 
               case "ACE":
@@ -399,12 +401,11 @@ function updateAllLakes() {
                     // update the current lake
                     update.updateAndReturnOneLake(currentLake, ACEdata, function (error, ACElakeDataFlag, ACEdata) {
                       if (error) {
-                        console.log(ACEdata);
+                        console.log(`UALL error  ${ACEdata}`);
                       }
                       if (ACElakeDataFlag) {
                         dataUpdated++;
-                        //console.log(`Updated ${currentLake.bodyOfWater}`)
-                      } //else console.log(`No Update ${currentLake.bodyOfWater}`)
+                      }
                     })
                   }
                 });
@@ -419,12 +420,11 @@ function updateAllLakes() {
                     // update the current lake
                     update.updateAndReturnOneLake(currentLake, ACEWilmdata, function (error, ACEWilmlakeDataFlag, ACEWilmdata) {
                       if (error) {
-                        console.log(ACEWilmdata);
+                        console.log(`UALL error  ${ACEWilmdata}`);
                       }
                       if (ACEWilmlakeDataFlag) {
                         dataUpdated++;
-                        //console.log(`Updated ${currentLake.bodyOfWater}`)
-                      } //else console.log(`No Update ${currentLake.bodyOfWater}`)
+                      }
                     })
                   }
                 });
@@ -439,12 +439,11 @@ function updateAllLakes() {
                     // update the current lake
                     update.updateAndReturnOneLake(currentLake, APCdata, function (error, APClakeDataFlag, APCdata) {
                       if (error) {
-                        console.log(APCdata);
+                        console.log(`UALL error  ${APCdata}`);
                       }
                       if (APClakeDataFlag) {
                         dataUpdated++;
-                        //console.log(`Updated ${currentLake.bodyOfWater}`)
-                      } //else console.log(`No Update ${currentLake.bodyOfWater}`)
+                      }
                     })
                   }
                 });
@@ -459,12 +458,11 @@ function updateAllLakes() {
                     // update the current lake
                     update.updateAndReturnOneLake(currentLake, CUBEdata, function (error, CUBElakeDataFlag, CUBEdata) {
                       if (error) {
-                        console.log(CUBEdata);
+                        console.log(`UALL error  ${CUBEdata}`);
                       }
                       if (CUBElakeDataFlag) {
                         dataUpdated++;
-                        //console.log(`Updated ${currentLake.bodyOfWater}`)
-                      } //else console.log(`No Update ${currentLake.bodyOfWater}`)
+                      }
                     })
                   }
                 })
@@ -479,12 +477,11 @@ function updateAllLakes() {
                     // update the current lake
                     update.updateAndReturnOneLake(currentLake, DEdata, function (error, DElakeDataFlag, DEdata) {
                       if (error) {
-                        console.log(DUKEdata);
+                        console.log(`UALL error  ${DUKEdata}`);
                       }
                       if (DElakeDataFlag) {
                         dataUpdated++;
-                        //console.log(`Updated ${currentLake.bodyOfWater}`)
-                      } //else console.log(`No Update ${currentLake.bodyOfWater}`)
+                      }
                     })
                   }
                 });
@@ -499,12 +496,11 @@ function updateAllLakes() {
                     // update the current lake
                     update.updateAndReturnOneLake(currentLake, DUKEdata, function (error, DUKElakeDataFlag, DUKEdata) {
                       if (error) {
-                        console.log(DUKEdata);
+                        console.log(`UALL error  ${DUKEdata}`);
                       }
                       if (DUKElakeDataFlag) {
                         dataUpdated++;
-                        //console.log(`Updated ${currentLake.bodyOfWater}`)
-                      } //else console.log(`No Update ${currentLake.bodyOfWater}`)
+                      }
                     })
                   }
                 });
@@ -519,12 +515,11 @@ function updateAllLakes() {
                     // update the current lake
                     update.updateAndReturnOneLake(currentLake, GPCdata, function (error, GPClakeDataFlag, GPCdata) {
                       if (error) {
-                        console.log(GPCdata);
+                        console.log(`UALL error  ${GPCdata}`);
                       }
                       if (GPClakeDataFlag) {
                         dataUpdated++;
-                        //console.log(`Updated ${currentLake.bodyOfWater}`)
-                      } //else console.log(`No Update ${currentLake.bodyOfWater}`)
+                      }
                     })
                   }
                 });
@@ -539,12 +534,11 @@ function updateAllLakes() {
                     // update the current lake
                     update.updateAndReturnOneLake(currentLake, SJRWMDdata, function (error, SJRWMDlakeDataFlag, SJRWMDdata) {
                       if (error) {
-                        console.log(SJRWMDdata);
+                        console.log(`UALL error  ${SJRWMDdata}`);
                       }
                       if (SJRWMDlakeDataFlag) {
                         dataUpdated++;
-                        //console.log(`Updated ${currentLake.bodyOfWater}`)
-                      } //else console.log(`No Update ${currentLake.bodyOfWater}`)
+                      }
                     })
                   }
                 });
@@ -559,12 +553,11 @@ function updateAllLakes() {
                     // update the current lake
                     update.updateAndReturnOneLake(currentLake, TVAdata, function (error, TVAlakeDataFlag, TVAdata) {
                       if (error) {
-                        console.log(TVAdata);
+                        console.log(`UALL error  ${TVAdata}`);
                       }
                       if (TVAlakeDataFlag) {
                         dataUpdated++;
-                        //console.log(`Updated ${currentLake.bodyOfWater}`)
-                      } //else console.log(`No Update ${currentLake.bodyOfWater}`)
+                      }
                     })
                   }
                 });
@@ -579,12 +572,11 @@ function updateAllLakes() {
                     // update the current lake
                     update.updateAndReturnOneLake(currentLake, TWDBdata, function (error, TWDBlakeDataFlag, TWDBdata) {
                       if (error) {
-                        console.log(TWDBdata);
+                        console.log(`UALL error  ${TWDBdata}`);
                       }
                       if (TWDBlakeDataFlag) {
                         dataUpdated++;
-                        //console.log(`Updated ${currentLake.bodyOfWater}`)
-                      } //else console.log(`No Update ${currentLake.bodyOfWater}`)
+                      }
                     })
                   }
                 });
@@ -599,12 +591,11 @@ function updateAllLakes() {
                     // update the current lake
                     update.updateAndReturnOneLake(currentLake, USLAKESdata, function (error, LAKESlakeDataFlag, LAKESdata) {
                       if (error) {
-                        console.log(LAKESdata);
+                        console.log(`UALL error  ${LAKESdata}`);
                       }
                       if (LAKESlakeDataFlag) {
                         dataUpdated++;
-                        //console.log(`Updated ${currentLake.bodyOfWater}`)
-                      } //else console.log(`No Update ${currentLake.bodyOfWater}`)
+                      }
                     })
                   }
                 });
@@ -619,12 +610,11 @@ function updateAllLakes() {
                     // update the current lake
                     update.updateAndReturnOneLake(currentLake, USGSdata, function (error, USGSlakeDataFlag, USGSdata) {
                       if (error) {
-                        console.log(USGSdata);
+                        console.log(`UALL error  ${USGSdata}`);
                       }
                       if (USGSlakeDataFlag) {
                         dataUpdated++;
-                        //console.log(`Updated ${currentLake.bodyOfWater}`)
-                      } //else console.log(`No Update ${currentLake.bodyOfWater}`)
+                      }
                     })
                   }
                 });
@@ -638,13 +628,13 @@ function updateAllLakes() {
           // Check to see if Current Conditions needs to be updated
           if (update.checkForUpdate(currentLake, 1)) {
             update.updateCurrentConditionsData(currentLake);
-            //console.log(`${i}. Current Conditions update needed for ${currentLake.bodyOfWater} (${currentLake.dataSource[0]})`);
+            //console.log(`Wx called for ${currentLake.bodyOfWater}`)
           }
 
           // Check to see if Weather Forecast needs to be updated
           if (update.checkForUpdate(currentLake, 2)) {
             update.updateForecastData(currentLake);
-            //console.log(`${i}. Forecast update needed for ${currentLake.bodyOfWater} (${currentLake.dataSource[0]})`);
+            //console.log(`Fx called for ${currentLake.bodyOfWater}`)
           }
 
 
@@ -672,11 +662,25 @@ function updateAllLakes() {
             clearInterval(timer);
             // wait for the final update to finish before resetting
             setTimeout(function () {
+              console.log(`${startServerCount}`)
+
+              if (startServerCount > 0) {
+                //Wake up the server
+                request("http://mysterious-plateau-86034.herokuapp.com/lakes/jordan", function (error, response, html) {
+
+                  if (error) {
+                    console.log(error);
+                  } else {
+                    startServerCount = 0;
+                  }
+                })
+              }
+                else startServerCount++;
               updateAllLakes();
-            }, 24 * 60000); // wait 14 minutes (plus 27 minutes @ .5 second interval to cycle through 213 lakes)
+            }, 16 * 60000); // wait 22 minutes (plus 8 minute @ 2 second interval to cycle through 237 lakes)
           }
 
-        }, .5 * 1000); // half second interval
+        }, 2.0 * 1000); // 1 second interval
       }
     })
 }

@@ -14,8 +14,13 @@ module.exports = {
     let apiKey = "d620419cfbb975f425c6262fefeef8f3";
     let weatherURL = "http://api.openweathermap.org/data/2.5/weather?lat=" + lakeWeather.lat + "&lon=" + lakeWeather.long + "&units=imperial&APPID=" + apiKey;
     request(weatherURL, function (error, response, body) {
-      if (error) {
-        callback(false, error);
+      if (error || body.search("Your account is temporary blocked") > -1) {
+          dataErrorTrue = true;
+        if (error) {
+          console.log(`Error retrieving Wx Data for ${currentLake.bodyOfWater} - ${error}`);
+        } else if (body.search("Your account is temporary blocked") > -1)
+          console.log(`${lakeWeather.bodyOfWater} - Wx Error - Cod: 429 Exceeded Subscription limit`)
+        callback(true, error);
       } else {
         let dataErrorTrue = false;
         try {
@@ -23,6 +28,7 @@ module.exports = {
         } catch (error) {
           console.error(error);
           dataErrorTrue = true;
+          callback(true, error);
         }
 
         if (!dataErrorTrue) {
@@ -35,10 +41,13 @@ module.exports = {
             // Set weather
             let today = new Date()
             let compassSector = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
+            if (typeof (wxData.weather[0].description == "String"))
+              dataErrorTrue = dataErrorTrue;
+            let conditionsString = wxData.weather[0].description.charAt(0).toUpperCase() + wxData.weather[0].description.slice(1);
 
             // if there are more than one day of entries, pop one off the array.
             while (lakeWeather.ccWxData.length > 23)
-              lakeWeather.ccWxData.pop();
+              lakeWeather.ccWxData.shift();
 
             if (typeof wxData == "undefined") {
               console.log(`No Wx data for ${wxData.bodyOfWater}`);
@@ -51,7 +60,7 @@ module.exports = {
 
             lakeWeather.ccWxDataLastRefresh = wxTimeStamp
             lakeWeather.ccWxData.push({
-              conditions: wxData.weather[0].description.charAt(0).toUpperCase() + wxData.weather[0].description.slice(1),
+              conditions: conditionsString,
               date: new Date(),
               time: today.toLocaleTimeString('en-US'),
               location: wxData.name, // for current Conditions Well

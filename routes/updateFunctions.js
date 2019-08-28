@@ -14,18 +14,22 @@ module.exports = {
 
   // check to see if an update is needed (true = update is needed);
   checkForUpdate: function (currentLake, type) { // type - 0 = lake leves 1 = current conditions 2 - forecast, default = 0
-    let lastRefresh = currentLake.lastRefresh; // to prevent re-entrant code problems
-    let refreshInterval = currentLake.refreshInterval; //
-    let dataLength = currentLake.data.length;
+    let cLake = currentLake;
+    let lastRefresh = cLake.lastRefresh; // to prevent re-entrant code problems
+    let refreshInterval = cLake.refreshInterval; //
+    let dataLength = cLake.data.length;
     if (type == 1) { // check current conditions weather refresh interval
-      lastRefresh = currentLake.ccWxDataLastRefresh; // Set to current conditions lastRefresh
+      lastRefresh = cLake.ccWxDataLastRefresh; // Set to current conditions lastRefresh
       refreshInterval = 60; // current conditions are all updated every hour
-      dataLength = currentLake.ccWxData.length;
+      if (cLake.ccWxData == null) {
+        dataLength = 0;
+        console.log(`${cLake.bodyOfWater} ccWxData is null`)
+      } else dataLength = cLake.ccWxData.length;
     }
     if (type == 2) { // check forecast weather refresh interval
-      lastRefresh = currentLake.wxForecastDataLastRefresh; // Set to forecast lastRefresh
+      lastRefresh = cLake.wxForecastDataLastRefresh; // Set to forecast lastRefresh
       refreshInterval = 180; // forecat data updated every 3 hrs
-      dataLength = currentLake.wxForecastData.length;
+      dataLength = cLake.wxForecastData.length;
     }
 
     // set today's date for comparison and find minute difference
@@ -150,10 +154,10 @@ module.exports = {
     // Update the current conditions and forecast for this lake
 
     // Get weather data
-    weather.getWeatherData(ccLake, function (error, data) {
+    weather.getWeatherData(currentLake, function (error, data) {
       let newLakeCC = data;
       if (error) {
-        console.log(`Weather retrieval error (updateFunction) ${error}`)
+        console.log(`Weather retrieval error (updateFunction) ${currentLake.bodyOfWater}`)
         callbackError = true;
         console.log(`Forecast Data for ${bodyOfWater} failed`)
         return false;
@@ -170,14 +174,6 @@ module.exports = {
         // push the current conditions into ccWxData[] and update the LastRefresh
         let timeStamp = newLakeCC.ccWxDataLastRefresh;
 
-        if (newLakeCC.ccWxDataLastRefresh == 'undefined') {
-          let aaa = 4;
-        }
-        //set timeStamp for current conditions to 0 minutes, 0 seconds
-        timeStamp = timeStamp.substring(0, timeStamp.indexOf(":")) + ":00:00 " + timeStamp.substring(timeStamp.indexOf(":") + 7, timeStamp.length);
-
-        //console.log (`${bodyOfWater} Current Conditions updated (db) ${timeStamp}`)
-
         db.model("Lake").updateOne({
             'bodyOfWater': bodyOfWater
           }, {
@@ -191,7 +187,7 @@ module.exports = {
             if (err) {
               console.log(err);
             } else {
-              //console.log(lakeWeather.ccWxData)
+              //console.log(newLakeCC.ccWxData)
               return true;
             }
           });
@@ -204,14 +200,7 @@ module.exports = {
   updateForecastData: function (currentLake) {
 
     // Get weather forecast data
-
-
-    //if (checkForUpdate(currentLake.lastRefresh, currentLake.refreshInterval, currentLake.data.length)) {
-    // Should be every 60minutes
-
-
-    // Get 
-
+ 
     forecast.getForecastData(currentLake, function (error, lakeForecast) {
       let forecastLake = lakeForecast;
       //let fxData = [];
@@ -223,12 +212,17 @@ module.exports = {
 
         if (forecastLake !== 'undefined') {
           currentLake = forecastLake;
-        }
+
+        }  // push the current conditions into wxForecastData[] and update the LastRefresh
+        let timeStamp = currentLake.wxForecastDataLastRefresh;
+
         db.model("Lake").updateOne({
             'bodyOfWater': bodyOfWater
           }, {
             $set: {
-              "wxForecastData": currentLake.wxForecastData
+              "wxForecastData": currentLake.wxForecastData,
+
+              "wxForecastDataLastRefresh": timeStamp
             }
           })
           .exec(function (err, wxForecastData) {

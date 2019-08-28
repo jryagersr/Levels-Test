@@ -14,7 +14,7 @@ module.exports = {
     let bodyOfWater = currentLake.bodyOfWater;
     // Define our data template
     var data = [];
-    // Make request for cub carolinas site, returns html
+    // Make request for cube carolinas site, returns html
     request("http://ww2.cubecarolinas.com/lake/tabs.php", function (error, response, html) {
 
       // Load the HTML into cheerio and save it to a variable

@@ -38,6 +38,10 @@ module.exports = {
             currentLake.wxForecastData = [];
 
             // Set weather
+            // push the current conditions into ccWxData[] and update the LastRefresh
+            let fxTimeStamp = Date();
+            //set timestamp for current conditions to 0 minutes, 0 seconds
+            currentLake.wxForecastDataLastRefresh = fxTimeStamp.substring(0, fxTimeStamp.indexOf(":")) + ":00:00 " + fxTimeStamp.substring(fxTimeStamp.indexOf(":") + 7, fxTimeStamp.length);
             let today = new Date()
             let forecastDay = "";
             let currentForecastDay = "";
