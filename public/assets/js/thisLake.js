@@ -1381,7 +1381,6 @@ $.ajax({
         fxData.forEach(function (element, i) {
             if ((element !== "undefined")) {
 
-
                 // if the first element or a Day forecast element 
                 if (typeof element.day == 'number') {
 
@@ -1411,18 +1410,12 @@ $.ajax({
                             winddirection: element.winddirection,
                             windspeed: element.windspeed
                         });
-
                     }
                 }
 
                 // Check to see if time is 00:00 (ie beginning of the day
                 // If so, then display the saved day
-
-                if (1 == 0) {
-
-                }
             }
-            wxTableRow++;
         });
 
         // Set the Day High and Low temp to the correct value (calculate)
@@ -1438,27 +1431,25 @@ $.ajax({
                     if (dataLines[j].temp < dayLines[i].low)
                         dayLines[i].low = dataLines[j].temp;
                 }
-
             };
-
         };
 
 
         // now stuff the Day and Data Lines in the correct order into the well
         // // Create the HTML Well (Section) and Add the table content for each reserved table
-
+        let saveJ = 0;
+        let timeTest = -1;
         // Append the Days remaining forecast to the well
-
         for (i = 0; i < dayLines.length - 1; i++) {
             var weatherSection = $("<tr>");
             weatherSection.addClass("well");
             weatherSection.attr("id", "weatherWell-" + wxTableRow + 1);
             $("#weatherSection").append(weatherSection);
 
-            let weatherTimeStamp = (new Date(dayLines[i].time + "Z")).toString();
+            let weatherTimeStamp = (new Date(dayLines[i].time + "Z"))
 
-            // Append the data lines
-            $("#weatherWell-" + wxTableRow + 1).append("<td>" + weatherTimeStamp.substr(4, 6) + "</td>");
+            // Append the day lines
+            $("#weatherWell-" + wxTableRow + 1).append("<td>" + (weatherTimeStamp.getMonth() + 1) + "/" + weatherTimeStamp.toDateString().substring(8, 10) + "</td>");
             $("#weatherWell-" + wxTableRow + 1).append("<td>" + "Forecast" + "</td>");
             $("#weatherWell-" + wxTableRow + 1).append("<td>" + dayLines[i].conditions + "</td>");
             $("#weatherWell-" + wxTableRow + 1).append("<td>" + dayLines[i].high.toFixed(0) + '/' + dayLines[i].low.toFixed(0) + "</td>");
@@ -1466,25 +1457,29 @@ $.ajax({
 
             wxTableRow++;
 
-            for (j = 0; j < dataLines.length - 1; j++) {
-                let dayTime = new Date(dayLines[i].time + "Z").toString();
-                let dataTime = new Date(dataLines[j].time + "Z").toString();
+            for (j = saveJ; j < dataLines.length - 1; j++) {
+                let dataTime = new Date(dataLines[j].time + "Z");
 
-                if (dataTime.substr(5, 5) == dayTime.substr(5, 5)) {
+                if (dataTime.getHours() > timeTest) {
+                    timeTest = dataTime.getHours();
                     var weatherSection = $("<tr>");
                     weatherSection.addClass("well");
                     weatherSection.attr("id", "weatherWell-" + wxTableRow + 1);
                     $("#weatherSection").append(weatherSection);
 
-                    let weatherTimeStamp = (new Date(dataLines[j].time + "Z")).toString();
+                    let weatherTimeStamp = (new Date(dataLines[j].time + "Z"))
 
                     $("#weatherWell-" + wxTableRow + 1).append("<td>" + " " + "</td>");
-                    $("#weatherWell-" + wxTableRow + 1).append("<td>" + weatherTimeStamp.substr(16, 5) + "</td>");
+                    $("#weatherWell-" + wxTableRow + 1).append("<td>" + weatherTimeStamp.getHours() + ":00" + "</td>");
                     $("#weatherWell-" + wxTableRow + 1).append("<td>" + dataLines[j].conditions + "</td>");
                     $("#weatherWell-" + wxTableRow + 1).append("<td>" + dataLines[j].temp.toFixed(0) + "</td>");
                     $("#weatherWell-" + wxTableRow + 1).append("<td>" + Math.round(dataLines[j].windspeed) + ' ' + dataLines[j].winddirection + "</td>");
 
                     wxTableRow++;
+                } else {
+                    saveJ = j; //Save the starting place for the next day
+                    j = dataLines.length;
+                    timeTest = -1;
                 }
             }
 

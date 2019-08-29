@@ -15,7 +15,7 @@ module.exports = {
     let weatherURL = "http://api.openweathermap.org/data/2.5/weather?lat=" + lakeWeather.lat + "&lon=" + lakeWeather.long + "&units=imperial&APPID=" + apiKey;
     request(weatherURL, function (error, response, body) {
       if (error || body.search("Your account is temporary blocked") > -1) {
-          dataErrorTrue = true;
+        dataErrorTrue = true;
         if (error) {
           console.log(`Error retrieving Wx Data for ${currentLake.bodyOfWater} - ${error}`);
         } else if (body.search("Your account is temporary blocked") > -1)
@@ -32,6 +32,8 @@ module.exports = {
         }
 
         if (!dataErrorTrue) {
+          if (typeof wxData.weather !== 'object')
+            console.log(`${body}`)
 
           if (typeof wxData == "undefined") {
             console.log(`No Wx data for ${wxData.bodyOfWater}`);

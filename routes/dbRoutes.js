@@ -663,19 +663,18 @@ function updateAllLakes() {
             // wait for the final update to finish before resetting
             setTimeout(function () {
               /*
-                            if (startServerCount > 0) {
-                              //Wake up the server
-                              request("http://mysterious-plateau-86034.herokuapp.com/lakes/jordan", function (error, response, html) {
+              if (startServerCount > 0) {
+                //Wake up the server
+                request("http://mysterious-plateau-86034.herokuapp.com/lakes/jordan", function (error, response, html) {
 
-                                if (error) {
-                                  console.log(error);
-                                } else {
-                                  startServerCount = 0;
-                                }
-                              })
-                            }
-                              else startServerCount++;
-                              */
+                  if (error) {
+                    console.log(error);
+                  } else {
+                    startServerCount = 0;
+                  }
+                })
+              } else startServerCount++;
+              //*/
               updateAllLakes();
             }, 16 * 60000); // wait 16 minutes (plus 8 minute @ 2 second interval to cycle through 237 lakes)
           }
