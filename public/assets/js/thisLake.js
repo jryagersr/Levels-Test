@@ -1434,7 +1434,6 @@ $.ajax({
             };
         };
 
-
         // now stuff the Day and Data Lines in the correct order into the well
         // // Create the HTML Well (Section) and Add the table content for each reserved table
         let saveJ = 0;
@@ -1446,10 +1445,16 @@ $.ajax({
             weatherSection.attr("id", "weatherWell-" + wxTableRow + 1);
             $("#weatherSection").append(weatherSection);
 
-            let weatherTimeStamp = (new Date(dayLines[i].time + "Z"))
+            
+            let weatherTimeStamp = new Date(dayLines[i].time + "Z");
+
+            let weatherDate = weatherTimeStamp.toLocaleDateString();
+            let weatherTime = weatherTimeStamp.toLocaleTimeString();
+            //remove seconds from time
+            weatherTime = weatherTime.substr(0, weatherTime.indexOf(":")) + weatherTime.substr(weatherTime.length - 2, 2)
 
             // Append the day lines
-            $("#weatherWell-" + wxTableRow + 1).append("<td>" + (weatherTimeStamp.getMonth() + 1) + "/" + weatherTimeStamp.toDateString().substring(8, 10) + "</td>");
+            $("#weatherWell-" + wxTableRow + 1).append("<td>" + weatherDate.substr(0, weatherDate.length -5) + "</td>");
             $("#weatherWell-" + wxTableRow + 1).append("<td>" + "Forecast" + "</td>");
             $("#weatherWell-" + wxTableRow + 1).append("<td>" + dayLines[i].conditions + "</td>");
             $("#weatherWell-" + wxTableRow + 1).append("<td>" + dayLines[i].high.toFixed(0) + '/' + dayLines[i].low.toFixed(0) + "</td>");
@@ -1467,10 +1472,15 @@ $.ajax({
                     weatherSection.attr("id", "weatherWell-" + wxTableRow + 1);
                     $("#weatherSection").append(weatherSection);
 
-                    let weatherTimeStamp = (new Date(dataLines[j].time + "Z"))
+                    let weatherTimeStamp = new Date(dataLines[j].time + "Z");
+
+                    let weatherDate = weatherTimeStamp.toLocaleDateString();
+                    let weatherTime = weatherTimeStamp.toLocaleTimeString();
+                    //remove seconds from time
+                    weatherTime = weatherTime.substr(0, weatherTime.indexOf(":")) + weatherTime.substr(weatherTime.length - 2, 2)
 
                     $("#weatherWell-" + wxTableRow + 1).append("<td>" + " " + "</td>");
-                    $("#weatherWell-" + wxTableRow + 1).append("<td>" + weatherTimeStamp.getHours() + ":00" + "</td>");
+                    $("#weatherWell-" + wxTableRow + 1).append("<td>" + weatherTime + "</td>");
                     $("#weatherWell-" + wxTableRow + 1).append("<td>" + dataLines[j].conditions + "</td>");
                     $("#weatherWell-" + wxTableRow + 1).append("<td>" + dataLines[j].temp.toFixed(0) + "</td>");
                     $("#weatherWell-" + wxTableRow + 1).append("<td>" + Math.round(dataLines[j].windspeed) + ' ' + dataLines[j].winddirection + "</td>");

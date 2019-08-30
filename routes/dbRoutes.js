@@ -662,7 +662,7 @@ function updateAllLakes() {
             clearInterval(timer);
             // wait for the final update to finish before resetting
             setTimeout(function () {
-              /*
+              ///*
               if (startServerCount > 0) {
                 //Wake up the server
                 request("http://mysterious-plateau-86034.herokuapp.com/lakes/jordan", function (error, response, html) {

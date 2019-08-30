@@ -16,8 +16,10 @@ module.exports = {
     request(weatherURL, function (error, response, body) {
       if (error || body.search("Your account is temporary blocked") > -1) {
         dataErrorTrue = true;
-        if (error) {
+        if (error || wxData.message == 'Internal error: 00000') {
           console.log(`Error retrieving Wx Data for ${currentLake.bodyOfWater} - ${error}`);
+          if (wxData.message == 'Internal error: 00000') // does not return true or data for 'error'
+            console.log(`wxData retrieval - ${wxData.message}`)
         } else if (body.search("Your account is temporary blocked") > -1)
           console.log(`${lakeWeather.bodyOfWater} - Wx Error - Cod: 429 Exceeded Subscription limit`)
         callback(true, error);

@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>BassSavvy - Home</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>BassSavvy - Club List</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-77195420-4"></script>
@@ -19,18 +19,16 @@
     </script>
 
 
-
-    <!-- Latest compiled and minified CSS -->
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link href="/static/assets/css/main.css" rel="stylesheet" type="text/css" />
-    <link href="/static/assets/css/gif-loader.css" rel="stylesheet" type="text/css" />
+    <link href="static/assets/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="static/assets/css/data.css" rel="stylesheet" type="text/css" />
+    <link href="static/assets/css/tournament.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body style="background: rgb(249,249,249);">
+<body>
     <div class="nav-color-splash"></div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <a class="navbar-brand" href="/">
@@ -63,16 +61,6 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="clubs" href="#" role="button"
-                        aria-haspopup="true" aria-expanded="false">
-                        Clubs
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="clubs">
-                        <a class="dropdown-item" href="/club-list">Club List</a>
-                        <a class="dropdown-item" href="/clubs-submit">Submit Your Club</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="tournaments" href="#" role="button"
                         aria-haspopup="true" aria-expanded="false">
                         More
@@ -89,97 +77,91 @@
                     <i class="fab fa-facebook fa-lg"></i>
                 </a>
             </div>
-            <!-- <div class="nav-item">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" data-toggle="modal" data-target="#loginModal">Login</button>
-            </div> -->
         </div>
     </nav>
 
-    <!-- Login Modal -->
-    <!-- Small modal -->
-    <div id="loginModal" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-                <div id="formWell">
-                <h2>Login</h2>
-                <form onsubmit="validateAndSubmitForm('login', event)">
-                    <div>
-                        <label>Username:</label>
-                        <input id='username' type="text" name="username"/>
-                    </div>
-                    <div>
-                        <label>Password:</label>
-                        <input id='password' type="password" name="password"/>
-                    </div>
-                    <div>
-                        <span id='validationMsg'></span>
-                        <input type="submit" value="Log In"/>
-                    </div>
-                </form>
-            </div>
-            <span id="loginMsg"></span>
-            <button id="switch">Register</button>
-            </div>
+
+    <div class="container text-center">
+
+        <h1 class="header-title">Upcoming Tournaments</h1>
+        <h5 class="text-center request-banner">Tournament or Trail missing? <b>Make a request</b> for us to add it
+            <a href="/contact"><b>here</b></a>.</h5>
+        <br>
+        <a href="https://www.custombassrods.com/" target="_blank">
+            <img class="ad-logo" src="/static/assets/img/jbrodsbanner.png">
+        </a>
+        <hr>
+
+        <h6><b>Using the Filter Feature </b></h6>
+        <p>Click the filter button below to filter out the tournaments you'd like to see. Clicking "Add to Filter" will
+            add a new selection to your current selection. Clicking "New Filter" will reset your query entirely.
+            Clicking "Clear" will reset all data. Clicking on a table header will sort that column alphabetically.</p>
+        <button class="btn btn-success filter-btn" id="filterBtn">Filter</button>
+        <div id="filterWrapper">
+            <form>
+                <br>
+                <p class="text-left">Select parameters to filter:</p>
+                <div class="form-group">
+                    <select class="form-control col" id="stateSelect">
+                        <option class="default-option">Select State</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="form-control col" id="orgSelect">
+                        <option class="default-option">Select Org</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="form-control col" id="trailSelect">
+                        <option class="default-option">Select Trail</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="form-control col" id="locSelect">
+                        <option class="default-option">Select Location</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="form-control col" id="rampSelect">
+                        <option class="default-option">Select Ramp</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="col btn-filter btn btn-success" id="filterSubmit">Filter</button>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="col btn-filter btn btn-success" id="addFilterSubmit">Add to
+                        Filter</button>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="col btn-filter btn btn-success" id="newFilterSubmit">New
+                        Filter</button>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="col btn btn-outline-success" id="clearSubmit">Clear</button>
+                </div>
+            </form>
+        </div>
+
+        <p>All tournament data is provisional, check with tournament trail website or tournament director to confirm
+            dates and times.</p>
+        <div class="table-responsive text-center">
+            <table id="txTable" class="table table-fixed">
+                <thead class="sticky-top">
+                    <tr id="headerRow">
+                        <th data-header="organization" scope="col">Org</th>
+                        <th data-header="trail" scope="col">Trail</th>
+                        <th data-header="date" scope="col">Date</th>
+                        <th data-header="location" scope="col">Location</th>
+                        <th data-header="ramp" scope="col">Ramp</th>
+                    </tr>
+                </thead>
+                <tbody id="txSection">
+                </tbody>
+            </table>
         </div>
     </div>
-
-    <section id='home-hero' class="container-fluid home-container text-center">
-        <div class="locate-container">
-            <div class="locate-box">
-                <h3 style="font-weight:bold;">Find Nearby Lakes</h3>
-
-                <div class="left">
-                    <button class="btn btn-success locate-btn" id='locateBtn'>Use My Location</button>
-                </div>
-                <div class="middle">
-                    <h4>or</h4>
-                </div>
-                <div class="right">
-                    <form>
-                        <input id="zipInput" type="text" pattern="[0-9]*" placeholder="Zipcode"></input>
-                        <button class="btn btn-success locate-btn" id="zipBtn">Submit</button>
-                        <p id="validationMessage"></p>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div id="adLogoWell"></div>
-    
-    <section id='home-nearby'>
-        <div id="lds-ring">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div id="lakeContainer">
-        </div>
-
-        <div id="noLocation"></div>
-    </section>
-
-    <section id='home-body'>
-        <div class="home-tile" id="tournamentTile">
-            <a class="tile-anchor" href="/tournaments">
-                <h3>Tournaments</h3>
-            </a>
-        </div>
-        <div class="home-tile" id="allLakes">
-            <h2>Welcome to the new BassSavvy!</h2>
-            <a class="btn btn-success" href="/search-lakes" style="text-shadow: none">
-                Search All Lakes
-            </a>
-        </div>
-        <div class="home-tile" id="contactTile">
-            <a class="tile-anchor" href="/contact">
-                <h3>Contact Us</h3>
-            </a>
-        </div>
-    </section>
-
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -189,10 +171,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="/static/assets/js/home.js"></script>
-    <script type="text/javascript" src="/static/assets/js/sponsor.js"></script>
-    <!-- <script type="text/javascript" src="/static/assets/js/login.js"></script> -->
-
+    <script type="text/javascript" src="/static/assets/js/tournaments.js"></script>
 </body>
 
 </html>

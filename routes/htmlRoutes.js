@@ -45,6 +45,14 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/tournament-results.html"));
   })
 
+  app.get("/clubs", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/club-list.html"));
+  })
+
+  app.get("/club-submit", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/club-submit.html"));
+  })
+
   app.get("/advertise", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/advertise.html"));
   })
