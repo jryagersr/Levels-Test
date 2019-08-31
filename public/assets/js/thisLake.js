@@ -1456,7 +1456,7 @@ $.ajax({
             //weatherTime = weatherTime.substr(0, weatherTime.indexOf(":")) + weatherTime.substr(weatherTime.length - 2, 2)
 
             // Append the day lines
-            $("#weatherWell-" + wxTableRow + 1).append("<td>" + weatherDate + "</td>");
+            $("#weatherWell-" + wxTableRow + 1).append("<td>" + "845" + "</td>");
             $("#weatherWell-" + wxTableRow + 1).append("<td>" + "Fcast" + "</td>");
             $("#weatherWell-" + wxTableRow + 1).append("<td>" + dayLines[i].conditions + "</td>");
             $("#weatherWell-" + wxTableRow + 1).append("<td>" + dayLines[i].high.toFixed(0) + '/' + dayLines[i].low.toFixed(0) + "</td>");
@@ -1487,7 +1487,7 @@ $.ajax({
 
 
                     $("#weatherWell-" + wxTableRow + 1).append("<td>" + " " + "</td>");
-                    $("#weatherWell-" + wxTableRow + 1).append("<td>" + weatherTime + "</td>");
+                    $("#weatherWell-" + wxTableRow + 1).append("<td>" + "844" + "</td>");
                     $("#weatherWell-" + wxTableRow + 1).append("<td>" + dataLines[j].conditions + "</td>");
                     $("#weatherWell-" + wxTableRow + 1).append("<td>" + dataLines[j].temp.toFixed(0) + "</td>");
                     $("#weatherWell-" + wxTableRow + 1).append("<td>" + Math.round(dataLines[j].windspeed) + ' ' + windDirection + "</td>");
