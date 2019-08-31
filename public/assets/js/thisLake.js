@@ -1487,7 +1487,7 @@ $.ajax({
 
 
                     $("#weatherWell-" + wxTableRow + 1).append("<td>" + " " + "</td>");
-                    $("#weatherWell-" + wxTableRow + 1).append("<td>" + "weatherTime" + "</td>");
+                    $("#weatherWell-" + wxTableRow + 1).append("<td>" + weatherTime + "</td>");
                     $("#weatherWell-" + wxTableRow + 1).append("<td>" + dataLines[j].conditions + "</td>");
                     $("#weatherWell-" + wxTableRow + 1).append("<td>" + dataLines[j].temp.toFixed(0) + "</td>");
                     $("#weatherWell-" + wxTableRow + 1).append("<td>" + Math.round(dataLines[j].windspeed) + ' ' + windDirection + "</td>");
