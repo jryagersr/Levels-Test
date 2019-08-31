@@ -1449,8 +1449,8 @@ $.ajax({
             let weatherTimeStamp = new Date(dayLines[i].time + "Z");
 
             let weatherDate = weatherTimeStamp.toLocaleDateString();
-            weatherDate = weatherDate.substr(0, weatherDate.length - 5);
-            weatherDate = String(weatherDate);
+            //weatherDate = weatherDate.substr(0, weatherDate.length - 5);
+            //weatherDate = String(weatherDate);
             //let weatherTime = weatherTimeStamp.toLocaleTimeString();
             //remove seconds from time
             //weatherTime = weatherTime.substr(0, weatherTime.indexOf(":")) + weatherTime.substr(weatherTime.length - 2, 2)
@@ -1478,8 +1478,8 @@ $.ajax({
 
                     let weatherTime = weatherTimeStamp.toLocaleTimeString();
                     //remove seconds from time
-                    weatherTime = weatherTime.substr(0, weatherTime.indexOf(":")) + weatherTime.substr(weatherTime.length - 2, 2);
-                    weatherTime = String(weatherTime);
+                    //weatherTime = weatherTime.substr(0, weatherTime.indexOf(":")) + weatherTime.substr(weatherTime.length - 2, 2);
+                   // weatherTime = String(weatherTime);
 
                     let windDirection = dataLines[j].winddirection;
                     if (windDirection == null)
