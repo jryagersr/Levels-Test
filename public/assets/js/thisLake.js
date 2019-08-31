@@ -1445,17 +1445,18 @@ $.ajax({
             weatherSection.attr("id", "weatherWell-" + wxTableRow + 1);
             $("#weatherSection").append(weatherSection);
 
-            
+
             let weatherTimeStamp = new Date(dayLines[i].time + "Z");
 
             let weatherDate = weatherTimeStamp.toLocaleDateString();
-            let weatherTime = weatherTimeStamp.toLocaleTimeString();
+            weatherDate = weatherDate.substr(0, weatherDate.length - 5);
+            //let weatherTime = weatherTimeStamp.toLocaleTimeString();
             //remove seconds from time
-            weatherTime = weatherTime.substr(0, weatherTime.indexOf(":")) + weatherTime.substr(weatherTime.length - 2, 2)
+            //weatherTime = weatherTime.substr(0, weatherTime.indexOf(":")) + weatherTime.substr(weatherTime.length - 2, 2)
 
             // Append the day lines
-            $("#weatherWell-" + wxTableRow + 1).append("<td>" + weatherDate.substr(0, weatherDate.length -5) + "</td>");
-            $("#weatherWell-" + wxTableRow + 1).append("<td>" + "Forecast" + "</td>");
+            $("#weatherWell-" + wxTableRow + 1).append("<td>" + weatherDate + "</td>");
+            $("#weatherWell-" + wxTableRow + 1).append("<td>" + "Fcast" + "</td>");
             $("#weatherWell-" + wxTableRow + 1).append("<td>" + dayLines[i].conditions + "</td>");
             $("#weatherWell-" + wxTableRow + 1).append("<td>" + dayLines[i].high.toFixed(0) + '/' + dayLines[i].low.toFixed(0) + "</td>");
             $("#weatherWell-" + wxTableRow + 1).append("<td>" + Math.round(dayLines[i].windspeed) + ' ' + dayLines[i].winddirection + "</td>");
@@ -1474,16 +1475,20 @@ $.ajax({
 
                     let weatherTimeStamp = new Date(dataLines[j].time + "Z");
 
-                    let weatherDate = weatherTimeStamp.toLocaleDateString();
                     let weatherTime = weatherTimeStamp.toLocaleTimeString();
                     //remove seconds from time
-                    weatherTime = weatherTime.substr(0, weatherTime.indexOf(":")) + weatherTime.substr(weatherTime.length - 2, 2)
+                    weatherTime = weatherTime.substr(0, weatherTime.indexOf(":")) + weatherTime.substr(weatherTime.length - 2, 2);
+
+                    let windDirection = dataLines[j].winddirection;
+                    if (windDirection == null)
+                        windDirection = "N/A";
+
 
                     $("#weatherWell-" + wxTableRow + 1).append("<td>" + " " + "</td>");
                     $("#weatherWell-" + wxTableRow + 1).append("<td>" + weatherTime + "</td>");
                     $("#weatherWell-" + wxTableRow + 1).append("<td>" + dataLines[j].conditions + "</td>");
                     $("#weatherWell-" + wxTableRow + 1).append("<td>" + dataLines[j].temp.toFixed(0) + "</td>");
-                    $("#weatherWell-" + wxTableRow + 1).append("<td>" + Math.round(dataLines[j].windspeed) + ' ' + dataLines[j].winddirection + "</td>");
+                    $("#weatherWell-" + wxTableRow + 1).append("<td>" + Math.round(dataLines[j].windspeed) + ' ' + windDirection + "</td>");
 
                     wxTableRow++;
                 } else {
