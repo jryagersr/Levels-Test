@@ -18,12 +18,15 @@ module.exports = {
     var thisLake = currentLake;
     let bodyOfWater = thisLake.bodyOfWater;
     let seaLevelDelta = thisLake.seaLevelDelta;
+    // Set up elev and flow Values
+    var elevValues = '';
+    var flowValues = '';
 
     request(thisLake.elevURL, function (error, response, body) {
       if (error) {
         callback(error);
         return;
-      }
+      };
 
 
       // clear displayBatch
@@ -34,11 +37,12 @@ module.exports = {
       } catch (error) {
         console.error(error);
         dataErrorTrue = true;
-      }
+      };
 
       if (!dataErrorTrue) {
         // Check to see if the sensor is returning data
         if (data.value.timeSeries.length > 0) {
+          if (typeof data.value.timeSeries[0].values[0].value[0] !== 'undefined') {
           let valuesIndex = 0;
           // Parse the json data return to find the values we want
           let jIncrement = 1;
@@ -63,15 +67,12 @@ module.exports = {
                 // These three have value[1] of "Tailwater"
                 if (['Headwater', 'headwater', '[At Lake Outlet]'].includes(data.value.timeSeries[i].values[z].method[0].methodDescription)) {
                   valuesIndex = z;
-                }
-              }
+                };
+              };
 
               timeSeriesElevIndex = i;
-            }
-          }
-          // Set up elev and flow Values
-          let elevValues = '';
-          let flowValues = '';
+            };
+          };
           elevValues = data.value.timeSeries[timeSeriesElevIndex].values[valuesIndex].value;
           // Reverse the order of our data so most recent date is first
           elevValues.reverse();
@@ -80,7 +81,7 @@ module.exports = {
             flowValues = data.value.timeSeries[timeSeriesFlowIndex].values[valuesIndex].value;
             // Reverse the order of our data so most recent date is first
             flowValues.reverse();
-          }
+          };
 
           // If reported level is not based on MSL, set the seaLevelDelta to add to the level
           // to convert to MSL based.
@@ -91,7 +92,7 @@ module.exports = {
             if (lakePool !== 0)
               elevationAdjust = elevValues[0].value;
             else elevationAdjust = elevValues[0].value;
-          }
+          };
 
           // Set current Date, Time and Elev
           currentElev = elevationAdjust;
@@ -121,7 +122,7 @@ module.exports = {
             // adjust the elev for lakes with data relative to full pool (not from sealevel))
             if (seaLevelDelta !== 0) {
               elev = (parseFloat(elevValues[j].value) + Number(seaLevelDelta)).toFixed(2);
-            }
+            };
 
             // format timestamp
             timestamp = new Date(timestamp);
@@ -131,14 +132,18 @@ module.exports = {
               elev: elev,
               flow: flow
             });
-          }
+          };
 
-        }
+        };
         callback(false, displayBatch);
       } else {
-        console.log(`Data ( ${body}) is bad for ${bodyOfWater} (USGS)`);
+        console.log(`Data value undefined is bad for ${bodyOfWater} (USGS)`);
         callback(true, body);
-      }
+      };
+      } else {
+        console.log(`Data (${body}) is bad for ${bodyOfWater} (USGS)`);
+        callback(true, body);
+      };
     })
   }
-}
+};

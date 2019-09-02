@@ -970,12 +970,12 @@ function buildWindChart(windData) {
             if (windData.ccWxData[k].windspeed < chartMinWind) // if value is less thank min, replace min
                 chartMinWind = windData.ccWxData[k].windspeed; // update Min Wind
 
-        }
+        };
         // when a day of data has been reached stop
         if (labelBatch.length > 23 || k > windData.ccWxData.length - 2) {
             break;
-        }
-    }
+        };
+    };
 
     //labelBatch.reverse();
     //dataWindBatch.reverse();
@@ -1045,7 +1045,7 @@ function buildWindChart(windData) {
             }
         }
     });
-}
+};
 
 /******************************************************************************************************************/
 // Function to build wind direction chart
@@ -1082,15 +1082,15 @@ function buildWindDirectionChart(windData) {
 
             } else {
                 windDirectionIndex = compassSector.indexOf(windData.ccWxData[k].winddirection);
-            }
+            };
             dataWindBatch.push(windDirectionIndex); // push wind direction
 
-        }
+        };
         // when a week of data has been reached stop
         if (labelBatch.length > 23 || k > windData.ccWxData.length - 2) {
             break;
-        }
-    }
+        };
+    };
 
     var ctx = document.getElementById('myWindDirectionChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
@@ -1155,7 +1155,7 @@ function buildWindDirectionChart(windData) {
             }
         }
     });
-}
+};
 
 
 // function to flatten the nested data
@@ -1183,8 +1183,8 @@ function flattenData(data, type, callback) {
                             state: element.trails[k].tournaments[l].state,
                             entryLink: element.trails[k].tournaments[l].entryLink,
                             resultsLink: element.trails[k].tournaments[l].resultsLink
-                        })
-                    }
+                        });
+                    };
                 } else {
                     // If tx date is in the past (exclude all future dates)
                     if (Date.parse(txDate) < Date.parse(todaysDate)) {
@@ -1199,14 +1199,14 @@ function flattenData(data, type, callback) {
                             state: element.trails[k].tournaments[l].state,
                             entryLink: element.trails[k].tournaments[l].entryLink,
                             resultsLink: element.trails[k].tournaments[l].resultsLink
-                        })
-                    }
-                }
-            }
-        }
-    })
+                        });
+                    };
+                };
+            };
+        };
+    });
     callback(flatBatch);
-}
+};
 
 
 // Function to sort data by asc/desc
@@ -1221,8 +1221,8 @@ var sort_by = function (field, reverse, primer) {
     reverse = !reverse ? 1 : -1;
     return function (a, b) {
         return a = key(a), b = key(b), reverse * ((a > b) - (b > a));
-    }
-}
+    };
+};
 
 
 
@@ -1272,7 +1272,7 @@ $.ajax({
             $("#currentNormal").append("normal pool " + currentLake.normalPool);
         } else {
             $("#currentLevel").append("No known source for level data");
-        }
+        };
 
         $("#lakeSponsor").append(currentLake.bodyOfWater);
         $("#lakeFeaturedTournament").append(currentLake.bodyOfWater);
@@ -1327,7 +1327,7 @@ $.ajax({
                         // Append the data values to the table row
                         $("#rampWell-" + i + 1).append("<td><b>" + ramp.rampName + "</b></td>");
                         $("#rampWell-" + i + 1).append("<td> <a href='" + rampDirectionsLink + "' target='_blank'> Click </a> </td>");
-                    }
+                    };
                 });
             });
 
@@ -1346,10 +1346,10 @@ $.ajax({
                 entry.time = entry.time.substr(0, entry.time.lastIndexOf(":")) + entry.time.substr(entry.time.length - 2, 2)
                 if (entry.elev !== "N/A" && entry.elev !== "Missing") {
                     entry.elev = Number(entry.elev);
-                }
+                };
                 if (entry.flow !== "N/A" && entry.flow !== "Missing") {
                     entry.flow = Number(entry.flow);
-                }
+                };
                 // Create the HTML Well (Section) and Add the table content for each reserved table
                 var lakeSection = $("<tr>");
                 lakeSection.addClass("well");
@@ -1361,8 +1361,8 @@ $.ajax({
                 $("#lakeWell-" + i + 1).append("<td>" + entry.time + "</td>");
                 $("#lakeWell-" + i + 1).append("<td>" + entry.elev + "</td>");
                 $("#lakeWell-" + i + 1).append("<td>" + entry.flow + "</td>");
-            })
-        }
+            });
+        };
 
         /***************************************************************************** */
         // Weather Tab (5 Day/3 Hour) Forecast)
@@ -1410,14 +1410,16 @@ $.ajax({
                             winddirection: element.winddirection,
                             windspeed: element.windspeed
                         });
-                    }
-                }
+                    };
+                };
 
                 // Check to see if time is 00:00 (ie beginning of the day
                 // If so, then display the saved day
-            }
+            };
         });
 
+        // need a place to save local time of last day.
+        let lastDataLineTime = 0;
         // Set the Day High and Low temp to the correct value (calculate)
         for (i = 0; i < dayLines.length - 1; i++) {
             dayLines[i].high = 0;
@@ -1425,19 +1427,27 @@ $.ajax({
 
             for (j = 0; j < dataLines.length - 1; j++) {
 
-                if (dataLines[j].time.substr(5, 5) == dayLines[i].time.substr(5, 5)) {
+                // check current dataLine time against previous dataLine time for midnight rollover
+                // cannot check date due to change from UTC to local time
+                // have to check for when the time rolls over midnight
+                if (Number(dataLines[j].time.substr(11, 2)) > lastDataLineTime) {
                     if (dataLines[j].temp > dayLines[i].high)
                         dayLines[i].high = dataLines[j].temp;
                     if (dataLines[j].temp < dayLines[i].low)
                         dayLines[i].low = dataLines[j].temp;
-                }
+
+                    // save the current dataLine time for the comparison above
+                    lastDataLineTime = Number(dataLines[j].time.substr(11, 2));
+                };
             };
         };
 
         // now stuff the Day and Data Lines in the correct order into the well
         // // Create the HTML Well (Section) and Add the table content for each reserved table
         let saveJ = 0;
-        let timeTest = -1;
+        let timeTest = "";
+        let lastDataTimeTest = "";
+        let dataTimeTest = "";
         // Append the Days remaining forecast to the well
         for (i = 0; i < dayLines.length - 1; i++) {
             var weatherSection = $("<tr>");
@@ -1446,9 +1456,14 @@ $.ajax({
             $("#weatherSection").append(weatherSection);
 
 
+
             let weatherTimeStamp = new Date(dayLines[i].time + "Z");
 
             let weatherDate = weatherTimeStamp.toLocaleDateString();
+            if (weatherDate.substr(weatherDate.length - 2, 2) == "PM") {
+                timeTest = "PM";
+            } else timeTest = "AM"
+
             //weatherDate = weatherDate.substr(0, weatherDate.length - 5);
             //weatherDate = String(weatherDate);
             //let weatherTime = weatherTimeStamp.toLocaleTimeString();
@@ -1456,30 +1471,44 @@ $.ajax({
             //weatherTime = weatherTime.substr(0, weatherTime.indexOf(":")) + weatherTime.substr(weatherTime.length - 2, 2)
 
             // Append the day lines
-            $("#weatherWell-" + wxTableRow + 1).append("<td>" + weatherDate + "</td>");
+            $("#weatherWell-" + wxTableRow + 1).append("<td>" + weatherDate.substring(0,weatherDate.length-5) + "</td>");
             $("#weatherWell-" + wxTableRow + 1).append("<td>" + "Fcast" + "</td>");
             $("#weatherWell-" + wxTableRow + 1).append("<td>" + dayLines[i].conditions + "</td>");
             $("#weatherWell-" + wxTableRow + 1).append("<td>" + dayLines[i].high.toFixed(0) + '/' + dayLines[i].low.toFixed(0) + "</td>");
             $("#weatherWell-" + wxTableRow + 1).append("<td>" + Math.round(dayLines[i].windspeed) + ' ' + dayLines[i].winddirection + "</td>");
 
             wxTableRow++;
+            
+            weatherTimeStamp = new Date(dataLines[0].time + "Z");
+            if (weatherTimeStamp.toLocaleTimeString().substr(weatherTimeStamp.toLocaleTimeString().length - 2, 2) == "PM") {
+                dataTimeTest = "PM";
+                if (i == 0) lastDataTimeTest = "PM";
+            } else {
+                dataTimeTest = "AM";
+                if (i == 0) lastDataTimeTest = "AM";
+            };
+
 
             for (j = saveJ; j < dataLines.length - 1; j++) {
-                let dataTime = new Date(dataLines[j].time + "Z");
 
-                if (dataTime.getHours() > timeTest) {
-                    timeTest = dataTime.getHours();
+            weatherTimeStamp = new Date(dataLines[j].time + "Z");
+            let weatherTime = weatherTimeStamp.toLocaleTimeString();
+                let dataTimeTest = weatherTime.substr(weatherTime.length-2, 2);
+
+                    timeTest = weatherTimeStamp.getHours();
+
+                if (dataTimeTest == lastDataTimeTest || lastDataTimeTest == "AM") {
+                    lastDataTimeTest = dataTimeTest;
                     var weatherSection = $("<tr>");
                     weatherSection.addClass("well");
                     weatherSection.attr("id", "weatherWell-" + wxTableRow + 1);
                     $("#weatherSection").append(weatherSection);
 
-                    let weatherTimeStamp = new Date(dataLines[j].time + "Z");
 
-                    let weatherTime = weatherTimeStamp.toLocaleTimeString();
+                    //weatherTime = weatherTimeStamp.toLocaleTimeString();
                     //remove seconds from time
                     //weatherTime = weatherTime.substr(0, weatherTime.indexOf(":")) + weatherTime.substr(weatherTime.length - 2, 2);
-                   // weatherTime = String(weatherTime);
+                    // weatherTime = String(weatherTime);
 
                     let windDirection = dataLines[j].winddirection;
                     if (windDirection == null)
@@ -1487,16 +1516,19 @@ $.ajax({
 
 
                     $("#weatherWell-" + wxTableRow + 1).append("<td>" + " " + "</td>");
-                    $("#weatherWell-" + wxTableRow + 1).append("<td>" + weatherTime + "</td>");
+                    $("#weatherWell-" + wxTableRow + 1).append("<td>" + weatherTime.substr(0,weatherTime.indexOf(":")) + weatherTime.substr(weatherTime.length-2,2) + "</td>");
                     $("#weatherWell-" + wxTableRow + 1).append("<td>" + dataLines[j].conditions + "</td>");
                     $("#weatherWell-" + wxTableRow + 1).append("<td>" + dataLines[j].temp.toFixed(0) + "</td>");
                     $("#weatherWell-" + wxTableRow + 1).append("<td>" + Math.round(dataLines[j].windspeed) + ' ' + windDirection + "</td>");
 
                     wxTableRow++;
                 } else {
-                    saveJ = j; //Save the starting place for the next day
-                    j = dataLines.length;
-                    timeTest = -1;
+                    if (dataTimeTest == "AM" && lastDataTimeTest == "PM") {
+                        saveJ = j; //Save the starting place for the next day
+                        j = dataLines.length;
+                        timeTest = -1;
+                        lastDataTimeTest = dataTimeTest;
+                    }
                 }
             }
 
