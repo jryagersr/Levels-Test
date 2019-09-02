@@ -1488,7 +1488,7 @@ $.ajax({
                 if (i == 0) lastDataTimeTest = "AM";
             };
 
-
+/*
             for (j = saveJ; j < dataLines.length - 1; j++) {
 
             weatherTimeStamp = new Date(dataLines[j].time + "Z");
@@ -1533,6 +1533,7 @@ $.ajax({
             }
 
         };
+        */
 
         /***************************************************************************** */
         //Tx and Tx Results Tabs
