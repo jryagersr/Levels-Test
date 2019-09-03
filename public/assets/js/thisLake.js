@@ -1433,13 +1433,10 @@ $.ajax({
             // need a place to save local time of last day.
             let lastDataLineTime = 0;
 
-            for (j = saveJStart; j < dataLines.length; j++) {
+            for (j = saveJStart; j < dataLines.length-1; j++) {
 
-                let weatherLocale = new Date(
-                    dataLines[j].time.substr(0, dataLines[j].time.indexOf(" ")) 
-                + "T" 
-                + dataLines[j].time.substr(dataLines[j].time.indexOf(" ")+1, dataLines[j].time.length) 
-                + "Z");
+                let weatherLocale = new Date(dataLines[j].time.substr(0, dataLines[j].time.indexOf(" ")) + "T" + dataLines[j].time.substr(dataLines[j].time.indexOf(" ")+1, dataLines[j].time.length) + "Z");
+                let weatherLocaleDate = weatherLocale.toLocaleDateString();
                 let weatherLocaleTime = weatherLocale.toLocaleTimeString();
                 let weatherLocaleHour = weatherLocaleTime.substr(0, weatherLocaleTime.indexOf(0, ":") - 1);
                 
@@ -1477,15 +1474,17 @@ $.ajax({
             weatherSection.attr("id", "weatherWell-" + wxTableRow + 1);
             $("#weatherSection").append(weatherSection);
 
-            let weatherTimeStamp = new Date(dayLines[i].time + "Z");
+            let weatherLocale = new Date(dataLines[0].time.substr(0, dataLines[0].time.indexOf(" ")) + "T" + dataLines[0].time.substr(dataLines[0].time.indexOf(" ")+1, dataLines[0].time.length) + "Z");
+            let weatherLocaleDate = weatherLocale.toLocaleDateString();
+            let weatherLocaleTime = weatherLocale.toLocaleTimeString();
+            let weatherLocaleHour = weatherLocaleTime.substr(0, weatherLocaleTime.indexOf(0, ":") - 1);
 
-            let weatherDate = weatherTimeStamp.toLocaleDateString();
-            if (weatherDate.substr(weatherDate.length - 2, 2) == "PM") {
+            if (weatherLocaleDate.substr(weatherLocaleDate.length - 2, 2) == "PM") {
                 timeTest = "PM";
             } else timeTest = "AM"
 
             // Append the day lines
-            $("#weatherWell-" + wxTableRow + 1).append("<td>" + weatherDate.substring(0, weatherDate.length - 5)) + "</td>";
+            $("#weatherWell-" + wxTableRow + 1).append("<td>" + weatherLocaleDate.substring(0, weatherLocaleDate.length - 5)) + "</td>";
             $("#weatherWell-" + wxTableRow + 1).append("<td>" + "Fcast" + "</td>");
             $("#weatherWell-" + wxTableRow + 1).append("<td>" + dayLines[i].conditions + "</td>");
             $("#weatherWell-" + wxTableRow + 1).append("<td>" + dayLines[i].high.toFixed(0) + '/' + dayLines[i].low.toFixed(0) + "</td>");
@@ -1493,8 +1492,12 @@ $.ajax({
 
             wxTableRow++;
 
-            weatherTimeStamp = new Date(dataLines[0].time + "Z");
-            if (weatherDate.substr(weatherDate.length - 2, 2) == "PM") {
+            weatherLocale = new Date(dataLines[0].time.substr(0, dataLines[0].time.indexOf(" ")) + "T" + dataLines[0].time.substr(dataLines[0].time.indexOf(" ")+1, dataLines[0].time.length) + "Z");
+            weatherLocaleDate = weatherLocale.toLocaleDateString();
+            weatherLocaleTime = weatherLocale.toLocaleTimeString();
+            weatherLocaleHour = weatherLocaleTime.substr(0, weatherLocaleTime.indexOf(0, ":") - 1);
+
+            if (weatherLocaleDate.substr(weatherLocaleDate.length - 2, 2) == "PM") {
                 dataTimeTest = "PM";
                 lastDataTimeTest = "PM";
             } else {
@@ -1504,11 +1507,12 @@ $.ajax({
 
             for (j = saveJStart; j < saveJEnd + 1; j++) {
 
-                weatherTimeStamp = new Date(dataLines[j].time + "Z");
-                let weatherTime = weatherTimeStamp.toLocaleTimeString();
-                let dataTimeTest = weatherTime.substr(weatherTime.length - 2, 2);
+                weatherLocale = new Date(dataLines[0].time.substr(0, dataLines[j].time.indexOf(" ")) + "T" + dataLines[j].time.substr(dataLines[j].time.indexOf(" ")+1, dataLines[j].time.length) + "Z");
+                weatherLocaleDate = weatherLocale.toLocaleDateString();
+                weatherLocaleTime = weatherLocale.toLocaleTimeString();
+                weatherLocaleHour = weatherLocaleTime.substr(0, weatherLocaleTime.indexOf(0, ":") - 1);
 
-                timeTest = weatherTimeStamp.getHours();
+                let dataTimeTest = weatherLocaleTime.substr(weatherLocaleTime.length - 2, 2);
 
                 if (dataTimeTest == lastDataTimeTest || lastDataTimeTest == "AM") {
                     lastDataTimeTest = dataTimeTest;
@@ -1522,7 +1526,7 @@ $.ajax({
                         windDirection = "N/A";
 
                     $("#weatherWell-" + wxTableRow + 1).append("<td>" + " " + "</td>");
-                    $("#weatherWell-" + wxTableRow + 1).append("<td>" + weatherTime.substr(0, weatherTime.indexOf(":")) + weatherTime.substr(weatherTime.length - 2, 2)) + "</td>";
+                    $("#weatherWell-" + wxTableRow + 1).append("<td>" + weatherLocaleTime.substr(0, weatherLocaleTime.indexOf(":")) + weatherLocaleTime.substr(weatherLocaleTime.length - 2, 2)) + "</td>";
                     $("#weatherWell-" + wxTableRow + 1).append("<td>" + dataLines[j].conditions + "</td>");
                     $("#weatherWell-" + wxTableRow + 1).append("<td>" + dataLines[j].temp.toFixed(0) + "</td>");
                     $("#weatherWell-" + wxTableRow + 1).append("<td>" + Math.round(dataLines[j].windspeed) + ' ' + windDirection + "</td>");
