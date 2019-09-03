@@ -1372,6 +1372,8 @@ $.ajax({
         let j = 0;
         let i = 0;
         let fxData = currentLake.wxForecastData;
+        let saveJStart = 0;
+        let saveJEnd = 0;
 
         //fxdData.reverse();
 
@@ -1418,44 +1420,58 @@ $.ajax({
             };
         });
 
-        // need a place to save local time of last day.
-        let lastDataLineTime = 0;
+        /*********************************************************************** */
         // Set the Day High and Low temp to the correct value (calculate)
+        //********************************************************************** */
+
+        // We must do this because the high and low temp are set according 
+        // to UTC time, which skews the temps and the days.
         for (i = 0; i < dayLines.length - 1; i++) {
+            //initialize the high and low temps for the day.
             dayLines[i].high = 0;
             dayLines[i].low = 150;
+            // need a place to save local time of last day.
+            let lastDataLineTime = 0;
 
-            for (j = 0; j < dataLines.length - 1; j++) {
+            for (j = saveJStart; j < dataLines.length; j++) {
+
+                let weatherLocale = new Date(dataLines[j].time + "Z");
+                let weatherLocaleTime = weatherLocale.toLocaleTimeString();
+                let weatherLocaleHour = weatherLocaleTime.substr(0, weatherLocaleTime.indexOf(0, ":") - 1);
+                
+            if (weatherLocaleTime.substr(weatherLocaleTime.length - 2, 2) == "PM") {
+                timeTest = "PM";
+            } else timeTest = "AM"
 
                 // check current dataLine time against previous dataLine time for midnight rollover
                 // cannot check date due to change from UTC to local time
                 // have to check for when the time rolls over midnight
-                if (Number(dataLines[j].time.substr(11, 2)) > lastDataLineTime) {
+                if (Number(weatherLocaleHour) > lastDataLineTime || timeTest == "PM") {
                     if (dataLines[j].temp > dayLines[i].high)
                         dayLines[i].high = dataLines[j].temp;
                     if (dataLines[j].temp < dayLines[i].low)
                         dayLines[i].low = dataLines[j].temp;
 
-                    // save the current dataLine time for the comparison above
-                    lastDataLineTime = Number(dataLines[j].time.substr(11, 2));
+                } else {
+                        saveJEnd = j;
+                        j = dataLines.length;
                 };
+                // save the current dataLine time for the comparison above
+                lastDataLineTime = Number(weatherLocaleHour);
             };
-        };
 
-        // now stuff the Day and Data Lines in the correct order into the well
-        // // Create the HTML Well (Section) and Add the table content for each reserved table
-        let saveJ = 0;
-        let timeTest = "";
-        let lastDataTimeTest = "";
-        let dataTimeTest = "";
-        // Append the Days remaining forecast to the well
-        for (i = 0; i < dayLines.length - 1; i++) {
+            //********************************************************************** */
+            // now stuff the Day and Data Lines in the correct order into the well
+            //********************************************************************** */
+
+            // // Create the HTML Well (Section) and Add the table content for each reserved table
+            let lastDataTimeTest = "";
+
+            // Append the Days remaining forecast to the well
             var weatherSection = $("<tr>");
             weatherSection.addClass("well");
             weatherSection.attr("id", "weatherWell-" + wxTableRow + 1);
             $("#weatherSection").append(weatherSection);
-
-
 
             let weatherTimeStamp = new Date(dayLines[i].time + "Z");
 
@@ -1464,38 +1480,31 @@ $.ajax({
                 timeTest = "PM";
             } else timeTest = "AM"
 
-            //weatherDate = weatherDate.substr(0, weatherDate.length - 5);
-            //weatherDate = String(weatherDate);
-            //let weatherTime = weatherTimeStamp.toLocaleTimeString();
-            //remove seconds from time
-            //weatherTime = weatherTime.substr(0, weatherTime.indexOf(":")) + weatherTime.substr(weatherTime.length - 2, 2)
-
             // Append the day lines
-            $("#weatherWell-" + wxTableRow + 1).append("<td>" + String(weatherDate.substring(0,weatherDate.length-5)) + "</td>");
+            $("#weatherWell-" + wxTableRow + 1).append("<td>" + String(weatherDate.substring(0, weatherDate.length - 5)) + "</td>");
             $("#weatherWell-" + wxTableRow + 1).append("<td>" + "Fcast" + "</td>");
             $("#weatherWell-" + wxTableRow + 1).append("<td>" + dayLines[i].conditions + "</td>");
             $("#weatherWell-" + wxTableRow + 1).append("<td>" + dayLines[i].high.toFixed(0) + '/' + dayLines[i].low.toFixed(0) + "</td>");
             $("#weatherWell-" + wxTableRow + 1).append("<td>" + Math.round(dayLines[i].windspeed) + ' ' + dayLines[i].winddirection + "</td>");
 
             wxTableRow++;
-            
+
             weatherTimeStamp = new Date(dataLines[0].time + "Z");
-            if (weatherTimeStamp.toLocaleTimeString().substr(weatherTimeStamp.toLocaleTimeString().length - 2, 2) == "PM") {
+            if (weatherDate.substr(weatherDate.length - 2, 2) == "PM") {
                 dataTimeTest = "PM";
-                if (i == 0) lastDataTimeTest = "PM";
+                lastDataTimeTest = "PM";
             } else {
                 dataTimeTest = "AM";
-                if (i == 0) lastDataTimeTest = "AM";
+                lastDataTimeTest = "AM";
             };
 
-/*
-            for (j = saveJ; j < dataLines.length - 1; j++) {
+            for (j = saveJStart; j < saveJEnd + 1; j++) {
 
-            weatherTimeStamp = new Date(dataLines[j].time + "Z");
-            let weatherTime = weatherTimeStamp.toLocaleTimeString();
-                let dataTimeTest = weatherTime.substr(weatherTime.length-2, 2);
+                weatherTimeStamp = new Date(dataLines[j].time + "Z");
+                let weatherTime = weatherTimeStamp.toLocaleTimeString();
+                let dataTimeTest = weatherTime.substr(weatherTime.length - 2, 2);
 
-                    timeTest = weatherTimeStamp.getHours();
+                timeTest = weatherTimeStamp.getHours();
 
                 if (dataTimeTest == lastDataTimeTest || lastDataTimeTest == "AM") {
                     lastDataTimeTest = dataTimeTest;
@@ -1504,19 +1513,12 @@ $.ajax({
                     weatherSection.attr("id", "weatherWell-" + wxTableRow + 1);
                     $("#weatherSection").append(weatherSection);
 
-
-                    //weatherTime = weatherTimeStamp.toLocaleTimeString();
-                    //remove seconds from time
-                    //weatherTime = weatherTime.substr(0, weatherTime.indexOf(":")) + weatherTime.substr(weatherTime.length - 2, 2);
-                    // weatherTime = String(weatherTime);
-
                     let windDirection = dataLines[j].winddirection;
                     if (windDirection == null)
                         windDirection = "N/A";
 
-
                     $("#weatherWell-" + wxTableRow + 1).append("<td>" + " " + "</td>");
-                    $("#weatherWell-" + wxTableRow + 1).append("<td>" + String(weatherTime.substr(0,weatherTime.indexOf(":")) + weatherTime.substr(weatherTime.length-2,2)) + "</td>");
+                    $("#weatherWell-" + wxTableRow + 1).append("<td>" + String(weatherTime.substr(0, weatherTime.indexOf(":")) + weatherTime.substr(weatherTime.length - 2, 2)) + "</td>");
                     $("#weatherWell-" + wxTableRow + 1).append("<td>" + dataLines[j].conditions + "</td>");
                     $("#weatherWell-" + wxTableRow + 1).append("<td>" + dataLines[j].temp.toFixed(0) + "</td>");
                     $("#weatherWell-" + wxTableRow + 1).append("<td>" + Math.round(dataLines[j].windspeed) + ' ' + windDirection + "</td>");
@@ -1524,16 +1526,18 @@ $.ajax({
                     wxTableRow++;
                 } else {
                     if (dataTimeTest == "AM" && lastDataTimeTest == "PM") {
-                        saveJ = j; //Save the starting place for the next day
+                        saveJStart = j; //Save the starting place for the next day
                         j = dataLines.length;
                         timeTest = -1;
                         lastDataTimeTest = dataTimeTest;
                     }
                 }
-            } */
 
+            };
+            // set starting point to next dataLines entry
+            saveJStart = saveJEnd;
         };
-        
+
 
         /***************************************************************************** */
         //Tx and Tx Results Tabs
