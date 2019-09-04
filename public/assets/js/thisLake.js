@@ -1436,7 +1436,6 @@ $.ajax({
             for (j = saveJStart; j < dataLines.length-1; j++) {
 
                 let weatherLocale = new Date(dataLines[j].time.substr(0, dataLines[j].time.indexOf(" ")) + "T" + dataLines[j].time.substr(dataLines[j].time.indexOf(" ")+1, dataLines[j].time.length) + "Z");
-                let weatherLocaleDate = weatherLocale.toLocaleDateString();
                 let weatherLocaleTime = weatherLocale.toLocaleTimeString();
                 let weatherLocaleHour = weatherLocaleTime.substr(0, weatherLocaleTime.indexOf(0, ":") - 1);
                 
@@ -1474,10 +1473,9 @@ $.ajax({
             weatherSection.attr("id", "weatherWell-" + wxTableRow + 1);
             $("#weatherSection").append(weatherSection);
 
-            let weatherLocale = new Date(dataLines[0].time.substr(0, dataLines[0].time.indexOf(" ")) + "T" + dataLines[0].time.substr(dataLines[0].time.indexOf(" ")+1, dataLines[0].time.length) + "Z");
+            let weatherLocale = new Date(dayLines[i].time.substr(0, dayLines[i].time.indexOf(" ")) + "T" + dayLines[i].time.substr(dayLines[i].time.indexOf(" ")+1, dayLines[i].time.length) + "Z");
             let weatherLocaleDate = weatherLocale.toLocaleDateString();
             let weatherLocaleTime = weatherLocale.toLocaleTimeString();
-            let weatherLocaleHour = weatherLocaleTime.substr(0, weatherLocaleTime.indexOf(0, ":") - 1);
 
             if (weatherLocaleDate.substr(weatherLocaleDate.length - 2, 2) == "PM") {
                 timeTest = "PM";
@@ -1507,7 +1505,7 @@ $.ajax({
 
             for (j = saveJStart; j < saveJEnd + 1; j++) {
 
-                weatherLocale = new Date(dataLines[0].time.substr(0, dataLines[j].time.indexOf(" ")) + "T" + dataLines[j].time.substr(dataLines[j].time.indexOf(" ")+1, dataLines[j].time.length) + "Z");
+                weatherLocale = new Date(dataLines[j].time.substr(0, dataLines[j].time.indexOf(" ")) + "T" + dataLines[j].time.substr(dataLines[j].time.indexOf(" ")+1, dataLines[j].time.length) + "Z");
                 weatherLocaleDate = weatherLocale.toLocaleDateString();
                 weatherLocaleTime = weatherLocale.toLocaleTimeString();
                 weatherLocaleHour = weatherLocaleTime.substr(0, weatherLocaleTime.indexOf(0, ":") - 1);
