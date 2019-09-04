@@ -126,12 +126,12 @@ function buildElevChart(data, lake) {
 
     // Set y axis limits for Elev Chart
     let minMaxDiff = chartMaxElev - chartMinElev;
-    let chartGap = (minMaxDiff + 5) * .2;
-    if (minMaxDiff < 1) chartGap = minMaxDiff + 1;
+    let chartGap = (minMaxDiff) * 1.1;
+    if (minMaxDiff < .5) chartGap = minMaxDiff + 1;
     if (minMaxDiff > 20) chartGap = 1;
-    chartMinElevLimit = Math.round(chartMinElev) - Math.round(chartGap); // set the chart lower limit
+    chartMinElevLimit = Math.trunc(chartMinElev) - chartGap; // set the chart lower limit
     //if (chartMinElevLimit > lake.normalPool) chartMinElevLimit = lake.normalPool - .5; // make sure normal pool line shows.
-    chartMaxElevLimit = Math.round(chartMaxElev) + Math.round(chartGap); // set the chart upper limit
+    chartMaxElevLimit = Math.round(chartMaxElev) + chartGap; // set the chart upper limit
     //if (chartMaxElevLimit < lake.normalPool) chartMaxElevLimit = lake.normalPool + .5; // make sure normal pool line shows.
 
     var ctx = document.getElementById('myElevChart').getContext('2d');
@@ -417,14 +417,13 @@ function buildRiverChart(data, lake) {
     dataRiverBatch.reverse();
 
     // Set y axis limits for River Chart
-    let chartGap = chartMaxRiver * .2;
     let minMaxDiff = chartMaxRiver - chartMinRiver;
-    if (minMaxDiff < 1)
-        chartGap = minMaxDiff * 2;
-    else chartGap = minMaxDiff / 2;
-    chartMinRiverLimit = Math.round(chartMinRiver) - Math.round(chartGap + 1); // set the chart lower limit
+    let chartGap = minMaxDiff * 1.2;
+    if (minMaxDiff < .1) chartGap = minMaxDiff + .5;
+    if (minMaxDiff > 20) chartGap = 1;
+    chartMinRiverLimit = Math.trunc(chartMinRiver) - chartGap; // set the chart lower limit
     //if (chartMinElevLimit > lake.normalPool) chartMinElevLimit = lake.normalPool - .5; // make sure normal pool line shows.
-    chartMaxRiverLimit = Math.round(chartMaxRiver) + Math.round(chartGap + 1); // set the chart upper limit
+    chartMaxRiverLimit = Math.round(chartMaxRiver) + chartGap; // set the chart upper limit
     //if (chartMaxElevLimit < lake.normalPool) chartMaxElevLimit = lake.normalPool + .5; // make sure normal pool line shows.
 
     var ctx = document.getElementById('myRiverChart').getContext('2d');
