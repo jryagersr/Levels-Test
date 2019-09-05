@@ -85,10 +85,10 @@
 
   <ul class="nav nav-tabs nav-tab-override">
     <li class="nav-item">
-      <button class="tab-btn nav-link active nav-tab-btn" id='currentTabBtn' name="currentTab">Lake</button>
+      <button class="tab-btn nav-link active nav-tab-btn" id='currentTabBtn' name="currentTab">H2O</button>
     </li>
     <li class="nav-item">
-      <button class="tab-btn nav-link nav-tab-btn" id='chartTabBtn' name="chartTab">Chart</button>
+      <button class="tab-btn nav-link nav-tab-btn" id='chartTabBtn' name="chartTab">Cht</button>
     </li>
     <li class="nav-item">
       <button class="tab-btn nav-link nav-tab-btn" id='weatherTabBtn' name="weatherTab">WxF</button>
@@ -100,15 +100,12 @@
         <button class="tab-btn nav-link nav-tab-btn" id='txResultsTabBtn' name="txResultsTab">TxR</button>
       </li>
     <li class="nav-item">
-      <button class="tab-btn nav-link nav-tab-btn" id='rampsTabBtn' name="rampsTab">Rmps</button>
+      <button class="tab-btn nav-link nav-tab-btn" id='rampsTabBtn' name="rampsTab">Rmp</button>
     </li>
     <li class="nav-item">
       <button class="tab-btn nav-link nav-tab-btn" id='dataTabBtn' name="dataTab">Data</button>
     </li>
   </ul>
-
-  <div class="container-fluid text-center" class="container-fluid text-center this-lake-body">
-
 
     <div id="adLogoWell" class="adwelllogo">
     </div>
@@ -116,6 +113,9 @@
     <div class="current-lake-title">
       <h1 class="current-lake-title"><span id="lakeTitle"></span></h1>
     </div>
+  <div class="container-fluid text-center" class="container-fluid text-center this-lake-body">
+
+
 
     <div class="tab-wrapper" id='currentTab'>
       <div class="current-wrapper">
@@ -203,7 +203,7 @@
   </div>
 
   <div class="tab-wrapper" id='weatherTab'>
-
+<div class="chart-container">
       <h3><b>5 Day / 3 Hour Forecast</b></h3>
       <table class="table thead-dark table-striped mx-auto">
         <thead>
@@ -219,9 +219,11 @@
         </tbody>
       </table>
     </div>
+  </div>
 
   <div class="tab-wrapper" id='rampsTab'>
 
+    <div class="chart-container">
     <h3><b>Boat Ramps</b></h3>
     <table class="table thead-dark table-striped mx-auto">
       <thead>
@@ -234,10 +236,12 @@
       </tbody>
     </table>
   </div>
+</div>
 
 
   <div class="tab-wrapper" id='txTab'>
 
+    <div class="chart-container">
       <h3><b>Tournaments</b></h3>
       <table class="table thead-dark table-striped mx-auto">
         <thead>
@@ -252,10 +256,12 @@
         </tbody>
       </table>
     </div>
+  </div>
   
 
     <div class="tab-wrapper" id='txResultsTab'>
 
+      <div class="chart-container">
         <h3><b>Tournament Results</b></h3>
         <table class="table thead-dark table-striped mx-auto">
           <thead>
@@ -270,10 +276,12 @@
           </tbody>
         </table>
       </div>
+    </div>
     
 
   <div class="tab-wrapper" id='dataTab'>
 
+    <div class="chart-container">
     <h3><b>Data</b></h3>
     <table class="table thead-dark table-striped mx-auto">
       <thead>
@@ -288,6 +296,7 @@
       </tbody>
     </table>
   </div>
+</div>
 
   </div>
   </div>
