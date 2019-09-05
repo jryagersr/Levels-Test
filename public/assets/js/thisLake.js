@@ -1260,7 +1260,8 @@ $.ajax({
         /***************************************************************************** */
 
         // Set lake title on page
-        $("#lakeTitle").append(currentLake.bodyOfWater);
+        $("#lakeTitle").append(currentLake.bodyOfWater.substr(0, currentLake.bodyOfWater.indexOf("(")));
+        $("#lakeSubTitle").append(currentLake.bodyOfWater.substr(currentLake.bodyOfWater.indexOf("("), currentLake.bodyOfWater.length));
 
         // Set current date, time elev, and pool on page
         if (!noDataSource) {
