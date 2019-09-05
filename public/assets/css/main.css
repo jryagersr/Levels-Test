@@ -654,6 +654,12 @@ h3 {
     width: 90vw;
     position: relative;
     margin-bottom: 3px;
+    margin-top: 10px;
+}
+
+.chart-container-tab-page {
+    width: 90vw;
+    margin-bottom: 3px;
     margin-top: 155px;
 }
 
