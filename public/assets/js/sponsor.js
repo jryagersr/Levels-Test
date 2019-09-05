@@ -1,5 +1,19 @@
 let sponsors;
 
+function shuffleArray(array)
+{
+  let max = array.length;
+  for (i = 0; i < max; i++) {
+    // Pick a new index higher than current for each item in the array
+    let r = Math.trunc(Math.random() * Math.trunc(max));
+    
+    // Swap item into new spot
+    let tempObject = array[r];
+    array[r] = array[i];
+    array[i] = tempObject;
+  }
+}
+
 if (typeof lakeRoute == 'undefined') {
     lakeRoute = "";
 }
@@ -12,13 +26,14 @@ $.ajax({
     .then(function (data) {
         let today = new Date();
         sponsors = data;
+        shuffleArray(sponsors);
 
         // ad Logo functions
         // ==================================================
 
         // // Clear any ad content in the scroller
         $("#adLogoWell").empty();
-
+        
         // Loop through our ads and append them to the page in format: <li><a><img></a></li>
         sponsors.forEach(function (element) {
             if (element.type == 'logo') {

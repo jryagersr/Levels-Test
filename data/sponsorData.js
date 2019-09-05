@@ -81,6 +81,15 @@ module.exports = [
         endDate: "2019-06-30T00:00:00.0Z"
     },
     {
+        sponsor: "Dougs DD",
+        href: "http://www.http://dirtydougsdiesel.com",
+        src: "/static/assets/img/sponsor-banners/dougs dd banner.png",
+        location: ["jordan", "falls", "kerr", "shearon harris", "mayo", "hyco"],
+        type: "logo",
+        startDate: "2019-01-01T00:00:00.0Z",
+        endDate: "2029-12-30T00:00:00.0Z"
+    },
+    {
         sponsor: "Gradys",
         href: "",
         src: "/static/assets/img/sponsor-banners/gradysbanner.png",
