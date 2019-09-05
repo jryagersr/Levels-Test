@@ -1260,9 +1260,14 @@ $.ajax({
         /***************************************************************************** */
 
         // Set lake title on page
+        if (currentLake.bodyOfWater.includes("(")) {
         $("#lakeTitle").append(currentLake.bodyOfWater.substr(0, currentLake.bodyOfWater.indexOf("(")));
         $("#lakeSubTitle").append(currentLake.bodyOfWater.substr(currentLake.bodyOfWater.indexOf("("), currentLake.bodyOfWater.length));
+        } else {
 
+        $("#lakeTitle").append(currentLake.bodyOfWater);
+        $("#lakeSubTitle").append("");
+        }
         // Set current date, time elev, and pool on page
         if (!noDataSource) {
             $("#currentTime").append(new Date(currentLake.data[0].time).toString().substr(0, 21));
