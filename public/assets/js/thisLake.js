@@ -23,6 +23,7 @@ function buildTable(data) {
         var time = "N/A";
         var elev = "N/A";
         var flow = "N/A";
+
         // Check to see if data contains date, time, elev, or flow. If not it will stay as "N/A"
         if (typeof data[i].date !== 'undefined') {
             date = data[i].date;
@@ -49,7 +50,7 @@ function buildTable(data) {
         $("#lakeWell-" + i + 1).append("<td>" + elev + "</td>");
         $("#lakeWell-" + i + 1).append("<td>" + flow + "</td>");
     }
-    buildElevChart(data); // Why is this here?
+    buildElevChart(data);
 }
 
 
@@ -57,6 +58,7 @@ function buildTable(data) {
 // Function to build chart on page
 function buildElevChart(data, lake) {
     $("#elevChart").show();
+
     // Our data must be parsed into separate flat arrays for the chart
     let labelBatch = [];
     let dataElevBatch = [];
@@ -69,6 +71,7 @@ function buildElevChart(data, lake) {
     let chartMaxElev = 0; // y-axis Min elev value
     let chartMinElevLimit = 0; // y-axis Min elev Limit (for chart)
     let chartMaxElevLimit = 0; // y-axis Max elev Limit (for chart)
+
     // find our starting elevation
     for (var i = 0; data.length; i++) {
         if (typeof data[i].elev == "number") {
@@ -77,16 +80,21 @@ function buildElevChart(data, lake) {
             break;
         }
     }
+
     // Loop through our data for 24 data points if we have it
     for (k; k < data.length; k++) {
+
         // if we're past the first entry
         if (k > 0) {
+
             // if we're still on the same day and not on the last entry
             if (data[k].date === data[k - 1].date) {
+
                 // add to our average variables
                 sumOfElevs += data[k].elev;
                 divisor++
             }
+
             // else we're on a new day. so push data and reset averages
             else {
                 if ((sumOfElevs / divisor) > chartMaxElev) // if value is greater than max, replace max
@@ -103,11 +111,13 @@ function buildElevChart(data, lake) {
                 divisor = 1;
             }
         }
+
         // when a week of data has been reached stop
         if (labelBatch.length > 9) {
             break;
         }
     }
+
     // push the final day's values after looping
     labelBatch.push(data[k - 1].date.substring(0, data[k - 1].date.length - 5)); // put final day date value in array
     dataElevBatch.push((sumOfElevs / divisor).toFixed(2)); // calculate average final day and push
@@ -124,23 +134,21 @@ function buildElevChart(data, lake) {
     labelBatch.reverse();
     dataElevBatch.reverse();
 
-    // Set y axis limits for Elev Chart
+    // Set axis limits for Elev Chart
     let minMaxDiff = chartMaxElev - chartMinElev;
     let chartGap = (minMaxDiff) * 1.1;
     if (minMaxDiff < .5) chartGap = minMaxDiff + 1;
     if (minMaxDiff > 20) chartGap = 1;
     chartMinElevLimit = Math.round(chartMinElev) - chartGap; // set the chart lower limit
-    //if (chartMinElevLimit > lake.normalPool) chartMinElevLimit = lake.normalPool - .5; // make sure normal pool line shows.
     chartMaxElevLimit = Math.round(chartMaxElev) + chartGap; // set the chart upper limit
-    //if (chartMaxElevLimit < lake.normalPool) chartMaxElevLimit = lake.normalPool + .5; // make sure normal pool line shows.
 
     var ctx = document.getElementById('myElevChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
     grd.addColorStop(0, 'rgb(0,140,255)');
     grd.addColorStop(1, 'rgb(0,55,255)');
     var chart = new Chart(ctx, {
-        // The type of chart we want to create
 
+        // The type of chart we want to create
         type: 'line',
 
         // The data for our dataset
@@ -149,14 +157,12 @@ function buildElevChart(data, lake) {
             datasets: [{
                     type: 'line',
                     label: "Level",
-                    // backgroundColor: 'rgb(179,221,255)',
                     borderColor: 'rgb(0, 140, 255)',
                     data: dataElevBatch
                 },
                 {
                     type: 'line',
                     label: "Normal",
-                    // backgroundColor: 'rgb(179,221,255)',
                     borderColor: 'rgb(100, 140, 100)',
                     data: dataNPBatch,
                     tension: 0 // disables bezier curves
@@ -164,14 +170,12 @@ function buildElevChart(data, lake) {
                 {
                     type: 'line',
                     label: "Flood",
-                    // backgroundColor: 'rgb(179,221,255)',
                     borderColor: 'rgb(172, 83, 83)',
                     data: dataFCBatch,
                     tension: 0 // disables bezier curves
                 },
                 /* {
                      label: "Top of Dam",
-                     // backgroundColor: 'rgb(179,221,255)',
                      borderColor: 'rgb(0, 0, 0)',
                      data: dataTDBatch,
                      tension: 0 // disables bezier curves
@@ -223,6 +227,7 @@ function buildElevChart(data, lake) {
 // Function to build flow chart on page
 function buildFlowChart(data) {
     $("#flowChart").show();
+
     // Our data must be parsed into separate flat arrays for the chart
     let labelBatch = [];
     let dataFlowBatch = [];
@@ -233,6 +238,7 @@ function buildFlowChart(data) {
     let chartMaxFlow = 0; // y-axis Min elev value
     let chartMinFlowLimit = 0; // y-axis Min elev value
     let chartMaxFlowLimit = 0; // y-axis Max elev value
+
     // find our starting flow
     for (var i = 0; data.length; i++) {
         if (typeof data[i].flow == "number") {
@@ -242,23 +248,30 @@ function buildFlowChart(data) {
         }
     }
     let avgFlow = 0;
+
     // Loop through our data for 24 data points if we have it
     for (k; k < data.length; k++) {
+
         // if we're past the first entry
         if (k > 0) {
+
             // if the data is available and not "Missing" or "N/A"
             if (data[k].flow !== "Missing" && data[k].flow !== "N/A") {
+
                 // if we're still on the same day and not on the last entry
                 if (data[k].date === data[k - 1].date) {
+
                     // add to our average variables
                     sumOfFlows += data[k].flow;
                     divisor++
                 }
+
                 // else we're on a new day. so push data and reset averages
                 else {
                     avgFlow = sumOfFlows / divisor;
                     if (avgFlow >= chartMaxFlow) // if value is greater than max, replace max
                         chartMaxFlow = avgFlow; // set the max flow for calculating Chart y-axis Max later
+
                     // no chartMinFlow, always 0
                     labelBatch.push(data[k - 1].date.substring(0, data[k - 1].date.length - 5));
                     dataFlowBatch.push((sumOfFlows / divisor).toFixed(2)); // calculate average
@@ -271,6 +284,7 @@ function buildFlowChart(data) {
                 dataFlowBatch.push((sumOfFlows / divisor).toFixed(2)); // calculate average
 
                 if (data[k].date !== data[k - 1].date) {
+
                     // if we are here, this lake has a plethora of "Missing" and "N/A"
                     // andthe date has changed between entries,
                     // we must set the chartMaxFlow 
@@ -284,17 +298,20 @@ function buildFlowChart(data) {
                 else sumOfFlows = data[k].flow;
                 divisor = 1;
             } else if (data[k].date !== data[k - 1].date) {
+
                 // dates are different and flow has good data so, set chartMaxFlow
                 if (avgFlow >= chartMaxFlow) // if value is greater than max, replace max
                     chartMaxFlow = avgFlow; // set the max flow for calculating Chart y-axis Max later
                 // no chartMinFlow, always 0
             }
         }
+
         // when a week of data has been reached stop
         if (labelBatch.length > 6) {
             break;
         }
     }
+
     // push the final day's values after looping
     labelBatch.push(data[k - 1].date.substring(0, data[k - 1].date.length - 5)); // Push final day data Date
     dataFlowBatch.push((sumOfFlows / divisor).toFixed(2)); // calculate average for final day and push
@@ -323,6 +340,7 @@ function buildFlowChart(data) {
     grd.addColorStop(0, 'rgb(0,140,255)');
     grd.addColorStop(1, 'rgb(0,55,255)');
     var chart = new Chart(ctx, {
+
         // The type of chart we want to create
         type: 'line',
 
@@ -331,7 +349,6 @@ function buildFlowChart(data) {
             labels: labelBatch,
             datasets: [{
                 label: "Flow",
-                // backgroundColor: 'rgb(179,221,255)',
                 borderColor: 'rgb(0, 140, 255)',
                 data: dataFlowBatch
             }]
@@ -379,6 +396,7 @@ function buildFlowChart(data) {
 // Actually Hourly Elevation but called River because it can show daily tides on a River
 function buildRiverChart(data, lake) {
     $("#riverChart").show();
+
     // Our data must be parsed into separate flat arrays for the chart
     let labelBatch = [];
     let dataRiverBatch = [];
@@ -387,6 +405,7 @@ function buildRiverChart(data, lake) {
     let chartMaxRiver = 0; // y-axis Min elev value
     let chartMinRiverLimit = 0; // y-axis Min elev Limit (for chart)
     let chartMaxRiverLimit = 0; // y-axis Max elev Limit (for chart)
+
     // find our starting elevation
     for (var i = 0; data.length; i++) {
         if (typeof data[i].elev == "number") {
@@ -394,8 +413,10 @@ function buildRiverChart(data, lake) {
             break;
         }
     }
+
     // Loop through our data for 24 data points if we have it
     for (k; k < data.length; k++) {
+
         // if we're past the first entry
         if (k > 0) {
             labelBatch.push(data[k - 1].time.substr(0, data[k - 1].time.lastIndexOf(":")) + data[k - 1].time.substr(data[k - 1].time.length - 2, 2));
@@ -407,6 +428,7 @@ function buildRiverChart(data, lake) {
                 chartMinRiver = data[k - 1].elev; // update Min Elev average
 
         }
+
         // when a week of data has been reached stop
         if (labelBatch.length > 23) {
             break;
@@ -416,23 +438,21 @@ function buildRiverChart(data, lake) {
     labelBatch.reverse();
     dataRiverBatch.reverse();
 
-    // Set y axis limits for River Chart
+    // Set axis limits for River Chart
     let minMaxDiff = chartMaxRiver - chartMinRiver;
     let chartGap = minMaxDiff * 1.5;
     if (minMaxDiff < .1) chartGap = minMaxDiff + .5;
     if (minMaxDiff > 20) chartGap = 1;
     chartMinRiverLimit = chartMinRiver - chartGap; // set the chart lower limit
-    //if (chartMinElevLimit > lake.normalPool) chartMinElevLimit = lake.normalPool - .5; // make sure normal pool line shows.
     chartMaxRiverLimit = chartMaxRiver + chartGap; // set the chart upper limit
-    //if (chartMaxElevLimit < lake.normalPool) chartMaxElevLimit = lake.normalPool + .5; // make sure normal pool line shows.
 
     var ctx = document.getElementById('myRiverChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
     grd.addColorStop(0, 'rgb(0,140,255)');
     grd.addColorStop(1, 'rgb(0,55,255)');
     var chart = new Chart(ctx, {
-        // The type of chart we want to create
 
+        // The type of chart we want to create
         type: 'line',
 
         // The data for our dataset
@@ -441,7 +461,6 @@ function buildRiverChart(data, lake) {
             datasets: [{
                 type: 'line',
                 label: "Level",
-                // backgroundColor: 'rgb(179,221,255)',
                 borderColor: 'rgb(0, 140, 255)',
                 data: dataRiverBatch
             }]
@@ -489,6 +508,7 @@ function buildRiverChart(data, lake) {
 // Function to build chart on page
 function buildHourlyFlowChart(data, lake) {
     $("#hourlyFlowChart").show();
+
     // Our data must be parsed into separate flat arrays for the chart
     let labelBatch = [];
     let dataFlowBatch = [];
@@ -497,6 +517,7 @@ function buildHourlyFlowChart(data, lake) {
     let chartMaxFlow = 0; // y-axis Min elev value
     let chartMinFlowLimit = 0; // y-axis Min elev Limit (for chart)
     let chartMaxFlowLimit = 0; // y-axis Max elev Limit (for chart)
+
     // find our starting elevation
     for (var i = 0; data.length; i++) {
         if (typeof data[i].flow == "number") {
@@ -504,8 +525,10 @@ function buildHourlyFlowChart(data, lake) {
             break;
         }
     }
+
     // Loop through our data for 24 data points if we have it
     for (k; k < data.length; k++) {
+
         // if we're past the first entry
         if (k > 0) {
             if (data[k].flow !== "Missing" && data[k].flow !== "N/A") {
@@ -519,6 +542,7 @@ function buildHourlyFlowChart(data, lake) {
 
             }
         }
+
         // when a week of data has been reached stop
         if (labelBatch.length > 47) {
             break;
@@ -533,17 +557,15 @@ function buildHourlyFlowChart(data, lake) {
     let minMaxDiff = chartMaxFlow - chartMinFlow;
     if (minMaxDiff < 1 && minMaxDiff !== 0) chartGap = minMaxDiff * 2;
     chartMinFlowLimit = 0; // set the chart lower limit
-    //if (chartMinElevLimit > lake.normalPool) chartMinElevLimit = lake.normalPool - .5; // make sure normal pool line shows.
     chartMaxFlowLimit = Math.round(chartMaxFlow) + Math.round(chartGap); // set the chart upper limit
-    //if (chartMaxElevLimit < lake.normalPool) chartMaxElevLimit = lake.normalPool + .5; // make sure normal pool line shows.
 
     var ctx = document.getElementById('myHourlyFlowChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
     grd.addColorStop(0, 'rgb(0,140,255)');
     grd.addColorStop(1, 'rgb(0,55,255)');
     var chart = new Chart(ctx, {
-        // The type of chart we want to create
 
+        // The type of chart we want to create
         type: 'line',
 
         // The data for our dataset
@@ -552,7 +574,6 @@ function buildHourlyFlowChart(data, lake) {
             datasets: [{
                 type: 'line',
                 label: "Flow (cfs)",
-                // backgroundColor: 'rgb(179,221,255)',
                 borderColor: 'rgb(0, 140, 255)',
                 data: dataFlowBatch
             }]
@@ -611,9 +632,11 @@ function buildHourlyFlowChart(data, lake) {
 // Function to build temp chart on page
 function buildTempChart(tempData) {
     $("#tempChart").show();
+
     // Our data must be parsed into separate flat arrays for the chart
     let labelBatch = [];
     let dataTempBatch = [];
+    let dewpointBatch = [];
     let k = 0; // our iterator after starting elevation
     let chartMinTemp = 100000; // y-axis Max elev value
     let chartMaxTemp = 0; // y-axis Min elev value
@@ -624,10 +647,7 @@ function buildTempChart(tempData) {
     for (k; k < tempData.ccWxData.length; k++) {
         if (typeof tempData.ccWxData[k].temp == "number") {
 
-            //labelBatch.push(tempData.ccWxData[k - 1].time);
-
             //calculate the time as 12 hour AM PM.
-
             let timeStamp = new Date(tempData.ccWxData[k].date);
 
             //calculate the time as 12 hour AM PM.
@@ -637,8 +657,11 @@ function buildTempChart(tempData) {
                 suffix = "AM";
             hour = ((hour + 11) % 12 + 1);
 
-            labelBatch.push(hour + suffix);
-            // tempData.ccWxData[k].time.substr(0, tempData.ccWxData[k].time.indexOf("M") - 8) + tempData.ccWxData[k].time.substr(tempData.ccWxData[k].time.indexOf("M") - 1, 2))
+            // Calculate Dewpoint (Tdp = Tf - 9/25(100-RH))
+            let dewPoint = tempData.ccWxData[k].temp - (.36 * (100 - tempData.ccWxData[k].humidity));
+
+            dewpointBatch.push(dewPoint); // push dew point
+            labelBatch.push(hour + suffix); // push time
             dataTempBatch.push(tempData.ccWxData[k].temp); // push elev
 
             if (tempData.ccWxData[k].temp > chartMaxTemp) // if value is greater than max, replace max
@@ -647,7 +670,8 @@ function buildTempChart(tempData) {
                 chartMinTemp = tempData.ccWxData[k].temp; // update Min Elev average
 
         }
-        // when a week of data has been reached stop
+
+        // when a day of data has been reached stop
         if (labelBatch.length > 23 || k > tempData.ccWxData.length - 1) {
             break;
         }
@@ -657,17 +681,15 @@ function buildTempChart(tempData) {
     let minMaxDiff = chartMaxTemp - chartMinTemp;
     if (minMaxDiff < 1) chartGap = minMaxDiff / 2;
     chartMinTempLimit = Math.round(chartMinTemp) - 5; // set the chart lower limit
-    //if (chartMinElevLimit > lake.normalPool) chartMinElevLimit = lake.normalPool - .5; // make sure normal pool line shows.
     chartMaxTempLimit = Math.round(chartMaxTemp) + 5; // set the chart upper limit
-    //if (chartMaxElevLimit < lake.normalPool) chartMaxElevLimit = lake.normalPool + .5; // make sure normal pool line shows.
 
     var ctx = document.getElementById('myTempChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
     grd.addColorStop(0, 'rgb(0,140,255)');
     grd.addColorStop(1, 'rgb(0,55,255)');
     var chart = new Chart(ctx, {
-        // The type of chart we want to create
 
+        // The type of chart we want to create
         type: 'line',
 
         // The data for our dataset
@@ -676,10 +698,14 @@ function buildTempChart(tempData) {
             datasets: [{
                 type: 'line',
                 label: "Temp (F)",
-                // backgroundColor: 'rgb(179,221,255)',
                 borderColor: 'rgb(0, 140, 255)',
                 data: dataTempBatch
-            }, ]
+            }, {
+                type: 'line',
+                label: "Dew Point",
+                borderColor: 'rgb(100, 140, 100))',
+                data: dewpointBatch
+            }]
         },
 
         // Configuration options go here
@@ -724,6 +750,7 @@ function buildTempChart(tempData) {
 // Function to build humidity chart on page
 function buildHumidityChart(humidityData) {
     $("#humidityChart").show();
+
     // Our data must be parsed into separate flat arrays for the chart
     let labelBatch = [];
     let dataHumidityBatch = [];
@@ -756,14 +783,14 @@ function buildHumidityChart(humidityData) {
                 chartMinHumidity = humidityData.ccWxData[k].humidity; // update Min Elev average
 
         }
-        // when a week of data has been reached stop
+
+        // when a day of data has been reached stop
         if (labelBatch.length > 23 || k > humidityData.ccWxData.length - 1) {
             break;
         }
     }
 
-    // Set y axis limits for Temp Chart
-    //if (chartMaxElevLimit < lake.normalPool) chartMaxElevLimit = lake.normalPool + .5; // make sure normal pool line shows.
+    // Set axis limits for Temp Chart
     chartMinHumidityLimit = 0; // set the chart lower limit
     chartMaxHumidityLimit = 110; // set the chart upper limit
 
@@ -772,8 +799,8 @@ function buildHumidityChart(humidityData) {
     grd.addColorStop(0, 'rgb(0,140,255)');
     grd.addColorStop(1, 'rgb(0,55,255)');
     var chart = new Chart(ctx, {
-        // The type of chart we want to create
 
+        // The type of chart we want to create
         type: 'line',
 
         // The data for our dataset
@@ -782,7 +809,6 @@ function buildHumidityChart(humidityData) {
             datasets: [{
                 type: 'line',
                 label: "Humidity %",
-                // backgroundColor: 'rgb(179,221,255)',
                 borderColor: 'rgb(0, 140, 255)',
                 data: dataHumidityBatch
             }, ]
@@ -829,6 +855,7 @@ function buildHumidityChart(humidityData) {
 // Function to build baro chart on page
 function buildBaroChart(baroData) {
     $("#baroChart").show();
+
     // Our data must be parsed into separate flat arrays for the chart
     let labelBatch = [];
     let dataBaroBatch = [];
@@ -861,6 +888,7 @@ function buildBaroChart(baroData) {
                 chartMinBaro = baroData.ccWxData[k].baro; // update Min Elev average
 
         }
+
         // when a week of data has been reached stop
         if (labelBatch.length > 47 || k > baroData.ccWxData.length - 1) {
             break;
@@ -871,17 +899,15 @@ function buildBaroChart(baroData) {
     let minMaxDiff = chartMaxBaro - chartMinBaro;
     if (minMaxDiff < 1) chartGap = minMaxDiff / 2;
     chartMinBaroLimit = Math.round(chartMinBaro) - 1; // set the chart lower limit
-    //if (chartMinElevLimit > lake.normalPool) chartMinElevLimit = lake.normalPool - .5; // make sure normal pool line shows.
     chartMaxBaroLimit = Math.round(chartMaxBaro) + 1; // set the chart upper limit
-    //if (chartMaxElevLimit < lake.normalPool) chartMaxElevLimit = lake.normalPool + .5; // make sure normal pool line shows.
 
     var ctx = document.getElementById('myBaroChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
     grd.addColorStop(0, 'rgb(0,140,255)');
     grd.addColorStop(1, 'rgb(0,55,255)');
     var chart = new Chart(ctx, {
-        // The type of chart we want to create
 
+        // The type of chart we want to create
         type: 'line',
 
         // The data for our dataset
@@ -890,7 +916,6 @@ function buildBaroChart(baroData) {
             datasets: [{
                 type: 'line',
                 label: "Pressure (mb)",
-                // backgroundColor: 'rgb(179,221,255)',
                 borderColor: 'rgb(0, 140, 255)',
                 data: dataBaroBatch
             }]
@@ -938,6 +963,7 @@ function buildBaroChart(baroData) {
 // Function to build Wind Speed chart 
 function buildWindChart(windData) {
     $("#windChart").show();
+
     // Our data must be parsed into separate flat arrays for the chart
     let labelBatch = [];
     let dataWindBatch = [];
@@ -970,15 +996,12 @@ function buildWindChart(windData) {
                 chartMinWind = windData.ccWxData[k].windspeed; // update Min Wind
 
         };
+
         // when a day of data has been reached stop
         if (labelBatch.length > 23 || k > windData.ccWxData.length - 2) {
             break;
         };
     };
-
-    //labelBatch.reverse();
-    //dataWindBatch.reverse();
-
 
     // Set y axis limits for Baro Chart
     let chartGap = chartMaxWind * .2;
@@ -992,8 +1015,8 @@ function buildWindChart(windData) {
     grd.addColorStop(0, 'rgb(0,140,255)');
     grd.addColorStop(1, 'rgb(0,55,255)');
     var chart = new Chart(ctx, {
-        // The type of chart we want to create
 
+        // The type of chart we want to create
         type: 'line',
 
         // The data for our dataset
@@ -1002,7 +1025,6 @@ function buildWindChart(windData) {
             datasets: [{
                 type: 'line',
                 label: "Wind Speed (MPH)",
-                // backgroundColor: 'rgb(179,221,255)',
                 borderColor: 'rgb(0, 140, 255)',
                 data: dataWindBatch
             }]
@@ -1050,6 +1072,7 @@ function buildWindChart(windData) {
 // Function to build wind direction chart
 function buildWindDirectionChart(windData) {
     $("#windDirectionChart").show();
+
     // Our data must be parsed into separate flat arrays for the chart
     let labelBatch = [];
     let dataWindBatch = [];
@@ -1057,8 +1080,6 @@ function buildWindDirectionChart(windData) {
     let k = 0; // our iterator after starting data
     let compassSector = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
     let displayCompassSector = ["N", " ", "NE", " ", "E", " ", "SE", " ", "S", " ", "SW", " ", "W", " ", "NW", " "];
-
-
 
     // Loop through our data for 24 data points if we have it
     for (k; k < windData.ccWxData.length; k++) {
@@ -1075,6 +1096,7 @@ function buildWindDirectionChart(windData) {
             hour = ((hour + 11) % 12 + 1);
 
             labelBatch.push(hour + suffix);
+
             // check to see if wind direction reported is null
             if (windData.ccWxData[k].winddirection == null) {
                 windDirection = 0;
@@ -1085,6 +1107,7 @@ function buildWindDirectionChart(windData) {
             dataWindBatch.push(windDirectionIndex); // push wind direction
 
         };
+
         // when a week of data has been reached stop
         if (labelBatch.length > 23 || k > windData.ccWxData.length - 2) {
             break;
@@ -1096,8 +1119,8 @@ function buildWindDirectionChart(windData) {
     grd.addColorStop(0, 'rgb(0,140,255)');
     grd.addColorStop(1, 'rgb(0,55,255)');
     var chart = new Chart(ctx, {
-        // The type of chart we want to create
 
+        // The type of chart we want to create
         type: 'line',
 
         // The data for our dataset
@@ -1106,7 +1129,6 @@ function buildWindDirectionChart(windData) {
             datasets: [{
                 type: 'line',
                 label: "Direction",
-                // backgroundColor: 'rgb(179,221,255)',
                 borderColor: 'rgb(0, 140, 255)',
                 showLine: false,
                 data: dataWindBatch
@@ -1138,6 +1160,7 @@ function buildWindDirectionChart(windData) {
                         fontSize: 14,
                     },
                     ticks: {
+
                         // Include a dollar sign in the ticks
                         callback: function (value, index, values) {
                             return displayCompassSector[value];
@@ -1164,13 +1187,17 @@ function flattenData(data, type, callback) {
         for (k = 0; k < element.trails.length; k++) {
 
             for (l = 0; l < element.trails[k].tournaments.length; l++) {
+
                 // Format the tx date to check against today's date
                 let txDate = new Date(element.trails[k].tournaments[l].date);
                 let todaysDate = new Date();
+
                 // check which page we're on
                 if (type == 0) {
+
                     // If tx date is in the future (exclude all past dates)
                     if (Date.parse(txDate) > Date.parse(todaysDate)) {
+
                         // Push our data into a flat array for easier sort later
                         flatBatch.push({
                             organizer: element.organization,
@@ -1185,8 +1212,10 @@ function flattenData(data, type, callback) {
                         });
                     };
                 } else {
+
                     // If tx date is in the past (exclude all future dates)
                     if (Date.parse(txDate) < Date.parse(todaysDate)) {
+
                         // Push our data into a flat array for easier sort later
                         flatBatch.push({
                             organizer: element.organization,
@@ -1237,7 +1266,9 @@ var sort_by = function (field, reverse, primer) {
 //
 //
 /******************************************************************************************************************/
+
 // Get current lake from database
+
 // Declare variable to hold currentLake object
 var currentLake = {};
 var rampData = {};
@@ -1261,13 +1292,14 @@ $.ajax({
 
         // Set lake title on page
         if (currentLake.bodyOfWater.includes("(")) {
-        $("#lakeTitle").append(currentLake.bodyOfWater.substr(0, currentLake.bodyOfWater.indexOf("(")));
-        $("#lakeSubTitle").append(currentLake.bodyOfWater.substr(currentLake.bodyOfWater.indexOf("("), currentLake.bodyOfWater.length));
+            $("#lakeTitle").append(currentLake.bodyOfWater.substr(0, currentLake.bodyOfWater.indexOf("(")));
+            $("#lakeSubTitle").append(currentLake.bodyOfWater.substr(currentLake.bodyOfWater.indexOf("("), currentLake.bodyOfWater.length));
         } else {
 
-        $("#lakeTitle").append(currentLake.bodyOfWater);
-        $("#lakeSubTitle").append("");
+            $("#lakeTitle").append(currentLake.bodyOfWater);
+            $("#lakeSubTitle").append("");
         }
+
         // Set current date, time elev, and pool on page
         if (!noDataSource) {
             $("#currentTime").append(new Date(currentLake.data[0].time).toString().substr(0, 21));
@@ -1315,10 +1347,12 @@ $.ajax({
             .then(function (data) {
                 rampData = data;
                 rampData.forEach(function (ramp, i) {
+
                     // if match send the lat lon to client
                     let rampDirectionsLink = "https://www.google.com/maps/dir//" + ramp.lat + "," + ramp.long;
 
                     if (ramp.id == lakeRoute) {
+
                         // Create the HTML Well (Section) and Add the table content for each reserved table
                         var rampSection = $("<tr>");
                         rampSection.addClass("well");
@@ -1329,6 +1363,7 @@ $.ajax({
                         rampSection.addClass("clickable-row"); // Add clickable row css styles
 
                         $("#rampSection").append(rampSection);
+
                         // Append the data values to the table row
                         $("#rampWell-" + i + 1).append("<td><b>" + ramp.rampName + "</b></td>");
                         $("#rampWell-" + i + 1).append("<td> <a href='" + rampDirectionsLink + "' target='_blank'> Click </a> </td>");
@@ -1347,6 +1382,7 @@ $.ajax({
                 let timestamp = new Date(entry.time);
                 entry.date = timestamp.toLocaleDateString();
                 entry.time = timestamp.toLocaleTimeString();
+
                 //remove seconds from time
                 entry.time = entry.time.substr(0, entry.time.lastIndexOf(":")) + entry.time.substr(entry.time.length - 2, 2)
                 if (entry.elev !== "N/A" && entry.elev !== "Missing") {
@@ -1355,6 +1391,7 @@ $.ajax({
                 if (entry.flow !== "N/A" && entry.flow !== "Missing") {
                     entry.flow = Number(entry.flow);
                 };
+
                 // Create the HTML Well (Section) and Add the table content for each reserved table
                 var lakeSection = $("<tr>");
                 lakeSection.addClass("well");
@@ -1379,9 +1416,6 @@ $.ajax({
         let fxData = currentLake.wxForecastData;
         let saveJStart = 0;
         let saveJEnd = 0;
-
-        //fxdData.reverse();
-
         let dayLines = [];
         let dataLines = [];
 
@@ -1406,6 +1440,7 @@ $.ajax({
                     });
 
                 } else {
+
                     // If element is a data line display the line
                     if (typeof element.day !== 'number') {
 
@@ -1419,34 +1454,30 @@ $.ajax({
                         });
                     };
                 };
-
-                // Check to see if time is 00:00 (ie beginning of the day
-                // If so, then display the saved day
             };
         });
 
-        /*********************************************************************** */
         // Set the Day High and Low temp to the correct value (calculate)
-        //********************************************************************** */
-
         // We must do this because the high and low temp are set according 
         // to UTC time, which skews the temps and the days.
         for (i = 0; i < dayLines.length - 1; i++) {
+
             //initialize the high and low temps for the day.
             dayLines[i].high = 0;
             dayLines[i].low = 150;
+
             // need a place to save local time of last day.
             let lastDataLineTime = 0;
 
-            for (j = saveJStart; j < dataLines.length-1; j++) {
+            for (j = saveJStart; j < dataLines.length - 1; j++) {
 
-                let weatherLocale = new Date(dataLines[j].time.substr(0, dataLines[j].time.indexOf(" ")) + "T" + dataLines[j].time.substr(dataLines[j].time.indexOf(" ")+1, dataLines[j].time.length) + "Z");
+                let weatherLocale = new Date(dataLines[j].time.substr(0, dataLines[j].time.indexOf(" ")) + "T" + dataLines[j].time.substr(dataLines[j].time.indexOf(" ") + 1, dataLines[j].time.length) + "Z");
                 let weatherLocaleTime = weatherLocale.toLocaleTimeString();
                 let weatherLocaleHour = weatherLocaleTime.substr(0, weatherLocaleTime.indexOf(0, ":") - 1);
-                
-            if (weatherLocaleTime.substr(weatherLocaleTime.length - 2, 2) == "PM") {
-                timeTest = "PM";
-            } else timeTest = "AM"
+
+                if (weatherLocaleTime.substr(weatherLocaleTime.length - 2, 2) == "PM") {
+                    timeTest = "PM";
+                } else timeTest = "AM"
 
                 // check current dataLine time against previous dataLine time for midnight rollover
                 // cannot check date due to change from UTC to local time
@@ -1458,9 +1489,10 @@ $.ajax({
                         dayLines[i].low = dataLines[j].temp;
 
                 } else {
-                        saveJEnd = j;
-                        j = dataLines.length;
+                    saveJEnd = j;
+                    j = dataLines.length;
                 };
+
                 // save the current dataLine time for the comparison above
                 lastDataLineTime = Number(weatherLocaleHour);
             };
@@ -1469,7 +1501,7 @@ $.ajax({
             // now stuff the Day and Data Lines in the correct order into the well
             //********************************************************************** */
 
-            // // Create the HTML Well (Section) and Add the table content for each reserved table
+            // Create the HTML Well (Section) and Add the table content for each reserved table
             let lastDataTimeTest = "";
 
             // Append the Days remaining forecast to the well
@@ -1478,7 +1510,7 @@ $.ajax({
             weatherSection.attr("id", "weatherWell-" + wxTableRow + 1);
             $("#weatherSection").append(weatherSection);
 
-            let weatherLocale = new Date(dayLines[i].time.substr(0, dayLines[i].time.indexOf(" ")) + "T" + dayLines[i].time.substr(dayLines[i].time.indexOf(" ")+1, dayLines[i].time.length) + "Z");
+            let weatherLocale = new Date(dayLines[i].time.substr(0, dayLines[i].time.indexOf(" ")) + "T" + dayLines[i].time.substr(dayLines[i].time.indexOf(" ") + 1, dayLines[i].time.length) + "Z");
             let weatherLocaleDate = weatherLocale.toLocaleDateString();
             let weatherLocaleTime = weatherLocale.toLocaleTimeString();
 
@@ -1495,7 +1527,7 @@ $.ajax({
 
             wxTableRow++;
 
-            weatherLocale = new Date(dataLines[0].time.substr(0, dataLines[0].time.indexOf(" ")) + "T" + dataLines[0].time.substr(dataLines[0].time.indexOf(" ")+1, dataLines[0].time.length) + "Z");
+            weatherLocale = new Date(dataLines[0].time.substr(0, dataLines[0].time.indexOf(" ")) + "T" + dataLines[0].time.substr(dataLines[0].time.indexOf(" ") + 1, dataLines[0].time.length) + "Z");
             weatherLocaleDate = weatherLocale.toLocaleDateString();
             weatherLocaleTime = weatherLocale.toLocaleTimeString();
             weatherLocaleHour = weatherLocaleTime.substr(0, weatherLocaleTime.indexOf(0, ":") - 1);
@@ -1510,7 +1542,7 @@ $.ajax({
 
             for (j = saveJStart; j < saveJEnd + 1; j++) {
 
-                weatherLocale = new Date(dataLines[j].time.substr(0, dataLines[j].time.indexOf(" ")) + "T" + dataLines[j].time.substr(dataLines[j].time.indexOf(" ")+1, dataLines[j].time.length) + "Z");
+                weatherLocale = new Date(dataLines[j].time.substr(0, dataLines[j].time.indexOf(" ")) + "T" + dataLines[j].time.substr(dataLines[j].time.indexOf(" ") + 1, dataLines[j].time.length) + "Z");
                 weatherLocaleDate = weatherLocale.toLocaleDateString();
                 weatherLocaleTime = weatherLocale.toLocaleTimeString();
                 weatherLocaleHour = weatherLocaleTime.substr(0, weatherLocaleTime.indexOf(0, ":") - 1);
@@ -1545,6 +1577,7 @@ $.ajax({
                 }
 
             };
+
             // set starting point to next dataLines entry
             saveJStart = saveJEnd;
         };
@@ -1552,9 +1585,10 @@ $.ajax({
 
         /***************************************************************************** */
         //Tx and Tx Results Tabs
-
         /***************************************************************************** */
+
         // Get Tx data and fill txData Tab
+
         // API call for tx data for Filtering Tournaments
         var lakeTxData = {};
         var lakeTxResultsData = {};
@@ -1568,20 +1602,25 @@ $.ajax({
                 let tableRow = 1;
                 sortType = 0; // set sort to chronological order
 
+                /***************************************************************************** */
                 //Tx Tab
+                /***************************************************************************** */
 
                 // Flatten our data so it's easier to work with
                 flattenData(lakeTxData, sortType, function () {
+
                     // sort by date when page loads (needs to be changed to be variable);
                     var newBatch = flatBatch.sort(sort_by('date', sortType, function (a) {
                         return a.toUpperCase()
                     }));
+
                     // display our newly flattened data for the first time (sorted by date);
                     let txBatch = newBatch;
 
                     txBatch.forEach(function (txOrg, i) {
 
                         if ((txOrg.lakeID == lakeRoute)) {
+
                             // Create the HTML Well (Section) and Add the table content for each reserved table
                             var txSection = $("<tr>");
                             txSection.addClass("well");
@@ -1592,6 +1631,7 @@ $.ajax({
                             txSection.addClass("clickable-row"); // Add clickable row css styles
 
                             $("#txSection").append(txSection);
+
                             // Append the data values to the table row
                             $("#txWell-" + tableRow + 1).append("<td>" + txOrg.organizer + "</td>");
                             $("#txWell-" + tableRow + 1).append("<td>" + txOrg.trail + "</td>");
@@ -1604,12 +1644,15 @@ $.ajax({
 
                 });
 
+                /***************************************************************************** */
                 //TxResults Tab
+                /***************************************************************************** */
 
                 sortType = 1;
 
                 // Flatten our data so it's easier to work with
                 flattenData(lakeTxResultsData, sortType, function () {
+
                     // sort by date when page loads (needs to be changed to be variable);
                     var newBatch = flatBatch.sort(sort_by('date', sortType, function (a) {
                         return a.toUpperCase()
@@ -1621,6 +1664,7 @@ $.ajax({
                     txBatch.forEach(function (txOrg, i) {
 
                         if ((txOrg.lakeID == lakeRoute)) {
+
                             // Create the HTML Well (Section) and Add the table content for each reserved table
                             var txResultsSection = $("<tr>");
                             txResultsSection.addClass("well");
@@ -1631,6 +1675,7 @@ $.ajax({
                             txResultsSection.addClass("clickable-row-results"); // ADd clickable results row css styles
 
                             $("#txResultsSection").append(txResultsSection);
+
                             // Append the data values to the table row
                             $("#txResultsWell-" + tableRow + 1).append("<td>" + txOrg.organizer + "</td>");
                             $("#txResultsWell-" + tableRow + 1).append("<td>" + txOrg.trail + "</td>");
@@ -1651,11 +1696,12 @@ $.ajax({
 
         // if there is an elevation level data source
         if (!noDataSource) {
+
             // build elevation chart
             buildElevChart(currentLake.data, currentLake);
 
-            // build hourly elevation chart (river tide) chart
             // If elevation data is updated more than once a day
+            // build hourly elevation chart (river tide) chart
             if (currentLake.refreshInterval < 1450)
                 buildRiverChart(currentLake.data, currentLake)
 
@@ -1669,6 +1715,7 @@ $.ajax({
             }
         }
         // Add Weather charts
+
         // Add AirTemp
         buildTempChart(currentLake);
 
@@ -1699,24 +1746,28 @@ $.ajax({
 
 // hide all tabs
 $(".tab-wrapper").hide();
+
 // show only overview
 $('#currentTab').show();
 
 // listen for click on '.tab-btn' class
 $(".tab-btn").click(function (event) { // remove active from any .tab-wrapper
     $(".tab-btn").removeClass("active");
+
     // hide all .tab-wrapper
     $(".tab-wrapper").hide();
+
     // add active to button that was clicked
     let clickedTab = event.target.id
     $(clickedTab).addClass("active");
+
     // show associated .tab-wrapper 
     let clickedWrapper = event.target.name;
     $("#" + clickedWrapper).show();
 });
 
 
-// // Capture table row clicks
+// Capture table row clicks
 $('tbody').on("click", "tr", function () {
     if ($(this).data("url")) {
         window.open(
