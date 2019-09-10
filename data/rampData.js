@@ -10458,6 +10458,20 @@ module.exports = [
     {
         bodyOfWater: "1000 Islands", // lake name
         id: "thousandislands",
+        rampName: "Sandy Pond (Reiters Marina)",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 43.674052,
+        long: -76.170998
+    },
+    {
+        bodyOfWater: "1000 Islands", // lake name
+        id: "thousandislands",
         rampName: "Schermerhorn Park",
         rampType: "Concrete",
         rampParking: "Good",
