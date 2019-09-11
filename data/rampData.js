@@ -10388,6 +10388,20 @@ module.exports = [
     {
         bodyOfWater: "1000 Islands", // lake name
         id: "thousandislands",
+        rampName: "Little Salmon River",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 43.524593,
+        long: -76.254915
+    },
+    {
+        bodyOfWater: "1000 Islands", // lake name
+        id: "thousandislands",
         rampName: "Long Point",
         rampType: "Concrete",
         rampParking: "Good",
@@ -10430,6 +10444,20 @@ module.exports = [
     {
         bodyOfWater: "1000 Islands", // lake name
         id: "thousandislands",
+        rampName: "Ontario Lake (Henderson)",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 43.825067,
+        long: -76.229291
+    },
+    {
+        bodyOfWater: "1000 Islands", // lake name
+        id: "thousandislands",
         rampName: "Precision Marina",
         rampType: "Concrete",
         rampParking: "Good",
@@ -10454,6 +10482,20 @@ module.exports = [
         topElev: 0,
         lat: 44.059386,
         long: -76.300258
+    },
+    {
+        bodyOfWater: "1000 Islands", // lake name
+        id: "thousandislands",
+        rampName: "Salmon River Marina",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 43.574358,
+        long: -76.202354
     },
     {
         bodyOfWater: "1000 Islands", // lake name

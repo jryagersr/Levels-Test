@@ -14,7 +14,9 @@ module.exports = {
     let apiKey = "d620419cfbb975f425c6262fefeef8f3";
     let weatherURL = "http://api.openweathermap.org/data/2.5/weather?lat=" + lakeWeather.lat + "&lon=" + lakeWeather.long + "&units=imperial&APPID=" + apiKey;
     request(weatherURL, function (error, response, body) {
-      if (error || body.search("Your account is temporary blocked") > -1) {
+      if (error ||
+        (body.search("Your account is temporary blocked") > -1) || // Overran our 60/minute limit
+        (body.search('Internal error:') > -1)) { // OpenWeather had a problem
         dataErrorTrue = true;
         if (error || wxData.message.includes('Internal error:')) {
           console.log(`Error retrieving Wx Data for ${currentLake.bodyOfWater} - ${error}`);
