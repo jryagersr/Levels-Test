@@ -105,8 +105,8 @@ h3 {
     }
 }
 
-.navbar-margin-fix {
-    padding-bottom: 0;
+.navbar-padding-fix {
+    padding-top: 1px;
 }
 
 /* Home Page Styles */
