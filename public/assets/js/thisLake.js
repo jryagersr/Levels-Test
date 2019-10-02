@@ -1299,7 +1299,7 @@ $.ajax({
         } else {
 
             $("#lakeTitle").append(currentLake.bodyOfWater);
-            $("#lakeSubTitle").append("");
+            $("#lakeSubTitle").append(" ");
         }
 
         // Set current date, time elev, and pool on page

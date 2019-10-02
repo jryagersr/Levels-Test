@@ -69,6 +69,6 @@ module.exports = [
         location: ["norman"],
         type: "charity",
         startDate: "2019-01-01T00:00:00.0Z",
-        endDate: "2019-09-09T00:10:00.0Z"
+        endDate: "2019-10-09T00:10:00.0Z"
     }
 ]
