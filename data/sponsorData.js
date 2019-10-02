@@ -65,19 +65,10 @@ module.exports = [
     {
         sponsor: "Fishin' For A Mission",
         href: "https://www.eventbrite.com/e/fishin-for-a-mission-2019-tickets-72878003069?aff=erelexpmlt",
-        src: "/static/assets/img/tournament-banners/fishinforamission.png",
+        src: "/static/assets/img/tournament-banners/fishin-for-a-mission.png",
         location: ["norman"],
         type: "charity",
         startDate: "2019-01-01T00:00:00.0Z",
         endDate: "2019-09-09T00:10:00.0Z"
-    },
-    {
-        sponsor: "Fishin' For A Mission",
-        href: "https://www.eventbrite.com/e/fishin-for-a-mission-2019-tickets-72878003069?aff=erelexpmlt",
-        src: "/static/assets/img/tournament-banners/fishinforamission.png",
-        location: ["norman"],
-        type: "tournament",
-        startDate: "2019-01-01T00:00:00.0Z",
-        endDate: "2019-10-09T00:10:00.0Z"
     }
 ]
