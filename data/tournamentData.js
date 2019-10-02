@@ -2727,6 +2727,19 @@ module.exports = [
                         entryLink: "/assets/txomages/yadkinbenefitaug2019.jpg"
                     }
                 ]
+            },
+            {
+                trail: "Fishin' For A Mission",
+                tournaments: [{
+                    date: "2019-10-09",
+                    lake: "Norman",
+                    lakeID: "norman",
+                    ramp: "Pinnacle",
+                    state: "NC",
+                    txDetail: "FishinForAMission",
+                    resultsLink: "",
+                    entryLink: " https://www.eventbrite.com/e/fishin-for-a-mission-2019-tickets-72878003069?aff=erelexpmlt"
+                }]
             }
         ]
     },
@@ -4420,66 +4433,66 @@ module.exports = [
         trails: [{
             trail: "Fall Winter",
             tournaments: [{
-                date: "2019-09-08",
-                lake: "Tar River",
-                lakeID: "tarriver",
-                ramp: "Tranters Creek",
-                state: "NC",
-                txDetail: "",
-                resultsLink: "https://www.ncbasschamps.com",
-                entryLink: "https://www.ncbasschamps.com"
-            },
-            {
-                date: "2019-10-20",
-                lake: "Roanoke River",
-                lakeID: "roanokewill",
-                ramp: "Plymouth",
-                state: "NC",
-                txDetail: "",
-                resultsLink: "https://www.ncbasschamps.com",
-                entryLink: "https://www.ncbasschamps.com"
-            },
-            {
-                date: "2019-11-24",
-                lake: "Chowan River",
-                lakeID: "chowan",
-                ramp: "Tunis Landing",
-                state: "NC",
-                txDetail: "",
-                resultsLink: "https://www.ncbasschamps.com",
-                entryLink: "https://www.ncbasschamps.com"
-            },
-            {
-                date: "2019-12-15",
-                lake: "Tar River",
-                lakeID: "tarriver",
-                ramp: "Havens Garden",
-                state: "NC",
-                txDetail: "",
-                resultsLink: "https://www.ncbasschamps.com",
-                entryLink: "https://www.ncbasschamps.com"
-            },
-            {
-                date: "2020-01-05",
-                lake: "Roanoke River",
-                lakeID: "roanokewill",
-                ramp: "Plymouth",
-                state: "NC",
-                txDetail: "",
-                resultsLink: "https://www.ncbasschamps.com",
-                entryLink: "https://www.ncbasschamps.com"
-            },
-            {
-                date: "2020-09-08",
-                lake: "Neuse River",
-                lakeID: "neuse",
-                ramp: "Lawson Creek",
-                state: "NC",
-                txDetail: "",
-                resultsLink: "https://www.ncbasschamps.com",
-                entryLink: "https://www.ncbasschamps.com"
-            },
-         ]
+                    date: "2019-09-08",
+                    lake: "Tar River",
+                    lakeID: "tarriver",
+                    ramp: "Tranters Creek",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "https://www.ncbasschamps.com",
+                    entryLink: "https://www.ncbasschamps.com"
+                },
+                {
+                    date: "2019-10-20",
+                    lake: "Roanoke River",
+                    lakeID: "roanokewill",
+                    ramp: "Plymouth",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "https://www.ncbasschamps.com",
+                    entryLink: "https://www.ncbasschamps.com"
+                },
+                {
+                    date: "2019-11-24",
+                    lake: "Chowan River",
+                    lakeID: "chowan",
+                    ramp: "Tunis Landing",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "https://www.ncbasschamps.com",
+                    entryLink: "https://www.ncbasschamps.com"
+                },
+                {
+                    date: "2019-12-15",
+                    lake: "Tar River",
+                    lakeID: "tarriver",
+                    ramp: "Havens Garden",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "https://www.ncbasschamps.com",
+                    entryLink: "https://www.ncbasschamps.com"
+                },
+                {
+                    date: "2020-01-05",
+                    lake: "Roanoke River",
+                    lakeID: "roanokewill",
+                    ramp: "Plymouth",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "https://www.ncbasschamps.com",
+                    entryLink: "https://www.ncbasschamps.com"
+                },
+                {
+                    date: "2020-09-08",
+                    lake: "Neuse River",
+                    lakeID: "neuse",
+                    ramp: "Lawson Creek",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "https://www.ncbasschamps.com",
+                    entryLink: "https://www.ncbasschamps.com"
+                },
+            ]
         }]
     },
     {
@@ -4646,7 +4659,7 @@ module.exports = [
                         ramp: "Farrington",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
-                        resultsLink: "http://piedmontbassclassics.com/824-19PBCResults.html",
+                        resultsLink: "http://piedmontbassclassics.com/824-19EOYResults.html",
                         entryLink: "http://piedmontbassclassics.com/2019CashionEOYMainPage.html"
                     },
                     {

@@ -11,7 +11,7 @@ body {
 }
 
 .container-fluid {
-    padding-top: 35px;
+    padding-top: 100px;
 }
 
 .this-lake-body {
@@ -53,8 +53,7 @@ h3 {
 .nav-color-splash {
     background-color: #4CAF50;
     width: 100%;
-    height: 5px;
-    margin-top: 0px;
+    height: 3px;
 }
 
 .navbar-collapse a {
@@ -88,6 +87,7 @@ h3 {
 
 #bootstrap-overrides .nav-tab-btn-override {
     background-color: #c7d3f1;
+
 }
 
 .brand-savvy {
@@ -105,9 +105,6 @@ h3 {
     }
 }
 
-.navbar-padding-fix {
-    padding-top: 1px;
-}
 
 /* Home Page Styles */
 
@@ -116,6 +113,8 @@ h3 {
     padding-top: 40px;
     border-top: 0;
     position: fixed;
+    width: 100%;
+    padding-left: 1%;
     background-color: #ffffff;
 }
 
@@ -341,6 +340,7 @@ h3 {
     flex-flow: row wrap;
     justify-content: space-evenly;
 }
+
 #club-body {
     text-align: center;
     padding-top: 20px;
@@ -573,6 +573,12 @@ h3 {
     margin-bottom: 10px;
 }
 
+#adLogoWell,
+#charityTxWell {
+    height: auto;
+    margin-bottom: 10px;
+}
+
 .clickable-row {
     cursor: pointer;
     color: rgb(75, 94, 177);
@@ -586,13 +592,10 @@ h3 {
 }
 
 .current-lake-title {
-    margin-left: auto;
+    margin-left: 2.5%;
     margin-right: auto;
     margin-bottom: 0px;
-    margin-top: 60px;
-    padding-right: 0px;
-    padding-left: 1px;
-    padding-top: 3px;
+    margin-top: 120.6250px;
     position: fixed;
     text-align: center;
     z-index: 997;
@@ -600,24 +603,20 @@ h3 {
     background-image: linear-gradient(hsl(112, 39%, 49%), hsl(137, 43%, 39%));
     color: white;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.20);
-    width: 98%;
+    width: 95%;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
 }
 
 
 .current-lake-subtitle {
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 12px;
-    margin-top: 90px;
     position: fixed;
     text-align: center;
     z-index: 996;
-    background-color: rgb(36, 126, 39);
+    background-color: 4CAF50;
     background-image: linear-gradient(hsl(112, 39%, 49%), hsl(137, 43%, 39%));
     color: white;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.20);
-    width:98%;
+    width: 95%;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
 }
 
@@ -744,22 +743,22 @@ h3 {
 /* Club Submit Styles */
 .club-submit-desc {
     display: block;
-width: 100%;
-height: calc(2.25rem + 2px);
-padding: .375rem .75rem;
-font-size: 1rem;
-line-height: 1.5;
-color: #495057;
-background-color: #fff;
-background-clip: padding-box;
-border: 1px solid #ced4da;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
     border-top-color: rgb(206, 212, 218);
     border-right-color: rgb(206, 212, 218);
     border-bottom-color: rgb(206, 212, 218);
     border-left-color: rgb(206, 212, 218);
-border-radius: .25rem;
-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-height: calc(20.25rem + 2px);
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    height: calc(20.25rem + 2px);
 }
 
 /* Advertisements */
@@ -769,9 +768,26 @@ height: calc(20.25rem + 2px);
     list-style-type: none;
 }
 
+#adLogoWell li,
+#charityTxWell li {
+    list-style-type: none;
+}
+
 #adLogoWell a,
 #adTxWell a {
     display: block;
+}
+
+#adLogoWell a,
+#charityTxWell a {
+    display: block;
+}
+
+#adLogoWell .active,
+#charityTxWell .active {
+    display: block;
+    animation: SHW 1s;
+    animation-fill-mode: both;
 }
 
 #adLogoWell .active,
@@ -798,6 +814,12 @@ height: calc(20.25rem + 2px);
     display: none;
 }
 
+#adCharityWell .inactive {
+    animation: DNTSHW 1s;
+    animation-fill-mode: both;
+    display: none;
+}
+
 @keyframes DNTSHW {
     from {
         opacity: 1,
@@ -810,6 +832,15 @@ height: calc(20.25rem + 2px);
 
 .ad-logo,
 .ad-tx {
+    width: 40%;
+    ;
+    height: auto;
+    margin: 0px auto 10px;
+    display: none;
+    opacity: 0;
+}
+
+.ad-chartx {
     width: 40%;
     ;
     height: auto;
@@ -929,12 +960,20 @@ height: calc(20.25rem + 2px);
     .ad-tx {
         width: 60%;
     }
+
+    .ad-chartx {
+        width: 60%;
+    }
 }
 
 @media only screen and (max-width: 480px) {
 
     .ad-logo,
     .ad-tx {
+        width: 90%;
+    }
+
+    .ad-chartx {
         width: 90%;
     }
 }

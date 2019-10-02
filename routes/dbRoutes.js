@@ -266,8 +266,8 @@ module.exports = function (app) {
                   usgs.getUSGSData(currentLake, function (error, USGSdata) {
                     if (error) {
                       console.log(currentLake.bodyOfWater + "- USGSData error " + USGSdata);
-                      // if successful return the data
-                    } else {
+                      res.json(currentLake);                    
+                    } else {// if successful return the data
                       // update the current lake
                       update.updateAndReturnOneLake(currentLake, USGSdata, function (error, USGSlakeDataFlag, USGSdata) {
                         if (error) {
@@ -664,7 +664,7 @@ function updateAllLakes() {
             setTimeout(function () {
               ///*
               if (startServerCount > 0) {
-                //Wake up the server
+                //Keep Server awake
                 request("http://mysterious-plateau-86034.herokuapp.com/lakes/jordan", function (error, response, html) {
 
                   if (error) {

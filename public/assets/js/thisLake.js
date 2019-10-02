@@ -1273,6 +1273,7 @@ var sort_by = function (field, reverse, primer) {
 var currentLake = {};
 var rampData = {};
 var noDataSource = false;
+var sensorDown = true;
 
 $.ajax({
         url: "/api/find-one-lake",
@@ -1282,6 +1283,7 @@ $.ajax({
         }
     })
     .then(function (data) {
+        sensorDown = false;
         currentLake = data;
         if (currentLake.data.length == 0)
             noDataSource = true
@@ -1308,7 +1310,10 @@ $.ajax({
             $("#currentDelta").append((currentLake.data[0].elev - currentLake.normalPool).toFixed(2));
             $("#currentNormal").append("normal pool " + currentLake.normalPool);
         } else {
-            $("#currentLevel").append("No known source for level data");
+            if (sensorDown)
+                $("#currentLevel").append("Water level sensor down");
+            else
+                $("#currentLevel").append("No known source for level data");
         };
 
         $("#lakeSponsor").append(currentLake.bodyOfWater);

@@ -32,8 +32,10 @@
 </head>
 
 <body id="bootstrap-overrides">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top navbar-padding-fix">
+  <div class="sticky-top">
+   
   <div class="nav-color-splash"></div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="/">
       <img style="width: 120px; margin-right: 20px; margin-left: 10px;" src="../assets/img/basssavvy-logo.png">
     </a>
@@ -41,6 +43,7 @@
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+  
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item dropdown">
@@ -80,7 +83,8 @@
           <i class="fab fa-facebook fa-lg"></i>
         </a>
       </div>
-    </div>
+    </div> 
+  </div>
   </nav>
 
   <ul class="nav nav-tabs nav-tab-override">
@@ -111,7 +115,7 @@
     </div>
 
    <div class="current-lake-title">
-      <h2 class="current-lake-title"><span id="lakeTitle"></span></h2>
+      <h2 ><span id="lakeTitle"></span></h2>
       <h6 class="current-lake-subtitle"><span id="lakeSubTitle"></span></h6>
     </div>
   <div class="container-fluid text-center" class="container-fluid text-center this-lake-body">

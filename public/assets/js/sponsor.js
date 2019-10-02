@@ -55,9 +55,9 @@ $.ajax({
 
         // just for temporary purposes only do this on kerr/jordan or falls
         // this is to avoid interfering with other lake's w/ txs
-        if (lakeRoute == 'kerr' || lakeRoute == 'jordan' || lakeRoute == 'falls') {
+        if (lakeRoute == 'kerr' || lakeRoute == 'jordan' || lakeRoute == 'falls' || lakeRoute == 'norman') {
 
-            // Clear any ad content in the scroller
+            // Clear any ad content in the tournament scroller
             $("#adTxWell").empty();
 
             // Loop through our ads and append them to the page in format: <li><a><img></a></li>
@@ -74,6 +74,26 @@ $.ajax({
                     }
                 }
             });
+
+
+
+            // Clear any ad content in the charity scroller
+            $("#charityTxWell").empty();
+
+            // Loop through our ads and append them to the page in format: <li><a><img></a></li>
+            sponsors.forEach(function (element) {
+                if ((element.type == 'charity') &&
+                    (new Date(element.startDate) <= today && new Date(element.endDate) >= today)) {
+                    if (element.location.includes("all") || element.location.includes(lakeRoute)) {
+                        var a = $("<a target='_blank'>");
+                        a.attr("href", element.href);
+                        var adImg = $("<img class='ad-chartx'>");
+                        adImg.attr("src", element.src);
+                        $("#charityTxWell").append(a);
+                        $(a).append(adImg);
+                    }
+                }
+            });
         }
 
         // slideshow carousel function
@@ -81,14 +101,18 @@ $.ajax({
         var slideIndex = 0;
         var x = document.getElementsByClassName("ad-logo");
         var y = document.getElementsByClassName("ad-tx");
+        var z = document.getElementsByClassName("ad-chartx");
         if (typeof x !== 'undefined') {
             x[0].classList.add("active");
             carousel(x, 'ad-logo', 0);
         }
         if (typeof y[0] !== 'undefined') {
-            console.log(typeof y[0]);
             y[0].classList.add('active');
             carousel(y, 'ad-tx', 0);
+        }
+        if (typeof z[0] !== 'undefined') {
+            z[0].classList.add('active');
+            carousel(z, 'ad-chartx', 0);
         }
 
         function carousel(x, className, slideIndex) {

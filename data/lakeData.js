@@ -1905,6 +1905,29 @@ module.exports = [
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
 
+    // MAINE  ---------------------------------------------------------------------------------------------------------
+
+    {
+        bodyOfWater: "Sebago", // lake name
+        state: ["Maine"],
+        data: [],
+        ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
+        wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
+        refreshInterval: 90, //minutes
+        elevDataInterval: 4, // Time between elevation data 4 = 15min, 2 = 30 min 1 = 60 min
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0.0,
+        normalPool: 267.0,
+        lat: 43.856314,
+        long: -70.568669,
+        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=01063995&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
+        flowURL: "",
+        href: "/lakes/sebago",
+        dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+    },
+
     // MICHIGAN  ---------------------------------------------------------------------------------------------------------
 
     {
@@ -2674,7 +2697,7 @@ module.exports = [
         wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
-        seaLevelDelta: 0,
+        seaLevelDelta: 370.0,
         normalPool: 370.0,
         lat: 43.190682,
         long: -75.841113,
@@ -2842,6 +2865,8 @@ module.exports = [
         href: "/lakes/fontana",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
     },
+    //Out until SSL issue documented in Slack is resolved
+   /* 
     {
         bodyOfWater: "Gaston", // lake name
         state: ["North Carolina", "Virginia"],
@@ -2860,7 +2885,7 @@ module.exports = [
         flowURL: "",
         href: "/lakes/gaston",
         dataSource: ["ACEWilm", "loadAds"], // array of calls to make to retrieve data
-    },
+    },*/
     {
         bodyOfWater: "Hickory", // lake name
         state: ["North Carolina"],
@@ -3078,6 +3103,8 @@ module.exports = [
         href: "/lakes/rhodhiss",
         dataSource: ["DUKE"], // array of calls to make to retrieve data
     },
+    //Out until SSL issue documented in Slack is resolved
+   /* 
     {
         bodyOfWater: "Roanoke Rapids", // lake name
         state: ["North Carolina"],
@@ -3096,7 +3123,7 @@ module.exports = [
         flowURL: "",
         href: "/lakes/roanokerapids",
         dataSource: ["ACEWilm", "loadAds"], // array of calls to make to retrieve data
-    },
+    },*/
     {
         bodyOfWater: "Roanoke River (Halifax)", // lake name
         state: ["North Carolina"],
@@ -4656,6 +4683,8 @@ module.exports = [
         href: "/lakes/jamesriver",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
+    //Out until SSL issue documented in Slack is resolved
+   /* 
     {
         bodyOfWater: "Leesville", // lake name
         state: ["Virginia"],
@@ -4674,7 +4703,7 @@ module.exports = [
         flowURL: "",
         href: "/lakes/leesville",
         dataSource: ["ACEWilm", "loadAds"], // array of calls to make to retrieve data
-    },
+    },*/
     {
         bodyOfWater: "Philpott", // lake name
         state: ["Virginia"],
@@ -4714,7 +4743,8 @@ module.exports = [
         href: "/lakes/potomac",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
-    {
+    //Out until SSL issue documented in Slack is resolved
+   /* {
         bodyOfWater: "Smith Mountain", // lake name
         state: ["Virginia"],
         data: [],
@@ -4732,7 +4762,7 @@ module.exports = [
         flowURL: "",
         href: "/lakes/smithmountain",
         dataSource: ["ACEWilm", "loadAds"], // array of calls to make to retrieve data
-    },
+    },*/
 
     // WEST VIRGINIA ---------------------------------------------------------------------------------------------------------
     {

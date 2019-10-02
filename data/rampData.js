@@ -7897,6 +7897,37 @@ module.exports = [
         long: -90.430305
     },
 
+    // MAINE  ---------------------------------------------------------------------------------------------------------
+    
+    {
+        bodyOfWater: "Sebago", // lake name
+        id: "sebago",
+        rampName: "Station Landing",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 43.763450,
+        long: -70.522544
+    },
+    {
+        bodyOfWater: "Sebago", // lake name
+        id: "sebago",
+        rampName: "State Park",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 43.916029,
+        long: -70.572085
+    },
+
     // MICHIGAN  ---------------------------------------------------------------------------------------------------------
     
     {
@@ -10234,7 +10265,7 @@ module.exports = [
     {
         bodyOfWater: "1000 Islands", // lake name
         id: "thousandislands",
-        rampName: "Cedar Point SP",
+        rampName: "Cedar Point SP (US side Carleton Island)",
         rampType: "Concrete",
         rampParking: "Good",
         rampFee: "",
@@ -10290,7 +10321,7 @@ module.exports = [
     {
         bodyOfWater: "1000 Islands", // lake name
         id: "thousandislands",
-        rampName: "Collins Landing",
+        rampName: "Collins Landing (US-81 Bridge)",
         rampType: "Concrete",
         rampParking: "Good",
         rampFee: "",
@@ -10304,7 +10335,7 @@ module.exports = [
     {
         bodyOfWater: "1000 Islands", // lake name
         id: "thousandislands",
-        rampName: "Fish Island Park",
+        rampName: "Fish Island Park (Dexter/Black River)",
         rampType: "Concrete",
         rampParking: "Good",
         rampFee: "",
@@ -10318,7 +10349,7 @@ module.exports = [
     {
         bodyOfWater: "1000 Islands", // lake name
         id: "thousandislands",
-        rampName: "Flanders",
+        rampName: "Flanders (Outside 3 mile bay)",
         rampType: "Concrete",
         rampParking: "Good",
         rampFee: "",
@@ -10332,7 +10363,7 @@ module.exports = [
     {
         bodyOfWater: "1000 Islands", // lake name
         id: "thousandislands",
-        rampName: "Henderson",
+        rampName: "Henderson Bay",
         rampType: "Concrete",
         rampParking: "Good",
         rampFee: "",
@@ -10346,7 +10377,7 @@ module.exports = [
     {
         bodyOfWater: "1000 Islands", // lake name
         id: "thousandislands",
-        rampName: "Hidden Harbor Marina",
+        rampName: "Hidden Harbor Marina (Point Peninsula - outside Chaumont Bay)",
         rampType: "Concrete",
         rampParking: "Good",
         rampFee: "",
@@ -10360,10 +10391,10 @@ module.exports = [
     {
         bodyOfWater: "1000 Islands", // lake name
         id: "thousandislands",
-        rampName: "Kent Creek",
+        rampName: "Kents Creek (Snug Harbor)",
         rampType: "Concrete",
-        rampParking: "Good",
-        rampFee: "",
+        rampParking: "Poor",
+        rampFee: "Yes",
         rampAccess: "Paved",
         courtesyDock: "Yes",
         bottomElev: 0,
@@ -10374,7 +10405,7 @@ module.exports = [
     {
         bodyOfWater: "1000 Islands", // lake name
         id: "thousandislands",
-        rampName: "Kittos Marina",
+        rampName: "Kittos Marina (Guffin Bay)",
         rampType: "Concrete",
         rampParking: "Good",
         rampFee: "",
@@ -10402,7 +10433,7 @@ module.exports = [
     {
         bodyOfWater: "1000 Islands", // lake name
         id: "thousandislands",
-        rampName: "Long Point",
+        rampName: "Long Point SP (Chaumont Bay)",
         rampType: "Concrete",
         rampParking: "Good",
         rampFee: "",
@@ -10416,7 +10447,7 @@ module.exports = [
     {
         bodyOfWater: "1000 Islands", // lake name
         id: "thousandislands",
-        rampName: "Martin's Marina",
+        rampName: "Massena Intake",
         rampType: "Concrete",
         rampParking: "Good",
         rampFee: "",
@@ -10424,13 +10455,13 @@ module.exports = [
         courtesyDock: "Yes",
         bottomElev: 0,
         topElev: 0,
-        lat: 44.079244,
-        long: -76.310568
+        lat: 44.955756,
+        long: -74.924770
     },
     {
         bodyOfWater: "1000 Islands", // lake name
         id: "thousandislands",
-        rampName: "Northern Marina",
+        rampName: "Northern Marina (Spicer Bay)",
         rampType: "Concrete",
         rampParking: "Good",
         rampFee: "",
@@ -10444,21 +10475,7 @@ module.exports = [
     {
         bodyOfWater: "1000 Islands", // lake name
         id: "thousandislands",
-        rampName: "Ontario Lake (Henderson)",
-        rampType: "Concrete",
-        rampParking: "Good",
-        rampFee: "",
-        rampAccess: "Paved",
-        courtesyDock: "Yes",
-        bottomElev: 0,
-        topElev: 0,
-        lat: 43.825067,
-        long: -76.229291
-    },
-    {
-        bodyOfWater: "1000 Islands", // lake name
-        id: "thousandislands",
-        rampName: "Precision Marina",
+        rampName: "Precision Marina (Peos Bay)",
         rampType: "Concrete",
         rampParking: "Good",
         rampFee: "",
@@ -10472,7 +10489,7 @@ module.exports = [
     {
         bodyOfWater: "1000 Islands", // lake name
         id: "thousandislands",
-        rampName: "Pond's Marina",
+        rampName: "Pond's Marina (Fox Creek - Fox Island)",
         rampType: "Concrete",
         rampParking: "Good",
         rampFee: "",
@@ -10514,7 +10531,7 @@ module.exports = [
     {
         bodyOfWater: "1000 Islands", // lake name
         id: "thousandislands",
-        rampName: "Schermerhorn Park",
+        rampName: "Schermerhorn Park (Chaumont River",
         rampType: "Concrete",
         rampParking: "Good",
         rampFee: "",
@@ -10524,6 +10541,20 @@ module.exports = [
         topElev: 0,
         lat: 44.066525,
         long: -76.141432
+    },
+    {
+        bodyOfWater: "1000 Islands", // lake name
+        id: "thousandislands",
+        rampName: "Stoney Creek (Stoney Island)",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 43.825067,
+        long: -76.229291
     },
     {
         bodyOfWater: "1000 Islands", // lake name
@@ -10542,7 +10573,7 @@ module.exports = [
     {
         bodyOfWater: "1000 Islands", // lake name
         id: "thousandislands",
-        rampName: "Thousand Island Marina",
+        rampName: "Thousand Island Marina (Millen Bay)",
         rampType: "Concrete",
         rampParking: "Good",
         rampFee: "",
@@ -10570,7 +10601,7 @@ module.exports = [
     {
         bodyOfWater: "1000 Islands", // lake name
         id: "thousandislands",
-        rampName: "Westcott Beach",
+        rampName: "Westcott Beach SP (Henderson Bay)",
         rampType: "Concrete",
         rampParking: "Good",
         rampFee: "",
@@ -10584,7 +10615,21 @@ module.exports = [
     {
         bodyOfWater: "1000 Islands", // lake name
         id: "thousandislands",
-        rampName: "Wright's Landing",
+        rampName: "Wilson Hill",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 44.929030,
+        long: -75.010894
+    },
+    {
+        bodyOfWater: "1000 Islands", // lake name
+        id: "thousandislands",
+        rampName: "Wright's Landing (Oswego)",
         rampType: "Concrete",
         rampParking: "Good",
         rampFee: "",
