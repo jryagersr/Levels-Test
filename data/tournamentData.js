@@ -1455,6 +1455,77 @@ module.exports = [
                 tournaments: [
 
                     {
+                        date: "2020-03-14",
+                        lake: "Kerr",
+                        lakeID: "kerr",
+                        ramp: "Flemingtown",
+                        state: "NC-VA",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-old-north/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
+                    },
+                    {
+                        date: "2020-03-28",
+                        lake: "Jordan",
+                        lakeID: "jordan",
+                        ramp: "Farrington",
+                        state: "NC",
+                        txDetail: "Qualifier 2",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-old-north/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
+                    },
+                    {
+                        date: "2020-04-04",
+                        lake: "Falls",
+                        lakeID: "falls",
+                        ramp: "Ledrock",
+                        state: "NC",
+                        txDetail: "Qualifier 3",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-old-north/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
+                    },
+                    {
+                        date: "2020-04-18",
+                        lake: "Jordan",
+                        lakeID: "jordan",
+                        ramp: "Farrington",
+                        state: "NC",
+                        txDetail: "Qualifier 4",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-old-north/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
+                    },
+                    {
+                        date: "2020-05-17",
+                        lake: "Kerr",
+                        lakeID: "kerr",
+                        ramp: "Flemingtown",
+                        state: "NC-VA",
+                        txDetail: "Qualifier 5",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-old-north/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
+                    },
+                    {
+                        date: "2020-05-30",
+                        lake: "Shearon Harris",
+                        lakeID: "shearonharris",
+                        ramp: "Crosspoint",
+                        state: "NC",
+                        txDetail: "Qualifier 6",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-old-north/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
+                    },
+                    {
+                        date: "2020-06-20",
+                        lake: "Falls",
+                        lakeID: "falls",
+                        ramp: "Ledrock",
+                        state: "NC",
+                        txDetail: "Final",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-old-north/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
+                    },
+                                                            
+                    {
                         date: "2019-03-09",
                         lake: "Kerr",
                         lakeID: "kerr",

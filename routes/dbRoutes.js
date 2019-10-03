@@ -388,8 +388,6 @@ function updateAllLakes() {
             // update current lake
             // determine which data source and run function
             updateCounter++;
-            if (currentLake.ccWxData == null)
-              console.log('here we are')
             switch (currentLake.dataSource[0]) {
 
               case "ACE":
@@ -679,7 +677,7 @@ function updateAllLakes() {
             }, 16 * 60000); // wait 16 minutes (plus 8 minute @ 2 second interval to cycle through 237 lakes)
           }
 
-        }, 2.0 * 1000); // 1 second interval
+        }, 1.0 * 1000); // 1 second interval
       }
     })
 }

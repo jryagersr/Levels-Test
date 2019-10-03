@@ -38,7 +38,8 @@ module.exports = {
                     // Check against future dates DUKE likes to send
                     if (new Date(lake.Date) <= today) {
                         // Check to make sure data is good
-                        if (lake.Average !== "N/A" && typeof parseInt(lake.Average) == 'number' && Number(lake.Average) !== 0) {
+                        // 0 would mean data not posted yet
+                        if ((lake.Average !== "N/A" && lake.Average !== "0") && typeof parseInt(lake.Average) == 'number' && Number(lake.Average) !== 0) {
                             data.push({
                                 time: new Date(lake.Date + " " + "6:00"), // format timestamp
                                 elev: Number(lake.Average) + seaLevelDelta, // add SLD to average

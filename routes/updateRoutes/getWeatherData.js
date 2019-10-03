@@ -16,7 +16,11 @@ module.exports = {
     request(weatherURL, function (error, response, body) {
       if (error ||
         (body.search("Your account is temporary blocked") > -1) || // Overran our 60/minute limit
-        (body.search('Internal error:') > -1)) { // OpenWeather had a problem
+        (body.search('Internal error:') > -1) ||
+        (body.search('undefined is not a float') > -1) ||
+        (body.search('error') > -1) ||
+        (body.search('Error') > -1)
+      ) { // OpenWeather had a problem
         dataErrorTrue = true;
         if (error ||
           typeof wxData.message == 'undefined' ||

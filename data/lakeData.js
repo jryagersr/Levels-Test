@@ -2865,8 +2865,6 @@ module.exports = [
         href: "/lakes/fontana",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
     },
-    //Out until SSL issue documented in Slack is resolved
-   /* 
     {
         bodyOfWater: "Gaston", // lake name
         state: ["North Carolina", "Virginia"],
@@ -2885,7 +2883,7 @@ module.exports = [
         flowURL: "",
         href: "/lakes/gaston",
         dataSource: ["ACEWilm", "loadAds"], // array of calls to make to retrieve data
-    },*/
+    },
     {
         bodyOfWater: "Hickory", // lake name
         state: ["North Carolina"],
@@ -3103,8 +3101,6 @@ module.exports = [
         href: "/lakes/rhodhiss",
         dataSource: ["DUKE"], // array of calls to make to retrieve data
     },
-    //Out until SSL issue documented in Slack is resolved
-   /* 
     {
         bodyOfWater: "Roanoke Rapids", // lake name
         state: ["North Carolina"],
@@ -3123,7 +3119,7 @@ module.exports = [
         flowURL: "",
         href: "/lakes/roanokerapids",
         dataSource: ["ACEWilm", "loadAds"], // array of calls to make to retrieve data
-    },*/
+    },
     {
         bodyOfWater: "Roanoke River (Halifax)", // lake name
         state: ["North Carolina"],
@@ -4683,8 +4679,6 @@ module.exports = [
         href: "/lakes/jamesriver",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
-    //Out until SSL issue documented in Slack is resolved
-   /* 
     {
         bodyOfWater: "Leesville", // lake name
         state: ["Virginia"],
@@ -4703,7 +4697,7 @@ module.exports = [
         flowURL: "",
         href: "/lakes/leesville",
         dataSource: ["ACEWilm", "loadAds"], // array of calls to make to retrieve data
-    },*/
+    },
     {
         bodyOfWater: "Philpott", // lake name
         state: ["Virginia"],

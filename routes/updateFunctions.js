@@ -16,8 +16,10 @@ module.exports = {
   checkForUpdate: function (currentLake, type) { // type - 0 = lake leves 1 = current conditions 2 - forecast, default = 0
     let cLake = currentLake;
     let lastRefresh = cLake.lastRefresh; // to prevent re-entrant code problems
-    let refreshInterval = cLake.refreshInterval; //
+    let refreshInterval = cLake.refreshInterval; // default to lake data refresh check
     let dataLength = cLake.data.length;
+    let status = false;
+
     if (type == 1) { // check current conditions weather refresh interval
       lastRefresh = cLake.ccWxDataLastRefresh; // Set to current conditions lastRefresh
       refreshInterval = 60; // current conditions are all updated every hour
@@ -42,15 +44,16 @@ module.exports = {
       let lastUpdate = new Date(lastRefresh);
       let diffDays = (today - lastUpdate) / msDay; // calculate diff in days
       if (diffDays > 1) {
-        return true;
+        status = true;
       }
       diffMins = Math.round((today - lastUpdate) / 60000); // minutes
     }
     if (diffMins >= refreshInterval) {
-      return true;
+      status = true;
     } else {
-      return false;
+      status = false;
     }
+    return status;
   },
 
   // function to update and return one lake
