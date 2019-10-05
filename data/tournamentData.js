@@ -2802,7 +2802,7 @@ module.exports = [
             {
                 trail: "Fishin' For A Mission",
                 tournaments: [{
-                    date: "2019-10-09",
+                    date: "2019-11-09",
                     lake: "Norman",
                     lakeID: "norman",
                     ramp: "Pinnacle",
