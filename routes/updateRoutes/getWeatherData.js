@@ -32,17 +32,17 @@ module.exports = {
           console.log(`${lakeWeather.bodyOfWater} - Wx Error - Cod: 429 Exceeded Subscription limit`)
         callback(true, error);
       } else {
-        let dataErrorTrue = false;
+        let dataErrorTrue = false; //default to data error
         try {
           wxData = JSON.parse(body);
         } catch (error) {
           console.error(error);
-          dataErrorTrue = true;
-          callback(true, error);
+          dataErrorTrue = true; // flag invalid data
+          callback(true, error); // callback with errror
         }
 
         if (!dataErrorTrue) {
-          if (typeof wxData.weather !== 'object')
+          if (typeof wxData.weather !== 'object') // check for valid object
             console.log(`${body}`)
 
           if (typeof wxData == "undefined") {
@@ -51,7 +51,9 @@ module.exports = {
           } else {
 
             // Set weather
-            let today = new Date()
+            let today = new Date() // Set today's date
+
+            // array of the 12 wind direction descriptors
             let compassSector = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
             if (typeof (wxData.weather[0].description == "String"))
               dataErrorTrue = dataErrorTrue;
