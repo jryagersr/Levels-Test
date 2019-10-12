@@ -666,8 +666,8 @@ function buildTempChart(tempData) {
 
             if (tempData.ccWxData[k].temp > chartMaxTemp) // if value is greater than max, replace max
                 chartMaxTemp = tempData.ccWxData[k].temp; // update Max Elev average
-            if (tempData.ccWxData[k].temp < chartMinTemp) // if value is less thank min, replace min
-                chartMinTemp = tempData.ccWxData[k].temp; // update Min Elev average
+            if (dewPoint < chartMinTemp) // if value is less thank min, replace min
+                chartMinTemp = dewPoint; // update Min Elev average
 
         }
 
