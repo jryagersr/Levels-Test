@@ -10,7 +10,10 @@
     <script type="text/javascript">
         if (document.location.hostname.search("basssavvy.com") !== -1) {
             window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
             gtag('js', new Date());
             gtag('config', 'UA-77195420-4');
         } else {
@@ -97,29 +100,29 @@
 
     <!-- Login Modal -->
     <!-- Small modal -->
-    <div id="loginModal" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
-        aria-hidden="true">
+    <div id="loginModal" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog"
+        aria-labelledby="mySmallModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-sm">
             <div class="modal-content">
                 <div id="formWell">
-                <h2>Login</h2>
-                <form onsubmit="validateAndSubmitForm('login', event)">
-                    <div>
-                        <label>Username:</label>
-                        <input id='username' type="text" name="username"/>
-                    </div>
-                    <div>
-                        <label>Password:</label>
-                        <input id='password' type="password" name="password"/>
-                    </div>
-                    <div>
-                        <span id='validationMsg'></span>
-                        <input type="submit" value="Log In"/>
-                    </div>
-                </form>
-            </div>
-            <span id="loginMsg"></span>
-            <button id="switch">Register</button>
+                    <h2>Login</h2>
+                    <form onsubmit="validateAndSubmitForm('login', event)">
+                        <div>
+                            <label>Username:</label>
+                            <input id='username' type="text" name="username" />
+                        </div>
+                        <div>
+                            <label>Password:</label>
+                            <input id='password' type="password" name="password" />
+                        </div>
+                        <div>
+                            <span id='validationMsg'></span>
+                            <input type="submit" value="Log In" />
+                        </div>
+                    </form>
+                </div>
+                <span id="loginMsg"></span>
+                <button id="switch">Register</button>
             </div>
         </div>
     </div>
@@ -127,13 +130,10 @@
     <section id='home-hero' class="container-fluid home-container text-center">
         <div class="locate-container">
             <div class="locate-box">
-                <h3 style="font-weight:bold;">Find Nearby Lakes</h3>
+                <h3 style="font-weight:bold;">Find Lakes</h3>
 
                 <div class="left">
                     <button class="btn btn-success locate-btn" id='locateBtn'>Use My Location</button>
-                </div>
-                <div class="middle">
-                    <h4>or</h4>
                 </div>
                 <div class="right">
                     <form>
@@ -142,12 +142,17 @@
                         <p id="validationMessage"></p>
                     </form>
                 </div>
+                <div class="middle">
+                    <a class="btn btn-success" href="/search-lakes" style="text-shadow: none">
+                        Search by State
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
     <div id="adLogoWell"></div>
-    
+
     <section id='home-nearby'>
         <div id="lds-ring">
             <div></div>
@@ -185,10 +190,15 @@
                 <h3>Tournaments</h3>
             </a>
         </div>
-        <div class="home-tile" id="allLakes">
+        <!--<div class="home-tile" id="allLakes">
             <h2>Welcome to<br>BassSavvy!</h2>
             <a class="btn btn-success" href="/search-lakes" style="text-shadow: none">
                 Search All Lakes
+            </a>
+        </div>-->
+        <div class="home-tile" id="tournamentResultsTile">
+            <a class="tile-anchor" href="/tournament-results">
+                <h3>Tournament Results</h3>
             </a>
         </div>
         <div class="home-tile" id="contactTile">
@@ -202,11 +212,11 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
     <script type="text/javascript" src="/static/assets/js/home.js"></script>
     <script type="text/javascript" src="/static/assets/js/sponsor.js"></script>
     <!-- <script type="text/javascript" src="/static/assets/js/login.js"></script> -->
