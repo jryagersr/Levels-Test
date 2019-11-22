@@ -777,11 +777,6 @@ function buildHumidityChart(humidityData) {
             labelBatch.push(hour + suffix)
             dataHumidityBatch.push(humidityData.ccWxData[k].humidity); // push elev
 
-            if (humidityData.ccWxData[k].humidity > chartMaxHumidity) // if value is greater than max, replace max
-                chartMaxHumidity = humidityData.ccWxData[k].humidity; // update Max Elev average
-            if (humidityData.ccWxData[k].temp < chartMinHumidity) // if value is less thank min, replace min
-                chartMinHumidity = humidityData.ccWxData[k].humidity; // update Min Elev average
-
         }
 
         // when a day of data has been reached stop
@@ -1308,7 +1303,7 @@ $.ajax({
             $("#currentDate").append(currentLake.data[0].date);
             $("#currentLevel").append(currentLake.data[0].elev);
             $("#currentDelta").append((currentLake.data[0].elev - currentLake.normalPool).toFixed(2));
-            $("#currentNormal").append("normal pool " + currentLake.normalPool);
+            $("#currentNormal").append("Normal Pool " + currentLake.normalPool + " (msl)");
         } else {
             if (sensorDown)
                 $("#currentLevel").append("Water level sensor down");
