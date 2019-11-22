@@ -414,7 +414,8 @@ function buildRiverChart(data, lake) {
         }
     }
 
-    // Loop through our data for 24 data points if we have it
+    // Loop through our data for 48 data points if we have it
+    // two days worth of data may show the tides in tidal rivers 
     for (k; k < data.length; k++) {
 
         // if we're past the first entry
@@ -430,7 +431,7 @@ function buildRiverChart(data, lake) {
         }
 
         // when a week of data has been reached stop
-        if (labelBatch.length > 23) {
+        if (labelBatch.length > 47) {
             break;
         }
     }
