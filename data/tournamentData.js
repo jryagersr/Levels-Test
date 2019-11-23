@@ -2453,6 +2453,88 @@ module.exports = [
                 tournaments: [
 
                     {
+                        date: "2020-02-08",
+                        lake: "Tillery",
+                        lakeID: "tillery",
+                        ramp: "Swift Creek",
+                        state: "NC",
+                        txDetail: "Qualifier",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
+                    },
+                    {
+                        date: "2020-03-31",
+                        lake: "Badin",
+                        lakeID: "badin",
+                        ramp: "Circle Drive",
+                        state: "NC",
+                        txDetail: "Qualifier",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
+                    },
+                    {
+                        date: "2020-03-28",
+                        lake: "Tuckertown",
+                        lakeID: "tuckertown",
+                        ramp: "Flat Creek",
+                        state: "NC",
+                        txDetail: "Qualifier",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
+                    },
+                    {
+                        date: "2020-04-05",
+                        lake: "High Rock",
+                        lakeID: "highrock",
+                        ramp: "Tamarac",
+                        state: "NC",
+                        txDetail: "Gold Qualifier",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
+                    },
+                    {
+                        date: "2020-04-12",
+                        lake: "Tuckertown",
+                        lakeID: "tuckertown",
+                        ramp: "Flat Creek",
+                        state: "NC",
+                        txDetail: "Qualifier",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
+                    },
+                    {
+                        date: "2020-05-03",
+                        lake: "High Rock",
+                        lakeID: "highrock",
+                        ramp: "Tamarac",
+                        state: "NC",
+                        txDetail: "Qualifier",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
+                    },
+                    {
+                        date: "2020-05-16",
+                        lake: "High Rock",
+                        lakeID: "highrock",
+                        ramp: "Tamarac",
+                        state: "NC",
+                        txDetail: "Qualifier",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
+                    },
+                    {
+                        date: "2020-05-23",
+                        lake: "High Rock",
+                        lakeID: "highrock",
+                        ramp: "Tamarac",
+                        state: "NC",
+                        txDetail: "Final",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
+                    },
+
+
+                    {
                         date: "2019-02-09",
                         lake: "Tillery",
                         lakeID: "tillery",
