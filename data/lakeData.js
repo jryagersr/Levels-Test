@@ -670,10 +670,10 @@ module.exports = [
         normalPool: 804.0,
         lat: 37.732655,
         long: -120.378979,
-        elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=7285044&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN",
+        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=11287500&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
         flowURL: "",
         href: "/lakes/donpedro",
-        dataSource: ["ACE"], // array of calls to make to retrieve data
+        dataSource: ["USGS"], // array of calls to make to retrieve data
     },
     {
         bodyOfWater: "Folsom", // lake name
@@ -689,7 +689,7 @@ module.exports = [
         normalPool: 466.0,
         lat: 38.717852,
         long: -121.133390,
-        elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=9813044&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN",
+        elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=4922044&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN",
         flowURL: "",
         href: "/lakes/folsom",
         dataSource: ["ACE"], // array of calls to make to retrieve data
