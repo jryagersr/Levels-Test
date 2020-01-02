@@ -11,7 +11,7 @@ BassSavvy is a fullstack web application built for fishermen by fishermen. BassS
 - Bootstrap
 
 ## Overview and Accomplishments
-Before BassSavvy, fishermen had to visit several different, very dated websites to access current lake level data in their area. Additionally, bass fishing tournaments are located on a wide variety of club and organization websites and are difficult to organize for a fisherman's schedule. BassSavvy aims to bring all this info and more under one convenient roof, to be a one-stop-shop for bass fishermen everywhere. Because BassSavvy was co-created by a local fisherman who had identified the need, it has seen very high levels of growth since its launch in November of 2018. BassSavvy as of this writing boasts over 1750 total users and over 17,000 page views (February 2019). BassSavvy also currently serves 26 states in the U.S. with over 150 local lake levels.
+Before BassSavvy, fishermen had to visit several different, very dated websites to access current lake level data in their area. Additionally, bass fishing tournaments are located on a wide variety of club and organization websites and are difficult to organize for a fisherman's schedule. BassSavvy aims to bring all this info and more under one convenient roof, to be a one-stop-shop for bass fishermen everywhere. Because BassSavvy was co-created by a local fisherman who had identified the need, it has seen very high levels of growth since its launch in November of 2018. BassSavvy as of this writing boasts over 4000 total users and over 40,000 page views (November 2019). BassSavvy also currently serves 48 states in the U.S. with over 200 local lake levels.
 
 ## Features
 * Users can select their state and see each lake available
