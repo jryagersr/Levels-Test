@@ -48,7 +48,7 @@ module.exports = [
         sponsor: "Dougs DD",
         href: "http://www.http://dirtydougsdiesel.com",
         src: "/static/assets/img/sponsor-banners/dougs dd banner.png",
-        location: ["jordan", "falls", "kerr", "shearon harris", "mayo", "hyco"],
+        location: ["jordan", "falls", "kerr", "shearonharris", "mayo", "hyco"],
         type: "logo",
         startDate: "2019-01-01T00:00:00.0Z",
         endDate: "2029-12-30T00:00:00.0Z"
@@ -57,10 +57,19 @@ module.exports = [
         sponsor: "Gradys",
         href: "",
         src: "/static/assets/img/sponsor-banners/gradysbanner.png",
-        location: ["kerr", "jordan","falls","gaston","harris"],
+        location: ["kerr", "jordan","falls","gaston","shearonharris"],
         type: "logo",
         startDate: "2019-01-01T00:00:00.0Z",
         endDate: "2029-01-01T00:00:00.0Z"
+    },
+    {
+        sponsor: "Outdoor Expeditions USA",
+        href: "http://www.outdoorexpeditionsusa.com/",
+        src: "/static/assets/img/sponsor-banners/oeusa banner.png",
+        location: ["shearonharris", "jordan","falls"],
+        type: "logo",
+        startDate: "2020-01-01T00:00:00.0Z",
+        endDate: "2021-12-31T00:10:00.0Z"
     },
     {
         sponsor: "Fishin' For A Mission",
