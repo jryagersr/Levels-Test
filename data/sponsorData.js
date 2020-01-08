@@ -66,7 +66,7 @@ module.exports = [
         sponsor: "Outdoor Expeditions USA",
         href: "http://www.outdoorexpeditionsusa.com/",
         src: "/static/assets/img/sponsor-banners/oeusa banner.png",
-        location: ["shearonharris", "jordan","falls"],
+        location: ["all"],
         type: "logo",
         startDate: "2020-01-01T00:00:00.0Z",
         endDate: "2021-12-31T00:10:00.0Z"
