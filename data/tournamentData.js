@@ -2897,6 +2897,16 @@ module.exports = [
                 tournaments: [
 
                     {
+                        date: "2019-05-08",
+                        lake: "Jordan",
+                        lakeID: "jordan",
+                        ramp: "New Hope",
+                        state: "NC",
+                        txDetail: "Warriors On the Water",
+                        resultsLink: "",
+                        entryLink: "https://www.warriorsonthewater.com/"
+                    },
+                    {
                         date: "2019-05-10",
                         lake: "Jordan",
                         lakeID: "jordan",
@@ -5013,7 +5023,7 @@ module.exports = [
                         resultsLink: "",
                         entryLink: "http://piedmontbassclassics.com/2020MiniTrailMainPage.html"
                     },{
-                        date: "2020-06-13",
+                        date: "2020-06-1",
                         lake: "Kerr",
                         lakeID: "kerr",
                         ramp: "Flemingtown",
