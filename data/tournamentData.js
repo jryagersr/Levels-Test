@@ -2903,13 +2903,71 @@ module.exports = [
             tournaments: [
 
                 {
-                    date: "2019-03-30",
+                    date: "2020-03-07",
                     lake: "Jordan",
                     lakeID: "jordan",
                     ramp: "Farrington",
                     state: "NC",
                     txDetail: "Bass For Cash Series",
-                    resultsLink: "http://bassforcash.com/2019/03/31/roberts-owens-win-4459-on-jordan-lake/",
+                    resultsLink: "",
+                    entryLink: "http://bassforcash.com/schedule/"
+                },
+                {
+                    date: "2019-04-11",
+                    lake: "Kerr",
+                    lakeID: "kerr",
+                    ramp: "Nutbush",
+                    state: "NC",
+                    txDetail: "Bass For Cash Series",
+                    resultsLink: "",
+                    entryLink: "http://bassforcash.com/schedule/"
+                },
+                {
+                    date: "2020-05-23",
+                    lake: "Gaston",
+                    lakeID: "gaston",
+                    ramp: "Summit",
+                    state: "NC",
+                    txDetail: "Bass For Cash Series",
+                    resultsLink: "",
+                    entryLink: "http://bassforcash.com/schedule/"
+                },
+                {
+                    date: "2020-06-07",
+                    lake: "Roanoke River",
+                    lakeID: "roanokewill",
+                    ramp: "Plymouth",
+                    state: "NC",
+                    txDetail: "Bass For Cash Series",
+                    resultsLink: "",
+                    entryLink: "http://bassforcash.com/schedule/"
+                },
+                {
+                    date: "2020-07-25",
+                    lake: "Falls",
+                    lakeID: "falls",
+                    ramp: "Ledge Rock",
+                    state: "NC",
+                    txDetail: "Bass For Cash Series",
+                    resultsLink: "",
+                    entryLink: "http://bassforcash.com/schedule/"
+                },
+                {
+                    date: "2020-08-29",
+                    lake: "Cypress Landing",
+                    ramp: "Pembroke",
+                    state: "NC",
+                    txDetail: "Bass For Cash Series",
+                    resultsLink: "",
+                    entryLink: "http://bassforcash.com/schedule/"
+                },
+                {
+                    date: "2020-09-26",
+                    lake: "TBD",
+                    ramp: "TBD",
+                    state: "NC",
+                    txDetail: "Bass For Cash Series",
+                    resultsLink: "",
                     entryLink: "http://bassforcash.com/schedule/"
                 },
                 {

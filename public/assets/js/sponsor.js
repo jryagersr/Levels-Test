@@ -129,7 +129,7 @@ $.ajax({
             x[slideIndex - 1].classList.add("active");
             setTimeout(function () {
                 carousel(x, className, slideIndex);
-            }, 7500);
+            }, 6500);
         }
 
     });
