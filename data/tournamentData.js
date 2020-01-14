@@ -1524,7 +1524,7 @@ module.exports = [
                         resultsLink: "https://www.cattteamtrail.com/divisions/catt-old-north/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
                     },
-                                                            
+
                     {
                         date: "2019-03-09",
                         lake: "Kerr",
@@ -2701,6 +2701,46 @@ module.exports = [
                 tournaments: [
 
                     {
+                        date: "2020-02-08",
+                        lake: "Murray",
+                        lakeID: "murray",
+                        ramp: "Dreher Island",
+                        state: "SC",
+                        txDetail: "CBC",
+                        resultsLink: "",
+                        entryLink: "http://www.carolinasbasschallenge.com/"
+                    },
+                    {
+                        date: "2020-03-21",
+                        lake: "Santee",
+                        lakeID: "santee1",
+                        ramp: "John C Land",
+                        state: "SC",
+                        txDetail: "CBC",
+                        resultsLink: "",
+                        entryLink: "http://www.carolinasbasschallenge.com/"
+                    },
+                    {
+                        date: "2020-04-25",
+                        lake: "Jordan",
+                        lakeID: "jordan",
+                        ramp: "Farrington Point",
+                        state: "SC",
+                        txDetail: "CBC",
+                        resultsLink: "",
+                        entryLink: "http://www.carolinasbasschallenge.com/"
+                    },
+                    {
+                        date: "2020-03-21",
+                        lake: "Wateree",
+                        lakeID: "wateree",
+                        ramp: "Clearwater",
+                        state: "SC",
+                        txDetail: "CBC",
+                        resultsLink: "",
+                        entryLink: "http://www.carolinasbasschallenge.com/"
+                    },
+                    {
                         date: "2019-02-02",
                         lake: "Santee",
                         lakeID: "santee1",
@@ -2756,6 +2796,56 @@ module.exports = [
                 trail: "NC",
                 tournaments: [
 
+                    {
+                        date: "2020-02-22",
+                        lake: "Norman",
+                        lakeID: "norman",
+                        ramp: "Pinnacle",
+                        state: "NC",
+                        txDetail: "CBC NC",
+                        resultsLink: "",
+                        entryLink: "http://www.carolinasbasschallenge.com/"
+                    },
+                    {
+                        date: "2020-03-07",
+                        lake: "Hickory",
+                        lakeID: "hickory",
+                        ramp: "Wittenburg",
+                        state: "NC",
+                        txDetail: "CBC NC",
+                        resultsLink: "",
+                        entryLink: "http://www.carolinasbasschallenge.com/"
+                    },
+                    {
+                        date: "2020-04-11",
+                        lake: "James",
+                        lakeID: "james",
+                        ramp: "Black Bear",
+                        state: "NC",
+                        txDetail: "CBC NC",
+                        resultsLink: "",
+                        entryLink: "http://www.carolinasbasschallenge.com/"
+                    },
+                    {
+                        date: "2020-05-02",
+                        lake: "High Rock",
+                        lakeID: "highrock",
+                        ramp: "Abbott's Creek",
+                        state: "NC",
+                        txDetail: "CBC NC",
+                        resultsLink: "",
+                        entryLink: "http://www.carolinasbasschallenge.com/"
+                    },
+                    {
+                        date: "2020-10-23",
+                        lake: "TBA Classic",
+                        lakeID: "norman",
+                        ramp: "TBA",
+                        state: "NC",
+                        txDetail: "CBC NC",
+                        resultsLink: "",
+                        entryLink: "http://www.carolinasbasschallenge.com/"
+                    },
                     {
                         date: "2019-02-16",
                         lake: "Norman",
@@ -4856,8 +4946,165 @@ module.exports = [
     {
         organization: "PBC",
         trails: [{
+                trail: "Hart's Custom Sets",
+                tournaments: [
+
+                    {
+                        date: "2020-02-29",
+                        lake: "Jordan",
+                        lakeID: "jordan",
+                        ramp: "Farrington",
+                        state: "NC",
+                        txDetail: "Piedmont Bass Classic",
+                        resultsLink: "",
+                        entryLink: "http://piedmontbassclassics.com/2020MiniTrailMainPage.html"
+                    },{
+                        date: "2020-03-14",
+                        lake: "Harris",
+                        lakeID: "shearonharris",
+                        ramp: "Crosspoint",
+                        state: "NC",
+                        txDetail: "Piedmont Bass Classic",
+                        resultsLink: "",
+                        entryLink: "http://piedmontbassclassics.com/2020MiniTrailMainPage.html"
+                    },{
+                        date: "2020-03-28",
+                        lake: "Falls",
+                        lakeID: "falls",
+                        ramp: "Ledge Rock",
+                        state: "NC",
+                        txDetail: "Piedmont Bass Classic",
+                        resultsLink: "",
+                        entryLink: "http://piedmontbassclassics.com/2020MiniTrailMainPage.html"
+                    },{
+                        date: "2020-04-04",
+                        lake: "Jordan",
+                        lakeID: "jordan",
+                        ramp: "Farrington",
+                        state: "NC",
+                        txDetail: "Piedmont Bass Classic",
+                        resultsLink: "",
+                        entryLink: "http://piedmontbassclassics.com/2020MiniTrailMainPage.html"
+                    },{
+                        date: "2020-04-18",
+                        lake: "Kerr",
+                        lakeID: "kerr",
+                        ramp: "Flemingtown",
+                        state: "NC",
+                        txDetail: "Piedmont Bass Classic",
+                        resultsLink: "",
+                        entryLink: "http://piedmontbassclassics.com/2020MiniTrailMainPage.html"
+                    },{
+                        date: "2020-05-09",
+                        lake: "Falls",
+                        lakeID: "falls",
+                        ramp: "Ledge Rock",
+                        state: "NC",
+                        txDetail: "Piedmont Bass Classic",
+                        resultsLink: "",
+                        entryLink: "http://piedmontbassclassics.com/2020MiniTrailMainPage.html"
+                    },{
+                        date: "2020-05-30",
+                        lake: "Kerr",
+                        lakeID: "kerr",
+                        ramp: "Flemingtown",
+                        state: "NC",
+                        txDetail: "Piedmont Bass Classic",
+                        resultsLink: "",
+                        entryLink: "http://piedmontbassclassics.com/2020MiniTrailMainPage.html"
+                    },{
+                        date: "2020-06-13",
+                        lake: "Kerr",
+                        lakeID: "kerr",
+                        ramp: "Flemingtown",
+                        state: "NC",
+                        txDetail: "Piedmont Bass Classic",
+                        resultsLink: "",
+                        entryLink: "http://piedmontbassclassics.com/2020MiniTrailMainPage.html"
+                    },
+
+                ],
+            },
+            {
+                trail: "Spring Team Bass Trail",
+                tournaments: [
+
+                    {
+                        date: "2020-02-22",
+                        lake: "Jordan",
+                        lakeID: "jordan",
+                        ramp: "Farrington",
+                        state: "NC",
+                        txDetail: "Piedmont Bass Classic",
+                        resultsLink: "",
+                        entryLink: "http://piedmontbassclassics.com/2020MiniTrailMainPage.html"
+                    },
+                    {
+                        date: "2020-03-07",
+                        lake: "Harris",
+                        lakeID: "shearonharris",
+                        ramp: "Crosspoint",
+                        state: "NC",
+                        txDetail: "Piedmont Bass Classic",
+                        resultsLink: "",
+                        entryLink: "http://piedmontbassclassics.com/2020MiniTrailMainPage.html"
+                    },
+                    {
+                        date: "2020-03-21",
+                        lake: "Falls",
+                        lakeID: "falls",
+                        ramp: "Ledge Rock",
+                        state: "NC",
+                        txDetail: "Piedmont Bass Classic",
+                        resultsLink: "",
+                        entryLink: "http://piedmontbassclassics.com/2020MiniTrailMainPage.html"
+                    },
+                    {
+                        date: "2020-04-25",
+                        lake: "Jordan",
+                        lakeID: "jordan",
+                        ramp: "Farrington",
+                        state: "NC",
+                        txDetail: "Piedmont Bass Classic",
+                        resultsLink: "",
+                        entryLink: "http://piedmontbassclassics.com/2020MiniTrailMainPage.html"
+                    },
+                    {
+                        date: "2020-05-02",
+                        lake: "Kerr",
+                        lakeID: "kerr",
+                        ramp: "Flemingtown",
+                        state: "NC",
+                        txDetail: "Piedmont Bass Classic",
+                        resultsLink: "",
+                        entryLink: "http://piedmontbassclassics.com/2020MiniTrailMainPage.html"
+                    },
+                    {
+                        date: "2020-03-07",
+                        lake: "Kerr",
+                        lakeID: "kerr",
+                        ramp: "Flemingtown",
+                        state: "NC",
+                        txDetail: "Piedmont Bass Classic",
+                        resultsLink: "",
+                        entryLink: "http://piedmontbassclassics.com/2020MiniTrailMainPage.html"
+                    }
+
+                ],
+            },
+            {
                 trail: "Cashion",
                 tournaments: [{
+                        date: "2019-02-23",
+                        lake: "Jordan",
+                        lakeID: "jordan",
+                        ramp: "Farrington",
+                        state: "NC",
+                        txDetail: "Piedmont Bass Classic",
+                        resultsLink: "http://piedmontbassclassics.com/223-19Results.html",
+                        entryLink: "http://piedmontbassclassics.com/2019CashionRodsHartsCustomSetsSpringTrailMainPage.html"
+                    },
+                    {
                         date: "2019-02-23",
                         lake: "Jordan",
                         lakeID: "jordan",
