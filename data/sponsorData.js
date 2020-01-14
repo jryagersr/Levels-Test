@@ -182,7 +182,7 @@ module.exports = [
     {
         sponsor: "Warriors On The Water",
         href: "https://www.warriorsonthewater.com/",
-        src: "/static/assets/img/sponsor-banners/Warriors on the Water logo.png",
+        src: "/static/assets/img/tournament-banners/warriors on the water banner.png",
         location: ["jordan"],
         type: "charity",
         startDate: "2019-01-01T00:00:00.0Z",
