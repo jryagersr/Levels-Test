@@ -2893,7 +2893,7 @@ module.exports = [
     {
         organization: "Charity",
         trails: [{
-                trail: "WoE",
+                trail: "WoW",
                 tournaments: [
 
                     {
