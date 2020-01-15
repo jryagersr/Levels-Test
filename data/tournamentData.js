@@ -3165,7 +3165,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "",
                     resultsLink: "https://www.ncbasschallenge.com/tournament-results/vann-lewis-win-big-on-the-neuse/",
-                    entryLink: "https://www.ncbasschallenge.com/2019-tournament-schedule/"
+                    entryLink: "https://www.ncbasschallenge.com/2019-tournament-schedule/ "
                 },
                 {
 
