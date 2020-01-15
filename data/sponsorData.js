@@ -182,7 +182,7 @@ module.exports = [
     {
         sponsor: "Piedmont Bass Classics",
         href: "http://piedmontbassclassics.com/MainPage2.html",
-        src: "/static/assets/img/tournament-banners/pbc banner.png",
+        src: "/static/assets/img/sponsor-banners/pbc banner.png",
         location: ["kerr", "jordan", "falls", "gaston", "shearonharris"],
         type: "logo",
         startDate: "2019-01-01T00:00:00.0Z",
