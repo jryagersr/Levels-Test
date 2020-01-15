@@ -180,6 +180,24 @@ module.exports = [
         endDate: "2030-01-01T00:00:00.0Z"
     },
     {
+        sponsor: "Piedmont Bass Classics",
+        href: "http://piedmontbassclassics.com/MainPage2.html",
+        src: "/static/assets/img/tournament-banners/pbc banner.png",
+        location: ["kerr", "jordan", "falls", "gaston", "shearonharris"],
+        type: "logo",
+        startDate: "2019-01-01T00:00:00.0Z",
+        endDate: "2021-01-01T00:00:00.0Z"
+    },
+    {
+        sponsor: "Warriors On The Water",
+        href: "https://www.warriorsonthewater.com/",
+        src: "/static/assets/img/tournament-banners/warriors on the water banner.png",
+        location: ["kerr", "jordan", "falls", "gaston", "shearonharris", "tillery", "highrock", "badin"],
+        type: "logo",
+        startDate: "2019-01-01T00:00:00.0Z",
+        endDate: "2020-05-09T00:00:00.0Z"
+    },
+    {
         sponsor: "Warriors On The Water",
         href: "https://www.warriorsonthewater.com/",
         src: "/static/assets/img/tournament-banners/warriors on the water banner.png",
