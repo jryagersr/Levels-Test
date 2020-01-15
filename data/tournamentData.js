@@ -3013,7 +3013,7 @@ module.exports = [
                     entryLink: "http://bassforcash.com/schedule/"
                 },
                 {
-                    date: "2019-04-11",
+                    date: "2020-04-11",
                     lake: "Kerr",
                     lakeID: "kerr",
                     ramp: "Nutbush",
