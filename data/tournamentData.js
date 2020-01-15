@@ -2893,11 +2893,11 @@ module.exports = [
     {
         organization: "Charity",
         trails: [{
-                trail: "Wow",
+                trail: "WoE",
                 tournaments: [
 
                     {
-                        date: "2019-05-08",
+                        date: "2020-05-08",
                         lake: "Jordan",
                         lakeID: "jordan",
                         ramp: "New Hope",
@@ -2931,6 +2931,22 @@ module.exports = [
                         txDetail: "Fishers of Men Open Invitational",
                         resultsLink: "",
                         entryLink: ""
+                    }
+                ]
+            },
+            {
+                trail: "Boys & Girls Club",
+                tournaments: [
+
+                    {
+                        date: "2020-04-11",
+                        lake: "Kerr",
+                        lakeID: "kerr",
+                        ramp: "Nutbush",
+                        state: "NC-VA",
+                        txDetail: "BFCS Combined Boys & Girls Club",
+                        resultsLink: "",
+                        entryLink: "http://bassforcash.com/schedule/"
                     }
                 ]
             },
