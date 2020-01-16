@@ -190,7 +190,7 @@ module.exports = [
     },
     {
         sponsor: "The Boat Guy",
-        href: "http://http://ncboatguy.com/",
+        href: "http://ncboatguy.com/",
         src: "/static/assets/img/sponsor-banners/ncboatguy banner.png",
         location: ["all"],
         type: "logo",
