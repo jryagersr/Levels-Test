@@ -8,6 +8,66 @@ module.exports = [
             tournaments: [
 
                 {
+                    date: "2020-03-14",
+                    lake: "Mayo",
+                    lakeID: "mayo",
+                    ramp: "Triple Springs",
+                    state: "NC",
+                    txDetail: "T1",
+                    resultsLink: "https://www.facebook.com/groups/657334777996712/permalink/657734494623407/",
+                    entryLink: "https://www.facebook.com/groups/657334777996712/permalink/657734494623407/"
+                },
+                {
+                    date: "2020-03-28",
+                    lake: "Kerr",
+                    lakeID: "kerr",
+                    ramp: "Occonneeche",
+                    state: "NC",
+                    txDetail: "T1",
+                    resultsLink: "https://www.facebook.com/groups/657334777996712/permalink/657734494623407/",
+                    entryLink: "https://www.facebook.com/groups/657334777996712/permalink/657734494623407/"
+                },
+                {
+                    date: "2020-04-11",
+                    lake: "Falls",
+                    lakeID: "falls",
+                    ramp: "Ledge Rock",
+                    state: "NC",
+                    txDetail: "T1",
+                    resultsLink: "https://www.facebook.com/groups/657334777996712/permalink/657734494623407/",
+                    entryLink: "https://www.facebook.com/groups/657334777996712/permalink/657734494623407/"
+                },
+                {
+                    date: "2020-05-02",
+                    lake: "Mayo",
+                    lakeID: "mayo",
+                    ramp: "Triple Springs",
+                    state: "NC",
+                    txDetail: "T1",
+                    resultsLink: "https://www.facebook.com/groups/657334777996712/permalink/657734494623407/",
+                    entryLink: "https://www.facebook.com/groups/657334777996712/permalink/657734494623407/"
+                },
+                {
+                    date: "2020-06-13",
+                    lake: "Kerr",
+                    lakeID: "kerr",
+                    ramp: "Henderson Pt",
+                    state: "NC",
+                    txDetail: "T1",
+                    resultsLink: "https://www.facebook.com/groups/657334777996712/permalink/657734494623407/",
+                    entryLink: "https://www.facebook.com/groups/657334777996712/permalink/657734494623407/"
+                },
+                {
+                    date: "2020-10-17",
+                    lake: "Kerr",
+                    lakeID: "kerr",
+                    ramp: "Henderson Pt",
+                    state: "NC",
+                    txDetail: "T1",
+                    resultsLink: "https://www.facebook.com/groups/657334777996712/permalink/657734494623407/",
+                    entryLink: "https://www.facebook.com/groups/657334777996712/permalink/657734494623407/"
+                },
+                {
                     date: "2019-03-30",
                     lake: "Kerr",
                     lakeID: "kerr",
