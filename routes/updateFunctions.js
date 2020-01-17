@@ -58,7 +58,7 @@ module.exports = {
 
   // function to update and return one lake
   updateAndReturnOneLake: function (currentLake, UROLdata, callback) {
-    
+
     // if new data exists, set the last Refresh time
     let updateData = UROLdata;
     let lastRefresh = currentLake.lastRefresh;
@@ -120,7 +120,6 @@ module.exports = {
                   }
                 }
               }
-
               // update the database with the 'clean' data
               db.model("Lake").updateOne({
                   'bodyOfWater': bodyOfWater

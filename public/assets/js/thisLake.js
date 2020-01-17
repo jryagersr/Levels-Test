@@ -1312,6 +1312,7 @@ $.ajax({
                 $("#currentLevel").append("No known source for level data");
         };
 
+        
         $("#lakeSponsor").append(currentLake.bodyOfWater);
         $("#lakeFeaturedTournament").append(currentLake.bodyOfWater);
 

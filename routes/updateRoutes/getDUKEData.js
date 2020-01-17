@@ -30,6 +30,7 @@ module.exports = {
                 console.error(error);
                 dataErrorTrue = true;
             }
+            
 
             if (!dataErrorTrue) {
                 let today = new Date();

@@ -2977,7 +2977,6 @@ module.exports = [
         elevURL: "https://lakes.duke-energy.com/Data/Detail/3_Month/2.txt",
         flowURL: "",
         href: "/lakes/james",
-        
         dataSource: ["DUKE", "loadAds"], // array of calls to make to retrieve data
     },
     {
