@@ -1312,7 +1312,7 @@ $.ajax({
                 $("#currentLevel").append("No known source for level data");
         };
 
-        
+
         $("#lakeSponsor").append(currentLake.bodyOfWater);
         $("#lakeFeaturedTournament").append(currentLake.bodyOfWater);
 
@@ -1432,8 +1432,7 @@ $.ajax({
                 // if the first element for a Day forecast element 
                 if ((dayTest == 'AM' && lastDayTest =='PM') || i == 0) {
 
-                    // This is a "Day" Line in the data, we must save it until it is time to push it in the well
-
+                    // This is a "Day" Line in the data, we must save it until it is time to push it into the well
                     dayLines.push({
                         conditions: element.conditions,
                         high: element.temp,
