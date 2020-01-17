@@ -32,13 +32,13 @@ module.exports = {
         } catch (error) {
           dataErrorTrue = true;
         }
+              console.log (data)
 
         if (!dataErrorTrue) {
 
           _.each(data, function (dataSet) {
             if (dataSet[0] !== "Day") {
               // format timestamp for database
-              console.log (dataSet)
               let splitTime = dataSet[1].split(" ");
               let splitDate = dataSet[0].split("/");
               let year = splitDate[2];

@@ -62,8 +62,8 @@ module.exports = [
         href: "/lakes/bouldin",
         dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
     },
- /*   {
-        bodyOfWater: "Cedar Creek", // lake name
+    {
+        bodyOfWater: "Cedar Creek (AL)", // lake name
         state: ["Alabama"],
         data: [],
         ccWxData: [],
@@ -80,7 +80,7 @@ module.exports = [
         flowURL: "",
         href: "/lakes/cedarcreekal",
         dataSource: ["TVA"], // array of calls to make to retrieve data
-    },*/
+    },
     {
         bodyOfWater: "Eufaula (AL)", // lake name
         state: ["Alabama", "Georgia"],
