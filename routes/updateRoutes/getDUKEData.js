@@ -42,7 +42,7 @@ module.exports = {
                         if ((lake.Average !== "N/A" || lake.Average !== "0") && typeof parseInt(lake.Average) == 'number' && Number(lake.Average) !== 0) {
                             data.push({
                                 time: new Date(lake.Date + " " + "6:00"), // format timestamp
-                                elev: Number(lake.Average) + seaLevelDelta, // add SLD to average
+                                elev: String(Number(lake.Average) + seaLevelDelta + "  (" + lake.Average +")"), // add SLD to average
                                 flow: "N/A"
                             })
                         }

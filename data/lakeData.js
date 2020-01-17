@@ -2962,6 +2962,25 @@ module.exports = [
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
     {
+        bodyOfWater: "James", // lake name
+        state: ["North Carolina"],
+        data: [],
+        ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
+        wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
+        refreshInterval: 1450, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 1100.0,
+        normalPool: 1200.0,
+        lat: 35.63,
+        long: -80.27,
+        elevURL: "https://lakes.duke-energy.com/Data/Detail/3_Month/2.txt",
+        flowURL: "",
+        href: "/lakes/james",
+        dataSource: ["DUKE", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
         bodyOfWater: "Jocassee", // lake name
         state: ["North Carolina", "South Carolina"],
         data: [],
@@ -3047,6 +3066,25 @@ module.exports = [
         dataSource: ["loadAds"], // array of calls to make to retrieve data
     },
     {
+        bodyOfWater: "Mtn Island", // lake name
+        state: ["North Carolina"],
+        data: [],
+        ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
+        wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
+        refreshInterval: 1450, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 547.5,
+        normalPool: 647.5,
+        lat: 35.63,
+        long: -80.27,
+        elevURL: "https://lakes.duke-energy.com/Data/Detail/3_Month/12.txt",
+        flowURL: "",
+        href: "/lakes/mtnisland",
+        dataSource: ["DUKE", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
         bodyOfWater: "Neuse River (Kinston)", // lake name
         state: ["North Carolina"],
         data: [],
@@ -3084,23 +3122,23 @@ module.exports = [
         href: "/lakes/norman",
         dataSource: ["DUKE", "loadAds"], // array of calls to make to retrieve data
     },
-    /* {
-         bodyOfWater: "Randleman", // lake name
-         state: ["North Carolina"],
-         data: [],
+    {
+        bodyOfWater: "Randleman", // lake name
+        state: ["North Carolina"],
+        data: [],
         ccWxData: [],
         wxForecastData: [],
-         refreshInterval: 1450, //minutes
-         lastRefresh: "12/31/18", // a Date 
-         seaLevelDelta: 0.0, // data reported as a delta to full pool = 100
-         normalPool: 682.0,
-         lat: 35.847430,
-         long: -79.829711,
-         elevURL: "",
-         flowURL: "",
-         href: "/lakes/randleman",
-         dataSource: ["loadAds"], // array of calls to make to retrieve data
-     },*/
+        refreshInterval: 1450, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0.0, // data reported as a delta to full pool = 100
+        normalPool: 682.0,
+        lat: 35.847430,
+        long: -79.829711,
+        elevURL: "none",
+        flowURL: "",
+        href: "/lakes/randleman",
+        dataSource: ["loadAds"], // array of calls to make to retrieve data
+    },
     {
         bodyOfWater: "Rhodhiss", // lake name
         state: ["North Carolina"],
@@ -4757,25 +4795,25 @@ module.exports = [
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
     //Out until SSL issue documented in Slack is resolved
-   /* {
-        bodyOfWater: "Smith Mountain", // lake name
-        state: ["Virginia"],
-        data: [],
-        ccWxData: [],
-        ccWxDataLastRefresh: "12/31/18",
-        wxForecastData: [],
-        wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1450, //minutes
-        lastRefresh: "12/31/18", // a Date 
-        seaLevelDelta: 0,
-        normalPool: 795.0,
-        lat: 37.05,
-        long: -79.60,
-        elevURL: "http://epec.saw.usace.army.mil/dailyrep.txt",
-        flowURL: "",
-        href: "/lakes/smithmountain",
-        dataSource: ["ACEWilm", "loadAds"], // array of calls to make to retrieve data
-    },*/
+    /* {
+         bodyOfWater: "Smith Mountain", // lake name
+         state: ["Virginia"],
+         data: [],
+         ccWxData: [],
+         ccWxDataLastRefresh: "12/31/18",
+         wxForecastData: [],
+         wxForecastDataLastRefresh: "12/31/18",
+         refreshInterval: 1450, //minutes
+         lastRefresh: "12/31/18", // a Date 
+         seaLevelDelta: 0,
+         normalPool: 795.0,
+         lat: 37.05,
+         long: -79.60,
+         elevURL: "http://epec.saw.usace.army.mil/dailyrep.txt",
+         flowURL: "",
+         href: "/lakes/smithmountain",
+         dataSource: ["ACEWilm", "loadAds"], // array of calls to make to retrieve data
+     },*/
 
     // WEST VIRGINIA ---------------------------------------------------------------------------------------------------------
     {
