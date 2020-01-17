@@ -160,6 +160,7 @@ module.exports = function (app) {
                     }
                   });
                   break;
+                  
 
                 case "DUKE":
                   duke.getDUKEData(currentLake, function (error, DUKEdata) {
