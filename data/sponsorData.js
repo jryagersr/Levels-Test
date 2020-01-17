@@ -66,7 +66,7 @@ module.exports = [
         sponsor: "Collins Boating",
         href: "https://www.collinsboating.com/",
         src: "/static/assets/img/sponsor-banners/collins banner.png",
-        location: ["kerr", "jordan", "falls", "gaston", "shearonharris","roanoakewill","roanoake45"],
+        location: ["kerr", "jordan", "falls", "gaston", "shearonharris","roanokewill","roanoke45"],
         type: "logo",
         startDate: "2019-01-01T00:00:00.0Z",
         endDate: "2021-01-01T00:00:00.0Z"
@@ -84,7 +84,7 @@ module.exports = [
         sponsor: "Bass For Cash Series",
         href: "https://www.bassforcash.com/",
         src: "/static/assets/img/sponsor-banners/BFCS banner.png",
-        location: ["kerr", "jordan", "falls", "gaston", "roanokewill","roanoake45"],
+        location: ["kerr", "jordan", "falls", "gaston", "roanokewill","roanoke45"],
         type: "logo",
         startDate: "2019-01-01T00:00:00.0Z",
         endDate: "2021-01-01T00:00:00.0Z"
