@@ -1304,7 +1304,7 @@ $.ajax({
             $("#currentDate").append(currentLake.data[0].date);
             $("#currentLevel").append(currentLake.data[0].elev);
             $("#currentDelta").append((currentLake.data[0].elev - currentLake.normalPool).toFixed(2));
-            $("#currentNormal").append("Normal Pool " + currentLake.normalPool + " (msl)");
+            $("#currentNormal").append("Normal Pool " + currentLake.normalPool + " (MSL)");
         } else {
             if (sensorDown)
                 $("#currentLevel").append("Water level sensor down");
