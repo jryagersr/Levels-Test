@@ -6,7 +6,7 @@ module.exports = [
         location: ["all"],
         type: "logo",
         startDate: "2019-01-01T00:00:00.0Z",
-        endDate: "2029-01-01T00:00:00.0Z"
+        endDate: "2021-01-01T00:00:00.0Z"
     },
     {
         sponsor: "JSE",
@@ -60,7 +60,7 @@ module.exports = [
         location: ["all"],
         type: "logo",
         startDate: "2020-01-01T00:00:00.0Z",
-        endDate: "2021-12-31T00:10:00.0Z"
+        endDate: "2025-12-31T00:10:00.0Z"
     },
     {
         sponsor: "Collins Boating",
@@ -213,7 +213,7 @@ module.exports = [
         location: ["jordan"],
         type: "charity",
         startDate: "2019-01-01T00:00:00.0Z",
-        endDate: "2021-01-01T00:00:00.0Z"
+        endDate: "2028-01-01T00:00:00.0Z"
     },
     {
         sponsor: "Fishin' For A Mission",
