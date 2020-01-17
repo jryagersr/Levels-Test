@@ -2922,7 +2922,6 @@ module.exports = [
         href: "/lakes/hickory",
         dataSource: ["DUKE", "loadAds"], // array of calls to make to retrieve data
     },
-
     {
         bodyOfWater: "High Rock", // lake name
         state: ["North Carolina"],
