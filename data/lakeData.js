@@ -73,12 +73,12 @@ module.exports = [
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
-        normalPool: 577.0,
+        normalPool: 322.0,
         lat: 34.543941,
         long: -87.970680,
         elevURL: "https://soa.tva.gov/api/river/observed-data/CCRA1",
         flowURL: "",
-        href: "/lakes/cedarcreektn",
+        href: "/lakes/cedarcreekal",
         dataSource: ["TVA"], // array of calls to make to retrieve data
     },
     {
