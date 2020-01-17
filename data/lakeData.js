@@ -63,6 +63,25 @@ module.exports = [
         dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
     },
     {
+        bodyOfWater: "Cedar Creek", // lake name
+        state: ["Alabama"],
+        data: [],
+        ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
+        wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 322.0,
+        lat: 34.543941,
+        long: -87.970680,
+        elevURL: "https://soa.tva.gov/api/river/observed-data/CCRA1",
+        flowURL: "",
+        href: "/lakes/cedarcreektn",
+        dataSource: ["TVA"], // array of calls to make to retrieve data
+    },
+    {
         bodyOfWater: "Eufaula (AL)", // lake name
         state: ["Alabama", "Georgia"],
         data: [],
@@ -4190,25 +4209,6 @@ module.exports = [
         elevURL: "https://soa.tva.gov/api/river/observed-data/NRST1",
         flowURL: "",
         href: "/lakes/norris",
-        dataSource: ["TVA"], // array of calls to make to retrieve data
-    },
-    {
-        bodyOfWater: "Cedar Creek", // lake name
-        state: ["Tennessee"],
-        data: [],
-        ccWxData: [],
-        ccWxDataLastRefresh: "12/31/18",
-        wxForecastData: [],
-        wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 90, //minutes
-        lastRefresh: "12/31/18", // a Date 
-        seaLevelDelta: 0,
-        normalPool: 322.0,
-        lat: 34.543941,
-        long: -87.970680,
-        elevURL: "https://soa.tva.gov/api/river/observed-data/CCRA1",
-        flowURL: "",
-        href: "/lakes/cwdarcreektn",
         dataSource: ["TVA"], // array of calls to make to retrieve data
     },
     {
