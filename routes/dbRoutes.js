@@ -314,7 +314,7 @@ module.exports = function (app) {
               res.json(currentLake);
             }
 
-            // if no update is needed, send currentLake to client
+            // if no update is needed, send currentLake to client side
             // Need to update the current conditions and forecast for this lake since the elev data did not need an update
 
             // Check to see if Current Conditions needs to be updated
