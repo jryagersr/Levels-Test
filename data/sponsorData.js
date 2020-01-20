@@ -101,7 +101,7 @@ module.exports = [
     {
         sponsor: "Huntington Lures",
         href: "https://www.huntingtonlures.com/",
-        src: "/static/assets/img/sponsor-banners/deep creek banner.png",
+        src: "/static/assets/img/sponsor-banners/huntington banner.png",
         location: ["all"],
         type: "logo",
         startDate: "2019-01-01T00:00:00.0Z",
