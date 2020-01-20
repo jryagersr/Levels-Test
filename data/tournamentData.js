@@ -2979,6 +2979,22 @@ module.exports = [
                 ]
             },
             {
+                trail: "CFC",
+                tournaments: [
+
+                    {
+                        date: "2020-05-16",
+                        lake: "Badin",
+                        lakeID: "badin",
+                        ramp: "Alcoa",
+                        state: "NC",
+                        txDetail: "Casting for a Cure",
+                        resultsLink: "",
+                        entryLink: "https://http://704outdoors.tv/cast-for-a-cure/"
+                    }
+                ]
+            },
+            {
                 trail: "FOM/BPS",
                 tournaments: [
 
@@ -4470,7 +4486,8 @@ module.exports = [
                         entryLink: "https://www.flwfishing.com/tournaments/2019-09-14-james-river"
                     }
                 ]
-            }, {
+            }, 
+            {
                 trail: "BFL SC",
                 tournaments: [{
                         date: "2019-02-16",
