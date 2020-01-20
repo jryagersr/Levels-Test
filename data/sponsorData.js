@@ -211,8 +211,8 @@ module.exports = [
         href: "https://www.warriorsonthewater.com/",
         src: "/static/assets/img/tournament-banners/warriors on the water banner.png",
         location: ["kerr", "jordan", "falls", "gaston", "shearonharris", "tillery", "highrock", "badin"],
-        type: "logo",
-        startDate: "2019-01-01T00:00:00.0Z",
+        type: "charity",
+        startDate: "2020-01-01T00:00:00.0Z",
         endDate: "2020-05-09T00:00:00.0Z"
     },
     {
@@ -220,9 +220,9 @@ module.exports = [
         href: "http://704outdoors.tv/cast-for-a-cure/",
         src: "/static/assets/img/tournament-banners/cfc banner.png",
         location: ["badin", "highrock", "tillery","tuckertown"],
-        type: "logo",
-        startDate: "2019-01-01T00:00:00.0Z",
-        endDate: "2028-05-16T00:00:00.0Z"
+        type: "charity",
+        startDate: "2020-01-01T00:00:00.0Z",
+        endDate: "2020-05-16T00:00:00.0Z"
     },
     {
         sponsor: "Fishin' For A Mission",

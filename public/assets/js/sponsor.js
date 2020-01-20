@@ -55,7 +55,7 @@ $.ajax({
 
         // just for temporary purposes only do this on kerr/jordan or falls
         // this is to avoid interfering with other lake's w/ txs
-        if (lakeRoute == 'kerr' || lakeRoute == 'jordan' || lakeRoute == 'falls' || lakeRoute == 'norman') {
+        if (lakeRoute == 'kerr' || lakeRoute == 'jordan' || lakeRoute == 'falls' || lakeRoute == 'norman' || lakeRoute == 'badin') {
 
             // Clear any ad content in the tournament scroller
             $("#adTxWell").empty();
