@@ -5099,7 +5099,7 @@ module.exports = [
                         resultsLink: "",
                         entryLink: "http://piedmontbassclassics.com/2020MiniTrailMainPage.html"
                     },{
-                        date: "2020-06-1",
+                        date: "2020-06-13",
                         lake: "Kerr",
                         lakeID: "kerr",
                         ramp: "Flemingtown",
@@ -5112,7 +5112,7 @@ module.exports = [
                 ],
             },
             {
-                trail: "Spring Team Bass Trail",
+                trail: "Spring Mini Bass Trail",
                 tournaments: [
 
                     {
@@ -5166,7 +5166,7 @@ module.exports = [
                         entryLink: "http://piedmontbassclassics.com/2020MiniTrailMainPage.html"
                     },
                     {
-                        date: "2020-03-07",
+                        date: "2020-05-16",
                         lake: "Kerr",
                         lakeID: "kerr",
                         ramp: "Flemingtown",
