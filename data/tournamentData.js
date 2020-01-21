@@ -436,7 +436,7 @@ module.exports = [
                 tournaments: [
 
                     {
-                        date: "2019-06-6",
+                        date: "2020-06-6",
                         lake: "Kerr",
                         ramp: "Nutbush",
                         state: "NC",
@@ -445,7 +445,7 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-championship/"
                     },
                     {
-                        date: "2019-06-7",
+                        date: "2020-06-7",
                         lake: "Kerr",
                         ramp: "Nutbush",
                         state: "NC",
@@ -1477,52 +1477,62 @@ module.exports = [
             {
                 trail: "BFL Buckeye",
                 tournaments: [{
-                        date: "2019-05-11",
+                        date: "2020-05-16",
                         lake: "Grand Lake",
                         ramp: "West Bank",
                         state: "OH",
                         txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2019-05-11-grand-lake-st-marys",
-                        entryLink: "https://www.flwfishing.com/tournaments/2019-05-11-grand-lake-st-marys"
+                        resultsLink: "https://www.flwfishing.com/results/2020-05-16-grand-lake-st-marys",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-05-16-grand-lake-st-marys"
                     },
                     {
-                        date: "2019-06-08",
-                        lakeID: "ohiorivertan",
-                        lake: "Ohio Rvr",
-                        ramp: "Lawrenceburg",
-                        state: "IN",
-                        txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2019-06-08-ohio-river-tanners-creek",
-                        entryLink: "https://www.flwfishing.com/tournaments/2019-06-08-ohio-river-tanners-creek"
-                    },
-                    {
-                        date: "2019-07-27",
+                        date: "2020-06-06",
                         lake: "Indian",
                         ramp: "Indian Lake SP",
                         state: "OH",
                         txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2019-07-27-indian",
-                        entryLink: "https://www.flwfishing.com/tournaments/2019-07-27-indian"
+                        resultsLink: "https://www.flwfishing.com/results/2020-06-06-indian",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-06-06-indian"
                     },
                     {
-                        date: "2019-08-17",
-                        lake: "Ohio Rvr",
+                        date: "2020-07-11",
                         lakeID: "ohiorivertan",
+                        lake: "Ohio Rvr",
                         ramp: "Lawrenceburg",
-                        state: "IN",
-                        txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2019-08-17-ohio-river-tanners-creek",
-                        entryLink: "https://www.flwfishing.com/tournaments/2019-08-17-ohio-river-tanners-creek"
-                    },
-                    {
-                        date: "2019-09-21",
-                        lake: "Mosquito",
-                        lakeID: "mosquito",
-                        ramp: "Mosquito Lake SP",
                         state: "OH",
                         txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2019-09-21-mosquito",
-                        entryLink: "https://www.flwfishing.com/tournaments/2019-09-21-mosquito"
+                        resultsLink: "https://www.flwfishing.com/results/2020-07-11-ohio-river-tanners-creek",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-07-11-ohio-river-tanners-creek"
+                    },
+                    {
+                        date: "2020-08-15",
+                        lake: "Ohio Rvr",
+                        lakeID: "ohiorivertan",
+                        ramp: "Maysville Rvr Park",
+                        state: "OH",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2020-08-15-ohio-river-maysville",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-08-15-ohio-river-maysville"
+                    },
+                    {
+                        date: "2020-08-29",
+                        lake: "Erie",
+                        lakeID: "erie",
+                        ramp: "Shelby Street",
+                        state: "OH",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2020-08-29-erie",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-08-29-erie"
+                    },
+                    {
+                        date: "2020-08-30",
+                        lake: "Erie",
+                        lakeID: "erie",
+                        ramp: "Shelby Street",
+                        state: "OH",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2020-08-29-erie",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-08-29-erie"
                     }
                 ]
             },
@@ -1535,52 +1545,61 @@ module.exports = [
                 tournaments: [
 
                     {
-                        date: "2019-05-04",
-                        lake: "Rough River Lake",
-                        lakeID: "rough",
-                        ramp: "RR State Park",
-                        state: "KY",
-                        txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2019-05-04-rough-river-lake-rescheduled",
-                        entryLink: "https://www.flwfishing.com/tournaments/2019-05-04-rough-river-lake-rescheduled"
-                    },
-                    {
-                        date: "2019-06-29",
+                        date: "2020-04-25",
                         lake: "Monroe",
                         lakeID: "monroe",
                         ramp: "Cutright",
                         state: "IN",
                         txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2019-06-29-monroe",
-                        entryLink: "https://www.flwfishing.com/tournaments/2019-06-29-monroe"
+                        resultsLink: "https://www.flwfishing.com/results/2020-04-25-monroe",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-04-25-monroe"
                     },
                     {
-                        date: "2019-06-30",
+                        date: "2020-06-27",
                         lake: "Monroe",
                         lakeID: "monroe",
                         ramp: "Cutright",
                         state: "IN",
                         txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2019-06-30-monroe-rescheduled",
-                        entryLink: "https://www.flwfishing.com/tournaments/2019-06-30-monroe-rescheduled"
+                        resultsLink: "https://www.flwfishing.com/results/2020-06-27-monroe",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-06-27-monroe"
                     },
                     {
-                        date: "2019-07-20",
-                        lake: "Ohio Rvr",
-                        ramp: "Rocky Point",
+                        date: "2020-06-30",
+                        lake: "Monroe",
+                        lakeID: "monroe",
+                        ramp: "Cutright",
                         state: "IN",
                         txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2019-07-20-ohio-river-rocky-point",
-                        entryLink: "https://www.flwfishing.com/tournaments/2019-07-20-ohio-river-rocky-point"
+                        resultsLink: "https://www.flwfishing.com/results/2020-06-27-monroe",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-06-27-monroe"
                     },
                     {
-                        date: "2019-09-28",
+                        date: "2020-07-18",
                         lake: "Ohio Rvr",
                         ramp: "Lawrenceburg",
                         state: "IN",
                         txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2019-09-28-ohio-river-tanners-creek",
-                        entryLink: "https://www.flwfishing.com/tournaments/2019-09-28-ohio-river-tanners-creek"
+                        resultsLink: "https://www.flwfishing.com/tournaments/2020-07-18-ohio-river-tanners-creek",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-07-18-ohio-river-tanners-creek"
+                    },
+                    {
+                        date: "20-08-08",
+                        lake: "Ohio Rvr",
+                        ramp: "Rocky Point",
+                        state: "IN",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2020-08-08-ohio-river-rocky-point",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-08-08-ohio-river-rocky-point"
+                    },
+                    {
+                        date: "2020-09-19",
+                        lake: "Rough River",
+                        ramp: "Rough River SP",
+                        state: "IN",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/tournaments/2020-09-19-rough-river",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-09-19-rough-river"
                     }
                 ]
             },
@@ -1590,54 +1609,64 @@ module.exports = [
                 tournaments: [
 
                     {
-                        date: "2019-02-23",
+                        date: "2020-02-29",
                         lake: "Norman",
                         lakeID: "Norman",
                         ramp: "Pinnacle",
                         state: "NC",
                         txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2019-02-23-norman",
-                        entryLink: "https://www.flwfishing.com/tournaments/2019-02-23-norman"
+                        resultsLink: "https://www.flwfishing.com/results/2020-02-29-norman",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-02-29-norman"
                     },
                     {
-                        date: "2019-03-23",
+                        date: "2020-04-04",
                         lake: "Wylie",
                         lakeID: "wylie",
                         ramp: "Buster Boyd",
                         state: "NC",
                         txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2019-03-23-wylie",
-                        entryLink: "https://www.flwfishing.com/tournaments/2019-03-23-wylie"
+                        resultsLink: "https://www.flwfishing.com/results/2020-04-04-wylie",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-04-04-wylie"
                     },
                     {
-                        date: "2019-04-27",
+                        date: "2020-04-18",
                         lake: "Kerr",
                         lakeID: "kerr",
                         ramp: "Nutbush",
                         state: "NC",
                         txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2019-04-27-kerr",
-                        entryLink: "https://www.flwfishing.com/tournaments/2019-04-27-kerr"
+                        resultsLink: "https://www.flwfishing.com/results/2020-04-18-kerr",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-04-18-kerr"
                     },
                     {
-                        date: "2019-06-08",
+                        date: "2020-06-13",
                         lake: "High Rock",
                         lakeID: "highrock",
                         ramp: "Tamarac",
                         state: "NC",
                         txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2019-06-08-high-rock",
-                        entryLink: "https://www.flwfishing.com/tournaments/2019-06-08-high-rock"
+                        resultsLink: "https://www.flwfishing.com/results/2020-06-13-high-rock",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-06-13-high-rock"
                     },
                     {
-                        date: "2019-09-21",
+                        date: "2020-09-12",
                         lake: "Norman",
-                        lakeID: "oldhickory",
-                        ramp: "norman",
+                        lakeID: "norman",
+                        ramp: "Pinnacle",
                         state: "NC",
                         txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2019-09-21-norman",
-                        entryLink: "https://www.flwfishing.com/tournaments/2019-09-21-norman"
+                        resultsLink: "https://www.flwfishing.com/results/2020-09-12-norman",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-09-12-norman"
+                    },
+                    {
+                        date: "2020-09-13",
+                        lake: "Norman",
+                        lakeID: "norman",
+                        ramp: "Pinnacle",
+                        state: "NC",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2020-09-12-norman",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-09-12-norman"
                     }
                 ]
             },
@@ -1646,54 +1675,64 @@ module.exports = [
                 tournaments: [
 
                     {
-                        date: "2019-04-13",
+                        date: "2020-04-25",
                         lake: "Kerr",
                         lakeID: "kerr",
                         ramp: "Nutbush",
                         state: "NC-VA",
                         txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2019-04-13-kerr",
-                        entryLink: "https://www.flwfishing.com/tournaments/2019-04-13-kerr"
+                        resultsLink: "https://www.flwfishing.com/tournaments/2020-04-25-kerr",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-04-25-kerr"
                     },
                     {
-                        date: "2019-05-11",
-                        lake: "Smith Mtn",
-                        lakeID: "smithmountain",
-                        ramp: "Parkway",
-                        state: "VA",
+                        date: "2020-05-16",
+                        lake: "Kerr",
+                        lakeID: "kerr",
+                        ramp: "Nutbush",
+                        state: "NC-VA",
                         txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2019-05-11-smith-mountain",
-                        entryLink: "https://www.flwfishing.com/tournaments/2019-05-11-smith-mountain"
+                        resultsLink: "https://www.flwfishing.com/results/2020-05-16-kerr",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-05-16-kerr"
                     },
                     {
-                        date: "2019-06-22",
+                        date: "2020-06-06",
                         lake: "High Rock",
                         lakeID: "highrock",
                         ramp: "Tamarac",
                         state: "NC",
                         txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2019-06-22-high-rock",
-                        entryLink: "https://www.flwfishing.com/tournaments/2019-06-22-high-rock"
+                        resultsLink: "https://www.flwfishing.com/results/2020-06-06-high-rock",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-06-06-high-rock"
                     },
                     {
-                        date: "2019-07-13",
+                        date: "2020-08-08",
                         lake: "James Rvr",
                         lakeID: "jamesriver",
                         ramp: "Osborne",
                         state: "VA",
                         txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2019-07-13-james-river",
-                        entryLink: "https://www.flwfishing.com/tournaments/2019-07-13-james-river"
+                        resultsLink: "https://www.flwfishing.com/results/2020-08-08-james-river",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-08-08-james-river"
                     },
                     {
-                        date: "2019-09-07",
+                        date: "2020-09-19",
                         lake: "Smith Mtn",
                         lakeID: "smithmountain",
                         ramp: "Parkway",
                         state: "VA",
                         txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2019-09-07-smith-mountain",
-                        entryLink: "https://www.flwfishing.com/tournaments/2019-09-07-smith-mountain"
+                        resultsLink: "https://www.flwfishing.com/results/2020-09-19-smith-mountain",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-09-19-smith-mountain"
+                    },
+                    {
+                        date: "2020-09-20",
+                        lake: "Smith Mtn",
+                        lakeID: "smithmountain",
+                        ramp: "Parkway",
+                        state: "VA",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2020-09-19-smith-mountain",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-09-19-smith-mountain"
                     }
                 ]
             },
@@ -1702,108 +1741,108 @@ module.exports = [
                 tournaments: [
 
                     {
-                        date: "2019-04-06",
-                        lake: "Kerr",
-                        lakeID: "kerr",
-                        ramp: "Nutbush",
-                        state: "NC-VA",
-                        txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2019-04-06-kerr",
-                        entryLink: "https://www.flwfishing.com/tournaments/2019-09-07-smith-mountain"
-                    },
-                    {
-                        date: "2019-06-29",
+                        date: "2020-03-14",
                         lake: "Smith Mtn",
                         lakeID: "smithmountain",
                         ramp: "Parkway",
                         state: "VA",
                         txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2019-06-29-smith-mountain",
-                        entryLink: "https://www.flwfishing.com/tournaments/2019-06-29-smith-mountain"
+                        resultsLink: "https://www.flwfishing.com/results/2020-03-14-smith-mountain",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-03-14-smith-mountain"
                     },
                     {
-                        date: "2019-07-27",
+                        date: "2020-05-09",
                         lake: "Potomac",
                         lakeID: "potomac",
                         ramp: "Smallwood",
                         state: "MD-VA",
                         txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2019-07-27-potomac",
-                        entryLink: "https://www.flwfishing.com/tournaments/2019-07-27-potomac"
+                        resultsLink: "https://www.flwfishing.com/results/2020-05-09-potomac",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-05-09-potomac"
                     },
                     {
-                        date: "2019-08-17",
+                        date: "2020-05-30",
+                        lake: "Kerr",
+                        lakeID: "kerr",
+                        ramp: "Nutbush",
+                        state: "NC-VA",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2020-05-30-kerr",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-05-30-kerr"
+                    },
+                    {
+                        date: "2020-06-27",
                         lake: "Potomac",
                         lakeID: "potomac",
                         ramp: "Smallwood",
                         state: "MD-VA",
                         txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2019-08-17-potomac",
-                        entryLink: "https://www.flwfishing.com/tournaments/2019-08-17-potomac"
+                        resultsLink: "https://www.flwfishing.com/results/2020-06-27-potomac",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-06-27-potomac"
                     },
                     {
-                        date: "2019-09-14",
-                        lake: "James Rvr",
-                        lakeID: "jamesriver",
-                        ramp: "Osborne",
-                        state: "VA",
+                        date: "2020-08-29",
+                        lake: "Potomac",
+                        lakeID: "potomac",
+                        ramp: "Smallwood",
+                        state: "MD-VA",
                         txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2019-09-14-james-river",
-                        entryLink: "https://www.flwfishing.com/tournaments/2019-09-14-james-river"
+                        resultsLink: "https://www.flwfishing.com/results/2020-08-29-potomac",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-08-29-potomac"
                     }
                 ]
             },
             {
                 trail: "BFL SC",
                 tournaments: [{
-                        date: "2019-02-16",
-                        lake: "Hartwell",
-                        lakeID: "hartwell",
-                        ramp: "Green Pond",
+                        date: "2020-02-15",
+                        lake: "Murray",
+                        lakeID: "murray",
+                        ramp: "Dreher Island",
                         state: "SC",
                         txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2019-02-16-hartwell",
-                        entryLink: "https://www.flwfishing.com/tournaments/2019-02-16-hartwell"
+                        resultsLink: "https://www.flwfishing.com/results/2020-02-15-murray",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-02-15-murray"
                     },
                     {
-                        date: "2019-03-09",
+                        date: "2020-03-028",
                         lake: "Santee Cooper",
                         lakeID: "Santee1",
                         ramp: "John C Land",
                         state: "SC",
                         txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2019-03-09-santee-cooper",
-                        entryLink: "https://www.flwfishing.com/tournaments/2019-03-09-santee-cooper"
+                        resultsLink: "https://www.flwfishing.com/results/2020-03-28-santee-cooper",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-03-28-santee-cooper"
                     },
                     {
-                        date: "2019-03-30",
+                        date: "2020-03-30",
+                        lake: "Wateree",
+                        lakeID: "wateree",
+                        ramp: "Clear Water Cove",
+                        state: "SC",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2020-05-16-wateree",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-05-16-wateree"
+                    },
+                    {
+                        date: "2020-09-19",
                         lake: "Clarks Hill",
                         lakeID: "clarkshill",
-                        ramp: "Wildwood Park",
+                        ramp: "Dorn Fishing Facility",
                         state: "SC",
                         txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2019-03-30-clarks-hill",
-                        entryLink: "https://www.flwfishing.com/tournaments/2019-03-30-clarks-hill"
+                        resultsLink: "https://www.flwfishing.com/results/2020-09-19-clarks-hill",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-09-19-clarks-hill"
                     },
                     {
-                        date: "2019-05-18",
-                        lake: "Wylie",
-                        lakeID: "wylie",
-                        ramp: "Buster Boyd",
+                        date: "2020-09-20",
+                        lake: "Clarks Hill",
+                        lakeID: "clarkshill",
+                        ramp: "Dorn Fishing Facility",
                         state: "SC",
                         txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2019-05-18-wylie",
-                        entryLink: "https://www.flwfishing.com/tournaments/2019-05-18-wylie"
-                    },
-                    {
-                        date: "2019-09-28",
-                        lake: "Hartwell",
-                        lakeID: "hartwell",
-                        ramp: "Green Pond",
-                        state: "SC",
-                        txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2019-09-28-hartwell",
-                        entryLink: "https://www.flwfishing.com/tournaments/2019-09-28-hartwell"
+                        resultsLink: "https://www.flwfishing.com/results/2020-09-20-clarks-hill",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-09-20-clarks-hill"
                     }
                 ]
             },
