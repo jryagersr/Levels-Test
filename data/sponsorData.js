@@ -207,6 +207,15 @@ module.exports = [
         endDate: "2021-01-01T00:00:00.0Z"
     },
     {
+        sponsor: "Jenko Fishing",
+        href: "https://jenkofishing.com/",
+        src: "/static/assets/img/sponsor-banners/jenko banner.png",
+        location: ["all"],
+        type: "logo",
+        startDate: "2019-01-01T00:00:00.0Z",
+        endDate: "2021-01-01T00:00:00.0Z"
+    },
+    {
         sponsor: "Warriors On The Water",
         href: "https://www.warriorsonthewater.com/",
         src: "/static/assets/img/tournament-banners/warriors on the water banner.png",
