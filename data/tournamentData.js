@@ -714,65 +714,65 @@ module.exports = [
                 tournaments: [
 
                     {
-                        date: "2019-02-09",
+                        date: "2020-02-08",
                         lake: "Kerr",
                         lakeID: "kerr",
                         ramp: "Occonneechee",
                         state: "NC-VA",
                         txDetail: "Qualifier 1",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-kerr-feb-9-2019-kirkpatrick-fore-haul-in-20-33-lbs-collect-1565-00/",
+                        resultsLink: "",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
                     },
                     {
-                        date: "2019-02-24",
-                        lake: "Kerr",
-                        lakeID: "kerr",
-                        ramp: "Occonneechee",
-                        state: "NC",
-                        txDetail: "Qualifier 2",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-kerr-lake-nc-va-feb-24-2019-talbott-johns-top-the-39-boat-field-with-13-23-lbs/",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
-                    },
-                    {
-                        date: "2019-03-17",
+                        date: "2020-02-29",
                         lake: "Kerr",
                         lakeID: "kerr",
                         ramp: "Occonneechee",
                         state: "NC-VA",
-                        txDetail: "Gold 3",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-kerr-march-17-2019-the-houchins-claim-the-top-of-the-mountain-17-87-lbs-2440-00/",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
                     },
                     {
-                        date: "2019-03-31",
+                        date: "2020-03-15",
                         lake: "Kerr",
                         lakeID: "kerr",
                         ramp: "Occonneechee",
                         state: "NC-VA",
-                        txDetail: "Gold 4",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-march-31-2019-kerr-va-justis-bobbitt-cullen-ports-top-the-57-boat-field-18-18-lbs-collect-2650-00/",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
                     },
                     {
-                        date: "2019-04-14",
+                        date: "2020-03-29",
                         lake: "Kerr",
                         lakeID: "kerr",
                         ramp: "Occonneechee",
                         state: "NC-VA",
-                        txDetail: "Qualifier 5",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-kerr-va-april-14-2019-tommy-marrow-dennis-reedy-weigh-em-up-18-77-lbs-1705-00-donnie-avant-randy-waterman-win-the-kerr-spring-points/",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
                     },
                     {
-                        date: "2019-04-28",
+                        date: "2020-04-19",
                         lake: "Kerr",
                         lakeID: "kerr",
                         ramp: "Occonneechee",
-                        state: "NC",
-                        txDetail: "Final",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-spring-final-kerr-lake-va-nc-april-28-2019-corey-leonard-paul-rigsbee-weigh-in-16-40-lbs-cash-a-4000-00-check-boom/",
+                        state: "NC-VA",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
-                    }
+                    },
+                    {
+                        date: "2020-04-26",
+                        lake: "Kerr",
+                        lakeID: "kerr",
+                        ramp: "Occonneechee",
+                        state: "NC-VA",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
+                    },
                 ]
             },
             {
@@ -943,64 +943,75 @@ module.exports = [
                 tournaments: [
 
                     {
-                        date: "2019-02-02",
+                        date: "2020-02-15",
                         lake: "Wylie",
                         lakeID: "wylie",
                         ramp: "Buster Boyd",
                         state: "SC",
                         txDetail: "Qualifier 1",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-wylie-feb-2-2019-smith-breakfield-bank-1465-00-with-15-64-lbs/",
+                        resultsLink: "",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wylie/"
                     },
                     {
-                        date: "2019-03-10",
+                        date: "2020-02-29",
                         lake: "Wylie",
                         lakeID: "wylie",
                         ramp: "Buster Boyd",
-                        state: "NC-SC",
-                        txDetail: "Qualifier 2",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-wylie-march-10-2019/",
+                        state: "SC",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wylie/"
                     },
                     {
-                        date: "2019-03-30",
+                        date: "2020-03-14",
                         lake: "Wylie",
                         lakeID: "wylie",
                         ramp: "Buster Boyd",
-                        state: "NC-SC",
-                        txDetail: "Qualifier 3",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-wylie-march-30-2019-john-paul-george-jason-quinn-win-with-17-11-lbs-1440-00/",
+                        state: "SC",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wylie/"
                     },
                     {
-                        date: "2019-04-13",
+                        date: "2020-03-21",
                         lake: "Wylie",
                         lakeID: "wylie",
                         ramp: "Buster Boyd",
-                        state: "NC-SC",
-                        txDetail: "Qualifier 4",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-wylie-sc-nc-april-13-2019/",
+                        state: "SC",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wylie/"
                     },
                     {
-                        date: "2019-04-20",
-                        lake: "Wylie",
-                        ramp: "Buster Boyd",
-                        state: "NC-SC",
-                        txDetail: "Final",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-wylie-sc-nc-april-20-2019-david-winters/",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wylie/"
-                    },
-                    {
-                        date: "2019-04-27",
+                        date: "2020-04-11",
                         lake: "Wylie",
                         lakeID: "wylie",
                         ramp: "Buster Boyd",
-                        state: "NC-SC",
-                        txDetail: "Final",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-wylie-sc-nc-spring-final-april-27-tim-chapman-takes-home-3925-00-in-cash-prizes/",
+                        state: "SC",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wylie/"
-                    }
+                    },
+                    {
+                        date: "2020-04-25",
+                        lake: "Wylie",
+                        lakeID: "wylie",
+                        ramp: "Buster Boyd",
+                        state: "SC",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wylie/"
+                    },
+                    {
+                        date: "2020-05-16",
+                        lake: "Wylie",
+                        lakeID: "wylie",
+                        ramp: "Buster Boyd",
+                        state: "SC",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wylie/"
+                    },
                 ]
             },
             {
