@@ -1,6 +1,160 @@
 module.exports = [
     // Comment added to make change
+    {
+        organization: "2020 BASS Nation",
+        trails: [{
+            trail: "Region Six",
+            tournaments: [
 
+                {
+                    date: "2020-04-04",
+                    lake: "Gaston",
+                    lakeID: "gaston",
+                    ramp: "Summit",
+                    state: "NC",
+                    txDetail: "T1",
+                    resultsLink: "",
+                    entryLink: ""
+                },
+                {
+                    date: "2020-04-25",
+                    lake: "Kerr",
+                    lakeID: "kerr",
+                    ramp: "Occonneechee",
+                    state: "NC",
+                    txDetail: "T1",
+                    resultsLink: "",
+                    entryLink: ""
+                },
+                {
+                    date: "2020-05-16",
+                    lake: "Kerr",
+                    lakeID: "kerr",
+                    ramp: "Occonneechee",
+                    state: "NC",
+                    txDetail: "T1",
+                    resultsLink: "",
+                    entryLink: ""
+                },
+                {
+                    date: "2020-06-20",
+                    lake: "James River",
+                    lakeID: "jamesrvr",
+                    ramp: "Osbourne",
+                    state: "NC",
+                    txDetail: "T1",
+                    resultsLink: "",
+                    entryLink: ""
+                },
+                {
+                    date: "2020-07-11",
+                    lake: "Potomac",
+                    lakeID: "potomac",
+                    ramp: "Hope Springs",
+                    state: "NC",
+                    txDetail: "T1",
+                    resultsLink: "",
+                    entryLink: ""
+                },
+                {
+                    date: "2020-09-19",
+                    lake: "Chicahominy",
+                    lakeID: "jamesrvr",
+                    ramp: "Henderson Pt",
+                    state: "NC",
+                    txDetail: "T1",
+                    resultsLink: "",
+                    entryLink: ""
+                }
+            ]
+        },
+        {
+            trail: "States",
+            tournaments: [
+
+                {
+                    date: "2020-03-28",
+                    lake: "Gaston",
+                    lakeID: "gaston",
+                    ramp: "Holly Grove",
+                    state: "NC",
+                    txDetail: "T1",
+                    resultsLink: "",
+                    entryLink: ""
+                },
+                {
+                    date: "2020-03-29",
+                    lake: "Gaston",
+                    lakeID: "gaston",
+                    ramp: "Holly Grove",
+                    state: "NC",
+                    txDetail: "T1",
+                    resultsLink: "",
+                    entryLink: ""
+                },
+                {
+                    date: "2020-05-02",
+                    lake: "Kerr",
+                    lakeID: "kerr",
+                    ramp: "Occonneechee",
+                    state: "NC",
+                    txDetail: "T1",
+                    resultsLink: "",
+                    entryLink: ""
+                },
+                {
+                    date: "2020-05-03",
+                    lake: "Kerr",
+                    lakeID: "kerr",
+                    ramp: "Occonneechee",
+                    state: "NC",
+                    txDetail: "T1",
+                    resultsLink: "",
+                    entryLink: ""
+                },
+                {
+                    date: "2020-10-03",
+                    lake: "Kerr",
+                    lakeID: "kerr",
+                    ramp: "Occonneechee",
+                    state: "NC",
+                    txDetail: "T1",
+                    resultsLink: "",
+                    entryLink: ""
+                },
+                {
+                    date: "2020-10-04",
+                    lake: "Kerr",
+                    lakeID: "kerr",
+                    ramp: "Occonneechee",
+                    state: "NC",
+                    txDetail: "T1",
+                    resultsLink: "",
+                    entryLink: ""
+                },
+                {
+                    date: "2020-11-07",
+                    lake: "TBD",
+                    lakeID: "",
+                    ramp: "",
+                    state: "NC",
+                    txDetail: "T1",
+                    resultsLink: "",
+                    entryLink: ""
+                },
+                {
+                    date: "2020-11-08",
+                    lake: "TBD",
+                    lakeID: "",
+                    ramp: "",
+                    state: "NC",
+                    txDetail: "T1",
+                    resultsLink: "",
+                    entryLink: ""
+                },
+            ]
+        }, ]
+    },
     {
         organization: "5-Alive",
         trails: [{
@@ -430,8 +584,7 @@ module.exports = [
     },
     {
         organization: "CATT",
-        trails: [
-            {
+        trails: [{
                 trail: "CATT Championship",
                 tournaments: [
 
@@ -1970,16 +2123,15 @@ module.exports = [
         trails: [{
             trail: "Fall Winter",
             tournaments: [{
-                    date: "2019-09-08",
-                    lake: "Tar River",
-                    lakeID: "tarriver",
-                    ramp: "Tranters Creek",
-                    state: "NC",
-                    txDetail: "",
-                    resultsLink: "https://www.ncbasschamps.com",
-                    entryLink: "https://www.ncbasschamps.com"
-                },
-            ]
+                date: "2019-09-08",
+                lake: "Tar River",
+                lakeID: "tarriver",
+                ramp: "Tranters Creek",
+                state: "NC",
+                txDetail: "",
+                resultsLink: "https://www.ncbasschamps.com",
+                entryLink: "https://www.ncbasschamps.com"
+            }, ]
         }]
     },
     {
@@ -1987,16 +2139,15 @@ module.exports = [
         trails: [{
             trail: "Sat Morn (5:30-10:30)",
             tournaments: [{
-                    date: "2020-08-17",
-                    lake: "Percy Priest",
-                    lakeID: "percypriest",
-                    ramp: "Jefferson Springs",
-                    state: "TN",
-                    txDetail: "",
-                    resultsLink: "",
-                    entryLink: "/assets/tximages/percypriestsatmorn.png"
-                },
-            ]
+                date: "2020-08-17",
+                lake: "Percy Priest",
+                lakeID: "percypriest",
+                ramp: "Jefferson Springs",
+                state: "TN",
+                txDetail: "",
+                resultsLink: "",
+                entryLink: "/assets/tximages/percypriestsatmorn.png"
+            }, ]
         }]
     },
     {
