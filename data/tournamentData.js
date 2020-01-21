@@ -21,7 +21,7 @@ module.exports = [
                     date: "2020-03-28",
                     lake: "Kerr",
                     lakeID: "kerr",
-                    ramp: "Occonneeche",
+                    ramp: "Occonneechee",
                     state: "NC",
                     txDetail: "T1",
                     resultsLink: "https://www.facebook.com/groups/657334777996712/permalink/657734494623407/",
@@ -305,7 +305,7 @@ module.exports = [
                         ramp: "Occonneechee",
                         state: "NC-VA",
                         txDetail: "Anglers Choice",
-                        resultsLink: "https://www.anglerschoicemarine.com/fckimages/RESULTS_2019_June8_KERR.pdf",
+                        resultsLink: "",
                         entryLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule"
                     },
                     {
@@ -431,7 +431,30 @@ module.exports = [
     {
         organization: "CATT",
         trails: [
+            {
+                trail: "CATT Championship",
+                tournaments: [
 
+                    {
+                        date: "2019-06-6",
+                        lake: "Kerr",
+                        ramp: "Nutbush",
+                        state: "NC",
+                        txDetail: "",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-championship/"
+                    },
+                    {
+                        date: "2019-06-7",
+                        lake: "Kerr",
+                        ramp: "Nutbush",
+                        state: "NC",
+                        txDetail: "",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-championship/"
+                    }
+                ]
+            },
             {
                 trail: "Phantom Outdoors Invitational",
                 tournaments: [
@@ -1795,33 +1818,33 @@ module.exports = [
                 tournaments: [
 
                     {
-                        date: "2019-04-20",
+                        date: "2020-04-18",
                         lake: "Shearon Harris",
                         lakeID: "shearonharris",
                         ramp: "Holleman's",
                         state: "NC",
                         txDetail: "T1",
-                        resultsLink: "https://www.fomntt.com/pageflow.cfm?callpage=results&schid=5904&getyear=2019",
+                        resultsLink: "",
                         entryLink: "https://www.fomntt.com/pageflow.cfm?callpage=divisioninfo&divid=88&getyear=2019"
                     },
                     {
-                        date: "2019-05-11",
+                        date: "2020-05-09",
                         lake: "Kerr",
                         lakeID: "kerr",
                         ramp: "Henderson Pt",
                         state: "NC-VA",
                         txDetail: "T2",
-                        resultsLink: "https://www.fomntt.com/pageflow.cfm?callpage=results&schid=5886&getyear=2019",
+                        resultsLink: "",
                         entryLink: "https://www.fomntt.com/pageflow.cfm?callpage=divisioninfo&divid=88&getyear=2019"
                     },
                     {
-                        date: "2019-06-15",
+                        date: "2020-06-27",
                         lake: "Falls",
                         lakeID: "falls",
                         ramp: "Upper Barton's",
                         state: "NC",
                         txDetail: "T3",
-                        resultsLink: "https://www.fomntt.com/pageflow.cfm?callpage=results&schid=5887&getyear=2019",
+                        resultsLink: "",
                         entryLink: "https://www.fomntt.com/pageflow.cfm?callpage=divisioninfo&divid=88&getyear=2019"
                     }
                 ]
@@ -1831,53 +1854,53 @@ module.exports = [
                 tournaments: [
 
                     {
-                        date: "2019-03-23",
+                        date: "2020-03-21",
                         lake: "Kerr",
                         lakeID: "kerr",
                         ramp: "Henderson Pt",
                         state: "NC-VA",
                         txDetail: "T1",
-                        resultsLink: "https://www.fomntt.com/pageflow.cfm?callpage=results&schid=5639&getyear=2019",
+                        resultsLink: "",
                         entryLink: "https://www.fomntt.com/pageflow.cfm?callpage=divisioninfo&divid=32&getyear=2019"
                     },
                     {
-                        date: "2019-04-06",
-                        lake: "Gaston",
-                        lakeID: "gaston",
-                        ramp: "Summit",
-                        state: "NC-VA",
-                        txDetail: "T2",
-                        resultsLink: "https://www.fomntt.com/pageflow.cfm?callpage=results&schid=5640&getyear=2019",
-                        entryLink: "https://www.fomntt.com/pageflow.cfm?callpage=divisioninfo&divid=32&getyear=2019"
-                    },
-                    {
-                        date: "2019-04-27",
+                        date: "2020-04-25",
                         lake: "Mayo",
                         lakeID: "mayo",
                         ramp: "Triple Springs",
                         state: "NC",
-                        txDetail: "T3",
-                        resultsLink: "https://www.fomntt.com/pageflow.cfm?callpage=results&schid=5641&getyear=2019",
+                        txDetail: "T2",
+                        resultsLink: "",
                         entryLink: "https://www.fomntt.com/pageflow.cfm?callpage=divisioninfo&divid=32&getyear=2019"
                     },
                     {
-                        date: "2019-05-18",
+                        date: "2020-05-16",
                         lake: "Jordan",
                         lakeID: "jordan",
                         ramp: "Ebenezer",
                         state: "NC",
-                        txDetail: "T4",
-                        resultsLink: "https://www.fomntt.com/pageflow.cfm?callpage=results&schid=5642&getyear=2019",
+                        txDetail: "T3",
+                        resultsLink: "",
                         entryLink: "https://www.fomntt.com/pageflow.cfm?callpage=divisioninfo&divid=32&getyear=2019"
                     },
                     {
-                        date: "2019-06-15",
+                        date: "2020-05-30",
+                        lake: "Gaston",
+                        lakeID: "gaston",
+                        ramp: "Summit",
+                        state: "NC",
+                        txDetail: "T4",
+                        resultsLink: "",
+                        entryLink: "https://www.fomntt.com/pageflow.cfm?callpage=divisioninfo&divid=32&getyear=2019"
+                    },
+                    {
+                        date: "2020-06-20",
                         lake: "Falls",
                         lakeID: "falls",
-                        ramp: "Ledgerock",
+                        ramp: "Upper Barton",
                         state: "NC",
                         txDetail: "T5",
-                        resultsLink: "https://www.fomntt.com/pageflow.cfm?callpage=results&schid=5643&getyear=2019",
+                        resultsLink: "",
                         entryLink: "https://www.fomntt.com/pageflow.cfm?callpage=divisioninfo&divid=32&getyear=2019"
                     }
                 ]
@@ -1891,127 +1914,7 @@ module.exports = [
             tournaments: [
 
                 {
-                    date: "2019-05-22",
-                    lake: "Shearon Harris",
-                    lakeID: "shearonharris",
-                    ramp: "Crosspoint",
-                    state: "NC",
-                    txDetail: "",
-                    resultsLink: "https://www.facebook.com/119889178084587/photos/a.1303365486403611/2665809523492527/?type=3",
-                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
-                },
-                {
-                    date: "2019-05-29",
-                    lake: "Shearon Harris",
-                    lakeID: "shearonharris",
-                    ramp: "Crosspoint",
-                    state: "NC",
-                    txDetail: "",
-                    resultsLink: "https://www.facebook.com/photo.php?fbid=10213917086698095&set=a.10213404514084100&type=3",
-                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
-                },
-                {
-                    date: "2019-06-05",
-                    lake: "Shearon Harris",
-                    lakeID: "shearonharris",
-                    ramp: "Crosspoint",
-                    state: "NC",
-                    txDetail: "",
-                    resultsLink: "https://www.facebook.com/photo.php?fbid=10213962634356758&set=pcb.10213962634996774&type=3&__tn__=HH-RH-R&eid=ARCuI3rue3hY7rXhYyE1DmWdNcMwE8fjZmzmLfpdugPzvWHYOt2AvzsiNwr8R4x5l9ZHDOU8LPxolvQg",
-                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
-                },
-                {
-                    date: "2019-06-12",
-                    lake: "Shearon Harris",
-                    lakeID: "shearonharris",
-                    ramp: "Crosspoint",
-                    state: "NC",
-                    txDetail: "",
-                    resultsLink: "https://www.facebook.com/permalink.php?story_fbid=2717760064964139&id=119889178084587&comment_tracking=%7B%22tn%22%3A%22O%22%7D",
-                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
-                },
-                {
-                    date: "2019-06-19",
-                    lake: "Shearon Harris",
-                    lakeID: "shearonharris",
-                    ramp: "Crosspoint",
-                    state: "NC",
-                    txDetail: "",
-                    resultsLink: "https://www.facebook.com/119889178084587/photos/a.1303365486403611/2736205699786242/?type=3&eid=ARCUGFVAfUub8fkX8RqyLsr3Q9jUzmAQR7MQ5f6yxv0SNHgINNRTrfS9ex3Q4dPGWYmDJT11yCzrmxJ8&__tn__=EHH-R",
-                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
-                },
-                {
-                    date: "2019-06-26",
-                    lake: "Shearon Harris",
-                    lakeID: "shearonharris",
-                    ramp: "Crosspoint",
-                    state: "NC",
-                    txDetail: "",
-                    resultsLink: "https://www.facebook.com/119889178084587/photos/a.1303365486403611/2754502801289865/?type=3&eid=ARDERMZ9vGarXNReLR9SmZXyZOsSw79XTvje3Rjo7uUQ7U_KFoTrQVoY291jzc8_IiaoD3OfHxOXOsd_&__tn__=EHH-R",
-                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
-                },
-                {
-                    date: "2019-07-10",
-                    lake: "Shearon Harris",
-                    lakeID: "shearonharris",
-                    ramp: "Crosspoint",
-                    state: "NC",
-                    txDetail: "",
-                    resultsLink: "https://www.facebook.com/119889178084587/photos/p.2789661791107299/2789661791107299/?type=1",
-                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
-                },
-                {
-                    date: "2019-07-17",
-                    lake: "Shearon Harris",
-                    lakeID: "shearonharris",
-                    ramp: "Crosspoint",
-                    state: "NC",
-                    txDetail: "",
-                    resultsLink: "https://www.facebook.com/119889178084587/photos/a.1303365486403611/2807410315999113/?type=3&eid=ARD3XjrmBe-hF8Cq2Fsl5W1W3i39TcgqYhV9i-Zr37qHPJC6os-3We7sdFtR7gLVIdsiXcB7hfZRHoTb&__tn__=EEHH-R",
-                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
-                },
-                {
-                    date: "2019-07-24",
-                    lake: "Shearon Harris",
-                    lakeID: "shearonharris",
-                    ramp: "Crosspoint",
-                    state: "NC",
-                    txDetail: "",
-                    resultsLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=%2Cd%2CP-R&eid=ARBwp5si2bM2ink7gY7cNwkMXUe9B3z5Vn-t9tYHXCnkn-hGxmF81TbtYpjRBaWoet3n_9kscFhpxNr1",
-                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
-                },
-                {
-                    date: "2019-07-31",
-                    lake: "Shearon Harris",
-                    lakeID: "shearonharris",
-                    ramp: "Crosspoint",
-                    state: "NC",
-                    txDetail: "",
-                    resultsLink: "https://www.facebook.com/119889178084587/photos/a.1303365486403611/2843254535748024/?type=3&eid=ARBkhlfigiLfI3Q8fNUMbeySTxiS28LJhhk9ugywEefa5tSRpfXZ5-QPM-u5j7RbIzedCJ5_9BwU8bMJ&__tn__=EEHH-R",
-                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
-                },
-                {
-                    date: "2019-08-07",
-                    lake: "Shearon Harris",
-                    lakeID: "shearonharris",
-                    ramp: "Crosspoint",
-                    state: "NC",
-                    txDetail: "",
-                    resultsLink: "https://www.facebook.com/permalink.php?story_fbid=2861764867230324&id=119889178084587&comment_tracking=%7B%22tn%22%3A%22O%22%7D",
-                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
-                },
-                {
-                    date: "2019-08-21",
-                    lake: "Shearon Harris",
-                    lakeID: "shearonharris",
-                    ramp: "Crosspoint",
-                    state: "NC",
-                    txDetail: "",
-                    resultsLink: "",
-                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
-                },
-                {
-                    date: "2019-08-28",
+                    date: "2020-04-01",
                     lake: "Shearon Harris",
                     lakeID: "shearonharris",
                     ramp: "Crosspoint",
@@ -2037,146 +1940,6 @@ module.exports = [
                     resultsLink: "https://www.ncbasschamps.com",
                     entryLink: "https://www.ncbasschamps.com"
                 },
-                {
-                    date: "2019-10-20",
-                    lake: "Roanoke River",
-                    lakeID: "roanokewill",
-                    ramp: "Plymouth",
-                    state: "NC",
-                    txDetail: "",
-                    resultsLink: "https://www.ncbasschamps.com",
-                    entryLink: "https://www.ncbasschamps.com"
-                },
-                {
-                    date: "2019-11-24",
-                    lake: "Chowan River",
-                    lakeID: "chowan",
-                    ramp: "Tunis Landing",
-                    state: "NC",
-                    txDetail: "",
-                    resultsLink: "https://www.ncbasschamps.com",
-                    entryLink: "https://www.ncbasschamps.com"
-                },
-                {
-                    date: "2019-12-15",
-                    lake: "Tar River",
-                    lakeID: "tarriver",
-                    ramp: "Havens Garden",
-                    state: "NC",
-                    txDetail: "",
-                    resultsLink: "https://www.ncbasschamps.com",
-                    entryLink: "https://www.ncbasschamps.com"
-                },
-                {
-                    date: "2020-01-05",
-                    lake: "Pamlico",
-                    lakeID: "Pamlico",
-                    ramp: "Havens Garden",
-                    state: "NC",
-                    txDetail: "",
-                    resultsLink: "https://www.ncbasschamps.com",
-                    entryLink: "https://www.ncbasschamps.com"
-                },
-                {
-                    date: "2020-02-09",
-                    lake: "Roanoke River",
-                    lakeID: "roanoke45",
-                    ramp: "Plymouth",
-                    state: "NC",
-                    txDetail: "",
-                    resultsLink: "https://www.ncbasschamps.com",
-                    entryLink: "https://www.ncbasschamps.com"
-                },
-                {
-                    date: "2020-03-01",
-                    lake: "Neuse River",
-                    lakeID: "neuse",
-                    ramp: "Lawson Creek",
-                    state: "NC",
-                    txDetail: "",
-                    resultsLink: "https://www.ncbasschamps.com",
-                    entryLink: "https://www.ncbasschamps.com"
-                },
-                {
-                    date: "2020-04-18",
-                    lake: "Falls Lake",
-                    lakeID: "falls",
-                    ramp: "",
-                    state: "NC",
-                    txDetail: "",
-                    resultsLink: "https://www.ncbasschamps.com",
-                    entryLink: "https://www.ncbasschamps.com"
-                },
-                {
-                    date: "2020-05-02",
-                    lake: "Falls Lake",
-                    lakeID: "falls",
-                    ramp: "",
-                    state: "NC",
-                    txDetail: "",
-                    resultsLink: "https://www.ncbasschamps.com",
-                    entryLink: "https://www.ncbasschamps.com"
-                },
-                {
-                    date: "2020-06-27",
-                    lake: "Perquimans",
-                    lakeID: "",
-                    ramp: "",
-                    state: "NC",
-                    txDetail: "",
-                    resultsLink: "https://www.ncbasschamps.com",
-                    entryLink: "https://www.ncbasschamps.com"
-                },
-                {
-                    date: "2020-07-11",
-                    lake: "Roanoke",
-                    lakeID: "roanoke45",
-                    ramp: "",
-                    state: "NC",
-                    txDetail: "",
-                    resultsLink: "https://www.ncbasschamps.com",
-                    entryLink: "https://www.ncbasschamps.com"
-                },
-                {
-                    date: "2020-08-08",
-                    lake: "Chowan",
-                    lakeID: "",
-                    ramp: "",
-                    state: "NC",
-                    txDetail: "",
-                    resultsLink: "https://www.ncbasschamps.com",
-                    entryLink: "https://www.ncbasschamps.com"
-                },
-                {
-                    date: "2020-09-05",
-                    lake: "Tar",
-                    lakeID: "",
-                    ramp: "",
-                    state: "NC",
-                    txDetail: "",
-                    resultsLink: "https://www.ncbasschamps.com",
-                    entryLink: "https://www.ncbasschamps.com"
-                },
-                {
-                    date: "2020-10-03",
-                    lake: "Gaston",
-                    lakeID: "gaston",
-                    ramp: "",
-                    state: "NC",
-                    txDetail: "",
-                    resultsLink: "https://www.ncbasschamps.com",
-                    entryLink: "https://www.ncbasschamps.com"
-                },
-                {
-                    date: "2020-10-25",
-                    lake: "Chowan",
-                    lakeID: "",
-                    ramp: "",
-                    state: "NC",
-                    txDetail: "",
-                    resultsLink: "https://www.ncbasschamps.com",
-                    entryLink: "https://www.ncbasschamps.com"
-                },
             ]
         }]
     },
@@ -2185,7 +1948,7 @@ module.exports = [
         trails: [{
             trail: "Sat Morn (5:30-10:30)",
             tournaments: [{
-                    date: "2019-08-17",
+                    date: "2020-08-17",
                     lake: "Percy Priest",
                     lakeID: "percypriest",
                     ramp: "Jefferson Springs",
@@ -2194,46 +1957,6 @@ module.exports = [
                     resultsLink: "",
                     entryLink: "/assets/tximages/percypriestsatmorn.png"
                 },
-                {
-                    date: "2019-08-24",
-                    lake: "Percy Priest",
-                    lakeID: "percypriest",
-                    ramp: "Jefferson Springs",
-                    state: "TN",
-                    txDetail: "",
-                    resultsLink: "",
-                    entryLink: "/assets/tximages/percypriestsatmorn.png"
-                },
-                {
-                    date: "2019-08-31",
-                    lake: "Percy Priest",
-                    lakeID: "percypriest",
-                    ramp: "Jefferson Springs",
-                    state: "TN",
-                    txDetail: "",
-                    resultsLink: "",
-                    entryLink: "/assets/tximages/percypriestsatmorn.png"
-                },
-                {
-                    date: "2019-09-07",
-                    lake: "Percy Priest",
-                    lakeID: "percypriest",
-                    ramp: "Jefferson Springs",
-                    state: "TN",
-                    txDetail: "",
-                    resultsLink: "",
-                    entryLink: "/assets/tximages/percypriestsatmorn.png"
-                },
-                {
-                    date: "2019-09-14",
-                    lake: "Percy Priest",
-                    lakeID: "percypriest",
-                    ramp: "Jefferson Springs",
-                    state: "TN",
-                    txDetail: "",
-                    resultsLink: "",
-                    entryLink: "/assets/tximages/percypriestsatmorn.png"
-                }
             ]
         }]
     },
