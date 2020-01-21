@@ -219,7 +219,7 @@ module.exports = [
         sponsor: "Cast for a Cure",
         href: "http://704outdoors.tv/cast-for-a-cure/",
         src: "/static/assets/img/tournament-banners/cfc banner.png",
-        location: ["badin", "highrock", "tillery","tuckertown"],
+        location: ["kerr", "jordan", "falls", "gaston", "shearonharris", "tillery", "highrock", "badin"],
         type: "charity",
         startDate: "2020-01-01T00:00:00.0Z",
         endDate: "2020-05-16T00:00:00.0Z"
