@@ -198,6 +198,15 @@ module.exports = [
         endDate: "2021-01-01T00:00:00.0Z"
     },
     {
+        sponsor: "Teespring Athletics",
+        href: "https://teespring.com/stores/sweet-tee-21",
+        src: "/static/assets/img/sponsor-banners/venable banner.png",
+        location: ["all"],
+        type: "logo",
+        startDate: "2019-01-01T00:00:00.0Z",
+        endDate: "2021-01-01T00:00:00.0Z"
+    },
+    {
         sponsor: "The Boat Guy",
         href: "http://ncboatguy.com/",
         src: "/static/assets/img/sponsor-banners/ncboatguy banner.png",
@@ -241,5 +250,14 @@ module.exports = [
         type: "charity",
         startDate: "2019-01-01T00:00:00.0Z",
         endDate: "2019-10-09T00:10:00.0Z"
+    },
+    {
+        sponsor: "Jordan Wildcat",
+        href: "",
+        src: "/static/assets/img/tournament-banners/jordan wildcat banner.png",
+        location: ["jordan"],
+        type: "tournament",
+        startDate: "2019-01-01T00:00:00.0Z",
+        endDate: "2020-01-25T00:10:00.0Z"
     }
 ]
