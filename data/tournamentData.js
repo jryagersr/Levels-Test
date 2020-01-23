@@ -2098,6 +2098,25 @@ module.exports = [
         }]
     },
     {
+        organization: "Jordan Wildcat",
+        trails: [{
+            trail: "Wildcat",
+            tournaments: [
+
+                {
+                    date: "2020-01-25",
+                    lake: "Jordan",
+                    lakeID: "jordan",
+                    ramp: "Ebenezer",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "",
+                    entryLink: ""
+                }
+            ]
+        }]
+    },
+    {
         organization: "NC Bass Champs",
         trails: [{
             trail: "Fall Winter",
