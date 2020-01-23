@@ -63,6 +63,15 @@ module.exports = [
         endDate: "2025-12-31T00:10:00.0Z"
     },
     {
+        sponsor: "Lowrance HDS Training",
+        href: "http://www.lowrancehdstraining.com/",
+        src: "/static/assets/img/sponsor-banners/lowrance training banner.png",
+        location: ["all"],
+        type: "logo",
+        startDate: "2020-01-01T00:00:00.0Z",
+        endDate: "2025-12-31T00:10:00.0Z"
+    },
+    {
         sponsor: "Collins Boating",
         href: "https://www.collinsboating.com/",
         src: "/static/assets/img/sponsor-banners/collins banner.png",
