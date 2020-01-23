@@ -268,5 +268,15 @@ module.exports = [
         type: "tournament",
         startDate: "2019-01-01T00:00:00.0Z",
         endDate: "2020-01-25T00:10:00.0Z"
+    },
+    {
+        sponsor: "Catt Old North 1",
+        href: "https://www.cattteamtrail.com/divisions/catt-old-north/",
+        src: "/static/assets/img/tournament-banners/catt old North 2020 kerr.png",
+        location: ["kerr"],
+        type: "tournament",
+        startDate: "2019-01-01T00:00:00.0Z",
+        endDate: "2020-03-14T00:10:00.0Z"
     }
+    
 ]
