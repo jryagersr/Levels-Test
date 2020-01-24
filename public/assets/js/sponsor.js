@@ -55,7 +55,14 @@ $.ajax({
 
         // just for temporary purposes only do this on kerr/jordan or falls
         // this is to avoid interfering with other lake's w/ txs
-        if (lakeRoute == 'kerr' || lakeRoute == 'jordan' || lakeRoute == 'falls' || lakeRoute == 'norman' || lakeRoute == 'badin') {
+        if (lakeRoute == 'kerr' || lakeRoute == 'jordan' 
+        || lakeRoute == 'falls' || lakeRoute == 'norman' 
+        || lakeRoute == 'badin' || lakeRoute == 'bigharris' 
+        || lakeRoute == 'conroe' || lakeRoute == 'clarkshill'
+        || lakeRoute == 'norman' || lakeRoute == 'tablerock'
+        || lakeRoute == 'murray' || lakeRoute == 'smithmountain'
+        || lakeRoute == 'chickamauga' || lakeRoute == 'dardanelle'
+        || lakeRoute == 'douglas' || lakeRoute == 'guntersville') {
 
             // Clear any ad content in the tournament scroller
             $("#adTxWell").empty();

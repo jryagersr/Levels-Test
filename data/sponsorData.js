@@ -1,5 +1,4 @@
-module.exports = [
-    {
+module.exports = [{
         sponsor: "JBRods",
         href: "https://www.custombassrods.com/",
         src: "/static/assets/img/sponsor-banners/jbrodsbanner.png",
@@ -75,7 +74,7 @@ module.exports = [
         sponsor: "Collins Boating",
         href: "https://www.collinsboating.com/",
         src: "/static/assets/img/sponsor-banners/collins banner.png",
-        location: ["kerr", "jordan", "falls", "gaston", "shearonharris","roanokewill","roanoke45"],
+        location: ["kerr", "jordan", "falls", "gaston", "shearonharris", "roanokewill", "roanoke45"],
         type: "logo",
         startDate: "2019-01-01T00:00:00.0Z",
         endDate: "2021-01-01T00:00:00.0Z"
@@ -93,7 +92,7 @@ module.exports = [
         sponsor: "Bass For Cash Series",
         href: "https://www.bassforcash.com/",
         src: "/static/assets/img/sponsor-banners/BFCS banner.png",
-        location: ["kerr", "jordan", "falls", "gaston", "roanokewill","roanoke45"],
+        location: ["kerr", "jordan", "falls", "gaston", "roanokewill", "roanoke45"],
         type: "logo",
         startDate: "2019-01-01T00:00:00.0Z",
         endDate: "2021-01-01T00:00:00.0Z"
@@ -277,6 +276,78 @@ module.exports = [
         type: "tournament",
         startDate: "2019-01-01T00:00:00.0Z",
         endDate: "2020-03-14T00:10:00.0Z"
+    },
+    {
+        sponsor: "Big Bass Harris Chain",
+        href: "https://bigbasstour.com/schedule",
+        src: "/static/assets/img/tournament-banners/big bass harris chain banner.png",
+        location: "bigharris",
+        type: "tournament",
+        startDate: "2019-01-01T00:00:00.0Z",
+        endDate: "2020-02-09T00:10:00.0Z"
+    },
+    {
+        sponsor: "Big Bass Conroe",
+        href: "https://bigbasstour.com/schedule",
+        src: "/static/assets/img/tournament-banners/big bass conroe banner.png",
+        location: "conroe",
+        type: "tournament",
+        startDate: "2019-01-01T00:00:00.0Z",
+        endDate: "2020-03-01T00:10:00.0Z"
+    },
+    {
+        sponsor: "Big Bass Clarks Hill",
+        href: "https://bigbasstour.com/schedule",
+        src: "/static/assets/img/tournament-banners/big bass clarks Hill banner.png",
+        location: "clarkshill",
+        type: "tournament",
+        startDate: "2019-01-01T00:00:00.0Z",
+        endDate: "2020-03-08T00:10:00.0Z"
+    },
+    {
+        sponsor: "Big Bass Norman",
+        href: "https://bigbasstour.com/schedule",
+        src: "/static/assets/img/tournament-banners/big bass norman banner.png",
+        location: "norman",
+        type: "tournament",
+        startDate: "2019-01-01T00:00:00.0Z",
+        endDate: "2020-03-22T00:10:00.0Z"
+    },
+    {
+        sponsor: "Big Bass Table Rock",
+        href: "https://bigbasstour.com/schedule",
+        src: "/static/assets/img/tournament-banners/big bass table rock banner.png",
+        location: "tablerock",
+        type: "tournament",
+        startDate: "2019-01-01T00:00:00.0Z",
+        endDate: "2020-04-05T00:10:00.0Z"
+    },
+    {
+        sponsor: "Big Bass Dardanelle",
+        href: "https://bigbasstour.com/schedule",
+        src: "/static/assets/img/tournament-banners/big bass dardanelle banner.png",
+        location: "dardanelle",
+        type: "tournament",
+        startDate: "2019-01-01T00:00:00.0Z",
+        endDate: "2020-05-31T00:10:00.0Z"
+    },
+    {
+        sponsor: "Big Bass Douglas",
+        href: "https://bigbasstour.com/schedule",
+        src: "/static/assets/img/tournament-banners/big bass douglas banner.png",
+        location: "douglas",
+        type: "tournament",
+        startDate: "2019-01-01T00:00:00.0Z",
+        endDate: "2020-10-11T00:10:00.0Z"
+    },
+    {
+        sponsor: "Big Bass Guntersville",
+        href: "https://bigbasstour.com/schedule",
+        src: "/static/assets/img/tournament-banners/big bass guntersville banner.png",
+        location: "guntersville",
+        type: "tournament",
+        startDate: "2019-01-01T00:00:00.0Z",
+        endDate: "2020-10-18T00:10:00.0Z"
     }
-    
+
 ]
