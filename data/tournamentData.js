@@ -584,6 +584,345 @@ module.exports = [
         ]
     },
     {
+        organization: "Cabelas",
+        trails: [{
+            trail: "Big Bass Tour",
+            tournaments: [
+
+                {
+                    date: "2020-02-07",
+                    lake: "Harris Chain",
+                    lakeID: "bigharris",
+                    ramp: "Hickory Point",
+                    state: "FL",
+                    txDetail: "",
+                    resultsLink: "https://bigbasstour.com/results/",
+                    entryLink: "https://bigbasstour.com/"
+                },
+                {
+                    date: "2020-02-08",
+                    lake: "Harris Chain",
+                    lakeID: "bigharris",
+                    ramp: "Hickory Point",
+                    state: "FL",
+                    txDetail: "",
+                    resultsLink: "https://bigbasstour.com/results/",
+                    entryLink: "https://bigbasstour.com/"
+                },
+                {
+                    date: "2020-02-09",
+                    lake: "Harris Chain",
+                    lakeID: "bigharris",
+                    ramp: "Hickory Point",
+                    state: "FL",
+                    txDetail: "",
+                    resultsLink: "https://bigbasstour.com/results/",
+                    entryLink: "https://bigbasstour.com/"
+                },
+                {
+                    date: "2020-02-28",
+                    lake: "Lake Conroe",
+                    lakeID: "conroe",
+                    ramp: "Papa's on the Lake",
+                    state: "TX",
+                    txDetail: "",
+                    resultsLink: "https://bigbasstour.com/results/",
+                    entryLink: "https://bigbasstour.com/"
+                },
+                {
+                    date: "2020-02-29",
+                    lake: "Lake Conroe",
+                    lakeID: "conroe",
+                    ramp: "Papa's on the Lake",
+                    state: "TX",
+                    txDetail: "",
+                    resultsLink: "https://bigbasstour.com/results/",
+                    entryLink: "https://bigbasstour.com/"
+                },
+                {
+                    date: "2020-03-01",
+                    lake: "Lake Conroe",
+                    lakeID: "conroe",
+                    ramp: "Papa's on the Lake",
+                    state: "TX",
+                    txDetail: "",
+                    resultsLink: "https://bigbasstour.com/results/",
+                    entryLink: "https://bigbasstour.com/"
+                },
+                {
+                    date: "2020-03-06",
+                    lake: "Clarks Hill",
+                    lakeID: "clarkshill",
+                    ramp: "Wildwood Park",
+                    state: "GA",
+                    txDetail: "",
+                    resultsLink: "https://bigbasstour.com/results/",
+                    entryLink: "https://bigbasstour.com/"
+                },
+                {
+                    date: "2020-03-07",
+                    lake: "Clarks Hill",
+                    lakeID: "clarkshill",
+                    ramp: "Wildwood Park",
+                    state: "GA",
+                    txDetail: "",
+                    resultsLink: "https://bigbasstour.com/results/",
+                    entryLink: "https://bigbasstour.com/"
+                },
+                {
+                    date: "2020-03-08",
+                    lake: "Clarks Hill",
+                    lakeID: "clarkshill",
+                    ramp: "Wildwood Park",
+                    state: "GA",
+                    txDetail: "",
+                    resultsLink: "https://bigbasstour.com/results/",
+                    entryLink: "https://bigbasstour.com/"
+                },
+                {
+                    date: "2020-03-20",
+                    lake: "Lake Norman",
+                    lakeID: "norman",
+                    ramp: "Queens Landing",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "https://bigbasstour.com/results/",
+                    entryLink: "https://bigbasstour.com/"
+                },
+                {
+                    date: "2020-03-21",
+                    lake: "Lake Norman",
+                    lakeID: "norman",
+                    ramp: "Queens Landing",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "https://bigbasstour.com/results/",
+                    entryLink: "https://bigbasstour.com/"
+                },
+                {
+                    date: "2020-03-22",
+                    lake: "Lake Norman",
+                    lakeID: "norman",
+                    ramp: "Queens Landing",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "https://bigbasstour.com/results/",
+                    entryLink: "https://bigbasstour.com/"
+                },
+                {
+                    date: "2020-04-03",
+                    lake: "Table Rock",
+                    lakeID: "tablerock",
+                    ramp: "Long Creek Marina",
+                    state: "MO",
+                    txDetail: "",
+                    resultsLink: "https://bigbasstour.com/results/",
+                    entryLink: "https://bigbasstour.com/"
+                },
+                {
+                    date: "2020-04-04",
+                    lake: "Table Rock",
+                    lakeID: "tablerock",
+                    ramp: "Long Creek Marina",
+                    state: "MO",
+                    txDetail: "",
+                    resultsLink: "https://bigbasstour.com/results/",
+                    entryLink: "https://bigbasstour.com/"
+                },
+                {
+                    date: "2020-04-05",
+                    lake: "Table Rock",
+                    lakeID: "tablerock",
+                    ramp: "Long Creek Marina",
+                    state: "MO",
+                    txDetail: "",
+                    resultsLink: "https://bigbasstour.com/results/",
+                    entryLink: "https://bigbasstour.com/"
+                },
+                {
+                    date: "2020-04-17",
+                    lake: "Murray",
+                    lakeID: "murray",
+                    ramp: "Dreher Island",
+                    state: "SC",
+                    txDetail: "",
+                    resultsLink: "https://bigbasstour.com/results/",
+                    entryLink: "https://bigbasstour.com/"
+                },
+                {
+                    date: "2020-04-18",
+                    lake: "Murray",
+                    lakeID: "murray",
+                    ramp: "Dreher Island",
+                    state: "SC",
+                    txDetail: "",
+                    resultsLink: "https://bigbasstour.com/results/",
+                    entryLink: "https://bigbasstour.com/"
+                },
+                {
+                    date: "2020-04-19",
+                    lake: "Murray",
+                    lakeID: "murray",
+                    ramp: "Dreher Island",
+                    state: "SC",
+                    txDetail: "",
+                    resultsLink: "https://bigbasstour.com/results/",
+                    entryLink: "https://bigbasstour.com/"
+                },
+                {
+                    date: "2020-04-24",
+                    lake: "Smith Mtn",
+                    lakeID: "smithmountain",
+                    ramp: "Crazy Horse Marina",
+                    state: "VA",
+                    txDetail: "",
+                    resultsLink: "https://bigbasstour.com/results/",
+                    entryLink: "https://bigbasstour.com/"
+                },
+                {
+                    date: "2020-04-25",
+                    lake: "Smith Mtn",
+                    lakeID: "smithmountain",
+                    ramp: "Crazy Horse Marina",
+                    state: "VA",
+                    txDetail: "",
+                    resultsLink: "https://bigbasstour.com/results/",
+                    entryLink: "https://bigbasstour.com/"
+                },
+                {
+                    date: "2020-04-26",
+                    lake: "Smith Mtn",
+                    lakeID: "smithmountain",
+                    ramp: "Crazy Horse Marina",
+                    state: "VA",
+                    txDetail: "",
+                    resultsLink: "https://bigbasstour.com/results/",
+                    entryLink: "https://bigbasstour.com/"
+                },
+                {
+                    date: "2020-05-17",
+                    lake: "Chickamauga",
+                    lakeID: "chickamauga",
+                    ramp: "Dayton Boat Dock",
+                    state: "TN",
+                    txDetail: "",
+                    resultsLink: "https://bigbasstour.com/results/",
+                    entryLink: "https://bigbasstour.com/"
+                },
+                {
+                    date: "2020-05-18",
+                    lake: "Chickamauga",
+                    lakeID: "chickamauga",
+                    ramp: "Dayton Boat Dock",
+                    state: "TN",
+                    txDetail: "",
+                    resultsLink: "https://bigbasstour.com/results/",
+                    entryLink: "https://bigbasstour.com/"
+                },
+                {
+                    date: "2020-05-19",
+                    lake: "Chickamauga",
+                    lakeID: "chickamauga",
+                    ramp: "Dayton Boat Dock",
+                    state: "TN",
+                    txDetail: "",
+                    resultsLink: "https://bigbasstour.com/results/",
+                    entryLink: "https://bigbasstour.com/"
+                },
+                {
+                    date: "2020-05-29",
+                    lake: "Dardanelle",
+                    lakeID: "dardanelle",
+                    ramp: "Dardanelle State Park",
+                    state: "AR",
+                    txDetail: "",
+                    resultsLink: "https://bigbasstour.com/results/",
+                    entryLink: "https://bigbasstour.com/"
+                },
+                {
+                    date: "2020-05-30",
+                    lake: "Dardanelle",
+                    lakeID: "dardanelle",
+                    ramp: "Dardanelle State Park",
+                    state: "AR",
+                    txDetail: "",
+                    resultsLink: "https://bigbasstour.com/results/",
+                    entryLink: "https://bigbasstour.com/"
+                },
+                {
+                    date: "2020-05-31",
+                    lake: "Dardanelle",
+                    lakeID: "dardanelle",
+                    ramp: "Dardanelle State Park",
+                    state: "AR",
+                    txDetail: "",
+                    resultsLink: "https://bigbasstour.com/results/",
+                    entryLink: "https://bigbasstour.com/"
+                },
+                {
+                    date: "2020-10-09",
+                    lake: "Douglas",
+                    lakeID: "douglas",
+                    ramp: "Dandridge City Dock",
+                    state: "AR",
+                    txDetail: "",
+                    resultsLink: "https://bigbasstour.com/results/",
+                    entryLink: "https://bigbasstour.com/"
+                },
+                {
+                    date: "2020-10-10",
+                    lake: "Douglas",
+                    lakeID: "douglas",
+                    ramp: "Dandridge City Dock",
+                    state: "AR",
+                    txDetail: "",
+                    resultsLink: "https://bigbasstour.com/results/",
+                    entryLink: "https://bigbasstour.com/"
+                },
+                {
+                    date: "2020-10-11",
+                    lake: "Douglas",
+                    lakeID: "douglas",
+                    ramp: "Dandridge City Dock",
+                    state: "AR",
+                    txDetail: "",
+                    resultsLink: "https://bigbasstour.com/results/",
+                    entryLink: "https://bigbasstour.com/"
+                },
+                {
+                    date: "2020-10-16",
+                    lake: "Guntersville",
+                    lakeID: "guntersville",
+                    ramp: "Guntersville State Park",
+                    state: "AL",
+                    txDetail: "",
+                    resultsLink: "https://bigbasstour.com/results/",
+                    entryLink: "https://bigbasstour.com/"
+                },
+                {
+                    date: "2020-10-17",
+                    lake: "Guntersville",
+                    lakeID: "guntersville",
+                    ramp: "Guntersville State Park",
+                    state: "AL",
+                    txDetail: "",
+                    resultsLink: "https://bigbasstour.com/results/",
+                    entryLink: "https://bigbasstour.com/"
+                },
+                {
+                    date: "2020-10-18",
+                    lake: "Guntersville",
+                    lakeID: "guntersville",
+                    ramp: "Guntersville State Park",
+                    state: "AL",
+                    txDetail: "",
+                    resultsLink: "https://bigbasstour.com/results/",
+                    entryLink: "https://bigbasstour.com/"
+                }
+            ]
+        }]
+    },
+    {
         organization: "CATT",
         trails: [{
                 trail: "CATT Championship",
