@@ -236,7 +236,7 @@ module.exports = [{
         sponsor: "Warriors On The Water",
         href: "https://www.warriorsonthewater.com/",
         src: "/static/assets/img/tournament-banners/warriors on the water banner.png",
-        location: ["kerr", "jordan", "falls", "gaston", "shearonharris", "tillery", "highrock", "badin"],
+        location: ["jordan"],
         type: "charity",
         startDate: "2020-01-01T00:00:00.0Z",
         endDate: "2020-05-09T00:00:00.0Z"
@@ -245,7 +245,7 @@ module.exports = [{
         sponsor: "Cast for a Cure",
         href: "http://704outdoors.tv/cast-for-a-cure/",
         src: "/static/assets/img/tournament-banners/cfc banner.png",
-        location: ["kerr", "jordan", "falls", "gaston", "shearonharris", "tillery", "highrock", "badin"],
+        location: ["jordan"],
         type: "charity",
         startDate: "2020-01-01T00:00:00.0Z",
         endDate: "2020-05-16T00:00:00.0Z"
@@ -274,8 +274,62 @@ module.exports = [{
         src: "/static/assets/img/tournament-banners/catt old North 2020 kerr.png",
         location: ["kerr"],
         type: "tournament",
-        startDate: "2019-01-01T00:00:00.0Z",
+        startDate: "2019-02-14T00:00:00.0Z",
         endDate: "2020-03-14T00:10:00.0Z"
+    },
+    {
+        sponsor: "Catt Kerr 1",
+        href: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/",
+        src: "/static/assets/img/tournament-banners/catt kerr kerr 2-08.png",
+        location: ["kerr"],
+        type: "tournament",
+        startDate: "2019-01-08T00:00:00.0Z",
+        endDate: "2020-02-08T00:10:00.0Z"
+    },
+    {
+        sponsor: "Catt Kerr 2",
+        href: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/",
+        src: "/static/assets/img/tournament-banners/catt kerr kerr 2-29.png",
+        location: ["kerr"],
+        type: "tournament",
+        startDate: "2019-01-14T00:00:00.0Z",
+        endDate: "2020-02-2914T00:10:00.0Z"
+    },
+    {
+        sponsor: "Catt Kerr 3",
+        href: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/",
+        src: "/static/assets/img/tournament-banners/catt kerr kerr 3-15.png",
+        location: ["kerr"],
+        type: "tournament",
+        startDate: "2019-01-15T00:00:00.0Z",
+        endDate: "2020-03-14T00:10:00.0Z"
+    },
+    {
+        sponsor: "Catt Kerr 4",
+        href: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/",
+        src: "/static/assets/img/tournament-banners/catt kerr kerr 3-29.png",
+        location: ["kerr"],
+        type: "tournament",
+        startDate: "2019-01-29T00:00:00.0Z",
+        endDate: "2020-03-29T00:10:00.0Z"
+    },
+    {
+        sponsor: "Catt Kerr 5",
+        href: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/",
+        src: "/static/assets/img/tournament-banners/catt kerr kerr 4-19.png",
+        location: ["kerr"],
+        type: "tournament",
+        startDate: "2019-02-19T00:00:00.0Z",
+        endDate: "2020-04-19T00:10:00.0Z"
+    },
+    {
+        sponsor: "Catt Kerr 6",
+        href: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/",
+        src: "/static/assets/img/tournament-banners/catt kerr kerr 4-26.png",
+        location: ["kerr"],
+        type: "tournament",
+        startDate: "2019-02-26T00:00:00.0Z",
+        endDate: "2020-04-26T00:10:00.0Z"
     },
     {
         sponsor: "Big Bass Harris Chain",
