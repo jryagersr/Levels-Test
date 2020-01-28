@@ -419,7 +419,7 @@ module.exports = [{
     {
         sponsor: "Big Bass Clarks Hill",
         href: "https://bigbasstour.com/schedule",
-        src: "/static/assets/img/tournament-banners/big bass clarks Hill banner.png",
+        src: "/static/assets/img/tournament-banners/big bass clarks hill banner.png",
         location: "clarkshill",
         type: "tournament",
         startDate: "2019-01-01T00:00:00.0Z",
