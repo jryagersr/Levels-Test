@@ -85,7 +85,7 @@ module.exports = [{
         src: "/static/assets/img/sponsor-banners/anglers choice banner.png",
         location: ["kerr", "falls", "gaston", "anna", "smithmountain", "fontana",
             "james", "norman", "wylie", "hickory", "keowee", "wateree", "mtnisland", "tillery", "Tuckertown",
-            "highrock", "randleman", "wscottkerr", "mayo", "hyco", "badin", "blewittfalls", "Belews",
+            "highrock", "randleman", "wscottkerr", "mayo", "hyco", "badin", "blewettfalls", "Belews",
             "jocassee"
         ],
         type: "logo",
