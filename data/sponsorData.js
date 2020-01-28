@@ -62,6 +62,15 @@ module.exports = [{
         endDate: "2025-12-31T00:10:00.0Z"
     },
     {
+        sponsor: "CCW",
+        href: "https://www.cwwcharters.com/",
+        src: "/static/assets/img/sponsor-banners/ccw banner.png",
+        location: ["all"],
+        type: "logo",
+        startDate: "2020-01-01T00:00:00.0Z",
+        endDate: "2025-12-31T00:10:00.0Z"
+    },
+    {
         sponsor: "Lowrance HDS Training",
         href: "http://www.lowrancehdstraining.com/",
         src: "/static/assets/img/sponsor-banners/lowrance training banner.png",
