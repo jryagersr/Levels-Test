@@ -584,7 +584,7 @@ module.exports = [
         ]
     },
     {
-        organization: "Cabelas",
+        organization: "Big Bass Tour",
         trails: [{
             trail: "Big Bass Tour",
             tournaments: [
@@ -592,7 +592,7 @@ module.exports = [
                 {
                     date: "2020-02-07",
                     lake: "Harris Chain",
-                    lakeID: "bigharris",
+                    lakeID: ["bigharris", "eustis", "dora"],
                     ramp: "Hickory Point",
                     state: "FL",
                     txDetail: "",

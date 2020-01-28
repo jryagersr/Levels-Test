@@ -80,6 +80,19 @@ module.exports = [{
         endDate: "2021-01-01T00:00:00.0Z"
     },
     {
+        sponsor: "Anglers Choice",
+        href: "https://www.anglerschoicemarine.com/",
+        src: "/static/assets/img/sponsor-banners/anglers choice banner.png",
+        location: ["kerr", "falls", "gaston", "anna", "smithmountain", "fontana",
+            "james", "norman", "wylie", "hickory", "keowee", "wateree", "mtnisland", "tillery", "Tuckertown",
+            "highrock", "randleman", "wscottkerr", "mayo", "hyco", "badin", "blewittfalls", "Belews",
+            "jocassee"
+        ],
+        type: "logo",
+        startDate: "2019-01-01T00:00:00.0Z",
+        endDate: "2021-01-01T00:00:00.0Z"
+    },
+    {
         sponsor: "Gradys",
         href: "",
         src: "/static/assets/img/sponsor-banners/gradysbanner.png",
@@ -276,6 +289,60 @@ module.exports = [{
         type: "tournament",
         startDate: "2019-02-14T00:00:00.0Z",
         endDate: "2020-03-14T00:10:00.0Z"
+    },
+    {
+        sponsor: "Collins 1",
+        href: "https://bassforcash.com/schedule",
+        src: "/static/assets/img/tournament-banners/bfcs jordan 3-07 banner.png",
+        location: ["jordan"],
+        type: "tournament",
+        startDate: "2019-01-07T00:00:00.0Z",
+        endDate: "2020-03-07T00:10:00.0Z"
+    },
+    {
+        sponsor: "Collins 2",
+        href: "https://bassforcash.com/schedule",
+        src: "/static/assets/img/tournament-banners/bfcs kerr 4-11 banner.png",
+        location: ["kerr"],
+        type: "tournament",
+        startDate: "2019-02-07T00:00:00.0Z",
+        endDate: "2020-04-11T00:10:00.0Z"
+    },
+    {
+        sponsor: "Collins 3",
+        href: "https://bassforcash.com/schedule",
+        src: "/static/assets/img/tournament-banners/bfcs gaston 5-23 banner.png",
+        location: ["gaston"],
+        type: "tournament",
+        startDate: "2019-03-23T00:00:00.0Z",
+        endDate: "2020-05-23T00:10:00.0Z"
+    },
+    {
+        sponsor: "Collins 4",
+        href: "https://bassforcash.com/schedule",
+        src: "/static/assets/img/tournament-banners/bfcs roanoke 6-07 banner.png",
+        location: ["roanokewill"],
+        type: "tournament",
+        startDate: "2019-04-07T00:00:00.0Z",
+        endDate: "2020-06-07T00:10:00.0Z"
+    },
+    {
+        sponsor: "Collins 5",
+        href: "https://bassforcash.com/schedule",
+        src: "/static/assets/img/tournament-banners/bfcs falls 7-25 banner.png",
+        location: ["falls"],
+        type: "tournament",
+        startDate: "2019-05-25T00:00:00.0Z",
+        endDate: "2020-07-25T00:10:00.0Z"
+    },
+    {
+        sponsor: "Collins 6",
+        href: "https://bassforcash.com/schedule",
+        src: "/static/assets/img/tournament-banners/collins cypress 8-29.png",
+        location: ["Roanoke45"],
+        type: "tournament",
+        startDate: "2019-06-29T00:00:00.0Z",
+        endDate: "2020-08-29T00:10:00.0Z"
     },
     {
         sponsor: "Catt Kerr 1",
