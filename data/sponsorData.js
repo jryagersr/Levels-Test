@@ -39,7 +39,8 @@ module.exports = [
         type: "logo",
         startDate: "2019-01-01T00:00:00.0Z",
         endDate: "2029-01-01T00:00:00.0Z"
-    }, {
+    }, 
+    {
         sponsor: "Carolina Anglers Team Trail",
         href: "https://www.cattteamtrail.com/",
         src: "/static/assets/img/sponsor-banners/catt banner.png",
@@ -47,7 +48,8 @@ module.exports = [
         type: "logo",
         startDate: "2019-01-01T00:00:00.0Z",
         endDate: "2021-01-01T00:00:00.0Z"
-    }, {
+    }, 
+    {
         sponsor: "Carolina Bass Challenge",
         href: "http://www.carolinasbasschallenge.com//",
         src: "/static/assets/img/sponsor-banners/cbc banner.png",
@@ -55,7 +57,8 @@ module.exports = [
         type: "logo",
         startDate: "2019-01-01T00:00:00.0Z",
         endDate: "2021-01-01T00:00:00.0Z"
-    }, {
+    }, 
+    {
         sponsor: "Cashion",
         href: "https://cashionrods.com/",
         src: "/static/assets/img/sponsor-banners/cashion banner.png",
