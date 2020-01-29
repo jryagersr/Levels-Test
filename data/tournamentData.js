@@ -923,6 +923,95 @@ module.exports = [
         }]
     },
     {
+        organization: "Bojangles",
+        trails: [{
+            trail: "Pro-Am",
+            tournaments: [
+
+                {
+                    date: "2020-03-14",
+                    lake: "Gaston",
+                    lakeID: "gaston",
+                    ramp: "Summit",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "http://bojanglesproam.com/Schedule.html",
+                    entryLink: "http://bojanglesproam.com/index.html"
+                },
+                {
+                    date: "2020-04-04",
+                    lake: "Sutton",
+                    lakeID: "",
+                    ramp: "Ramp",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "http://bojanglesproam.com/Schedule.html",
+                    entryLink: "http://bojanglesproam.com/index.html"
+                },
+                {
+                    date: "2020-04-25",
+                    lake: "Kerr",
+                    lakeID: "kerr",
+                    ramp: "Henderson Point",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "http://bojanglesproam.com/Schedule.html",
+                    entryLink: "http://bojanglesproam.com/index.html"
+                },
+                {
+                    date: "2020-05-16",
+                    lake: "Chowan River",
+                    lakeID: "roanoke45",
+                    ramp: "Edenton",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "http://bojanglesproam.com/Schedule.html",
+                    entryLink: "http://bojanglesproam.com/index.html"
+                },
+                {
+                    date: "2020-06-13",
+                    lake: "Roanoke River",
+                    lakeID: "roanokewill",
+                    ramp: "Plymouth",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "http://bojanglesproam.com/Schedule.html",
+                    entryLink: "http://bojanglesproam.com/index.html"
+                },
+                {
+                    date: "2020-07-18",
+                    lake: "Neuse-Trent",
+                    lakeID: "neuse",
+                    ramp: "New Bern",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "http://bojanglesproam.com/Schedule.html",
+                    entryLink: "http://bojanglesproam.com/index.html"
+                },
+                {
+                    date: "2020-08-15",
+                    lake: "Roanoke River",
+                    lakeID: "roanokewill",
+                    ramp: "Plymouth",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "http://bojanglesproam.com/Schedule.html",
+                    entryLink: "http://bojanglesproam.com/index.html"
+                },
+                {
+                    date: "2020-09-11",
+                    lake: "TBD - Classic Championship",
+                    lakeID: "",
+                    ramp: "TBD",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "http://bojanglesproam.com/Schedule.html",
+                    entryLink: "http://bojanglesproam.com/index.html"
+                }
+            ]
+        }]
+    },
+    {
         organization: "CATT",
         trails: [{
                 trail: "CATT Championship",
@@ -1150,15 +1239,75 @@ module.exports = [
                 tournaments: [
 
                     {
-                        date: "2019-00-24",
+                        date: "2020-03-28",
                         lake: "Gaston",
                         lakeID: "gaston",
                         ramp: "Summit",
                         state: "NC",
                         txDetail: "Qualifier 1",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-gaston-nc-va-mar-24-2019-ivan-janet-morris-bag-up-20-29-lbs-2181-00-great-crowd-38-teams-to-kick-off-the-gaston-catt-trail/",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-lake-gaston/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-gaston/"
                     },
+                    {
+                        date: "2020-04-18",
+                        lake: "Gaston",
+                        lakeID: "gaston",
+                        ramp: "Summit",
+                        state: "NC",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-lake-gaston/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-gaston/"
+                    },
+                    {
+                        date: "2020-05-31",
+                        lake: "Gaston",
+                        lakeID: "gaston",
+                        ramp: "Summit",
+                        state: "NC",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-lake-gaston/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-gaston/"
+                    },
+                    {
+                        date: "2020-06-28",
+                        lake: "Gaston",
+                        lakeID: "gaston",
+                        ramp: "Summit",
+                        state: "NC",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-lake-gaston/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-gaston/"
+                    },
+                    {
+                        date: "2020-08-01",
+                        lake: "Gaston",
+                        lakeID: "gaston",
+                        ramp: "Summit",
+                        state: "NC",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-lake-gaston/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-gaston/"
+                    },
+                    {
+                        date: "2020-09-16",
+                        lake: "Gaston",
+                        lakeID: "gaston",
+                        ramp: "Summit",
+                        state: "NC",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-lake-gaston/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-gaston/"
+                    },
+                    {
+                        date: "2020-10-17",
+                        lake: "Gaston",
+                        lakeID: "gaston",
+                        ramp: "Summit",
+                        state: "NC",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-lake-gaston/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-gaston/"
+                    }
                 ]
             },
             {
