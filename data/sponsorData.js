@@ -210,7 +210,8 @@ module.exports = [
         type: "logo",
         startDate: "2020-01-01T00:00:00.0Z",
         endDate: "2025-12-31T00:10:00.0Z"
-    }, {
+    }, 
+    {
         sponsor: "Piedmont Bass Classics",
         href: "http://piedmontbassclassics.com/MainPage2.html",
         src: "/static/assets/img/sponsor-banners/pbc banner.png",
@@ -236,7 +237,8 @@ module.exports = [
         type: "logo",
         startDate: "2019-01-01T00:00:00.0Z",
         endDate: "2029-01-01T00:00:00.0Z"
-    }, {
+    }, 
+    {
         sponsor: "Teespring Athletics",
         href: "https://teespring.com/stores/sweet-tee-21",
         src: "/static/assets/img/sponsor-banners/venable banner.png",
