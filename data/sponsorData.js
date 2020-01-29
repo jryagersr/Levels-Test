@@ -1,20 +1,220 @@
-module.exports = [{
-        sponsor: "JBRods",
-        href: "https://www.custombassrods.com/",
-        src: "/static/assets/img/sponsor-banners/jbrodsbanner.png",
+module.exports = [
+    
+    {
+        sponsor: "Anglers Choice",
+        href: "https://www.anglerschoicemarine.com/",
+        src: "/static/assets/img/sponsor-banners/anglers choice banner.png",
+        location: ["kerr", "falls", "gaston", "anna", "smithmountain", "fontana",
+            "james", "norman", "wylie", "hickory", "keowee", "wateree", "mtnisland", "tillery", "Tuckertown",
+            "highrock", "randleman", "wscottkerr", "mayo", "hyco", "badin", "blewettfalls", "Belews",
+            "jocassee"
+        ],
+        type: "logo",
+        startDate: "2019-01-01T00:00:00.0Z",
+        endDate: "2021-01-01T00:00:00.0Z"
+    },
+    {
+        sponsor: "Bass For Cash Series",
+        href: "https://www.bassforcash.com/",
+        src: "/static/assets/img/sponsor-banners/bfcs banner.png",
+        location: ["kerr", "jordan", "falls", "gaston", "roanokewill", "roanoke45"],
+        type: "logo",
+        startDate: "2019-01-01T00:00:00.0Z",
+        endDate: "2021-01-01T00:00:00.0Z"
+    },
+    {
+        sponsor: "The Boat Guy",
+        href: "http://ncboatguy.com/",
+        src: "/static/assets/img/sponsor-banners/ncboatguy banner.png",
         location: ["all"],
         type: "logo",
         startDate: "2019-01-01T00:00:00.0Z",
         endDate: "2021-01-01T00:00:00.0Z"
     },
     {
+        sponsor: "Brucato",
+        href: "http://www.brucatofis.com/",
+        src: "/static/assets/img/sponsor-banners/brucato banner.png",
+        location: ["all"],
+        type: "logo",
+        startDate: "2019-01-01T00:00:00.0Z",
+        endDate: "2029-01-01T00:00:00.0Z"
+    },{
+        sponsor: "Carolina Anglers Team Trail",
+        href: "https://www.cattteamtrail.com/",
+        src: "/static/assets/img/sponsor-banners/catt banner.png",
+        location: ["kerr", "jordan", "falls", "gaston", "roanokewill"],
+        type: "logo",
+        startDate: "2019-01-01T00:00:00.0Z",
+        endDate: "2021-01-01T00:00:00.0Z"
+    },{
+        sponsor: "Carolina Bass Challenge",
+        href: "http://www.carolinasbasschallenge.com//",
+        src: "/static/assets/img/sponsor-banners/cbc banner.png",
+        location: ["norman", "jordan"],
+        type: "logo",
+        startDate: "2019-01-01T00:00:00.0Z",
+        endDate: "2021-01-01T00:00:00.0Z"
+    },{
+        sponsor: "Cashion",
+        href: "https://cashionrods.com/",
+        src: "/static/assets/img/sponsor-banners/cashion banner.png",
+        location: ["all"],
+        type: "logo",
+        startDate: "2019-01-01T00:00:00.0Z",
+        endDate: "2021-01-01T00:00:00.0Z"
+    },
+    {
+        sponsor: "CCW",
+        href: "https://www.cwwcharters.com/",
+        src: "/static/assets/img/sponsor-banners/ccw banner.png",
+        location: ["all"],
+        type: "logo",
+        startDate: "2020-01-01T00:00:00.0Z",
+        endDate: "2020-12-31T00:10:00.0Z"
+    },
+    {
+        sponsor: "Collins Boating",
+        href: "https://www.collinsboating.com/",
+        src: "/static/assets/img/sponsor-banners/collins banner.png",
+        location: ["kerr", "jordan", "falls", "gaston", "shearonharris", "roanokewill", "roanoke45"],
+        type: "logo",
+        startDate: "2019-01-01T00:00:00.0Z",
+        endDate: "2021-01-01T00:00:00.0Z"
+    },
+    {
+        sponsor: "Deep Creek Lures",
+        href: "https://www.deepcreeklures.com/",
+        src: "/static/assets/img/sponsor-banners/deep creek banner.png",
+        location: ["all"],
+        type: "logo",
+        startDate: "2019-01-01T00:00:00.0Z",
+        endDate: "2021-01-01T00:00:00.0Z"
+    },
+    {
+        sponsor: "TDC",
+        href: "http://thedesigncorner.biz/",
+        src: "/static/assets/img/sponsor-banners/tdc banner.png",
+        location: ["all"],
+        type: "logo",
+        startDate: "2019-01-01T00:00:00.0Z",
+        endDate: "2029-01-01T00:00:00.0Z"
+    },
+    {
+        sponsor: "Dougs DD",
+        href: "http://www.http://dirtydougsdiesel.com",
+        src: "/static/assets/img/sponsor-banners/dougs dd banner.png",
+        location: ["jordan", "falls", "kerr", "shearonharris", "mayo", "hyco"],
+        type: "logo",
+        startDate: "2019-01-01T00:00:00.0Z",
+        endDate: "2029-12-30T00:00:00.0Z"
+    },
+    {
+        sponsor: "Gradys",
+        href: "",
+        src: "/static/assets/img/sponsor-banners/gradys banner.png",
+        location: ["kerr", "jordan", "falls", "gaston", "shearonharris"],
+        type: "logo",
+        startDate: "2019-01-01T00:00:00.0Z",
+        endDate: "2029-01-01T00:00:00.0Z"
+    },
+    {
+        sponsor: "Haw River Landscaping",
+        href: "https://hawriverlandscaping.business.site/",
+        src: "/static/assets/img/sponsor-banners/haw river ls banner.png",
+        location: ["shearonharris", "jordan", "falls"],
+        type: "logo",
+        startDate: "2019-01-01T00:00:00.0Z",
+        endDate: "2021-01-01T00:00:00.0Z"
+    },
+    {
+        sponsor: "Huntington Lures",
+        href: "https://www.huntingtonlures.com/",
+        src: "/static/assets/img/sponsor-banners/huntington banner.png",
+        location: ["all"],
+        type: "logo",
+        startDate: "2019-01-01T00:00:00.0Z",
+        endDate: "2021-01-01T00:00:00.0Z"
+    },
+    {
+        sponsor: "Jaime Fajardo - Capital Insurance",
+        href: "https://www.capital-ins.com/",
+        src: "/static/assets/img/sponsor-banners/jfajardo banner.png",
+        location: ["shearonharris", "jordan", "falls"],
+        type: "logo",
+        startDate: "2019-01-01T00:00:00.0Z",
+        endDate: "2030-01-01T00:00:00.0Z"
+    },
+    {
+        sponsor: "JBRods",
+        href: "https://www.custombassrods.com/",
+        src: "/static/assets/img/sponsor-banners/jbrods banner.png",
+        location: ["all"],
+        type: "logo",
+        startDate: "2019-01-01T00:00:00.0Z",
+        endDate: "2021-01-01T00:00:00.0Z"
+    },
+    {
+        sponsor: "Jenko Fishing",
+        href: "https://jenkofishing.com/",
+        src: "/static/assets/img/sponsor-banners/jenko banner.png",
+        location: ["all"],
+        type: "logo",
+        startDate: "2019-01-01T00:00:00.0Z",
+        endDate: "2021-01-01T00:00:00.0Z"
+    },
+    {
+        sponsor: "JGills",
+        href: "https://www.google.com/maps/dir/36.615047,-78.307350",
+        src: "/static/assets/img/sponsor-banners/jgills banner.png",
+        location: ["kerr"],
+        type: "logo",
+        startDate: "2019-01-01T00:00:00.0Z",
+        endDate: "2029-01-01T00:00:00.0Z"
+    },
+    {
         sponsor: "JSE",
         href: "http://jacksonsuperiorelectric.com/",
-        src: "/static/assets/img/sponsor-banners/jse.png",
+        src: "/static/assets/img/sponsor-banners/jse generac banner.png",
         location: ["kerr", "jordan", "falls", "gaston"],
         type: "logo",
         startDate: "2019-01-01T00:00:00.0Z",
         endDate: "2029-01-01T00:00:00.0Z"
+    },
+    {
+        sponsor: "Lowrance HDS Training",
+        href: "http://www.lowrancehdstraining.com/",
+        src: "/static/assets/img/sponsor-banners/lowrance training banner.png",
+        location: ["all"],
+        type: "logo",
+        startDate: "2020-01-01T00:00:00.0Z",
+        endDate: "2025-12-31T00:10:00.0Z"
+    },
+    {
+        sponsor: "MJHI",
+        href: "",
+        src: "/static/assets/img/sponsor-banners/mjhi banner.png",
+        location: ["kerr", "jordan", "falls", "gaston"],
+        type: "logo",
+        startDate: "2019-01-01T00:00:00.0Z",
+        endDate: "2029-01-01T00:00:00.0Z"
+    },
+    {
+        sponsor: "Outdoor Expeditions USA",
+        href: "http://www.outdoorexpeditionsusa.com/",
+        src: "/static/assets/img/sponsor-banners/oeusa banner.png",
+        location: ["all"],
+        type: "logo",
+        startDate: "2020-01-01T00:00:00.0Z",
+        endDate: "2025-12-31T00:10:00.0Z"
+    },{
+        sponsor: "Piedmont Bass Classics",
+        href: "http://piedmontbassclassics.com/MainPage2.html",
+        src: "/static/assets/img/sponsor-banners/pbc banner.png",
+        location: ["kerr", "jordan", "falls", "gaston", "shearonharris"],
+        type: "logo",
+        startDate: "2019-01-01T00:00:00.0Z",
+        endDate: "2021-01-01T00:00:00.0Z"
     },
     {
         sponsor: "Triangle CRC",
@@ -33,123 +233,10 @@ module.exports = [{
         type: "logo",
         startDate: "2019-01-01T00:00:00.0Z",
         endDate: "2029-01-01T00:00:00.0Z"
-    },
-    {
-        sponsor: "Brucato",
-        href: "http://www.brucatofis.com/",
-        src: "/static/assets/img/sponsor-banners/brucatobanner.png",
-        location: ["all"],
-        type: "logo",
-        startDate: "2019-01-01T00:00:00.0Z",
-        endDate: "2029-01-01T00:00:00.0Z"
-    },
-    {
-        sponsor: "TDC",
-        href: "http://thedesigncorner.biz/",
-        src: "/static/assets/img/sponsor-banners/tdcbanner.png",
-        location: ["all"],
-        type: "logo",
-        startDate: "2019-01-01T00:00:00.0Z",
-        endDate: "2029-01-01T00:00:00.0Z"
-    },
-    {
-        sponsor: "MJHI",
-        href: "",
-        src: "/static/assets/img/sponsor-banners/mjhibanner.png",
-        location: ["kerr", "jordan", "falls", "gaston"],
-        type: "logo",
-        startDate: "2019-01-01T00:00:00.0Z",
-        endDate: "2029-01-01T00:00:00.0Z"
-    },
-    {
-        sponsor: "Dougs DD",
-        href: "http://www.http://dirtydougsdiesel.com",
-        src: "/static/assets/img/sponsor-banners/dougs dd banner.png",
-        location: ["jordan", "falls", "kerr", "shearonharris", "mayo", "hyco"],
-        type: "logo",
-        startDate: "2019-01-01T00:00:00.0Z",
-        endDate: "2029-12-30T00:00:00.0Z"
-    },
-    {
-        sponsor: "Outdoor Expeditions USA",
-        href: "http://www.outdoorexpeditionsusa.com/",
-        src: "/static/assets/img/sponsor-banners/oeusa banner.png",
-        location: ["all"],
-        type: "logo",
-        startDate: "2020-01-01T00:00:00.0Z",
-        endDate: "2025-12-31T00:10:00.0Z"
-    },
-    {
-        sponsor: "CCW",
-        href: "https://www.cwwcharters.com/",
-        src: "/static/assets/img/sponsor-banners/ccw banner.png",
-        location: ["all"],
-        type: "logo",
-        startDate: "2020-01-01T00:00:00.0Z",
-        endDate: "2020-12-31T00:10:00.0Z"
-    },
-    {
-        sponsor: "Lowrance HDS Training",
-        href: "http://www.lowrancehdstraining.com/",
-        src: "/static/assets/img/sponsor-banners/lowrance training banner.png",
-        location: ["all"],
-        type: "logo",
-        startDate: "2020-01-01T00:00:00.0Z",
-        endDate: "2025-12-31T00:10:00.0Z"
-    },
-    {
-        sponsor: "Collins Boating",
-        href: "https://www.collinsboating.com/",
-        src: "/static/assets/img/sponsor-banners/collins banner.png",
-        location: ["kerr", "jordan", "falls", "gaston", "shearonharris", "roanokewill", "roanoke45"],
-        type: "logo",
-        startDate: "2019-01-01T00:00:00.0Z",
-        endDate: "2021-01-01T00:00:00.0Z"
-    },
-    {
-        sponsor: "Anglers Choice",
-        href: "https://www.anglerschoicemarine.com/",
-        src: "/static/assets/img/sponsor-banners/anglers choice banner.png",
-        location: ["kerr", "falls", "gaston", "anna", "smithmountain", "fontana",
-            "james", "norman", "wylie", "hickory", "keowee", "wateree", "mtnisland", "tillery", "Tuckertown",
-            "highrock", "randleman", "wscottkerr", "mayo", "hyco", "badin", "blewettfalls", "Belews",
-            "jocassee"
-        ],
-        type: "logo",
-        startDate: "2019-01-01T00:00:00.0Z",
-        endDate: "2021-01-01T00:00:00.0Z"
-    },
-    {
-        sponsor: "Gradys",
-        href: "",
-        src: "/static/assets/img/sponsor-banners/gradysbanner.png",
-        location: ["kerr", "jordan", "falls", "gaston", "shearonharris"],
-        type: "logo",
-        startDate: "2019-01-01T00:00:00.0Z",
-        endDate: "2029-01-01T00:00:00.0Z"
-    },
-    {
-        sponsor: "Bass For Cash Series",
-        href: "https://www.bassforcash.com/",
-        src: "/static/assets/img/sponsor-banners/BFCS banner.png",
-        location: ["kerr", "jordan", "falls", "gaston", "roanokewill", "roanoke45"],
-        type: "logo",
-        startDate: "2019-01-01T00:00:00.0Z",
-        endDate: "2021-01-01T00:00:00.0Z"
-    },
-    {
-        sponsor: "Deep Creek Lures",
-        href: "https://www.deepcreeklures.com/",
-        src: "/static/assets/img/sponsor-banners/deep creek banner.png",
-        location: ["all"],
-        type: "logo",
-        startDate: "2019-01-01T00:00:00.0Z",
-        endDate: "2021-01-01T00:00:00.0Z"
-    },
-    {
-        sponsor: "Huntington Lures",
-        href: "https://www.huntingtonlures.com/",
-        src: "/static/assets/img/sponsor-banners/huntington banner.png",
+    },{
+        sponsor: "Teespring Athletics",
+        href: "https://teespring.com/stores/sweet-tee-21",
+        src: "/static/assets/img/sponsor-banners/venable banner.png",
         location: ["all"],
         type: "logo",
         startDate: "2019-01-01T00:00:00.0Z",
@@ -160,15 +247,6 @@ module.exports = [{
         href: "https://www.truesouthlures.com/",
         src: "/static/assets/img/sponsor-banners/truesouth banner.png",
         location: ["all"],
-        type: "logo",
-        startDate: "2019-01-01T00:00:00.0Z",
-        endDate: "2021-01-01T00:00:00.0Z"
-    },
-    {
-        sponsor: "Haw River Landscaping",
-        href: "",
-        src: "/static/assets/img/sponsor-banners/haw river ls banner.png",
-        location: ["shearonharris", "jordan", "falls"],
         type: "logo",
         startDate: "2019-01-01T00:00:00.0Z",
         endDate: "2021-01-01T00:00:00.0Z"
@@ -200,78 +278,11 @@ module.exports = [{
         startDate: "2019-01-01T00:00:00.0Z",
         endDate: "2021-01-01T00:00:00.0Z"
     },*/
-    {
-        sponsor: "Carolina Anglers Team Trail",
-        href: "https://www.cattteamtrail.com/",
-        src: "/static/assets/img/sponsor-banners/catt banner.png",
-        location: ["kerr", "jordan", "falls", "gaston", "roanokewill"],
-        type: "logo",
-        startDate: "2019-01-01T00:00:00.0Z",
-        endDate: "2021-01-01T00:00:00.0Z"
-    },
-    {
-        sponsor: "Carolina Bass Challenge",
-        href: "http://www.carolinasbasschallenge.com//",
-        src: "/static/assets/img/sponsor-banners/cbc banner.png",
-        location: ["norman", "jordan"],
-        type: "logo",
-        startDate: "2019-01-01T00:00:00.0Z",
-        endDate: "2021-01-01T00:00:00.0Z"
-    },
-    {
-        sponsor: "Cashion",
-        href: "https://cashionrods.com/",
-        src: "/static/assets/img/sponsor-banners/cashion banner.png",
-        location: ["all"],
-        type: "logo",
-        startDate: "2019-01-01T00:00:00.0Z",
-        endDate: "2021-01-01T00:00:00.0Z"
-    },
-    {
-        sponsor: "Jaime Fajardo - Capital Insurance",
-        href: "https://www.capital-ins.com/",
-        src: "/static/assets/img/sponsor-banners/jfajardo banner.png",
-        location: ["shearonharris", "jordan", "falls"],
-        type: "logo",
-        startDate: "2019-01-01T00:00:00.0Z",
-        endDate: "2030-01-01T00:00:00.0Z"
-    },
-    {
-        sponsor: "Piedmont Bass Classics",
-        href: "http://piedmontbassclassics.com/MainPage2.html",
-        src: "/static/assets/img/sponsor-banners/pbc banner.png",
-        location: ["kerr", "jordan", "falls", "gaston", "shearonharris"],
-        type: "logo",
-        startDate: "2019-01-01T00:00:00.0Z",
-        endDate: "2021-01-01T00:00:00.0Z"
-    },
-    {
-        sponsor: "Teespring Athletics",
-        href: "https://teespring.com/stores/sweet-tee-21",
-        src: "/static/assets/img/sponsor-banners/venable banner.png",
-        location: ["all"],
-        type: "logo",
-        startDate: "2019-01-01T00:00:00.0Z",
-        endDate: "2021-01-01T00:00:00.0Z"
-    },
-    {
-        sponsor: "The Boat Guy",
-        href: "http://ncboatguy.com/",
-        src: "/static/assets/img/sponsor-banners/ncboatguy banner.png",
-        location: ["all"],
-        type: "logo",
-        startDate: "2019-01-01T00:00:00.0Z",
-        endDate: "2021-01-01T00:00:00.0Z"
-    },
-    {
-        sponsor: "Jenko Fishing",
-        href: "https://jenkofishing.com/",
-        src: "/static/assets/img/sponsor-banners/jenko banner.png",
-        location: ["all"],
-        type: "logo",
-        startDate: "2019-01-01T00:00:00.0Z",
-        endDate: "2021-01-01T00:00:00.0Z"
-    },
+    
+    /*************************************************************
+     * Charity Txs
+     */
+        
     {
         sponsor: "Warriors On The Water",
         href: "https://www.warriorsonthewater.com/",
@@ -299,6 +310,11 @@ module.exports = [{
         startDate: "2019-01-01T00:00:00.0Z",
         endDate: "2019-10-09T00:10:00.0Z"
     },
+ 
+    /*************************************************************
+     *  Txs
+     */
+       
     {
         sponsor: "Jordan Wildcat",
         href: "",
