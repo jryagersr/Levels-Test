@@ -17,6 +17,24 @@ module.exports = [{
         endDate: "2029-01-01T00:00:00.0Z"
     },
     {
+        sponsor: "Triangle CRC",
+        href: "https://www.trianglecrc.com/",
+        src: "/static/assets/img/sponsor-banners/crc banner.png",
+        location: ["kerr", "jordan", "falls", "gaston"],
+        type: "logo",
+        startDate: "2019-01-01T00:00:00.0Z",
+        endDate: "2029-01-01T00:00:00.0Z"
+    },
+    {
+        sponsor: "Stanner Farms",
+        href: "https://www.stannerfarmsandland.com/",
+        src: "/static/assets/img/sponsor-banners/stanner farms banner.png",
+        location: ["kerr", "jordan", "falls", "gaston"],
+        type: "logo",
+        startDate: "2019-01-01T00:00:00.0Z",
+        endDate: "2029-01-01T00:00:00.0Z"
+    },
+    {
         sponsor: "Brucato",
         href: "http://www.brucatofis.com/",
         src: "/static/assets/img/sponsor-banners/brucatobanner.png",
@@ -68,7 +86,7 @@ module.exports = [{
         location: ["all"],
         type: "logo",
         startDate: "2020-01-01T00:00:00.0Z",
-        endDate: "2025-12-31T00:10:00.0Z"
+        endDate: "2020-12-31T00:10:00.0Z"
     },
     {
         sponsor: "Lowrance HDS Training",
