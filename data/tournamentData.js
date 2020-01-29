@@ -228,6 +228,63 @@ module.exports = [
     {
         organization: "ABA",
         trails: [{
+                trail: "Open Series GA",
+                tournaments: [
+
+                    {
+                        date: "2020-02-22",
+                        lake: "Eufaula",
+                        lakeID: "eufaulaal",
+                        ramp: "Lakepoint",
+                        state: "GA-AL-TN",
+                        txDetail: "T1",
+                        resultsLink: "",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=9&RegionName=R4"
+                    },
+                    {
+                        date: "2020-03-14",
+                        lake: "Oconee",
+                        lakeID: "oconee",
+                        ramp: "Sugar Creek",
+                        state: "GA",
+                        txDetail: "T1",
+                        resultsLink: "",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=9&RegionName=R4"
+                    },
+                    {
+                        date: "2020-04-25",
+                        lake: "Sinclair",
+                        lakeID: "sinclairga",
+                        ramp: "Dennis Station",
+                        state: "GA",
+                        txDetail: "T1",
+                        resultsLink: "",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=9&RegionName=R4"
+                    },
+                    {
+                        date: "2020-06-13",
+                        lake: "Oconee",
+                        lakeID: "oconee",
+                        ramp: "Sugar Creek",
+                        state: "GA",
+                        txDetail: "T1",
+                        resultsLink: "",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=9&RegionName=R4"
+                    },
+                    {
+                        date: "2020-02-22",
+                        lake: "Eufaula",
+                        lakeID: "eufaulaal",
+                        ramp: "Lakepoint",
+                        state: "GA-AL-TN",
+                        txDetail: "T1",
+                        resultsLink: "",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=9&RegionName=R4"
+                    }
+
+                ]
+            },
+            {
                 trail: "Open Series NC",
                 tournaments: [
 
@@ -582,6 +639,85 @@ module.exports = [
                 ]
             }
         ]
+    },
+    {
+        organization: "Action Marine",
+        trails: [{
+            trail: "Bass Action",
+            tournaments: [
+
+                {
+                    date: "2020-01-25",
+                    lake: "Eufaula",
+                    lakeID: "eufaula",
+                    ramp: "Lakepoint",
+                    state: "AL",
+                    txDetail: "",
+                    resultsLink: "https://www.bassactiontrail.com/results.html",
+                    entryLink: "https://www.bassactiontrail.com/"
+                },
+                {
+                    date: "2020-02-22",
+                    lake: "Eufaula",
+                    lakeID: "eufaulaal",
+                    ramp: "Lakepoint",
+                    state: "AL",
+                    txDetail: "",
+                    resultsLink: "https://www.bassactiontrail.com/results.html",
+                    entryLink: "https://www.bassactiontrail.com/"
+                },
+                {
+                    date: "2020-03-21",
+                    lake: "Bainbridge",
+                    lakeID: "bainbridge",
+                    ramp: "Earl May Park",
+                    state: "AL",
+                    txDetail: "",
+                    resultsLink: "https://www.bassactiontrail.com/results.html",
+                    entryLink: "https://www.bassactiontrail.com/"
+                },
+                {
+                    date: "2020-04-11",
+                    lake: "Eufaula",
+                    lakeID: "eufaulaal",
+                    ramp: "Lakepoint",
+                    state: "AL",
+                    txDetail: "",
+                    resultsLink: "https://www.bassactiontrail.com/results.html",
+                    entryLink: "https://www.bassactiontrail.com/"
+                },
+                {
+                    date: "2020-05-16",
+                    lake: "Seminole",
+                    lakeID: "seminole",
+                    ramp: "Spring Creek",
+                    state: "AL",
+                    txDetail: "",
+                    resultsLink: "https://www.bassactiontrail.com/results.html",
+                    entryLink: "https://www.bassactiontrail.com/"
+                },
+                {
+                    date: "2020-06-13",
+                    lake: "Seminole",
+                    lakeID: "seminole",
+                    ramp: "Spring Creek",
+                    state: "AL",
+                    txDetail: "",
+                    resultsLink: "https://www.bassactiontrail.com/results.html",
+                    entryLink: "https://www.bassactiontrail.com/"
+                },
+                {
+                    date: "2020-09-19",
+                    lake: "Classic TBD",
+                    lakeID: "",
+                    ramp: "TBD",
+                    state: "AL",
+                    txDetail: "",
+                    resultsLink: "https://www.bassactiontrail.com/results.html",
+                    entryLink: "https://www.bassactiontrail.com/"
+                }
+            ]
+        }]
     },
     {
         organization: "Big Bass Tour",
@@ -1007,6 +1143,65 @@ module.exports = [
                     txDetail: "",
                     resultsLink: "http://bojanglesproam.com/Schedule.html",
                     entryLink: "http://bojanglesproam.com/index.html"
+                }
+            ]
+        }]
+    },
+    {
+        organization: "Chester County BM",
+        trails: [{
+            trail: "Open Series",
+            tournaments: [
+
+                {
+                    date: "2020-04-14",
+                    lake: "U Chesapeake Bay",
+                    lakeID: "",
+                    ramp: "Anchor Marine",
+                    state: "MD",
+                    txDetail: "",
+                    resultsLink: "http://www.chestercountybassmasters.com/forums/index.php?board=6.0",
+                    entryLink: "http://www.chestercountybassmasters.com/forums/index.php?board=6.0"
+                },
+                {
+                    date: "2020-05-02",
+                    lake: "U Chesapeake Bay",
+                    lakeID: "",
+                    ramp: "Anchor Marine",
+                    state: "MD",
+                    txDetail: "",
+                    resultsLink: "http://www.chestercountybassmasters.com/forums/index.php?board=6.0",
+                    entryLink: "http://www.chestercountybassmasters.com/forums/index.php?board=6.0"
+                },
+                {
+                    date: "2020-06-27",
+                    lake: "U Chesapeake Bay",
+                    lakeID: "",
+                    ramp: "Anchor Marine",
+                    state: "MD",
+                    txDetail: "",
+                    resultsLink: "http://www.chestercountybassmasters.com/forums/index.php?board=6.0",
+                    entryLink: "http://www.chestercountybassmasters.com/forums/index.php?board=6.0"
+                },
+                {
+                    date: "2020-09-19",
+                    lake: "U Chesapeake Bay",
+                    lakeID: "",
+                    ramp: "Anchor Marine",
+                    state: "MD",
+                    txDetail: "",
+                    resultsLink: "http://www.chestercountybassmasters.com/forums/index.php?board=6.0",
+                    entryLink: "http://www.chestercountybassmasters.com/forums/index.php?board=6.0"
+                },
+                {
+                    date: "2020-10-24",
+                    lake: "U Chesapeake Bay",
+                    lakeID: "",
+                    ramp: "Anchor Marine",
+                    state: "MD",
+                    txDetail: "",
+                    resultsLink: "http://www.chestercountybassmasters.com/forums/index.php?board=6.0",
+                    entryLink: "http://www.chestercountybassmasters.com/forums/index.php?board=6.0"
                 }
             ]
         }]
@@ -1493,7 +1688,7 @@ module.exports = [
                 tournaments: [
 
                     {
-                        date: "2019-02-08",
+                        date: "2020-02-08",
                         lake: "Norman",
                         lakeID: "norman",
                         ramp: "Pinnacle",
@@ -1503,7 +1698,7 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
                     },
                     {
-                        date: "2019-02-16",
+                        date: "2020-02-16",
                         lake: "Norman",
                         lakeID: "norman",
                         ramp: "Pinnacle",
@@ -1513,7 +1708,7 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
                     },
                     {
-                        date: "2019-03-07",
+                        date: "2020-03-07",
                         lake: "Norman",
                         lakeID: "norman",
                         ramp: "Pinnacle",
@@ -1523,7 +1718,7 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
                     },
                     {
-                        date: "2019-03-28",
+                        date: "2020-03-28",
                         lake: "Norman",
                         lakeID: "norman",
                         ramp: "Pinnacle",
@@ -1533,7 +1728,7 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
                     },
                     {
-                        date: "2019-04-11",
+                        date: "2020-04-11",
                         lake: "Norman",
                         lakeID: "norman",
                         ramp: "Pinnacle",
@@ -1543,7 +1738,7 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
                     },
                     {
-                        date: "2019-04-25",
+                        date: "2020-04-25",
                         lake: "Norman",
                         lakeID: "norman",
                         ramp: "Pinnacle",
@@ -2192,13 +2387,66 @@ module.exports = [
     },
     {
         organization: "FLW",
-        trails: [
-
+        trails: [{
+                trail: "BFL Bama",
+                tournaments: [{
+                        date: "2020-02-08",
+                        lake: "Martin",
+                        lakeID: "martin",
+                        ramp: "Wind Creek",
+                        state: "AL",
+                        txDetail: "FLW",
+                        resultsLink: "",
+                        entryLink: "https://www.flwfishing.com/tips/2019-10-24-2020-phoenix-bfl-schedules-and-details"
+                    },
+                    {
+                        date: "2020-04-11",
+                        lake: "Mitchell",
+                        lakeID: "mitchell",
+                        ramp: "Higgins Ferry",
+                        state: "AL",
+                        txDetail: "FLW",
+                        resultsLink: "",
+                        entryLink: "https://www.flwfishing.com/tips/2019-10-24-2020-phoenix-bfl-schedules-and-details"
+                    },
+                    {
+                        date: "2020-05-16",
+                        lake: "Eufaula",
+                        lakeID: "eufaulaal",
+                        ramp: "Lakepoint",
+                        state: "AL",
+                        txDetail: "FLW",
+                        resultsLink: "",
+                        entryLink: "https://www.flwfishing.com/tips/2019-10-24-2020-phoenix-bfl-schedules-and-details"
+                    },
+                    {
+                        date: "2020-06-13",
+                        lake: "Neely Henry",
+                        lakeID: "neelyhenry",
+                        ramp: "Coosa",
+                        state: "AL",
+                        txDetail: "FLW",
+                        resultsLink: "",
+                        entryLink: "https://www.flwfishing.com/tips/2019-10-24-2020-phoenix-bfl-schedules-and-details"
+                    },
+                    {
+                        date: "2020-09-12",
+                        lake: "Eufaula",
+                        lakeID: "eufaulaal",
+                        ramp: "Lakepoint",
+                        state: "AL",
+                        txDetail: "FLW",
+                        resultsLink: "",
+                        entryLink: "https://www.flwfishing.com/tips/2019-10-24-2020-phoenix-bfl-schedules-and-details"
+                    }
+                ]
+            },
             {
                 trail: "BFL Buckeye",
                 tournaments: [{
                         date: "2020-05-16",
                         lake: "Grand Lake",
+                        lakeID: "grand",
                         ramp: "West Bank",
                         state: "OH",
                         txDetail: "FLW",
@@ -2208,6 +2456,7 @@ module.exports = [
                     {
                         date: "2020-06-06",
                         lake: "Indian",
+                        lakeID: "indian",
                         ramp: "Indian Lake SP",
                         state: "OH",
                         txDetail: "FLW",
@@ -2216,8 +2465,8 @@ module.exports = [
                     },
                     {
                         date: "2020-07-11",
-                        lakeID: "ohiorivertan",
                         lake: "Ohio Rvr",
+                        lakeID: "ohiorivertan",
                         ramp: "Lawrenceburg",
                         state: "OH",
                         txDetail: "FLW",
@@ -2243,23 +2492,60 @@ module.exports = [
                         txDetail: "FLW",
                         resultsLink: "https://www.flwfishing.com/results/2020-08-29-erie",
                         entryLink: "https://www.flwfishing.com/tournaments/2020-08-29-erie"
-                    },
-                    {
-                        date: "2020-08-30",
-                        lake: "Erie",
-                        lakeID: "erie",
-                        ramp: "Shelby Street",
-                        state: "OH",
-                        txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2020-08-29-erie",
-                        entryLink: "https://www.flwfishing.com/tournaments/2020-08-29-erie"
                     }
                 ]
             },
-
-
-
-
+            {
+                trail: "BFL Bulldog",
+                tournaments: [{
+                        date: "2020-02-01",
+                        lake: "Lanier",
+                        ramp: "Laurel Park",
+                        state: "GA",
+                        txDetail: "FLW",
+                        resultsLink: "",
+                        entryLink: "https://www.flwfishing.com/tips/2019-10-24-2020-phoenix-bfl-schedules-and-details"
+                    },
+                    {
+                        date: "2020-03-28",
+                        lake: "Oconee",
+                        ramp: "Sugar Creek",
+                        state: "GA",
+                        txDetail: "FLW",
+                        resultsLink: "",
+                        entryLink: "https://www.flwfishing.com/tips/2019-10-24-2020-phoenix-bfl-schedules-and-details"
+                    },
+                    {
+                        date: "2020-05-09",
+                        lake: "Sinclair",
+                        ramp: "Dennis Station",
+                        state: "GA",
+                        txDetail: "FLW",
+                        resultsLink: "",
+                        entryLink: "https://www.flwfishing.com/tips/2019-10-24-2020-phoenix-bfl-schedules-and-details"
+                    },
+                    {
+                        date: "2020-06-20",
+                        lake: "Eufaula",
+                        lakeID: "eufaulaal",
+                        ramp: "Lakepoint",
+                        state: "GA",
+                        txDetail: "FLW",
+                        resultsLink: "",
+                        entryLink: "https://www.flwfishing.com/tips/2019-10-24-2020-phoenix-bfl-schedules-and-details"
+                    },
+                    {
+                        date: "2020-09-22",
+                        lake: "Eufaula",
+                        lakeID: "eufaulaal",
+                        ramp: "Lakepoint",
+                        state: "GA",
+                        txDetail: "FLW",
+                        resultsLink: "",
+                        entryLink: "https://www.flwfishing.com/tips/2019-10-24-2020-phoenix-bfl-schedules-and-details"
+                    }
+                ]
+            },
             {
                 trail: "BFL Hoosier",
                 tournaments: [
@@ -2285,16 +2571,6 @@ module.exports = [
                         entryLink: "https://www.flwfishing.com/tournaments/2020-06-27-monroe"
                     },
                     {
-                        date: "2020-06-30",
-                        lake: "Monroe",
-                        lakeID: "monroe",
-                        ramp: "Cutright",
-                        state: "IN",
-                        txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2020-06-27-monroe",
-                        entryLink: "https://www.flwfishing.com/tournaments/2020-06-27-monroe"
-                    },
-                    {
                         date: "2020-07-18",
                         lake: "Ohio Rvr",
                         ramp: "Lawrenceburg",
@@ -2304,7 +2580,7 @@ module.exports = [
                         entryLink: "https://www.flwfishing.com/tournaments/2020-07-18-ohio-river-tanners-creek"
                     },
                     {
-                        date: "20-08-08",
+                        date: "20-08-15",
                         lake: "Ohio Rvr",
                         ramp: "Rocky Point",
                         state: "IN",
