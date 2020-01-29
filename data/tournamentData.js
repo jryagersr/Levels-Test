@@ -282,7 +282,7 @@ module.exports = [
                         entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=5&RegionName=R4"
                     }
                 ]
-            }, 
+            },
             {
                 trail: "Open Series SC",
                 tournaments: [
@@ -357,7 +357,7 @@ module.exports = [
                         date: "2020-05-02",
                         lake: "Gaston",
                         lakeID: "gaston",
-                        ramp: "Summit Landing",
+                        ramp: "Summit",
                         state: "NC-VA",
                         txDetail: "T4",
                         resultsLink: "",
@@ -1166,14 +1166,14 @@ module.exports = [
                 tournaments: [
 
                     {
-                        date: "2019-03-28",
+                        date: "2020-03-28",
                         lake: "Roanoke",
                         lakeID: "roanaoke45",
                         ramp: "Water Street",
                         state: "NC",
                         txDetail: "",
                         resultsLink: "",
-                        entryLink: "https://www.ncbasschallenge.com/2019-tournament-schedule/"
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-east/"
                     },
                     {
                         date: "2020-04-25",
@@ -1182,7 +1182,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "",
                         resultsLink: "",
-                        entryLink: "https://www.ncbasschallenge.com/2019-tournament-schedule/"
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-east/"
                     },
                     {
                         date: "2020-05-30",
@@ -1192,7 +1192,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "",
                         resultsLink: "",
-                        entryLink: "https://www.ncbasschallenge.com/2019-tournament-schedule/"
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-east/"
                     },
                     {
                         date: "2020-06-20",
@@ -1201,7 +1201,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "",
                         resultsLink: "",
-                        entryLink: "https://www.ncbasschallenge.com/2019-tournament-schedule/"
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-east/"
                     },
                     {
                         date: "2020-08-22",
@@ -1211,7 +1211,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "",
                         resultsLink: "",
-                        entryLink: "https://www.ncbasschallenge.com/2019-tournament-schedule/"
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-east/"
                     },
                     {
                         date: "2020-09-26",
@@ -1220,7 +1220,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "",
                         resultsLink: "",
-                        entryLink: "https://www.ncbasschallenge.com/2019-tournament-schedule/"
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-east/"
                     },
                     {
                         date: "2020-10-17",
@@ -1230,7 +1230,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "",
                         resultsLink: "",
-                        entryLink: "https://www.ncbasschallenge.com/2019-tournament-schedule/"
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-east/"
                     }
                 ]
             },
@@ -1493,13 +1493,63 @@ module.exports = [
                 tournaments: [
 
                     {
-                        date: "2019-02-09",
+                        date: "2019-02-08",
                         lake: "Norman",
                         lakeID: "norman",
                         ramp: "Pinnacle",
                         state: "NC",
                         txDetail: "Qualifier 1",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-norman-feb-9-2019-hamrick-hoover-start-2019-with-another-win/",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
+                    },
+                    {
+                        date: "2019-02-16",
+                        lake: "Norman",
+                        lakeID: "norman",
+                        ramp: "Pinnacle",
+                        state: "NC",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
+                    },
+                    {
+                        date: "2019-03-07",
+                        lake: "Norman",
+                        lakeID: "norman",
+                        ramp: "Pinnacle",
+                        state: "NC",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
+                    },
+                    {
+                        date: "2019-03-28",
+                        lake: "Norman",
+                        lakeID: "norman",
+                        ramp: "Pinnacle",
+                        state: "NC",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
+                    },
+                    {
+                        date: "2019-04-11",
+                        lake: "Norman",
+                        lakeID: "norman",
+                        ramp: "Pinnacle",
+                        state: "NC",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
+                    },
+                    {
+                        date: "2019-04-25",
+                        lake: "Norman",
+                        lakeID: "norman",
+                        ramp: "Pinnacle",
+                        state: "NC",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
                     }
                 ]
@@ -1578,6 +1628,72 @@ module.exports = [
                         resultsLink: "https://www.cattteamtrail.com/divisions/catt-old-north/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
                     },
+                ]
+            },
+            {
+                trail: "Tidewater",
+                tournaments: [
+
+                    {
+                        date: "2020-03-22",
+                        lake: "Perquimans",
+                        lakeID: "roanoke45",
+                        ramp: "New Wildlife",
+                        state: "NC",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-tidewater/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-tidewater/"
+                    },
+                    {
+                        date: "2020-04-05",
+                        lake: "Pasquotank",
+                        lakeID: "roanoke45",
+                        ramp: "City Ramp",
+                        state: "NC",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-tidewater/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-tidewater/"
+                    },
+                    {
+                        date: "2020-04-19",
+                        lake: "North Landing",
+                        lakeID: "roanoke45",
+                        ramp: "Pungo Ferry",
+                        state: "NC",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-tidewater/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-tidewater/"
+                    },
+                    {
+                        date: "2020-05-03",
+                        lake: "North Landing",
+                        lakeID: "roanoke45",
+                        ramp: "Waterlilly",
+                        state: "NC",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-tidewater/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-tidewater/"
+                    },
+                    {
+                        date: "2020-05-17",
+                        lake: "Chowan",
+                        lakeID: "roanoke45",
+                        ramp: "City Ramp",
+                        state: "NC",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-tidewater/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-tidewater/"
+                    },
+                    {
+                        date: "2020-05-31",
+                        lake: "Perquimans",
+                        lakeID: "roanoke45",
+                        ramp: "New Wildlife",
+                        state: "NC",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-tidewater/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-tidewater/"
+                    }
                 ]
             },
             {
@@ -1743,82 +1859,6 @@ module.exports = [
 
                 ]
             },
-            {
-                trail: "Yadkin",
-                tournaments: [
-
-                    {
-                        date: "2020-02-08",
-                        lake: "Tillery",
-                        lakeID: "tillery",
-                        ramp: "Swift Creek",
-                        state: "NC",
-                        txDetail: "Qualifier 1",
-                        resultsLink: "",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
-                    },
-                    {
-                        date: "2020-03-21",
-                        lake: "Badin",
-                        lakeID: "badin",
-                        ramp: "Circle Drive",
-                        state: "NC",
-                        txDetail: "Qualifier 1",
-                        resultsLink: "",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
-                    },
-                    {
-                        date: "2020-03-28",
-                        lake: "Tuckertown",
-                        lakeID: "tukertown",
-                        ramp: "Flat Creek",
-                        state: "NC",
-                        txDetail: "Qualifier 1",
-                        resultsLink: "",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
-                    },
-                    {
-                        date: "2020-04-05",
-                        lake: "High Rock",
-                        lakeID: "highrock",
-                        ramp: "Tamarac",
-                        state: "NC",
-                        txDetail: "Qualifier 1",
-                        resultsLink: "",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
-                    },
-                    {
-                        date: "2020-05-03",
-                        lake: "High Rock",
-                        lakeID: "highrock",
-                        ramp: "Tamarac",
-                        state: "NC",
-                        txDetail: "Qualifier 1",
-                        resultsLink: "",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
-                    },
-                    {
-                        date: "2020-03-28",
-                        lake: "Tuckertown",
-                        lakeID: "tukertown",
-                        ramp: "Flat Creek",
-                        state: "NC",
-                        txDetail: "Qualifier 1",
-                        resultsLink: "",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
-                    },
-                    {
-                        date: "2020-05-23",
-                        lake: "High Rock",
-                        lakeID: "highrock",
-                        ramp: "Tamarac",
-                        state: "NC",
-                        txDetail: "Qualifier 1",
-                        resultsLink: "",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
-                    }
-                ]
-            }
         ]
     },
     {
@@ -2078,15 +2118,75 @@ module.exports = [
             tournaments: [
 
                 {
-                    date: "2020-03-28",
+                    date: "2020-03-22",
+                    lake: "Tar-Pamlico",
+                    lakeID: "neuse",
+                    ramp: "Havens Garden",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "https://www.ncbasschallenge.com/tournament-results/",
+                    entryLink: "https://www.ncbasschallenge.com/tournament-schedule/"
+                },
+                {
+                    date: "2020-04-19",
                     lake: "Roanoke",
-                    lakeID: "roanaoke45",
+                    lakeID: "roanokewill",
                     ramp: "Water Street",
                     state: "NC",
                     txDetail: "",
-                    resultsLink: "",
-                    entryLink: "https://www.ncbasschallenge.com/2019-tournament-schedule/"
+                    resultsLink: "https://www.ncbasschallenge.com/tournament-results/",
+                    entryLink: "https://www.ncbasschallenge.com/tournament-schedule/"
                 },
+                {
+                    date: "2020-05-17",
+                    lake: "Neuse",
+                    lakeID: "neuse",
+                    ramp: "Lawson Creek",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "https://www.ncbasschallenge.com/tournament-results/",
+                    entryLink: "https://www.ncbasschallenge.com/tournament-schedule/"
+                },
+                {
+                    date: "2020-06-07",
+                    lake: "Roanoke",
+                    lakeID: "roanokewill",
+                    ramp: "Water Street",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "https://www.ncbasschallenge.com/tournament-results/",
+                    entryLink: "https://www.ncbasschallenge.com/tournament-schedule/"
+                },
+                {
+                    date: "2020-07-19",
+                    lake: "Tar-Pamlico",
+                    lakeID: "neuse",
+                    ramp: "Havens Garden",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "https://www.ncbasschallenge.com/tournament-results/",
+                    entryLink: "https://www.ncbasschallenge.com/tournament-schedule/"
+                },
+                {
+                    date: "2020-08-02",
+                    lake: "Chowan",
+                    lakeID: "roanoke45",
+                    ramp: "Pembroke Creek",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "https://www.ncbasschallenge.com/tournament-results/",
+                    entryLink: "https://www.ncbasschallenge.com/tournament-schedule/"
+                },
+                {
+                    date: "2020-08-29",
+                    lake: "Tar-Pamlico",
+                    lakeID: "neuse",
+                    ramp: "Havens Garden",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "https://www.ncbasschallenge.com/tournament-results/",
+                    entryLink: "https://www.ncbasschallenge.com/tournament-schedule/"
+                }
             ]
         }, ]
     },

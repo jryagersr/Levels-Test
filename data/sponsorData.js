@@ -1,5 +1,5 @@
 module.exports = [
-    
+
     {
         sponsor: "Anglers Choice",
         href: "https://www.anglerschoicemarine.com/",
@@ -39,7 +39,7 @@ module.exports = [
         type: "logo",
         startDate: "2019-01-01T00:00:00.0Z",
         endDate: "2029-01-01T00:00:00.0Z"
-    },{
+    }, {
         sponsor: "Carolina Anglers Team Trail",
         href: "https://www.cattteamtrail.com/",
         src: "/static/assets/img/sponsor-banners/catt banner.png",
@@ -47,7 +47,7 @@ module.exports = [
         type: "logo",
         startDate: "2019-01-01T00:00:00.0Z",
         endDate: "2021-01-01T00:00:00.0Z"
-    },{
+    }, {
         sponsor: "Carolina Bass Challenge",
         href: "http://www.carolinasbasschallenge.com//",
         src: "/static/assets/img/sponsor-banners/cbc banner.png",
@@ -55,7 +55,7 @@ module.exports = [
         type: "logo",
         startDate: "2019-01-01T00:00:00.0Z",
         endDate: "2021-01-01T00:00:00.0Z"
-    },{
+    }, {
         sponsor: "Cashion",
         href: "https://cashionrods.com/",
         src: "/static/assets/img/sponsor-banners/cashion banner.png",
@@ -207,7 +207,7 @@ module.exports = [
         type: "logo",
         startDate: "2020-01-01T00:00:00.0Z",
         endDate: "2025-12-31T00:10:00.0Z"
-    },{
+    }, {
         sponsor: "Piedmont Bass Classics",
         href: "http://piedmontbassclassics.com/MainPage2.html",
         src: "/static/assets/img/sponsor-banners/pbc banner.png",
@@ -233,7 +233,7 @@ module.exports = [
         type: "logo",
         startDate: "2019-01-01T00:00:00.0Z",
         endDate: "2029-01-01T00:00:00.0Z"
-    },{
+    }, {
         sponsor: "Teespring Athletics",
         href: "https://teespring.com/stores/sweet-tee-21",
         src: "/static/assets/img/sponsor-banners/venable banner.png",
@@ -278,11 +278,11 @@ module.exports = [
         startDate: "2019-01-01T00:00:00.0Z",
         endDate: "2021-01-01T00:00:00.0Z"
     },*/
-    
+
     /*************************************************************
      * Charity Txs
      */
-        
+
     {
         sponsor: "Warriors On The Water",
         href: "https://www.warriorsonthewater.com/",
@@ -310,11 +310,11 @@ module.exports = [
         startDate: "2019-01-01T00:00:00.0Z",
         endDate: "2019-10-09T00:10:00.0Z"
     },
- 
+
     /*************************************************************
      *  Txs
      */
-       
+
     {
         sponsor: "Jordan Wildcat",
         href: "",
