@@ -47,7 +47,7 @@ module.exports = {
                 // If the current value is Gaston
 
                 date = value.substring(97, 101) + "/" + new Date().getFullYear();
-                time = new Date(date + " 8:00");
+                time = new Date(date + " 13:00");
                 elev = value.substring(110, 116);
                 flow = "N/A";
                 data.push({

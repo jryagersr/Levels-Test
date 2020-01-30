@@ -638,7 +638,7 @@ function updateAllLakes() {
                 break;
 
                 case "WEATHERWATER":
-                  weatherwater.getWeatherWaterData(currentLake, function (error, WEATHERWATERdata) {
+                  weatherwater.getWEATHERWATERData(currentLake, function (error, WEATHERWATERdata) {
                     if (error) {
                       console.log(currentLake.bodyOfWater + " WEATHERWATER data error")
                       // if successful return the data
