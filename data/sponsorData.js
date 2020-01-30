@@ -7,7 +7,8 @@ module.exports = [
         location: ["kerr", "falls", "gaston", "anna", "smithmountain", "fontana",
             "james", "norman", "wylie", "hickory", "keowee", "wateree", "mtnisland", "tillery", "Tuckertown",
             "highrock", "randleman", "wscottkerr", "mayo", "hyco", "badin", "blewettfalls", "Belews",
-            "jocassee"],
+            "jocassee"
+        ],
         type: "logo",
         startDate: "2019-01-01T00:00:00.0Z",
         endDate: "2021-01-01T00:00:00.0Z"
@@ -38,7 +39,7 @@ module.exports = [
         type: "logo",
         startDate: "2019-01-01T00:00:00.0Z",
         endDate: "2029-01-01T00:00:00.0Z"
-    }, 
+    },
     {
         sponsor: "Carolina Anglers Team Trail",
         href: "https://www.cattteamtrail.com/",
@@ -47,7 +48,7 @@ module.exports = [
         type: "logo",
         startDate: "2019-01-01T00:00:00.0Z",
         endDate: "2021-01-01T00:00:00.0Z"
-    }, 
+    },
     {
         sponsor: "Carolina Bass Challenge",
         href: "http://www.carolinasbasschallenge.com//",
@@ -56,7 +57,7 @@ module.exports = [
         type: "logo",
         startDate: "2019-01-01T00:00:00.0Z",
         endDate: "2021-01-01T00:00:00.0Z"
-    }, 
+    },
     {
         sponsor: "Cashion",
         href: "https://cashionrods.com/",
@@ -172,7 +173,7 @@ module.exports = [
         location: ["kerr"],
         type: "logo",
         startDate: "2019-01-01T00:00:00.0Z",
-        endDate: "2029-01-01T00:00:00.0Z"
+        endDate: "2021-01-01T00:00:00.0Z"
     },
     {
         sponsor: "JSE",
@@ -209,7 +210,7 @@ module.exports = [
         type: "logo",
         startDate: "2020-01-01T00:00:00.0Z",
         endDate: "2025-12-31T00:10:00.0Z"
-    }, 
+    },
     {
         sponsor: "Piedmont Bass Classics",
         href: "http://piedmontbassclassics.com/MainPage2.html",
@@ -236,7 +237,7 @@ module.exports = [
         type: "logo",
         startDate: "2019-01-01T00:00:00.0Z",
         endDate: "2029-01-01T00:00:00.0Z"
-    }, 
+    },
     {
         sponsor: "Teespring Athletics",
         href: "https://teespring.com/stores/sweet-tee-21",

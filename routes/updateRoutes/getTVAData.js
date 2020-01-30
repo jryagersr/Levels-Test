@@ -32,7 +32,7 @@ module.exports = {
         } catch (error) {
           dataErrorTrue = true;
         }
-              console.log (data)
+              /*console.log (data)*/
 
         if (!dataErrorTrue) {
 
@@ -69,7 +69,7 @@ module.exports = {
 
           callback(false, waterData.reverse());
         } else {
-          console.log(`Data is bad for ${bodyOfWater} (TVA)`);
+          /*console.log(`Data is bad for ${bodyOfWater} (TVA)`);*/
           callback(true, body);
         }
       }

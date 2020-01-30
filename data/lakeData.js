@@ -2898,10 +2898,10 @@ module.exports = [
         normalPool: 200.0,
         lat: 36.51,
         long: -77.94,
-        elevURL: "http://epec.saw.usace.army.mil/dailyrep.txt",
+        elevURL: "https://water.weather.gov/ahps2/hydrograph_to_xml.php?gage=gasn7&output=tabular&time_zone=est",
         flowURL: "",
         href: "/lakes/gaston",
-        dataSource: ["ACEWilm", "loadAds"], // array of calls to make to retrieve data
+        dataSource: ["WEATHERWATER", "loadAds"], // array of calls to make to retrieve data
     },
     {
         bodyOfWater: "Hickory", // lake name
@@ -4794,25 +4794,25 @@ module.exports = [
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
     //Out until SSL issue documented in Slack is resolved
-     {
-         bodyOfWater: "Smith Mountain", // lake name
-         state: ["Virginia"],
-         data: [],
-         ccWxData: [],
-         ccWxDataLastRefresh: "12/31/18",
-         wxForecastData: [],
-         wxForecastDataLastRefresh: "12/31/18",
-         refreshInterval: 1450, //minutes
-         lastRefresh: "12/31/18", // a Date 
-         seaLevelDelta: 0,
-         normalPool: 795.0,
-         lat: 37.05,
-         long: -79.60,
-         elevURL: "http://epec.saw.usace.army.mil/dailyrep.txt",
-         flowURL: "",
-         href: "/lakes/smithmountain",
-         dataSource: ["ACEWilm", "loadAds"], // array of calls to make to retrieve data
-     },
+    {
+        bodyOfWater: "Smith Mountain", // lake name
+        state: ["Virginia"],
+        data: [],
+        ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
+        wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
+        refreshInterval: 1450, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 795.0,
+        lat: 37.05,
+        long: -79.60,
+        elevURL: "http://epec.saw.usace.army.mil/dailyrep.txt",
+        flowURL: "",
+        href: "/lakes/smithmountain",
+        dataSource: ["ACEWilm", "loadAds"], // array of calls to make to retrieve data
+    },
 
     // WEST VIRGINIA ---------------------------------------------------------------------------------------------------------
     {
