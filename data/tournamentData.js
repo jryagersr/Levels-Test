@@ -2288,6 +2288,7 @@ module.exports = [
                 {
                     date: "2020-08-29",
                     lake: "Cypress Landing",
+                    lakeID: "chowanWF",
                     ramp: "Pembroke",
                     state: "NC",
                     txDetail: "Bass For Cash Series",
@@ -2978,22 +2979,6 @@ module.exports = [
                     entryLink: ""
                 }
             ]
-        }]
-    },
-    {
-        organization: "NC Bass Champs",
-        trails: [{
-            trail: "Fall Winter",
-            tournaments: [{
-                date: "2019-09-08",
-                lake: "Tar River",
-                lakeID: "tarriver",
-                ramp: "Tranters Creek",
-                state: "NC",
-                txDetail: "",
-                resultsLink: "https://www.ncbasschamps.com",
-                entryLink: "https://www.ncbasschamps.com"
-            }, ]
         }]
     },
     {

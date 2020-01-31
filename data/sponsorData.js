@@ -17,7 +17,7 @@ module.exports = [
         sponsor: "Bass For Cash Series",
         href: "https://www.bassforcash.com/",
         src: "/static/assets/img/sponsor-banners/bfcs banner.png",
-        location: ["kerr", "jordan", "falls", "gaston", "roanokewill", "roanoke45"],
+        location: ["kerr", "jordan", "falls", "gaston", "roanokewill", "roanoke45", "chowanwf"],
         type: "logo",
         startDate: "2019-01-01T00:00:00.0Z",
         endDate: "2021-01-01T00:00:00.0Z"
@@ -44,7 +44,7 @@ module.exports = [
         sponsor: "Carolina Anglers Team Trail",
         href: "https://www.cattteamtrail.com/",
         src: "/static/assets/img/sponsor-banners/catt banner.png",
-        location: ["kerr", "jordan", "falls", "gaston", "roanokewill"],
+        location: ["kerr", "jordan", "falls", "gaston", "roanokewill","chowanwf"],
         type: "logo",
         startDate: "2019-01-01T00:00:00.0Z",
         endDate: "2021-01-01T00:00:00.0Z"
@@ -80,7 +80,7 @@ module.exports = [
         sponsor: "Collins Boating",
         href: "https://www.collinsboating.com/",
         src: "/static/assets/img/sponsor-banners/collins banner.png",
-        location: ["kerr", "jordan", "falls", "gaston", "shearonharris", "roanokewill", "roanoke45"],
+        location: ["kerr", "jordan", "falls", "gaston", "shearonharris", "roanokewill", "roanoke45", "chowanwf"],
         type: "logo",
         startDate: "2019-01-01T00:00:00.0Z",
         endDate: "2021-01-01T00:00:00.0Z"
@@ -301,7 +301,7 @@ module.exports = [
         sponsor: "Cast for a Cure",
         href: "http://704outdoors.tv/cast-for-a-cure/",
         src: "/static/assets/img/tournament-banners/cfc banner.png",
-        location: ["jordan"],
+        location: ["badin"],
         type: "charity",
         startDate: "2020-01-01T00:00:00.0Z",
         endDate: "2020-05-16T00:00:00.0Z"
@@ -387,7 +387,7 @@ module.exports = [
         sponsor: "Collins 6",
         href: "https://bassforcash.com/schedule",
         src: "/static/assets/img/tournament-banners/collins cypress 8-29.png",
-        location: ["Roanoke45"],
+        location: ["chowanwf"],
         type: "tournament",
         startDate: "2019-06-29T00:00:00.0Z",
         endDate: "2020-08-29T00:10:00.0Z"

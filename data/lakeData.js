@@ -632,10 +632,11 @@ module.exports = [
         normalPool: 258.0,
         lat: 38.221381,
         long: -120.960911,
-        elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=7438044&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN",
+        elevURL: "none",
+        //elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=7438044&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN",
         flowURL: "",
         href: "/lakes/camanche",
-        dataSource: ["ACE"], // array of calls to make to retrieve data
+        dataSource: ["loadAds"], // array of calls to make to retrieve data
     },
     {
         bodyOfWater: "Canyon", // lake name
@@ -765,7 +766,7 @@ module.exports = [
         normalPool: 666.0,
         lat: 38.160071,
         long: -120.792308,
-        elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=502044&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN",
+        elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=3980992044&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN",
         flowURL: "",
         href: "/lakes/newhogan",
         dataSource: ["ACE"], // array of calls to make to retrieve data
@@ -784,10 +785,11 @@ module.exports = [
         normalPool: 903.9,
         lat: 36.857025,
         long: -119.300940,
-        elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=314044&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN",
+        elevURL: "none",
+        //elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=314044&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN",
         flowURL: "",
         href: "/lakes/pineflat",
-        dataSource: ["ACE"], // array of calls to make to retrieve data
+        dataSource: [], // array of calls to make to retrieve data
     },
     // Everything I can find on Sonoma lake says water elevation is 358'
     // ACE is reporting a elevation of 446' Guessing the pool should be about 458
@@ -824,7 +826,7 @@ module.exports = [
         normalPool: 656.0,
         lat: 36.074796,
         long: -118.914035,
-        elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=379044&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN",
+        elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=12185044&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN",
         flowURL: "",
         href: "/lakes/success",
         dataSource: ["ACE"], // array of calls to make to retrieve data
@@ -2642,7 +2644,7 @@ module.exports = [
         normalPool: 4278.0,
         lat: 34.625466,
         long: -104.389870,
-        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08384000&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
+        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08384000&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
         flowURL: "",
         href: "/lakes/sumner",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
@@ -2800,10 +2802,29 @@ module.exports = [
         normalPool: 722.0,
         lat: 36.315758,
         long: -80.028425,
-        elevURL: "",
+        elevURL: "none",
         flowURL: "",
         href: "/lakes/belews",
         dataSource: ["loadAds"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "Belhaven", // lake name
+        state: ["North Carolina"],
+        data: [],
+        ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
+        wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
+        refreshInterval: 60, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 0.0,
+        lat: 35.537222,
+        long:  -76.622778,
+        elevURL: "https://water.weather.gov/ahps2/hydrograph_to_xml.php?gage=blhn7&output=tabular&time_zone=est",
+        flowURL: "",
+        href: "/lakes/belhaven",
+        dataSource: ["WEATHERWATER", "loadAds"], // array of calls to make to retrieve data
     },
     {
         bodyOfWater: "Blewett Falls", // lake name
@@ -2843,6 +2864,25 @@ module.exports = [
         flowURL: "",
         href: "/lakes/capefearfayett",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "Chowan (Waterfront)", // lake name
+        state: ["North Carolina"],
+        data: [],
+        ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
+        wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
+        refreshInterval: 60, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 0.0,
+        lat: 36.056389,
+        long: -76.610556,
+        elevURL: "https://water.weather.gov/ahps2/hydrograph_to_xml.php?gage=ewpn7&output=tabular&time_zone=est",
+        flowURL: "",
+        href: "/lakes/chowanwf",
+        dataSource: ["WEATHERWATER", "loadAds"], // array of calls to make to retrieve data
     },
     {
         bodyOfWater: "Falls", // lake name
@@ -3045,6 +3085,25 @@ module.exports = [
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
     },
     {
+        bodyOfWater: "Little River (Woodville)", // lake name
+        state: ["North Carolina"],
+        data: [],
+        ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
+        wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
+        refreshInterval: 60, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 0.0,
+        lat: 36.240400,
+        long: -76.324600,
+        elevURL: "https://water.weather.gov/ahps2/hydrograph_to_xml.php?gage=wdvn7&output=tabular&time_zone=est",
+        flowURL: "",
+        href: "/lakes/littleriver",
+        dataSource: ["WEATHERWATER", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
         bodyOfWater: "Mayo", // lake name
         state: ["North Carolina"],
         data: [],
@@ -3103,6 +3162,25 @@ module.exports = [
         dataSource: ["USGS"], // array of calls to make to retrieve data
     },
     {
+        bodyOfWater: "Neuse River (Smithfield)", // lake name
+        state: ["North Carolina"],
+        data: [],
+        ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
+        wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 8.00,
+        normalPool: 8.00,
+        lat: 35.26,
+        long: -77.585,
+        elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=24467028&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+        flowURL: "",
+        href: "/lakes/neusesmith",
+        dataSource: ["ACE"], // array of calls to make to retrieve data
+    },
+    {
         bodyOfWater: "Norman", // lake name
         state: ["North Carolina"],
         data: [],
@@ -3120,6 +3198,44 @@ module.exports = [
         flowURL: "",
         href: "/lakes/norman",
         dataSource: ["DUKE", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "Pasquotank (Mariners Wharf)", // lake name
+        state: ["North Carolina"],
+        data: [],
+        ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
+        wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
+        refreshInterval: 60, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 0.0,
+        lat: 36.298611,
+        long: -76.218611,
+        elevURL: "https://water.weather.gov/ahps2/hydrograph_to_xml.php?gage=emwn7&output=tabular&time_zone=est",
+        flowURL: "",
+        href: "/lakes/pasquotank",
+        dataSource: ["WEATHERWATER", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "Perquimans (Hertford)", // lake name
+        state: ["North Carolina"],
+        data: [],
+        ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
+        wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
+        refreshInterval: 60, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 0.0,
+        lat: 36.194100,
+        long: -76.466300,
+        elevURL: "https://water.weather.gov/ahps2/hydrograph_to_xml.php?gage=htfn7&output=tabular&time_zone=est",
+        flowURL: "",
+        href: "/lakes/perquimans",
+        dataSource: ["WEATHERWATER", "loadAds"], // array of calls to make to retrieve data
     },
     {
         bodyOfWater: "Randleman", // lake name
@@ -3171,7 +3287,8 @@ module.exports = [
         normalPool: 131.0,
         lat: 36.483629,
         long: -77.704501,
-        elevURL: "http://epec.saw.usace.army.mil/dailyrep.txt",
+        elevURL: "none",
+        //elevURL: "http://epec.saw.usace.army.mil/dailyrep.txt",
         flowURL: "",
         href: "/lakes/roanokerapids",
         dataSource: ["ACEWilm", "loadAds"], // array of calls to make to retrieve data
@@ -3270,6 +3387,44 @@ module.exports = [
         flowURL: "",
         href: "/lakes/roanokewill",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "Scuppernong (Columbia)", // lake name
+        state: ["North Carolina"],
+        data: [],
+        ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
+        wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
+        refreshInterval: 60, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 0.0,
+        lat:  35.917500,
+        long:  -76.254444,
+        elevURL: "https://water.weather.gov/ahps2/hydrograph_to_xml.php?gage=coln7&output=tabular&time_zone=est",
+        flowURL: "",
+        href: "/lakes/suppernongcol",
+        dataSource: ["WEATHERWATER", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "Scuppernong (Woodley)", // lake name
+        state: ["North Carolina"],
+        data: [],
+        ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
+        wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
+        refreshInterval: 60, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 0.0,
+        lat:   35.877800,
+        long:  -76.337400,
+        elevURL: "https://water.weather.gov/ahps2/hydrograph_to_xml.php?gage=scpn7&output=tabular&time_zone=est",
+        flowURL: "",
+        href: "/lakes/suppernongwood",
+        dataSource: ["WEATHERWATER", "loadAds"], // array of calls to make to retrieve data
     },
     {
         bodyOfWater: "Shearon Harris", // lake name
@@ -4749,10 +4904,10 @@ module.exports = [
         normalPool: 620.0,
         lat: 37.086518,
         long: -79.403691,
-        elevURL: "http://epec.saw.usace.army.mil/dailyrep.txt",
+                elevURL: "https://www.aep.com/Recreation/Hydro",
         flowURL: "",
         href: "/lakes/leesville",
-        dataSource: ["ACEWilm", "loadAds"], // array of calls to make to retrieve data
+        dataSource: ["WEATHERWATER","loadAds"], // array of calls to make to retrieve data
     },
     {
         bodyOfWater: "Philpott", // lake name
@@ -4808,10 +4963,11 @@ module.exports = [
         normalPool: 795.0,
         lat: 37.05,
         long: -79.60,
-        elevURL: "http://epec.saw.usace.army.mil/dailyrep.txt",
+        elevURL: "https://www.aep.com/Recreation/Hydro",
+        //elevURL: "http://epec.saw.usace.army.mil/dailyrep.txt",
         flowURL: "",
         href: "/lakes/smithmountain",
-        dataSource: ["ACEWilm", "loadAds"], // array of calls to make to retrieve data
+        dataSource: ["WEATHERWATER","loadAds"], // array of calls to make to retrieve data
     },
 
     // WEST VIRGINIA ---------------------------------------------------------------------------------------------------------
