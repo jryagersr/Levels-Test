@@ -460,6 +460,24 @@ module.exports = [
         flowURL: "",
         href: "/lakes/alamo",
         dataSource: ["ACE"], // array of calls to make to retrieve data
+    }, {
+        bodyOfWater: "Mead", // lake name
+        state: ["Arizona", "Nevada"],
+        data: [],
+        ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
+        wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 1160.4,
+        lat: 34.262902,
+        long: -113.573761,
+        elevURL: "https://www.usbr.gov/lc/region/g4000/riverops/webreports/accumweb.json",
+        flowURL: "",
+        href: "/lakes/mead",
+        dataSource: ["WEATHERWATER"], // array of calls to make to retrieve data
     },
     {
         bodyOfWater: "Havasu", // lake name
@@ -847,10 +865,11 @@ module.exports = [
         normalPool: 6000.0,
         lat: 39.629899,
         long: -107.754241,
-        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=09091900&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
+        elevURL: "https://www.usbr.gov/rsvrWater/rsv40Day.html?siteid=961&reservoirtype=Reservoir",
+        //elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=09091900&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
         flowURL: "",
         href: "/lakes/riflegap",
-        dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+        dataSource: ["WEATHERWATER", "loadAds"], // array of calls to make to retrieve data
     },
     {
         bodyOfWater: "Trinidad", // lake name
@@ -2627,10 +2646,12 @@ module.exports = [
         normalPool: 4301.0,
         lat: 33.212019,
         long: -107.192382,
-        elevURL: "https://waterdatafortexas.org/reservoirs/individual/elephant-butte-30day.csv",
+        elevURL: "https://www.usbr.gov/rsvrWater/rsv40Day.html?siteid=1119&reservoirtype=Reservoir",
+        //elevURL: "https://waterdatafortexas.org/reservoirs/individual/elephant-butte-30day.csv",
         flowURL: "",
         href: "/lakes/elephantbutte",
-        dataSource: ["TWDB", "loadAds"], // array of calls to make to retrieve data Texas Water Development District
+        dataSource: ["WEATHERWATER", "loadAds"], // array of calls to make to retrieve data Texas Water Development District
+        //dataSource: ["TWDB", "loadAds"], // array of calls to make to retrieve data Texas Water Development District
     },
     {
         bodyOfWater: "Sumner", // lake name
@@ -2644,10 +2665,11 @@ module.exports = [
         normalPool: 4278.0,
         lat: 34.625466,
         long: -104.389870,
-        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08384000&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
+        elevURL: "https://www.usbr.gov/rsvrWater/rsv40Day.html?siteid=943&reservoirtype=Reservoir",
+        //elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08384000&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
         flowURL: "",
         href: "/lakes/sumner",
-        dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+        dataSource: ["WEATHERWATER", "loadAds"], // array of calls to make to retrieve data
     },
     {
         bodyOfWater: "Santa Rosa", // lake name
@@ -2899,11 +2921,12 @@ module.exports = [
         topOfFloodControl: 264.8,
         lat: 36.01,
         long: -78.70,
-        elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1745041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02087182&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
+        //elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1745041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
         flowURL: "",
         tempURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02087182&period=Pt168H&parameterCd=00010&siteType=LK&siteStatus=all",
         href: "/lakes/falls",
-        dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+        dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
     {
         bodyOfWater: "Fontana", // lake name
@@ -3055,10 +3078,11 @@ module.exports = [
         botOfFloodConservation: 202.0,
         lat: 35.75,
         long: -79.03,
-        elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1743041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02098197&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
+        //elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1743041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
         flowURL: "",
         href: "/lakes/jordan",
-        dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+        dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
     {
         bodyOfWater: "Kerr", // lake name
@@ -3077,12 +3101,12 @@ module.exports = [
         topOfDam: 332.0,
         lat: 36.56,
         long: -78.32,
-        //elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02079490&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1749041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02079490&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
+        //elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1749041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
         flowURL: "",
         href: "/lakes/kerr",
         //dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+        dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
     {
         bodyOfWater: "Little River (Woodville)", // lake name
@@ -4807,6 +4831,43 @@ module.exports = [
         href: "/lakes/deercreek",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
     },*/
+    {
+        bodyOfWater: "Flaming Gorge", // lake name
+        state: ["Utah", "Wyoming"],
+        data: [],
+        ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
+        wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 3700.0,
+        lat: {
+            bodyOfWater: "Powell", // lake name
+            state: ["Utah", "Arizona"],
+            data: [],
+            ccWxData: [],
+            ccWxDataLastRefresh: "12/31/18",
+            wxForecastData: [],
+            wxForecastDataLastRefresh: "12/31/18",
+            refreshInterval: 90, //minutes
+            lastRefresh: "12/31/18", // a Date 
+            seaLevelDelta: 0,
+            normalPool: 3700.0,
+            lat: 41.006927,
+            long: -109.563299,
+            elevURL: "https://www.usbr.gov/rsvrWater/rsv40Day.html?siteid=919&reservoirtype=Reservoir",
+            flowURL: "",
+            href: "/lakes/powell",
+            dataSource: ["WEATHERWATER", "loadAds"], // array of calls to make to retrieve data
+        },
+        long: -111.484167,
+        elevURL: "https://www.usbr.gov/rsvrWater/rsv40Day.html?siteid=919&reservoirtype=Reservoir",
+        flowURL: "",
+        href: "/lakes/flaminggorge",
+        dataSource: ["WEATHERWATER", "loadAds"], // array of calls to make to retrieve data
+    },
 
     // Vermont  ---------------------------------------------------------------------------------------------------------
     // Champlain found under New York
@@ -4948,7 +5009,6 @@ module.exports = [
         href: "/lakes/potomac",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
-    //Out until SSL issue documented in Slack is resolved
     {
         bodyOfWater: "Smith Mountain", // lake name
         state: ["Virginia"],
