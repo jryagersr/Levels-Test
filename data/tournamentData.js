@@ -2982,6 +2982,92 @@ module.exports = [
         }]
     },
     {
+        organization: "Mega Bass",
+        trails: [{
+            trail: "Ohio",
+            tournaments: [{
+                    date: "2020-04-11",
+                    lake: "Indian",
+                    lakeID: "indian",
+                    ramp: "Moundwood",
+                    state: "OH",
+                    txDetail: "",
+                    resultsLink: "",
+                    entryLink: "http://www.ombtt.com/WebsiteMstrs/OHIOMEGABASSTOURNAMENTTRAIL.html"
+                },
+                {
+                    date: "2020-05-03",
+                    lake: "Grand",
+                    lakeID: "",
+                    ramp: "Celina",
+                    state: "OH",
+                    txDetail: "",
+                    resultsLink: "",
+                    entryLink: "http://www.ombtt.com/WebsiteMstrs/OHIOMEGABASSTOURNAMENTTRAIL.html"
+                },
+                {
+                    date: "2020-05-30",
+                    lake: "Buckeye",
+                    lakeID: "",
+                    ramp: "Liebs Island",
+                    state: "OH",
+                    txDetail: "",
+                    resultsLink: "",
+                    entryLink: "http://www.ombtt.com/WebsiteMstrs/OHIOMEGABASSTOURNAMENTTRAIL.html"
+                },
+                {
+                    date: "2020-06-28",
+                    lake: "Erie",
+                    lakeID: "",
+                    ramp: "Sandusky",
+                    state: "OH",
+                    txDetail: "",
+                    resultsLink: "",
+                    entryLink: "http://www.ombtt.com/WebsiteMstrs/OHIOMEGABASSTOURNAMENTTRAIL.html"
+                },{
+                    date: "2020-07-18",
+                    lake: "Indian",
+                    lakeID: "indian",
+                    ramp: "Moundwood",
+                    state: "OH",
+                    txDetail: "",
+                    resultsLink: "",
+                    entryLink: "http://www.ombtt.com/WebsiteMstrs/OHIOMEGABASSTOURNAMENTTRAIL.html"
+                },
+                {
+                    date: "2020-08-08",
+                    lake: "Alum Creek",
+                    lakeID: "alumcreek",
+                    ramp: "New Galena",
+                    state: "OH",
+                    txDetail: "",
+                    resultsLink: "",
+                    entryLink: "http://www.ombtt.com/WebsiteMstrs/OHIOMEGABASSTOURNAMENTTRAIL.html"
+                },
+                {
+                    date: "2020-09-13",
+                    lake: "Rocky Fork",
+                    lakeID: "rockyfork",
+                    ramp: "North Shore",
+                    state: "OH",
+                    txDetail: "",
+                    resultsLink: "",
+                    entryLink: "http://www.ombtt.com/WebsiteMstrs/OHIOMEGABASSTOURNAMENTTRAIL.html"
+                },
+                {
+                    date: "2020-10-22",
+                    lake: "Detriot River",
+                    lakeID: "detroit",
+                    ramp: "Elizabeth",
+                    state: "OH",
+                    txDetail: "",
+                    resultsLink: "",
+                    entryLink: "http://www.ombtt.com/WebsiteMstrs/OHIOMEGABASSTOURNAMENTTRAIL.html"
+                }
+            ]
+        }]
+    },
+    {
         organization: "Percy Priest Wildcat",
         trails: [{
             trail: "Sat Morn (5:30-10:30)",

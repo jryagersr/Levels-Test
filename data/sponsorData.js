@@ -44,7 +44,7 @@ module.exports = [
         sponsor: "Carolina Anglers Team Trail",
         href: "https://www.cattteamtrail.com/",
         src: "/static/assets/img/sponsor-banners/catt banner.png",
-        location: ["kerr", "jordan", "falls", "gaston", "roanokewill","chowanwf"],
+        location: ["kerr", "jordan", "falls", "gaston", "roanokewill", "chowanwf"],
         type: "logo",
         startDate: "2019-01-01T00:00:00.0Z",
         endDate: "2021-01-01T00:00:00.0Z"
@@ -283,6 +283,15 @@ module.exports = [
         startDate: "2019-01-01T00:00:00.0Z",
         endDate: "2021-01-01T00:00:00.0Z"
     },*/
+    {
+        sponsor: "Cast for a Cure",
+        href: "http://704outdoors.tv/cast-for-a-cure/",
+        src: "/static/assets/img/tournament-banners/cfc banner.png",
+        location: ["badin", "highrock", "tillery", "tuckertown","jordan", "falls", "Randleman"],
+        type: "logo",
+        startDate: "2020-01-01T00:00:00.0Z",
+        endDate: "2020-05-16T00:00:00.0Z"
+    },
 
     /*************************************************************
      * Charity Txs

@@ -3550,6 +3550,7 @@ module.exports = [
 
     /*{
         bodyOfWater: "Indian Lake", // lake name
+        state: ["Ohio"],
         data: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
@@ -3570,6 +3571,25 @@ module.exports = [
 
     // OHIO  ---------------------------------------------------------------------------------------------------------
 
+    {
+        bodyOfWater: "Alum Creek", // lake name
+        state: ["Ohio"],
+        data: [],
+        ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
+        wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0.0,
+        normalPool: 900.7,
+        lat:40.185722,
+        long: -82.966804,
+        elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=865108&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+        flowURL: "",
+        href: "/lakes/alumcreek",
+        dataSource: ["ACE"], // array of calls to make to retrieve data
+    },
     {
         bodyOfWater: "Ohio River (Cincy)", // lake name
         state: ["Ohio"],

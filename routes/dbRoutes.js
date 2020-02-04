@@ -161,7 +161,7 @@ module.exports = function (app) {
                     }
                   });
                   break;
-                  
+
 
                 case "DUKE":
                   duke.getDUKEData(currentLake, function (error, DUKEdata) {
@@ -268,8 +268,8 @@ module.exports = function (app) {
                   usgs.getUSGSData(currentLake, function (error, USGSdata) {
                     if (error) {
                       console.log(currentLake.bodyOfWater + "- USGSData error " + USGSdata);
-                      res.json(currentLake);                    
-                    } else {// if successful return the data
+                      res.json(currentLake);
+                    } else { // if successful return the data
                       // update the current lake
                       update.updateAndReturnOneLake(currentLake, USGSdata, function (error, USGSlakeDataFlag, USGSdata) {
                         if (error) {
@@ -281,22 +281,22 @@ module.exports = function (app) {
                   });
                   break;
 
-                  case "WEATHERWATER":
-                    weatherwater.getWEATHERWATERData(currentLake, function (error, WEATHERWATERdata) {
-                      if (error) {
-                        console.log(currentLake.bodyOfWater + "- WEATHERWATERData error " + WEATHERWATERdata);
-                        // if successful return the data
-                      } else {
-                        // update the current lake
-                        update.updateAndReturnOneLake(currentLake, WEATHERWATERdata, function (error, WEATHERWATERlakeDataFlag, WEATHERWATERdata) {
-                          if (error) {
-                            console.log(`UAROL error  ${WEATHERWATERdata}`);
-                          }
-                          res.json(WEATHERWATERdata);
-                        })
-                      }
-                    });
-                    break;
+                case "WEATHERWATER":
+                  weatherwater.getWEATHERWATERData(currentLake, function (error, WEATHERWATERdata) {
+                    if (error) {
+                      console.log(currentLake.bodyOfWater + "- WEATHERWATERData error " + WEATHERWATERdata);
+                      // if successful return the data
+                    } else {
+                      // update the current lake
+                      update.updateAndReturnOneLake(currentLake, WEATHERWATERdata, function (error, WEATHERWATERlakeDataFlag, WEATHERWATERdata) {
+                        if (error) {
+                          console.log(`UAROL error  ${WEATHERWATERdata}`);
+                        }
+                        res.json(WEATHERWATERdata);
+                      })
+                    }
+                  });
+                  break;
 
                 default:
                   console.log(`No data source for ${currentLake.bodyOfWater} (findOne)`);
@@ -637,25 +637,25 @@ function updateAllLakes() {
                 });
                 break;
 
-                case "WEATHERWATER":
-                  weatherwater.getWEATHERWATERData(currentLake, function (error, WEATHERWATERdata) {
-                    if (error) {
-                      console.log(currentLake.bodyOfWater + " WEATHERWATER data error")
-                      // if successful return the data
-                    } else {
-                      // update the current lake
-                      update.updateAndReturnOneLake(currentLake, WEATHERWATERdata, function (error, WEATHERWATERlakeDataFlag, WEATHERWATERdata) {
-                        if (error) {
-                          console.log(`UALL error  ${WEATHERWATERdata}`);
-                        }
-                        if (WEATHERWATERlakeDataFlag) {
-                          dataUpdated++;
-                        }
-                      })
-                    }
-                  });
-                  break;
-  
+              case "WEATHERWATER":
+                weatherwater.getWEATHERWATERData(currentLake, function (error, WEATHERWATERdata) {
+                  if (error) {
+                    console.log(currentLake.bodyOfWater + " WEATHERWATER data error")
+                    // if successful return the data
+                  } else {
+                    // update the current lake
+                    update.updateAndReturnOneLake(currentLake, WEATHERWATERdata, function (error, WEATHERWATERlakeDataFlag, WEATHERWATERdata) {
+                      if (error) {
+                        console.log(`UALL error  ${WEATHERWATERdata}`);
+                      }
+                      if (WEATHERWATERlakeDataFlag) {
+                        dataUpdated++;
+                      }
+                    })
+                  }
+                });
+                break;
+
               default:
                 //console.log(`No data source for ${currentLake.bodyOfWater} (updateAll)`);
                 //res.send("Data source could not be found.");
