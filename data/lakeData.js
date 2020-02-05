@@ -3629,7 +3629,7 @@ module.exports = [
         dataSource: ["WEATHERWATER"], // array of calls to make to retrieve data
     },
     {
-        bodyOfWater: "Grand", // lake name
+        bodyOfWater: "Grand (OH)", // lake name
         state: ["Ohio"],
         data: [],
         ccWxData: [],
@@ -3639,7 +3639,7 @@ module.exports = [
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0,
-        normalPool: 900.7,
+        normalPool: 871.0,
         lat: 40.525009,
         long: -84.426712,
         elevURL: "none",
@@ -4957,12 +4957,11 @@ module.exports = [
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
-        normalPool: 8029.09,
+        normalPool: 6049.0,
         lat: 41.078928,
         long: -109.542721,
         elevURL: "https://www.usbr.gov/rsvrWater/rsv40Day.html?siteid=917&reservoirtype=Reservoir",
         flowURL: "",
-
         href: "/lakes/flaminggorge",
         dataSource: ["WEATHERWATER", "loadAds"], // array of calls to make to retrieve data
     },

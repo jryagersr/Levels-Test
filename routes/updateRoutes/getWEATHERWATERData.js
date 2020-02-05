@@ -24,18 +24,18 @@ module.exports = {
     request(options, function (error, response, html) {
       if (error) {
         callback(error);
-      } else if (bodyOfWater !== "Mead") {
+      } else if (bodyOfWater == "Mead") {
+        let dataErrorTrue = false;
         try {
-          var $ = cheerio.load(html);
+          jsonData = JSON.parse(html);
         } catch (error) {
           console.error(error);
           dataErrorTrue = true;
         }
 
       } else {
-        let dataErrorTrue = false;
         try {
-          jsonData = JSON.parse(html);
+          var $ = cheerio.load(html);
         } catch (error) {
           console.error(error);
           dataErrorTrue = true;
@@ -47,8 +47,8 @@ module.exports = {
         let foundFlag = 0;
         let levelFound = 0;
         if (bodyOfWater === "Mead") {
-          time = jsonData.Series[16].Data[0].t
-          elev = jsonData.Series[16].Data[0].v;
+          time = jsonData.Series[16].Data[0].t;
+          elev = Number(jsonData.Series[16].Data[0].v).toFixed(2);
           flow = Number(jsonData.Series[17].Data[0].v).toFixed(2);
 
           data.push({
@@ -114,41 +114,44 @@ module.exports = {
                   default:
 
                 }
-                if (levelFound > 0) levelFound++
-              }
-              if (flow !== -1000) {
-                time = new Date(date + " 13:00");
+                if (levelFound > 0) {
+                  levelFound++
 
-                data.push({
-                  elev: elev,
-                  time: time,
-                  flow: flow
-                });
-                flow = -1000
-              }
-            } else if (value == "**** All data is provisional and subject to review and modification ****") {
-              levelFound++;
-            } else {
-              if (i < 1) {
-                var value = $(element).children().text();
-                if (bodyOfWater == "Erie (Sandusky)") {
-                  date = value.substring(110, 114) + "/" + new Date().getFullYear();
-                  time = new Date(date + " 13:00");
-                  elev = value.substring(123, 127);
-                  flow = "N/A";
-
-                } else {
-                  date = value.substring(97, 101) + "/" + new Date().getFullYear();
-                  time = new Date(date + " 13:00");
-                  elev = value.substring(110, 114);
-                  flow = "N/A";
                 }
-                data.push({
-                  elev: elev,
-                  time: time,
-                  flow: "N/A"
-                });
+                if (flow !== -1000) {
+                  time = new Date(date + " 13:00");
+
+                  data.push({
+                    elev: elev,
+                    time: time,
+                    flow: flow
+                  });
+                  flow = -1000
+                }
               }
+              if (value == "**** All data is provisional and subject to review and modification ****") {
+                levelFound++;
+              }
+            }
+            if (i < 1) {
+              var value = $(element).children().text();
+              if (bodyOfWater == "Erie (Sandusky)") {
+                date = value.substring(110, 114) + "/" + new Date().getFullYear();
+                time = new Date(date + " 13:00");
+                elev = value.substring(123, 127);
+                flow = "N/A";
+
+              } else {
+                date = value.substring(97, 101) + "/" + new Date().getFullYear();
+                time = new Date(date + " 13:00");
+                elev = value.substring(110, 114);
+                flow = "N/A";
+              }
+              data.push({
+                elev: elev,
+                time: time,
+                flow: "N/A"
+              });
             }
           });
         }
