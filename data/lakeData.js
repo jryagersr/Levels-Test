@@ -4957,12 +4957,12 @@ module.exports = [
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
-        normalPool: 3700.0,
+        normalPool: 8029.09,
         lat: 41.078928,
         long: -109.542721,
-        elevURL: "https://www.usbr.gov/rsvrWater/rsv40Day.html?siteid=919&reservoirtype=Reservoir",
+        elevURL: "https://www.usbr.gov/rsvrWater/rsv40Day.html?siteid=917&reservoirtype=Reservoir",
         flowURL: "",
-        
+
         href: "/lakes/flaminggorge",
         dataSource: ["WEATHERWATER", "loadAds"], // array of calls to make to retrieve data
     },
