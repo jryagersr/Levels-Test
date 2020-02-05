@@ -2988,7 +2988,7 @@ module.exports = [
             tournaments: [{
                     date: "2020-04-11",
                     lake: "Indian",
-                    lakeID: "indian",
+                    lakeID: "indianoh",
                     ramp: "Moundwood",
                     state: "OH",
                     txDetail: "",
@@ -3008,7 +3008,7 @@ module.exports = [
                 {
                     date: "2020-05-30",
                     lake: "Buckeye",
-                    lakeID: "",
+                    lakeID: "buckeye",
                     ramp: "Liebs Island",
                     state: "OH",
                     txDetail: "",
@@ -3018,7 +3018,7 @@ module.exports = [
                 {
                     date: "2020-06-28",
                     lake: "Erie",
-                    lakeID: "",
+                    lakeID: "eriesandusky",
                     ramp: "Sandusky",
                     state: "OH",
                     txDetail: "",
@@ -3027,7 +3027,7 @@ module.exports = [
                 },{
                     date: "2020-07-18",
                     lake: "Indian",
-                    lakeID: "indian",
+                    lakeID: "indianoh",
                     ramp: "Moundwood",
                     state: "OH",
                     txDetail: "",
@@ -3056,8 +3056,8 @@ module.exports = [
                 },
                 {
                     date: "2020-10-22",
-                    lake: "Detriot River",
-                    lakeID: "detroit",
+                    lake: "Detroit River",
+                    lakeID: "detroitrvr",
                     ramp: "Elizabeth",
                     state: "OH",
                     txDetail: "",

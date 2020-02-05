@@ -3548,25 +3548,6 @@ module.exports = [
         dataSource: ["DUKE", "loadAds"], // array of calls to make to retrieve data
     },
 
-    /*{
-        bodyOfWater: "Indian Lake", // lake name
-        state: ["Ohio"],
-        data: [],
-        ccWxData: [],
-        ccWxDataLastRefresh: "12/31/18",
-        wxForecastData: [],
-        wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 90, //minutes
-        lastRefresh: "12/31/18", // a Date 
-        seaLevelDelta: 0.0,
-        normalPool: 900.7,
-        lat: 39.082309,
-        long: -84.872313,
-        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03260500&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
-        flowURL: "",
-        href: "/lakes/indianoh",
-        dataSource: ["USGS"], // array of calls to make to retrieve data
-    },*/
 
 
     // OHIO  ---------------------------------------------------------------------------------------------------------
@@ -3583,12 +3564,126 @@ module.exports = [
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0,
         normalPool: 885.0,
-        lat: 40.185722,
-        long: -82.966804,
+        lat: 40.229219,
+        long: -82.968996,
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=865108&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
         flowURL: "",
         href: "/lakes/alumcreek",
         dataSource: ["ACE"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "Buckeye", // lake name
+        state: ["Ohio"],
+        data: [],
+        ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
+        wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0.0,
+        normalPool: 890.5,
+        lat: 41.54031,
+        long: -82.73521,
+        elevURL: "https://water.weather.gov/ahps2/hydrograph_to_xml.php?gage=BCLO1&output=tabular&time_zone=est",
+        flowURL: "",
+        href: "/lakes/buckeye",
+        dataSource: ["WEATHERWATER"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "Detroit River", // lake name
+        state: ["Ohio"],
+        data: [],
+        ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
+        wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0.0,
+        normalPool: 0.0,
+        lat: 42.184523,
+        long: -83.115841,
+        elevURL: "none",
+        flowURL: "",
+        href: "/lakes/detroitrvr",
+        dataSource: ["loadAds"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "Erie (Sandusky)", // lake name
+        state: ["Ohio"],
+        data: [],
+        ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
+        wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 571.0,
+        normalPool: 0.0,
+        lat: 41.540315,
+        long: -82.735214,
+        elevURL: "https://water.weather.gov/ahps2/hydrograph_to_xml.php?gage=MRHO1&output=tabular&time_zone=est",
+        flowURL: "",
+        href: "/lakes/eriesandusky",
+        dataSource: ["WEATHERWATER"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "Grand", // lake name
+        state: ["Ohio"],
+        data: [],
+        ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
+        wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0.0,
+        normalPool: 900.7,
+        lat: 40.525009,
+        long: -84.426712,
+        elevURL: "none",
+        flowURL: "",
+        href: "/lakes/grandoh",
+        dataSource: ["loadAds"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "Indian Lake", // lake name
+        state: ["Ohio"],
+        data: [],
+        ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
+        wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0.0,
+        normalPool: 900.7,
+        lat: 39.082309,
+        long: -84.872313,
+        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03260500&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",
+        flowURL: "",
+        href: "/lakes/indianoh",
+        dataSource: ["loadAds"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "Mosquito Lake", // lake name
+        state: ["Ohio"],
+        data: [],
+        ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
+        wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0.0,
+        normalPool: 900.7,
+        lat: 41.348051,
+        long: -80.753973,
+        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03095000&period=PT168H&parameterCd=62615&siteType=LK&siteStatus=all",
+        flowURL: "",
+        href: "/lakes/misquito",
+        dataSource: ["USGS"], // array of calls to make to retrieve data
     },
     {
         bodyOfWater: "Ohio River (Cincy)", // lake name
@@ -3630,7 +3725,7 @@ module.exports = [
         dataSource: ["USGS"], // array of calls to make to retrieve data
     },
     {
-        bodyOfWater: "Mosquito Lake", // lake name
+        bodyOfWater: "Rocky Fork", // lake name
         state: ["Ohio"],
         data: [],
         ccWxData: [],
@@ -3640,13 +3735,13 @@ module.exports = [
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0,
-        normalPool: 900.7,
-        lat: 41.348051,
-        long: -80.753973,
-        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03095000&period=PT168H&parameterCd=62615&siteType=LK&siteStatus=all",
+        normalPool: 0.0,
+        lat: 39.193101,
+        long: -83.458853,
+        elevURL: "none",
         flowURL: "",
-        href: "/lakes/misquito",
-        dataSource: ["USGS"], // array of calls to make to retrieve data
+        href: "/lakes/rockyfork",
+        dataSource: ["loadAds"], // array of calls to make to retrieve data
     },
 
     // OKLAHOMA  ---------------------------------------------------------------------------------------------------------
@@ -4863,29 +4958,30 @@ module.exports = [
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 3700.0,
-        lat: {
-            bodyOfWater: "Powell", // lake name
-            state: ["Utah", "Arizona"],
-            data: [],
-            ccWxData: [],
-            ccWxDataLastRefresh: "12/31/18",
-            wxForecastData: [],
-            wxForecastDataLastRefresh: "12/31/18",
-            refreshInterval: 90, //minutes
-            lastRefresh: "12/31/18", // a Date 
-            seaLevelDelta: 0,
-            normalPool: 3700.0,
-            lat: 41.006927,
-            long: -109.563299,
-            elevURL: "https://www.usbr.gov/rsvrWater/rsv40Day.html?siteid=919&reservoirtype=Reservoir",
-            flowURL: "",
-            href: "/lakes/powell",
-            dataSource: ["WEATHERWATER", "loadAds"], // array of calls to make to retrieve data
-        },
-        long: -111.484167,
+        lat: 41.078928,
+        long: -109.542721,
         elevURL: "https://www.usbr.gov/rsvrWater/rsv40Day.html?siteid=919&reservoirtype=Reservoir",
         flowURL: "",
         href: "/lakes/flaminggorge",
+        dataSource: ["WEATHERWATER", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "Powell", // lake name
+        state: ["Utah", "Arizona"],
+        data: [],
+        ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
+        wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 3700.0,
+        lat: 41.006927,
+        long: -109.563299,
+        elevURL: "https://www.usbr.gov/rsvrWater/rsv40Day.html?siteid=919&reservoirtype=Reservoir",
+        flowURL: "",
+        href: "/lakes/powell",
         dataSource: ["WEATHERWATER", "loadAds"], // array of calls to make to retrieve data
     },
 

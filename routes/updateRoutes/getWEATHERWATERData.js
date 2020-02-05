@@ -131,10 +131,18 @@ module.exports = {
             } else {
               if (i < 1) {
                 var value = $(element).children().text();
-                date = value.substring(97, 101) + "/" + new Date().getFullYear();
-                time = new Date(date + " 13:00");
-                elev = value.substring(110, 114);
-                flow = "N/A";
+                if (bodyOfWater == "Erie (Sandusky)") {
+                  date = value.substring(110, 114) + "/" + new Date().getFullYear();
+                  time = new Date(date + " 13:00");
+                  elev = value.substring(123, 127);
+                  flow = "N/A";
+
+                } else {
+                  date = value.substring(97, 101) + "/" + new Date().getFullYear();
+                  time = new Date(date + " 13:00");
+                  elev = value.substring(110, 114);
+                  flow = "N/A";
+                }
                 data.push({
                   elev: elev,
                   time: time,
