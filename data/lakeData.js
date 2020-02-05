@@ -4962,6 +4962,7 @@ module.exports = [
         long: -109.542721,
         elevURL: "https://www.usbr.gov/rsvrWater/rsv40Day.html?siteid=919&reservoirtype=Reservoir",
         flowURL: "",
+        
         href: "/lakes/flaminggorge",
         dataSource: ["WEATHERWATER", "loadAds"], // array of calls to make to retrieve data
     },
