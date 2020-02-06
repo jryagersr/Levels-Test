@@ -40,9 +40,11 @@ module.exports = {
       };
 
       if (!dataErrorTrue) {
+        let index = 0;
         // Check to see if the sensor is returning data
         if (data.value.timeSeries.length > 0) {
-          if (typeof data.value.timeSeries[0].values[0].value[0] !== 'undefined') {
+          if (bodyOfWater == "Mille Lacs") index++  // "Mille Lacs" adjustment
+          if (typeof data.value.timeSeries[0].values[index].value[0] !== 'undefined') {
             let valuesIndex = 0;
             // Parse the json data return to find the values we want
             let jIncrement = 1;
