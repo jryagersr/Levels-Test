@@ -2069,7 +2069,7 @@ module.exports = [
                         ramp: "Dreher Island",
                         state: "SC",
                         txDetail: "CBC",
-                        resultsLink: "",
+                        resultsLink: "http://www.carolinasbasschallenge.com/results.php?id=22",
                         entryLink: "http://www.carolinasbasschallenge.com/"
                     },
                     {
@@ -2079,7 +2079,7 @@ module.exports = [
                         ramp: "John C Land",
                         state: "SC",
                         txDetail: "CBC",
-                        resultsLink: "",
+                        resultsLink: "http://www.carolinasbasschallenge.com/tournamentinfo.php?id=33",
                         entryLink: "http://www.carolinasbasschallenge.com/"
                     },
                     {
@@ -2089,7 +2089,7 @@ module.exports = [
                         ramp: "Farrington Point",
                         state: "SC",
                         txDetail: "CBC",
-                        resultsLink: "",
+                        resultsLink: "http://www.carolinasbasschallenge.com/tournamentinfo.php?id=34",
                         entryLink: "http://www.carolinasbasschallenge.com/"
                     },
                     {
@@ -2099,7 +2099,7 @@ module.exports = [
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "CBC",
-                        resultsLink: "",
+                        resultsLink: "http://www.carolinasbasschallenge.com/tournamentinfo.php?id=35",
                         entryLink: "http://www.carolinasbasschallenge.com/"
                     },
                 ]
@@ -2115,7 +2115,7 @@ module.exports = [
                         ramp: "Pinnacle",
                         state: "NC",
                         txDetail: "CBC NC",
-                        resultsLink: "",
+                        resultsLink: "http://www.carolinasbasschallenge.com/tournamentinfo.php?id=21",
                         entryLink: "http://www.carolinasbasschallenge.com/"
                     },
                     {
@@ -2125,7 +2125,7 @@ module.exports = [
                         ramp: "Wittenburg",
                         state: "NC",
                         txDetail: "CBC NC",
-                        resultsLink: "",
+                        resultsLink: "http://www.carolinasbasschallenge.com/tournamentinfo.php?id=23",
                         entryLink: "http://www.carolinasbasschallenge.com/"
                     },
                     {
@@ -2135,7 +2135,7 @@ module.exports = [
                         ramp: "Black Bear",
                         state: "NC",
                         txDetail: "CBC NC",
-                        resultsLink: "",
+                        resultsLink: "http://www.carolinasbasschallenge.com/tournamentinfo.php?id=28",
                         entryLink: "http://www.carolinasbasschallenge.com/"
                     },
                     {
@@ -2145,7 +2145,7 @@ module.exports = [
                         ramp: "Abbott's Creek",
                         state: "NC",
                         txDetail: "CBC NC",
-                        resultsLink: "",
+                        resultsLink: "http://www.carolinasbasschallenge.com/tournamentinfo.php?id=31",
                         entryLink: "http://www.carolinasbasschallenge.com/"
                     },
                     {
@@ -2155,7 +2155,7 @@ module.exports = [
                         ramp: "TBA",
                         state: "NC",
                         txDetail: "CBC NC",
-                        resultsLink: "",
+                        resultsLink: "http://www.carolinasbasschallenge.com/tournamentinfo.php?id=32",
                         entryLink: "http://www.carolinasbasschallenge.com/"
                     },
                 ]
@@ -2212,7 +2212,7 @@ module.exports = [
                     }
                 ]
             },
-            {
+            /*{
                 trail: "Lee Huggins Benefit",
                 tournaments: [
 
@@ -2228,7 +2228,7 @@ module.exports = [
                 ]
             }
         ]
-    },
+    },*/
     {
         organization: "Collins",
         trails: [{
@@ -2962,7 +2962,7 @@ module.exports = [
             ]
         }]
     },
-    {
+    /*{
         organization: "Jordan Wildcat",
         trails: [{
             trail: "Wildcat",
@@ -2980,7 +2980,7 @@ module.exports = [
                 }
             ]
         }]
-    },
+    },*/
     {
         organization: "Mega Bass",
         trails: [{
