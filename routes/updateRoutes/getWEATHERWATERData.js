@@ -25,11 +25,10 @@ module.exports = {
       if (error) {
         callback(error);
       } else if (bodyOfWater == "Mead") {
-        let dataErrorTrue = false;
+        dataErrorTrue = false;
         try {
           jsonData = JSON.parse(html);
         } catch (error) {
-          console.error(error);
           dataErrorTrue = true;
         }
 
@@ -37,7 +36,6 @@ module.exports = {
         try {
           var $ = cheerio.load(html);
         } catch (error) {
-          console.error(error);
           dataErrorTrue = true;
         }
       }

@@ -16,7 +16,7 @@ module.exports = [
     {
         sponsor: "Bass For Cash Series",
         href: "https://www.bassforcash.com/",
-        src: "/static/assets/img/sponsor-banners/bfcs banner.png",
+        src: "/static/assets/img/sponsor-banners/bassforcash banner.png",
         location: ["kerr", "jordan", "falls", "gaston", "roanokewill", "roanoke45", "chowanwf"],
         type: "logo",
         startDate: "2019-01-01T00:00:00.0Z",
