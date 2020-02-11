@@ -132,8 +132,7 @@ module.exports = {
               if (value == "**** All data is provisional and subject to review and modification ****") {
                 levelFound++;
               }
-            }
-            if (i < 1) {
+            } else if (i < 1) {
               var value = $(element).children().text();
               if (bodyOfWater == "Erie (Sandusky)") {
                 date = value.substring(110, 114) + "/" + new Date().getFullYear();
@@ -144,7 +143,9 @@ module.exports = {
               } else {
                 date = value.substring(97, 101) + "/" + new Date().getFullYear();
                 time = new Date(date + " 13:00");
-                elev = value.substring(110, 114);
+                let test = value.split("\n")
+                elev= test[11].substring(0, test[11].length-2)
+                //elev = value.substring(110, 116);
                 flow = "N/A";
               }
               data.push({
