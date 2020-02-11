@@ -1628,7 +1628,7 @@ module.exports = [
                         ramp: "Occonneechee",
                         state: "NC-VA",
                         txDetail: "Qualifier 1",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-kerr-nc-feb-8-2020/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
                     },
                     {
@@ -2397,8 +2397,8 @@ module.exports = [
                         ramp: "Wind Creek",
                         state: "AL",
                         txDetail: "FLW",
-                        resultsLink: "",
-                        entryLink: "https://www.flwfishing.com/tips/2019-10-24-2020-phoenix-bfl-schedules-and-details"
+                        resultsLink: "https://www.flwfishing.com/results/2020-02-08-martin",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-02-08-martin"
                     },
                     {
                         date: "2020-04-11",
@@ -2407,8 +2407,8 @@ module.exports = [
                         ramp: "Higgins Ferry",
                         state: "AL",
                         txDetail: "FLW",
-                        resultsLink: "",
-                        entryLink: "https://www.flwfishing.com/tips/2019-10-24-2020-phoenix-bfl-schedules-and-details"
+                        resultsLink: "https://www.flwfishing.com/results/2020-04-11-mitchell",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-04-11-mitchell"
                     },
                     {
                         date: "2020-05-16",
@@ -2417,8 +2417,8 @@ module.exports = [
                         ramp: "Lakepoint",
                         state: "AL",
                         txDetail: "FLW",
-                        resultsLink: "",
-                        entryLink: "https://www.flwfishing.com/tips/2019-10-24-2020-phoenix-bfl-schedules-and-details"
+                        resultsLink: "https://www.flwfishing.com/results/2020-05-16-eufaula",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-05-16-eufaula"
                     },
                     {
                         date: "2020-06-13",
@@ -2427,8 +2427,8 @@ module.exports = [
                         ramp: "Coosa",
                         state: "AL",
                         txDetail: "FLW",
-                        resultsLink: "",
-                        entryLink: "https://www.flwfishing.com/tips/2019-10-24-2020-phoenix-bfl-schedules-and-details"
+                        resultsLink: "https://www.flwfishing.com/results/2020-06-13-neely-henry",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-06-13-neely-henry"
                     },
                     {
                         date: "2020-09-12",
@@ -2437,8 +2437,8 @@ module.exports = [
                         ramp: "Lakepoint",
                         state: "AL",
                         txDetail: "FLW",
-                        resultsLink: "",
-                        entryLink: "https://www.flwfishing.com/tips/2019-10-24-2020-phoenix-bfl-schedules-and-details"
+                        resultsLink: "https://www.flwfishing.com/results/2020-09-12-eufaula",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-09-12-eufaula"
                     }
                 ]
             },
@@ -2504,8 +2504,8 @@ module.exports = [
                         ramp: "Laurel Park",
                         state: "GA",
                         txDetail: "FLW",
-                        resultsLink: "",
-                        entryLink: "https://www.flwfishing.com/tips/2019-10-24-2020-phoenix-bfl-schedules-and-details"
+                        resultsLink: "https://www.flwfishing.com/results/2020-02-01-lanier",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-02-01-lanier"
                     },
                     {
                         date: "2020-03-28",
@@ -2513,8 +2513,8 @@ module.exports = [
                         ramp: "Sugar Creek",
                         state: "GA",
                         txDetail: "FLW",
-                        resultsLink: "",
-                        entryLink: "https://www.flwfishing.com/tips/2019-10-24-2020-phoenix-bfl-schedules-and-details"
+                        resultsLink: "https://www.flwfishing.com/results/2020-03-28-oconee",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-03-28-oconee"
                     },
                     {
                         date: "2020-05-09",
@@ -2522,8 +2522,8 @@ module.exports = [
                         ramp: "Dennis Station",
                         state: "GA",
                         txDetail: "FLW",
-                        resultsLink: "",
-                        entryLink: "https://www.flwfishing.com/tips/2019-10-24-2020-phoenix-bfl-schedules-and-details"
+                        resultsLink: "https://www.flwfishing.com/results/2020-05-09-sinclair",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-05-09-sinclair"
                     },
                     {
                         date: "2020-06-20",
@@ -2532,8 +2532,8 @@ module.exports = [
                         ramp: "Lakepoint",
                         state: "GA",
                         txDetail: "FLW",
-                        resultsLink: "",
-                        entryLink: "https://www.flwfishing.com/tips/2019-10-24-2020-phoenix-bfl-schedules-and-details"
+                        resultsLink: "https://www.flwfishing.com/results/2020-06-20-eufaula",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-06-20-eufaula"
                     },
                     {
                         date: "2020-09-22",
@@ -2542,8 +2542,8 @@ module.exports = [
                         ramp: "Lakepoint",
                         state: "GA",
                         txDetail: "FLW",
-                        resultsLink: "",
-                        entryLink: "https://www.flwfishing.com/tips/2019-10-24-2020-phoenix-bfl-schedules-and-details"
+                        resultsLink: "https://www.flwfishing.com/results/2020-10-03-eufaula",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-10-03-eufaula"
                     }
                 ]
             },
@@ -2577,7 +2577,7 @@ module.exports = [
                         ramp: "Lawrenceburg",
                         state: "IN",
                         txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/tournaments/2020-07-18-ohio-river-tanners-creek",
+                        resultsLink: "https://www.flwfishing.com/results/2020-07-18-ohio-river-tanners-creek",
                         entryLink: "https://www.flwfishing.com/tournaments/2020-07-18-ohio-river-tanners-creek"
                     },
                     {
@@ -2595,7 +2595,7 @@ module.exports = [
                         ramp: "Rough River SP",
                         state: "IN",
                         txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/tournaments/2020-09-19-rough-river",
+                        resultsLink: "https://www.flwfishing.com/results/2020-09-19-rough-river",
                         entryLink: "https://www.flwfishing.com/tournaments/2020-09-19-rough-river"
                     }
                 ]
@@ -2678,7 +2678,7 @@ module.exports = [
                         ramp: "Nutbush",
                         state: "NC-VA",
                         txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/tournaments/2020-04-25-kerr",
+                        resultsLink: "https://www.flwfishing.com/results/2020-04-25-kerr",
                         entryLink: "https://www.flwfishing.com/tournaments/2020-04-25-kerr"
                     },
                     {
