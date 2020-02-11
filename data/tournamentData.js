@@ -2226,9 +2226,9 @@ module.exports = [
                         entryLink: "/assets/txomages/yadkinbenefitaug2019.jpg"
                     }
                 ]
-            }
+            }*/
         ]
-    },*/
+    },
     {
         organization: "Collins",
         trails: [{
@@ -3024,7 +3024,7 @@ module.exports = [
                     txDetail: "",
                     resultsLink: "",
                     entryLink: "http://www.ombtt.com/WebsiteMstrs/OHIOMEGABASSTOURNAMENTTRAIL.html"
-                },{
+                }, {
                     date: "2020-07-18",
                     lake: "Indian",
                     lakeID: "indianoh",
