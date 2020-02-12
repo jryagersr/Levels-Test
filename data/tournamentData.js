@@ -1628,7 +1628,7 @@ module.exports = [
                         ramp: "Occonneechee",
                         state: "NC-VA",
                         txDetail: "Qualifier 1",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-kerr-nc-feb-8-2020/",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-kerr-lake-va-feb-8-2020/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
                     },
                     {
