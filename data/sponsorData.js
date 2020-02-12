@@ -6,7 +6,7 @@ module.exports = [
         src: "/static/assets/img/sponsor-banners/anglers choice banner.png",
         location: ["kerr", "falls", "gaston", "anna", "smithmountain", "fontana",
             "james", "norman", "wylie", "hickory", "keowee", "wateree", "mtnisland", "tillery", "Tuckertown",
-            "highrock", "randleman", "wscottkerr", "mayo", "hyco", "badin", "blewettfalls", "Belews",
+            "highrock", "randleman", "wscottkerr", "mayo", "hyco", "badin", "blewittfalls", "Belews",
             "jocassee"
         ],
         type: "logo",
@@ -216,6 +216,15 @@ module.exports = [
         href: "http://piedmontbassclassics.com/MainPage2.html",
         src: "/static/assets/img/sponsor-banners/pbc banner.png",
         location: ["kerr", "jordan", "falls", "gaston", "shearonharris"],
+        type: "logo",
+        startDate: "2019-01-01T00:00:00.0Z",
+        endDate: "2021-01-01T00:00:00.0Z"
+    },
+    {
+        sponsor: "Redeem Roofing",
+        href: "http://www.redeemnc.com/",
+        src: "/static/assets/img/sponsor-banners/redeem banner.png",
+        location: ["kerr", "jordan", "falls", "belews", "hyco", "mayo","randleman","tuckertown", "tillery", "badin", "highrock", "shearonharris"],
         type: "logo",
         startDate: "2019-01-01T00:00:00.0Z",
         endDate: "2021-01-01T00:00:00.0Z"
