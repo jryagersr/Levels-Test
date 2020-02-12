@@ -2849,7 +2849,7 @@ module.exports = [
         dataSource: ["WEATHERWATER", "loadAds"], // array of calls to make to retrieve data
     },
     {
-        bodyOfWater: "Blewett Falls", // lake name
+        bodyOfWater: "Blewitt Falls", // lake name
         state: ["North Carolina"],
         data: [],
         ccWxData: [],
@@ -2864,7 +2864,7 @@ module.exports = [
         long: -79.90,
         elevURL: "https://lakes.duke-energy.com/Data/Detail/3_Month/30.txt",
         flowURL: "",
-        href: "/lakes/blewettfalls",
+        href: "/lakes/blewittfalls",
         dataSource: ["DUKE", "loadAds"], // array of calls to make to retrieve data
     },
     //Found this on ACE. Format is different for streams (smh), there is no .elev, it is .stage will add later 
@@ -3178,8 +3178,8 @@ module.exports = [
         wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 90, //minutes
         lastRefresh: "12/31/18", // a Date 
-        seaLevelDelta: 10.90,
-        normalPool: 10.90,
+        seaLevelDelta: 9.00,
+        normalPool: 9.00,
         lat: 35.26,
         long: -77.585,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02089500&period=PT168H&parameterCd=00065&siteType=ST&siteStatus=all",

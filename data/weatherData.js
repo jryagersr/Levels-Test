@@ -10520,8 +10520,8 @@ module.exports = [
         }]
     },
     {
-        bodyOfWater: "Blewett Falls", // lake name
-        id: "blewettfalls",
+        bodyOfWater: "Blewitt Falls", // lake name
+        id: "blewittfalls",
         data: [],
         refreshInterval: 30, //minutes
         lastRefresh: "12/31/18", // a Date 

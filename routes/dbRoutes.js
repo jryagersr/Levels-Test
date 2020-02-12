@@ -359,6 +359,17 @@ module.exports = function (app) {
         if (err) {
           res.send("There was a problem querying the database");
         } else {
+          data.sort(function (x, y) {
+            var a = x.bodyOfWater.toUpperCase(),
+                b = y.bodyOfWater.toUpperCase();
+            if (a > b) {
+                return 1;
+            }
+            if (a < b) {
+                return -1;
+            }
+            return 0;
+        });
           let stateLakes = data;
           res.json(stateLakes);
         }
