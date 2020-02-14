@@ -57,7 +57,7 @@ module.exports = {
 
               // push the first entry into the array
               if (i == 0 && elevEntries[i].value !== "") {
-                let currentTime = new Date(elevEntries[i].time + "Z");
+                let currentTime = new Date(elevEntries[i].time);
                 currentTime.setMinutes(0);
                 exportData.push({
                   time: currentTime,
@@ -68,7 +68,7 @@ module.exports = {
                 if (flowEntries.length > 0) {
                   //match first flow
                   for (var j = 0; j < flowEntries.length; j++) {
-                    let flowTime = new Date(flowEntries[j].time + "Z");
+                    let flowTime = new Date(flowEntries[j].time);
                     let flowHour = flowTime.getHours();
                     let currentHour = currentTime.getHours();
                     // if current date and hour match set the flow
@@ -86,9 +86,9 @@ module.exports = {
               // if previous entry isn't undefined (we're on entry 2 or later)
               else {
                 // check next entry's hour against previous and if different push in
-                let lastTime = new Date(elevEntries[i - 1].time + "Z");
+                let lastTime = new Date(elevEntries[i - 1].time );
                 let lastHour = lastTime.getHours();
-                let currentTime = new Date(elevEntries[i].time + "Z");
+                let currentTime = new Date(elevEntries[i].time);
                 let currentHour = currentTime.getHours();
                 if (lastHour !== currentHour) {
                   currentTime.setMinutes(0);
@@ -102,7 +102,7 @@ module.exports = {
                   if (flowEntries.length > 0) {
                     // match a flow based on hour
                     for (var j = 0; j < flowEntries.length; j++) {
-                      let flowTime = new Date(flowEntries[j].time + "Z");
+                      let flowTime = new Date(flowEntries[j].time );
                       let flowHour = flowTime.getHours();
                       let objIndex;
                       // if current date and hour match set the flow

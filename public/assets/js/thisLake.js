@@ -65,51 +65,41 @@ function buildElevChart(data, lake) {
     let dataNPBatch = []; // Storage for Normal Pool batch data
     let dataFCBatch = []; // Storage for Top of Flood Control batch data
     let sumOfElevs = 0;
-    let divisor = 1;
+    let divisor = 0;
     let k = 0; // our iterator after starting elevation
     let chartMinElev = 100000; // y-axis Max elev value
     let chartMaxElev = 0; // y-axis Min elev value
     let chartMinElevLimit = 0; // y-axis Min elev Limit (for chart)
     let chartMaxElevLimit = 0; // y-axis Max elev Limit (for chart)
+    let checkDate = data[0].date
 
-    // find our starting elevation
-    for (var i = 0; data.length; i++) {
-        if (typeof data[i].elev == "number") {
-            sumOfElevs = data[i].elev
-            k = i;
-            break;
-        }
-    }
 
     // Loop through our data for 24 data points if we have it
-    for (k; k < data.length; k++) {
+    for (k = 0; k < data.length; k++) {
 
-        // if we're past the first entry
-        if (k > 0) {
+        // if we're still on the same day and not on the last entry
+        if (data[k].date === checkDate) {
 
-            // if we're still on the same day and not on the last entry
-            if (data[k].date === data[k - 1].date) {
+            // add to our average variables
+            sumOfElevs += data[k].elev;
+            divisor++
+        }
 
-                // add to our average variables
-                sumOfElevs += data[k].elev;
-                divisor++
-            }
+        // else we're on a new day. so push data and reset averages
+        else {
+            if ((sumOfElevs / divisor) > chartMaxElev) // if value is greater than max, replace max
+                chartMaxElev = sumOfElevs / divisor; // update Max Elev average
+            if ((sumOfElevs / divisor) < chartMinElev) // if value is less thank min, replace min
+                chartMinElev = sumOfElevs / divisor; // update Min Elev average
+            labelBatch.push(data[k - 1].date.substring(0, data[k - 1].date.length - 5));
+            dataElevBatch.push((sumOfElevs / divisor).toFixed(2)); // calculate average
+            dataNPBatch.push(lake.normalPool); // Normal Pool line batch 
+            dataFCBatch.push(lake.topOfFloodControl); // Top of Flood Control Pool line batch
+            //dataTDBatch.push(lake.topOfDam); // Top of Dam line batch
 
-            // else we're on a new day. so push data and reset averages
-            else {
-                if ((sumOfElevs / divisor) > chartMaxElev) // if value is greater than max, replace max
-                    chartMaxElev = sumOfElevs / divisor; // update Max Elev average
-                if ((sumOfElevs / divisor) < chartMinElev) // if value is less thank min, replace min
-                    chartMinElev = sumOfElevs / divisor; // update Min Elev average
-                labelBatch.push(data[k - 1].date.substring(0, data[k - 1].date.length - 5));
-                dataElevBatch.push((sumOfElevs / divisor).toFixed(2)); // calculate average
-                dataNPBatch.push(lake.normalPool); // Normal Pool line batch 
-                dataFCBatch.push(lake.topOfFloodControl); // Top of Flood Control Pool line batch
-                //dataTDBatch.push(lake.topOfDam); // Top of Dam line batch
-
-                sumOfElevs = data[k].elev;
-                divisor = 1;
-            }
+            sumOfElevs = data[k].elev;
+            divisor = 1;
+            checkDate = data[k].date
         }
 
         // when a week of data has been reached stop
@@ -118,7 +108,7 @@ function buildElevChart(data, lake) {
         }
     }
 
-    // push the final day's values after looping
+    /* push the final day's values after looping
     labelBatch.push(data[k - 1].date.substring(0, data[k - 1].date.length - 5)); // put final day date value in array
     dataElevBatch.push((sumOfElevs / divisor).toFixed(2)); // calculate average final day and push
     dataNPBatch.push(lake.normalPool); // Normal Pool line batch 
@@ -129,7 +119,7 @@ function buildElevChart(data, lake) {
     if ((sumOfElevs / divisor) > chartMaxElev) // if value is greater than max, replace max
         chartMaxElev = sumOfElevs / divisor; // update Max Elev average
     if ((sumOfElevs / divisor) < chartMinElev) // if value is less thank min, replace min
-        chartMinElev = sumOfElevs / divisor; // update Min Elev average
+        chartMinElev = sumOfElevs / divisor; // update Min Elev average*/
 
     labelBatch.reverse();
     dataElevBatch.reverse();
@@ -240,70 +230,69 @@ function buildFlowChart(data) {
     let chartMaxFlowLimit = 0; // y-axis Max elev value
 
     // find our starting flow
-    for (var i = 0; data.length; i++) {
-        if (typeof data[i].flow == "number") {
-            sumOfFlows = data[i].flow
-            k = i;
-            break;
-        }
+    for (var i = 0; i < data.length; i++) {
+        if (data[i].flow == "Missing") data[i].flow = -99;
+        sumOfFlows = data[i].flow
     }
     let avgFlow = 0;
 
+    let checkDate = data[0].date;
     // Loop through our data for 24 data points if we have it
-    for (k; k < data.length; k++) {
+    for (k = 0; k < data.length; k++) {
 
-        // if we're past the first entry
-        if (k > 0) {
 
-            // if the data is available and not "Missing" or "N/A"
-            if (data[k].flow !== "Missing" && data[k].flow !== "N/A") {
+        // if the data is available and not "Missing" or "N/A"
+        if (data[k].flow !== "N/A") {
 
-                // if we're still on the same day and not on the last entry
-                if (data[k].date === data[k - 1].date) {
+            // if we're past the first entry
 
-                    // add to our average variables
-                    sumOfFlows += data[k].flow;
-                    divisor++
-                }
+            // if we're still on the same day and not on the last entry
+            if (k == 0 || data[k].date === checkDate) {
 
-                // else we're on a new day. so push data and reset averages
-                else {
-                    avgFlow = sumOfFlows / divisor;
-                    if (avgFlow >= chartMaxFlow) // if value is greater than max, replace max
-                        chartMaxFlow = avgFlow; // set the max flow for calculating Chart y-axis Max later
-
-                    // no chartMinFlow, always 0
-                    labelBatch.push(data[k - 1].date.substring(0, data[k - 1].date.length - 5));
-                    dataFlowBatch.push((sumOfFlows / divisor).toFixed(2)); // calculate average
-                    sumOfFlows = data[k].flow;
-                    divisor = 1;
-                }
+                // add to our average variables
+                sumOfFlows += data[k].flow;
+                divisor++
             }
-            if ((data[k].flow == "Missing" || data[k].flow == "N/A") && data[k].date !== data[k - 1].date) {
+
+            // else we're on a new day. so push data and reset averages
+            else {
+                avgFlow = sumOfFlows / divisor;
+                if (avgFlow >= chartMaxFlow) // if value is greater than max, replace max
+                    chartMaxFlow = avgFlow; // set the max flow for calculating Chart y-axis Max later
+
+                // no chartMinFlow, always 0
                 labelBatch.push(data[k - 1].date.substring(0, data[k - 1].date.length - 5));
                 dataFlowBatch.push((sumOfFlows / divisor).toFixed(2)); // calculate average
-
-                if (data[k].date !== data[k - 1].date) {
-
-                    // if we are here, this lake has a plethora of "Missing" and "N/A"
-                    // andthe date has changed between entries,
-                    // we must set the chartMaxFlow 
-                    avgFlow = sumOfFlows / divisor;
-                    if (avgFlow >= chartMaxFlow) // if value is greater than max, replace max
-                        chartMaxFlow = avgFlow; // set the max flow for calculating Chart y-axis Max later
-                    // no chartMinFlow, always 0
-                }
-                if ((data[k].flow == "Missing" || data[k].flow == "N/A"))
-                    sumOfFlows = 0
-                else sumOfFlows = data[k].flow;
+                sumOfFlows = data[k].flow;
                 divisor = 1;
-            } else if (data[k].date !== data[k - 1].date) {
+            }
 
-                // dates are different and flow has good data so, set chartMaxFlow
+        }
+        if (data[k].flow == "N/A" && data[k].date !== checkDate) {
+            labelBatch.push(data[k - 1].date.substring(0, data[k - 1].date.length - 5));
+            dataFlowBatch.push((sumOfFlows / divisor).toFixed(2)); // calculate average
+
+            if (data[k].date !== data[k - 1].date) {
+
+                // if we are here, this lake has a plethora of "Missing" and "N/A"
+                // andthe date has changed between entries,
+                // we must set the chartMaxFlow 
+                avgFlow = sumOfFlows / divisor;
                 if (avgFlow >= chartMaxFlow) // if value is greater than max, replace max
                     chartMaxFlow = avgFlow; // set the max flow for calculating Chart y-axis Max later
                 // no chartMinFlow, always 0
             }
+            if ((data[k].flow == "Missing" || data[k].flow == "N/A"))
+                sumOfFlows = 0
+            else sumOfFlows = data[k].flow;
+            divisor = 1;
+        } else if (data[k].date !== checkDate) {
+
+            // dates are different and flow has good data so, set chartMaxFlow
+            if (avgFlow >= chartMaxFlow) // if value is greater than max, replace max
+                chartMaxFlow = avgFlow; // set the max flow for calculating Chart y-axis Max later
+            // no chartMinFlow, always 0
+            checkDate = data[k].date;
         }
 
         // when a week of data has been reached stop
@@ -519,16 +508,8 @@ function buildHourlyFlowChart(data, lake) {
     let chartMinFlowLimit = 0; // y-axis Min elev Limit (for chart)
     let chartMaxFlowLimit = 0; // y-axis Max elev Limit (for chart)
 
-    // find our starting elevation
-    for (var i = 0; data.length; i++) {
-        if (typeof data[i].flow == "number") {
-            k = i;
-            break;
-        }
-    }
-
     // Loop through our data for 24 data points if we have it
-    for (k; k < data.length; k++) {
+    for (k = 0; k < data.length; k++) {
 
         // if we're past the first entry
         if (k > 0) {
@@ -875,6 +856,9 @@ function buildBaroChart(baroData) {
                 suffix = "AM";
             hour = ((hour + 11) % 12 + 1);
 
+            // Convert millibars to inches
+            baroData.ccWxData[k].baro = baroData.ccWxData[k].baro * 0.0295301
+            
             labelBatch.push(hour + suffix);
             dataBaroBatch.push(baroData.ccWxData[k].baro); // push elev
 
@@ -894,8 +878,8 @@ function buildBaroChart(baroData) {
     // Set y axis limits for Baro Chart
     let minMaxDiff = chartMaxBaro - chartMinBaro;
     if (minMaxDiff < 1) chartGap = minMaxDiff / 2;
-    chartMinBaroLimit = Math.round(chartMinBaro) - 1; // set the chart lower limit
-    chartMaxBaroLimit = Math.round(chartMaxBaro) + 1; // set the chart upper limit
+    chartMinBaroLimit = Math.round(chartMinBaro) - .3; // set the chart lower limit
+    chartMaxBaroLimit = Math.round(chartMaxBaro) + .4; // set the chart upper limit
 
     var ctx = document.getElementById('myBaroChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
@@ -911,7 +895,7 @@ function buildBaroChart(baroData) {
             labels: labelBatch,
             datasets: [{
                 type: 'line',
-                label: "Pressure (mb)",
+                label: "Pressure (inches)",
                 borderColor: 'rgb(0, 140, 255)',
                 data: dataBaroBatch
             }]
@@ -938,7 +922,7 @@ function buildBaroChart(baroData) {
                     display: true,
                     scaleLabel: {
                         display: true,
-                        labelString: 'Pressure mb',
+                        labelString: 'Pressure inches',
                         fontSize: 14,
                     },
                     ticks: {
@@ -1331,7 +1315,7 @@ $.ajax({
         $("#currentWeatherConditions").append(currentLake.ccWxData[ccIndex].conditions);
         $("#currentWeatherTemp").append(currentLake.ccWxData[ccIndex].temp);
         $("#currentWeatherHumidity").append(currentLake.ccWxData[ccIndex].humidity);
-        $("#currentWeatherBarometric").append(currentLake.ccWxData[ccIndex].baro);
+        $("#currentWeatherBarometric").append((currentLake.ccWxData[ccIndex].baro  * 0.0295301).toFixed(4));
         $("#currentWeatherWindSpeed").append(currentLake.ccWxData[ccIndex].windspeed);
         $("#currentWeatherWindDirection").append(currentLake.ccWxData[ccIndex].winddirection);
         $("#currentWeatherDate").append(ccDate + " " + hour + suffix);
@@ -1430,7 +1414,7 @@ $.ajax({
                 dayTest = localeTime.toLocaleTimeString().substr(localeTime.toLocaleTimeString().length - 2, 2);
 
                 // if the first element for a Day forecast element 
-                if ((dayTest == 'AM' && lastDayTest =='PM') || i == 0) {
+                if ((dayTest == 'AM' && lastDayTest == 'PM') || i == 0) {
 
                     // This is a "Day" Line in the data, we must save it until it is time to push it into the well
                     dayLines.push({
@@ -1477,16 +1461,16 @@ $.ajax({
             // go through the datalines and save the high and low temp for the Day
             for (j = saveJStart; j < dataLines.length - 1; j++) {
 
-                                // check current dataLine time against previous dataLine time for midnight rollover
+                // check current dataLine time against previous dataLine time for midnight rollover
                 // cannot check date due to change from UTC to local time
                 // have to check for when the time rolls over midnight
-                if ((dayLines[i].date == dataLines[j].date) ) {
+                if ((dayLines[i].date == dataLines[j].date)) {
                     // not a new day, save high and low temp
                     if (dataLines[j].temp > dayLines[i].high)
                         dayLines[i].high = dataLines[j].temp;
                     if (dataLines[j].temp < dayLines[i].low)
                         dayLines[i].low = dataLines[j].temp;
-                    
+
                 } else {
                     //is a new day
                     saveJEnd = j;
@@ -1507,7 +1491,7 @@ $.ajax({
             $("#weatherSection").append(weatherSection);
 
             // Append the day lines
-            $("#weatherWell-" + wxTableRow + 1).append("<td>" + dayLines[i].date.substring(0,5) + "</td>");
+            $("#weatherWell-" + wxTableRow + 1).append("<td>" + dayLines[i].date.substring(0, 5) + "</td>");
             $("#weatherWell-" + wxTableRow + 1).append("<td>" + dayLines[i].time + "</td>");
             $("#weatherWell-" + wxTableRow + 1).append("<td> " + dayLines[i].conditions + "</td>");
             $("#weatherWell-" + wxTableRow + 1).append("<td>" + dayLines[i].high.toFixed(0) + '/' + dayLines[i].low.toFixed(0) + "</td>");
@@ -1536,9 +1520,9 @@ $.ajax({
 
                     wxTableRow++;
                 } else {
-                        saveJStart = j; //Save the starting place for the next day
-                        j = dataLines.length;
-                    }
+                    saveJStart = j; //Save the starting place for the next day
+                    j = dataLines.length;
+                }
 
             };
 
