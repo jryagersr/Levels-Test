@@ -1694,7 +1694,7 @@ module.exports = [
                         ramp: "Pinnacle",
                         state: "NC",
                         txDetail: "Qualifier 1",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-norman-nc-open-feb-8-2020/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
                     },
                     {
@@ -1978,7 +1978,7 @@ module.exports = [
                         ramp: "Swift Creek",
                         state: "NC",
                         txDetail: "Qualifier",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/tournament-results/tournament-results-yadkin-lake-tillery-nc-feb-8-2020/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
                     },
                     {
