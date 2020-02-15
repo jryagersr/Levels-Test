@@ -45,10 +45,22 @@ module.exports = {
         let foundFlag = 0;
         let levelFound = 0;
         if (bodyOfWater === "Mead") {
-          time = jsonData.Series[16].Data[0].t;
-          elev = Number(jsonData.Series[16].Data[0].v).toFixed(2);
-          flow = Number(jsonData.Series[17].Data[0].v).toFixed(2);
+          for (i = 0; i < jsonData.Series.length; i++) {
+            switch (jsonData.Series[i].SiteName) {
 
+              case "Lake Mead":
+                switch (jsonData.Series[i].DataTypeName) {
+                  case "reservoir ws elevation, end of period primary reading":
+                    time = jsonData.Series[i].Data[jsonData.Series[i].Data.length - 2].t;
+                    elev = Number(jsonData.Series[i].Data[jsonData.Series[i].Data.length - 2].v).toFixed(2);
+                    break;
+                  case "average total release (sum of all average reservoir release methods)":
+                    flow = Number(jsonData.Series[i].Data[jsonData.Series[i].Data.length - 2].v).toFixed(2);
+                  default:
+                }
+                default:
+            }
+          }
           data.push({
             elev: elev,
             time: time,
@@ -142,7 +154,7 @@ module.exports = {
                 date = value.substring(97, 101) + "/" + new Date().getFullYear();
                 time = new Date(date + " 13:00");
                 let test = value.split("\n")
-                elev= test[11].substring(0, test[11].length-2)
+                elev = test[11].substring(0, test[11].length - 2)
                 //elev = value.substring(110, 116);
                 flow = "N/A";
               }

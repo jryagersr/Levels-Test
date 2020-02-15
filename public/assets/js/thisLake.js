@@ -85,22 +85,21 @@ function buildElevChart(data, lake) {
             divisor++
         }
 
-        // else we're on a new day. so push data and reset averages
-        else {
-            if ((sumOfElevs / divisor) > chartMaxElev) // if value is greater than max, replace max
-                chartMaxElev = sumOfElevs / divisor; // update Max Elev average
-            if ((sumOfElevs / divisor) < chartMinElev) // if value is less thank min, replace min
-                chartMinElev = sumOfElevs / divisor; // update Min Elev average
-            labelBatch.push(data[k - 1].date.substring(0, data[k - 1].date.length - 5));
-            dataElevBatch.push((sumOfElevs / divisor).toFixed(2)); // calculate average
-            dataNPBatch.push(lake.normalPool); // Normal Pool line batch 
-            dataFCBatch.push(lake.topOfFloodControl); // Top of Flood Control Pool line batch
-            //dataTDBatch.push(lake.topOfDam); // Top of Dam line batch
+        // push data and reset averages
+        if ((sumOfElevs / divisor) > chartMaxElev) // if value is greater than max, replace max
+            chartMaxElev = sumOfElevs / divisor; // update Max Elev average
+        if ((sumOfElevs / divisor) < chartMinElev) // if value is less thank min, replace min
+            chartMinElev = sumOfElevs / divisor; // update Min Elev average
+        labelBatch.push(data[k].date.substring(0, data[k].date.length - 5));
+        dataElevBatch.push((sumOfElevs / divisor).toFixed(2)); // calculate average
+        dataNPBatch.push(lake.normalPool); // Normal Pool line batch 
+        dataFCBatch.push(lake.topOfFloodControl); // Top of Flood Control Pool line batch
+        //dataTDBatch.push(lake.topOfDam); // Top of Dam line batch
 
-            sumOfElevs = data[k].elev;
-            divisor = 1;
-            checkDate = data[k].date
-        }
+        sumOfElevs = data[k].elev;
+        divisor = 1;
+        checkDate = data[k].date
+
 
         // when a week of data has been reached stop
         if (labelBatch.length > 9) {
@@ -858,7 +857,7 @@ function buildBaroChart(baroData) {
 
             // Convert millibars to inches
             baroData.ccWxData[k].baro = baroData.ccWxData[k].baro * 0.0295301
-            
+
             labelBatch.push(hour + suffix);
             dataBaroBatch.push(baroData.ccWxData[k].baro); // push elev
 
@@ -1315,7 +1314,7 @@ $.ajax({
         $("#currentWeatherConditions").append(currentLake.ccWxData[ccIndex].conditions);
         $("#currentWeatherTemp").append(currentLake.ccWxData[ccIndex].temp);
         $("#currentWeatherHumidity").append(currentLake.ccWxData[ccIndex].humidity);
-        $("#currentWeatherBarometric").append((currentLake.ccWxData[ccIndex].baro  * 0.0295301).toFixed(4));
+        $("#currentWeatherBarometric").append((currentLake.ccWxData[ccIndex].baro * 0.0295301).toFixed(2));
         $("#currentWeatherWindSpeed").append(currentLake.ccWxData[ccIndex].windspeed);
         $("#currentWeatherWindDirection").append(currentLake.ccWxData[ccIndex].winddirection);
         $("#currentWeatherDate").append(ccDate + " " + hour + suffix);
