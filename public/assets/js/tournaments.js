@@ -104,7 +104,7 @@ function flattenData(data, callback) {
                 // check which page we're on
                 if (page === 'tournaments') {
                     // If tx date is in the future (exclude all past dates)
-                    if (Date.parse(txDate) > Date.parse(todaysDate)) {
+                    if ((Date.parse(txDate)/100000000).toFixed(0) >= (Date.parse(todaysDate)/100000000).toFixed(0)) {
                         // Push our data into a flat array for easier sort later
                         flatBatch.push({
                             organizer: element.organization,
@@ -120,7 +120,7 @@ function flattenData(data, callback) {
                 }
                 else {
                     // If tx date is in the past (exclude all future dates)
-                    if (Date.parse(txDate) < Date.parse(todaysDate)) {
+                    if ((Date.parse(txDate)/100000000).toFixed(0) < (Date.parse(todaysDate)/100000000).toFixed(0)) {
                         // Push our data into a flat array for easier sort later
                         flatBatch.push({
                             organizer: element.organization,

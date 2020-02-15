@@ -563,7 +563,7 @@ module.exports = [
                         ramp: "Beatties Ford",
                         state: "NC",
                         txDetail: "Anglers Choice",
-                        resultsLink: "",
+                        resultsLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule-nc",
                         entryLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule-nc"
                     },
                     {
@@ -573,7 +573,7 @@ module.exports = [
                         ramp: "Beatties Ford",
                         state: "NC",
                         txDetail: "Anglers Choice",
-                        resultsLink: "",
+                        resultsLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule-nc",
                         entryLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule-nc"
                     },
                     {
@@ -587,7 +587,7 @@ module.exports = [
                         entryLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule-nc"
                     },
                     {
-                        date: "2020-04-25",
+                        date: "2020-04-26",
                         lake: "Wylie",
                         lakeID: "wylie",
                         ramp: "Buster Boyd",
@@ -2581,7 +2581,7 @@ module.exports = [
                         entryLink: "https://www.flwfishing.com/tournaments/2020-07-18-ohio-river-tanners-creek"
                     },
                     {
-                        date: "20-08-15",
+                        date: "2020-08-15",
                         lake: "Ohio Rvr",
                         ramp: "Rocky Point",
                         state: "IN",
