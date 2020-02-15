@@ -10783,7 +10783,7 @@ module.exports = [
         long: -80.063982
     },
     {
-        bodyOfWater: "Blewett Falls", // lake name
+        bodyOfWater: "Blewitt Falls", // lake name
         id: "blewittfalls",
         rampName: "Dam",
         rampType: "",
@@ -10797,7 +10797,7 @@ module.exports = [
         long: -79.890788
     },
     {
-        bodyOfWater: "Blewett Falls", // lake name
+        bodyOfWater: "Blewitt Falls", // lake name
         id: "blewittfalls",
         rampName: "Grassy Island",
         rampType: "",

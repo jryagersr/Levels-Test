@@ -877,8 +877,8 @@ function buildBaroChart(baroData) {
     // Set y axis limits for Baro Chart
     let minMaxDiff = chartMaxBaro - chartMinBaro;
     if (minMaxDiff < 1) chartGap = minMaxDiff / 2;
-    chartMinBaroLimit = Math.round(chartMinBaro) - .1; // set the chart lower limit
-    chartMaxBaroLimit = Math.round(chartMaxBaro) + .1; // set the chart upper limit
+    chartMinBaroLimit = Math.round(chartMinBaro) - 1; // set the chart lower limit
+    chartMaxBaroLimit = Math.round(chartMaxBaro) + 1; // set the chart upper limit
 
     var ctx = document.getElementById('myBaroChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
