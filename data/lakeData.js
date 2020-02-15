@@ -468,10 +468,10 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 90, //minutes
+        refreshInterval: 1450, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
-        normalPool: 1160.4,
+        normalPool: 1229.0,
         lat: 34.262902,
         long: -113.573761,
         elevURL: "https://www.usbr.gov/lc/region/g4000/riverops/webreports/accumweb.json",
@@ -1130,7 +1130,7 @@ module.exports = [
         refreshInterval: 1450, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
-        normalPool: 12.5,
+        normalPool: 17.5,
         lat: 27.792952,
         long: -80.727619,
         elevURL: "http://webapub.sjrwmd.com/agws10/hdsnew/data.aspx?tp=3&stn=00960391_NAVD1988_POR&des=S-96B%20West%20at%20Fellsmere%20(WL)$274931.099$804428.589$Fellsmere$Brevard$Surface%20Water$Water%20Level%20(WL)",
