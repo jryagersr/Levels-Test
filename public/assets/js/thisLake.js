@@ -512,7 +512,7 @@ function buildHourlyFlowChart(data, lake) {
 
         // if we're past the first entry
         if (k > 0) {
-            if (data[k].flow !== "Missing" && data[k].flow !== "N/A") {
+            if (data[k].flow !== "Missing" && data[k].flow !== "N/A" && data.refreshInterval !== 1450) {
                 labelBatch.push(data[k].time.substr(0, data[k].time.lastIndexOf(":")) + data[k].time.substr(data[k].time.length - 2, 2)); // Remove minutes
                 dataFlowBatch.push((data[k].flow).toFixed(2)); // push elev
 
@@ -877,8 +877,8 @@ function buildBaroChart(baroData) {
     // Set y axis limits for Baro Chart
     let minMaxDiff = chartMaxBaro - chartMinBaro;
     if (minMaxDiff < 1) chartGap = minMaxDiff / 2;
-    chartMinBaroLimit = Math.round(chartMinBaro) - .3; // set the chart lower limit
-    chartMaxBaroLimit = Math.round(chartMaxBaro) + .4; // set the chart upper limit
+    chartMinBaroLimit = Math.round(chartMinBaro) - .1; // set the chart lower limit
+    chartMaxBaroLimit = Math.round(chartMaxBaro) + .1; // set the chart upper limit
 
     var ctx = document.getElementById('myBaroChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
