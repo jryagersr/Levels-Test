@@ -2921,13 +2921,13 @@ module.exports = [
         topOfFloodControl: 264.8,
         lat: 36.01,
         long: -78.70,
-        //elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02087182&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1745041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02087182&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
+        //elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1745041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
         flowURL: "",
         tempURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02087182&period=Pt168H&parameterCd=00010&siteType=LK&siteStatus=all",
         href: "/lakes/falls",
-        //dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-        dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+        dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+        //dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
     },
     {
         bodyOfWater: "Fontana", // lake name
@@ -3079,12 +3079,12 @@ module.exports = [
         botOfFloodConservation: 202.0,
         lat: 35.75,
         long: -79.03,
-        //elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02098197&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1743041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02098197&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
+        //elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1743041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
         flowURL: "",
         href: "/lakes/jordan",
-        dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
-        //dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+        //dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+        dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
     {
         bodyOfWater: "Kerr", // lake name
@@ -3103,12 +3103,12 @@ module.exports = [
         topOfDam: 332.0,
         lat: 36.56,
         long: -78.32,
-        //elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02079490&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
-        elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1749041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02079490&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
+        //elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1749041&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
         flowURL: "",
         href: "/lakes/kerr",
-        dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
-        //dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+        //dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+        dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
     {
         bodyOfWater: "Little River (Woodville)", // lake name
