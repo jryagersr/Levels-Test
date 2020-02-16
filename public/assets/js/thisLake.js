@@ -83,23 +83,23 @@ function buildElevChart(data, lake) {
             // add to our average variables
             sumOfElevs += data[k].elev;
             divisor++
+        } else {
+
+            // push data and reset averages
+            if ((sumOfElevs / divisor) > chartMaxElev) // if value is greater than max, replace max
+                chartMaxElev = sumOfElevs / divisor; // update Max Elev average
+            if ((sumOfElevs / divisor) < chartMinElev) // if value is less thank min, replace min
+                chartMinElev = sumOfElevs / divisor; // update Min Elev average
+            labelBatch.push(checkDate.substring(0, checkDate.length - 5));
+            dataElevBatch.push((sumOfElevs / divisor).toFixed(2)); // calculate average
+            dataNPBatch.push(lake.normalPool); // Normal Pool line batch 
+            dataFCBatch.push(lake.topOfFloodControl); // Top of Flood Control Pool line batch
+            //dataTDBatch.push(lake.topOfDam); // Top of Dam line batch
+
+            sumOfElevs = data[k].elev;
+            divisor = 1;
+            checkDate = data[k].date
         }
-
-        // push data and reset averages
-        if ((sumOfElevs / divisor) > chartMaxElev) // if value is greater than max, replace max
-            chartMaxElev = sumOfElevs / divisor; // update Max Elev average
-        if ((sumOfElevs / divisor) < chartMinElev) // if value is less thank min, replace min
-            chartMinElev = sumOfElevs / divisor; // update Min Elev average
-        labelBatch.push(data[k].date.substring(0, data[k].date.length - 5));
-        dataElevBatch.push((sumOfElevs / divisor).toFixed(2)); // calculate average
-        dataNPBatch.push(lake.normalPool); // Normal Pool line batch 
-        dataFCBatch.push(lake.topOfFloodControl); // Top of Flood Control Pool line batch
-        //dataTDBatch.push(lake.topOfDam); // Top of Dam line batch
-
-        sumOfElevs = data[k].elev;
-        divisor = 1;
-        checkDate = data[k].date
-
 
         // when a week of data has been reached stop
         if (labelBatch.length > 9) {
@@ -107,7 +107,7 @@ function buildElevChart(data, lake) {
         }
     }
 
-    /* push the final day's values after looping
+    //push the final day's values after looping
     labelBatch.push(data[k - 1].date.substring(0, data[k - 1].date.length - 5)); // put final day date value in array
     dataElevBatch.push((sumOfElevs / divisor).toFixed(2)); // calculate average final day and push
     dataNPBatch.push(lake.normalPool); // Normal Pool line batch 
@@ -118,7 +118,7 @@ function buildElevChart(data, lake) {
     if ((sumOfElevs / divisor) > chartMaxElev) // if value is greater than max, replace max
         chartMaxElev = sumOfElevs / divisor; // update Max Elev average
     if ((sumOfElevs / divisor) < chartMinElev) // if value is less thank min, replace min
-        chartMinElev = sumOfElevs / divisor; // update Min Elev average*/
+        chartMinElev = sumOfElevs / divisor; // update Min Elev average
 
     labelBatch.reverse();
     dataElevBatch.reverse();
