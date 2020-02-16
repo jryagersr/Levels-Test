@@ -2164,7 +2164,24 @@ module.exports = [
     },
     {
         organization: "Charity",
-        trails: [{
+        trails: [
+            {
+                trail: "Beverly Beaver Breast Cancer",
+                tournaments: [
+
+                    {
+                        date: "2020-02-22",
+                        lake: "Tar",
+                        lakeID: "tarriver",
+                        ramp: "Tranter's Creek",
+                        state: "NC",
+                        txDetail: "",
+                        resultsLink: "",
+                        entryLink: "http://www.bbcboards.net/showthread.php?t=1031617"
+                    }
+                ]
+            },
+            {
                 trail: "WoW",
                 tournaments: [
 
