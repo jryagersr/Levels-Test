@@ -396,12 +396,12 @@ function buildRiverChart(data, lake) {
     let chartMaxRiverLimit = 0; // y-axis Max elev Limit (for chart)
 
     // find our starting elevation
-    for (var i = 0; data.length; i++) {
+    /*for (var i = 0; data.length; i++) {
         if (typeof data[i].elev == "number") {
             k = i;
             break;
         }
-    }
+    }*/
 
     // Loop through our data for 48 data points if we have it
     // two days worth of data may show the tides in tidal rivers 
