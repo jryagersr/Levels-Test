@@ -233,53 +233,150 @@ module.exports = [
 
                     {
                         date: "2020-02-22",
+                        lake: "Jackson",
+                        lakeID: "",
+                        ramp: "Berry's",
+                        state: "GA",
+                        txDetail: "T1",
+                        resultsLink: "https://americanbassanglers.com/Results/12424.pdf",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=CPL&Season=2020&Division=2&RegionName=C1"
+                    },
+                    {
+                        date: "2020-03-07",
+                        lake: "Eufaula",
+                        lakeID: "eufaulaal",
+                        ramp: "Lakepoint",
+                        state: "GA-TN-AL",
+                        txDetail: "T1",
+                        resultsLink: "https://americanbassanglers.com/Results/12425.pdf",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=CPL&Season=2020&Division=2&RegionName=C1"
+                    },
+                    {
+                        date: "2020-03-08",
+                        lake: "Eufaula",
+                        lakeID: "eufaulaal",
+                        ramp: "Lakepoint",
+                        state: "GA-TN-AL",
+                        txDetail: "T1",
+                        resultsLink: "https://americanbassanglers.com/Results/12426.pdf",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=CPL&Season=2020&Division=2&RegionName=C1"
+                    },
+                    {
+                        date: "2020-03-28",
+                        lake: "Tobosofkee",
+                        lakeID: "",
+                        ramp: "Claystone",
+                        state: "GA",
+                        txDetail: "T1",
+                        resultsLink: "https://americanbassanglers.com/Results/12427.pdf",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=CPL&Season=2020&Division=2&RegionName=C1"
+                    },
+                    {
+                        date: "2020-04-18",
+                        lake: "Oconee",
+                        lakeID: "oconee",
+                        ramp: "Lakepoint",
+                        state: "GA",
+                        txDetail: "T1",
+                        resultsLink: "https://americanbassanglers.com/Results/12428.pdf",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=CPL&Season=2020&Division=2&RegionName=C1"
+                    },
+                    {
+                        date: "2020-05-02",
+                        lake: "West Point",
+                        lakeID: "westpoint",
+                        ramp: "Pyne Road",
+                        state: "GA-AL",
+                        txDetail: "T1",
+                        resultsLink: "https://americanbassanglers.com/Results/12430.pdf",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=CPL&Season=2020&Division=2&RegionName=C1"
+                    },
+                    {
+                        date: "2020-06-06",
+                        lake: "Sincair",
+                        lakeID: "sinclair",
+                        ramp: "Big Ed's",
+                        state: "GA",
+                        txDetail: "T1",
+                        resultsLink: "https://americanbassanglers.com/Results/12432.pdf",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=CPL&Season=2020&Division=2&RegionName=C1"
+                    },
+                    {
+                        date: "2020-10-11",
+                        lake: "Keowee",
+                        lakeID: "keowee",
+                        ramp: "South Cove",
+                        state: "GA-SC",
+                        txDetail: "T1",
+                        resultsLink: "https://americanbassanglers.com/Results/12454.pdf",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=CPL&Season=2020&Division=2&RegionName=C1"
+                    },
+                    {
+                        date: "2020-10-11",
+                        lake: "Keowee",
+                        lakeID: "keowee",
+                        ramp: "South Cove",
+                        state: "GA-SC",
+                        txDetail: "T1",
+                        resultsLink: "https://americanbassanglers.com/Results/12454.pdf",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=CPL&Season=2020&Division=2&RegionName=C1"
+                    }
+
+                ]
+            },
+            {
+                trail: "Open Series AL - South",
+                tournaments: [
+
+                    {
+                        date: "2020-02-08",
                         lake: "Eufaula",
                         lakeID: "eufaulaal",
                         ramp: "Lakepoint",
                         state: "GA-AL-TN",
                         txDetail: "T1",
-                        resultsLink: "",
-                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=9&RegionName=R4"
+                        resultsLink: "https://americanbassanglers.com/Results/12680.pdf",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=2&RegionName=R3"
                     },
                     {
-                        date: "2020-03-14",
-                        lake: "Oconee",
-                        lakeID: "oconee",
-                        ramp: "Sugar Creek",
-                        state: "GA",
+                        date: "2020-03-21",
+                        lake: "Jordan",
+                        lakeID: "jordanal",
+                        ramp: "Bonners",
+                        state: "AL",
                         txDetail: "T1",
-                        resultsLink: "",
-                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=9&RegionName=R4"
+                        resultsLink: "https://americanbassanglers.com/Results/12681.pdf",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=2&RegionName=R3"
                     },
                     {
-                        date: "2020-04-25",
-                        lake: "Sinclair",
-                        lakeID: "sinclairga",
-                        ramp: "Dennis Station",
-                        state: "GA",
-                        txDetail: "T1",
-                        resultsLink: "",
-                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=9&RegionName=R4"
-                    },
-                    {
-                        date: "2020-06-13",
-                        lake: "Oconee",
-                        lakeID: "oconee",
-                        ramp: "Sugar Creek",
-                        state: "GA",
-                        txDetail: "T1",
-                        resultsLink: "",
-                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=9&RegionName=R4"
-                    },
-                    {
-                        date: "2020-02-22",
+                        date: "2020-04-18",
                         lake: "Eufaula",
                         lakeID: "eufaulaal",
                         ramp: "Lakepoint",
                         state: "GA-AL-TN",
                         txDetail: "T1",
-                        resultsLink: "",
-                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=9&RegionName=R4"
+                        resultsLink: "https://americanbassanglers.com/Results/12682.pdf",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=2&RegionName=R3"
+                    },
+                    {
+                        date: "2020-10-10",
+                        lake: "Eufaula",
+                        lakeID: "eufaulaal",
+                        ramp: "Lakepoint",
+                        state: "GA-AL-TN",
+                        txDetail: "T1",
+                        resultsLink: "https://americanbassanglers.com/Results/12746.pdf",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=2&RegionName=R3"
+                    },
+                    {
+                        date: "2020-10-11",
+                        lake: "Eufaula",
+                        lakeID: "eufaulaal",
+                        ramp: "Lakepoint",
+                        state: "GA-AL-TN",
+                        txDetail: "T1",
+                        resultsLink: "https://americanbassanglers.com/Results/12746.pdf",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=2&RegionName=R3"
                     }
 
                 ]
@@ -341,6 +438,73 @@ module.exports = [
                 ]
             },
             {
+                trail: "Open Series NY",
+                tournaments: [
+
+                    {
+                        date: "2020-06-27",
+                        lake: "Champlain",
+                        lakeID: "champlain",
+                        ramp: "Ticonderoga Ferry",
+                        state: "NY-VT",
+                        txDetail: "T1",
+                        resultsLink: "https://americanbassanglers.com/Results/12740.pdf",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=23&RegionName=R9"
+                    },
+                    {
+                        date: "2020-07-11",
+                        lake: "1000 Islands",
+                        lakeID: "1000islands",
+                        ramp: "French Creek",
+                        state: "NY",
+                        txDetail: "T1",
+                        resultsLink: "https://americanbassanglers.com/Results/12741.pdf",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=23&RegionName=R9"
+                    },
+                    {
+                        date: "2020-08-15",
+                        lake: "Oneida",
+                        lakeID: "oneida",
+                        ramp: "Oneida Shores",
+                        state: "NY",
+                        txDetail: "T1",
+                        resultsLink: "https://americanbassanglers.com/Results/12742.pdf",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=23&RegionName=R9"
+                    },
+                    {
+                        date: "2020-09-12",
+                        lake: "Cayuga",
+                        lakeID: "",
+                        ramp: "Frontenac Park",
+                        state: "NY",
+                        txDetail: "T1",
+                        resultsLink: "https://americanbassanglers.com/Results/12743.pdf",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=23&RegionName=R9"
+                    },
+                    {
+                        date: "2020-09-26",
+                        lake: "Champlain",
+                        lakeID: "champlain",
+                        ramp: "Plattsburg",
+                        state: "NY-VT",
+                        txDetail: "T1",
+                        resultsLink: "https://americanbassanglers.com/Results/12752.pdf",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=23&RegionName=R9"
+                    },
+                    {
+                        date: "2020-09-27",
+                        lake: "Champlain",
+                        lakeID: "champlain",
+                        ramp: "Plattsburg",
+                        state: "NY-VT",
+                        txDetail: "T1",
+                        resultsLink: "https://americanbassanglers.com/Results/12752.pdf",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=23&RegionName=R9"
+                    },
+
+                ]
+            },
+            {
                 trail: "Open Series SC",
                 tournaments: [
 
@@ -394,6 +558,73 @@ module.exports = [
                         resultsLink: "",
                         entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=9&RegionName=R4"
                     }
+                ]
+            },
+            {
+                trail: "Open Series Florida South",
+                tournaments: [
+
+                    {
+                        date: "2020-01-25",
+                        lake: "Okeechobee",
+                        lakeID: "okeechobee",
+                        ramp: "Roland Martin",
+                        state: "FL",
+                        txDetail: "T1",
+                        resultsLink: "https://americanbassanglers.com/Results/12700.pdf",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=7&RegionName=R5"
+                    },
+                    {
+                        date: "2020-03-07",
+                        lake: "Okeechobee",
+                        lakeID: "okeechobee",
+                        ramp: "Scott Driver",
+                        state: "FL",
+                        txDetail: "T1",
+                        resultsLink: "https://americanbassanglers.com/Results/12701.pdf",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=7&RegionName=R5"
+                    },
+                    {
+                        date: "2020-03-28",
+                        lake: "Okeechobee",
+                        lakeID: "okeechobee",
+                        ramp: "Roland Martin",
+                        state: "FL",
+                        txDetail: "T1",
+                        resultsLink: "https://americanbassanglers.com/Results/12702.pdf",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=7&RegionName=R5"
+                    },
+                    {
+                        date: "2020-05-16",
+                        lake: "Okeechobee",
+                        lakeID: "okeechobee",
+                        ramp: "Scott Driver",
+                        state: "FL",
+                        txDetail: "T1",
+                        resultsLink: "https://americanbassanglers.com/Results/12703.pdf",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=7&RegionName=R5"
+                    },
+                    {
+                        date: "2020-10-03",
+                        lake: "Toho",
+                        lakeID: "toho",
+                        ramp: "Lakefront Park",
+                        state: "FL",
+                        txDetail: "T1",
+                        resultsLink: "https://americanbassanglers.com/Results/12748.pdf",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=7&RegionName=R5"
+                    },
+                    {
+                        date: "2020-10-04",
+                        lake: "Toho",
+                        lakeID: "toho",
+                        ramp: "Lakefront Park",
+                        state: "FL",
+                        txDetail: "T1",
+                        resultsLink: "https://americanbassanglers.com/Results/12748.pdf",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=7&RegionName=R5"
+                    }
+
                 ]
             },
             {
