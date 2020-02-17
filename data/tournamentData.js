@@ -698,7 +698,7 @@ module.exports = [
                         ramp: "Parkway",
                         state: "VA",
                         txDetail: "Anglers Choice",
-                        resultsLink: "",
+                        resultsLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule",
                         entryLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule"
                     },
                     {
@@ -708,7 +708,7 @@ module.exports = [
                         ramp: "Occonneechee",
                         state: "NC-VA",
                         txDetail: "Anglers Choice",
-                        resultsLink: "",
+                        resultsLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule",
                         entryLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule"
                     },
                     {
@@ -718,7 +718,7 @@ module.exports = [
                         ramp: "Occonneechee",
                         state: "NC-VA",
                         txDetail: "Anglers Choice",
-                        resultsLink: "",
+                        resultsLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule",
                         entryLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule"
                     },
                     {
@@ -728,7 +728,7 @@ module.exports = [
                         ramp: "Parkway",
                         state: "VA",
                         txDetail: "Anglers Choice",
-                        resultsLink: "https://www.anglerschoicemarine.com/fckimages/RESULTS_SML_May4-19.pdf",
+                        resultsLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule",
                         entryLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule"
                     },
                     {
@@ -738,7 +738,7 @@ module.exports = [
                         ramp: "Parkway",
                         state: "VA",
                         txDetail: "Anglers Choice",
-                        resultsLink: "",
+                        resultsLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule",
                         entryLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule"
                     },
                     {
@@ -748,7 +748,7 @@ module.exports = [
                         ramp: "Occonneechee",
                         state: "NC-VA",
                         txDetail: "Anglers Choice",
-                        resultsLink: "",
+                        resultsLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule",
                         entryLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule"
                     },
                     {
@@ -758,7 +758,7 @@ module.exports = [
                         ramp: "Occonneechee",
                         state: "NC-VA",
                         txDetail: "2-Day Classic",
-                        resultsLink: "",
+                        resultsLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule",
                         entryLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule"
                     },
                     {
@@ -768,7 +768,7 @@ module.exports = [
                         ramp: "Occonneechee",
                         state: "NC-VA",
                         txDetail: "2-Day Classic",
-                        resultsLink: "",
+                        resultsLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule",
                         entryLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule"
                     },
                     {
@@ -794,7 +794,7 @@ module.exports = [
                         ramp: "Beatties Ford",
                         state: "NC",
                         txDetail: "Anglers Choice",
-                        resultsLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule-nc",
+                        resultsLink: "https://www.anglerschoicemarine.com/fckimages/NC_RESULTS_Feb15_2020.pdf",
                         entryLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule-nc"
                     },
                     {
@@ -804,7 +804,7 @@ module.exports = [
                         ramp: "Beatties Ford",
                         state: "NC",
                         txDetail: "Anglers Choice",
-                        resultsLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule-nc",
+                        resultsLink: "https://www.anglerschoicemarine.com/fckimages/RESULTS%20of%20NC%20Tournament%202%20-%20Lake%20Norman%20feb16.pdf",
                         entryLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule-nc"
                     },
                     {
@@ -814,7 +814,7 @@ module.exports = [
                         ramp: "Buster Boyd",
                         state: "NC",
                         txDetail: "Anglers Choice",
-                        resultsLink: "",
+                        resultsLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule-nc",
                         entryLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule-nc"
                     },
                     {
@@ -824,7 +824,7 @@ module.exports = [
                         ramp: "Buster Boyd",
                         state: "NC",
                         txDetail: "Anglers Choice",
-                        resultsLink: "",
+                        resultsLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule-nc",
                         entryLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule-nc"
                     },
                     {
@@ -834,7 +834,7 @@ module.exports = [
                         ramp: "Southmont",
                         state: "NC",
                         txDetail: "Anglers Choice",
-                        resultsLink: "",
+                        resultsLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule-nc",
                         entryLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule-nc"
                     },
                     {
@@ -844,7 +844,7 @@ module.exports = [
                         ramp: "Southmont",
                         state: "NC",
                         txDetail: "Anglers Choice",
-                        resultsLink: "",
+                        resultsLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule-nc",
                         entryLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule-nc"
                     },
                     {
@@ -854,7 +854,7 @@ module.exports = [
                         ramp: "Pinnacle",
                         state: "NC",
                         txDetail: "Anglers Choice",
-                        resultsLink: "",
+                        resultsLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule-nc",
                         entryLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule-nc"
                     },
                     {
@@ -864,7 +864,7 @@ module.exports = [
                         ramp: "Pinnacle",
                         state: "NC",
                         txDetail: "Anglers Choice",
-                        resultsLink: "",
+                        resultsLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule-nc",
                         entryLink: "https://www.anglerschoicemarine.com/read-bout-our-tournaments--highlights-schedule-nc"
                     },
                 ]
