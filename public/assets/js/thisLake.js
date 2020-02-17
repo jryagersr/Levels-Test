@@ -213,7 +213,7 @@ function buildElevChart(data, lake) {
 
 
 /******************************************************************************************************************/
-// Function to build flow chart on page
+// Function to build daily flow chart on page
 function buildFlowChart(data) {
     $("#flowChart").show();
 
@@ -229,10 +229,10 @@ function buildFlowChart(data) {
     let chartMaxFlowLimit = 0; // y-axis Max elev value
 
     // find our starting flow
-    for (var i = 0; i < data.length; i++) {
+    /*for (var i = 0; i < data.length; i++) {
         if (data[i].flow == "Missing") data[i].flow = -99;
         sumOfFlows = data[i].flow
-    }
+    }*/
     let avgFlow = 0;
 
     let checkDate = data[0].date;
@@ -240,6 +240,7 @@ function buildFlowChart(data) {
     for (k = 0; k < data.length; k++) {
 
 
+        if (data[k].flow == "Missing") data[k].flow = -99;
         // if the data is available and not "Missing" or "N/A"
         if (data[k].flow !== "N/A") {
 
@@ -315,7 +316,7 @@ function buildFlowChart(data) {
 
     // Set y axis limits for Flow Chart
     chartMinFlowLimit = chartMinFlow - 1000; // set lower chart limit
-    chartMaxFlowLimit = ((((chartMaxFlow - (chartMaxFlow % 1000)) / 1000) * 1.2) * 1000); // set the chart upper limit
+    chartMaxFlowLimit = ((((chartMaxFlow - (chartMaxFlow % 1000)) / 1000) * 1.25) * 1000); // set the chart upper limit
 
     //if (chartMinFlowLimit < 1000) chartMinFlowLimit = 0;
     chartMinFlowLimit = 0; // Flow Min limit should just be set to 0
