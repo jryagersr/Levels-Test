@@ -11694,6 +11694,20 @@ module.exports = [
         long: -78.570008
     },
     {
+        bodyOfWater: "Mayo", // lake name
+        id: "mayo",
+        rampName: "Triple Springs",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.480357,
+        long: -78.877081
+    },
+    {
         bodyOfWater: "Neuse River (Kinston)", // lake name
         id: "neuse",
         rampName: "Kinston",
@@ -11918,9 +11932,9 @@ module.exports = [
         long: -81.030070
     },
     {
-        bodyOfWater: "Mayo", // lake name
-        id: "mayo",
-        rampName: "Triple Springs",
+        bodyOfWater: "Tar (Washington)", // lake name
+        id: "tarriver",
+        rampName: "Tranter's Creek",
         rampType: "",
         rampParking: "",
         rampFee: "",
@@ -11928,8 +11942,8 @@ module.exports = [
         courtesyDock: "",
         bottomElev: 0,
         topElev: 0,
-        lat: 36.480357,
-        long: -78.877081
+        lat: 35.562581,
+        long: -77.085872
     },
     {
         bodyOfWater: "Rhodhiss", // lake name

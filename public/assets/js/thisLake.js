@@ -430,7 +430,7 @@ function buildRiverChart(data, lake) {
 
     // Set axis limits for River Chart
     let minMaxDiff = chartMaxRiver - chartMinRiver;
-    let chartGap = minMaxDiff * 1.5;
+    let chartGap = Number((minMaxDiff * 1.5).toFixed(2));
     if (minMaxDiff < .1) chartGap = minMaxDiff + .5;
     if (minMaxDiff > 20) chartGap = 1;
     chartMinRiverLimit = chartMinRiver - chartGap; // set the chart lower limit
