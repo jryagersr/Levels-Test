@@ -2767,7 +2767,7 @@ module.exports = [
         elevURL: "",
         flowURL: "",
         href: "/lakes/chautaugua",
-        dataSource: ["none"], // array of calls to make to retrieve data
+        dataSource: ["loadAds"], // array of calls to make to retrieve data
     },
     {
         bodyOfWater: "Oneida", // lake name

@@ -12411,37 +12411,9 @@ module.exports = [
         long: -84.57420
     },
     {
-        bodyOfWater: "Ohio River (Cincy)", // lake name
-        id: "ohiorivercin",
-        rampName: "Riverside",
-        rampType: "",
-        rampParking: "",
-        rampFee: "",
-        rampAccess: "",
-        courtesyDock: "",
-        bottomElev: 0,
-        topElev: 0,
-        lat: 39.079715,
-        long: -84.587983
-    },
-    {
-        bodyOfWater: "Ohio River (Cincy)", // lake name
-        id: "ohiorivercin",
-        rampName: "Smith",
-        rampType: "",
-        rampParking: "",
-        rampFee: "",
-        rampAccess: "",
-        courtesyDock: "",
-        bottomElev: 0,
-        topElev: 0,
-        lat: 39.118542,
-        long: -84.449351
-    },
-    {
-        bodyOfWater: "Ohio River (Tanners)", // lake name
-        id: "ohiorivertan",
-        rampName: "Lawrenceburg",
+        bodyOfWater: "Milton", // lake name
+        id: "milton",
+        rampName: "State Park",
         rampType: "Concrete",
         rampParking: "Great",
         rampFee: "",
@@ -12449,8 +12421,8 @@ module.exports = [
         courtesyDock: "Yes",
         bottomElev: 0,
         topElev: 0,
-        lat: 39.081889,
-        long: -84.871798
+        lat: 41.095089,
+        long: -80.973223
     },
     {
         bodyOfWater: "Misquito Lake", // lake name
@@ -12494,6 +12466,49 @@ module.exports = [
         lat: 41.306562,
         long: -80.766635
     },
+    {
+        bodyOfWater: "Ohio River (Cincy)", // lake name
+        id: "ohiorivercin",
+        rampName: "Riverside",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 39.079715,
+        long: -84.587983
+    },
+    {
+        bodyOfWater: "Ohio River (Cincy)", // lake name
+        id: "ohiorivercin",
+        rampName: "Smith",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 39.118542,
+        long: -84.449351
+    },
+    {
+        bodyOfWater: "Ohio River (Tanners)", // lake name
+        id: "ohiorivertan",
+        rampName: "Lawrenceburg",
+        rampType: "Concrete",
+        rampParking: "Great",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 39.081889,
+        long: -84.871798
+    },
+    
     {
         bodyOfWater: "Portage", // lake name
         id: "portage",
