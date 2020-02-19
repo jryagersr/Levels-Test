@@ -12729,7 +12729,7 @@ module.exports = [
         }]
     },
     {
-        bodyOfWater: "mosquito Lake", // lake name
+        bodyOfWater: "Mosquito Lake", // lake name
         id: "mosquito",
         data: [],
         refreshInterval: 30, //minutes

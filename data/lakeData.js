@@ -2711,7 +2711,7 @@ module.exports = [
     },
 
     // NEW YORK  ---------------------------------------------------------------------------------------------------------
-    
+
     {
         bodyOfWater: "1000 Islands", // lake name
         state: ["New York"],
@@ -2764,10 +2764,10 @@ module.exports = [
         normalPool: 1308.0,
         lat: 42.177156,
         long: -79.427269,
-        elevURL: "",
+        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03013946&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
         flowURL: "",
         href: "/lakes/chautaugua",
-        dataSource: ["loadAds"], // array of calls to make to retrieve data
+        dataSource: ["USGS"], // array of calls to make to retrieve data
     },
     {
         bodyOfWater: "Oneida", // lake name
@@ -3258,7 +3258,7 @@ module.exports = [
         seaLevelDelta: 0,
         normalPool: 0.0,
         lat: 35.543805,
-        long: -77.061556 ,
+        long: -77.061556,
         elevURL: "https://water.weather.gov/ahps2/hydrograph_to_xml.php?gage=pamn7&output=tabular&time_zone=est",
         flowURL: "",
         href: "/lakes/pamlicoriver",
@@ -3523,7 +3523,7 @@ module.exports = [
         seaLevelDelta: 0,
         normalPool: 0.0,
         lat: 35.543805,
-        long: -77.061556 ,
+        long: -77.061556,
         elevURL: "https://water.weather.gov/ahps2/hydrograph_to_xml.php?gage=pamn7&output=tabular&time_zone=est",
         flowURL: "",
         href: "/lakes/tarriver",
