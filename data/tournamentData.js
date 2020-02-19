@@ -959,7 +959,7 @@ module.exports = [
                 {
                     date: "2020-05-09",
                     lake: "Milton",
-                    lakeID: [""],
+                    lakeID: ["milton"],
                     ramp: "State Park",
                     state: "OH",
                     txDetail: "",
@@ -969,7 +969,7 @@ module.exports = [
                 {
                     date: "2020-06-20",
                     lake: "Chautauqua",
-                    lakeID: [""],
+                    lakeID: ["chautaugua"],
                     ramp: "Long Point",
                     state: "NY",
                     txDetail: "",
@@ -979,7 +979,7 @@ module.exports = [
                 {
                     date: "2020-07-25",
                     lake: "Chautauqua",
-                    lakeID: [""],
+                    lakeID: ["chautaugua"],
                     ramp: "Long Point",
                     state: "NY",
                     txDetail: "",
@@ -989,7 +989,7 @@ module.exports = [
                 {
                     date: "2020-08-22",
                     lake: "Misquito Lake",
-                    lakeID: [""],
+                    lakeID: ["misquito"],
                     ramp: "State Park",
                     state: "OH",
                     txDetail: "",
@@ -999,7 +999,7 @@ module.exports = [
                 {
                     date: "2020-09-12",
                     lake: "Chautauqua",
-                    lakeID: [""],
+                    lakeID: ["chautaugua"],
                     ramp: "Long Point",
                     state: "NY",
                     txDetail: "",
@@ -1009,7 +1009,7 @@ module.exports = [
                 {
                     date: "2020-10-03",
                     lake: "Portage",
-                    lakeID: [""],
+                    lakeID: ["portage"],
                     ramp: "Old State Park",
                     state: "NY",
                     txDetail: "",

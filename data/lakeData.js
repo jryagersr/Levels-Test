@@ -2711,6 +2711,26 @@ module.exports = [
     },
 
     // NEW YORK  ---------------------------------------------------------------------------------------------------------
+    
+    {
+        bodyOfWater: "1000 Islands", // lake name
+        state: ["New York"],
+        data: [],
+        ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
+        wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 243.0,
+        lat: 43.997063,
+        long: -76.474127,
+        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04220259&period=Pt168H&parameterCd=72214&siteType=LK&siteStatus=all",
+        flowURL: "",
+        href: "/lakes/thousandislands",
+        dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+    },
     {
         bodyOfWater: "Champlain", // lake name
         state: ["New York", "Vermont"],
@@ -2729,6 +2749,25 @@ module.exports = [
         flowURL: "",
         href: "/lakes/champlain",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "Chautaugua", // lake name
+        state: ["New York"],
+        data: [],
+        ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
+        wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 1308.0,
+        lat: 42.177156,
+        long: -79.427269,
+        elevURL: "",
+        flowURL: "",
+        href: "/lakes/chautaugua",
+        dataSource: ["none"], // array of calls to make to retrieve data
     },
     {
         bodyOfWater: "Oneida", // lake name
@@ -2767,25 +2806,6 @@ module.exports = [
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=445512084415301&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
         flowURL: "",
         href: "/lakes/otsego",
-        dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
-    },
-    {
-        bodyOfWater: "1000 Islands", // lake name
-        state: ["New York"],
-        data: [],
-        ccWxData: [],
-        ccWxDataLastRefresh: "12/31/18",
-        wxForecastData: [],
-        wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 90, //minutes
-        lastRefresh: "12/31/18", // a Date 
-        seaLevelDelta: 0,
-        normalPool: 243.0,
-        lat: 43.997063,
-        long: -76.474127,
-        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04220259&period=Pt168H&parameterCd=72214&siteType=LK&siteStatus=all",
-        flowURL: "",
-        href: "/lakes/thousandislands",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
 
@@ -3226,6 +3246,25 @@ module.exports = [
         dataSource: ["DUKE", "loadAds"], // array of calls to make to retrieve data
     },
     {
+        bodyOfWater: "Pamlico (Washington)", // lake name
+        state: ["North Carolina"],
+        data: [],
+        ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
+        wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
+        refreshInterval: 60, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 0.0,
+        lat: 35.543805,
+        long: -77.061556 ,
+        elevURL: "https://water.weather.gov/ahps2/hydrograph_to_xml.php?gage=pamn7&output=tabular&time_zone=est",
+        flowURL: "",
+        href: "/lakes/pamlicoriver",
+        dataSource: ["WEATHERWATER", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
         bodyOfWater: "Pasquotank (Mariners Wharf)", // lake name
         state: ["North Carolina"],
         data: [],
@@ -3472,6 +3511,25 @@ module.exports = [
         dataSource: ["loadAds"], // array of calls to make to retrieve data
     },
     {
+        bodyOfWater: "Tar (Washington)", // lake name
+        state: ["North Carolina"],
+        data: [],
+        ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
+        wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
+        refreshInterval: 60, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 0.0,
+        lat: 35.543805,
+        long: -77.061556 ,
+        elevURL: "https://water.weather.gov/ahps2/hydrograph_to_xml.php?gage=pamn7&output=tabular&time_zone=est",
+        flowURL: "",
+        href: "/lakes/tarriver",
+        dataSource: ["WEATHERWATER", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
         bodyOfWater: "Tillery", // lake name
         state: ["North Carolina"],
         data: [],
@@ -3667,6 +3725,44 @@ module.exports = [
         flowURL: "",
         href: "/lakes/indianoh",
         dataSource: ["loadAds"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "Milton", // lake name
+        state: ["Ohio"],
+        data: [],
+        ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
+        wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0.0,
+        normalPool: 948.0,
+        lat: 41.099204,
+        long: -80.981477,
+        elevURL: "https://water.weather.gov/ahps2/hydrograph_to_xml.php?gage=nwto1&output=tabular&time_zone=est",
+        flowURL: "",
+        href: "/lakes/milton",
+        dataSource: ["WEATHERWATER", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "Portage", // lake name
+        state: ["Ohio"],
+        data: [],
+        ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
+        wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0.0,
+        normalPool: 948.0,
+        lat: 40.971366,
+        long: -81.544126,
+        elevURL: "",
+        flowURL: "",
+        href: "/lakes/portage",
+        dataSource: ["",], // array of calls to make to retrieve data
     },
     {
         bodyOfWater: "Mosquito Lake", // lake name

@@ -10193,6 +10193,20 @@ module.exports = [
         long: -73.389948
     },
     {
+        bodyOfWater: "Chautaugua", // lake name
+        id: "chautaugua",
+        rampName: "Long Point",
+        rampType: "Concrete",
+        rampParking: "Great",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 42.172260,
+        long:  -79.415558
+    },
+    {
         bodyOfWater: "Oneida", // lake name
         id: "oneida",
         rampName: "Oneida Shores",
@@ -12479,6 +12493,20 @@ module.exports = [
         topElev: 0,
         lat: 41.306562,
         long: -80.766635
+    },
+    {
+        bodyOfWater: "Portage", // lake name
+        id: "portage",
+        rampName: "State Park",
+        rampType: "Concrete",
+        rampParking: "Great",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 40.971859,
+        long: -81.550991
     },
 
     // OKLAHOMA  ---------------------------------------------------------------------------------------------------------
