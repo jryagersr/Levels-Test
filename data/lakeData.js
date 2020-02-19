@@ -3780,7 +3780,7 @@ module.exports = [
         long: -80.753973,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03095000&period=PT168H&parameterCd=62615&siteType=LK&siteStatus=all",
         flowURL: "",
-        href: "/lakes/misquito",
+        href: "/lakes/mosquito",
         dataSource: ["USGS"], // array of calls to make to retrieve data
     },
     {

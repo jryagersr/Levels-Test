@@ -12729,8 +12729,8 @@ module.exports = [
         }]
     },
     {
-        bodyOfWater: "Misquito Lake", // lake name
-        id: "misquito",
+        bodyOfWater: "mosquito Lake", // lake name
+        id: "mosquito",
         data: [],
         refreshInterval: 30, //minutes
         lastRefresh: "12/31/18", // a Date

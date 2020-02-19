@@ -988,8 +988,8 @@ module.exports = [
                 },
                 {
                     date: "2020-08-22",
-                    lake: "Misquito Lake",
-                    lakeID: ["misquito"],
+                    lake: "mosquito Lake",
+                    lakeID: ["mosquito"],
                     ramp: "State Park",
                     state: "OH",
                     txDetail: "",

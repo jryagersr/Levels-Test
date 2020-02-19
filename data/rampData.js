@@ -12425,8 +12425,8 @@ module.exports = [
         long: -80.973223
     },
     {
-        bodyOfWater: "Misquito Lake", // lake name
-        id: "misquito",
+        bodyOfWater: "Mosquito Lake", // lake name
+        id: "mosquito",
         rampName: "Causeway",
         rampType: "Concrete",
         rampParking: "Great",
@@ -12439,8 +12439,8 @@ module.exports = [
         long: -80.740217
     },
     {
-        bodyOfWater: "Misquito Lake", // lake name
-        id: "misquito",
+        bodyOfWater: "mosquito Lake", // lake name
+        id: "mosquito",
         rampName: "Route 305",
         rampType: "Concrete",
         rampParking: "Great",
@@ -12453,9 +12453,9 @@ module.exports = [
         long: -80.747374
     },
     {
-        bodyOfWater: "Misquito Lake", // lake name
-        id: "misquito",
-        rampName: "Misquito Lake SP",
+        bodyOfWater: "mosquito Lake", // lake name
+        id: "mosquito",
+        rampName: "mosquito Lake SP",
         rampType: "Concrete",
         rampParking: "Great",
         rampFee: "",
