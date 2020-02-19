@@ -951,6 +951,75 @@ module.exports = [
         }]
     },
     {
+        organization: "Better Half Tour",
+        trails: [{
+            trail: "Couples Trail",
+            tournaments: [
+
+                {
+                    date: "2020-05-09",
+                    lake: "Milton",
+                    lakeID: [""],
+                    ramp: "State Park",
+                    state: "OH",
+                    txDetail: "",
+                    resultsLink: "https://betterhalftour.com/2020-better-half-tour-schedule/",
+                    entryLink: "https://betterhalftour.com/2020-better-half-tour-schedule/"
+                },
+                {
+                    date: "2020-06-20",
+                    lake: "Chautauqua",
+                    lakeID: [""],
+                    ramp: "Long Point",
+                    state: "NY",
+                    txDetail: "",
+                    resultsLink: "https://betterhalftour.com/2020-better-half-tour-schedule/",
+                    entryLink: "https://betterhalftour.com/2020-better-half-tour-schedule/"
+                },
+                {
+                    date: "2020-07-25",
+                    lake: "Chautauqua",
+                    lakeID: [""],
+                    ramp: "Long Point",
+                    state: "NY",
+                    txDetail: "",
+                    resultsLink: "https://betterhalftour.com/2020-better-half-tour-schedule/",
+                    entryLink: "https://betterhalftour.com/2020-better-half-tour-schedule/"
+                },
+                {
+                    date: "2020-08-22",
+                    lake: "Misquito Lake",
+                    lakeID: [""],
+                    ramp: "State Park",
+                    state: "OH",
+                    txDetail: "",
+                    resultsLink: "https://betterhalftour.com/2020-better-half-tour-schedule/",
+                    entryLink: "https://betterhalftour.com/2020-better-half-tour-schedule/"
+                },
+                {
+                    date: "2020-09-12",
+                    lake: "Chautauqua",
+                    lakeID: [""],
+                    ramp: "Long Point",
+                    state: "NY",
+                    txDetail: "",
+                    resultsLink: "https://betterhalftour.com/2020-better-half-tour-schedule/",
+                    entryLink: "https://betterhalftour.com/2020-better-half-tour-schedule/"
+                },
+                {
+                    date: "2020-10-03",
+                    lake: "Portage",
+                    lakeID: [""],
+                    ramp: "Old State Park",
+                    state: "NY",
+                    txDetail: "",
+                    resultsLink: "https://betterhalftour.com/2020-better-half-tour-schedule/",
+                    entryLink: "https://betterhalftour.com/2020-better-half-tour-schedule/"
+                }
+            ]
+        }]
+    },
+    {
         organization: "Big Bass Tour",
         trails: [{
             trail: "Big Bass Tour",
