@@ -3762,7 +3762,7 @@ module.exports = [
         elevURL: "",
         flowURL: "",
         href: "/lakes/portage",
-        dataSource: ["",], // array of calls to make to retrieve data
+        dataSource: ["loadAds"], // array of calls to make to retrieve data
     },
     {
         bodyOfWater: "Mosquito Lake", // lake name
