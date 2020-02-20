@@ -12367,7 +12367,258 @@ module.exports = [
     },
 
     // OHIO  ---------------------------------------------------------------------------------------------------------
-
+    {
+        bodyOfWater: "Alum Creek", // lake name
+        id: "alumcreek",
+        rampName: "New Galena",
+        rampType: "Concrete",
+        rampParking: "Fair",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 40.196885,
+        long: -82.949171
+    },
+    {
+        bodyOfWater: "Buckeye", // lake name
+        id: "buckeye",
+        rampName: "Lieb's Island",
+        rampType: "Concrete",
+        rampParking: "Fair",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 39.907119,
+        long: -82.526084
+    },
+    {
+        bodyOfWater: "Buckeye", // lake name
+        id: "buckeye",
+        rampName: "North Shore",
+        rampType: "Concrete",
+        rampParking: "Fair",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 39.932084,
+        long: -82.478167
+    },
+    {
+        bodyOfWater: "Detroit River", // lake name
+        id: "detroit",
+        rampName: "Elizabeth Park",
+        rampType: "Concrete",
+        rampParking: "Fair",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 42.355754,
+        long: -82.963593
+    },
+    {
+        bodyOfWater: "Detroit River", // lake name
+        id: "detroit",
+        rampName: "St Jean",
+        rampType: "Concrete",
+        rampParking: "Fair",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 42.128018,
+        long: -83.178283
+    },
+    {
+        bodyOfWater: "Detroit River", // lake name
+        id: "detroit",
+        rampName: "Delray",
+        rampType: "Concrete",
+        rampParking: "Fair",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 42.294335,
+        long: -83.099709
+    },
+    {
+        bodyOfWater: "Detroit River", // lake name
+        id: "detroit",
+        rampName: "Ecorse",
+        rampType: "Concrete",
+        rampParking: "Fair",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 42.236166,
+        long: -83.147069
+    },
+    {
+        bodyOfWater: "Detroit River", // lake name
+        id: "detroit",
+        rampName: "Wyandottte",
+        rampType: "Concrete",
+        rampParking: "Fair",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 42.226940,
+        long: -83.147263
+    },
+    {
+        bodyOfWater: "Detroit River", // lake name
+        id: "detroit",
+        rampName: "Riverview",
+        rampType: "Concrete",
+        rampParking: "Fair",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 42.174338,
+        long: -83.164719
+    },
+    {
+        bodyOfWater: "Detroit River", // lake name
+        id: "detroitriver",
+        rampName: "Sangers",
+        rampType: "Concrete",
+        rampParking: "Fair",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 42.079548,
+        long: -83.194208
+    },
+    {
+        bodyOfWater: "Detroit River", // lake name
+        id: "detroit",
+        rampName: "Metropark",
+        rampType: "Concrete",
+        rampParking: "Fair",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 42.053311,
+        long: -83.192583
+    },
+    {
+        bodyOfWater: "Detroit River", // lake name
+        id: "detroit",
+        rampName: "Hulls Trace",
+        rampType: "Concrete",
+        rampParking: "Fair",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 42.042733,
+        long: -83.213487
+    },
+    {
+        bodyOfWater: "Erie", // lake name
+        id: "eriesandusky",
+        rampName: "Sandusky/Shelby street",
+        rampType: "Concrete",
+        rampParking: "Fair",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 41.453141,
+        long: -82.724581
+    },
+    {
+        bodyOfWater: "Erie", // lake name
+        id: "eriesandusky",
+        rampName: "Bay Point",
+        rampType: "Concrete",
+        rampParking: "Fair",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 41.513358,
+        long: -82.722026
+    },
+    {
+        bodyOfWater: "Erie", // lake name
+        id: "eriesandusky",
+        rampName: "Dempsey",
+        rampType: "Concrete",
+        rampParking: "Fair",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 41.506095,
+        long: -82.759845
+    },
+    {
+        bodyOfWater: "Erie", // lake name
+        id: "eriesandusky",
+        rampName: "Mazurik",
+        rampType: "Concrete",
+        rampParking: "Fair",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 41.542575,
+        long: -82.764607
+    },
+    {
+        bodyOfWater: "Erie", // lake name
+        id: "eriesandusky",
+        rampName: "NE Catawba Rd",
+        rampType: "Concrete",
+        rampParking: "Fair",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 41.552502,
+        long: -82.832599
+    },
+    {
+        bodyOfWater: "Erie", // lake name
+        id: "eriesandusky",
+        rampName: "Catawba Island",
+        rampType: "Concrete",
+        rampParking: "Fair",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 41.573642,
+        long: -82.856691
+    },
     {
         bodyOfWater: "Grand", // lake name
         id: "grandoh",
@@ -12439,7 +12690,7 @@ module.exports = [
         long: -80.740217
     },
     {
-        bodyOfWater: "mosquito Lake", // lake name
+        bodyOfWater: "Mosquito Lake", // lake name
         id: "mosquito",
         rampName: "Route 305",
         rampType: "Concrete",
@@ -12453,7 +12704,7 @@ module.exports = [
         long: -80.747374
     },
     {
-        bodyOfWater: "mosquito Lake", // lake name
+        bodyOfWater: "Mosquito Lake", // lake name
         id: "mosquito",
         rampName: "mosquito Lake SP",
         rampType: "Concrete",
@@ -12507,8 +12758,7 @@ module.exports = [
         topElev: 0,
         lat: 39.081889,
         long: -84.871798
-    },
-    
+    },    
     {
         bodyOfWater: "Portage", // lake name
         id: "portage",
@@ -12522,6 +12772,34 @@ module.exports = [
         topElev: 0,
         lat: 40.971859,
         long: -81.550991
+    },    
+    {
+        bodyOfWater: "Rocky Fork", // lake name
+        id: "rockyfork",
+        rampName: "East Shore",
+        rampType: "Concrete",
+        rampParking: "Great",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 39.192497,
+        long: -83.435605
+    },  
+    {
+        bodyOfWater: "Rocky Fork", // lake name
+        id: "rockyfork",
+        rampName: "North Shore",
+        rampType: "Concrete",
+        rampParking: "Great",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 39.196937,
+        long: -83.485327
     },
 
     // OKLAHOMA  ---------------------------------------------------------------------------------------------------------

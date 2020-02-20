@@ -3666,7 +3666,7 @@ module.exports = [
         long: -83.115841,
         elevURL: "none",
         flowURL: "",
-        href: "/lakes/detroitrvr",
+        href: "/lakes/detroit",
         dataSource: ["loadAds"], // array of calls to make to retrieve data
     },
     {

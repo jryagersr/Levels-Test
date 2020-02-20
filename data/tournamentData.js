@@ -2804,7 +2804,7 @@ module.exports = [
                     {
                         date: "2020-08-29",
                         lake: "Erie",
-                        lakeID: "erie",
+                        lakeID: "eriesandusky",
                         ramp: "Shelby Street",
                         state: "OH",
                         txDetail: "FLW",
@@ -3374,7 +3374,7 @@ module.exports = [
                 {
                     date: "2020-10-22",
                     lake: "Detroit River",
-                    lakeID: "detroitrvr",
+                    lakeID: "detroitriver",
                     ramp: "Elizabeth",
                     state: "OH",
                     txDetail: "",
