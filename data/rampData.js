@@ -12468,7 +12468,7 @@ module.exports = [
     {
         bodyOfWater: "Detroit River", // lake name
         id: "detroit",
-        rampName: "Wyandottte",
+        rampName: "Wyandotte",
         rampType: "Concrete",
         rampParking: "Fair",
         rampFee: "",

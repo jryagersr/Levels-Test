@@ -3374,7 +3374,7 @@ module.exports = [
                 {
                     date: "2020-10-22",
                     lake: "Detroit River",
-                    lakeID: "detroitriver",
+                    lakeID: "detroit",
                     ramp: "Elizabeth",
                     state: "OH",
                     txDetail: "",
