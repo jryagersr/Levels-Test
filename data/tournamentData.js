@@ -231,95 +231,66 @@ module.exports = [
                 trail: "Open Series GA",
                 tournaments: [
 
+                    
                     {
                         date: "2020-02-22",
-                        lake: "Jackson",
-                        lakeID: "",
-                        ramp: "Berry's",
-                        state: "GA",
-                        txDetail: "T1",
-                        resultsLink: "https://americanbassanglers.com/Results/12424.pdf",
-                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=CPL&Season=2020&Division=2&RegionName=C1"
-                    },
-                    {
-                        date: "2020-03-07",
                         lake: "Eufaula",
                         lakeID: "eufaulaal",
                         ramp: "Lakepoint",
                         state: "GA-TN-AL",
                         txDetail: "T1",
-                        resultsLink: "https://americanbassanglers.com/Results/12425.pdf",
-                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=CPL&Season=2020&Division=2&RegionName=C1"
+                        resultsLink: "https://americanbassanglers.com/Results/12704.pdf",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=8&RegionName=R3"
                     },
                     {
-                        date: "2020-03-08",
-                        lake: "Eufaula",
-                        lakeID: "eufaulaal",
-                        ramp: "Lakepoint",
-                        state: "GA-TN-AL",
-                        txDetail: "T1",
-                        resultsLink: "https://americanbassanglers.com/Results/12426.pdf",
-                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=CPL&Season=2020&Division=2&RegionName=C1"
-                    },
-                    {
-                        date: "2020-03-28",
-                        lake: "Tobosofkee",
-                        lakeID: "",
-                        ramp: "Claystone",
-                        state: "GA",
-                        txDetail: "T1",
-                        resultsLink: "https://americanbassanglers.com/Results/12427.pdf",
-                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=CPL&Season=2020&Division=2&RegionName=C1"
-                    },
-                    {
-                        date: "2020-04-18",
+                        date: "2020-03-14",
                         lake: "Oconee",
                         lakeID: "oconee",
+                        ramp: "Sugar Creek",
+                        state: "GA",
+                        txDetail: "T1",
+                        resultsLink: "https://americanbassanglers.com/Results/12705.pdf",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=8&RegionName=R3"
+                    },
+                    {
+                        date: "2020-04-25",
+                        lake: "Sinclair",
+                        lakeID: "",
+                        ramp: "Dennis Station",
+                        state: "GA",
+                        txDetail: "T1",
+                        resultsLink: "https://americanbassanglers.com/Results/12706.pdf",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=8&RegionName=R3"
+                    },
+                    {
+                        date: "2020-06-13",
+                        lake: "Oconee",
+                        lakeID: "oconee",
+                        ramp: "Sugar Creek",
+                        state: "GA",
+                        txDetail: "T1",
+                        resultsLink: "https://americanbassanglers.com/Results/12707.pdf",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=8&RegionName=R3"
+                    },
+                    {
+                        date: "2020-10-11",
+                        lake: "Eufaula",
+                        lakeID: "eufaulaal",
                         ramp: "Lakepoint",
-                        state: "GA",
+                        state: "GA-TN-AL",
                         txDetail: "T1",
-                        resultsLink: "https://americanbassanglers.com/Results/12428.pdf",
-                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=CPL&Season=2020&Division=2&RegionName=C1"
+                        resultsLink: "https://americanbassanglers.com/proddetail.php?prod=12746",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=8&RegionName=R3"
                     },
                     {
-                        date: "2020-05-02",
-                        lake: "West Point",
-                        lakeID: "westpoint",
-                        ramp: "Pyne Road",
-                        state: "GA-AL",
+                        date: "2020-10-12",
+                        lake: "Eufaula",
+                        lakeID: "eufaulaal",
+                        ramp: "Lakepoint",
+                        state: "GA-TN-AL",
                         txDetail: "T1",
-                        resultsLink: "https://americanbassanglers.com/Results/12430.pdf",
-                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=CPL&Season=2020&Division=2&RegionName=C1"
-                    },
-                    {
-                        date: "2020-06-06",
-                        lake: "Sincair",
-                        lakeID: "sinclair",
-                        ramp: "Big Ed's",
-                        state: "GA",
-                        txDetail: "T1",
-                        resultsLink: "https://americanbassanglers.com/Results/12432.pdf",
-                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=CPL&Season=2020&Division=2&RegionName=C1"
-                    },
-                    {
-                        date: "2020-10-11",
-                        lake: "Keowee",
-                        lakeID: "keowee",
-                        ramp: "South Cove",
-                        state: "GA-SC",
-                        txDetail: "T1",
-                        resultsLink: "https://americanbassanglers.com/Results/12454.pdf",
-                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=CPL&Season=2020&Division=2&RegionName=C1"
-                    },
-                    {
-                        date: "2020-10-11",
-                        lake: "Keowee",
-                        lakeID: "keowee",
-                        ramp: "South Cove",
-                        state: "GA-SC",
-                        txDetail: "T1",
-                        resultsLink: "https://americanbassanglers.com/Results/12454.pdf",
-                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=CPL&Season=2020&Division=2&RegionName=C1"
+                        resultsLink: "https://americanbassanglers.com/proddetail.php?prod=12746",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=8&RegionName=R3"
                     }
 
                 ]
@@ -2004,7 +1975,7 @@ module.exports = [
                         ramp: "Pinnacle",
                         state: "NC",
                         txDetail: "Qualifier 1",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-norman-nc-open-feb-16-2020/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
                     },
                     {
@@ -2014,7 +1985,7 @@ module.exports = [
                         ramp: "Pinnacle",
                         state: "NC",
                         txDetail: "Qualifier 1",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-norman-nc-open-mar-7-2020/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
                     },
                     {
@@ -2024,7 +1995,7 @@ module.exports = [
                         ramp: "Pinnacle",
                         state: "NC",
                         txDetail: "Qualifier 1",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-norman-nc-open-mar-28-2020/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
                     },
                     {
@@ -2034,7 +2005,7 @@ module.exports = [
                         ramp: "Pinnacle",
                         state: "NC",
                         txDetail: "Qualifier 1",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-norman-nc-open-apr-11-2020/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
                     },
                     {
@@ -2044,7 +2015,7 @@ module.exports = [
                         ramp: "Pinnacle",
                         state: "NC",
                         txDetail: "Qualifier 1",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-norman-nc-open-apr-258-2020/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-norman/"
                     }
                 ]
@@ -2060,7 +2031,7 @@ module.exports = [
                         ramp: "Flemingtown",
                         state: "NC-VA",
                         txDetail: "Qualifier 1",
-                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-old-north/",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-old-north-nc-open-mar-14-2020/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
                     },
                     {
@@ -2070,7 +2041,7 @@ module.exports = [
                         ramp: "Farrington",
                         state: "NC",
                         txDetail: "Qualifier 2",
-                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-old-north/",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-old-north-nc-open-mar-28-2020/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
                     },
                     {
@@ -2080,7 +2051,7 @@ module.exports = [
                         ramp: "Ledge Rock",
                         state: "NC",
                         txDetail: "Qualifier 3",
-                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-old-north/",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-old-north-nc-open-apr-04-2020/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
                     },
                     {
@@ -2090,7 +2061,7 @@ module.exports = [
                         ramp: "Farrington",
                         state: "NC",
                         txDetail: "Qualifier 4",
-                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-old-north/",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-old-north-nc-open-apr-18-2020/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
                     },
                     {
@@ -2100,7 +2071,7 @@ module.exports = [
                         ramp: "Flemingtown",
                         state: "NC-VA",
                         txDetail: "Qualifier 5",
-                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-old-north/",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-old-north-nc-open-may-17-2020/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
                     },
                     {
@@ -2110,7 +2081,7 @@ module.exports = [
                         ramp: "Crosspoint",
                         state: "NC",
                         txDetail: "Qualifier 6",
-                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-old-north/",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-old-north-nc-open-may-30-2020/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
                     },
                     {
@@ -2120,7 +2091,7 @@ module.exports = [
                         ramp: "Ledge Rock",
                         state: "NC",
                         txDetail: "Final",
-                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-old-north/",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-old-north-nc-open-jun-20-2020/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
                     },
                 ]
@@ -2202,7 +2173,7 @@ module.exports = [
                         ramp: "Buster Boyd",
                         state: "SC",
                         txDetail: "Qualifier 1",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-wylie-sc-feb-15-2020/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wylie/"
                     },
                     {
@@ -2212,7 +2183,7 @@ module.exports = [
                         ramp: "Buster Boyd",
                         state: "SC",
                         txDetail: "Qualifier 1",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-wylie-sc-feb-29-2020/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wylie/"
                     },
                     {
@@ -2222,7 +2193,7 @@ module.exports = [
                         ramp: "Buster Boyd",
                         state: "SC",
                         txDetail: "Qualifier 1",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-wylie-sc-mar-14-2020/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wylie/"
                     },
                     {
@@ -2232,7 +2203,7 @@ module.exports = [
                         ramp: "Buster Boyd",
                         state: "SC",
                         txDetail: "Qualifier 1",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-wylie-sc-mar-21-2020/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wylie/"
                     },
                     {
@@ -2242,7 +2213,7 @@ module.exports = [
                         ramp: "Buster Boyd",
                         state: "SC",
                         txDetail: "Qualifier 1",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-wylie-sc-apr-11-2020/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wylie/"
                     },
                     {
@@ -2252,7 +2223,7 @@ module.exports = [
                         ramp: "Buster Boyd",
                         state: "SC",
                         txDetail: "Qualifier 1",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-wylie-sc-apr-25-2020/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wylie/"
                     },
                     {
@@ -2262,7 +2233,7 @@ module.exports = [
                         ramp: "Buster Boyd",
                         state: "SC",
                         txDetail: "Qualifier 1",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-wylie-sc-may-16-2020/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wylie/"
                     },
                 ]
@@ -2379,7 +2350,7 @@ module.exports = [
                         ramp: "John C Land",
                         state: "SC",
                         txDetail: "CBC",
-                        resultsLink: "http://www.carolinasbasschallenge.com/tournamentinfo.php?id=33",
+                        resultsLink: "http://www.carolinasbasschallenge.com/results.php?id=33",
                         entryLink: "http://www.carolinasbasschallenge.com/"
                     },
                     {
@@ -2389,7 +2360,7 @@ module.exports = [
                         ramp: "Farrington Point",
                         state: "SC",
                         txDetail: "CBC",
-                        resultsLink: "http://www.carolinasbasschallenge.com/tournamentinfo.php?id=34",
+                        resultsLink: "http://www.carolinasbasschallenge.com/results.php?id=34",
                         entryLink: "http://www.carolinasbasschallenge.com/"
                     },
                     {
@@ -2399,7 +2370,7 @@ module.exports = [
                         ramp: "Clearwater",
                         state: "SC",
                         txDetail: "CBC",
-                        resultsLink: "http://www.carolinasbasschallenge.com/tournamentinfo.php?id=35",
+                        resultsLink: "http://www.carolinasbasschallenge.com/results.php?id=35",
                         entryLink: "http://www.carolinasbasschallenge.com/"
                     },
                 ]
@@ -2415,7 +2386,7 @@ module.exports = [
                         ramp: "Pinnacle",
                         state: "NC",
                         txDetail: "CBC NC",
-                        resultsLink: "http://www.carolinasbasschallenge.com/tournamentinfo.php?id=21",
+                        resultsLink: "http://www.carolinasbasschallenge.com/results.php?id=21",
                         entryLink: "http://www.carolinasbasschallenge.com/"
                     },
                     {
@@ -2425,7 +2396,7 @@ module.exports = [
                         ramp: "Wittenburg",
                         state: "NC",
                         txDetail: "CBC NC",
-                        resultsLink: "http://www.carolinasbasschallenge.com/tournamentinfo.php?id=23",
+                        resultsLink: "http://www.carolinasbasschallenge.com/results.php?id=23",
                         entryLink: "http://www.carolinasbasschallenge.com/"
                     },
                     {
@@ -2435,7 +2406,7 @@ module.exports = [
                         ramp: "Black Bear",
                         state: "NC",
                         txDetail: "CBC NC",
-                        resultsLink: "http://www.carolinasbasschallenge.com/tournamentinfo.php?id=28",
+                        resultsLink: "http://www.carolinasbasschallenge.com/results.php?id=28",
                         entryLink: "http://www.carolinasbasschallenge.com/"
                     },
                     {
@@ -2445,7 +2416,7 @@ module.exports = [
                         ramp: "Abbott's Creek",
                         state: "NC",
                         txDetail: "CBC NC",
-                        resultsLink: "http://www.carolinasbasschallenge.com/tournamentinfo.php?id=31",
+                        resultsLink: "http://www.carolinasbasschallenge.com/results.php?id=31",
                         entryLink: "http://www.carolinasbasschallenge.com/"
                     },
                     {
@@ -2455,7 +2426,7 @@ module.exports = [
                         ramp: "TBA",
                         state: "NC",
                         txDetail: "CBC NC",
-                        resultsLink: "http://www.carolinasbasschallenge.com/tournamentinfo.php?id=32",
+                        resultsLink: "http://www.carolinasbasschallenge.com/results.php?id=32",
                         entryLink: "http://www.carolinasbasschallenge.com/"
                     },
                 ]
@@ -3499,7 +3470,7 @@ module.exports = [
                         ramp: "Farrington",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
-                        resultsLink: "",
+                        resultsLink: "http://piedmontbassclassics.com/222-20MiniResults.html",
                         entryLink: "http://piedmontbassclassics.com/2020MiniTrailMainPage.html"
                     },
                     {

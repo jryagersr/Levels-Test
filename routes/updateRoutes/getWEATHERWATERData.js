@@ -17,6 +17,7 @@ module.exports = {
     let flow = -1000
     var data = [];
     let dataErrorTrue = false;
+    let localHTML = [];
     var options = {
       url: newUrl,
       type: "html"
@@ -24,19 +25,23 @@ module.exports = {
     request(options, function (error, response, html) {
       if (error) {
         callback(error);
-      } else if (bodyOfWater == "Mead") {
-        dataErrorTrue = false;
-        try {
-          jsonData = JSON.parse(html);
-        } catch (error) {
-          dataErrorTrue = true;
-        }
-
       } else {
-        try {
-          var $ = cheerio.load(html);
-        } catch (error) {
-          dataErrorTrue = true;
+        localHTML = html;
+        if (bodyOfWater == "Mead") {
+          dataErrorTrue = false;
+          try {
+            jsonData = JSON.parse(localHTML);
+          } catch (error) {
+            dataErrorTrue = true;
+          }
+
+        } else {
+          //if (bodyOfWater == "Elephant Butte") console.log(localHTML)
+          try {
+            var $ = cheerio.load(localHTML);
+          } catch (error) {
+            dataErrorTrue = true;
+          }
         }
       }
 

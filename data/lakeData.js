@@ -2271,6 +2271,26 @@ module.exports = [
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
     },
     {
+        bodyOfWater: "Mark Twain", // lake name
+        state: ["Missouri"],
+        data: [],
+        ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
+        wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 606.0,
+        topOfFloodControl: 739.6,
+        lat: 38.270197,
+        long: -93.413133,
+        elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=412018&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+        flowURL: "",
+        href: "/lakes/marktwain",
+        dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
         bodyOfWater: "Stockton", // lake name
         state: ["Missouri"],
         data: [],
@@ -3356,7 +3376,7 @@ module.exports = [
         //elevURL: "http://epec.saw.usace.army.mil/dailyrep.txt",
         flowURL: "",
         href: "/lakes/roanokerapids",
-        dataSource: ["ACEWilm", "loadAds"], // array of calls to make to retrieve data
+        dataSource: ["loadAds"], // array of calls to make to retrieve data
     },
     {
         bodyOfWater: "Roanoke River (Halifax)", // lake name
@@ -4814,6 +4834,44 @@ module.exports = [
         dataSource: ["USGS"], // array of calls to make to retrieve data Texas Water Development District
     },
     {
+        bodyOfWater: "Choke Canyon", // lake name
+        state: ["Texas"],
+        data: [],
+        ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
+        wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 220.0,
+        lat: 28.481248,
+        long: -98.262948,
+        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08206900&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
+        flowURL: "",
+        href: "/lakes/chokecanyon",
+        dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "Corpus Christi", // lake name
+        state: ["Texas"],
+        data: [],
+        ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
+        wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 94.0,
+        lat: 28.047643,
+        long: -97.876641,
+        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08210500&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
+        flowURL: "",
+        href: "/lakes/corpuschristi",
+        dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
         bodyOfWater: "Conroe", // lake name
         state: ["Texas"],
         data: [],
@@ -4890,6 +4948,25 @@ module.exports = [
         dataSource: ["TWDB"], // array of calls to make to retrieve data Texas Water Development District
     },
     {
+        bodyOfWater: "Livingston", // lake name
+        state: ["Texas"],
+        data: [],
+        ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
+        wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 131.0,
+        lat: 30.640484,
+        long: -95.053514,
+        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=08066190&period=PT168H&parameterCd=62614&siteType=LK&siteStatus=all",
+        flowURL: "",
+        href: "/lakes/livingston",
+        dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
         bodyOfWater: "Palestine", // lake name
         state: ["Texas"],
         data: [],
@@ -4907,6 +4984,25 @@ module.exports = [
         flowURL: "",
         href: "/lakes/palestine",
         dataSource: ["USGS"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "Ray Hubbard", // lake name
+        state: ["Texas"],
+        data: [],
+        ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
+        wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 435.5,
+        lat: 32.815954,
+        long: -96.513436,
+        elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=2288048&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+        flowURL: "",
+        href: "/lakes/rayhubbard",
+        dataSource: ["ACE"], // array of calls to make to retrieve data
     },
     {
         bodyOfWater: "Ray Roberts", // lake name
@@ -4945,6 +5041,26 @@ module.exports = [
         flowURL: "",
         href: "/lakes/rayburn",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
+        bodyOfWater: "Richland Chambers", // lake name
+        state: ["Texas"],
+        data: [],
+        ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
+        wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 315.0,
+        lat: 31.962934,
+        long: -96.138668,
+        
+        elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=2298048&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+        flowURL: "",
+        href: "/lakes/richlandchambers",
+        dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
     },
     {
         bodyOfWater: "Tawakoni", // lake name
@@ -5021,6 +5137,25 @@ module.exports = [
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=203048&p_parameter_type=Flow:Stor:Precip:Stage:Elev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
         flowURL: "",
         href: "/lakes/travis",
+        dataSource: ["ACE"], // array of calls to make to retrieve data 
+    },
+    {
+        bodyOfWater: "Whitney", // lake name
+        state: ["Texas"],
+        data: [],
+        ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
+        wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
+        refreshInterval: 90, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 533.0,
+        lat: 31.865278,
+        long: -97.371667,
+        elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=195048&p_parameter_type=Flow:Stor:Precip:Stage:Elev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+        flowURL: "",
+        href: "/lakes/whitney",
         dataSource: ["ACE"], // array of calls to make to retrieve data 
     },
 
