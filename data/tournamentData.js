@@ -1909,7 +1909,7 @@ module.exports = [
                         ramp: "Occonneechee",
                         state: "NC-VA",
                         txDetail: "Qualifier 1",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-kerr-lake-va-feb-29-2020/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
                     },
                     {
@@ -1919,7 +1919,7 @@ module.exports = [
                         ramp: "Occonneechee",
                         state: "NC-VA",
                         txDetail: "Qualifier 1",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-kerr-lake-va-mar-15-2020/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
                     },
                     {
@@ -1929,7 +1929,7 @@ module.exports = [
                         ramp: "Occonneechee",
                         state: "NC-VA",
                         txDetail: "Qualifier 1",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-kerr-lake-va-mar-29-2020/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
                     },
                     {
@@ -1939,7 +1939,7 @@ module.exports = [
                         ramp: "Occonneechee",
                         state: "NC-VA",
                         txDetail: "Qualifier 1",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-kerr-lake-va-apr-19-2020/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
                     },
                     {
@@ -1949,7 +1949,7 @@ module.exports = [
                         ramp: "Occonneechee",
                         state: "NC-VA",
                         txDetail: "Qualifier 1",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-kerr-lake-va-apr-16-2020/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
                     },
                 ]
