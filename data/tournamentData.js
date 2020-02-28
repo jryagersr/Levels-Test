@@ -1033,7 +1033,7 @@ module.exports = [
                     ramp: "Papa's on the Lake",
                     state: "TX",
                     txDetail: "",
-                    resultsLink: "https://bigbasstour.com/results/",
+                    resultsLink: "https://bigbasstour.com/results/2020/lake-conroe-texas",
                     entryLink: "https://bigbasstour.com/"
                 },
                 {
