@@ -486,7 +486,7 @@ module.exports = [
                         ramp: "South Cove",
                         state: "SC",
                         txDetail: "T1",
-                        resultsLink: "",
+                        resultsLink: "https://americanbassanglers.com/Results/12708.pdf",
                         entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=9&RegionName=R4"
                     },
                     {
@@ -496,7 +496,7 @@ module.exports = [
                         ramp: "Dorn Boating Facility",
                         state: "SC",
                         txDetail: "T2",
-                        resultsLink: "",
+                        resultsLink: "https://americanbassanglers.com/Results/12709.pdf",
                         entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=9&RegionName=R4"
                     },
                     {
@@ -506,7 +506,7 @@ module.exports = [
                         ramp: "Dorn Boating Facility",
                         state: "SC",
                         txDetail: "T3",
-                        resultsLink: "",
+                        resultsLink: "https://americanbassanglers.com/Results/12710.pdf",
                         entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=9&RegionName=R4"
                     },
                     {
@@ -516,7 +516,7 @@ module.exports = [
                         ramp: "Dreher Island",
                         state: "SC",
                         txDetail: "T4",
-                        resultsLink: "",
+                        resultsLink: "https://americanbassanglers.com/Results/12711.pdf",
                         entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=9&RegionName=R4"
                     },
                     {
@@ -526,7 +526,7 @@ module.exports = [
                         ramp: "Ebenezer",
                         state: "SC-NC",
                         txDetail: "Championship",
-                        resultsLink: "",
+                        resultsLink: "https://americanbassanglers.com/Results/12747.pdf",
                         entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=9&RegionName=R4"
                     }
                 ]
@@ -1003,7 +1003,7 @@ module.exports = [
                     ramp: "Hickory Point",
                     state: "FL",
                     txDetail: "",
-                    resultsLink: "https://bigbasstour.com/results/",
+                    resultsLink: "https://bigbasstour.com/results/2020/harris-chain-of-lakes-florida",
                     entryLink: "https://bigbasstour.com/"
                 },
                 {
@@ -1013,7 +1013,7 @@ module.exports = [
                     ramp: "Hickory Point",
                     state: "FL",
                     txDetail: "",
-                    resultsLink: "https://bigbasstour.com/results/",
+                    resultsLink: "https://bigbasstour.com/results/2020/harris-chain-of-lakes-florida/",
                     entryLink: "https://bigbasstour.com/"
                 },
                 {
@@ -1023,7 +1023,7 @@ module.exports = [
                     ramp: "Hickory Point",
                     state: "FL",
                     txDetail: "",
-                    resultsLink: "https://bigbasstour.com/results/",
+                    resultsLink: "https://bigbasstour.com/results/2020/harris-chain-of-lakes-florida",
                     entryLink: "https://bigbasstour.com/"
                 },
                 {
