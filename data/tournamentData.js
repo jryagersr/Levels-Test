@@ -3384,8 +3384,8 @@ module.exports = [
                         ramp: "Farrington",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
-                        resultsLink: "",
-                        entryLink: "http://piedmontbassclassics.com/2020MiniTrailMainPage.html"
+                        resultsLink: "http://piedmontbassclassics.com/229-20MainResults.html",
+                        entryLink: "http://piedmontbassclassics.com/2020PBC10KMainPage.html"
                     },
                     {
                         date: "2020-03-14",
@@ -3394,8 +3394,8 @@ module.exports = [
                         ramp: "Crosspoint",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
-                        resultsLink: "",
-                        entryLink: "http://piedmontbassclassics.com/2020MiniTrailMainPage.html"
+                        resultsLink: "http://piedmontbassclassics.com/314-20MainResults.html",
+                        entryLink: "http://piedmontbassclassics.com/2020PBC10KMainPage.html"
                     },
                     {
                         date: "2020-03-28",
@@ -3404,7 +3404,7 @@ module.exports = [
                         ramp: "Ledge Rock",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
-                        resultsLink: "",
+                        resultsLink: "http://piedmontbassclassics.com/328-20MainResults.html",
                         entryLink: "http://piedmontbassclassics.com/2020MiniTrailMainPage.html"
                     }, {
                         date: "2020-04-04",
@@ -3413,8 +3413,8 @@ module.exports = [
                         ramp: "Farrington",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
-                        resultsLink: "",
-                        entryLink: "http://piedmontbassclassics.com/2020MiniTrailMainPage.html"
+                        resultsLink: "http://piedmontbassclassics.com/404-20MainResults.html",
+                        entryLink: "http://piedmontbassclassics.com/2020PBC10KMainPage.html"
                     },
                     {
                         date: "2020-04-18",
@@ -3423,8 +3423,8 @@ module.exports = [
                         ramp: "Flemingtown",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
-                        resultsLink: "",
-                        entryLink: "http://piedmontbassclassics.com/2020MiniTrailMainPage.html"
+                        resultsLink: "http://piedmontbassclassics.com/418-20MainResults.html",
+                        entryLink: "http://piedmontbassclassics.com/2020PBC10KMainPage.html"
                     },
                     {
                         date: "2020-05-09",
@@ -3433,8 +3433,8 @@ module.exports = [
                         ramp: "Ledge Rock",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
-                        resultsLink: "",
-                        entryLink: "http://piedmontbassclassics.com/2020MiniTrailMainPage.html"
+                        resultsLink: "http://piedmontbassclassics.com/509-20MainResults.html",
+                        entryLink: "http://piedmontbassclassics.com/2020PBC10KMainPage.html"
                     },
                     {
                         date: "2020-05-30",
@@ -3443,8 +3443,8 @@ module.exports = [
                         ramp: "Flemingtown",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
-                        resultsLink: "",
-                        entryLink: "http://piedmontbassclassics.com/2020MiniTrailMainPage.html"
+                        resultsLink: "http://piedmontbassclassics.com/530-20MainResults.html",
+                        entryLink: "http://piedmontbassclassics.com/2020PBC10KMainPage.html"
                     },
                     {
                         date: "2020-06-13",
@@ -3453,8 +3453,8 @@ module.exports = [
                         ramp: "Flemingtown",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
-                        resultsLink: "",
-                        entryLink: "http://piedmontbassclassics.com/2020MiniTrailMainPage.html"
+                        resultsLink: "http://piedmontbassclassics.com/613-20MainResults.html",
+                        entryLink: "http://piedmontbassclassics.com/2020PBC10KMainPage.html"
                     }
 
                 ],
@@ -3480,7 +3480,7 @@ module.exports = [
                         ramp: "Crosspoint",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
-                        resultsLink: "",
+                        resultsLink: "http://piedmontbassclassics.com/307-20MiniResults.html",
                         entryLink: "http://piedmontbassclassics.com/2020MiniTrailMainPage.html"
                     },
                     {
@@ -3490,7 +3490,7 @@ module.exports = [
                         ramp: "Ledge Rock",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
-                        resultsLink: "",
+                        resultsLink: "http://piedmontbassclassics.com/321-20MiniResults.html",
                         entryLink: "http://piedmontbassclassics.com/2020MiniTrailMainPage.html"
                     },
                     {
@@ -3500,7 +3500,7 @@ module.exports = [
                         ramp: "Farrington",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
-                        resultsLink: "",
+                        resultsLink: "http://piedmontbassclassics.com/425-20MiniResults.html",
                         entryLink: "http://piedmontbassclassics.com/2020MiniTrailMainPage.html"
                     },
                     {
@@ -3510,7 +3510,7 @@ module.exports = [
                         ramp: "Flemingtown",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
-                        resultsLink: "",
+                        resultsLink: "http://piedmontbassclassics.com/502-20MiniResults.html",
                         entryLink: "http://piedmontbassclassics.com/2020MiniTrailMainPage.html"
                     },
                     {
@@ -3520,7 +3520,7 @@ module.exports = [
                         ramp: "Flemingtown",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
-                        resultsLink: "",
+                        resultsLink: "http://piedmontbassclassics.com/516-20MiniResults.html",
                         entryLink: "http://piedmontbassclassics.com/2020MiniTrailMainPage.html"
                     }
 
