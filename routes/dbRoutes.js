@@ -723,10 +723,15 @@ function updateAllLakes() {
               } else startServerCount++;
               //*/
               updateAllLakes();
-            }, 16 * 60000); // wait 16 minutes (plus 8 minute @ 2 second interval to cycle through 237 lakes)
+            }, 23 * 60000); 
+            // wait 23 minutes (plus 8 minute @ 2 second interval to cycle through 275 lakes)
+            // This and the inteval below need to be adjusted when a significane # of lakes 
+            // Have been added. Would like to have the interval ~30 min as possible
+            // This is due to the hourly weather update mostly, but also the single level
+            // instantaneous reads (like APC)
           }
 
-        }, 0.50 * 1000); // 1 second interval
+        }, 0.50 * 1000); // .5 second interval between launching a data fetch for the next lake
       }
     })
 }
