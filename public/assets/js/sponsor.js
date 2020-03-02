@@ -36,7 +36,7 @@ $.ajax({
         
         // Loop through our ads and append them to the page in format: <li><a><img></a></li>
         sponsors.forEach(function (element) {
-            if (element.type == 'logo') {
+            if (element.type == 'logo' || element.type == 'guide') {
                 if ((element.location.includes("all") || element.location.includes(lakeRoute) &&
                         (new Date(element.startDate) <= today && new Date(element.endDate) >= today))) {
                     var a = $("<a target='_blank'>");

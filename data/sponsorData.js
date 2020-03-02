@@ -140,6 +140,15 @@ module.exports = [
         endDate: "2021-01-01T00:00:00.0Z"
     },
     {
+        sponsor: "Jackson Superior Electric",
+        href: "http://jacksonsuperiorelectric.com/",
+        src: "/static/assets/img/sponsor-banners/jse generac banner.png",
+        location: ["kerr", "jordan", "falls", "gaston"],
+        type: "logo",
+        startDate: "2019-01-01T00:00:00.0Z",
+        endDate: "2029-01-01T00:00:00.0Z"
+    },
+    {
         sponsor: "Jaime Fajardo - Capital Insurance",
         href: "https://www.capital-ins.com/",
         src: "/static/assets/img/sponsor-banners/jfajardo banner.png",
@@ -176,13 +185,13 @@ module.exports = [
         endDate: "2021-01-01T00:00:00.0Z"
     },
     {
-        sponsor: "JSE",
-        href: "http://jacksonsuperiorelectric.com/",
-        src: "/static/assets/img/sponsor-banners/jse generac banner.png",
-        location: ["kerr", "jordan", "falls", "gaston"],
-        type: "logo",
-        startDate: "2019-01-01T00:00:00.0Z",
-        endDate: "2029-01-01T00:00:00.0Z"
+        sponsor: "Kerr Lake Bass Fishing Guide Service",
+        href: "https://kerrlakebass.com/",
+        src: "/static/assets/img/sponsor-banners/dennie banner.png",
+        location: ["kerr","falls","jordan","gaston"],
+        type: "guide",
+        startDate: "2020-01-01T00:00:00.0Z",
+        endDate: "2020-12-31T00:10:00.0Z"
     },
     {
         sponsor: "Lowrance HDS Training",
@@ -207,7 +216,7 @@ module.exports = [
         href: "http://www.outdoorexpeditionsusa.com/",
         src: "/static/assets/img/sponsor-banners/oeusa banner.png",
         location: ["all"],
-        type: "logo",
+        type: "guide",
         startDate: "2020-01-01T00:00:00.0Z",
         endDate: "2025-12-31T00:10:00.0Z"
     },
