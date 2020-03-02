@@ -187,7 +187,7 @@ module.exports = [
     {
         sponsor: "Kerr Lake Bass Fishing Guide Service",
         href: "https://kerrlakebass.com/",
-        src: "/static/assets/img/sponsor-banners/dennie banner.png",
+        src: "/static/assets/img/sponsor-banners/dennies banner.png",
         location: ["kerr","falls","jordan","gaston"],
         type: "guide",
         startDate: "2020-01-01T00:00:00.0Z",
