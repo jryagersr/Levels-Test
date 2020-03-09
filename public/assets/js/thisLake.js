@@ -126,10 +126,10 @@ function buildElevChart(data, lake) {
     // Set axis limits for Elev Chart
     let minMaxDiff = chartMaxElev - chartMinElev;
     let chartGap = (minMaxDiff) * 1.1;
-    if (minMaxDiff < .5) chartGap = minMaxDiff + 1;
-    if (minMaxDiff > 20) chartGap = 1;
-    chartMinElevLimit = Math.round(chartMinElev) - chartGap; // set the chart lower limit
-    chartMaxElevLimit = Math.round(chartMaxElev) + chartGap; // set the chart upper limit
+    if (minMaxDiff < .5) chartGap = minMaxDiff + .5;
+    if (minMaxDiff > 20) chartGap = .5;
+    chartMinElevLimit = Math.round(chartMinElev) - .5; // set the chart lower limit
+    chartMaxElevLimit = Math.round(chartMaxElev) + .5; // set the chart upper limit
 
     var ctx = document.getElementById('myElevChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
@@ -431,10 +431,10 @@ function buildRiverChart(data, lake) {
     // Set axis limits for River Chart
     let minMaxDiff = chartMaxRiver - chartMinRiver;
     let chartGap = Number((minMaxDiff * 1.5).toFixed(2));
-    if (minMaxDiff < .1) chartGap = minMaxDiff + .5;
-    if (minMaxDiff > 20) chartGap = 1;
-    chartMinRiverLimit = chartMinRiver - chartGap; // set the chart lower limit
-    chartMaxRiverLimit = chartMaxRiver + chartGap; // set the chart upper limit
+    if (minMaxDiff < .1) chartGap = minMaxDiff + .25;
+    if (minMaxDiff > 20) chartGap = .25;
+    chartMinRiverLimit = chartMinRiver - .01; // set the chart lower limit
+    chartMaxRiverLimit = chartMaxRiver + .01; // set the chart upper limit
 
     var ctx = document.getElementById('myRiverChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
@@ -759,6 +759,12 @@ function buildHumidityChart(humidityData) {
             labelBatch.push(hour + suffix)
             dataHumidityBatch.push(humidityData.ccWxData[k].humidity); // push elev
 
+            if (chartMaxHumidity < humidityData.ccWxData[k].humidity)
+                chartMaxHumidity = humidityData.ccWxData[k].humidity
+
+            if (chartMinHumidity > humidityData.ccWxData[k].humidity)
+                chartMinHumidity = humidityData.ccWxData[k].humidity
+
         }
 
         // when a day of data has been reached stop
@@ -768,8 +774,8 @@ function buildHumidityChart(humidityData) {
     }
 
     // Set axis limits for Temp Chart
-    chartMinHumidityLimit = 0; // set the chart lower limit
-    chartMaxHumidityLimit = 110; // set the chart upper limit
+    chartMinHumidityLimit = chartMinHumidity - 10; // set the chart lower limit
+    chartMaxHumidityLimit  = chartMaxHumidity + 10; // set the chart upper limit
 
     var ctx = document.getElementById('myHumidityChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
@@ -878,8 +884,8 @@ function buildBaroChart(baroData) {
     // Set y axis limits for Baro Chart
     let minMaxDiff = chartMaxBaro - chartMinBaro;
     if (minMaxDiff < 1) chartGap = minMaxDiff / 2;
-    chartMinBaroLimit = chartMinBaro-.01; // set the chart lower limit
-    chartMaxBaroLimit = chartMaxBaro+.01; // set the chart upper limit
+    chartMinBaroLimit = chartMinBaro - .01; // set the chart lower limit
+    chartMaxBaroLimit = chartMaxBaro + .01; // set the chart upper limit
 
     var ctx = document.getElementById('myBaroChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
@@ -1160,6 +1166,42 @@ function buildWindDirectionChart(windData) {
 };
 
 
+/******************************************************************************************************************/
+// Function to build Guide list on page
+function buildGuideList(sponsorData) {
+    $("#lakeGuides").show();
+    // call the backend and return sponsor data array
+    $.ajax({
+            url: "/api/sponsors",
+            method: "GET",
+        })
+        .then(function (data) {
+
+            let today = new Date();
+            sponsors = data;
+            // // Clear any ad content in the scroller
+            $("#guideSection").empty();
+
+            sponsors.forEach(function (element) {
+                if (element.type == 'guide') {
+                    if ((element.location.includes("all") || element.location.includes(lakeRoute) &&
+                            (new Date(element.startDate) <= today && new Date(element.endDate) >= today))) {
+                        var a = $("<a target='_blank'>");
+                        a.attr("href", element.href);
+                        var adImg = $("<img class='guide-logo'>");
+                        adImg.attr("src", element.src);
+                        $("#guideLogoWell").append(a);
+                        $(a).append(adImg);
+                    }
+                }
+            })
+        })
+
+
+} // end of buildGuideList
+
+
+/******************************************************************************************************************/
 // function to flatten the nested data
 function flattenData(data, type, callback) {
     flatBatch = [];
@@ -1176,7 +1218,7 @@ function flattenData(data, type, callback) {
                 if (type == 0) {
 
                     // If tx date is in the future (exclude all past dates)
-                    if (Date.parse(txDate) > Date.parse(todaysDate)) {
+                    if (Date.parse(txDate) + 60000000 >= Date.parse(todaysDate)) {
 
                         // Push our data into a flat array for easier sort later
                         flatBatch.push({
@@ -1679,6 +1721,8 @@ $.ajax({
         // Add Windspeed
         buildWindDirectionChart(currentLake);
 
+        // Add Windspeed
+       // buildGuideList(currentLake);
 
         // Hide loading gif
         hideLoader();

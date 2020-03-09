@@ -114,8 +114,13 @@ module.exports = {
                   // check to see if there are two duplicate entrys
                   // convert timestamps to strings to avoid millisecond differences
                   if (updateData.data[i].time.toString() == updateData.data[i - 1].time.toString()) {
-                    // remove the oldest entry
-                    updateData.data.splice(i - 1, 1);
+                    // remove the oldest entry or a zero average level (not sure how a zero got into the data
+                    // based on the the getDUKEData code, but it did for all but two of the Duke lakes.)
+                    if (updateData.data[i].elev == 0) {
+                      updateData.data.splice(i, 1);
+                    } else {
+                      updateData.data.splice(i - 1, 1);
+                    }
                     i--;
                   }
                 }
@@ -203,7 +208,7 @@ module.exports = {
   updateForecastData: function (currentLake) {
 
     // Get weather forecast data
- 
+
     forecast.getForecastData(currentLake, function (error, lakeForecast) {
       let forecastLake = lakeForecast;
       //let fxData = [];
@@ -216,7 +221,7 @@ module.exports = {
         if (forecastLake !== 'undefined') {
           currentLake = forecastLake;
 
-        }  // push the current conditions into wxForecastData[] and update the LastRefresh
+        } // push the current conditions into wxForecastData[] and update the LastRefresh
         let timeStamp = currentLake.wxForecastDataLastRefresh;
 
         db.model("Lake").updateOne({

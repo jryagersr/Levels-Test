@@ -30,7 +30,7 @@ module.exports = {
         if (bodyOfWater == "Mead") {
           dataErrorTrue = false;
           try {
-            jsonData = JSON.parse(localHTML);
+            var jsonData = JSON.parse(localHTML);
           } catch (error) {
             dataErrorTrue = true;
           }
@@ -76,6 +76,7 @@ module.exports = {
 
           // With cheerio, find each <td> on the page
           // (i: iterator. element: the current element)
+          //console.log(bodyOfWater)
           $('td').each(function (i, element) {
             // var value = $(this).text();
             if (bodyOfWater === "Smith Mountain" ||

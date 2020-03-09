@@ -68,15 +68,6 @@ module.exports = [
         endDate: "2021-01-01T00:00:00.0Z"
     },
     {
-        sponsor: "CCW",
-        href: "https://www.cwwcharters.com/",
-        src: "/static/assets/img/sponsor-banners/ccw banner.png",
-        location: ["all"],
-        type: "logo",
-        startDate: "2020-01-01T00:00:00.0Z",
-        endDate: "2020-12-31T00:10:00.0Z"
-    },
-    {
         sponsor: "Collins Boating",
         href: "https://www.collinsboating.com/",
         src: "/static/assets/img/sponsor-banners/collins banner.png",
@@ -95,7 +86,7 @@ module.exports = [
         endDate: "2021-01-01T00:00:00.0Z"
     },
     {
-        sponsor: "TDC",
+        sponsor: "Design Center",
         href: "http://thedesigncorner.biz/",
         src: "/static/assets/img/sponsor-banners/tdc banner.png",
         location: ["all"],
@@ -104,7 +95,7 @@ module.exports = [
         endDate: "2029-01-01T00:00:00.0Z"
     },
     {
-        sponsor: "Dougs DD",
+        sponsor: "Dougs Dirty Diesel",
         href: "http://www.http://dirtydougsdiesel.com",
         src: "/static/assets/img/sponsor-banners/dougs dd banner.png",
         location: ["jordan", "falls", "kerr", "shearonharris", "mayo", "hyco"],
@@ -158,7 +149,7 @@ module.exports = [
         endDate: "2030-01-01T00:00:00.0Z"
     },
     {
-        sponsor: "JBRods",
+        sponsor: "JBCustomRods",
         href: "https://www.custombassrods.com/",
         src: "/static/assets/img/sponsor-banners/jbrods banner.png",
         location: ["all"],
@@ -185,15 +176,6 @@ module.exports = [
         endDate: "2021-01-01T00:00:00.0Z"
     },
     {
-        sponsor: "Kerr Lake Bass Fishing Guide Service",
-        href: "https://kerrlakebass.com/",
-        src: "/static/assets/img/sponsor-banners/dennies banner.png",
-        location: ["kerr","falls","jordan","gaston"],
-        type: "guide",
-        startDate: "2020-01-01T00:00:00.0Z",
-        endDate: "2020-12-31T00:10:00.0Z"
-    },
-    {
         sponsor: "Lowrance HDS Training",
         href: "http://www.lowrancehdstraining.com/",
         src: "/static/assets/img/sponsor-banners/lowrance training banner.png",
@@ -210,15 +192,6 @@ module.exports = [
         type: "logo",
         startDate: "2019-01-01T00:00:00.0Z",
         endDate: "2029-01-01T00:00:00.0Z"
-    },
-    {
-        sponsor: "Outdoor Expeditions USA",
-        href: "http://www.outdoorexpeditionsusa.com/",
-        src: "/static/assets/img/sponsor-banners/oeusa banner.png",
-        location: ["all"],
-        type: "guide",
-        startDate: "2020-01-01T00:00:00.0Z",
-        endDate: "2025-12-31T00:10:00.0Z"
     },
     {
         sponsor: "Piedmont Bass Classics",
@@ -301,15 +274,49 @@ module.exports = [
         startDate: "2019-01-01T00:00:00.0Z",
         endDate: "2021-01-01T00:00:00.0Z"
     },*/
+
+
+/*************************************************************
+     * Guides
+     */
+
+
     {
-        sponsor: "Cast for a Cure",
-        href: "http://704outdoors.tv/cast-for-a-cure/",
-        src: "/static/assets/img/tournament-banners/cfc banner.png",
-        location: ["badin", "highrock", "tillery", "tuckertown","jordan", "falls", "Randleman"],
-        type: "logo",
+        sponsor: "CCW",
+        href: "https://www.cwwcharters.com/",
+        src: "/static/assets/img/sponsor-banners/ccw banner.png",
+        location: ["all"],
+        type: "guide",
         startDate: "2020-01-01T00:00:00.0Z",
-        endDate: "2020-05-16T00:00:00.0Z"
+        endDate: "2020-12-31T00:10:00.0Z"
     },
+    {
+        sponsor: "Outdoor Expeditions USA",
+        href: "http://www.outdoorexpeditionsusa.com/",
+        src: "/static/assets/img/sponsor-banners/oeusa banner.png",
+        location: ["all"],
+        type: "guide",
+        startDate: "2020-01-01T00:00:00.0Z",
+        endDate: "2025-12-31T00:10:00.0Z"
+    },
+    /*{
+        sponsor: "Kerr Lake Bass Fishing Guide Service",
+        href: "https://kerrlakebass.com/",
+        src: "/static/assets/img/sponsor-banners/dennies banner.png",
+        location: ["kerr","falls","jordan","gaston"],
+        type: "guide",
+        startDate: "2020-01-01T00:00:00.0Z",
+        endDate: "2020-12-31T00:10:00.0Z"
+    },
+    {
+        sponsor: "Sinclair's Guide Service ",
+        href: "https://sinclairsguideservice.com/",
+        src: "/static/assets/img/sponsor-banners/sinclairs banner.png",
+        location: ["kerr","falls","jordan","gaston"],
+        type: "guide",
+        startDate: "2020-01-01T00:00:00.0Z",
+        endDate: "2020-12-31T00:10:00.0Z"
+    },*/
 
     /*************************************************************
      * Charity Txs
@@ -342,6 +349,21 @@ module.exports = [
         startDate: "2019-01-01T00:00:00.0Z",
         endDate: "2019-10-09T00:10:00.0Z"
     },
+    
+    /*************************************************************
+     * Broadcast Charity Txs
+     */
+
+
+    {
+        sponsor: "Cast for a Cure",
+        href: "http://704outdoors.tv/cast-for-a-cure/",
+        src: "/static/assets/img/tournament-banners/cfc banner.png",
+        location: ["badin", "highrock", "tillery", "tuckertown","jordan", "falls", "Randleman"],
+        type: "logo",
+        startDate: "2020-01-01T00:00:00.0Z",
+        endDate: "2020-05-16T00:00:00.0Z"
+    },
 
     /*************************************************************
      *  Txs
@@ -353,17 +375,71 @@ module.exports = [
         src: "/static/assets/img/tournament-banners/jordan wildcat banner.png",
         location: ["jordan"],
         type: "tournament",
-        startDate: "2019-01-01T00:00:00.0Z",
+        startDate: "2020-01-01T00:00:00.0Z",
         endDate: "2020-01-25T00:10:00.0Z"
     },
     {
         sponsor: "Catt Old North 1",
         href: "https://www.cattteamtrail.com/divisions/catt-old-north/",
-        src: "/static/assets/img/tournament-banners/catt old North 2020 kerr.png",
+        src: "/static/assets/img/tournament-banners/catt old north 03142020 kerr.png",
         location: ["kerr"],
         type: "tournament",
-        startDate: "2019-02-14T00:00:00.0Z",
+        startDate: "2020-01-14T00:00:00.0Z",
         endDate: "2020-03-14T00:10:00.0Z"
+    },
+    {
+        sponsor: "Catt Old North 2",
+        href: "https://www.cattteamtrail.com/divisions/catt-old-north/",
+        src: "/static/assets/img/tournament-banners/catt old north 03282020 jordan.png",
+        location: ["jordan"],
+        type: "tournament",
+        startDate: "2020-01-28T00:00:00.0Z",
+        endDate: "2020-03-28T00:10:00.0Z"
+    },
+    {
+        sponsor: "Catt Old North 3",
+        href: "https://www.cattteamtrail.com/divisions/catt-old-north/",
+        src: "/static/assets/img/tournament-banners/catt old north 04042020 falls.png",
+        location: ["falls"],
+        type: "tournament",
+        startDate: "2020-02-04T00:00:00.0Z",
+        endDate: "2020-04-04T00:10:00.0Z"
+    },
+    {
+        sponsor: "Catt Old North 4",
+        href: "https://www.cattteamtrail.com/divisions/catt-old-north/",
+        src: "/static/assets/img/tournament-banners/catt old north 04182020 jordan.png",
+        location: ["jordan"],
+        type: "tournament",
+        startDate: "2020-02-18T00:00:00.0Z",
+        endDate: "2020-04-18T00:10:00.0Z"
+    },
+    {
+        sponsor: "Catt Old North 5",
+        href: "https://www.cattteamtrail.com/divisions/catt-old-north/",
+        src: "/static/assets/img/tournament-banners/catt old north 05172020 kerr.png",
+        location: ["kerr"],
+        type: "tournament",
+        startDate: "2020-03-17T00:00:00.0Z",
+        endDate: "2020-05-17T00:10:00.0Z"
+    },
+    {
+        sponsor: "Catt Old North 6",
+        href: "https://www.cattteamtrail.com/divisions/catt-old-north/",
+        src: "/static/assets/img/tournament-banners/catt old north 05302020 harris.png",
+        location: ["shearonharris"],
+        type: "tournament",
+        startDate: "2020-03-30T00:00:00.0Z",
+        endDate: "2020-05-30T00:10:00.0Z"
+    },
+    {
+        sponsor: "Catt Old North Final",
+        href: "https://www.cattteamtrail.com/divisions/catt-old-north/",
+        src: "/static/assets/img/tournament-banners/catt old north 06202020 falls.png",
+        location: ["falls"],
+        type: "tournament",
+        startDate: "2020-04-20T00:00:00.0Z",
+        endDate: "2020-06-20T00:10:00.0Z"
     },
     {
         sponsor: "Collins 1",
@@ -371,7 +447,7 @@ module.exports = [
         src: "/static/assets/img/tournament-banners/bfcs jordan 3-07 banner.png",
         location: ["jordan"],
         type: "tournament",
-        startDate: "2019-01-07T00:00:00.0Z",
+        startDate: "2020-01-07T00:00:00.0Z",
         endDate: "2020-03-07T00:10:00.0Z"
     },
     {
@@ -380,7 +456,7 @@ module.exports = [
         src: "/static/assets/img/tournament-banners/bfcs kerr 4-11 banner.png",
         location: ["kerr"],
         type: "tournament",
-        startDate: "2019-02-07T00:00:00.0Z",
+        startDate: "2020-02-07T00:00:00.0Z",
         endDate: "2020-04-11T00:10:00.0Z"
     },
     {
@@ -389,7 +465,7 @@ module.exports = [
         src: "/static/assets/img/tournament-banners/bfcs gaston 5-23 banner.png",
         location: ["gaston"],
         type: "tournament",
-        startDate: "2019-03-23T00:00:00.0Z",
+        startDate: "2020-03-23T00:00:00.0Z",
         endDate: "2020-05-23T00:10:00.0Z"
     },
     {
@@ -398,7 +474,7 @@ module.exports = [
         src: "/static/assets/img/tournament-banners/bfcs roanoke 6-07 banner.png",
         location: ["roanokewill"],
         type: "tournament",
-        startDate: "2019-04-07T00:00:00.0Z",
+        startDate: "2020-04-07T00:00:00.0Z",
         endDate: "2020-06-07T00:10:00.0Z"
     },
     {
@@ -407,7 +483,7 @@ module.exports = [
         src: "/static/assets/img/tournament-banners/bfcs falls 7-25 banner.png",
         location: ["falls"],
         type: "tournament",
-        startDate: "2019-05-25T00:00:00.0Z",
+        startDate: "2020-05-25T00:00:00.0Z",
         endDate: "2020-07-25T00:10:00.0Z"
     },
     {
@@ -416,7 +492,7 @@ module.exports = [
         src: "/static/assets/img/tournament-banners/collins cypress 8-29.png",
         location: ["chowanwf"],
         type: "tournament",
-        startDate: "2019-06-29T00:00:00.0Z",
+        startDate: "2020-06-29T00:00:00.0Z",
         endDate: "2020-08-29T00:10:00.0Z"
     },
     {
@@ -425,7 +501,7 @@ module.exports = [
         src: "/static/assets/img/tournament-banners/catt kerr kerr 2-08.png",
         location: ["kerr"],
         type: "tournament",
-        startDate: "2019-01-08T00:00:00.0Z",
+        startDate: "2020-01-08T00:00:00.0Z",
         endDate: "2020-02-08T00:10:00.0Z"
     },
     {
@@ -434,7 +510,7 @@ module.exports = [
         src: "/static/assets/img/tournament-banners/catt kerr kerr 2-29.png",
         location: ["kerr"],
         type: "tournament",
-        startDate: "2019-01-14T00:00:00.0Z",
+        startDate: "2020-01-14T00:00:00.0Z",
         endDate: "2020-02-2914T00:10:00.0Z"
     },
     {
@@ -443,7 +519,7 @@ module.exports = [
         src: "/static/assets/img/tournament-banners/catt kerr kerr 3-15.png",
         location: ["kerr"],
         type: "tournament",
-        startDate: "2019-01-15T00:00:00.0Z",
+        startDate: "2020-01-15T00:00:00.0Z",
         endDate: "2020-03-14T00:10:00.0Z"
     },
     {
@@ -452,7 +528,7 @@ module.exports = [
         src: "/static/assets/img/tournament-banners/catt kerr kerr 3-29.png",
         location: ["kerr"],
         type: "tournament",
-        startDate: "2019-01-29T00:00:00.0Z",
+        startDate: "2020-01-29T00:00:00.0Z",
         endDate: "2020-03-29T00:10:00.0Z"
     },
     {
@@ -461,7 +537,7 @@ module.exports = [
         src: "/static/assets/img/tournament-banners/catt kerr kerr 4-19.png",
         location: ["kerr"],
         type: "tournament",
-        startDate: "2019-02-19T00:00:00.0Z",
+        startDate: "2020-02-19T00:00:00.0Z",
         endDate: "2020-04-19T00:10:00.0Z"
     },
     {
@@ -470,7 +546,7 @@ module.exports = [
         src: "/static/assets/img/tournament-banners/catt kerr kerr 4-26.png",
         location: ["kerr"],
         type: "tournament",
-        startDate: "2019-02-26T00:00:00.0Z",
+        startDate: "2020-02-26T00:00:00.0Z",
         endDate: "2020-04-26T00:10:00.0Z"
     },
     {
@@ -479,7 +555,7 @@ module.exports = [
         src: "/static/assets/img/tournament-banners/big bass harris chain banner.png",
         location: "bigharris",
         type: "tournament",
-        startDate: "2019-01-01T00:00:00.0Z",
+        startDate: "2020-01-01T00:00:00.0Z",
         endDate: "2020-02-09T00:10:00.0Z"
     },
     {
@@ -488,7 +564,7 @@ module.exports = [
         src: "/static/assets/img/tournament-banners/big bass conroe banner.png",
         location: "conroe",
         type: "tournament",
-        startDate: "2019-01-01T00:00:00.0Z",
+        startDate: "2020-01-01T00:00:00.0Z",
         endDate: "2020-03-01T00:10:00.0Z"
     },
     {
@@ -497,7 +573,7 @@ module.exports = [
         src: "/static/assets/img/tournament-banners/big bass clarks hill banner.png",
         location: "clarkshill",
         type: "tournament",
-        startDate: "2019-01-01T00:00:00.0Z",
+        startDate: "2020-01-01T00:00:00.0Z",
         endDate: "2020-03-08T00:10:00.0Z"
     },
     {
@@ -506,7 +582,7 @@ module.exports = [
         src: "/static/assets/img/tournament-banners/big bass norman banner.png",
         location: "norman",
         type: "tournament",
-        startDate: "2019-01-01T00:00:00.0Z",
+        startDate: "2020-01-01T00:00:00.0Z",
         endDate: "2020-03-22T00:10:00.0Z"
     },
     {
@@ -515,7 +591,7 @@ module.exports = [
         src: "/static/assets/img/tournament-banners/big bass table rock banner.png",
         location: "tablerock",
         type: "tournament",
-        startDate: "2019-01-01T00:00:00.0Z",
+        startDate: "2020-01-01T00:00:00.0Z",
         endDate: "2020-04-05T00:10:00.0Z"
     },
     {
@@ -524,7 +600,7 @@ module.exports = [
         src: "/static/assets/img/tournament-banners/big bass dardanelle banner.png",
         location: "dardanelle",
         type: "tournament",
-        startDate: "2019-01-01T00:00:00.0Z",
+        startDate: "2020-01-01T00:00:00.0Z",
         endDate: "2020-05-31T00:10:00.0Z"
     },
     {
@@ -533,7 +609,7 @@ module.exports = [
         src: "/static/assets/img/tournament-banners/big bass douglas banner.png",
         location: "douglas",
         type: "tournament",
-        startDate: "2019-01-01T00:00:00.0Z",
+        startDate: "2020-01-01T00:00:00.0Z",
         endDate: "2020-10-11T00:10:00.0Z"
     },
     {
@@ -542,7 +618,7 @@ module.exports = [
         src: "/static/assets/img/tournament-banners/big bass guntersville banner.png",
         location: "guntersville",
         type: "tournament",
-        startDate: "2019-01-01T00:00:00.0Z",
+        startDate: "2020-01-01T00:00:00.0Z",
         endDate: "2020-10-18T00:10:00.0Z"
     }
 

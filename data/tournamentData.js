@@ -1638,7 +1638,7 @@ module.exports = [
                         ramp: "Water Street",
                         state: "NC",
                         txDetail: "",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-east/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-east/"
                     },
                     {
@@ -1647,7 +1647,7 @@ module.exports = [
                         ramp: "Washington",
                         state: "NC",
                         txDetail: "",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-east/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-east/"
                     },
                     {
@@ -1657,7 +1657,7 @@ module.exports = [
                         ramp: "Water Street",
                         state: "NC",
                         txDetail: "",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-east/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-east/"
                     },
                     {
@@ -1666,7 +1666,7 @@ module.exports = [
                         ramp: "Washington",
                         state: "NC",
                         txDetail: "",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-east/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-east/"
                     },
                     {
@@ -1676,7 +1676,7 @@ module.exports = [
                         ramp: "Water Street",
                         state: "NC",
                         txDetail: "",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-east/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-east/"
                     },
                     {
@@ -1685,7 +1685,7 @@ module.exports = [
                         ramp: "Washington",
                         state: "NC",
                         txDetail: "",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-east/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-east/"
                     },
                     {
@@ -1695,7 +1695,7 @@ module.exports = [
                         ramp: "Water Street",
                         state: "NC",
                         txDetail: "",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-east/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-east/"
                     }
                 ]
@@ -2393,7 +2393,7 @@ module.exports = [
                         date: "2020-03-07",
                         lake: "Hickory",
                         lakeID: "hickory",
-                        ramp: "Wittenburg",
+                        ramp: "Whittenburg",
                         state: "NC",
                         txDetail: "CBC NC",
                         resultsLink: "http://www.carolinasbasschallenge.com/results.php?id=23",
@@ -2530,7 +2530,7 @@ module.exports = [
                     ramp: "Farrington",
                     state: "NC",
                     txDetail: "Bass For Cash Series",
-                    resultsLink: "",
+                    resultsLink: "https://bassforcash.com/2020/03/09/adams-fritts-dominate-with-35-05lb-win-at-jordan/",
                     entryLink: "http://bassforcash.com/schedule/"
                 },
                 {
@@ -2540,7 +2540,7 @@ module.exports = [
                     ramp: "Nutbush",
                     state: "NC",
                     txDetail: "Bass For Cash Series",
-                    resultsLink: "",
+                    resultsLink: "http://bassforcash.com/schedule/",
                     entryLink: "http://bassforcash.com/schedule/"
                 },
                 {
@@ -2550,17 +2550,17 @@ module.exports = [
                     ramp: "Summit",
                     state: "NC",
                     txDetail: "Bass For Cash Series",
-                    resultsLink: "",
+                    resultsLink: "http://bassforcash.com/schedule/",
                     entryLink: "http://bassforcash.com/schedule/"
                 },
                 {
                     date: "2020-06-07",
-                    lake: "Roanoke River",
+                    lake: "Roanoke River (Wil)",
                     lakeID: "roanokewill",
                     ramp: "Plymouth",
                     state: "NC",
                     txDetail: "Bass For Cash Series",
-                    resultsLink: "",
+                    resultsLink: "http://bassforcash.com/schedule/",
                     entryLink: "http://bassforcash.com/schedule/"
                 },
                 {
@@ -2570,7 +2570,7 @@ module.exports = [
                     ramp: "Ledge Rock",
                     state: "NC",
                     txDetail: "Bass For Cash Series",
-                    resultsLink: "",
+                    resultsLink: "http://bassforcash.com/schedule/",
                     entryLink: "http://bassforcash.com/schedule/"
                 },
                 {
@@ -2580,7 +2580,7 @@ module.exports = [
                     ramp: "Pembroke",
                     state: "NC",
                     txDetail: "Bass For Cash Series",
-                    resultsLink: "",
+                    resultsLink: "http://bassforcash.com/schedule/",
                     entryLink: "http://bassforcash.com/schedule/"
                 },
                 {
@@ -2589,7 +2589,7 @@ module.exports = [
                     ramp: "TBD",
                     state: "NC",
                     txDetail: "Bass For Cash Series",
-                    resultsLink: "",
+                    resultsLink: "http://bassforcash.com/schedule/",
                     entryLink: "http://bassforcash.com/schedule/"
                 },
             ]
@@ -3090,7 +3090,7 @@ module.exports = [
                         entryLink: "https://www.flwfishing.com/tournaments/2020-02-15-murray"
                     },
                     {
-                        date: "2020-03-028",
+                        date: "2020-03-28",
                         lake: "Santee Cooper",
                         lakeID: "Santee1",
                         ramp: "John C Land",

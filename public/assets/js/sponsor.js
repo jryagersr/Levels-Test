@@ -1,17 +1,16 @@
 let sponsors;
 
-function shuffleArray(array)
-{
-  let max = array.length;
-  for (i = 0; i < max; i++) {
-    // Pick a new index higher than current for each item in the array
-    let r = Math.trunc(Math.random() * Math.trunc(max));
-    
-    // Swap item into new spot
-    let tempObject = array[r];
-    array[r] = array[i];
-    array[i] = tempObject;
-  }
+function shuffleArray(array) {
+    let max = array.length;
+    for (i = 0; i < max; i++) {
+        // Pick a new index higher than current for each item in the array
+        let r = Math.trunc(Math.random() * Math.trunc(max));
+
+        // Swap item into new spot
+        let tempObject = array[r];
+        array[r] = array[i];
+        array[i] = tempObject;
+    }
 }
 
 if (typeof lakeRoute == 'undefined') {
@@ -33,7 +32,7 @@ $.ajax({
 
         // // Clear any ad content in the scroller
         $("#adLogoWell").empty();
-        
+
         // Loop through our ads and append them to the page in format: <li><a><img></a></li>
         sponsors.forEach(function (element) {
             if (element.type == 'logo' || element.type == 'guide') {
@@ -55,14 +54,14 @@ $.ajax({
 
         // just for temporary purposes only do this on kerr/jordan or falls
         // this is to avoid interfering with other lake's w/ txs
-        if (lakeRoute == 'kerr' || lakeRoute == 'jordan' 
-        || lakeRoute == 'falls' || lakeRoute == 'norman' 
-        || lakeRoute == 'badin' || lakeRoute == 'bigharris' 
-        || lakeRoute == 'conroe' || lakeRoute == 'clarkshill'
-        || lakeRoute == 'norman' || lakeRoute == 'tablerock'
-        || lakeRoute == 'murray' || lakeRoute == 'smithmountain'
-        || lakeRoute == 'chickamauga' || lakeRoute == 'dardanelle'
-        || lakeRoute == 'douglas' || lakeRoute == 'guntersville') {
+        if (lakeRoute == 'kerr' || lakeRoute == 'jordan' ||
+            lakeRoute == 'falls' || lakeRoute == 'norman' ||
+            lakeRoute == 'badin' || lakeRoute == 'bigharris' ||
+            lakeRoute == 'conroe' || lakeRoute == 'clarkshill' ||
+            lakeRoute == 'norman' || lakeRoute == 'tablerock' ||
+            lakeRoute == 'murray' || lakeRoute == 'smithmountain' ||
+            lakeRoute == 'chickamauga' || lakeRoute == 'dardanelle' ||
+            lakeRoute == 'douglas' || lakeRoute == 'guntersville') {
 
             // Clear any ad content in the tournament scroller
             $("#adTxWell").empty();
@@ -106,37 +105,51 @@ $.ajax({
         // slideshow carousel function
         // =======================================================
         var slideIndex = 0;
+
+        // Get sponsor banners
         var x = document.getElementsByClassName("ad-logo");
+
+        // Get Tx banners
         var y = document.getElementsByClassName("ad-tx");
+
+        // Get TX banners
         var z = document.getElementsByClassName("ad-chartx");
+
         if (typeof x !== 'undefined') {
-            x[0].classList.add("active");
             carousel(x, 'ad-logo', 0);
         }
         if (typeof y[0] !== 'undefined') {
-            y[0].classList.add('active');
             carousel(y, 'ad-tx', 0);
         }
         if (typeof z[0] !== 'undefined') {
-            z[0].classList.add('active');
             carousel(z, 'ad-chartx', 0);
         }
 
-        function carousel(x, className, slideIndex) {
-            var x = document.getElementsByClassName(className);
-            for (var i = 0; i < x.length; i++) {
-                x[i].classList.remove("active");
-                x[i].classList.add("inactive");
+        function carousel(localX, className, slideIndex) {
+
+            if (slideIndex == 0) {
+                localX[localX.length - 1].classList.remove("active");
+                localX[localX.length - 1].classList.add("inactive");
+            } else {
+                localX[slideIndex - 1].classList.remove("active");
+                localX[slideIndex - 1].classList.add("inactive");
             }
-            slideIndex++;
-            if (slideIndex > x.length) {
-                slideIndex = 1
+
+            if (slideIndex >= localX.length - 1) {
+                // Make last sponsor in list active and reset slideIndex
+                localX[slideIndex].classList.remove("inactive");
+                localX[slideIndex].classList.add("active");
+                slideIndex = 0
+            } else {
+                // Make this sponsor active
+                localX[slideIndex].classList.remove("inactive");
+                localX[slideIndex].classList.add("active");
+                slideIndex++;
             }
-            x[slideIndex - 1].classList.remove("inactive");
-            x[slideIndex - 1].classList.add("active");
+            // Wait for ad banner display time before switching banners
             setTimeout(function () {
-                carousel(x, className, slideIndex);
-            }, 6500);
+                carousel(localX, className, slideIndex);
+            }, 5000);
         }
 
     });
