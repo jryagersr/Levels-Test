@@ -16,13 +16,13 @@ module.exports = {
     let newUrl = currentLake.elevURL;
     let flow = -1000
     var data = [];
-    let dataErrorTrue = false;
     let localHTML = [];
     var options = {
       url: newUrl,
       type: "html"
     }
     request(options, function (error, response, html) {
+      let dataErrorTrue = false;
       if (error) {
         callback(error);
       } else {
