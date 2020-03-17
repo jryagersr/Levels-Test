@@ -32,8 +32,6 @@ module.exports = {
         } catch (error) {
           dataErrorTrue = true;
         }
-              /*console.log (data)*/
-
         if (!dataErrorTrue) {
 
           _.each(data, function (dataSet) {
@@ -69,7 +67,7 @@ module.exports = {
 
           callback(false, waterData.reverse());
         } else {
-          /*console.log(`Data is bad for ${bodyOfWater} (TVA)`);*/
+          console.log(`Data is bad for ${bodyOfWater} (TVA)`);
           callback(true, body);
         }
       }

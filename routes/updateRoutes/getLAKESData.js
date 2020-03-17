@@ -52,7 +52,6 @@ module.exports = {
         request(url, function (error, html) {
 
             if (typeof html !== 'undefined') {
-                //console.log('getUSLAKES ', bodyOfWater);
                 // Load the HTML into cheerio and save it to a variable
                 var $ = cheerio.load(html);
                 // Simple day increment counter to build date later

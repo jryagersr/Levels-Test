@@ -124,13 +124,23 @@ function buildElevChart(data, lake) {
     dataElevBatch.reverse();
 
     // Set axis limits for Elev Chart
-    let minMaxDiff = chartMaxElev - chartMinElev;
-    let chartGap = (minMaxDiff) * 1.1;
-    if (minMaxDiff < .5) chartGap = minMaxDiff + .5;
-    if (minMaxDiff > 20) chartGap = .5;
-    chartMinElevLimit = Math.round(chartMinElev) - .5; // set the chart lower limit
-    chartMaxElevLimit = Math.round(chartMaxElev) + .5; // set the chart upper limit
+    let elevMaxAboveNP = lake.normalPool < chartMaxElev;
+    let elevMinAboveNP = lake.normalPool < chartMinElev;
 
+    // set the chart upper limit*/
+    if (elevMaxAboveNP)
+        chartMaxElevLimit = Math.ceil(chartMaxElev + (chartMaxElev * .005));
+    else //elevMax is below normal pool 
+        chartMaxElevLimit = Math.ceil(lake.normalPool + (chartMaxElev * .0005));
+
+    if (elevMinAboveNP) // set the chart lower limit
+        chartMinElevLimit = Math.floor(lake.normalPool - (chartMinElev * .0005));
+    else chartMinElevLimit = Math.floor(chartMinElev - (chartMinElev * .005));
+
+    if (chartMaxElevLimit == 0)
+        chartMaxElevLimit = Math.ceil((lake.normalPool + 1) * .0005);
+
+    // build elev chart
     var ctx = document.getElementById('myElevChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
     grd.addColorStop(0, 'rgb(0,140,255)');
@@ -223,16 +233,11 @@ function buildFlowChart(data) {
     let sumOfFlows = 0;
     let divisor = 1;
     let k = 0; // our iterator after starting flow
-    let chartMinFlow = 1000000; // y-axis Max elev value
-    let chartMaxFlow = 0; // y-axis Min elev value
-    let chartMinFlowLimit = 0; // y-axis Min elev value
-    let chartMaxFlowLimit = 0; // y-axis Max elev value
+    let chartMinFlow = 2000; // y-axis Max Flow value
+    let chartMaxFlow = 0; // y-axis Min Flow value
+    let chartMinFlowLimit = 0; // y-axis Min Flow value
+    let chartMaxFlowLimit = 0; // y-axis Max Flow value
 
-    // find our starting flow
-    /*for (var i = 0; i < data.length; i++) {
-        if (data[i].flow == "Missing") data[i].flow = -99;
-        sumOfFlows = data[i].flow
-    }*/
     let avgFlow = 0;
 
     let checkDate = data[0].date;
@@ -241,6 +246,7 @@ function buildFlowChart(data) {
 
 
         if (data[k].flow == "Missing") data[k].flow = -99;
+
         // if the data is available and not "Missing" or "N/A"
         if (data[k].flow !== "N/A") {
 
@@ -275,7 +281,7 @@ function buildFlowChart(data) {
             if (data[k].date !== data[k - 1].date) {
 
                 // if we are here, this lake has a plethora of "Missing" and "N/A"
-                // andthe date has changed between entries,
+                // and the date has changed between entries,
                 // we must set the chartMaxFlow 
                 avgFlow = sumOfFlows / divisor;
                 if (avgFlow >= chartMaxFlow) // if value is greater than max, replace max
@@ -315,13 +321,13 @@ function buildFlowChart(data) {
     dataFlowBatch.reverse();
 
     // Set y axis limits for Flow Chart
-    chartMinFlowLimit = chartMinFlow - 1000; // set lower chart limit
+    chartMinFlowLimit = 0; // set lower chart limit
     chartMaxFlowLimit = ((((chartMaxFlow - (chartMaxFlow % 1000)) / 1000) * 1.25) * 1000); // set the chart upper limit
 
-    //if (chartMinFlowLimit < 1000) chartMinFlowLimit = 0;
-    chartMinFlowLimit = 0; // Flow Min limit should just be set to 0
+    if (chartMinFlowLimit < 1000) chartMinFlowLimit = 0;
+    //chartMinFlowLimit = 0; // Flow Min limit should just be set to 0
     if (chartMaxFlowLimit < 4000)
-        chartMaxFlowLimit = 4000;
+        chartMaxFlowLimit = chartMaxFlow + 500;
 
 
     var ctx = document.getElementById('myFlowChart').getContext('2d');
@@ -433,8 +439,8 @@ function buildRiverChart(data, lake) {
     let chartGap = Number((minMaxDiff * 1.5).toFixed(2));
     if (minMaxDiff < .1) chartGap = minMaxDiff + .25;
     if (minMaxDiff > 20) chartGap = .25;
-    chartMinRiverLimit = chartMinRiver - .01; // set the chart lower limit
-    chartMaxRiverLimit = chartMaxRiver + .01; // set the chart upper limit
+    chartMinRiverLimit = chartMinRiver - .5; // set the chart lower limit
+    chartMaxRiverLimit = chartMaxRiver + .5; // set the chart upper limit
 
     var ctx = document.getElementById('myRiverChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
@@ -526,7 +532,7 @@ function buildHourlyFlowChart(data, lake) {
         }
 
         // when a week of data has been reached stop
-        if (labelBatch.length > 47) {
+        if (labelBatch.length > 95) {
             break;
         }
     }
@@ -775,7 +781,7 @@ function buildHumidityChart(humidityData) {
 
     // Set axis limits for Temp Chart
     chartMinHumidityLimit = chartMinHumidity - 10; // set the chart lower limit
-    chartMaxHumidityLimit  = chartMaxHumidity + 10; // set the chart upper limit
+    chartMaxHumidityLimit = chartMaxHumidity + 10; // set the chart upper limit
 
     var ctx = document.getElementById('myHumidityChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
@@ -1323,10 +1329,14 @@ $.ajax({
             $("#lakeTitle").append(currentLake.bodyOfWater);
             $("#lakeSubTitle").append(" ");
         }
-
+// Date change marker in case I need to remove it, 1334-5-6 and 1338 to -
+// new Date(currentLake.data[0].time).toString().substr(0, 21)
         // Set current date, time elev, and pool on page
+        let dateTime = new Date(currentLake.data[0].time);
+        let currentTabDateStamp = dateTime.toLocaleDateString();
+        let currentTabTimeStamp = dateTime.toLocaleTimeString();
         if (!noDataSource) {
-            $("#currentTime").append(new Date(currentLake.data[0].time).toString().substr(0, 21));
+            $("#currentTime").append(currentTabDateStamp + " " + currentTabTimeStamp);
             $("#currentDate").append(currentLake.data[0].date);
             $("#currentLevel").append(currentLake.data[0].elev);
             $("#currentDelta").append((currentLake.data[0].elev - currentLake.normalPool).toFixed(2));
@@ -1722,7 +1732,7 @@ $.ajax({
         buildWindDirectionChart(currentLake);
 
         // Add Windspeed
-       // buildGuideList(currentLake);
+        // buildGuideList(currentLake);
 
         // Hide loading gif
         hideLoader();

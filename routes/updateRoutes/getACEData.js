@@ -10,9 +10,8 @@ module.exports = {
   // function to get ACE data
   getACEData: function (currentLake, callback) {
     var request = require("request");
-    var data = [];
-    var thisLake = currentLake;
-    let bodyOfWater = thisLake.bodyOfWater;
+    let data = [];
+    let thisLake = currentLake;
 
     request(thisLake.elevURL, function (error, response, body) {
       if (error) {
@@ -28,106 +27,114 @@ module.exports = {
 
         if (!dataErrorTrue) {
           let elevEntries = [];
+          let elevTempEntries = [];
           let flowEntries = [];
           let exportData = [];
+          let elevData = false;
+          let flowData = false;
+          let stageData = false;
           // loop through our json data
           data.forEach(object => {
             // check for elevation entries
             if ("Elev" in object) {
-              elevEntries = object.Elev;
+              elevTempEntries = object.Elev;
+              elevData = true;
             }
             // check for flow entries
             else if ("Outflow" in object) {
               flowEntries = object.Outflow;
+              flowData = true;
             }
             // check for stage entries first (if elev exists it will overwrite)
-            else if ("Stage" in object && elevEntries.length == 0) {
-              elevEntries = object.Stage;
+            else if ("Stage" in object && elevEntries.length == 0 && elevData !== true) {
+              elevTempEntries = object.Stage;
+              stageData = true;
+            }
+            // check for stage entries first (if elev exists it will overwrite)
+            else if ("Tailwater Stage" in object && elevEntries.length == 0 && elevData !== true) {
+              tailwaterEntries = object['Tailwater Stage'];
+              stageData = true;
             }
           })
-          if (elevEntries.length == 0) {
-            console.log(`No elev data for ${bodyOfWater} (ACE)`);
+          if (elevTempEntries.length == 0) {
             // send empty array to front end
+            callback(true, body);
           } else {
+
+            //Need to check to see if all are on the half hour
+            //change to :00 minutes. Burnsville and Sutton and Summerville 
+            let onTheHalfHour = true;
+            for (i = 0; i < elevTempEntries.length; i++) {
+              let entryTime = new Date(elevTempEntries[i].time);
+              let entryTimeMinutes = entryTime.getMinutes();
+              if (entryTimeMinutes !== 30) {
+                onTheHalfHour = false;
+              }
+            }
+            //if all are on the half hour, change to :00 minutes. 
+            // Burnsville, Sutton, and Summerville
+            if (onTheHalfHour == true) {
+              for (i = 0; i < elevTempEntries.length; i++) {
+                let entryTime = new Date(elevTempEntries[i].time)
+                entryTime.setMinutes(0);
+                elevTempEntries[i].time = entryTime.toString();
+
+              }
+            }
+
+            //flow entries are reported on the hour 
+            //prepare elevEntries array by removing readings not on the hour
+            let k = 0
+            for (i = 0; i < elevTempEntries.length; i++) {
+              let entryTime = new Date(elevTempEntries[i].time);
+              let entryTimeMinutes = entryTime.getMinutes();
+              if (entryTimeMinutes == 0) {
+                elevEntries[k] = elevTempEntries[i];
+                k++;
+              }
+            }
             // reverse arrays
             elevEntries.reverse();
             flowEntries.reverse();
-
-            for (var i = 0; i < elevEntries.length; i++) {
-
-              // push the first entry into the array
-              if (i == 0 && elevEntries[i].value !== "") {
-                let currentTime = new Date(elevEntries[i].time);
-                currentTime.setMinutes(0);
+            for (i = 0; i < elevEntries.length; i++) {
+              let elevTime = new Date(elevEntries[i].time);
+              elev = elevEntries[i].value;
+              let flowTime = new Date();
+              for (j = 0; j < flowEntries.length; j++) {
+                if (flowData == true) {
+                  flowTime = new Date(flowEntries[j].time);
+                  let flow = flowEntries[j].value;
+                  if (elevTime.toString() == flowTime.toString()) {
+                    //console.log(elev + " " + flow + " " + elevTime);
+                    exportData.push({
+                      time: elevTime,
+                      elev: elev,
+                      flow: flow
+                    });
+                    j = flowEntries.length;
+                  }
+                  if (j == flowEntries.length - 1) {
+                    //console.log(elev + " " + "noflow" + " " + elevTime);
+                    exportData.push({
+                      time: elevTime,
+                      elev: elev,
+                      flow: "Missing"
+                    });
+                  }
+                }
+              }
+              if (flowEntries.length == 0) {
                 exportData.push({
-                  time: currentTime,
-                  elev: elevEntries[i].value,
+                  time: elevTime,
+                  elev: elev,
                   flow: "N/A"
                 });
 
-                if (flowEntries.length > 0) {
-                  //match first flow
-                  for (var j = 0; j < flowEntries.length; j++) {
-                    let flowTime = new Date(flowEntries[j].time);
-                    let flowHour = flowTime.getHours();
-                    let currentHour = currentTime.getHours();
-                    // if current date and hour match set the flow
-                    if (currentTime.toDateString() === flowTime.toDateString() && flowHour == currentHour) {
-                      exportData[i].flow = flowEntries[j].value;
-                      break;
-                    }
-                  }
-                  if (typeof exportData[0].flow == 'undefined' || exportData[0].flow == 'N/A') {
-                    exportData[0].flow = "Missing";
-                  }
-                }
               }
-
-              // if previous entry isn't undefined (we're on entry 2 or later)
-              else {
-                // check next entry's hour against previous and if different push in
-                let lastTime = new Date(elevEntries[i - 1].time );
-                let lastHour = lastTime.getHours();
-                let currentTime = new Date(elevEntries[i].time);
-                let currentHour = currentTime.getHours();
-                if (lastHour !== currentHour) {
-                  currentTime.setMinutes(0);
-                  exportData.push({
-                    time: currentTime,
-                    elev: elevEntries[i].value,
-                    flow: "N/A"
-                  });
-
-                  // if flows exist
-                  if (flowEntries.length > 0) {
-                    // match a flow based on hour
-                    for (var j = 0; j < flowEntries.length; j++) {
-                      let flowTime = new Date(flowEntries[j].time );
-                      let flowHour = flowTime.getHours();
-                      let objIndex;
-                      // if current date and hour match set the flow
-                      if (currentTime.toDateString() === flowTime.toDateString() && flowHour == currentHour) {
-                        // Find index of specific entry   
-                        objIndex = exportData.findIndex((obj => obj.time == currentTime));
-                        // Update entry's flow property.
-                        exportData[objIndex].flow = flowEntries[j].value;
-                        break;
-                      } else {
-                        objIndex = exportData.findIndex((obj => obj.time == currentTime));
-                        exportData[objIndex].flow = "Missing";
-                      }
-                    }
-                  }
-                }
-
-
-              }
-
             }
             callback(false, exportData);
           }
         } else {
-          console.log(`Data is bad for ${bodyOfWater} (ACE)`);
           callback(true, body);
         }
 

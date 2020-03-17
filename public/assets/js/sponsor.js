@@ -116,16 +116,16 @@ $.ajax({
         var z = document.getElementsByClassName("ad-chartx");
 
         if (typeof x !== 'undefined') {
-            carousel(x, 'ad-logo', 0);
+            carousel(x, 'ad-logo', 0, 5000);
         }
         if (typeof y[0] !== 'undefined') {
-            carousel(y, 'ad-tx', 0);
+            carousel(y, 'ad-tx', 0, 8000);
         }
         if (typeof z[0] !== 'undefined') {
-            carousel(z, 'ad-chartx', 0);
+            carousel(z, 'ad-chartx', 0, 10000);
         }
 
-        function carousel(localX, className, slideIndex) {
+        function carousel(localX, className, slideIndex, displayTime) {
 
             if (slideIndex == 0) {
                 localX[localX.length - 1].classList.remove("active");
@@ -148,8 +148,8 @@ $.ajax({
             }
             // Wait for ad banner display time before switching banners
             setTimeout(function () {
-                carousel(localX, className, slideIndex);
-            }, 5000);
+                carousel(localX, className, slideIndex, 5000);
+            }, displayTime);
         }
 
     });

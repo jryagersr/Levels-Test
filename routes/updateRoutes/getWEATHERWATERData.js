@@ -11,7 +11,6 @@ module.exports = {
   // ===============================================================================
   // function to get WEATHERWATER data
   getWEATHERWATERData: function (currentLake, callback) {
-
     let bodyOfWater = currentLake.bodyOfWater;
     let newUrl = currentLake.elevURL;
     let flow = -1000
@@ -23,9 +22,12 @@ module.exports = {
     }
     request(options, function (error, response, html) {
       let dataErrorTrue = false;
+      if (currentLake.bodyOfWater !== bodyOfWater)
+        console.log(bodyOfWater + " noMatch")
       if (error) {
         callback(error);
       } else {
+        bodyOfWater = currentLake.bodyOfWater;
         localHTML = html;
         if (bodyOfWater == "Mead") {
           dataErrorTrue = false;
@@ -36,7 +38,7 @@ module.exports = {
           }
 
         } else {
-          //if (bodyOfWater == "Elephant Butte") console.log(localHTML)
+
           try {
             var $ = cheerio.load(localHTML);
           } catch (error) {
@@ -45,7 +47,14 @@ module.exports = {
         }
       }
 
+      // For some reason bodyOfWater changes from Mead to Jordan 
+      // So we use currentLake.bodyOfWater instead of bodyOfWater
+      // this seems to occur every time when stepping through in the debugger
+      // Not as often when running
       if (!dataErrorTrue) {
+        if (currentLake.bodyOfWater !== bodyOfWater)
+          console.log(bodyOfWater + " noMatch")
+        bodyOfWater = currentLake.bodyOfWater;
         // Found the correct <td> for AEP data
         let foundFlag = 0;
         let levelFound = 0;
@@ -76,7 +85,9 @@ module.exports = {
 
           // With cheerio, find each <td> on the page
           // (i: iterator. element: the current element)
-          //console.log(bodyOfWater)
+          if (currentLake.bodyOfWater !== bodyOfWater)
+            console.log(bodyOfWater + " noMatch")
+
           $('td').each(function (i, element) {
             // var value = $(this).text();
             if (bodyOfWater === "Smith Mountain" ||

@@ -100,7 +100,7 @@ module.exports = {
           })
           .exec(function (err, updateData) {
             if (err) {
-              console.log(err);
+              console.log(err + "UpdateFunction .exec");
               callbackError = true;
               callback(callbackError, lakeUpdateFlag, currentLake);
             } else {
@@ -108,15 +108,14 @@ module.exports = {
               // Check to make sure there is enough data before de-duping
               if (updateData.data.length > 1) {
                 // while the first two entries still have dupes
-                //console.log(updatedLake.bodyOfWater);
                 // loop through the data, beginning at first index
                 for (var i = 1; i < updateData.data.length; i++) {
                   // check to see if there are two duplicate entrys
                   // convert timestamps to strings to avoid millisecond differences
-                  if (updateData.data[i].time.toString() == updateData.data[i - 1].time.toString()) {
+                  if (updateData.data[i].time.toString().substring(0, 25) == updateData.data[i - 1].time.toString().substring(0, 25)) {
                     // remove the oldest entry or a zero average level (not sure how a zero got into the data
                     // based on the the getDUKEData code, but it did for all but two of the Duke lakes.)
-                    if (updateData.data[i].elev == 0) {
+                    if (updateData.data[i].flow == "Missing") {
                       updateData.data.splice(i, 1);
                     } else {
                       updateData.data.splice(i - 1, 1);
@@ -195,7 +194,6 @@ module.exports = {
             if (err) {
               console.log(err);
             } else {
-              //console.log(newLakeCC.ccWxData)
               return true;
             }
           });
@@ -236,8 +234,6 @@ module.exports = {
           .exec(function (err, wxForecastData) {
             if (err) {
               console.log(err);
-            } else {
-              //console.log(wxData)
             }
           });
 

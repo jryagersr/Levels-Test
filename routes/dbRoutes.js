@@ -704,8 +704,8 @@ function updateAllLakes() {
               totUpdateCounter = totUpdateCounter + updateCounter;
               totCounter = totCounter + i;
               totDataUpdate = totDataUpdate + dataUpdated;
-              console.log(`# of total updates is ${totUpdateCounter} of ${totCounter} = ${((totUpdateCounter/totCounter)*100).toFixed(2)}%`);
               console.log(`# of total data updates is ${totDataUpdate} of ${totUpdateCounter} = ${((totDataUpdate/totUpdateCounter)*100).toFixed(2)}%`);
+              console.log(`# of total updates is ${totUpdateCounter} of ${totCounter} = ${((totUpdateCounter/totCounter)*100).toFixed(2)}%`);
 
               // Clear counters now, this allows any late returns to get counted on the next iteration
               // SJWMD is usually slow to return data

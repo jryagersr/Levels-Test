@@ -38,7 +38,6 @@ module.exports = {
       }
 
       if (!dataErrorTrue) {
-        //console.log("ACEWilm Call", bodyOfWater);
         // look for "DATE:" to find first/next entry
         for (i = 0; i < flatData.length; i++)
           if (flatData.substr(i, 5) == "DATE:") {

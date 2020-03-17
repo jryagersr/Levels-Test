@@ -23,7 +23,6 @@ module.exports = {
                 callback(error);
             }
             if (typeof body !== 'undefined') {
-                //console.log ("TWDB Call", bodyOfWater);
                 _.each(body.split("\r\n"), function (line) {
                     // Split the text body into readable lines
                     var splitLine;

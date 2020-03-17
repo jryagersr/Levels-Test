@@ -17,7 +17,6 @@ module.exports = {
         var options = {
             url: newUrl
         }
-        //console.log("SJRWMD Call", lakeName);
         request(options, function (error, response, body) {
             if (error) {
                 callback(error);

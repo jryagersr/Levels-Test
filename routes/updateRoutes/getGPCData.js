@@ -21,8 +21,6 @@ module.exports = {
     }
     request(options, function (error, response, html) {
 
-      //console.log ("GPC Call", bodyOfWater);
-      //console.log('getGPC ', bodyOfWater);
       // Define our data template
       var data = [];
       // Make request for Georgia Power Company site, returns html
@@ -30,8 +28,7 @@ module.exports = {
 
       // Load the HTML into cheerio and save it to a variable
       // '$' becomes a shorthand for cheerio's selector commands, much like jQuery's '$'
-      //console.log(html)
-
+      
       if (error) {
         callback(error);
       } else {
