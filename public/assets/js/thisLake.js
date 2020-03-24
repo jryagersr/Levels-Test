@@ -674,8 +674,8 @@ function buildTempChart(tempData) {
     // Set y axis limits for Temp Chart
     let minMaxDiff = chartMaxTemp - chartMinTemp;
     if (minMaxDiff < 1) chartGap = minMaxDiff / 2;
-    chartMinTempLimit = Math.round(chartMinTemp) - 5; // set the chart lower limit
-    chartMaxTempLimit = Math.round(chartMaxTemp) + 5; // set the chart upper limit
+    chartMinTempLimit = Math.round(chartMinTemp) - 2; // set the chart lower limit
+    chartMaxTempLimit = Math.round(chartMaxTemp) + 2; // set the chart upper limit
 
     var ctx = document.getElementById('myTempChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
@@ -790,7 +790,7 @@ function buildHumidityChart(humidityData) {
         }
     }
 
-    // Set axis limits for Temp Chart
+    // Set axis limits for Humidity Chart
     chartMinHumidityLimit = chartMinHumidity - 10; // set the chart lower limit
     chartMaxHumidityLimit = chartMaxHumidity + 10; // set the chart upper limit
 
