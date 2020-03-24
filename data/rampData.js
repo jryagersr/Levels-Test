@@ -17283,7 +17283,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Nickajack", // lake name
-        id: "Nickajack",
+        id: "nickajack",
         rampName: "Bennett Hollow",
         rampType: "",
         rampParking: "",
@@ -17297,7 +17297,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Nickajack", // lake name
-        id: "Nickajack",
+        id: "nickajack",
         rampName: "Cherokee Trail",
         rampType: "",
         rampParking: "",
@@ -17311,7 +17311,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Nickajack", // lake name
-        id: "Nickajack",
+        id: "nickajack",
         rampName: "Hales Bar Road",
         rampType: "",
         rampParking: "",
@@ -17325,7 +17325,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Nickajack", // lake name
-        id: "Nickajack",
+        id: "nickajack",
         rampName: "Marion County Park",
         rampType: "",
         rampParking: "",
@@ -17339,7 +17339,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Nickajack", // lake name
-        id: "Nickajack",
+        id: "nickajack",
         rampName: "Hwy 41",
         rampType: "",
         rampParking: "",
@@ -17353,7 +17353,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Nickajack", // lake name
-        id: "Nickajack",
+        id: "nickajack",
         rampName: "Raccoon Mountain",
         rampType: "",
         rampParking: "",
@@ -17367,7 +17367,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Nickajack", // lake name
-        id: "Nickajack",
+        id: "nickajack",
         rampName: "Shellmound",
         rampType: "Concrete",
         rampParking: "Good",
@@ -17381,7 +17381,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Nickajack", // lake name
-        id: "Nickajack",
+        id: "nickajack",
         rampName: "Sullivans",
         rampType: "Concrete",
         rampParking: "Good",
@@ -17395,8 +17395,8 @@ module.exports = [
     },
     {
         bodyOfWater: "Norris", // lake name
-        id: "Norris",
-        rampName: "Aderson Park",
+        id: "norris",
+        rampName: "Stardust Marina",
         rampType: "Concrete",
         rampParking: "Good",
         rampFee: "",
@@ -17404,12 +17404,26 @@ module.exports = [
         courtesyDock: "Yes",
         bottomElev: 0,
         topElev: 0,
-        lat: 36.267230,
-        long: -84.019059
+        lat: 36.267122,
+        long: -84.019156
     },
     {
         bodyOfWater: "Norris", // lake name
-        id: "Norris",
+        id: "norris",
+        rampName: "Anderson Park",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.292727,
+        long: -84.030510
+    },
+    {
+        bodyOfWater: "Norris", // lake name
+        id: "norris",
         rampName: "Big Creek",
         rampType: "Concrete",
         rampParking: "Good",
@@ -17423,7 +17437,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Norris", // lake name
-        id: "Norris",
+        id: "norris",
         rampName: "Cove Creek",
         rampType: "Concrete",
         rampParking: "Good",
@@ -17437,7 +17451,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Norris", // lake name
-        id: "Norris",
+        id: "norris",
         rampName: "Deerfield Cove Marina",
         rampType: "Concrete",
         rampParking: "Good",
@@ -17451,7 +17465,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Norris", // lake name
-        id: "Norris",
+        id: "norris",
         rampName: "Flat Hollow Marina",
         rampType: "Concrete",
         rampParking: "Good",
@@ -17465,7 +17479,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Norris", // lake name
-        id: "Norris",
+        id: "norris",
         rampName: "Helms Ferry",
         rampType: "Concrete",
         rampParking: "Good",
@@ -17479,7 +17493,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Norris", // lake name
-        id: "Norris",
+        id: "norris",
         rampName: "Hickory Star Marina",
         rampType: "Concrete",
         rampParking: "Good",
@@ -17493,7 +17507,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Norris", // lake name
-        id: "Norris",
+        id: "norris",
         rampName: "Indian River Marina",
         rampType: "Concrete",
         rampParking: "Good",
@@ -17507,7 +17521,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Norris", // lake name
-        id: "Norris",
+        id: "norris",
         rampName: "Lakeview",
         rampType: "Concrete",
         rampParking: "Good",
@@ -17521,7 +17535,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Norris", // lake name
-        id: "Norris",
+        id: "norris",
         rampName: "Lost Creek Campground",
         rampType: "Concrete",
         rampParking: "Good",
@@ -17535,7 +17549,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Norris", // lake name
-        id: "Norris",
+        id: "norris",
         rampName: "Norris Dam Marina",
         rampType: "Concrete",
         rampParking: "Good",
@@ -17549,7 +17563,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Norris", // lake name
-        id: "Norris",
+        id: "norris",
         rampName: "Shanghai",
         rampType: "Concrete",
         rampParking: "Good",
@@ -17563,7 +17577,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Norris", // lake name
-        id: "Norris",
+        id: "norris",
         rampName: "Sugar Hollow Marina",
         rampType: "Concrete",
         rampParking: "Good",
@@ -17577,7 +17591,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Norris", // lake name
-        id: "Norris",
+        id: "norris",
         rampName: "Twin Cove Marina",
         rampType: "Concrete",
         rampParking: "Good",
@@ -17591,7 +17605,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Norris", // lake name
-        id: "Norris",
+        id: "norris",
         rampName: "Waterside Marina",
         rampType: "Concrete",
         rampParking: "Good",
@@ -17605,7 +17619,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Norris", // lake name
-        id: "Norris",
+        id: "norris",
         rampName: "Stardust Marina",
         rampType: "Concrete",
         rampParking: "Good",
@@ -17616,6 +17630,76 @@ module.exports = [
         topElev: 0,
         lat: 36.267230,
         long: -84.019059
+    },
+    {
+        bodyOfWater: "Norris", // lake name
+        id: "norris",
+        rampName: "Point 19",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.269469,
+        long: -83.963656
+    },
+    {
+        bodyOfWater: "Norris", // lake name
+        id: "norris",
+        rampName: "Blue Mud",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.237407,
+        long: -83.936659
+    },
+    {
+        bodyOfWater: "Norris", // lake name
+        id: "norris",
+        rampName: "Brogan",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.355939,
+        long: -83.731084
+    },
+    {
+        bodyOfWater: "Norris", // lake name
+        id: "norris",
+        rampName: "Green Welch",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.354061,
+        long: -83.599382
+    },
+    {
+        bodyOfWater: "Norris", // lake name
+        id: "norris",
+        rampName: "Big Sycamore",
+        rampType: "Concrete",
+        rampParking: "Good",
+        rampFee: "",
+        rampAccess: "Paved",
+        courtesyDock: "Yes",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.412502,
+        long: -83.502715
     },
     {
         bodyOfWater: "Old Hickory", // lake name
