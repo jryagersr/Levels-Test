@@ -7898,7 +7898,7 @@ module.exports = [
     },
 
     // MAINE  ---------------------------------------------------------------------------------------------------------
-    
+
     {
         bodyOfWater: "Sebago", // lake name
         id: "sebago",
@@ -7929,7 +7929,7 @@ module.exports = [
     },
 
     // MICHIGAN  ---------------------------------------------------------------------------------------------------------
-    
+
     {
         bodyOfWater: "Austin", // lake name
         id: "austin",
@@ -8236,7 +8236,7 @@ module.exports = [
         bottomElev: 0,
         topElev: 0,
         lat: 44.374102,
-        long:  -84.421667
+        long: -84.421667
     },
     {
         bodyOfWater: "St Helen", // lake name
@@ -9838,7 +9838,7 @@ module.exports = [
     },
 
     // NEW MEXICO  ---------------------------------------------------------------------------------------------------------
-   
+
     {
         bodyOfWater: "Brantley", // lake name
         id: "brantley",
@@ -9852,7 +9852,7 @@ module.exports = [
         topElev: 0,
         lat: 32.561208,
         long: -104.388125
-    }, 
+    },
     {
         bodyOfWater: "Brantley", // lake name
         id: "brantley",
@@ -10023,7 +10023,7 @@ module.exports = [
     },
 
     // NEW YORK  ---------------------------------------------------------------------------------------------------------
-    
+
     {
         bodyOfWater: "Champlain", // lake name
         id: "champlain",
@@ -10204,7 +10204,7 @@ module.exports = [
         bottomElev: 0,
         topElev: 0,
         lat: 42.172260,
-        long:  -79.415558
+        long: -79.415558
     },
     {
         bodyOfWater: "Oneida", // lake name
@@ -12758,7 +12758,7 @@ module.exports = [
         topElev: 0,
         lat: 39.081889,
         long: -84.871798
-    },    
+    },
     {
         bodyOfWater: "Portage", // lake name
         id: "portage",
@@ -12772,7 +12772,7 @@ module.exports = [
         topElev: 0,
         lat: 40.971859,
         long: -81.550991
-    },    
+    },
     {
         bodyOfWater: "Rocky Fork", // lake name
         id: "rockyfork",
@@ -12786,7 +12786,7 @@ module.exports = [
         topElev: 0,
         lat: 39.192497,
         long: -83.435605
-    },  
+    },
     {
         bodyOfWater: "Rocky Fork", // lake name
         id: "rockyfork",
@@ -14474,7 +14474,7 @@ module.exports = [
     },
 
     // SOUTH CAROLINA  ---------------------------------------------------------------------------------------------------------
-    
+
     {
         bodyOfWater: "Clarks Hill", // lake name
         id: "clarkshill",
@@ -18977,7 +18977,7 @@ module.exports = [
     },
 
     // TEXAS  ---------------------------------------------------------------------------------------------------------
-   
+
     {
         bodyOfWater: "Amistad", // lake name
         id: "amistad",
@@ -20548,6 +20548,244 @@ module.exports = [
         lat: 0,
         long: 0
     },*/
+    {
+        bodyOfWater: "Flaming Gorge", // lake name
+        id: "flaminggorge",
+        rampName: "Firehole Canyon",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 41.350832,
+        long: -109.441646
+    },
+    {
+        bodyOfWater: "Flaming Gorge", // lake name
+        id: "flaminggorge",
+        rampName: "Buckboard",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 41.246061,
+        long: -109.593781
+    },
+    {
+        bodyOfWater: "Flaming Gorge", // lake name
+        id: "flaminggorge",
+        rampName: "Brinegar Crossing",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 41.164153,
+        long: -109.557617
+    },
+    {
+        bodyOfWater: "Flaming Gorge", // lake name
+        id: "flaminggorge",
+        rampName: "Anvil Draw",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 41.075318,
+        long: -109.561942
+    },
+    {
+        bodyOfWater: "Flaming Gorge", // lake name
+        id: "flaminggorge",
+        rampName: "Lucerne Valley",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 40.985872,
+        long: -109.585840
+    },
+    {
+        bodyOfWater: "Flaming Gorge", // lake name
+        id: "flaminggorge",
+        rampName: "Antelope Flat",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 40.963791,
+        long: -109.557966
+    },
+    {
+        bodyOfWater: "Flaming Gorge", // lake name
+        id: "flaminggorge",
+        rampName: "Sheep Creek",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 40.923130,
+        long: -109.675179
+    },
+    {
+        bodyOfWater: "Flaming Gorge", // lake name
+        id: "flaminggorge",
+        rampName: "Spillway",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 40.908845,
+        long: -109.422306
+    },
+    {
+        bodyOfWater: "Flaming Gorge", // lake name
+        id: "flaminggorge",
+        rampName: "Mustang Ridge",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 40.923576,
+        long: -109.447074
+    },
+    {
+        bodyOfWater: "Flaming Gorge", // lake name
+        id: "flaminggorge",
+        rampName: "Cedar Springs",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 40.912465,
+        long: -109.447753
+    },
+    {
+        bodyOfWater: "Powell", // lake name
+        id: "powell",
+        rampName: "Hite",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 37.887764,
+        long: -110.400339
+    },
+    {
+        bodyOfWater: "Powell", // lake name
+        id: "powell",
+        rampName: "Hite Campgound",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 37.866492,
+        long: -110.396289
+    },
+    {
+        bodyOfWater: "Powell", // lake name
+        id: "powell",
+        rampName: "Hite Campgound 2",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 37.872451,
+        long: -110.395649
+    },
+    {
+        bodyOfWater: "Powell", // lake name
+        id: "powell",
+        rampName: "Bullfrog",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 37.513207,
+        long: -110.732402
+    },
+    {
+        bodyOfWater: "Powell", // lake name
+        id: "powell",
+        rampName: "Hall's Crossing",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 37.465455,
+        long: -110.718986
+    },
+    {
+        bodyOfWater: "Powell", // lake name
+        id: "powell",
+        rampName: "Antelope Point",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 36.965364,
+        long: -111.442033
+    },
+    {
+        bodyOfWater: "Powell", // lake name
+        id: "powell",
+        rampName: "Stateline",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 37.003230,
+        long: -111.498906
+    },
 
     // Vermont  ---------------------------------------------------------------------------------------------------------
 
@@ -20637,7 +20875,7 @@ module.exports = [
     },
 
     // VIRGINIA ---------------------------------------------------------------------------------------------------------
-    
+
     {
         bodyOfWater: "Anna", // lake name
         id: "anna",
@@ -21046,7 +21284,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Potomac River (Alexandria)", // lake name
-        id: "potomacriver",
+        id: "potomac",
         rampName: "Fort Washington Marina",
         rampType: "",
         rampParking: "",
@@ -21060,7 +21298,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Potomac River (Alexandria)", // lake name
-        id: "potomacriver",
+        id: "potomac",
         rampName: "Friendship Landing",
         rampType: "",
         rampParking: "",
@@ -21074,7 +21312,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Potomac River (Alexandria)", // lake name
-        id: "potomacriver",
+        id: "potomac",
         rampName: "Goose Bay Marina",
         rampType: "",
         rampParking: "",
@@ -21088,7 +21326,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Potomac River (Alexandria)", // lake name
-        id: "potomacriver",
+        id: "potomac",
         rampName: "Gravelly Point",
         rampType: "",
         rampParking: "",
@@ -21102,7 +21340,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Potomac River (Alexandria)", // lake name
-        id: "potomacriver",
+        id: "potomac",
         rampName: "Hope Springs Marina",
         rampType: "",
         rampParking: "",
@@ -21116,7 +21354,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Potomac River (Alexandria)", // lake name
-        id: "potomacriver",
+        id: "potomac",
         rampName: "Leesylvania",
         rampType: "",
         rampParking: "",
@@ -21130,7 +21368,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Potomac River (Alexandria)", // lake name
-        id: "potomacriver",
+        id: "potomac",
         rampName: "Mallows Bay",
         rampType: "",
         rampParking: "",
@@ -21144,7 +21382,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Potomac River (Alexandria)", // lake name
-        id: "potomacriver",
+        id: "potomac",
         rampName: "Marshall Hall",
         rampType: "",
         rampParking: "",
@@ -21158,7 +21396,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Potomac River (Alexandria)", // lake name
-        id: "potomacriver",
+        id: "potomac",
         rampName: "Pohick Bay",
         rampType: "",
         rampParking: "",
@@ -21172,7 +21410,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Potomac River (Alexandria)", // lake name
-        id: "potomacriver",
+        id: "potomac",
         rampName: "Smallwood SP",
         rampType: "",
         rampParking: "",
@@ -21579,6 +21817,90 @@ module.exports = [
         topElev: 0,
         lat: 42.578564,
         long: -88.535892
+    },
+    {
+        bodyOfWater: "Green", // lake name
+        id: "greenwi",
+        rampName: "Beyer’s Cove",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 43.805508,
+        long: -89.067715
+    },
+    {
+        bodyOfWater: "Green", // lake name
+        id: "greenwi",
+        rampName: "Canal Street",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 43.848004,
+        long: -88.962625
+    },
+    {
+        bodyOfWater: "Green", // lake name
+        id: "greenwi",
+        rampName: "Dartford Millpond",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 43.843421,
+        long: -88.967032
+    },
+    {
+        bodyOfWater: "Green", // lake name
+        id: "greenwi",
+        rampName: "Klaver Street",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 43.836191,
+        long: -88.936309
+    },
+    {
+        bodyOfWater: "Green", // lake name
+        id: "greenwi",
+        rampName: "Horner's",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 43.817210,
+        long: -88.956249
+    },
+    {
+        bodyOfWater: "Green", // lake name
+        id: "greenwi",
+        rampName: "Dodge Memorial County Park",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 43.778262,
+        long: -89.050494
     },
     {
         bodyOfWater: "Winnebago", // lake name

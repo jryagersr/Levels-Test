@@ -109,9 +109,9 @@
       <li class="nav-item">
         <button class="tab-btn nav-link nav-tab-btn-override" id='dataTabBtn' name="dataTab">Data</button>
       </li>
-      <!--<li class="nav-item">
+      <li class="nav-item">
         <button class="tab-btn nav-link nav-tab-btn-override" id='guideTabBtn' name="guideTab">Guides</button>
-      </li>-->
+      </li>
     </ul>
 
     <div id="adLogoWell" class="adwelllogo">
@@ -169,46 +169,56 @@
         <h3><b>Average Daily Level</b></h3>
         <canvas id="myElevChart"></canvas>
       </div>
+      <br>
 
-      <div class="chart-container" id="flowChart" style="display:none">
+      <div class="chart-container-tab-page" id="flowChart" style="display:none">
         <h3><b>Avg Daily Flow</b></h3>
         <canvas id="myFlowChart"></canvas>
       </div>
+      <br>
 
-      <div class="chart-container" id="riverChart" style="display:none">
+      <div class="chart-container-tab-page" id="riverChart" style="display:none">
         <h3><b>Hourly Elev</b></h3>
         <canvas id="myRiverChart"></canvas>
       </div>
+      <br>
 
-      <div class="chart-container" id="hourlyFlowChart" style="display:none">
+      <div class="chart-container-tab-page" id="hourlyFlowChart" style="display:none">
         <h3><b>Hourly Flow</b></h3>
         <canvas id="myHourlyFlowChart"></canvas>
       </div>
-
-      <div class="chart-container" id="tempChart" style="display:none">
-        <h3><b>Air Temperature</b></h3>
-        <canvas id="myTempChart"></canvas>
-      </div>
-
-      <div class="chart-container" id="humidityChart" style="display:none">
-        <h3><b>Humidity</b></h3>
-        <canvas id="myHumidityChart"></canvas>
-      </div>
-
-      <div class="chart-container" id="baroChart" style="display:none">
+      <br>
+      
+      <div class="chart-container-tab-page" id="baroChart" style="display:none">
         <h3><b>Barometric Pressure</b></h3>
         <canvas id="myBaroChart"></canvas>
       </div>
+      <br>
 
-      <div class="chart-container" id="windChart" style="display:none">
+      <div class="chart-container-tab-page" id="tempChart" style="display:none">
+        <h3><b>Air Temperature</b></h3>
+        <canvas id="myTempChart"></canvas>
+      </div>
+      <br>
+
+      <div class="chart-container-tab-page" id="humidityChart" style="display:none">
+        <h3><b>Humidity</b></h3>
+        <canvas id="myHumidityChart"></canvas>
+      </div>
+      <br>
+
+
+      <div class="chart-container-tab-page" id="windChart" style="display:none">
         <h3><b>Wind Speed</b></h3>
         <canvas id="myWindChart"></canvas>
       </div>
+      <br>
 
-      <div class="chart-container" id="windDirectionChart" style="display:none">
+      <div class="chart-container-tab-page" id="windDirectionChart" style="display:none">
         <h3><b>Wind Direction</b></h3>
         <canvas id="myWindDirectionChart"></canvas>
       </div>
+      <br>
     </div>
   </div>
 
@@ -312,7 +322,7 @@
 
   <div class="tab-wrapper" id='guideTab'>
 
-    <div id="guideLogoWell" class="guidewelllogo">
+    <div id="guideLogoWell" class="adwelllogo">
       
     </div>
   </div>

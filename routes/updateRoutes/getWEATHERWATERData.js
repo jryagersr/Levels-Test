@@ -22,8 +22,12 @@ module.exports = {
     }
     request(options, function (error, response, html) {
       let dataErrorTrue = false;
+      if (typeof html == 'undefined') {
+        console.log(`WeatherWater data returned for ${currentLake.bodyOfWater} request call is undefined`);
+        dataErrorTrue == true;
+      }
       if (currentLake.bodyOfWater !== bodyOfWater)
-        console.log(bodyOfWater + " noMatch")
+        console.log(` ${bodyOfWater}  and currentLake.bodyOfWater do not match`)
       if (error) {
         callback(error);
       } else {
@@ -53,7 +57,7 @@ module.exports = {
       // Not as often when running
       if (!dataErrorTrue) {
         if (currentLake.bodyOfWater !== bodyOfWater)
-          console.log(bodyOfWater + " noMatch")
+          console.log(`${bodyOfWater} does not match ${currentLake.bodyOfWater}`)
         bodyOfWater = currentLake.bodyOfWater;
         // Found the correct <td> for AEP data
         let foundFlag = 0;
@@ -88,103 +92,107 @@ module.exports = {
           if (currentLake.bodyOfWater !== bodyOfWater)
             console.log(bodyOfWater + " noMatch")
 
-          $('td').each(function (i, element) {
-            // var value = $(this).text();
-            if (bodyOfWater === "Smith Mountain" ||
-              bodyOfWater === "Leesville") {
-              var value = $(element).text();
+          if (typeof $ !== 'undefined') {
+            $('td').each(function (i, element) {
+              // var value = $(this).text();
+              if (bodyOfWater === "Smith Mountain" ||
+                bodyOfWater === "Leesville") {
+                var value = $(element).text();
 
-              if (foundFlag == 2) {
-                elev = value.substr(0, 6);
-                date = new Date()
-                let date1 = date.getMonth() + 1;
-                let date2 = "/" + date.getDate() + "/" + new Date().getFullYear();
-                date = date1 + date2;
-                time = new Date(date + " 13:00");
-                flow = "N/A";
-                foundFlag++;
+                if (foundFlag == 2) {
+                  elev = value.substr(0, 6);
+                  date = new Date()
+                  let date1 = date.getMonth() + 1;
+                  let date2 = "/" + date.getDate() + "/" + new Date().getFullYear();
+                  date = date1 + date2;
+                  time = new Date(date + " 13:00");
+                  flow = "N/A";
+                  foundFlag++;
 
+                  data.push({
+                    elev: elev,
+                    time: time,
+                    flow: "N/A"
+                  });
+                }
+
+                if (foundFlag == 1) foundFlag++
+                if (value == bodyOfWater) foundFlag++;
+
+
+              } else if (bodyOfWater === "Powell" ||
+                bodyOfWater === "Elephant Butte" ||
+                bodyOfWater === "Flaming Gorge" ||
+                bodyOfWater === "Rifle Gap" ||
+                bodyOfWater === "Sumner") {
+                var value = $(element).text();
+
+                if (levelFound < 7) {
+                  switch (levelFound) {
+                    case 1: {
+                      date = value
+                      break;
+                    }
+
+                    case 2: {
+                      elev = value
+                      break;
+                    }
+                    case 5: {
+                      flow = value
+                      break;
+                    }
+
+                    default:
+
+                  }
+                  if (levelFound > 0) {
+                    levelFound++
+
+                  }
+                  if (flow !== -1000) {
+                    time = new Date(date + " 13:00");
+
+                    data.push({
+                      elev: elev,
+                      time: time,
+                      flow: flow
+                    });
+                    flow = -1000
+                  }
+                }
+                if (value == "**** All data is provisional and subject to review and modification ****") {
+                  levelFound++;
+                }
+              } else if (i < 1) {
+                var value = $(element).children().text();
+                if (bodyOfWater == "Erie (Sandusky)") {
+                  date = value.substring(110, 114) + "/" + new Date().getFullYear();
+                  time = new Date(date + " 13:00");
+                  elev = value.substring(123, 127);
+                  flow = "N/A";
+
+                } else {
+                  date = value.substring(97, 101) + "/" + new Date().getFullYear();
+                  time = new Date(date + " 13:00");
+                  let test = value.split("\n")
+                  elev = test[11].substring(0, test[11].length - 2)
+                  //elev = value.substring(110, 116);
+                  flow = "N/A";
+                }
                 data.push({
                   elev: elev,
                   time: time,
                   flow: "N/A"
                 });
               }
-
-              if (foundFlag == 1) foundFlag++
-              if (value == bodyOfWater) foundFlag++;
-
-
-            } else if (bodyOfWater === "Powell" ||
-              bodyOfWater === "Elephant Butte" ||
-              bodyOfWater === "Flaming Gorge" ||
-              bodyOfWater === "Rifle Gap" ||
-              bodyOfWater === "Sumner") {
-              var value = $(element).text();
-
-              if (levelFound < 7) {
-                switch (levelFound) {
-                  case 1: {
-                    date = value
-                    break;
-                  }
-
-                  case 2: {
-                    elev = value
-                    break;
-                  }
-                  case 5: {
-                    flow = value
-                    break;
-                  }
-
-                  default:
-
-                }
-                if (levelFound > 0) {
-                  levelFound++
-
-                }
-                if (flow !== -1000) {
-                  time = new Date(date + " 13:00");
-
-                  data.push({
-                    elev: elev,
-                    time: time,
-                    flow: flow
-                  });
-                  flow = -1000
-                }
-              }
-              if (value == "**** All data is provisional and subject to review and modification ****") {
-                levelFound++;
-              }
-            } else if (i < 1) {
-              var value = $(element).children().text();
-              if (bodyOfWater == "Erie (Sandusky)") {
-                date = value.substring(110, 114) + "/" + new Date().getFullYear();
-                time = new Date(date + " 13:00");
-                elev = value.substring(123, 127);
-                flow = "N/A";
-
-              } else {
-                date = value.substring(97, 101) + "/" + new Date().getFullYear();
-                time = new Date(date + " 13:00");
-                let test = value.split("\n")
-                elev = test[11].substring(0, test[11].length - 2)
-                //elev = value.substring(110, 116);
-                flow = "N/A";
-              }
-              data.push({
-                elev: elev,
-                time: time,
-                flow: "N/A"
-              });
-            }
-          });
+            });
+          } else
+            console.log(currentLake.bodyOfWater + " WeatherWater dataErrorTrue Error")
         }
         callback(false, data);
       } else {
+        console.log(currentLake.bodyOfWater + " WeatherWater json.Parse Error")
         callback(true, html);
       }
 

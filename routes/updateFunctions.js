@@ -13,7 +13,7 @@ module.exports = {
   // ===============================================================================
 
   // check to see if an update is needed (true = update is needed);
-  checkForUpdate: function (currentLake, type) { // type - 0 = lake leves 1 = current conditions 2 - forecast, default = 0
+  checkForUpdate: function (currentLake, type) { // type - 0 = lake level 1 = current conditions 2 - forecast, default = 0
     let cLake = currentLake;
     let lastRefresh = cLake.lastRefresh; // to prevent re-entrant code problems
     let refreshInterval = cLake.refreshInterval; // default to lake data refresh check

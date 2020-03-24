@@ -437,10 +437,10 @@ function buildRiverChart(data, lake) {
     // Set axis limits for River Chart
     let minMaxDiff = chartMaxRiver - chartMinRiver;
     let chartGap = Number((minMaxDiff * 1.5).toFixed(2));
-    if (minMaxDiff < .1) chartGap = minMaxDiff + .25;
+    if (minMaxDiff < 1) chartGap = minMaxDiff + 1.25;
     if (minMaxDiff > 20) chartGap = .25;
-    chartMinRiverLimit = chartMinRiver - .5; // set the chart lower limit
-    chartMaxRiverLimit = chartMaxRiver + .5; // set the chart upper limit
+    chartMinRiverLimit = chartMinRiver - chartGap; // set the chart lower limit
+    chartMaxRiverLimit = chartMaxRiver + chartGap; // set the chart upper limit
 
     var ctx = document.getElementById('myRiverChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
@@ -532,7 +532,7 @@ function buildHourlyFlowChart(data, lake) {
         }
 
         // when a week of data has been reached stop
-        if (labelBatch.length > 95) {
+        if (labelBatch.length > 47) {
             break;
         }
     }
@@ -625,6 +625,7 @@ function buildTempChart(tempData) {
     let labelBatch = [];
     let dataTempBatch = [];
     let dewpointBatch = [];
+    let feelsLikeBatch = [];
     let k = 0; // our iterator after starting elevation
     let chartMinTemp = 100000; // y-axis Max elev value
     let chartMaxTemp = 0; // y-axis Min elev value
@@ -648,18 +649,23 @@ function buildTempChart(tempData) {
             // Calculate Dewpoint (Tdp = Tf - 9/25(100-RH))
             let dewPoint = tempData.ccWxData[k].temp - (.36 * (100 - tempData.ccWxData[k].humidity));
 
+            feelsLikeBatch.push(tempData.ccWxData[k].feelslike);
             dewpointBatch.push(dewPoint); // push dew point
             labelBatch.push(hour + suffix); // push time
             dataTempBatch.push(tempData.ccWxData[k].temp); // push elev
 
-            if (tempData.ccWxData[k].temp > chartMaxTemp) // if value is greater than max, replace max
+            if (tempData.ccWxData[k].temp > chartMaxTemp) // if temp value is greater than max, replace max
                 chartMaxTemp = tempData.ccWxData[k].temp; // update Max Elev average
+            if (tempData.ccWxData[k].feelslike > chartMaxTemp) // if feelslike value is greater than max, replace max
+                chartMaxTemp = tempData.ccWxData[k].feelslike; // update Max Elev average
+            if (tempData.ccWxData[k].feelslike < chartMinTemp) // if feelslike value is less than min, replace max
+                chartMinTemp = tempData.ccWxData[k].feelslike; // update Min Elev average
             if (dewPoint < chartMinTemp) // if value is less thank min, replace min
                 chartMinTemp = dewPoint; // update Min Elev average
 
         }
 
-        // when a day of data has been reached stop
+        // when two days of data has been reached stop
         if (labelBatch.length > 23 || k > tempData.ccWxData.length - 1) {
             break;
         }
@@ -691,8 +697,13 @@ function buildTempChart(tempData) {
             }, {
                 type: 'line',
                 label: "Dew Point",
-                borderColor: 'rgb(100, 140, 100))',
+                borderColor: 'rgb(100, 140, 100)',
                 data: dewpointBatch
+            }, {
+                type: 'line',
+                label: "Feels Like",
+                borderColor: 'rgb(172, 83, 83)',
+                data: feelsLikeBatch
             }]
         },
 
@@ -773,7 +784,7 @@ function buildHumidityChart(humidityData) {
 
         }
 
-        // when a day of data has been reached stop
+        // when 2 days of data has been reached stop
         if (labelBatch.length > 23 || k > humidityData.ccWxData.length - 1) {
             break;
         }
@@ -881,7 +892,7 @@ function buildBaroChart(baroData) {
 
         }
 
-        // when a week of data has been reached stop
+        // when 2 days of data has been reached stop
         if (labelBatch.length > 47 || k > baroData.ccWxData.length - 1) {
             break;
         }
@@ -989,7 +1000,7 @@ function buildWindChart(windData) {
 
         };
 
-        // when a day of data has been reached stop
+        // when 2 days of data has been reached stop
         if (labelBatch.length > 23 || k > windData.ccWxData.length - 2) {
             break;
         };
@@ -1100,7 +1111,7 @@ function buildWindDirectionChart(windData) {
 
         };
 
-        // when a week of data has been reached stop
+        // when 2 days of data has been reached stop
         if (labelBatch.length > 23 || k > windData.ccWxData.length - 2) {
             break;
         };
@@ -1185,19 +1196,24 @@ function buildGuideList(sponsorData) {
 
             let today = new Date();
             sponsors = data;
-            // // Clear any ad content in the scroller
+            // // Clear any guide content in the scroller
             $("#guideSection").empty();
 
             sponsors.forEach(function (element) {
                 if (element.type == 'guide') {
-                    if ((element.location.includes("all") || element.location.includes(lakeRoute) &&
-                            (new Date(element.startDate) <= today && new Date(element.endDate) >= today))) {
+                    if ((element.guideLakes.includes(lakeRoute) &&
+                            (new Date(element.startDate) <= today &&
+                                new Date(element.endDate) >= today))) {
                         var a = $("<a target='_blank'>");
                         a.attr("href", element.href);
-                        var adImg = $("<img class='guide-logo'>");
+                        var adImg = $("<img style= 'width: 90%; margin-right: 10px; margin-left: 10px;' class='guide-logo'>");
+                        //var adImg = $("<img class='ad-guide'>")
                         adImg.attr("src", element.src);
                         $("#guideLogoWell").append(a);
                         $(a).append(adImg);
+                        $(a).append("<br>");
+                        $(a).append("<br>");
+                        
                     }
                 }
             })
@@ -1317,7 +1333,7 @@ $.ajax({
             noDataSource = true
 
         /***************************************************************************** */
-        //Current Tab
+        //Current Tab (H2O)
         /***************************************************************************** */
 
         // Set lake title on page
@@ -1329,25 +1345,26 @@ $.ajax({
             $("#lakeTitle").append(currentLake.bodyOfWater);
             $("#lakeSubTitle").append(" ");
         }
-// Date change marker in case I need to remove it, 1334-5-6 and 1338 to -
-// new Date(currentLake.data[0].time).toString().substr(0, 21)
+        // Date change marker in case I need to remove it, 1334-5-6 and 1338 to -
+        // new Date(currentLake.data[0].time).toString().substr(0, 21)
         // Set current date, time elev, and pool on page
-        let dateTime = new Date(currentLake.data[0].time);
-        let currentTabDateStamp = dateTime.toLocaleDateString();
-        let currentTabTimeStamp = dateTime.toLocaleTimeString();
         if (!noDataSource) {
-            $("#currentTime").append(currentTabDateStamp + " " + currentTabTimeStamp);
-            $("#currentDate").append(currentLake.data[0].date);
-            $("#currentLevel").append(currentLake.data[0].elev);
-            $("#currentDelta").append((currentLake.data[0].elev - currentLake.normalPool).toFixed(2));
-            $("#currentNormal").append("Normal Pool " + currentLake.normalPool + " (MSL)");
-        } else {
-            if (sensorDown)
-                $("#currentLevel").append("Water level sensor down");
-            else
-                $("#currentLevel").append("No known source for level data");
-        };
-
+            let dateTime = new Date(currentLake.data[0].time);
+            let currentTabDateStamp = dateTime.toLocaleDateString();
+            let currentTabTimeStamp = dateTime.toLocaleTimeString();
+            if (!noDataSource) {
+                $("#currentTime").append(currentTabDateStamp + " " + currentTabTimeStamp);
+                $("#currentDate").append(currentLake.data[0].date);
+                $("#currentLevel").append(currentLake.data[0].elev);
+                $("#currentDelta").append((currentLake.data[0].elev - currentLake.normalPool).toFixed(2));
+                $("#currentNormal").append("Normal Pool " + currentLake.normalPool + " (MSL)");
+            } else {
+                if (sensorDown)
+                    $("#currentLevel").append("Water level sensor down");
+                else
+                    $("#currentLevel").append("No known source for level data");
+            };
+        }
 
         $("#lakeSponsor").append(currentLake.bodyOfWater);
         $("#lakeFeaturedTournament").append(currentLake.bodyOfWater);
@@ -1505,10 +1522,6 @@ $.ajax({
         // We must do this because the high and low temp are set according 
         // to UTC time, which skews the temps and the days.
         for (i = 0; i < dayLines.length - 1; i++) {
-
-            //initialize the high and low temps for the day.
-            //dayLines[i].high = 0;
-            //dayLines[i].low = 150;
 
             // go through the datalines and save the high and low temp for the Day
             for (j = saveJStart; j < dataLines.length - 1; j++) {
@@ -1732,7 +1745,7 @@ $.ajax({
         buildWindDirectionChart(currentLake);
 
         // Add Windspeed
-        // buildGuideList(currentLake);
+        buildGuideList(currentLake);
 
         // Hide loading gif
         hideLoader();

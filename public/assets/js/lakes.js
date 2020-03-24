@@ -132,6 +132,10 @@ const states = [{
         id: "ut"
     },
     {
+        state: "Vermont",
+        id: "vt"
+    },
+    {
         state: "Virginia",
         id: "va"
     },

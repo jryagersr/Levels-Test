@@ -9,6 +9,7 @@ module.exports = {
     var request = require("request");
     let wxData = []; //Retrieve Weather Data 
     let lakeWeather = currentLake;
+    //console.log(`${currentLake.bodyOfWater} Get Weather Data`)
 
     //Weather data URLs
     let apiKey = "d620419cfbb975f425c6262fefeef8f3";
@@ -80,7 +81,10 @@ module.exports = {
               location: wxData.name, // for current Conditions Well
               baro: wxData.main.pressure,
               temp: wxData.main.temp,
+              feelslike: wxData.main.feels_like,
               humidity: wxData.main.humidity,
+              sunrise: wxData.sys.sunrise,
+              sunset: wxData.sys.sunset,
               windspeed: wxData.wind.speed,
               winddirection: compassSector[(wxData.wind.deg / 22.5).toFixed(0)]
             });

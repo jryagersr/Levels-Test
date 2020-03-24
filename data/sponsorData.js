@@ -285,7 +285,8 @@ module.exports = [
         sponsor: "CCW",
         href: "https://www.cwwcharters.com/",
         src: "/static/assets/img/sponsor-banners/ccw banner.png",
-        location: ["all"],
+        location: ["all","roanokeriver(hwy 45)", "chowan(waterfront)"],//ad locations (top banner)
+        guideLakes: [,"roanoke45", "chowanwf","belhaven","littleriver","pamlicoriver","pasquotank","perquimans","suppernongcol","suppernongwood","tarriver"],//guide locations
         type: "guide",
         startDate: "2020-01-01T00:00:00.0Z",
         endDate: "2020-12-31T00:10:00.0Z"
@@ -294,21 +295,23 @@ module.exports = [
         sponsor: "Outdoor Expeditions USA",
         href: "http://www.outdoorexpeditionsusa.com/",
         src: "/static/assets/img/sponsor-banners/oeusa banner.png",
-        location: ["all"],
+        location: ["all"],//ad locations (top banner)
+        guideLakes: ["shearonharris","jordan","falls"],//guide locations
         type: "guide",
         startDate: "2020-01-01T00:00:00.0Z",
         endDate: "2025-12-31T00:10:00.0Z"
     },
-    /*{
+    {
         sponsor: "Kerr Lake Bass Fishing Guide Service",
         href: "https://kerrlakebass.com/",
         src: "/static/assets/img/sponsor-banners/dennies banner.png",
-        location: ["kerr","falls","jordan","gaston"],
+        location: ["kerr","falls","jordan","gaston"],//ad locations (top banner)
+        guideLakes: ["kerr"],//guide locations
         type: "guide",
         startDate: "2020-01-01T00:00:00.0Z",
         endDate: "2020-12-31T00:10:00.0Z"
     },
-    {
+    /*{
         sponsor: "Sinclair's Guide Service ",
         href: "https://sinclairsguideservice.com/",
         src: "/static/assets/img/sponsor-banners/sinclairs banner.png",

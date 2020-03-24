@@ -432,7 +432,7 @@ function updateAllLakes() {
                       // update the current lake
                       update.updateAndReturnOneLake(currentLake, ACEdata, function (error, ACElakeDataFlag, ACEdata) {
                         if (error) {
-                          console.log(`UALL error  ${ACEdata}`);
+                          console.log(`UROL error  ${ACEdata}`);
                         }
                         if (ACElakeDataFlag) {
                           dataUpdated++;
@@ -729,8 +729,8 @@ function updateAllLakes() {
                 } else startServerCount++;
                 //*/
                 updateAllLakes();
-              }, 23 * 60000);
-              // wait 23 minutes (plus 8 minute @ 2 second interval to cycle through 275 lakes)
+              }, 29 * 60000);
+              // wait 24 minutes (plus 5 minutes @1 second interval to cycle through 275 lakes)
               // This and the inteval below need to be adjusted when a significane # of lakes 
               // Have been added. Would like to have the interval ~30 min as possible
               // This is due to the hourly weather update mostly, but also the single level
@@ -738,7 +738,9 @@ function updateAllLakes() {
             }
 
           },
-          0.50 * 1000); // .5 second interval between launching a data fetch for the next lake
+          // 1 second interval between launching a data fetch for the next lake
+          // no less than 1 second or possibility of overrunning our weatherman.org limit of 60/min
+          1.000 * 1000); 
       }
     })
 }

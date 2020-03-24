@@ -11,7 +11,6 @@ module.exports = {
   // function to get CUBE data
   getAPCData: function (currentLake, callback) {
     let apcURL = currentLake.elevURL;
-    let bodyOfWater = currentLake.bodyOfWater;
     var options = {
       url: apcURL,
       headers: {
@@ -19,7 +18,7 @@ module.exports = {
       }
     }
     request(options, function (error, response, html) {
-
+      let localHTML = html;
       // Define our data template
       var data = [];
       // Make request for Alabama Power Company site, returns html
@@ -33,7 +32,7 @@ module.exports = {
       } else {
         let dataErrorTrue = false;
         try {
-          var $ = cheerio.load(html);
+          var $ = cheerio.load(localHTML);
         } catch (error) {
           console.error(error);
           dataErrorTrue = true;

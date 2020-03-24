@@ -489,6 +489,19 @@ h3 {
     }
 }
 
+/* Guide tab Styles */
+/* ================================================================ */
+.guidewelllogo {
+    /*z-index: 998;
+    //padding-top: 5px;
+    //padding-bottom: 5px;*/
+    border-top: 0;
+    position: relative;
+    width: 100%;
+    padding-left: 1%;
+    background-color: #ffffff;
+}
+
 /* Lakes Styles */
 /* ================================================================ */
 .state-container {

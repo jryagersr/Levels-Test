@@ -5497,7 +5497,7 @@ module.exports = [
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
     {
-        bodyOfWater: "Green Lake", // lake name
+        bodyOfWater: "Green (WI)", // lake name
         state: ["Wisconsin"],
         data: [],
         ccWxData: [],
@@ -5508,11 +5508,11 @@ module.exports = [
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 789.5,
         normalPool: 796.0,
-        lat: 42.569355,
-        long: -88.458597,
+        lat: 43.829724,
+        long: -88.959745,
         elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=434840089000001&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
         flowURL: "",
-        href: "/lakes/greenlake",
+        href: "/lakes/greenwi",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
     },
     {

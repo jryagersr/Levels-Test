@@ -1,8 +1,8 @@
 const request = require("request")
 const cheerio = require("cheerio");
 const db = require("../../models")();
-const update = require('../updateFunctions');
-const weather = require("../updateRoutes/getWeatherData");
+//const update = require('../updateFunctions');
+//const weather = require("../updateRoutes/getWeatherData");
 
 
 module.exports = {

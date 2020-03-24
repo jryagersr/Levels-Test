@@ -1,6 +1,6 @@
 const db = require("../../models")();
-const update = require('../updateFunctions');
-const weather = require("../updateRoutes/getWeatherData");
+//const update = require('../updateFunctions');
+//const weather = require("../updateRoutes/getWeatherData");
 
 
 module.exports = {
@@ -15,13 +15,13 @@ module.exports = {
 
     request(thisLake.elevURL, function (error, response, body) {
       if (error) {
-        callback(error);
+        callback(true, error.code);
       } else {
         let dataErrorTrue = false;
         try {
           data = JSON.parse(body);
         } catch (error) {
-          console.error(error);
+          console.log(thisLake.bodyOfWater + " json.Parse error");
           dataErrorTrue = true;
         }
 
@@ -58,7 +58,8 @@ module.exports = {
           })
           if (elevTempEntries.length == 0) {
             // send empty array to front end
-            callback(true, body);
+            console.log (currentLake.bodyOfWater + " No Elev data from ACE")
+            callback(true, " No Elev data from ACE");
           } else {
 
             //Need to check to see if all are on the half hour
@@ -135,7 +136,8 @@ module.exports = {
             callback(false, exportData);
           }
         } else {
-          callback(true, body);
+          console.log (currentLake.bodyOfWater + " Error with json.Parse on data from ACE")
+          callback(true, " Error with json.Parse on data from ACE");
         }
 
       }
