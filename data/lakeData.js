@@ -4944,7 +4944,7 @@ module.exports = [
         long: -98.350450,
         elevURL: "https://waterdatafortexas.org/reservoirs/individual/lyndon-b-johnson-30day.csv",
         flowURL: "",
-        href: "/lakes/LBJ",
+        href: "/lakes/lbj",
         dataSource: ["TWDB"], // array of calls to make to retrieve data Texas Water Development District
     },
     {

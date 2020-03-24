@@ -19133,6 +19133,76 @@ module.exports = [
         long: -96.025665
     },
     {
+        bodyOfWater: "Choke Canyon", // lake name
+        id: "chokecanyon",
+        rampName: "South Shore",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 28.473172,
+        long: -98.251329
+    },
+    {
+        bodyOfWater: "Choke Canyon", // lake name
+        id: "chokecanyon",
+        rampName: "Calliham",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 28.482155,
+        long: -98.353306
+    },
+    {
+        bodyOfWater: "Choke Canyon", // lake name
+        id: "chokecanyon",
+        rampName: "Mason Point",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 28.480033,
+        long: -98.373827
+    },
+    {
+        bodyOfWater: "Choke Canyon", // lake name
+        id: "chokecanyon",
+        rampName: "Hwy 99",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 28.523348,
+        long: -98.388288
+    },
+    {
+        bodyOfWater: "Choke Canyon", // lake name
+        id: "chokecanyon",
+        rampName: "San Miguel",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 28.508997,
+        long: -98.440097
+    },
+    {
         bodyOfWater: "Conroe", // lake name
         id: "conroe",
         rampName: "Harbortown",
@@ -19287,6 +19357,62 @@ module.exports = [
         long: -95.545103
     },
     {
+        bodyOfWater: "Corpus Christi", // lake name
+        id: "corpuschristi",
+        rampName: "State Park",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 28.063021,
+        long: -97.879803
+    },
+    {
+        bodyOfWater: "Corpus Christi", // lake name
+        id: "corpuschristi",
+        rampName: "Marina",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 28.064276,
+        long: -97.906971
+    },
+    {
+        bodyOfWater: "Corpus Christi", // lake name
+        id: "corpuschristi",
+        rampName: "Weber's",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 28.068160,
+        long: -97.913474
+    },
+    {
+        bodyOfWater: "Corpus Christi", // lake name
+        id: "corpuschristi",
+        rampName: "Mustang Hollow Campground",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 28.203224,
+        long: -97.902050
+    },
+    {
         bodyOfWater: "Falcon", // lake name
         id: "falcon",
         rampName: "Beacon Lodge",
@@ -19397,6 +19523,20 @@ module.exports = [
         topElev: 0,
         lat: 32.878611,
         long: -95.633099
+    },
+    {
+        bodyOfWater: "Fork", // lake name
+        id: "fork",
+        rampName: "FM17",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 32.844785, 
+        long: -95.631919
     },
     {
         bodyOfWater: "Fork", // lake name
@@ -19553,6 +19693,118 @@ module.exports = [
         long: -98.376725
     },
     {
+        bodyOfWater: "Livingston", // lake name
+        id: "livingston",
+        rampName: "Riverside",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 30.858569,
+        long: -95.398739
+    },
+    {
+        bodyOfWater: "Livingston", // lake name
+        id: "livingston",
+        rampName: "Patrick's Ferry",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 30.797862,
+        long: -95.160256
+    },
+    {
+        bodyOfWater: "Livingston", // lake name
+        id: "livingston",
+        rampName: "Blanchard",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 30.736382,
+        long: -95.088109
+    },
+    {
+        bodyOfWater: "Livingston", // lake name
+        id: "livingston",
+        rampName: "Cedar Point",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 30.804011,
+        long: -95.076399
+    },
+    {
+        bodyOfWater: "Livingston", // lake name
+        id: "livingston",
+        rampName: "Cedar Point",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 30.799853,
+        long: -95.074679
+    },
+    {
+        bodyOfWater: "Livingston", // lake name
+        id: "livingston",
+        rampName: "Pointblank",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 30.746169,
+        long: -95.206905
+    },
+    {
+        bodyOfWater: "Livingston", // lake name
+        id: "livingston",
+        rampName: "Harbor Point",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 30.923628,
+        long: -95.257630
+    },
+    {
+        bodyOfWater: "Livingston", // lake name
+        id: "livingston",
+        rampName: "Tigerville",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 30.715319,
+        long: -95.053183
+    },
+    {
         bodyOfWater: "Palestine", // lake name
         id: "palestine",
         rampName: "County Rd 189",
@@ -19649,6 +19901,76 @@ module.exports = [
         topElev: 0,
         lat: 32.273474,
         long: -95.454721
+    },
+    {
+        bodyOfWater: "Ray Hubbard", // lake name
+        id: "rayhubbard",
+        rampName: "Rush Creek Yacht Club",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 32.823913,
+        long: -96.498172
+    },
+    {
+        bodyOfWater: "Ray Hubbard", // lake name
+        id: "rayhubbard",
+        rampName: "Heath",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 32.839393,
+        long: -96.506156
+    },
+    {
+        bodyOfWater: "Ray Hubbard", // lake name
+        id: "rayhubbard",
+        rampName: "Chandlers Landing Marina",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 32.875920,
+        long: -96.482455
+    },
+    {
+        bodyOfWater: "Ray Hubbard", // lake name
+        id: "rayhubbard",
+        rampName: "Hwy 66",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 32.929301,
+        long: -96.472873
+    },
+    {
+        bodyOfWater: "Ray Hubbard", // lake name
+        id: "rayhubbard",
+        rampName: "Captain's Cove Marina",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 32.857478,
+        long: -96.547648
     },
     {
         bodyOfWater: "Ray Roberts", // lake name
@@ -19999,6 +20321,62 @@ module.exports = [
         topElev: 0,
         lat: 31.067473,
         long: -94.063854
+    },
+    {
+        bodyOfWater: "Richandland Chambers", // lake name
+        id: "richlandchambers",
+        rampName: "Crab Creek",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 31.967745,
+        long: -96.315978
+    },
+    {
+        bodyOfWater: "Richandland Chambers", // lake name
+        id: "richlandchambers",
+        rampName: "SouthPoint HOA",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 31.952192,
+        long: -96.240807
+    },
+    {
+        bodyOfWater: "Richandland Chambers", // lake name
+        id: "richlandchambers",
+        rampName: "Hwy 309",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 31.991204,
+        long: -96.137043
+    },
+    {
+        bodyOfWater: "Richandland Chambers", // lake name
+        id: "richlandchambers",
+        rampName: "FM 2859 Crossing",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 32.063441,
+        long: -96.238634
     },
     {
         bodyOfWater: "Tawakoni", // lake name
@@ -20531,6 +20909,132 @@ module.exports = [
         topElev: 0,
         lat: 30.476363,
         long: -98.096972
+    },
+    {
+        bodyOfWater: "Whitney", // lake name
+        id: "whitney",
+        rampName: "Lofer Bend",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 31.865278,
+        long: -97.371667
+    },
+    {
+        bodyOfWater: "Whitney", // lake name
+        id: "whitney",
+        rampName: "State Park",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 31.923187,
+        long: -97.372320
+    },
+    {
+        bodyOfWater: "Whitney", // lake name
+        id: "whitney",
+        rampName: "Redwood",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 31.973954,
+        long: -97.374586
+    },
+    {
+        bodyOfWater: "Whitney", // lake name
+        id: "whitney",
+        rampName: "Whitney Marina",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 31.985906,
+        long: -97.369781
+    },
+    {
+        bodyOfWater: "Whitney", // lake name
+        id: "whitney",
+        rampName: "Cedar Creek",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 31.988386,
+        long: -97.373151
+    },
+    {
+        bodyOfWater: "Whitney", // lake name
+        id: "whitney",
+        rampName: "Old Live Oak",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 32.002632,
+        long: -97.366766
+    },
+    {
+        bodyOfWater: "Whitney", // lake name
+        id: "whitney",
+        rampName: "Kimball Bend",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 32.121627,
+        long: -97.493897
+    },
+    {
+        bodyOfWater: "Whitney", // lake name
+        id: "whitney",
+        rampName: "Steele Creek",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 32.009401,
+        long: -97.448756
+    },
+    {
+        bodyOfWater: "Whitney", // lake name
+        id: "whitney",
+        rampName: "Canyons",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 31.943162,
+        long: -97.440718
     },
 
     // UTAH ---------------------------------------------------------------------------------------------------------
