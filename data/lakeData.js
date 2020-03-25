@@ -4638,7 +4638,7 @@ module.exports = [
         long: -85.544745,
         elevURL: "https://soa.tva.gov/api/river/observed-data/NKJT1",
         flowURL: "",
-        href: "/lakes/nicakjack",
+        href: "/lakes/nickajack",
         dataSource: ["TVA"], // array of calls to make to retrieve data
     },
     {

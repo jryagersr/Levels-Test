@@ -12635,7 +12635,7 @@ module.exports = [
     },
     {
         bodyOfWater: "Indian Lake", // lake name
-        id: "indian",
+        id: "indianoh",
         rampName: "Hwy 49",
         rampType: "Concrete",
         rampParking: "Fair",
@@ -14391,7 +14391,7 @@ module.exports = [
     {
         bodyOfWater: "Curwensville", // lake name
         id: "curwensville",
-        rampName: "Curwesville",
+        rampName: "Curwensville",
         rampType: "",
         rampParking: "",
         rampFee: "",
