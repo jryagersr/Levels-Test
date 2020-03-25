@@ -1716,15 +1716,15 @@ $.ajax({
             // If elevation data is updated more than once a day
             // build hourly elevation chart (river tide) chart
             if (currentLake.refreshInterval < 1439) {
-                buildRiverChart(currentLake.data, currentLake)
+                buildRiverChart(currentLake.data, currentLake);
                 // build hourly flow chart if flows are available
                 if (currentLake.data[0].flow !== "N/A")
-                    buildHourlyFlowChart(currentLake.data)
+                    buildHourlyFlowChart(currentLake.data);
             }
 
             // build flow chart if flows are available
             if (currentLake.data[0].flow !== "N/A")
-                buildFlowChart(currentLake.data);;
+                buildFlowChart(currentLake.data);
 
         }
         // Add Weather charts
