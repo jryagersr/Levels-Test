@@ -24,7 +24,7 @@ module.exports = {
       let dataErrorTrue = false;
       if (typeof html == 'undefined') {
         console.log(`WeatherWater data returned for ${currentLake.bodyOfWater} request call is undefined`);
-        dataErrorTrue == true;
+        dataErrorTrue = true;
       }
       if (currentLake.bodyOfWater !== bodyOfWater)
         console.log(` ${bodyOfWater}  and currentLake.bodyOfWater do not match`)
@@ -34,7 +34,7 @@ module.exports = {
         bodyOfWater = currentLake.bodyOfWater;
         localHTML = html;
         if (bodyOfWater == "Mead") {
-          dataErrorTrue = false;
+          //dataErrorTrue = false;
           try {
             var jsonData = JSON.parse(localHTML);
           } catch (error) {
