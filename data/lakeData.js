@@ -2679,7 +2679,7 @@ module.exports = [
         data: [],
         ccWxData: [],
         wxForecastData: [],
-        refreshInterval: 90, //minutes
+        refreshInterval: 1439, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 4231.0,
         normalPool: 4278.0,

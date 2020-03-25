@@ -694,12 +694,12 @@ function buildTempChart(tempData) {
                 label: "Temp (F)",
                 borderColor: 'rgb(0, 140, 255)',
                 data: dataTempBatch
-            }, {
+            }, /*{
                 type: 'line',
                 label: "Dew Pt",
                 borderColor: 'rgb(100, 140, 100)',
                 data: dewpointBatch
-            }, {
+            },*/ {
                 type: 'line',
                 label: "Feels Like",
                 borderColor: 'rgb(172, 83, 83)',
