@@ -439,8 +439,8 @@ function buildRiverChart(data, lake) {
     let chartGap = Number((minMaxDiff));
     //if (minMaxDiff < 1) chartGap = minMaxDiff;
     if (minMaxDiff > 20) chartGap = Number(.25);
-    chartMinRiverLimit = chartMinRiver - chartGap/4; // set the chart lower limit
-    chartMaxRiverLimit = chartMaxRiver + chartGap/4; // set the chart upper limit
+    chartMinRiverLimit = chartMinRiver - chartGap / 4; // set the chart lower limit
+    chartMaxRiverLimit = chartMaxRiver + chartGap / 4; // set the chart upper limit
 
     var ctx = document.getElementById('myRiverChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
@@ -489,7 +489,7 @@ function buildRiverChart(data, lake) {
                     ticks: {
                         min: chartMinRiverLimit, // Set chart bottom at 1ft less than min elev value
                         max: chartMaxRiverLimit, // Set chart top at 1ft more than min elev value
-                        stepSize: (minMaxDiff/1.5).toFixed(2),
+                        stepSize: (minMaxDiff / 1.5).toFixed(2),
                         //autoSkip: true,
                         maxTicksLimit: 4,
                     },
@@ -1213,7 +1213,7 @@ function buildGuideList(sponsorData) {
                         $(a).append(adImg);
                         $(a).append("<br>");
                         $(a).append("<br>");
-                        
+
                     }
                 }
             })
@@ -1715,17 +1715,17 @@ $.ajax({
 
             // If elevation data is updated more than once a day
             // build hourly elevation chart (river tide) chart
-            if (currentLake.refreshInterval < 1450)
+            if (currentLake.refreshInterval < 1439) {
                 buildRiverChart(currentLake.data, currentLake)
+                // build hourly flow chart if flows are available
+                if (currentLake.data[0].flow !== "N/A")
+                    buildHourlyFlowChart(currentLake.data)
+            }
 
             // build flow chart if flows are available
-            if (currentLake.data[0].flow !== "N/A") {
-                buildFlowChart(currentLake.data);
-            }
-            // build hourly flow chart if flows are available
-            if (currentLake.data[0].flow !== "N/A") {
-                buildHourlyFlowChart(currentLake.data);
-            }
+            if (currentLake.data[0].flow !== "N/A")
+                buildFlowChart(currentLake.data);;
+
         }
         // Add Weather charts
 
