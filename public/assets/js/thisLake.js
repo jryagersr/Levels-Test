@@ -435,12 +435,12 @@ function buildRiverChart(data, lake) {
     dataRiverBatch.reverse();
 
     // Set axis limits for River Chart
-    let minMaxDiff = chartMaxRiver - chartMinRiver;
-    let chartGap = Number((minMaxDiff * 1.5).toFixed(2));
-    if (minMaxDiff < 1) chartGap = minMaxDiff + 1.25;
-    if (minMaxDiff > 20) chartGap = .25;
-    chartMinRiverLimit = chartMinRiver - chartGap; // set the chart lower limit
-    chartMaxRiverLimit = chartMaxRiver + chartGap; // set the chart upper limit
+    let minMaxDiff = Number((chartMaxRiver - chartMinRiver).toFixed(2));
+    let chartGap = Number((minMaxDiff));
+    //if (minMaxDiff < 1) chartGap = minMaxDiff;
+    if (minMaxDiff > 20) chartGap = Number(.25);
+    chartMinRiverLimit = chartMinRiver - chartGap/4; // set the chart lower limit
+    chartMaxRiverLimit = chartMaxRiver + chartGap/4; // set the chart upper limit
 
     var ctx = document.getElementById('myRiverChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
@@ -489,9 +489,9 @@ function buildRiverChart(data, lake) {
                     ticks: {
                         min: chartMinRiverLimit, // Set chart bottom at 1ft less than min elev value
                         max: chartMaxRiverLimit, // Set chart top at 1ft more than min elev value
-                        //stepSize: Math.round((chartMaxElev - chartMinElev) / 2), // Set the y-axis step value to  ft.
+                        stepSize: (minMaxDiff/1.5).toFixed(2),
                         //autoSkip: true,
-                        //maxTicksLimit: 8,
+                        maxTicksLimit: 4,
                     },
                     stacked: false
                 }]
@@ -626,11 +626,11 @@ function buildTempChart(tempData) {
     let dataTempBatch = [];
     let dewpointBatch = [];
     let feelsLikeBatch = [];
-    let k = 0; // our iterator after starting elevation
-    let chartMinTemp = 100000; // y-axis Max elev value
-    let chartMaxTemp = 0; // y-axis Min elev value
-    let chartMinTempLimit = 0; // y-axis Min elev Limit (for chart)
-    let chartMaxTempLimit = 0; // y-axis Max elev Limit (for chart)
+    let k = 0; // our iterator after starting Temp
+    let chartMinTemp = 100000; // y-axis Max temp value
+    let chartMaxTemp = 0; // y-axis Min temp value
+    let chartMinTempLimit = 0; // y-axis Min temp Limit (for chart)
+    let chartMaxTempLimit = 0; // y-axis Max temp Limit (for chart)
 
     // Loop through our data for 24 data points if we have it
     for (k; k < tempData.ccWxData.length; k++) {
@@ -652,16 +652,16 @@ function buildTempChart(tempData) {
             feelsLikeBatch.push(tempData.ccWxData[k].feelslike);
             dewpointBatch.push(dewPoint); // push dew point
             labelBatch.push(hour + suffix); // push time
-            dataTempBatch.push(tempData.ccWxData[k].temp); // push elev
+            dataTempBatch.push(tempData.ccWxData[k].temp); // push Temp
 
             if (tempData.ccWxData[k].temp > chartMaxTemp) // if temp value is greater than max, replace max
-                chartMaxTemp = tempData.ccWxData[k].temp; // update Max Elev average
+                chartMaxTemp = tempData.ccWxData[k].temp; // update Max Temp average
             if (tempData.ccWxData[k].feelslike > chartMaxTemp) // if feelslike value is greater than max, replace max
-                chartMaxTemp = tempData.ccWxData[k].feelslike; // update Max Elev average
+                chartMaxTemp = tempData.ccWxData[k].feelslike; // update Max Temp average
             if (tempData.ccWxData[k].feelslike < chartMinTemp) // if feelslike value is less than min, replace max
-                chartMinTemp = tempData.ccWxData[k].feelslike; // update Min Elev average
+                chartMinTemp = tempData.ccWxData[k].feelslike; // update Min Temp average
             if (dewPoint < chartMinTemp) // if value is less thank min, replace min
-                chartMinTemp = dewPoint; // update Min Elev average
+                chartMinTemp = dewPoint; // update Min Temp average
 
         }
 
@@ -734,7 +734,7 @@ function buildTempChart(tempData) {
                     ticks: {
                         min: chartMinTempLimit, // Set chart bottom at 1ft less than min elev value
                         max: chartMaxTempLimit, // Set chart top at 1ft more than min elev value
-                        //stepSize: Math.round((chartMaxElev - chartMinElev) / 2), // Set the y-axis step value to  ft.
+                        stepSize: Math.ceil((chartMaxTemp - chartMinTemp) / 2) - 5, // Set the y-axis step value to  ft.
                         //autoSkip: true,
                         //maxTicksLimit: 8,
                     },
