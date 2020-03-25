@@ -696,7 +696,7 @@ function buildTempChart(tempData) {
                 data: dataTempBatch
             }, {
                 type: 'line',
-                label: "Dew Point",
+                label: "Dew Pt",
                 borderColor: 'rgb(100, 140, 100)',
                 data: dewpointBatch
             }, {
