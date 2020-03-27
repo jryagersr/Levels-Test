@@ -102,7 +102,7 @@ function buildElevChart(data, lake) {
         }
 
         // when a week of data has been reached stop
-        if (labelBatch.length > 9) {
+        if (labelBatch.length > 13) {
             break;
         }
     }
@@ -195,7 +195,7 @@ function buildElevChart(data, lake) {
                     },
                     ticks: {
                         autoSkip: true,
-                        maxTicksLimit: 12,
+                        maxTicksLimit: 14,
                         fontSize: 10
                     }
                 }],
@@ -302,7 +302,7 @@ function buildFlowChart(data) {
         }
 
         // when a week of data has been reached stop
-        if (labelBatch.length > 6) {
+        if (labelBatch.length > 13) {
             break;
         }
     }
@@ -362,7 +362,7 @@ function buildFlowChart(data) {
                     },
                     ticks: {
                         autoSkip: true,
-                        maxTicksLimit: 12,
+                        maxTicksLimit: 14,
                         fontSize: 10
                     }
                 }],
@@ -401,13 +401,6 @@ function buildRiverChart(data, lake) {
     let chartMinRiverLimit = 0; // y-axis Min elev Limit (for chart)
     let chartMaxRiverLimit = 0; // y-axis Max elev Limit (for chart)
 
-    // find our starting elevation
-    /*for (var i = 0; data.length; i++) {
-        if (typeof data[i].elev == "number") {
-            k = i;
-            break;
-        }
-    }*/
 
     // Loop through our data for 48 data points if we have it
     // two days worth of data may show the tides in tidal rivers 
@@ -475,7 +468,7 @@ function buildRiverChart(data, lake) {
                     },
                     ticks: {
                         autoSkip: true,
-                        maxTicksLimit: 12,
+                        maxTicksLimit: 24,
                         fontSize: 10
                     }
                 }],
@@ -580,7 +573,7 @@ function buildHourlyFlowChart(data, lake) {
                     },
                     ticks: {
                         autoSkip: true,
-                        maxTicksLimit: 12,
+                        maxTicksLimit: 24,
                         fontSize: 10
                     }
                 }],
@@ -1485,7 +1478,7 @@ $.ajax({
                 // if the first element for a Day forecast element 
                 if ((dayTest == 'AM' && lastDayTest == 'PM') || i == 0) {
 
-                    // This is a "Day" Line in the data, we must save it until it is time to push it into the well
+                    // This is a "Day" Line in the data,  push it into the well
                     dayLines.push({
                         conditions: element.conditions,
                         high: element.temp,
@@ -1555,8 +1548,9 @@ $.ajax({
             weatherSection.attr("id", "weatherWell-" + wxTableRow + 1);
             $("#weatherSection").append(weatherSection);
 
+            let yearIndex = dayLines[i].date.lastIndexOf('/'); // find the '/' in front of the year.
             // Append the day lines
-            $("#weatherWell-" + wxTableRow + 1).append("<td>" + dayLines[i].date.substring(0, 5) + "</td>");
+            $("#weatherWell-" + wxTableRow + 1).append("<td>" + dayLines[i].date.substring(0, yearIndex) + "</td>");
             $("#weatherWell-" + wxTableRow + 1).append("<td>" + dayLines[i].time + "</td>");
             $("#weatherWell-" + wxTableRow + 1).append("<td> " + dayLines[i].conditions + "</td>");
             $("#weatherWell-" + wxTableRow + 1).append("<td>" + dayLines[i].high.toFixed(0) + '/' + dayLines[i].low.toFixed(0) + "</td>");

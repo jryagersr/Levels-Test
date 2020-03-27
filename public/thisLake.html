@@ -151,8 +151,8 @@
       <br>
       <div class="current-wrapper1">
         <h3 class="current-header-title"><span class="current-header-title" id="currentWeatherConditions"></span></h3>
-        <p class="current-subtext current-subtext-delta">Air Temp: <span id="currentWeatherTemp"></span> F</p>
-        <p class="current-subtext current-subtext-delta">Humidity: <span id="currentWeatherHumidity"></span> %</p>
+        <p class="current-subtext current-subtext-delta">Air Temp: <span id="currentWeatherTemp"></span>(f) ---  Humidity: <span id="currentWeatherHumidity"></span> %</p>
+        <!--<p class="current-subtext current-subtext-delta">Humidity: <span id="currentWeatherHumidity"></span> %</p>-->
         <p class="current-subtext current-subtext-delta">Barometric: <span id="currentWeatherBarometric"></span> in</p>
         <p class="current-subtext current-subtext-delta">Wind: <span id="currentWeatherWindSpeed"></span> from <span
             id="currentWeatherWindDirection"></span></p>
@@ -201,12 +201,6 @@
       </div>
       <br>
 
-      <div class="chart-container-tab-page" id="humidityChart" style="display:none">
-        <h3><b>Humidity</b></h3>
-        <canvas id="myHumidityChart"></canvas>
-      </div>
-      <br>
-
 
       <div class="chart-container-tab-page" id="windChart" style="display:none">
         <h3><b>Wind Speed</b></h3>
@@ -218,6 +212,13 @@
         <h3><b>Wind Direction</b></h3>
         <canvas id="myWindDirectionChart"></canvas>
       </div>
+      
+      <div class="chart-container-tab-page" id="humidityChart" style="display:none">
+        <h3><b>Humidity</b></h3>
+        <canvas id="myHumidityChart"></canvas>
+      </div>
+      <br>
+
       <br>
     </div>
   </div>

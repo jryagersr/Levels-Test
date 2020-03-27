@@ -2956,6 +2956,20 @@ module.exports = [
         long: -81.746893
     },
     {
+        bodyOfWater: "Garcia", // lake name
+        id: "garcia",
+        rampName: "Fellsmere",
+        rampType: "",
+        rampParking: "",
+        rampFee: "",
+        rampAccess: "",
+        courtesyDock: "",
+        bottomElev: 0,
+        topElev: 0,
+        lat: 27.663234,
+        long: -80.644070
+    },
+    {
         bodyOfWater: "Griffin (HC)", // lake name
         id: "griffin",
         rampName: "Lakeshore",
