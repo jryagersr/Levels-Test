@@ -1348,14 +1348,18 @@ $.ajax({
             let dateTime = new Date(currentLake.data[0].time);
             let currentTabDateStamp = dateTime.toLocaleDateString();
             let currentTabTimeStamp = dateTime.toLocaleTimeString();
+            let x = 0;
             if (!noDataSource) {
+                if (currentLake.dataSource[0] == "DUKE") {
+                    if (currentLake.data[x].elev == 0)
+                        x = 1;
+                    let gage = (currentLake.data[x].elev - currentLake.seaLevelDelta).toFixed(2);
+                    $("#gageReading").append("Gage (" + gage + " ft.)");
+                    $("#currentLevel").append(currentLake.data[x].elev);
+                }
+                $("#currentDate").append(currentLake.data[x].date);
                 $("#currentTime").append(currentTabDateStamp + " " + currentTabTimeStamp);
-                $("#currentDate").append(currentLake.data[0].date);
-                $("#currentLevel").append(currentLake.data[0].elev);
-                let gage = (currentLake.data[0].elev - currentLake.seaLevelDelta).toFixed(2);
-                if (currentLake.dataSource[0] == "DUKE")
-                    $("#gageReading").append("Gage (" + gage + " ft.)")
-                $("#currentDelta").append((currentLake.data[0].elev - currentLake.normalPool).toFixed(2));
+                $("#currentDelta").append((currentLake.data[x].elev - currentLake.normalPool).toFixed(2));
                 $("#currentNormal").append("Normal Pool " + currentLake.normalPool + " (MSL)");
             } else {
                 if (sensorDown)
