@@ -683,21 +683,24 @@ function buildTempChart(tempData) {
         data: {
             labels: labelBatch,
             datasets: [{
-                type: 'line',
-                label: "Temp (F)",
-                borderColor: 'rgb(0, 140, 255)',
-                data: dataTempBatch
-            }, /*{
-                type: 'line',
-                label: "Dew Pt",
-                borderColor: 'rgb(100, 140, 100)',
-                data: dewpointBatch
-            },*/ {
-                type: 'line',
-                label: "Feels Like",
-                borderColor: 'rgb(172, 83, 83)',
-                data: feelsLikeBatch
-            }]
+                    type: 'line',
+                    label: "Temp (F)",
+                    borderColor: 'rgb(0, 140, 255)',
+                    data: dataTempBatch
+                },
+                /*{
+                               type: 'line',
+                               label: "Dew Pt",
+                               borderColor: 'rgb(100, 140, 100)',
+                               data: dewpointBatch
+                           },*/
+                {
+                    type: 'line',
+                    label: "Feels Like",
+                    borderColor: 'rgb(172, 83, 83)',
+                    data: feelsLikeBatch
+                }
+            ]
         },
 
         // Configuration options go here
@@ -1349,6 +1352,9 @@ $.ajax({
                 $("#currentTime").append(currentTabDateStamp + " " + currentTabTimeStamp);
                 $("#currentDate").append(currentLake.data[0].date);
                 $("#currentLevel").append(currentLake.data[0].elev);
+                let gage = (currentLake.data[0].elev - currentLake.seaLevelDelta).toFixed(2);
+                if (currentLake.dataSource[0] == "DUKE")
+                    $("#gageReading").append("Gage (" + gage + " ft.)")
                 $("#currentDelta").append((currentLake.data[0].elev - currentLake.normalPool).toFixed(2));
                 $("#currentNormal").append("Normal Pool " + currentLake.normalPool + " (MSL)");
             } else {
