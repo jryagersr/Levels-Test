@@ -1359,8 +1359,8 @@ $.ajax({
                         x = 1;
                     let gage = (currentLake.data[x].elev - currentLake.seaLevelDelta).toFixed(2);
                     $("#gageReading").append("Gage (" + gage + " ft.)");
-                    $("#currentLevel").append(currentLake.data[x].elev);
                 }
+                $("#currentLevel").append(currentLake.data[x].elev);
                 $("#currentDate").append(currentLake.data[x].date);
                 $("#currentTime").append(currentTabDateStamp + " " + currentTabTimeStamp);
                 $("#currentDelta").append((currentLake.data[x].elev - currentLake.normalPool).toFixed(2));
