@@ -1350,7 +1350,11 @@ $.ajax({
             let currentTabTimeStamp = dateTime.toLocaleTimeString();
             let x = 0;
             if (!noDataSource) {
+
+                // For Duke Energy Lakes, show the actual gage reading.
                 if (currentLake.dataSource[0] == "DUKE") {
+                    // Duke does not update until after midnight GMT so if current day level is 0
+                    // show previous day level
                     if (currentLake.data[x].elev == 0)
                         x = 1;
                     let gage = (currentLake.data[x].elev - currentLake.seaLevelDelta).toFixed(2);
