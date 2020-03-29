@@ -1355,7 +1355,7 @@ $.ajax({
                 if (currentLake.dataSource[0] == "DUKE") {
                     // Duke does not update until after midnight GMT so if current day level is 0
                     // show previous day level
-                    if (currentLake.data[x].elev == 0)
+                    if (currentLake.data[x].elev == null)
                         x = 1;
                     let gage = (currentLake.data[x].elev - currentLake.seaLevelDelta).toFixed(2);
                     $("#gageReading").append("Gage (" + gage + " ft.)");
