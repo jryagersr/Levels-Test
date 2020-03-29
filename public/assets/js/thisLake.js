@@ -1345,9 +1345,6 @@ $.ajax({
         // new Date(currentLake.data[0].time).toString().substr(0, 21)
         // Set current date, time elev, and pool on page
         if (!noDataSource) {
-            let dateTime = new Date(currentLake.data[0].time);
-            let currentTabDateStamp = dateTime.toLocaleDateString();
-            let currentTabTimeStamp = dateTime.toLocaleTimeString();
             let x = 0;
             if (!noDataSource) {
 
@@ -1360,6 +1357,9 @@ $.ajax({
                     let gage = (currentLake.data[x].elev - currentLake.seaLevelDelta).toFixed(2);
                     $("#gageReading").append("Gage (" + gage + " ft.)");
                 }
+                let dateTime = new Date(currentLake.data[x].time);
+                let currentTabDateStamp = dateTime.toLocaleDateString();
+                let currentTabTimeStamp = dateTime.toLocaleTimeString();
                 $("#currentLevel").append(currentLake.data[x].elev);
                 $("#currentDate").append(currentLake.data[x].date);
                 $("#currentTime").append(currentTabDateStamp + " " + currentTabTimeStamp);
