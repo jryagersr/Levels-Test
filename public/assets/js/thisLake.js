@@ -671,8 +671,8 @@ function buildTempChart(tempData) {
     // Set y axis limits for Temp Chart
     let minMaxDiff = chartMaxTemp - chartMinTemp;
     if (minMaxDiff < 1) chartGap = minMaxDiff / 2;
-    chartMinTempLimit = Math.round(chartMinTemp) - 2; // set the chart lower limit
-    chartMaxTempLimit = Math.round(chartMaxTemp) + 2; // set the chart upper limit
+    chartMinTempLimit = Math.round(chartMinTemp) - 2; // set the chart lower limit 2' below min
+    chartMaxTempLimit = Math.round(chartMaxTemp) + 2; // set the chart upper limit 2' below max
 
     var ctx = document.getElementById('myTempChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
