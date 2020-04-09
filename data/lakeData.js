@@ -460,7 +460,8 @@ module.exports = [
         flowURL: "",
         href: "/lakes/alamo",
         dataSource: ["ACE"], // array of calls to make to retrieve data
-    }, {
+    },
+    {
         bodyOfWater: "Mead", // lake name
         state: ["Arizona", "Nevada"],
         data: [],
@@ -468,7 +469,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 1229.0,
@@ -644,7 +645,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0, // 1329ft but data reported as a delta to full pool
         normalPool: 258.0,
@@ -899,7 +900,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 62.0,
@@ -918,7 +919,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 62.0,
@@ -937,7 +938,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 62.0,
@@ -957,7 +958,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 19.5,
@@ -976,7 +977,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 62.0,
@@ -1033,7 +1034,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 20.0,
@@ -1147,10 +1148,10 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
-        normalPool: 21.4,
+        normalPool: 19.6,
         lat: 27.792952,
         long: -80.727619,
         elevURL: "http://webapub.sjrwmd.com/agws10/hdsnew/data.aspx?tp=3&stn=00960391_NAVD1988_POR&des=S-96B%20West%20at%20Fellsmere%20(WL)$274931.099$804428.589$Fellsmere$Brevard$Surface%20Water$Water%20Level%20(WL)",
@@ -2199,7 +2200,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 660.0,
@@ -2680,7 +2681,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 4301.0,
@@ -2699,7 +2700,7 @@ module.exports = [
         data: [],
         ccWxData: [],
         wxForecastData: [],
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 4231.0,
         normalPool: 4278.0,
@@ -2858,7 +2859,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 541.1,
@@ -2878,7 +2879,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 722.0,
@@ -2897,7 +2898,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 0.0,
@@ -2916,7 +2917,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 78.0,
         normalPool: 178.0,
@@ -2955,7 +2956,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 0.0,
@@ -3016,7 +3017,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 200.0,
@@ -3035,7 +3036,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 835.0,
         normalPool: 935.0,
@@ -3054,7 +3055,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 655.2,
@@ -3092,7 +3093,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 1100.0,
         normalPool: 1200.0,
@@ -3111,7 +3112,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 1000.0,
         normalPool: 1100.0,
@@ -3178,7 +3179,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 0.0,
@@ -3197,7 +3198,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         elevDataInterval: 4, // Time between elevation data 4 = 15min, 2 = 30 min 1 = 60 min
         seaLevelDelta: 0,
@@ -3217,7 +3218,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 547.5,
         normalPool: 647.5,
@@ -3274,7 +3275,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 1298.0, // data reported as a delta to full pool = 100
         normalPool: 1398.0,
@@ -3293,7 +3294,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 0.0,
@@ -3312,7 +3313,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 0.0,
@@ -3331,7 +3332,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 0.0,
@@ -3348,7 +3349,7 @@ module.exports = [
         data: [],
         ccWxData: [],
         wxForecastData: [],
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0, // data reported as a delta to full pool = 100
         normalPool: 682.0,
@@ -3367,7 +3368,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 885.0,
         normalPool: 985.0,
@@ -3386,7 +3387,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0,
         normalPool: 131.0,
@@ -3501,7 +3502,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 0.0,
@@ -3520,7 +3521,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 0.0,
@@ -3539,7 +3540,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0.0,
         normalPool: 0.0,
@@ -3558,7 +3559,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 0.0,
@@ -3577,7 +3578,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 178.0,
         normalPool: 278.0,
@@ -3596,7 +3597,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 596.0,
@@ -3636,7 +3637,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 400.0,
         normalPool: 500.0,
@@ -4374,7 +4375,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 700.0,
         normalPool: 800.0,
@@ -4450,7 +4451,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 125,
         normalPool: 225.0,
@@ -4823,7 +4824,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 1117.0,
@@ -4918,7 +4919,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 301.10,
@@ -4956,7 +4957,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 825.40,
@@ -5290,7 +5291,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 257.0,
@@ -5328,7 +5329,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 620.0,
@@ -5386,7 +5387,7 @@ module.exports = [
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 1439, //minutes
+        refreshInterval: 180, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 795.0,

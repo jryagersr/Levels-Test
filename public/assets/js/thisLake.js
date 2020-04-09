@@ -400,23 +400,27 @@ function buildRiverChart(data, lake) {
     let chartMaxRiver = 0; // y-axis Min elev value
     let chartMinRiverLimit = 0; // y-axis Min elev Limit (for chart)
     let chartMaxRiverLimit = 0; // y-axis Max elev Limit (for chart)
+    let hourlyElev = 0;
 
 
     // Loop through our data for 48 data points if we have it
     // two days worth of data may show the tides in tidal rivers 
-    for (k; k < data.length; k++) {
+    for (k = 1; k < data.length; k++) {
 
-        // if we're past the first entry
-        if (k > 0) {
-            labelBatch.push(data[k - 1].time.substr(0, data[k - 1].time.lastIndexOf(":")) + data[k - 1].time.substr(data[k - 1].time.length - 2, 2));
-            dataRiverBatch.push((data[k - 1].elev).toFixed(2)); // push elev
+        // Set hourlyElev
+        if (k < 2)
+            hourlyElev = ((data[k - 1].elev + data[k].elev) / 2);
+        else
+            hourlyElev = ((data[k - 2].elev + data[k - 1].elev + data[k].elev) / 3);
 
-            if (data[k - 1].elev > chartMaxRiver) // if value is greater than max, replace max
-                chartMaxRiver = data[k - 1].elev; // update Max Elev average
-            if (data[k - 1].elev < chartMinRiver) // if value is less thank min, replace min
-                chartMinRiver = data[k - 1].elev; // update Min Elev average
+        labelBatch.push(data[k - 1].time.substr(0, data[k - 1].time.lastIndexOf(":")) + data[k - 1].time.substr(data[k - 1].time.length - 2, 2));
+        dataRiverBatch.push(hourlyElev.toFixed(2)); // push elev
 
-        }
+        if (data[k - 1].elev > chartMaxRiver) // if value is greater than max, replace max
+            chartMaxRiver = data[k - 1].elev; // update Max Elev average
+        if (data[k - 1].elev < chartMinRiver) // if value is less thank min, replace min
+            chartMinRiver = data[k - 1].elev; // update Min Elev average
+
 
         // when a week of data has been reached stop
         if (labelBatch.length > 47) {
@@ -468,7 +472,7 @@ function buildRiverChart(data, lake) {
                     },
                     ticks: {
                         autoSkip: true,
-                        maxTicksLimit: 24,
+                        maxTicksLimit: 12,
                         fontSize: 10
                     }
                 }],
@@ -667,8 +671,8 @@ function buildTempChart(tempData) {
     // Set y axis limits for Temp Chart
     let minMaxDiff = chartMaxTemp - chartMinTemp;
     if (minMaxDiff < 1) chartGap = minMaxDiff / 2;
-    chartMinTempLimit = Math.round(chartMinTemp) - .25; // set the chart lower limit
-    chartMaxTempLimit = Math.round(chartMaxTemp) + .25; // set the chart upper limit
+    chartMinTempLimit = Math.round(chartMinTemp) - 2; // set the chart lower limit
+    chartMaxTempLimit = Math.round(chartMaxTemp) + 2; // set the chart upper limit
 
     var ctx = document.getElementById('myTempChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
@@ -1723,7 +1727,7 @@ $.ajax({
 
             // If elevation data is updated more than once a day
             // build hourly elevation chart (river tide) chart
-            if (currentLake.refreshInterval < 1439) {
+            if (currentLake.refreshInterval < 180) {
                 buildRiverChart(currentLake.data, currentLake);
                 // build hourly flow chart if flows are available
                 if (currentLake.data[0].flow !== "N/A")
