@@ -123,23 +123,6 @@ function buildElevChart(data, lake) {
     labelBatch.reverse();
     dataElevBatch.reverse();
 
-    // Set axis limits for Elev Chart
-    let elevMaxAboveNP = lake.normalPool < chartMaxElev;
-    let elevMinAboveNP = lake.normalPool < chartMinElev;
-
-    // set the chart upper limit*/
-    if (elevMaxAboveNP)
-        chartMaxElevLimit = Math.ceil(chartMaxElev + (chartMaxElev * .005));
-    else //elevMax is below normal pool 
-        chartMaxElevLimit = Math.ceil(lake.normalPool + (chartMaxElev * .0005));
-
-    if (elevMinAboveNP) // set the chart lower limit
-        chartMinElevLimit = Math.floor(lake.normalPool - (chartMinElev * .0005));
-    else chartMinElevLimit = Math.floor(chartMinElev - (chartMinElev * .005));
-
-    if (chartMaxElevLimit == 0)
-        chartMaxElevLimit = Math.ceil((lake.normalPool + 1) * .0005);
-
     // build elev chart
     var ctx = document.getElementById('myElevChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
@@ -207,8 +190,9 @@ function buildElevChart(data, lake) {
                         fontSize: 14,
                     },
                     ticks: {
-                        min: chartMinElevLimit, // Set chart bottom at 1ft less than min elev value
-                        max: chartMaxElevLimit, // Set chart top at 1ft more than min elev value
+                        min: chartMinElev-2, // Set chart bottom at 1ft less than min elev value
+                        max: chartMaxElev+2, // Set chart top at 1ft more than min elev value
+                        maxTicksLimit: 12,
                         //stepSize: Math.round((chartMaxElev - chartMinElev) / 2), // Set the y-axis step value to  ft.
                         //autoSkip: true,
                         //maxTicksLimit: 8,
@@ -322,12 +306,12 @@ function buildFlowChart(data) {
 
     // Set y axis limits for Flow Chart
     chartMinFlowLimit = 0; // set lower chart limit
-    chartMaxFlowLimit = ((((chartMaxFlow - (chartMaxFlow % 1000)) / 1000) * 1.25) * 1000); // set the chart upper limit
+    chartMaxFlowLimit =  Math.ceil(((((chartMaxFlow - (chartMaxFlow % 1000)) / 1000) * 1.25) * 1000) / 1000) * 1000; // set the chart upper limit
 
-    if (chartMinFlowLimit < 1000) chartMinFlowLimit = 0;
-    //chartMinFlowLimit = 0; // Flow Min limit should just be set to 0
+    if (chartMinFlowLimit < 1000) chartMinFlowLimit = 0;// Flow Min limit should just be set to 0
+
     if (chartMaxFlowLimit < 4000)
-        chartMaxFlowLimit = chartMaxFlow + 500;
+        chartMaxFlowLimit = (Math.ceil(chartMaxFlow / 1000) * 1000) + 1000;
 
 
     var ctx = document.getElementById('myFlowChart').getContext('2d');
@@ -436,8 +420,10 @@ function buildRiverChart(data, lake) {
     let chartGap = Number((minMaxDiff));
     //if (minMaxDiff < 1) chartGap = minMaxDiff;
     if (minMaxDiff > 20) chartGap = Number(.25);
-    chartMinRiverLimit = chartMinRiver - chartGap / 4; // set the chart lower limit
-    chartMaxRiverLimit = chartMaxRiver + chartGap / 4; // set the chart upper limit
+    if (chartGap < .4)
+        chartGap = .35;
+    chartMinRiverLimit = chartMinRiver - chartGap; // set the chart lower limit
+    chartMaxRiverLimit = chartMaxRiver + chartGap; // set the chart upper limit
 
     var ctx = document.getElementById('myRiverChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
@@ -537,12 +523,13 @@ function buildHourlyFlowChart(data, lake) {
     labelBatch.reverse();
     dataFlowBatch.reverse();
 
-    // Set y axis limits for River Chart
-    let chartGap = (chartMaxFlow * .2) + 1;
-    let minMaxDiff = chartMaxFlow - chartMinFlow;
-    if (minMaxDiff < 1 && minMaxDiff !== 0) chartGap = minMaxDiff * 2;
+    // Set y axis limits for hourly Flow Chart
+    let chartGap = chartMaxFlow / 5;
+    chartGap = Math.ceil((chartGap / 1000).toFixed(0)) * 1000;
+    //let minMaxDiff = chartMaxFlow - chartMinFlow;
+    //if (minMaxDiff < 1 && minMaxDiff !== 0) chartGap = minMaxDiff * 2;
     chartMinFlowLimit = 0; // set the chart lower limit
-    chartMaxFlowLimit = Math.round(chartMaxFlow) + Math.round(chartGap); // set the chart upper limit
+    chartMaxFlowLimit = ((Math.ceil(chartMaxFlow/1000) * 1000) + Math.round(chartGap)); // set the chart upper limit
 
     var ctx = document.getElementById('myHourlyFlowChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
@@ -589,11 +576,11 @@ function buildHourlyFlowChart(data, lake) {
                         fontSize: 14,
                     },
                     ticks: {
+                        maxTicksLimit: 12,
                         min: chartMinFlowLimit, // Set chart bottom at 1ft less than min elev value
                         max: chartMaxFlowLimit, // Set chart top at 1ft more than min elev value
-                        //stepSize: Math.round((chartMaxElev - chartMinElev) / 2), // Set the y-axis step value to  ft.
+                        stepSize: chartGap, // Set the y-axis step value to  ft.
                         //autoSkip: true,
-                        //maxTicksLimit: 8,
                     },
                     stacked: false
                 }]
