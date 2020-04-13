@@ -90,7 +90,7 @@ function buildElevChart(data, lake) {
                 chartMaxElev = sumOfElevs / divisor; // update Max Elev average
             if ((sumOfElevs / divisor) < chartMinElev) // if value is less thank min, replace min
                 chartMinElev = sumOfElevs / divisor; // update Min Elev average
-            labelBatch.push(checkDate.substring(0, checkDate.length - 5));
+            labelBatch.push(checkDate);
             dataElevBatch.push((sumOfElevs / divisor).toFixed(2)); // calculate average
             dataNPBatch.push(lake.normalPool); // Normal Pool line batch 
             dataFCBatch.push(lake.topOfFloodControl); // Top of Flood Control Pool line batch
@@ -108,7 +108,7 @@ function buildElevChart(data, lake) {
     }
 
     //push the final day's values after looping
-    labelBatch.push(data[k - 1].date.substring(0, data[k - 1].date.length - 5)); // put final day date value in array
+    labelBatch.push(data[k - 1].date); // put final day date value in array
     dataElevBatch.push((sumOfElevs / divisor).toFixed(2)); // calculate average final day and push
     dataNPBatch.push(lake.normalPool); // Normal Pool line batch 
     dataFCBatch.push(lake.topOfFloodControl); // Normal Pool line batch 
@@ -172,9 +172,9 @@ function buildElevChart(data, lake) {
                 xAxes: [{
                     display: true,
                     scaleLabel: {
-                        display: false,
+                        display: true,
                         labelString: 'Date',
-                        fontSize: 20
+                        fontSize: 14
                     },
                     ticks: {
                         autoSkip: true,
@@ -251,7 +251,7 @@ function buildFlowChart(data) {
                     chartMaxFlow = avgFlow; // set the max flow for calculating Chart y-axis Max later
 
                 // no chartMinFlow, always 0
-                labelBatch.push(data[k - 1].date.substring(0, data[k - 1].date.length - 5));
+                labelBatch.push(data[k - 1].date);
                 dataFlowBatch.push((sumOfFlows / divisor).toFixed(2)); // calculate average
                 sumOfFlows = data[k].flow;
                 divisor = 1;
@@ -292,7 +292,7 @@ function buildFlowChart(data) {
     }
 
     // push the final day's values after looping
-    labelBatch.push(data[k - 1].date.substring(0, data[k - 1].date.length - 5)); // Push final day data Date
+    labelBatch.push(data[k - 1].date); // Push final day data Date
     dataFlowBatch.push((sumOfFlows / divisor).toFixed(2)); // calculate average for final day and push
 
     //check the final day's values for Min and MaxLimit
@@ -340,9 +340,9 @@ function buildFlowChart(data) {
                 xAxes: [{
                     display: true,
                     scaleLabel: {
-                        display: false,
-                        labelString: 'Time',
-                        fontSize: 20
+                        display: true,
+                        labelString: 'Date',
+                        fontSize: 14
                     },
                     ticks: {
                         autoSkip: true,
@@ -397,7 +397,7 @@ function buildRiverChart(data, lake) {
         else
             hourlyElev = ((data[k - 2].elev + data[k - 1].elev + data[k].elev) / 3);
 
-        labelBatch.push(data[k - 1].time.substr(0, data[k - 1].time.lastIndexOf(":")) + data[k - 1].time.substr(data[k - 1].time.length - 2, 2));
+        labelBatch.push(data[k - 1].time.substr(0,data[k - 1].time.length-3));
         dataRiverBatch.push(hourlyElev.toFixed(2)); // push elev
 
         if (data[k - 1].elev > chartMaxRiver) // if value is greater than max, replace max
@@ -452,14 +452,14 @@ function buildRiverChart(data, lake) {
                 xAxes: [{
                     display: true,
                     scaleLabel: {
-                        display: false,
-                        labelString: 'Time',
-                        fontSize: 20
+                        display: true,
+                        labelString: 'Time (of Day)',
+                        fontSize: 14
                     },
                     ticks: {
                         autoSkip: true,
-                        maxTicksLimit: 12,
-                        fontSize: 10
+                        maxTicksLimit: 16,
+                        fontSize: 12
                     }
                 }],
                 yAxes: [{
@@ -472,7 +472,7 @@ function buildRiverChart(data, lake) {
                     ticks: {
                         min: chartMinRiverLimit, // Set chart bottom at 1ft less than min elev value
                         max: chartMaxRiverLimit, // Set chart top at 1ft more than min elev value
-                        stepSize: (minMaxDiff / 1.5).toFixed(2),
+                        stepSize: (minMaxDiff / 1.5).toFixed(1),
                         //autoSkip: true,
                         maxTicksLimit: 4,
                     },
@@ -502,8 +502,8 @@ function buildHourlyFlowChart(data, lake) {
 
         // if we're past the first entry
         if (k > 0) {
-            if (data[k].flow !== "Missing" && data[k].flow !== "N/A" && data.refreshInterval !== 1450) {
-                labelBatch.push(data[k].time.substr(0, data[k].time.lastIndexOf(":")) + data[k].time.substr(data[k].time.length - 2, 2)); // Remove minutes
+                labelBatch.push(data[k - 1].time.substr(0,data[k - 1].time.length-3)); // Remove minutes
+            if (data[k].flow !== "Missing" && data[k].flow !== "N/A" && data.refreshInterval !== 180) {
                 dataFlowBatch.push((data[k].flow).toFixed(2)); // push elev
 
                 if (data[k].flow > chartMaxFlow) // if value is greater than max, replace max
@@ -511,7 +511,7 @@ function buildHourlyFlowChart(data, lake) {
                 if (data[k].flow < chartMinFlow) // if value is less thank min, replace min
                     chartMinFlow = data[k].flow; // update Min Elev average
 
-            }
+            } else dataFlowBatch.push(-99); // push elev
         }
 
         // when a week of data has been reached stop
@@ -558,13 +558,13 @@ function buildHourlyFlowChart(data, lake) {
                 xAxes: [{
                     display: true,
                     scaleLabel: {
-                        display: false,
-                        labelString: 'Date',
-                        fontSize: 20
+                        display: true,
+                        labelString: 'Time (of Day)',
+                        fontSize: 14
                     },
                     ticks: {
                         autoSkip: true,
-                        maxTicksLimit: 24,
+                        maxTicksLimit: 16,
                         fontSize: 10
                     }
                 }],
@@ -635,7 +635,8 @@ function buildTempChart(tempData) {
 
             feelsLikeBatch.push(tempData.ccWxData[k].feelslike);
             dewpointBatch.push(dewPoint); // push dew point
-            labelBatch.push(hour + suffix); // push time
+            //labelBatch.push(hour + suffix); // push time
+            labelBatch.push(hour); // push time
             dataTempBatch.push(tempData.ccWxData[k].temp); // push Temp
 
             if (tempData.ccWxData[k].temp > chartMaxTemp) // if temp value is greater than max, replace max
@@ -701,9 +702,9 @@ function buildTempChart(tempData) {
                 xAxes: [{
                     display: true,
                     scaleLabel: {
-                        display: false,
-                        labelString: 'Time',
-                        fontSize: 20
+                        display: true,
+                        labelString: 'Time (of Day)',
+                        fontSize: 14
                     },
                     ticks: {
                         autoSkip: true,
@@ -760,7 +761,8 @@ function buildHumidityChart(humidityData) {
                 suffix = "AM";
             hour = ((hour + 11) % 12 + 1);
 
-            labelBatch.push(hour + suffix)
+            //labelBatch.push(hour + suffix)
+            labelBatch.push(hour); // push time
             dataHumidityBatch.push(humidityData.ccWxData[k].humidity); // push elev
 
             if (chartMaxHumidity < humidityData.ccWxData[k].humidity)
@@ -808,9 +810,9 @@ function buildHumidityChart(humidityData) {
                 xAxes: [{
                     display: true,
                     scaleLabel: {
-                        display: false,
-                        labelString: 'Time',
-                        fontSize: 20
+                        display: true,
+                        labelString: 'Time (of Day)',
+                        fontSize: 14
                     },
                     ticks: {
                         autoSkip: true,
@@ -869,7 +871,8 @@ function buildBaroChart(baroData) {
             // Convert millibars to inches
             baroData.ccWxData[k].baro = baroData.ccWxData[k].baro * 0.0295301
 
-            labelBatch.push(hour + suffix);
+            labelBatch.push(hour); // push time
+            //labelBatch.push(hour + suffix);
             dataBaroBatch.push(baroData.ccWxData[k].baro); // push elev
 
             if (baroData.ccWxData[k].baro > chartMaxBaro) // if value is greater than max, replace max
@@ -918,9 +921,9 @@ function buildBaroChart(baroData) {
                 xAxes: [{
                     display: true,
                     scaleLabel: {
-                        display: false,
-                        labelString: 'Time',
-                        fontSize: 20
+                        display: true,
+                        labelString: 'Time (of Day)',
+                        fontSize: 14
                     },
                     ticks: {
                         autoSkip: true,
@@ -977,7 +980,8 @@ function buildWindChart(windData) {
                 suffix = "AM";
             hour = ((hour + 11) % 12 + 1);
 
-            labelBatch.push(hour + suffix);
+            labelBatch.push(hour); // push time
+            //labelBatch.push(hour + suffix);
             dataWindBatch.push(windData.ccWxData[k].windspeed); // push wind speeed
 
             if (windData.ccWxData[k].windspeed > chartMaxWind) // if value is greater than max, replace max
@@ -1027,9 +1031,9 @@ function buildWindChart(windData) {
                 xAxes: [{
                     display: true,
                     scaleLabel: {
-                        display: false,
-                        labelString: 'Time',
-                        fontSize: 20,
+                        display: true,
+                        labelString: 'Time (of Day)',
+                        fontSize: 14
                     },
                     ticks: {
                         autoSkip: true,
@@ -1085,7 +1089,8 @@ function buildWindDirectionChart(windData) {
                 suffix = "AM";
             hour = ((hour + 11) % 12 + 1);
 
-            labelBatch.push(hour + suffix);
+            labelBatch.push(hour); // push time
+            //labelBatch.push(hour + suffix);
 
             // check to see if wind direction reported is null
             if (windData.ccWxData[k].winddirection == null) {
@@ -1132,9 +1137,9 @@ function buildWindDirectionChart(windData) {
                 xAxes: [{
                     display: true,
                     scaleLabel: {
-                        display: false,
-                        labelString: 'Time',
-                        fontSize: 20,
+                        display: true,
+                        labelString: 'Time (of Day)',
+                        fontSize: 14
                     },
                     ticks: {
                         autoSkip: true,
@@ -1350,7 +1355,7 @@ $.ajax({
                 }
                 let dateTime = new Date(currentLake.data[x].time);
                 let currentTabDateStamp = dateTime.toLocaleDateString();
-                let currentTabTimeStamp = dateTime.toLocaleTimeString();
+                let currentTabTimeStamp = dateTime.toLocaleTimeString().replace(":00:00 ", "");
                 $("#currentLevel").append(currentLake.data[x].elev);
                 $("#currentDate").append(currentLake.data[x].date);
                 $("#currentTime").append(currentTabDateStamp + " " + currentTabTimeStamp);
@@ -1380,9 +1385,9 @@ $.ajax({
         let ccDate = timeStamp.toLocaleDateString();
 
         $("#currentWeatherConditions").append(currentLake.ccWxData[ccIndex].conditions);
-        $("#currentWeatherTemp").append(currentLake.ccWxData[ccIndex].temp);
+        $("#currentWeatherTemp").append(currentLake.ccWxData[ccIndex].temp.toFixed(0));
         $("#currentWeatherHumidity").append(currentLake.ccWxData[ccIndex].humidity);
-        $("#currentWeatherBarometric").append((currentLake.ccWxData[ccIndex].baro * 0.0295301).toFixed(2));
+        $("#currentWeatherBarometric").append((currentLake.ccWxData[ccIndex].baro * 0.0295301).toFixed(2)); // Convert from mb to inches
         $("#currentWeatherWindSpeed").append(currentLake.ccWxData[ccIndex].windspeed);
         $("#currentWeatherWindDirection").append(currentLake.ccWxData[ccIndex].winddirection);
         $("#currentWeatherDate").append(ccDate + " " + hour + suffix);
@@ -1437,7 +1442,8 @@ $.ajax({
                 entry.time = timestamp.toLocaleTimeString();
 
                 //remove seconds from time
-                entry.time = entry.time.substr(0, entry.time.lastIndexOf(":")) + entry.time.substr(entry.time.length - 2, 2)
+                entry.date = entry.date.substr(0, entry.date.length - 5,);
+                entry.time = entry.time.substr(0, entry.time.indexOf(":")) + ' ' +entry.time.substr(entry.time.length - 2, 2);
                 if (entry.elev !== "N/A" && entry.elev !== "Missing") {
                     entry.elev = Number(entry.elev);
                 };
