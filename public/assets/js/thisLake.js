@@ -190,8 +190,8 @@ function buildElevChart(data, lake) {
                         fontSize: 14,
                     },
                     ticks: {
-                        min: chartMinElev-2, // Set chart bottom at 1ft less than min elev value
-                        max: chartMaxElev+2, // Set chart top at 1ft more than min elev value
+                        min: chartMinElev - 2, // Set chart bottom at 1ft less than min elev value
+                        max: chartMaxElev + 2, // Set chart top at 1ft more than min elev value
                         maxTicksLimit: 12,
                         //stepSize: Math.round((chartMaxElev - chartMinElev) / 2), // Set the y-axis step value to  ft.
                         //autoSkip: true,
@@ -306,9 +306,9 @@ function buildFlowChart(data) {
 
     // Set y axis limits for Flow Chart
     chartMinFlowLimit = 0; // set lower chart limit
-    chartMaxFlowLimit =  Math.ceil(((((chartMaxFlow - (chartMaxFlow % 1000)) / 1000) * 1.25) * 1000) / 1000) * 1000; // set the chart upper limit
+    chartMaxFlowLimit = Math.ceil(((((chartMaxFlow - (chartMaxFlow % 1000)) / 1000) * 1.25) * 1000) / 1000) * 1000; // set the chart upper limit
 
-    if (chartMinFlowLimit < 1000) chartMinFlowLimit = 0;// Flow Min limit should just be set to 0
+    if (chartMinFlowLimit < 1000) chartMinFlowLimit = 0; // Flow Min limit should just be set to 0
 
     if (chartMaxFlowLimit < 4000)
         chartMaxFlowLimit = (Math.ceil(chartMaxFlow / 1000) * 1000) + 1000;
@@ -397,7 +397,7 @@ function buildRiverChart(data, lake) {
         else
             hourlyElev = ((data[k - 2].elev + data[k - 1].elev + data[k].elev) / 3);
 
-        labelBatch.push(data[k - 1].time.substr(0,data[k - 1].time.length-3));
+        labelBatch.push(data[k - 1].time.substr(0, data[k - 1].time.length - 3));
         dataRiverBatch.push(hourlyElev.toFixed(2)); // push elev
 
         if (data[k - 1].elev > chartMaxRiver) // if value is greater than max, replace max
@@ -501,18 +501,18 @@ function buildHourlyFlowChart(data, lake) {
     for (k = 0; k < data.length; k++) {
 
         // if we're past the first entry
-        if (k > 0) {
-                labelBatch.push(data[k - 1].time.substr(0,data[k - 1].time.length-3)); // Remove minutes
-            if (data[k].flow !== "Missing" && data[k].flow !== "N/A" && data.refreshInterval !== 180) {
-                dataFlowBatch.push((data[k].flow).toFixed(2)); // push elev
+        //if (k > 0) {
+        labelBatch.push(data[k].time.substr(0, data[k].time.length - 3)); // Remove minutes
+        if (data[k].flow !== "Missing" && data[k].flow !== "N/A" && data.refreshInterval !== 180) {
+            dataFlowBatch.push((data[k].flow).toFixed(2)); // push elev
 
-                if (data[k].flow > chartMaxFlow) // if value is greater than max, replace max
-                    chartMaxFlow = data[k].flow; // update Max Elev average
-                if (data[k].flow < chartMinFlow) // if value is less thank min, replace min
-                    chartMinFlow = data[k].flow; // update Min Elev average
+            if (data[k].flow > chartMaxFlow) // if value is greater than max, replace max
+                chartMaxFlow = data[k].flow; // update Max Elev average
+            if (data[k].flow < chartMinFlow) // if value is less thank min, replace min
+                chartMinFlow = data[k].flow; // update Min Elev average
 
-            } else dataFlowBatch.push(-99); // push elev
-        }
+        } else dataFlowBatch.push(-99); // push elev
+        //}
 
         // when a week of data has been reached stop
         if (labelBatch.length > 47) {
@@ -529,7 +529,7 @@ function buildHourlyFlowChart(data, lake) {
     //let minMaxDiff = chartMaxFlow - chartMinFlow;
     //if (minMaxDiff < 1 && minMaxDiff !== 0) chartGap = minMaxDiff * 2;
     chartMinFlowLimit = 0; // set the chart lower limit
-    chartMaxFlowLimit = ((Math.ceil(chartMaxFlow/1000) * 1000) + Math.round(chartGap)); // set the chart upper limit
+    chartMaxFlowLimit = ((Math.ceil(chartMaxFlow / 1000) * 1000) + Math.round(chartGap)); // set the chart upper limit
 
     var ctx = document.getElementById('myHourlyFlowChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
@@ -641,12 +641,18 @@ function buildTempChart(tempData) {
 
             if (tempData.ccWxData[k].temp > chartMaxTemp) // if temp value is greater than max, replace max
                 chartMaxTemp = tempData.ccWxData[k].temp; // update Max Temp average
+
             if (tempData.ccWxData[k].feelslike > chartMaxTemp) // if feelslike value is greater than max, replace max
                 chartMaxTemp = tempData.ccWxData[k].feelslike; // update Max Temp average
-            if (tempData.ccWxData[k].feelslike < chartMinTemp) // if feelslike value is less than min, replace max
+
+            if (tempData.ccWxData[k].temp < chartMinTemp) // if temp value is less than min, replace min
                 chartMinTemp = tempData.ccWxData[k].feelslike; // update Min Temp average
-            if (dewPoint < chartMinTemp) // if value is less thank min, replace min
-                chartMinTemp = dewPoint; // update Min Temp average
+
+            if (tempData.ccWxData[k].feelslike < chartMinTemp) // if feelslike value is less than min, replace min
+                chartMinTemp = tempData.ccWxData[k].feelslike; // update Min Temp average
+                
+            //if (dewPoint < chartMinTemp) // if value is less thank min, replace min
+            //chartMinTemp = dewPoint; // update Min Temp average
 
         }
 
@@ -659,8 +665,8 @@ function buildTempChart(tempData) {
     // Set y axis limits for Temp Chart
     let minMaxDiff = chartMaxTemp - chartMinTemp;
     if (minMaxDiff < 1) chartGap = minMaxDiff / 2;
-    chartMinTempLimit = Math.round(chartMinTemp) - 2; // set the chart lower limit 2' below min
-    chartMaxTempLimit = Math.round(chartMaxTemp) + 2; // set the chart upper limit 2' below max
+    chartMinTempLimit = Math.round(chartMinTemp) - .5; // set the chart lower limit 2' below min
+    chartMaxTempLimit = Math.round(chartMaxTemp) + .5; // set the chart upper limit 2' below max
 
     var ctx = document.getElementById('myTempChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
@@ -1442,8 +1448,8 @@ $.ajax({
                 entry.time = timestamp.toLocaleTimeString();
 
                 //remove seconds from time
-                entry.date = entry.date.substr(0, entry.date.length - 5,);
-                entry.time = entry.time.substr(0, entry.time.indexOf(":")) + ' ' +entry.time.substr(entry.time.length - 2, 2);
+                entry.date = entry.date.substr(0, entry.date.length - 5, );
+                entry.time = entry.time.substr(0, entry.time.indexOf(":")) + ' ' + entry.time.substr(entry.time.length - 2, 2);
                 if (entry.elev !== "N/A" && entry.elev !== "Missing") {
                     entry.elev = Number(entry.elev);
                 };
