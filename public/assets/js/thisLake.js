@@ -120,6 +120,12 @@ function buildElevChart(data, lake) {
     if ((sumOfElevs / divisor) < chartMinElev) // if value is less thank min, replace min
         chartMinElev = sumOfElevs / divisor; // update Min Elev average
 
+    if (lake.normalPool < chartMinElev)
+        chartMinElev = lake.normalPool;
+
+    if (lake.normalPool > chartMaxElev)
+    chartMaxElev = lake.normalPool;
+
     labelBatch.reverse();
     dataElevBatch.reverse();
 
@@ -190,8 +196,8 @@ function buildElevChart(data, lake) {
                         fontSize: 14,
                     },
                     ticks: {
-                        min: chartMinElev - 2, // Set chart bottom at 1ft less than min elev value
-                        max: chartMaxElev + 2, // Set chart top at 1ft more than min elev value
+                        min: chartMinElev - 1, // Set chart bottom at 1ft less than min elev value
+                        max: chartMaxElev + 1, // Set chart top at 1ft more than min elev value
                         maxTicksLimit: 12,
                         //stepSize: Math.round((chartMaxElev - chartMinElev) / 2), // Set the y-axis step value to  ft.
                         //autoSkip: true,
@@ -215,91 +221,51 @@ function buildFlowChart(data) {
     let labelBatch = [];
     let dataFlowBatch = [];
     let sumOfFlows = 0;
-    let divisor = 1;
+    let divisor = 0;
     let k = 0; // our iterator after starting flow
     let chartMinFlow = 2000; // y-axis Max Flow value
     let chartMaxFlow = 0; // y-axis Min Flow value
     let chartMinFlowLimit = 0; // y-axis Min Flow value
     let chartMaxFlowLimit = 0; // y-axis Max Flow value
-
     let avgFlow = 0;
-
     let checkDate = data[0].date;
+
     // Loop through our data for 24 data points if we have it
     for (k = 0; k < data.length; k++) {
 
 
-        if (data[k].flow == "Missing") data[k].flow = -99;
-
-        // if the data is available and not "Missing" or "N/A"
-        if (data[k].flow !== "N/A") {
-
-            // if we're past the first entry
-
-            // if we're still on the same day and not on the last entry
-            if (k == 0 || data[k].date === checkDate) {
-
-                // add to our average variables
-                sumOfFlows += data[k].flow;
-                divisor++
-            }
-
-            // else we're on a new day. so push data and reset averages
-            else {
-                avgFlow = sumOfFlows / divisor;
-                if (avgFlow >= chartMaxFlow) // if value is greater than max, replace max
-                    chartMaxFlow = avgFlow; // set the max flow for calculating Chart y-axis Max later
-
-                // no chartMinFlow, always 0
-                labelBatch.push(data[k - 1].date);
-                dataFlowBatch.push((sumOfFlows / divisor).toFixed(2)); // calculate average
-                sumOfFlows = data[k].flow;
-                divisor = 1;
-            }
+        if (data[k].flow == "Missing" || data[k].flow < 0) {
+            console.log("Missing")
+        } else {
+            sumOfFlows += data[k].flow
+            divisor++
 
         }
-        if (data[k].flow == "N/A" && data[k].date !== checkDate) {
-            labelBatch.push(data[k - 1].date.substring(0, data[k - 1].date.length - 5));
-            dataFlowBatch.push((sumOfFlows / divisor).toFixed(2)); // calculate average
 
-            if (data[k].date !== data[k - 1].date) {
-
-                // if we are here, this lake has a plethora of "Missing" and "N/A"
-                // and the date has changed between entries,
-                // we must set the chartMaxFlow 
-                avgFlow = sumOfFlows / divisor;
-                if (avgFlow >= chartMaxFlow) // if value is greater than max, replace max
-                    chartMaxFlow = avgFlow; // set the max flow for calculating Chart y-axis Max later
-                // no chartMinFlow, always 0
-            }
-            if ((data[k].flow == "Missing" || data[k].flow == "N/A"))
-                sumOfFlows = 0
-            else sumOfFlows = data[k].flow;
-            divisor = 1;
-        } else if (data[k].date !== checkDate) {
-
-            // dates are different and flow has good data so, set chartMaxFlow
-            if (avgFlow >= chartMaxFlow) // if value is greater than max, replace max
-                chartMaxFlow = avgFlow; // set the max flow for calculating Chart y-axis Max later
-            // no chartMinFlow, always 0
+        if (data[k].date !== checkDate) {
+            avgFlow = Number((sumOfFlows / divisor).toFixed(2))
+            labelBatch.push(data[k-1].date);
+            dataFlowBatch.push(avgFlow);
+            sumOfFlows = 0;
+            divisor = 0;
             checkDate = data[k].date;
+            if (avgFlow >= chartMaxFlow) // if value is greater than max, replace max
+                chartMaxFlow = avgFlow; // flow for calculating Chart y-axis Max later
+
         }
 
         // when a week of data has been reached stop
-        if (labelBatch.length > 13) {
+        if (labelBatch.length > 14) {
             break;
         }
-    }
 
-    // push the final day's values after looping
-    labelBatch.push(data[k - 1].date); // Push final day data Date
-    dataFlowBatch.push((sumOfFlows / divisor).toFixed(2)); // calculate average for final day and push
+    }
 
     //check the final day's values for Min and MaxLimit
     //if ((sumOfFlows / divisor) <= chartMinFlow)
     //chartMinFlow = (sumOfFlows / divisor);
     if ((sumOfFlows / divisor) >= chartMaxFlow)
-        chartMaxFlow = (sumOfFlows / divisor);
+        chartMaxFlow = Number((sumOfFlows / divisor).toFixed(2));;
 
     labelBatch.reverse();
     dataFlowBatch.reverse();
@@ -393,17 +359,17 @@ function buildRiverChart(data, lake) {
 
         // Set hourlyElev
         if (k < 2)
-            hourlyElev = ((data[k - 1].elev + data[k].elev) / 2);
+            hourlyElev = Number((data[k - 1].elev + data[k].elev) / 2);
         else
-            hourlyElev = ((data[k - 2].elev + data[k - 1].elev + data[k].elev) / 3);
+            hourlyElev = Number((data[k - 2].elev + data[k - 1].elev + data[k].elev) / 3);
 
         labelBatch.push(data[k - 1].time.substr(0, data[k - 1].time.length - 3));
         dataRiverBatch.push(hourlyElev.toFixed(2)); // push elev
 
-        if (data[k - 1].elev > chartMaxRiver) // if value is greater than max, replace max
-            chartMaxRiver = data[k - 1].elev; // update Max Elev average
-        if (data[k - 1].elev < chartMinRiver) // if value is less thank min, replace min
-            chartMinRiver = data[k - 1].elev; // update Min Elev average
+        if (hourlyElev.toFixed(2) > chartMaxRiver) // if value is greater than max, replace max
+            chartMaxRiver = hourlyElev.toFixed(2); // update Max Elev average
+        if (hourlyElev.toFixed(2) < chartMinRiver) // if value is less thank min, replace min
+            chartMinRiver = hourlyElev.toFixed(2); // update Min Elev average
 
 
         // when a week of data has been reached stop
@@ -418,12 +384,16 @@ function buildRiverChart(data, lake) {
     // Set axis limits for River Chart
     let minMaxDiff = Number((chartMaxRiver - chartMinRiver).toFixed(2));
     let chartGap = Number((minMaxDiff));
-    //if (minMaxDiff < 1) chartGap = minMaxDiff;
-    if (minMaxDiff > 20) chartGap = Number(.25);
+
+    if (minMaxDiff > 20)
+        chartGap = Number((minMaxDiff * .1).toFixed(0));
     if (chartGap < .4)
         chartGap = .35;
-    chartMinRiverLimit = chartMinRiver - chartGap; // set the chart lower limit
-    chartMaxRiverLimit = chartMaxRiver + chartGap; // set the chart upper limit
+
+    chartMaxRiverLimit = Number(chartMaxRiver) + chartGap; // set the chart upper limit
+
+    chartMinRiverLimit = Number(chartMinRiver) - chartGap; // set the chart lower limit
+
 
     var ctx = document.getElementById('myRiverChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
@@ -650,7 +620,7 @@ function buildTempChart(tempData) {
 
             if (tempData.ccWxData[k].feelslike < chartMinTemp) // if feelslike value is less than min, replace min
                 chartMinTemp = tempData.ccWxData[k].feelslike; // update Min Temp average
-                
+
             //if (dewPoint < chartMinTemp) // if value is less thank min, replace min
             //chartMinTemp = dewPoint; // update Min Temp average
 
@@ -665,8 +635,8 @@ function buildTempChart(tempData) {
     // Set y axis limits for Temp Chart
     let minMaxDiff = chartMaxTemp - chartMinTemp;
     if (minMaxDiff < 1) chartGap = minMaxDiff / 2;
-    chartMinTempLimit = Math.round(chartMinTemp) - .5; // set the chart lower limit 2' below min
-    chartMaxTempLimit = Math.round(chartMaxTemp) + .5; // set the chart upper limit 2' below max
+    chartMinTempLimit = Math.round(chartMinTemp) - .75; // set the chart lower limit 2' below min
+    chartMaxTempLimit = Math.round(chartMaxTemp) + .75; // set the chart upper limit 2' below max
 
     var ctx = document.getElementById('myTempChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);

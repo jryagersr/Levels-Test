@@ -687,10 +687,10 @@ module.exports = [
         refreshInterval: 60, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 1318.26, // 1329ft but data reported as a delta to full pool
-        normalPool: 1329.0,
+        normalPool: 1325.76,
         lat: 38.987617,
         long: -122.717792,
-        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=11439000&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
+        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=11450000&period=PT168H&parameterCd=00065&siteType=LK&siteStatus=all",
         flowURL: "",
         href: "/lakes/clear",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
@@ -2891,7 +2891,7 @@ module.exports = [
         dataSource: ["loadAds"], // array of calls to make to retrieve data
     },
     {
-        bodyOfWater: "Belhaven", // lake name
+        bodyOfWater: "Belhaven (Pungo River)", // lake name
         state: ["North Carolina"],
         data: [],
         ccWxData: [],
