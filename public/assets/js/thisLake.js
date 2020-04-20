@@ -116,9 +116,9 @@ function buildElevChart(data, lake) {
 
     //check the final day's values for Min and MaxLimit
     if ((sumOfElevs / divisor) > chartMaxElev) // if value is greater than max, replace max
-        chartMaxElev = sumOfElevs / divisor; // update Max Elev average
+        chartMaxElev =  Math.ceil(sumOfElevs / divisor); // update Max Elev average
     if ((sumOfElevs / divisor) < chartMinElev) // if value is less thank min, replace min
-        chartMinElev = sumOfElevs / divisor; // update Min Elev average
+        chartMinElev = Math.floor(sumOfElevs / divisor); // update Min Elev average
 
     if (lake.normalPool < chartMinElev)
         chartMinElev = lake.normalPool;
@@ -272,9 +272,9 @@ function buildFlowChart(data) {
 
     // Set y axis limits for Flow Chart
     chartMinFlowLimit = 0; // set lower chart limit
-    chartMaxFlowLimit = Math.ceil(((((chartMaxFlow - (chartMaxFlow % 1000)) / 1000) * 1.25) * 1000) / 1000) * 1000; // set the chart upper limit
+    chartMaxFlowLimit = Math.round(((((chartMaxFlow - (chartMaxFlow % 1000)) / 1000) * 1.25) * 1000) / 1000) * 1000; // set the chart upper limit
 
-    if (chartMinFlowLimit < 1000) chartMinFlowLimit = 0; // Flow Min limit should just be set to 0
+    //if (chartMinFlowLimit < 1000) chartMinFlowLimit = 0; // Flow Min limit should just be set to 0
 
     if (chartMaxFlowLimit < 4000)
         chartMaxFlowLimit = (Math.ceil(chartMaxFlow / 1000) * 1000) + 1000;
@@ -387,12 +387,12 @@ function buildRiverChart(data, lake) {
 
     if (minMaxDiff > 20)
         chartGap = Number((minMaxDiff * .1).toFixed(0));
-    if (chartGap < .4)
-        chartGap = .35;
+    if (chartGap < 1)
+        chartGap = .05;
 
-    chartMaxRiverLimit = Number(chartMaxRiver) + chartGap; // set the chart upper limit
+    chartMaxRiverLimit = Math.ceil((Number(chartMaxRiver) + chartGap)*10)/10; // set the chart upper limit
 
-    chartMinRiverLimit = Number(chartMinRiver) - chartGap; // set the chart lower limit
+    chartMinRiverLimit = Math.floor((Number(chartMinRiver) - chartGap)*10)/10; // set the chart lower limit
 
 
     var ctx = document.getElementById('myRiverChart').getContext('2d');
@@ -442,9 +442,9 @@ function buildRiverChart(data, lake) {
                     ticks: {
                         min: chartMinRiverLimit, // Set chart bottom at 1ft less than min elev value
                         max: chartMaxRiverLimit, // Set chart top at 1ft more than min elev value
-                        stepSize: (minMaxDiff / 1.5).toFixed(1),
+                        stepSize: (minMaxDiff).toFixed(1),
                         //autoSkip: true,
-                        maxTicksLimit: 4,
+                        maxTicksLimit: 6,
                     },
                     stacked: false
                 }]
@@ -635,8 +635,8 @@ function buildTempChart(tempData) {
     // Set y axis limits for Temp Chart
     let minMaxDiff = chartMaxTemp - chartMinTemp;
     if (minMaxDiff < 1) chartGap = minMaxDiff / 2;
-    chartMinTempLimit = Math.round(chartMinTemp) - .75; // set the chart lower limit 2' below min
-    chartMaxTempLimit = Math.round(chartMaxTemp) + .75; // set the chart upper limit 2' below max
+    chartMinTempLimit = Math.floor(chartMinTemp)-1; // set the chart lower limit 2' below min
+    chartMaxTempLimit = Math.ceil(chartMaxTemp)+1; // set the chart upper limit 2' below max
 
     var ctx = document.getElementById('myTempChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
@@ -865,10 +865,10 @@ function buildBaroChart(baroData) {
     }
 
     // Set y axis limits for Baro Chart
-    let minMaxDiff = chartMaxBaro - chartMinBaro;
-    if (minMaxDiff < 1) chartGap = minMaxDiff / 2;
-    chartMinBaroLimit = chartMinBaro - .01; // set the chart lower limit
-    chartMaxBaroLimit = chartMaxBaro + .01; // set the chart upper limit
+    //let minMaxDiff = chartMaxBaro - chartMinBaro;
+    //if (minMaxDiff < 1) chartGap = minMaxDiff / 2;
+    chartMinBaroLimit = Math.floor(chartMinBaro * 10) / 10 - 0.1; // set the chart lower limit
+    chartMaxBaroLimit = Math.ceil(chartMaxBaro * 10) / 10 + 0.1; // set the chart upper limit
 
     var ctx = document.getElementById('myBaroChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
@@ -978,7 +978,7 @@ function buildWindChart(windData) {
     let minMaxDiff = chartMaxWind - chartMinWind;
     if (minMaxDiff < 1) chartGap = minMaxDiff / 2;
     chartMinWindLimit = 0; // set the chart lower limit
-    chartMaxWindLimit = Math.round(chartMaxWind) + Math.round(chartGap + 1); // set the chart upper limit
+    chartMaxWindLimit = Math.round(chartMaxWind) + Math.round(chartGap); // set the chart upper limit
 
     var ctx = document.getElementById('myWindChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
