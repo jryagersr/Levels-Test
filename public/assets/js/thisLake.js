@@ -196,8 +196,8 @@ function buildElevChart(data, lake) {
                         fontSize: 14,
                     },
                     ticks: {
-                        min: chartMinElev - 1, // Set chart bottom at 1ft less than min elev value
-                        max: chartMaxElev + 1, // Set chart top at 1ft more than min elev value
+                        min: chartMinElev - .5, // Set chart bottom at 1ft less than min elev value
+                        max: chartMaxElev + .5, // Set chart top at 1ft more than min elev value
                         maxTicksLimit: 12,
                         //stepSize: Math.round((chartMaxElev - chartMinElev) / 2), // Set the y-axis step value to  ft.
                         //autoSkip: true,
