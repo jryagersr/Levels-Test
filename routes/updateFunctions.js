@@ -48,7 +48,8 @@ module.exports = {
       }
       diffMins = Math.round((today - lastUpdate) / 60000); // minutes
     }
-    if (diffMins >= refreshInterval) {
+    //If time for an update or the refreshInterval is corrupted
+    if (diffMins >= refreshInterval || currentLake.lastRefresh == "Invalid Date") {
       status = true;
     } else {
       status = false;

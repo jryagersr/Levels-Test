@@ -1,5 +1,3 @@
-let kerrLat = 36.588792;
-let kerrLon = -78.352668;
 let closeRamps = [];
 let nearbyRamps = [];
 let oldDistance = 0;
