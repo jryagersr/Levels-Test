@@ -616,7 +616,7 @@ function buildTempChart(tempData) {
                 chartMaxTemp = tempData.ccWxData[k].feelslike; // update Max Temp average
 
             if (tempData.ccWxData[k].temp < chartMinTemp) // if temp value is less than min, replace min
-                chartMinTemp = tempData.ccWxData[k].feelslike; // update Min Temp average
+                chartMinTemp = tempData.ccWxData[k].temp; // update Min Temp average
 
             if (tempData.ccWxData[k].feelslike < chartMinTemp) // if feelslike value is less than min, replace min
                 chartMinTemp = tempData.ccWxData[k].feelslike; // update Min Temp average

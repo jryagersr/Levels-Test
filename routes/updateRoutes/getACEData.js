@@ -14,8 +14,8 @@ module.exports = {
     let thisLake = currentLake;
 
     request(thisLake.elevURL, function (error, response, body) {
-      if (error) {
-        callback(true, error.code);
+      if (error || body.includes("503 Service Temporarily Unavailable")) {
+        callback(true, "ACE 503 Service Temporarily Unavailable");
       } else {
         let dataErrorTrue = false;
         try {
@@ -58,7 +58,7 @@ module.exports = {
           })
           if (elevTempEntries.length == 0) {
             // send empty array to front end
-            console.log (currentLake.bodyOfWater + " No Elev data from ACE")
+            console.log(currentLake.bodyOfWater + " No Elev data from ACE")
             callback(true, " No Elev data from ACE");
           } else {
 
@@ -136,7 +136,7 @@ module.exports = {
             callback(false, exportData);
           }
         } else {
-          console.log (currentLake.bodyOfWater + " Error with json.Parse on data from ACE")
+          console.log(currentLake.bodyOfWater + " Error with json.Parse on data from ACE")
           callback(true, " Error with json.Parse on data from ACE");
         }
 

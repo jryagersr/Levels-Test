@@ -30,13 +30,13 @@ module.exports = {
                         // find next end of row
                         for (j = j - 5; body.substr(j, 5) !== "</tr>" && j > 0; j--) {}
 
-                        // set timestamp for db
-                        let timestamp = new Date(body.substr(j - 116, 10) + " " + body.substr(j - 97, 8));
+                        // set timeStamp for db
+                        let timeStamp = new Date(body.substr(j - 116, 10) + " " + body.substr(j - 97, 8));
                         let elev = Number(body.substr(j - 77, 5));
 
                         if (elev !== 0) // If elev not 0 (ie, unposted data)
                             data.push({
-                                time: timestamp,
+                                time: timeStamp,
                                 elev: elev,
                                 flow: "N/A"
                             });

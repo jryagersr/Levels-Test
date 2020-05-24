@@ -425,7 +425,7 @@ function updateAllLakes() {
                 case "ACE":
                   ace.getACEData(currentLake, function (error, ACEdata) {
                     if (error) {
-                      console.log(currentLake.bodyOfWater + " ACE data error")
+                      console.log(currentLake.bodyOfWater + " " + ACEdata)
 
                       // if successful return the data
                     } else {
@@ -740,7 +740,7 @@ function updateAllLakes() {
           },
           // 1 second interval between launching a data fetch for the next lake
           // no less than 1 second or possibility of overrunning our weatherman.org limit of 60/min
-          1.000 * 1000); 
+          1.000 * 1000);
       }
     })
 }
