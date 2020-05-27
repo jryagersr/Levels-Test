@@ -447,7 +447,7 @@ module.exports = [
     {
         sponsor: "Catt Old North Final",
         href: "https://www.cattteamtrail.com/divisions/catt-old-north/",
-        src: "/static/assets/img/tournament-banners/catt old north 06202020 falls.png",
+        src: "/static/assets/img/tournament-banners/catt old north 06202020 falls champ.png",
         location: ["falls"],
         type: "tournament",
         startDate: "2020-04-20T00:00:00.0Z",
