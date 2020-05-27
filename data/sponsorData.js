@@ -14,6 +14,15 @@ module.exports = [
         endDate: "2021-01-01T00:00:00.0Z"
     },
     {
+        sponsor: "Auto-Trieve",
+        href: "http://www.luresaver.net/",
+        src: "/static/assets/img/sponsor-banners/auto-trieve banner.png",
+        location: ["all"],
+        type: "logo",
+        startDate: "2020-01-01T00:00:00.0Z",
+        endDate: "2020-12-31T00:10:00.0Z"
+    },
+    {
         sponsor: "Bass For Cash Series",
         href: "https://www.bassforcash.com/",
         src: "/static/assets/img/sponsor-banners/bassforcash banner.png",

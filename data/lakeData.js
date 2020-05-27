@@ -352,7 +352,7 @@ module.exports = [
         refreshInterval: 60, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
-        normalPool: 594.0,
+        normalPool: 807.0,
         topOfFloodControl: 605.0, // guess
         lat: 34.271946,
         long: -87.693886,
