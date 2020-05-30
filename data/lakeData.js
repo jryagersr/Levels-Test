@@ -1112,11 +1112,11 @@ module.exports = [
         wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 60, //minutes
         lastRefresh: "12/31/18", // a Date 
-        seaLevelDelta: 0,
+        seaLevelDelta: 12,
         normalPool: 12.0,
         lat: 26.959730,
         long: -80.790181,
-        elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1839038&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+        elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=5142030&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
         flowURL: "",
         href: "/lakes/okeechobee",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data

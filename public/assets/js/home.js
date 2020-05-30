@@ -68,7 +68,7 @@ $.ajax({
             }
         }
 
-        function findNearbyLakes(userLat, userLon) {
+        function findNearby(userLat, userLon) {
             closeLakes = [];
             // loop through lake data
             lakeData.forEach(function (lake) {
@@ -219,7 +219,7 @@ $.ajax({
             $('#lds-ring').show();
             // run get location function
             getLocation(function (userLat, userLon) {
-                findNearbyLakes(userLat, userLon);
+                findNearby(userLat, userLon);
             });
         });
 
@@ -253,7 +253,7 @@ $.ajax({
                         else {
                             userLat = data.lat;
                             userLon = data.lon;
-                            findNearbyLakes(userLat, userLon);
+                            findNearby(userLat, userLon);
 
                         }
                     });
