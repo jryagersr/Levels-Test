@@ -20,7 +20,7 @@ module.exports = [
         location: ["all"],
         type: "logo",
         startDate: "2020-01-01T00:00:00.0Z",
-        endDate: "2020-12-31T00:10:00.0Z"
+        endDate: "2021-12-31T00:10:00.0Z"
     },
     {
         sponsor: "Bass For Cash Series",

@@ -163,14 +163,14 @@ module.exports = [
             tournaments: [
 
                 {
-                    date: "2020-03-14",
+                    date: "2020-06-13",
                     lake: "Mayo",
                     lakeID: "mayo",
                     ramp: "Triple Springs",
                     state: "NC",
                     txDetail: "T1",
                     resultsLink: "",
-                    entryLink: "https://www.facebook.com/groups/657334777996712/permalink/657734494623407/"
+                    entryLink: "https://www.facebook.com/groups/657334777996712/?ref=group_header"
                 },
                 {
                     date: "2020-03-28",
@@ -180,7 +180,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "T1",
                     resultsLink: "",
-                    entryLink: "https://www.facebook.com/groups/657334777996712/permalink/657734494623407/"
+                    entryLink: "https://www.facebook.com/groups/657334777996712/?ref=group_header"
                 },
                 {
                     date: "2020-04-11",
@@ -190,7 +190,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "T1",
                     resultsLink: "",
-                    entryLink: "https://www.facebook.com/groups/657334777996712/permalink/657734494623407/"
+                    entryLink: "https://www.facebook.com/groups/657334777996712/?ref=group_header"
                 },
                 {
                     date: "2020-05-02",
@@ -200,7 +200,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "T1",
                     resultsLink: "",
-                    entryLink: "https://www.facebook.com/groups/657334777996712/permalink/657734494623407/"
+                    entryLink: "https://www.facebook.com/groups/657334777996712/?ref=group_header"
                 },
                 {
                     date: "2020-06-13",
@@ -210,7 +210,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "T1",
                     resultsLink: "",
-                    entryLink: "https://www.facebook.com/groups/657334777996712/permalink/657734494623407/"
+                    entryLink: "https://www.facebook.com/groups/657334777996712/?ref=group_header"
                 },
                 {
                     date: "2020-10-17",
@@ -220,7 +220,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "T1",
                     resultsLink: "",
-                    entryLink: "https://www.facebook.com/groups/657334777996712/permalink/657734494623407/"
+                    entryLink: "https://www.facebook.com/groups/657334777996712/?ref=group_header"
                 }
             ]
         }, ]
@@ -253,16 +253,6 @@ module.exports = [
                         entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=8&RegionName=R3"
                     },
                     {
-                        date: "2020-04-25",
-                        lake: "Sinclair",
-                        lakeID: "",
-                        ramp: "Dennis Station",
-                        state: "GA",
-                        txDetail: "T1",
-                        resultsLink: "https://americanbassanglers.com/Results/12706.pdf",
-                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=8&RegionName=R3"
-                    },
-                    {
                         date: "2020-06-13",
                         lake: "Oconee",
                         lakeID: "oconee",
@@ -273,13 +263,23 @@ module.exports = [
                         entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=8&RegionName=R3"
                     },
                     {
+                        date: "2020-09-12",
+                        lake: "Sinclair",
+                        lakeID: "sinclair",
+                        ramp: "Dennis Station",
+                        state: "GA",
+                        txDetail: "T1",
+                        resultsLink: "https://americanbassanglers.com/Results/12706.pdf",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=8&RegionName=R3"
+                    },
+                    {
                         date: "2020-10-11",
                         lake: "Eufaula",
                         lakeID: "eufaulaal",
                         ramp: "Lakepoint",
                         state: "GA-TN-AL",
                         txDetail: "T1",
-                        resultsLink: "https://americanbassanglers.com/proddetail.php?prod=12746",
+                        resultsLink: "https://americanbassanglers.com/Results/12746.pdf",
                         entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=8&RegionName=R3"
                     },
                     {
@@ -289,7 +289,7 @@ module.exports = [
                         ramp: "Lakepoint",
                         state: "GA-TN-AL",
                         txDetail: "T1",
-                        resultsLink: "https://americanbassanglers.com/proddetail.php?prod=12746",
+                        resultsLink: "https://americanbassanglers.com/Results/12746.pdf",
                         entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=8&RegionName=R3"
                     }
 
@@ -320,7 +320,17 @@ module.exports = [
                         entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=2&RegionName=R3"
                     },
                     {
-                        date: "2020-04-18",
+                        date: "2020-06-27",
+                        lake: "Logan Martin",
+                        lakeID: "eufaulaal",
+                        ramp: "Lakeside",
+                        state: "AL",
+                        txDetail: "T1",
+                        resultsLink: "https://americanbassanglers.com/Results/12683.pdf",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=2&RegionName=R3"
+                    },
+                    {
+                        date: "2020-08-29",
                         lake: "Eufaula",
                         lakeID: "eufaulaal",
                         ramp: "Lakepoint",
@@ -363,27 +373,7 @@ module.exports = [
                         ramp: "Pinnacle",
                         state: "NC",
                         txDetail: "T1",
-                        resultsLink: "",
-                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=5&RegionName=R4"
-                    },
-                    {
-                        date: "2020-05-09",
-                        lake: "Badin",
-                        lakeID: "badin",
-                        ramp: "Circle Drive",
-                        state: "SC",
-                        txDetail: "T2",
-                        resultsLink: "",
-                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=5&RegionName=R4"
-                    },
-                    {
-                        date: "2020-05-30",
-                        lake: "Norman",
-                        lakeID: "norman",
-                        ramp: "Pinnacle",
-                        state: "NC",
-                        txDetail: "T3",
-                        resultsLink: "",
+                        resultsLink: "https://americanbassanglers.com/Results/12692.pdf",
                         entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=5&RegionName=R4"
                     },
                     {
@@ -393,7 +383,27 @@ module.exports = [
                         ramp: "Tamarac",
                         state: "NC",
                         txDetail: "T4",
-                        resultsLink: "",
+                        resultsLink: "https://americanbassanglers.com/Results/12695.pdf",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=5&RegionName=R4"
+                    },
+                    {
+                        date: "2020-06-21",
+                        lake: "High Rock",
+                        lakeID: "highrock",
+                        ramp: "Tamarac",
+                        state: "NC",
+                        txDetail: "T4",
+                        resultsLink: "https://americanbassanglers.com/Results/12693.pdf",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=5&RegionName=R4"
+                    },
+                    {
+                        date: "2020-08-15",
+                        lake: "Norman",
+                        lakeID: "norman",
+                        ramp: "Pinnacle",
+                        state: "NC",
+                        txDetail: "T1",
+                        resultsLink: "https://americanbassanglers.com/Results/12694.pdf",
                         entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=5&RegionName=R4"
                     },
                     {
@@ -403,7 +413,17 @@ module.exports = [
                         ramp: "Ebenezer",
                         state: "NC",
                         txDetail: "Championship",
-                        resultsLink: "",
+                        resultsLink: "https://americanbassanglers.com/Results/12747.pdf",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=5&RegionName=R4"
+                    },
+                    {
+                        date: "2020-09-27",
+                        lake: "Wylie",
+                        lakeID: "wylie",
+                        ramp: "Ebenezer",
+                        state: "NC",
+                        txDetail: "Championship",
+                        resultsLink: "https://americanbassanglers.com/Results/12747.pdf",
                         entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=5&RegionName=R4"
                     }
                 ]
@@ -490,16 +510,6 @@ module.exports = [
                         entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=9&RegionName=R4"
                     },
                     {
-                        date: "2020-04-25",
-                        lake: "Clarks Hill",
-                        lakeID: "clarkshill",
-                        ramp: "Dorn Boating Facility",
-                        state: "SC",
-                        txDetail: "T2",
-                        resultsLink: "https://americanbassanglers.com/Results/12709.pdf",
-                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=9&RegionName=R4"
-                    },
-                    {
                         date: "2020-07-11",
                         lake: "Clarks Hill",
                         lakeID: "clarkshill",
@@ -507,6 +517,16 @@ module.exports = [
                         state: "SC",
                         txDetail: "T3",
                         resultsLink: "https://americanbassanglers.com/Results/12710.pdf",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=9&RegionName=R4"
+                    },
+                    {
+                        date: "2020-07-12",
+                        lake: "Clarks Hill",
+                        lakeID: "clarkshill",
+                        ramp: "Dorn Boating Facility",
+                        state: "SC",
+                        txDetail: "T2",
+                        resultsLink: "https://americanbassanglers.com/Results/12709.pdf",
                         entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=9&RegionName=R4"
                     },
                     {
@@ -556,23 +576,23 @@ module.exports = [
                         entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=7&RegionName=R5"
                     },
                     {
-                        date: "2020-03-28",
-                        lake: "Okeechobee",
-                        lakeID: "okeechobee",
-                        ramp: "Roland Martin",
-                        state: "FL",
-                        txDetail: "T1",
-                        resultsLink: "https://americanbassanglers.com/Results/12702.pdf",
-                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=7&RegionName=R5"
-                    },
-                    {
-                        date: "2020-05-16",
+                        date: "2020-07-25",
                         lake: "Okeechobee",
                         lakeID: "okeechobee",
                         ramp: "Scott Driver",
                         state: "FL",
                         txDetail: "T1",
                         resultsLink: "https://americanbassanglers.com/Results/12703.pdf",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=7&RegionName=R5"
+                    },
+                    {
+                        date: "2020-09-26",
+                        lake: "Okeechobee",
+                        lakeID: "okeechobee",
+                        ramp: "Roland Martin",
+                        state: "FL",
+                        txDetail: "T1",
+                        resultsLink: "https://americanbassanglers.com/Results/12702.pdf",
                         entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=7&RegionName=R5"
                     },
                     {
@@ -603,33 +623,23 @@ module.exports = [
                 tournaments: [
 
                     {
-                        date: "2020-03-21",
-                        lake: "Kerr",
-                        lakeID: "kerr",
-                        ramp: "NutBush",
-                        state: "NC-VA",
-                        txDetail: "T1",
-                        resultsLink: "",
-                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=19&RegionName=R8"
-                    },
-                    {
-                        date: "2020-05-02",
-                        lake: "Gaston",
-                        lakeID: "gaston",
-                        ramp: "Summit",
-                        state: "NC-VA",
-                        txDetail: "T4",
-                        resultsLink: "",
-                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=19&RegionName=R8"
-                    },
-                    {
                         date: "2020-06-27",
                         lake: "Kerr",
                         lakeID: "kerr",
                         ramp: "NutBush",
                         state: "NC-VA",
+                        txDetail: "T1",
+                        resultsLink: "https://americanbassanglers.com/Results/12732.pdf",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=19&RegionName=R8"
+                    },
+                    {
+                        date: "2020-06-28",
+                        lake: "Kerr",
+                        lakeID: "kerr",
+                        ramp: "NutBush",
+                        state: "NC-VA",
                         txDetail: "T3",
-                        resultsLink: "",
+                        resultsLink: "https://americanbassanglers.com/Results/12733.pdf",
                         entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=19&RegionName=R8"
                     },
                     {
@@ -639,7 +649,17 @@ module.exports = [
                         ramp: "Smallwood SP",
                         state: "VA",
                         txDetail: "T2",
-                        resultsLink: "",
+                        resultsLink: "https://americanbassanglers.com/Results/12734.pdf",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=19&RegionName=R8"
+                    },
+                    {
+                        date: "2020-08-09",
+                        lake: "Potomac",
+                        lakeID: "potomac",
+                        ramp: "Smallwood SP",
+                        state: "VA",
+                        txDetail: "T2",
+                        resultsLink: "https://americanbassanglers.com/Results/12735.pdf",
                         entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=19&RegionName=R8"
                     },
                     {
@@ -649,14 +669,24 @@ module.exports = [
                         ramp: "Smallwood SP",
                         state: "VA",
                         txDetail: "2-Day Championship",
-                        resultsLink: "",
+                        resultsLink: "https://americanbassanglers.com/Results/12751.pdf",
+                        entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=19&RegionName=R8"
+                    },
+                    {
+                        date: "2020-09-13",
+                        lake: "Potomac",
+                        lakeID: "potomac",
+                        ramp: "Smallwood SP",
+                        state: "VA",
+                        txDetail: "2-Day Championship",
+                        resultsLink: "https://americanbassanglers.com/Results/12751.pdf",
                         entryLink: "https://americanbassanglers.com/Division.php?Circuit=OS&Season=2020&Division=19&RegionName=R8"
                     }
                 ]
             }
         ]
     },
-    {
+   /* {
         organization: "Anglers Choice Marine",
         trails: [{
                 trail: "VA Team Trail",
@@ -841,7 +871,7 @@ module.exports = [
                 ]
             }
         ]
-    },
+    },*/
     {
         organization: "Action Marine",
         trails: [{
@@ -1237,31 +1267,61 @@ module.exports = [
                     entryLink: "https://bigbasstour.com/"
                 },
                 {
-                    date: "2020-05-29",
-                    lake: "Dardanelle",
-                    lakeID: "dardanelle",
-                    ramp: "Dardanelle State Park",
-                    state: "AR",
+                    date: "2020-09-25",
+                    lake: "Norman",
+                    lakeID: "norman",
+                    ramp: "Queens",
+                    state: "NC",
                     txDetail: "",
                     resultsLink: "https://bigbasstour.com/results/",
                     entryLink: "https://bigbasstour.com/"
                 },
                 {
-                    date: "2020-05-30",
-                    lake: "Dardanelle",
-                    lakeID: "dardanelle",
-                    ramp: "Dardanelle State Park",
-                    state: "AR",
+                    date: "2020-09-26",
+                    lake: "Norman",
+                    lakeID: "norman",
+                    ramp: "Queens",
+                    state: "NC",
                     txDetail: "",
                     resultsLink: "https://bigbasstour.com/results/",
                     entryLink: "https://bigbasstour.com/"
                 },
                 {
-                    date: "2020-05-31",
-                    lake: "Dardanelle",
-                    lakeID: "dardanelle",
-                    ramp: "Dardanelle State Park",
-                    state: "AR",
+                    date: "2020-09-27",
+                    lake: "Norman",
+                    lakeID: "norman",
+                    ramp: "Queens",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "https://bigbasstour.com/results/",
+                    entryLink: "https://bigbasstour.com/"
+                },
+                {
+                    date: "2020-10-02",
+                    lake: "Murray",
+                    lakeID: "murray",
+                    ramp: "Dreher Island",
+                    state: "SC",
+                    txDetail: "",
+                    resultsLink: "https://bigbasstour.com/results/",
+                    entryLink: "https://bigbasstour.com/"
+                },
+                {
+                    date: "2020-10-03",
+                    lake: "Murray",
+                    lakeID: "murray",
+                    ramp: "Dreher Island",
+                    state: "SC",
+                    txDetail: "",
+                    resultsLink: "https://bigbasstour.com/results/",
+                    entryLink: "https://bigbasstour.com/"
+                },
+                {
+                    date: "2020-10-04",
+                    lake: "Murray",
+                    lakeID: "murray",
+                    ramp: "Dreher Island",
+                    state: "SC",
                     txDetail: "",
                     resultsLink: "https://bigbasstour.com/results/",
                     entryLink: "https://bigbasstour.com/"
@@ -1325,6 +1385,66 @@ module.exports = [
                     txDetail: "",
                     resultsLink: "https://bigbasstour.com/results/",
                     entryLink: "https://bigbasstour.com/"
+                },
+                {
+                    date: "2020-10-23",
+                    lake: "Smith Mountain",
+                    lakeID: "smithmountain",
+                    ramp: "Crazy Horse",
+                    state: "VA",
+                    txDetail: "",
+                    resultsLink: "https://bigbasstour.com/results/",
+                    entryLink: "https://bigbasstour.com/"
+                },
+                {
+                    date: "2020-10-24",
+                    lake: "Smith Mountain",
+                    lakeID: "smithmountain",
+                    ramp: "Crazy Horse",
+                    state: "VA",
+                    txDetail: "",
+                    resultsLink: "https://bigbasstour.com/results/",
+                    entryLink: "https://bigbasstour.com/"
+                },
+                {
+                    date: "2020-10-25",
+                    lake: "Smith Mountain",
+                    lakeID: "smithmountain",
+                    ramp: "Crazy Horse",
+                    state: "VA",
+                    txDetail: "",
+                    resultsLink: "https://bigbasstour.com/results/",
+                    entryLink: "https://bigbasstour.com/"
+                },
+                {
+                    date: "2020-10-30",
+                    lake: "Table Rock",
+                    lakeID: "tablerock",
+                    ramp: "Long Creek",
+                    state: "MO",
+                    txDetail: "",
+                    resultsLink: "https://bigbasstour.com/results/",
+                    entryLink: "https://bigbasstour.com/"
+                },
+                {
+                    date: "2020-10-31",
+                    lake: "Table Rock",
+                    lakeID: "tablerock",
+                    ramp: "Long Creek",
+                    state: "MO",
+                    txDetail: "",
+                    resultsLink: "https://bigbasstour.com/results/",
+                    entryLink: "https://bigbasstour.com/"
+                },
+                {
+                    date: "2020-11-01",
+                    lake: "Table Rock",
+                    lakeID: "tablerock",
+                    ramp: "Long Creek",
+                    state: "MO",
+                    txDetail: "",
+                    resultsLink: "https://bigbasstour.com/results/",
+                    entryLink: "https://bigbasstour.com/"
                 }
             ]
         }]
@@ -1345,7 +1465,7 @@ module.exports = [
                     resultsLink: "http://bojanglesproam.com/Schedule.html",
                     entryLink: "http://bojanglesproam.com/index.html"
                 },
-                {
+               /* {
                     date: "2020-04-04",
                     lake: "Sutton",
                     lakeID: "",
@@ -1364,7 +1484,7 @@ module.exports = [
                     txDetail: "",
                     resultsLink: "http://bojanglesproam.com/Schedule.html",
                     entryLink: "http://bojanglesproam.com/index.html"
-                },
+                },*/
                 {
                     date: "2020-05-16",
                     lake: "Chowan River",
@@ -1414,6 +1534,16 @@ module.exports = [
                     txDetail: "",
                     resultsLink: "http://bojanglesproam.com/Schedule.html",
                     entryLink: "http://bojanglesproam.com/index.html"
+                },
+                {
+                    date: "2020-09-12",
+                    lake: "TBD - Classic Championship",
+                    lakeID: "",
+                    ramp: "TBD",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "http://bojanglesproam.com/Schedule.html",
+                    entryLink: "http://bojanglesproam.com/index.html"
                 }
             ]
         }]
@@ -1425,7 +1555,7 @@ module.exports = [
             tournaments: [
 
                 {
-                    date: "2020-04-14",
+                    date: "2020-05-24",
                     lake: "U Chesapeake Bay",
                     lakeID: "",
                     ramp: "Anchor Marine",
@@ -1435,7 +1565,7 @@ module.exports = [
                     entryLink: "http://www.chestercountybassmasters.com/forums/index.php?board=6.0"
                 },
                 {
-                    date: "2020-05-02",
+                    date: "2020-06-06",
                     lake: "U Chesapeake Bay",
                     lakeID: "",
                     ramp: "Anchor Marine",
@@ -1484,7 +1614,7 @@ module.exports = [
                 tournaments: [
 
                     {
-                        date: "2020-06-6",
+                        date: "2020-11-7",
                         lake: "Kerr",
                         lakeID: "kerr",
                         ramp: "Nutbush",
@@ -1494,7 +1624,7 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-championship/"
                     },
                     {
-                        date: "2020-06-7",
+                        date: "2020-06-8",
                         lake: "Kerr",
                         lakeID: "kerr",
                         ramp: "Nutbush",
@@ -1515,26 +1645,6 @@ module.exports = [
                         lakeID: "wylie",
                         ramp: "Buster Boyd",
                         state: "NC-SC",
-                        txDetail: "Phantom Outdoors",
-                        resultsLink: "",
-                        entryLink: "https://www.cattteamtrail.com/divisions/phantom-outdoors-invitational/"
-                    },
-                    {
-                        date: "2020-04-25",
-                        lake: "High Rock",
-                        lakeID: "highrock",
-                        ramp: "Tamarac",
-                        state: "NC",
-                        txDetail: "Phantom Outdoors",
-                        resultsLink: "",
-                        entryLink: "https://www.cattteamtrail.com/divisions/phantom-outdoors-invitational/"
-                    },
-                    {
-                        date: "2020-05-25",
-                        lake: "James Rvr",
-                        lakeID: "jamesriver",
-                        ramp: "Osbourne",
-                        state: "NC",
                         txDetail: "Phantom Outdoors",
                         resultsLink: "",
                         entryLink: "https://www.cattteamtrail.com/divisions/phantom-outdoors-invitational/"
@@ -1568,6 +1678,26 @@ module.exports = [
                         txDetail: "Phantom Outdoors",
                         resultsLink: "",
                         entryLink: "https://www.cattteamtrail.com/divisions/phantom-outdoors-invitational/"
+                    },
+                    {
+                        date: "2020-0x-xx",
+                        lake: "James Rvr",
+                        lakeID: "jamesriver",
+                        ramp: "Osbourne",
+                        state: "NC",
+                        txDetail: "Phantom Outdoors",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/phantom-outdoors-invitational/"
+                    },
+                    {
+                        date: "2021-04-25",
+                        lake: "High Rock",
+                        lakeID: "highrock",
+                        ramp: "Tamarac",
+                        state: "NC",
+                        txDetail: "Phantom Outdoors",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/phantom-outdoors-invitational/"
                     }
                 ]
             },
@@ -1586,36 +1716,6 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-anna/"
                     },
                     {
-                        date: "2020-03-21",
-                        lake: "Anna",
-                        lakeID: "anna",
-                        ramp: "Sturgeon Creek",
-                        state: "VA",
-                        txDetail: "Qualifier 1",
-                        resultsLink: "",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-anna/"
-                    },
-                    {
-                        date: "2020-04-11",
-                        lake: "Anna",
-                        lakeID: "anna",
-                        ramp: "Sturgeon Creek",
-                        state: "VA",
-                        txDetail: "Qualifier 1",
-                        resultsLink: "",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-anna/"
-                    },
-                    {
-                        date: "2020-05-02",
-                        lake: "Anna",
-                        lakeID: "anna",
-                        ramp: "Sturgeon Creek",
-                        state: "VA",
-                        txDetail: "Qualifier 1",
-                        resultsLink: "",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-anna/"
-                    },
-                    {
                         date: "2020-05-30",
                         lake: "Anna",
                         lakeID: "anna",
@@ -1625,6 +1725,26 @@ module.exports = [
                         resultsLink: "",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-anna/"
                     },
+                    {
+                        date: "2020-06-13",
+                        lake: "Anna",
+                        lakeID: "anna",
+                        ramp: "Sturgeon Creek",
+                        state: "VA",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-anna/"
+                    },
+                    {
+                        date: "2020-06-27",
+                        lake: "Anna",
+                        lakeID: "anna",
+                        ramp: "Sturgeon Creek",
+                        state: "VA",
+                        txDetail: "Final",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-anna/"
+                    }
                 ]
             },
             {
@@ -1632,38 +1752,19 @@ module.exports = [
                 tournaments: [
 
                     {
-                        date: "2020-03-28",
-                        lake: "Roanoke",
-                        lakeID: "roanaoke45",
-                        ramp: "Water Street",
-                        state: "NC",
-                        txDetail: "",
-                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-east/",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-east/"
-                    },
-                    {
-                        date: "2020-04-25",
-                        lake: "Pamlico Rvr",
-                        ramp: "Washington",
-                        state: "NC",
-                        txDetail: "",
-                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-east/",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-east/"
-                    },
-                    {
-                        date: "2020-05-30",
-                        lake: "Roanoke",
-                        lakeID: "roanaoke45",
-                        ramp: "Water Street",
-                        state: "NC",
-                        txDetail: "",
-                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-east/",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-east/"
-                    },
-                    {
                         date: "2020-06-20",
                         lake: "Pamlico Rvr",
                         ramp: "Washington",
+                        state: "NC",
+                        txDetail: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-east/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-east/"
+                    },
+                    {
+                        date: "2020-06-27",
+                        lake: "Roanoke",
+                        lakeID: "roanaoke45",
+                        ramp: "Water Street",
                         state: "NC",
                         txDetail: "",
                         resultsLink: "https://www.cattteamtrail.com/divisions/catt-east/",
@@ -1730,7 +1831,7 @@ module.exports = [
                         lakeID: "gaston",
                         ramp: "Summit",
                         state: "NC",
-                        txDetail: "Qualifier 1",
+                        txDetail: "Qualifier 1 Postponed",
                         resultsLink: "https://www.cattteamtrail.com/divisions/catt-lake-gaston/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-gaston/"
                     },
@@ -1755,7 +1856,7 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-gaston/"
                     },
                     {
-                        date: "2020-09-16",
+                        date: "2020-09-06",
                         lake: "Gaston",
                         lakeID: "gaston",
                         ramp: "Summit",
@@ -1766,6 +1867,16 @@ module.exports = [
                     },
                     {
                         date: "2020-10-17",
+                        lake: "Gaston",
+                        lakeID: "gaston",
+                        ramp: "Summit",
+                        state: "NC",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-lake-gaston/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-gaston/"
+                    },
+                    {
+                        date: "2020-10-18",
                         lake: "Gaston",
                         lakeID: "gaston",
                         ramp: "Summit",
@@ -1803,7 +1914,7 @@ module.exports = [
                         ramp: "Osborne",
                         state: "VA",
                         txDetail: "Gold",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-james-river/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-james-river/"
                     },
                     {
@@ -1813,7 +1924,7 @@ module.exports = [
                         ramp: "Osborne",
                         state: "VA",
                         txDetail: "Gold",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-james-river/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-james-river/"
                     },
                     {
@@ -1823,7 +1934,7 @@ module.exports = [
                         ramp: "Osborne",
                         state: "VA",
                         txDetail: "Gold",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-james-river/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-james-river/"
                     },
                     {
@@ -1833,7 +1944,7 @@ module.exports = [
                         ramp: "Osborne",
                         state: "VA",
                         txDetail: "Gold",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-james-river/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-james-river/"
                     },
                     {
@@ -1843,7 +1954,7 @@ module.exports = [
                         ramp: "Osborne",
                         state: "VA",
                         txDetail: "Gold",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-james-river/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-james-river/"
                     },
                     {
@@ -1853,7 +1964,7 @@ module.exports = [
                         ramp: "Osborne",
                         state: "VA",
                         txDetail: "Gold",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-james-river/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-james-river/"
                     },
                     {
@@ -1863,7 +1974,7 @@ module.exports = [
                         ramp: "Osborne",
                         state: "VA",
                         txDetail: "Gold",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-james-river/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-james-river/"
                     },
                     {
@@ -1873,7 +1984,7 @@ module.exports = [
                         ramp: "Osborne",
                         state: "VA",
                         txDetail: "Final 2-Day",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-james-river/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-james-river/"
                     },
                     {
@@ -1883,7 +1994,7 @@ module.exports = [
                         ramp: "Osborne",
                         state: "VA",
                         txDetail: "Final 2-Day",
-                        resultsLink: "",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-james-river/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-james-river/"
                     }
                 ]
@@ -1923,17 +2034,7 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
                     },
                     {
-                        date: "2020-03-29",
-                        lake: "Kerr",
-                        lakeID: "kerr",
-                        ramp: "Occonneechee",
-                        state: "NC-VA",
-                        txDetail: "Qualifier 1",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-kerr-lake-va-mar-29-2020/",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
-                    },
-                    {
-                        date: "2020-04-19",
+                        date: "2020-06-13",
                         lake: "Kerr",
                         lakeID: "kerr",
                         ramp: "Occonneechee",
@@ -1943,7 +2044,7 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
                     },
                     {
-                        date: "2020-04-26",
+                        date: "2020-06-27",
                         lake: "Kerr",
                         lakeID: "kerr",
                         ramp: "Occonneechee",
@@ -2035,7 +2136,7 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
                     },
                     {
-                        date: "2020-03-28",
+                        date: "2020-06-14",
                         lake: "Jordan",
                         lakeID: "jordan",
                         ramp: "Farrington",
@@ -2045,7 +2146,7 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
                     },
                     {
-                        date: "2020-04-04",
+                        date: "2020-07-12",
                         lake: "Falls",
                         lakeID: "falls",
                         ramp: "Ledge Rock",
@@ -2055,7 +2156,7 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
                     },
                     {
-                        date: "2020-04-18",
+                        date: "2020-08-02",
                         lake: "Jordan",
                         lakeID: "jordan",
                         ramp: "Farrington",
@@ -2065,7 +2166,7 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
                     },
                     {
-                        date: "2020-05-17",
+                        date: "2020-09-19",
                         lake: "Kerr",
                         lakeID: "kerr",
                         ramp: "Flemingtown",
@@ -2075,20 +2176,20 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
                     },
                     {
-                        date: "2020-05-30",
-                        lake: "Shearon Harris",
-                        lakeID: "shearonharris",
-                        ramp: "Crosspoint",
+                        date: "2020-10-03",
+                        lake: "Falls",
+                        lakeID: "falls",
+                        ramp: "Ledge Rock",
                         state: "NC",
                         txDetail: "Qualifier 6",
                         resultsLink: "https://www.cattteamtrail.com/news/tournament-results-old-north-harris-lake-nc-open-may-30-2020/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
                     },
                     {
-                        date: "2020-06-20",
-                        lake: "Falls",
-                        lakeID: "falls",
-                        ramp: "Ledge Rock",
+                        date: "2020-10-17",
+                        lake: "Jordan",
+                        lakeID: "jordan",
+                        ramp: "Farrington",
                         state: "NC",
                         txDetail: "Final",
                         resultsLink: "https://www.cattteamtrail.com/news/tournament-results-old-north-falls-lake-nc-open-jun-20-2020/",
@@ -2101,9 +2202,29 @@ module.exports = [
                 tournaments: [
 
                     {
-                        date: "2020-03-22",
+                        date: "2020-05-31",
+                        lake: "Yeopim",
+                        lakeID: "littleriver",
+                        ramp: "Bethel Fishing Center",
+                        state: "NC",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-tidewater/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-tidewater/"
+                    },
+                    {
+                        date: "2020-06-14",
+                        lake: "North River",
+                        lakeID: "littleriver",
+                        ramp: "Waterlilly",
+                        state: "NC",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-tidewater/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-tidewater/"
+                    },
+                    {
+                        date: "2020-06-28",
                         lake: "Perquimans",
-                        lakeID: "roanoke45",
+                        lakeID: "littleriver",
                         ramp: "New Wildlife",
                         state: "NC",
                         txDetail: "Qualifier 1",
@@ -2111,28 +2232,18 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-tidewater/"
                     },
                     {
-                        date: "2020-04-05",
-                        lake: "Pasquotank",
-                        lakeID: "roanoke45",
-                        ramp: "City Ramp",
+                        date: "2020-07-19",
+                        lake: "Chowan",
+                        lakeID: "chowanwf",
+                        ramp: "Shoups",
                         state: "NC",
                         txDetail: "Qualifier 1",
                         resultsLink: "https://www.cattteamtrail.com/divisions/catt-tidewater/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-tidewater/"
                     },
                     {
-                        date: "2020-04-19",
-                        lake: "North Landing",
-                        lakeID: "roanoke45",
-                        ramp: "Pungo Ferry",
-                        state: "NC",
-                        txDetail: "Qualifier 1",
-                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-tidewater/",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-tidewater/"
-                    },
-                    {
-                        date: "2020-05-03",
-                        lake: "North Landing",
+                        date: "2020-08-23",
+                        lake: "TBD",
                         lakeID: "roanoke45",
                         ramp: "Waterlilly",
                         state: "NC",
@@ -2141,19 +2252,9 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-tidewater/"
                     },
                     {
-                        date: "2020-05-17",
-                        lake: "Chowan",
-                        lakeID: "roanoke45",
-                        ramp: "City Ramp",
-                        state: "NC",
-                        txDetail: "Qualifier 1",
-                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-tidewater/",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-tidewater/"
-                    },
-                    {
                         date: "2020-05-31",
                         lake: "Perquimans",
-                        lakeID: "roanoke45",
+                        lakeID: "littleriver",
                         ramp: "New Wildlife",
                         state: "NC",
                         txDetail: "Qualifier 1",
@@ -2185,57 +2286,7 @@ module.exports = [
                         txDetail: "Qualifier 1",
                         resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-wylie-sc-feb-29-2020/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wylie/"
-                    },
-                    {
-                        date: "2020-03-14",
-                        lake: "Wylie",
-                        lakeID: "wylie",
-                        ramp: "Buster Boyd",
-                        state: "SC",
-                        txDetail: "Qualifier 1",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-wylie-sc-mar-14-2020/",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wylie/"
-                    },
-                    {
-                        date: "2020-03-21",
-                        lake: "Wylie",
-                        lakeID: "wylie",
-                        ramp: "Buster Boyd",
-                        state: "SC",
-                        txDetail: "Qualifier 1",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-wylie-sc-mar-21-2020/",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wylie/"
-                    },
-                    {
-                        date: "2020-04-11",
-                        lake: "Wylie",
-                        lakeID: "wylie",
-                        ramp: "Buster Boyd",
-                        state: "SC",
-                        txDetail: "Qualifier 1",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-wylie-sc-apr-11-2020/",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wylie/"
-                    },
-                    {
-                        date: "2020-04-25",
-                        lake: "Wylie",
-                        lakeID: "wylie",
-                        ramp: "Buster Boyd",
-                        state: "SC",
-                        txDetail: "Qualifier 1",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-wylie-sc-apr-25-2020/",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wylie/"
-                    },
-                    {
-                        date: "2020-05-16",
-                        lake: "Wylie",
-                        lakeID: "wylie",
-                        ramp: "Buster Boyd",
-                        state: "SC",
-                        txDetail: "Qualifier 1",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-lake-wylie-sc-may-16-2020/",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-lake-wylie/"
-                    },
+                    }
                 ]
             },
             {
@@ -2253,27 +2304,7 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
                     },
                     {
-                        date: "2020-03-31",
-                        lake: "Badin",
-                        lakeID: "badin",
-                        ramp: "Circle Drive",
-                        state: "NC",
-                        txDetail: "Qualifier",
-                        resultsLink: "",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
-                    },
-                    {
-                        date: "2020-03-28",
-                        lake: "Tuckertown",
-                        lakeID: "tuckertown",
-                        ramp: "Flat Creek",
-                        state: "NC",
-                        txDetail: "Qualifier",
-                        resultsLink: "",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
-                    },
-                    {
-                        date: "2020-04-05",
+                        date: "2020-08-16",
                         lake: "High Rock",
                         lakeID: "highrock",
                         ramp: "Tamarac",
@@ -2283,17 +2314,7 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
                     },
                     {
-                        date: "2020-04-12",
-                        lake: "Tuckertown",
-                        lakeID: "tuckertown",
-                        ramp: "Flat Creek",
-                        state: "NC",
-                        txDetail: "Qualifier",
-                        resultsLink: "",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
-                    },
-                    {
-                        date: "2020-05-03",
+                        date: "2020-08-22",
                         lake: "High Rock",
                         lakeID: "highrock",
                         ramp: "Tamarac",
@@ -2303,7 +2324,7 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
                     },
                     {
-                        date: "2020-05-16",
+                        date: "2020-09-13",
                         lake: "High Rock",
                         lakeID: "highrock",
                         ramp: "Tamarac",
@@ -2313,7 +2334,7 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
                     },
                     {
-                        date: "2020-05-23",
+                        date: "2020-09-19",
                         lake: "High Rock",
                         lakeID: "highrock",
                         ramp: "Tamarac",
@@ -2322,6 +2343,36 @@ module.exports = [
                         resultsLink: "",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
                     },
+                    {
+                        date: "2020-10-03",
+                        lake: "Tuckertown",
+                        lakeID: "tuckertown",
+                        ramp: "Flat Creek",
+                        state: "NC",
+                        txDetail: "Qualifier",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
+                    },
+                    {
+                        date: "2020-10-03",
+                        lake: "Badin",
+                        lakeID: "badin",
+                        ramp: "Circle Drive",
+                        state: "NC",
+                        txDetail: "Qualifier",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
+                    },
+                    {
+                        date: "2020-11-22",
+                        lake: "High Rock",
+                        lakeID: "highrock",
+                        ramp: "Tamarac",
+                        state: "NC",
+                        txDetail: "Final",
+                        resultsLink: "",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-yadkin/"
+                    }
 
                 ]
             },
@@ -2364,7 +2415,7 @@ module.exports = [
                         entryLink: "http://www.carolinasbasschallenge.com/"
                     },
                     {
-                        date: "2020-03-21",
+                        date: "2020-05-09",
                         lake: "Wateree",
                         lakeID: "wateree",
                         ramp: "Clearwater",
@@ -2480,7 +2531,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "Casting for a Cure",
                         resultsLink: "",
-                        entryLink: "https://http://704outdoors.tv/cast-for-a-cure/"
+                        entryLink: "http://704outdoors.tv/cast-for-a-cure/"
                     }
                 ]
             },
@@ -2489,7 +2540,7 @@ module.exports = [
                 tournaments: [
 
                     {
-                        date: "2020-04-11",
+                        date: "2020-08-22",
                         lake: "Kerr",
                         lakeID: "kerr",
                         ramp: "Nutbush",
@@ -2499,22 +2550,7 @@ module.exports = [
                         entryLink: "http://bassforcash.com/schedule/"
                     }
                 ]
-            },
-            /*{
-                trail: "Lee Huggins Benefit",
-                tournaments: [
-
-                    {
-                        date: "2019-08-31",
-                        lake: "Yadkin",
-                        ramp: "Circle Drive",
-                        state: "NC",
-                        txDetail: "Kevin Lee Farley",
-                        resultsLink: "",
-                        entryLink: "/assets/txomages/yadkinbenefitaug2019.jpg"
-                    }
-                ]
-            }*/
+            }
         ]
     },
     {
@@ -2531,26 +2567,6 @@ module.exports = [
                     state: "NC",
                     txDetail: "Bass For Cash Series",
                     resultsLink: "https://bassforcash.com/2020/03/09/adams-fritts-dominate-with-35-05lb-win-at-jordan/",
-                    entryLink: "http://bassforcash.com/schedule/"
-                },
-                {
-                    date: "2020-04-11",
-                    lake: "Kerr",
-                    lakeID: "kerr",
-                    ramp: "Nutbush",
-                    state: "NC",
-                    txDetail: "Bass For Cash Series",
-                    resultsLink: "http://bassforcash.com/schedule/",
-                    entryLink: "http://bassforcash.com/schedule/"
-                },
-                {
-                    date: "2020-05-23",
-                    lake: "Gaston",
-                    lakeID: "gaston",
-                    ramp: "Summit",
-                    state: "NC",
-                    txDetail: "Bass For Cash Series",
-                    resultsLink: "http://bassforcash.com/schedule/",
                     entryLink: "http://bassforcash.com/schedule/"
                 },
                 {
@@ -2574,6 +2590,16 @@ module.exports = [
                     entryLink: "http://bassforcash.com/schedule/"
                 },
                 {
+                    date: "2020-08-22",
+                    lake: "Kerr",
+                    lakeID: "kerr",
+                    ramp: "Nutbush",
+                    state: "NC",
+                    txDetail: "Bass For Cash Series",
+                    resultsLink: "http://bassforcash.com/schedule/",
+                    entryLink: "http://bassforcash.com/schedule/"
+                },
+                {
                     date: "2020-08-29",
                     lake: "Cypress Landing",
                     lakeID: "chowanWF",
@@ -2584,7 +2610,26 @@ module.exports = [
                     entryLink: "http://bassforcash.com/schedule/"
                 },
                 {
+                    date: "2020-09-05",
+                    lake: "Gaston",
+                    lakeID: "gaston",
+                    ramp: "Summit",
+                    state: "NC",
+                    txDetail: "Bass For Cash Series",
+                    resultsLink: "http://bassforcash.com/schedule/",
+                    entryLink: "http://bassforcash.com/schedule/"
+                },
+                {
                     date: "2020-09-26",
+                    lake: "TBD",
+                    ramp: "TBD",
+                    state: "NC",
+                    txDetail: "Bass For Cash Series",
+                    resultsLink: "http://bassforcash.com/schedule/",
+                    entryLink: "http://bassforcash.com/schedule/"
+                },
+                {
+                    date: "2020-09-27",
                     lake: "TBD",
                     ramp: "TBD",
                     state: "NC",
@@ -2604,28 +2649,8 @@ module.exports = [
                 {
                     date: "2020-03-22",
                     lake: "Tar-Pamlico",
-                    lakeID: "neuse",
+                    lakeID: "tarriver",
                     ramp: "Havens Garden",
-                    state: "NC",
-                    txDetail: "",
-                    resultsLink: "https://www.ncbasschallenge.com/tournament-results/",
-                    entryLink: "https://www.ncbasschallenge.com/tournament-schedule/"
-                },
-                {
-                    date: "2020-04-19",
-                    lake: "Roanoke",
-                    lakeID: "roanokewill",
-                    ramp: "Water Street",
-                    state: "NC",
-                    txDetail: "",
-                    resultsLink: "https://www.ncbasschallenge.com/tournament-results/",
-                    entryLink: "https://www.ncbasschallenge.com/tournament-schedule/"
-                },
-                {
-                    date: "2020-05-17",
-                    lake: "Neuse",
-                    lakeID: "neuse",
-                    ramp: "Lawson Creek",
                     state: "NC",
                     txDetail: "",
                     resultsLink: "https://www.ncbasschallenge.com/tournament-results/",
@@ -2642,7 +2667,17 @@ module.exports = [
                     entryLink: "https://www.ncbasschallenge.com/tournament-schedule/"
                 },
                 {
-                    date: "2020-07-19",
+                    date: "2020-06-28",
+                    lake: "Roanoke",
+                    lakeID: "roanokewill",
+                    ramp: "Water Street",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "https://www.ncbasschallenge.com/tournament-results/",
+                    entryLink: "https://www.ncbasschallenge.com/tournament-schedule/"
+                },
+                {
+                    date: "2020-07-26",
                     lake: "Tar-Pamlico",
                     lakeID: "neuse",
                     ramp: "Havens Garden",
@@ -2652,9 +2687,9 @@ module.exports = [
                     entryLink: "https://www.ncbasschallenge.com/tournament-schedule/"
                 },
                 {
-                    date: "2020-08-02",
+                    date: "2020-08-09",
                     lake: "Chowan",
-                    lakeID: "roanoke45",
+                    lakeID: "chowanwf",
                     ramp: "Pembroke Creek",
                     state: "NC",
                     txDetail: "",
@@ -2662,9 +2697,19 @@ module.exports = [
                     entryLink: "https://www.ncbasschallenge.com/tournament-schedule/"
                 },
                 {
-                    date: "2020-08-29",
-                    lake: "Tar-Pamlico",
+                    date: "2020-09-06",
+                    lake: "Neuse",
                     lakeID: "neuse",
+                    ramp: "Lawson Creek",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "https://www.ncbasschallenge.com/tournament-results/",
+                    entryLink: "https://www.ncbasschallenge.com/tournament-schedule/"
+                },
+                {
+                    date: "2020-10-11",
+                    lake: "Tar-Pamlico",
+                    lakeID: "tarriver",
                     ramp: "Havens Garden",
                     state: "NC",
                     txDetail: "",
@@ -2689,26 +2734,6 @@ module.exports = [
                         entryLink: "https://www.flwfishing.com/tournaments/2020-02-08-martin"
                     },
                     {
-                        date: "2020-04-11",
-                        lake: "Mitchell",
-                        lakeID: "mitchell",
-                        ramp: "Higgins Ferry",
-                        state: "AL",
-                        txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2020-04-11-mitchell",
-                        entryLink: "https://www.flwfishing.com/tournaments/2020-04-11-mitchell"
-                    },
-                    {
-                        date: "2020-05-16",
-                        lake: "Eufaula",
-                        lakeID: "eufaulaal",
-                        ramp: "Lakepoint",
-                        state: "AL",
-                        txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2020-05-16-eufaula",
-                        entryLink: "https://www.flwfishing.com/tournaments/2020-05-16-eufaula"
-                    },
-                    {
                         date: "2020-06-13",
                         lake: "Neely Henry",
                         lakeID: "neelyhenry",
@@ -2719,6 +2744,36 @@ module.exports = [
                         entryLink: "https://www.flwfishing.com/tournaments/2020-06-13-neely-henry"
                     },
                     {
+                        date: "2020-06-14",
+                        lake: "Neely Henry",
+                        lakeID: "neelyhenry",
+                        ramp: "Coosa",
+                        state: "AL",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2020-06-14-neely-henry",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-06-14-neely-henry"
+                    },
+                    {
+                        date: "2020-07-25",
+                        lake: "Alabama River",
+                        lakeID: "",
+                        ramp: "Cooters Pond",
+                        state: "AL",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2020-07-25-alabama-river",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-07-25-alabama-river"
+                    },
+                    {
+                        date: "2020-09-12",
+                        lake: "Eufaula",
+                        lakeID: "eufaulaal",
+                        ramp: "Lakepoint",
+                        state: "AL",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2020-05-16-eufaula",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-05-16-eufaula"
+                    },
+                    {
                         date: "2020-09-12",
                         lake: "Eufaula",
                         lakeID: "eufaulaal",
@@ -2727,21 +2782,23 @@ module.exports = [
                         txDetail: "FLW",
                         resultsLink: "https://www.flwfishing.com/results/2020-09-12-eufaula",
                         entryLink: "https://www.flwfishing.com/tournaments/2020-09-12-eufaula"
+                    },
+                    {
+                        date: "2020-09-13",
+                        lake: "Eufaula",
+                        lakeID: "eufaulaal",
+                        ramp: "Lakepoint",
+                        state: "AL",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2020-09-13-eufaula",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-09-13-eufaula"
                     }
                 ]
             },
             {
                 trail: "BFL Buckeye",
-                tournaments: [{
-                        date: "2020-05-16",
-                        lake: "Grand Lake",
-                        lakeID: "grand",
-                        ramp: "West Bank",
-                        state: "OH",
-                        txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2020-05-16-grand-lake-st-marys",
-                        entryLink: "https://www.flwfishing.com/tournaments/2020-05-16-grand-lake-st-marys"
-                    },
+                tournaments: [
+                    
                     {
                         date: "2020-06-06",
                         lake: "Indian",
@@ -2781,6 +2838,16 @@ module.exports = [
                         txDetail: "FLW",
                         resultsLink: "https://www.flwfishing.com/results/2020-08-29-erie",
                         entryLink: "https://www.flwfishing.com/tournaments/2020-08-29-erie"
+                    },
+                    {
+                        date: "2020-09-26",
+                        lake: "Indian Lake",
+                        lakeID: "indian",
+                        ramp: "Indian Lake SP",
+                        state: "OH",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2020-09-26-indian-lake",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-09-26-indian-lake"
                     }
                 ]
             },
@@ -2796,24 +2863,6 @@ module.exports = [
                         entryLink: "https://www.flwfishing.com/tournaments/2020-02-01-lanier"
                     },
                     {
-                        date: "2020-03-28",
-                        lake: "Oconee",
-                        ramp: "Sugar Creek",
-                        state: "GA",
-                        txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2020-03-28-oconee",
-                        entryLink: "https://www.flwfishing.com/tournaments/2020-03-28-oconee"
-                    },
-                    {
-                        date: "2020-05-09",
-                        lake: "Sinclair",
-                        ramp: "Dennis Station",
-                        state: "GA",
-                        txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2020-05-09-sinclair",
-                        entryLink: "https://www.flwfishing.com/tournaments/2020-05-09-sinclair"
-                    },
-                    {
                         date: "2020-06-20",
                         lake: "Eufaula",
                         lakeID: "eufaulaal",
@@ -2824,7 +2873,26 @@ module.exports = [
                         entryLink: "https://www.flwfishing.com/tournaments/2020-06-20-eufaula"
                     },
                     {
-                        date: "2020-09-22",
+                        date: "2020-06-21",
+                        lake: "Eufaula",
+                        lakeID: "eufaulaal",
+                        ramp: "Lakepoint",
+                        state: "GA",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2020-06-21-eufaula",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-06-21-eufaula"
+                    },
+                    {
+                        date: "2020-08-08",
+                        lake: "Oconee",
+                        ramp: "Sugar Creek",
+                        state: "GA",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2020-08-08-oconee",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-08-08-oconee"
+                    },
+                    {
+                        date: "2020-10-03",
                         lake: "Eufaula",
                         lakeID: "eufaulaal",
                         ramp: "Lakepoint",
@@ -2840,16 +2908,6 @@ module.exports = [
                 tournaments: [
 
                     {
-                        date: "2020-04-25",
-                        lake: "Monroe",
-                        lakeID: "monroe",
-                        ramp: "Cutright",
-                        state: "IN",
-                        txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2020-04-25-monroe",
-                        entryLink: "https://www.flwfishing.com/tournaments/2020-04-25-monroe"
-                    },
-                    {
                         date: "2020-06-27",
                         lake: "Monroe",
                         lakeID: "monroe",
@@ -2858,6 +2916,16 @@ module.exports = [
                         txDetail: "FLW",
                         resultsLink: "https://www.flwfishing.com/results/2020-06-27-monroe",
                         entryLink: "https://www.flwfishing.com/tournaments/2020-06-27-monroe"
+                    },
+                    {
+                        date: "2020-06-28",
+                        lake: "Monroe",
+                        lakeID: "monroe",
+                        ramp: "Cutright",
+                        state: "IN",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2020-06-28-monroe",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-06-28-monroe"
                     },
                     {
                         date: "2020-07-18",
@@ -2869,7 +2937,7 @@ module.exports = [
                         entryLink: "https://www.flwfishing.com/tournaments/2020-07-18-ohio-river-tanners-creek"
                     },
                     {
-                        date: "2020-08-15",
+                        date: "2020-08-08",
                         lake: "Ohio Rvr",
                         ramp: "Rocky Point",
                         state: "IN",
@@ -2904,26 +2972,6 @@ module.exports = [
                         entryLink: "https://www.flwfishing.com/tournaments/2020-02-29-norman"
                     },
                     {
-                        date: "2020-04-04",
-                        lake: "Wylie",
-                        lakeID: "wylie",
-                        ramp: "Buster Boyd",
-                        state: "NC",
-                        txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2020-04-04-wylie",
-                        entryLink: "https://www.flwfishing.com/tournaments/2020-04-04-wylie"
-                    },
-                    {
-                        date: "2020-04-18",
-                        lake: "Kerr",
-                        lakeID: "kerr",
-                        ramp: "Nutbush",
-                        state: "NC",
-                        txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2020-04-18-kerr",
-                        entryLink: "https://www.flwfishing.com/tournaments/2020-04-18-kerr"
-                    },
-                    {
                         date: "2020-06-13",
                         lake: "High Rock",
                         lakeID: "highrock",
@@ -2932,6 +2980,26 @@ module.exports = [
                         txDetail: "FLW",
                         resultsLink: "https://www.flwfishing.com/results/2020-06-13-high-rock",
                         entryLink: "https://www.flwfishing.com/tournaments/2020-06-13-high-rock"
+                    },
+                    {
+                        date: "2020-06-14",
+                        lake: "High Rock",
+                        lakeID: "highrock",
+                        ramp: "Tamarac",
+                        state: "NC",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2020-06-14-high-rock",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-06-14-high-rock"
+                    },
+                    {
+                        date: "2020-07-11",
+                        lake: "Kerr",
+                        lakeID: "kerr",
+                        ramp: "Nutbush",
+                        state: "NC",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2020-07-11-kerr",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-07-11-kerr"
                     },
                     {
                         date: "2020-09-12",
@@ -2959,26 +3027,7 @@ module.exports = [
                 trail: "BFL Piedmont",
                 tournaments: [
 
-                    {
-                        date: "2020-04-25",
-                        lake: "Kerr",
-                        lakeID: "kerr",
-                        ramp: "Nutbush",
-                        state: "NC-VA",
-                        txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2020-04-25-kerr",
-                        entryLink: "https://www.flwfishing.com/tournaments/2020-04-25-kerr"
-                    },
-                    {
-                        date: "2020-05-16",
-                        lake: "Kerr",
-                        lakeID: "kerr",
-                        ramp: "Nutbush",
-                        state: "NC-VA",
-                        txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2020-05-16-kerr",
-                        entryLink: "https://www.flwfishing.com/tournaments/2020-05-16-kerr"
-                    },
+                    
                     {
                         date: "2020-06-06",
                         lake: "High Rock",
@@ -2988,6 +3037,26 @@ module.exports = [
                         txDetail: "FLW",
                         resultsLink: "https://www.flwfishing.com/results/2020-06-06-high-rock",
                         entryLink: "https://www.flwfishing.com/tournaments/2020-06-06-high-rock"
+                    },
+                    {
+                        date: "2020-07-18",
+                        lake: "Kerr",
+                        lakeID: "kerr",
+                        ramp: "Nutbush",
+                        state: "NC-VA",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2020-07-18-kerr",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-07-18-kerr"
+                    },
+                    {
+                        date: "2020-07-19",
+                        lake: "Kerr",
+                        lakeID: "kerr",
+                        ramp: "Nutbush",
+                        state: "NC-VA",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2020-07-19-kerr",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-07-19-kerr"
                     },
                     {
                         date: "2020-08-08",
@@ -3036,24 +3105,24 @@ module.exports = [
                         entryLink: "https://www.flwfishing.com/tournaments/2020-03-14-smith-mountain"
                     },
                     {
-                        date: "2020-05-09",
+                        date: "2020-06-27",
                         lake: "Potomac",
                         lakeID: "potomac",
                         ramp: "Smallwood",
                         state: "MD-VA",
                         txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2020-05-09-potomac",
-                        entryLink: "https://www.flwfishing.com/tournaments/2020-05-09-potomac"
+                        resultsLink: "https://www.flwfishing.com/results/2020-06-27-potomac",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-06-27-potomac"
                     },
                     {
-                        date: "2020-05-30",
+                        date: "2020-07-12",
                         lake: "Kerr",
                         lakeID: "kerr",
                         ramp: "Nutbush",
                         state: "NC-VA",
                         txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2020-05-30-kerr",
-                        entryLink: "https://www.flwfishing.com/tournaments/2020-05-30-kerr"
+                        resultsLink: "https://www.flwfishing.com/results/2020-07-12-kerr",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-07-12-kerr"
                     },
                     {
                         date: "2020-06-27",
@@ -3066,14 +3135,14 @@ module.exports = [
                         entryLink: "https://www.flwfishing.com/tournaments/2020-06-27-potomac"
                     },
                     {
-                        date: "2020-08-29",
+                        date: "2020-07-25",
                         lake: "Potomac",
                         lakeID: "potomac",
                         ramp: "Smallwood",
                         state: "MD-VA",
                         txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2020-08-29-potomac",
-                        entryLink: "https://www.flwfishing.com/tournaments/2020-08-29-potomac"
+                        resultsLink: "https://www.flwfishing.com/results/2020-07-25-potomac",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-07-25-potomac"
                     }
                 ]
             },
@@ -3090,24 +3159,34 @@ module.exports = [
                         entryLink: "https://www.flwfishing.com/tournaments/2020-02-15-murray"
                     },
                     {
-                        date: "2020-03-28",
+                        date: "2020-03-07",
+                        lake: "Clarks Hill",
+                        lakeID: "clarkshill",
+                        ramp: "Dorn Fishing Facility",
+                        state: "SC",
+                        txDetail: "FLW",
+                        resultsLink: "https://www.flwfishing.com/results/2020-03-07-clarks-hill",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-03-07-clarks-hill"
+                    },
+                    {
+                        date: "2020-06-20",
                         lake: "Santee Cooper",
                         lakeID: "Santee1",
                         ramp: "John C Land",
                         state: "SC",
                         txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2020-03-28-santee-cooper",
-                        entryLink: "https://www.flwfishing.com/tournaments/2020-03-28-santee-cooper"
+                        resultsLink: "https://www.flwfishing.com/results/2020-06-20-santee-cooper",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-06-20-santee-cooper"
                     },
                     {
-                        date: "2020-03-30",
-                        lake: "Wateree",
-                        lakeID: "wateree",
-                        ramp: "Clear Water Cove",
+                        date: "2020-06-21",
+                        lake: "Santee Cooper",
+                        lakeID: "Santee1",
+                        ramp: "John C Land",
                         state: "SC",
                         txDetail: "FLW",
-                        resultsLink: "https://www.flwfishing.com/results/2020-05-16-wateree",
-                        entryLink: "https://www.flwfishing.com/tournaments/2020-05-16-wateree"
+                        resultsLink: "https://www.flwfishing.com/results/2020-06-21-santee-cooper",
+                        entryLink: "https://www.flwfishing.com/tournaments/2020-06-21-santee-cooper"
                     },
                     {
                         date: "2020-09-19",
@@ -3142,26 +3221,6 @@ module.exports = [
                 tournaments: [
 
                     {
-                        date: "2020-04-18",
-                        lake: "Shearon Harris",
-                        lakeID: "shearonharris",
-                        ramp: "Holleman's",
-                        state: "NC",
-                        txDetail: "T1",
-                        resultsLink: "",
-                        entryLink: "https://www.fomntt.com/pageflow.cfm?callpage=divisioninfo&divid=88&getyear=2019"
-                    },
-                    {
-                        date: "2020-05-09",
-                        lake: "Kerr",
-                        lakeID: "kerr",
-                        ramp: "Henderson Pt",
-                        state: "NC-VA",
-                        txDetail: "T2",
-                        resultsLink: "",
-                        entryLink: "https://www.fomntt.com/pageflow.cfm?callpage=divisioninfo&divid=88&getyear=2019"
-                    },
-                    {
                         date: "2020-06-27",
                         lake: "Falls",
                         lakeID: "falls",
@@ -3169,7 +3228,7 @@ module.exports = [
                         state: "NC",
                         txDetail: "T3",
                         resultsLink: "",
-                        entryLink: "https://www.fomntt.com/pageflow.cfm?callpage=divisioninfo&divid=88&getyear=2019"
+                        entryLink: "https://www.fomntt.com/pageflow.cfm?callpage=divisioninfo&divid=88&getyear=2020"
                     }
                 ]
             },
@@ -3178,44 +3237,14 @@ module.exports = [
                 tournaments: [
 
                     {
-                        date: "2020-03-21",
-                        lake: "Kerr",
-                        lakeID: "kerr",
-                        ramp: "Henderson Pt",
-                        state: "NC-VA",
-                        txDetail: "T1",
-                        resultsLink: "",
-                        entryLink: "https://www.fomntt.com/pageflow.cfm?callpage=divisioninfo&divid=32&getyear=2019"
-                    },
-                    {
-                        date: "2020-04-25",
+                        date: "2020-06-06",
                         lake: "Mayo",
                         lakeID: "mayo",
                         ramp: "Triple Springs",
                         state: "NC",
                         txDetail: "T2",
                         resultsLink: "",
-                        entryLink: "https://www.fomntt.com/pageflow.cfm?callpage=divisioninfo&divid=32&getyear=2019"
-                    },
-                    {
-                        date: "2020-05-16",
-                        lake: "Jordan",
-                        lakeID: "jordan",
-                        ramp: "Ebenezer",
-                        state: "NC",
-                        txDetail: "T3",
-                        resultsLink: "",
-                        entryLink: "https://www.fomntt.com/pageflow.cfm?callpage=divisioninfo&divid=32&getyear=2019"
-                    },
-                    {
-                        date: "2020-05-30",
-                        lake: "Gaston",
-                        lakeID: "gaston",
-                        ramp: "Summit",
-                        state: "NC",
-                        txDetail: "T4",
-                        resultsLink: "",
-                        entryLink: "https://www.fomntt.com/pageflow.cfm?callpage=divisioninfo&divid=32&getyear=2019"
+                        entryLink: "https://www.fomntt.com/pageflow.cfm?callpage=divisioninfo&divid=32&getyear=2020"
                     },
                     {
                         date: "2020-06-20",
@@ -3223,9 +3252,19 @@ module.exports = [
                         lakeID: "falls",
                         ramp: "Upper Barton",
                         state: "NC",
+                        txDetail: "T3",
+                        resultsLink: "",
+                        entryLink: "https://www.fomntt.com/pageflow.cfm?callpage=divisioninfo&divid=32&getyear=2020"
+                    },
+                    {
+                        date: "2020-07-11",
+                        lake: "Kerr",
+                        lakeID: "kerr",
+                        ramp: "Henderson Pt #2",
+                        state: "NC",
                         txDetail: "T5",
                         resultsLink: "",
-                        entryLink: "https://www.fomntt.com/pageflow.cfm?callpage=divisioninfo&divid=32&getyear=2019"
+                        entryLink: "https://www.fomntt.com/pageflow.cfm?callpage=divisioninfo&divid=32&getyear=2020"
                     }
                 ]
             }
@@ -3238,7 +3277,37 @@ module.exports = [
             tournaments: [
 
                 {
-                    date: "2020-04-01",
+                    date: "2020-06-17",
+                    lake: "Shearon Harris",
+                    lakeID: "shearonharris",
+                    ramp: "Crosspoint",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "",
+                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
+                },
+                {
+                    date: "2020-06-24",
+                    lake: "Shearon Harris",
+                    lakeID: "shearonharris",
+                    ramp: "Crosspoint",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "",
+                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
+                },
+                {
+                    date: "2020-07-01",
+                    lake: "Shearon Harris",
+                    lakeID: "shearonharris",
+                    ramp: "Crosspoint",
+                    state: "NC",
+                    txDetail: "",
+                    resultsLink: "",
+                    entryLink: "https://www.facebook.com/Harris-Lake-Wildcats-119889178084587/?__tn__=kC-R&eid=ARC3zfi-dxLiD0lLFBGDkcYdJTxccVvTomptRqU8jikCSL4aeiEvDeqLvPNZkbHOmA_r1hV_vryp8eZ5&hc_ref=ARTE51QVx1wMKOwFFXk-pZbvAqPIDqs2kizAFekHgu9Yyi8ZqoRkMPtILbPavRyXD00&__xts__[0]=68.ARAOvBR9JJ6v2dZw9RItPOArR0XJ1wYfW2FocwKOubPxgO7kUJmqavgrs2uKEW0-ypFQ_5zX9ZnVUktNxf6B5WYcNWUzKPWTFJBwdao3vdi7swV0NCyOCYmej5TuntPWv9N-1ICqeW7koify-AQO4ZLhDaPQXXN8hoUOJSj7ZbrdYxD-IkuWkAGYwQMiBUVjU2uEW2G_dzmIOWp_zvr0lU6TYwQursVl5g7XN-B0mtkHKF7pQUaTOZpBl3I1Y_6W9svZPctHtmzdrq5p0hzVncujPhYRSOlBPbfHOhYW803jF8FYBN9931OvbUT7LJVmyjR-x_7lX3aJyDqAuqYMz94EPQ"
+                },
+                {
+                    date: "2020-07-08",
                     lake: "Shearon Harris",
                     lakeID: "shearonharris",
                     ramp: "Crosspoint",
@@ -3273,26 +3342,7 @@ module.exports = [
         organization: "Mega Bass",
         trails: [{
             trail: "Ohio",
-            tournaments: [{
-                    date: "2020-04-11",
-                    lake: "Indian",
-                    lakeID: "indianoh",
-                    ramp: "Moundwood",
-                    state: "OH",
-                    txDetail: "",
-                    resultsLink: "",
-                    entryLink: "http://www.ombtt.com/WebsiteMstrs/OHIOMEGABASSTOURNAMENTTRAIL.html"
-                },
-                {
-                    date: "2020-05-03",
-                    lake: "Grand",
-                    lakeID: "",
-                    ramp: "Celina",
-                    state: "OH",
-                    txDetail: "",
-                    resultsLink: "",
-                    entryLink: "http://www.ombtt.com/WebsiteMstrs/OHIOMEGABASSTOURNAMENTTRAIL.html"
-                },
+            tournaments: [
                 {
                     date: "2020-05-30",
                     lake: "Buckeye",
@@ -3312,11 +3362,22 @@ module.exports = [
                     txDetail: "",
                     resultsLink: "",
                     entryLink: "http://www.ombtt.com/WebsiteMstrs/OHIOMEGABASSTOURNAMENTTRAIL.html"
-                }, {
+                },
+                {
                     date: "2020-07-18",
                     lake: "Indian",
                     lakeID: "indianoh",
                     ramp: "Moundwood",
+                    state: "OH",
+                    txDetail: "",
+                    resultsLink: "",
+                    entryLink: "http://www.ombtt.com/WebsiteMstrs/OHIOMEGABASSTOURNAMENTTRAIL.html"
+                },
+                {
+                    date: "2020-07-25",
+                    lake: "Grand",
+                    lakeID: "",
+                    ramp: "Celina",
                     state: "OH",
                     txDetail: "",
                     resultsLink: "",
@@ -3333,7 +3394,7 @@ module.exports = [
                     entryLink: "http://www.ombtt.com/WebsiteMstrs/OHIOMEGABASSTOURNAMENTTRAIL.html"
                 },
                 {
-                    date: "2020-09-13",
+                    date: "2020-08-08",
                     lake: "Rocky Fork",
                     lakeID: "rockyfork",
                     ramp: "North Shore",
@@ -3343,7 +3404,27 @@ module.exports = [
                     entryLink: "http://www.ombtt.com/WebsiteMstrs/OHIOMEGABASSTOURNAMENTTRAIL.html"
                 },
                 {
+                    date: "2020-09-19",
+                    lake: "Indian",
+                    lakeID: "indianoh",
+                    ramp: "Moundwood",
+                    state: "OH",
+                    txDetail: "",
+                    resultsLink: "",
+                    entryLink: "http://www.ombtt.com/WebsiteMstrs/OHIOMEGABASSTOURNAMENTTRAIL.html"
+                },
+                {
                     date: "2020-10-22",
+                    lake: "Detroit River",
+                    lakeID: "detroit",
+                    ramp: "Elizabeth",
+                    state: "OH",
+                    txDetail: "",
+                    resultsLink: "",
+                    entryLink: "http://www.ombtt.com/WebsiteMstrs/OHIOMEGABASSTOURNAMENTTRAIL.html"
+                },
+                {
+                    date: "2020-10-23",
                     lake: "Detroit River",
                     lakeID: "detroit",
                     ramp: "Elizabeth",
@@ -3360,7 +3441,7 @@ module.exports = [
         trails: [{
             trail: "Sat Morn (5:30-10:30)",
             tournaments: [{
-                date: "2020-08-17",
+                date: "2020-06-17",
                 lake: "Percy Priest",
                 lakeID: "percypriest",
                 ramp: "Jefferson Springs",
@@ -3398,13 +3479,13 @@ module.exports = [
                         entryLink: "http://piedmontbassclassics.com/2020PBC10KMainPage.html"
                     },
                     {
-                        date: "2020-03-28",
+                        date: "2020-06-06",
                         lake: "Falls",
                         lakeID: "falls",
                         ramp: "Ledge Rock",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
-                        resultsLink: "http://piedmontbassclassics.com/328-20MainResults.html",
+                        resultsLink: "http://piedmontbassclassics.com/606-20MainResults.html",
                         entryLink: "http://piedmontbassclassics.com/2020MiniTrailMainPage.html"
                     }, {
                         date: "2020-04-04",
@@ -3417,43 +3498,43 @@ module.exports = [
                         entryLink: "http://piedmontbassclassics.com/2020PBC10KMainPage.html"
                     },
                     {
-                        date: "2020-04-18",
-                        lake: "Kerr",
-                        lakeID: "kerr",
-                        ramp: "Flemingtown",
+                        date: "2020-06-13",
+                        lake: "Harris",
+                        lakeID: "shearonharris",
+                        ramp: "Crosspointe",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
                         resultsLink: "http://piedmontbassclassics.com/418-20MainResults.html",
                         entryLink: "http://piedmontbassclassics.com/2020PBC10KMainPage.html"
                     },
                     {
-                        date: "2020-05-09",
+                        date: "2020-06-20",
+                        lake: "Kerr",
+                        lakeID: "kerr",
+                        ramp: "Flemingtown",
+                        state: "NC",
+                        txDetail: "Piedmont Bass Classic",
+                        resultsLink: "http://piedmontbassclassics.com/620-20MainResults.html",
+                        entryLink: "http://piedmontbassclassics.com/2020PBC10KMainPage.html"
+                    },
+                    {
+                        date: "2020-07-11",
                         lake: "Falls",
                         lakeID: "falls",
                         ramp: "Ledge Rock",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
-                        resultsLink: "http://piedmontbassclassics.com/509-20MainResults.html",
+                        resultsLink: "http://piedmontbassclassics.com/711-20MainResults.html",
                         entryLink: "http://piedmontbassclassics.com/2020PBC10KMainPage.html"
                     },
                     {
-                        date: "2020-05-30",
-                        lake: "Kerr",
-                        lakeID: "kerr",
-                        ramp: "Flemingtown",
+                        date: "2020-07-18",
+                        lake: "Jordan",
+                        lakeID: "jordan",
+                        ramp: "Farrington",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
-                        resultsLink: "http://piedmontbassclassics.com/530-20MainResults.html",
-                        entryLink: "http://piedmontbassclassics.com/2020PBC10KMainPage.html"
-                    },
-                    {
-                        date: "2020-06-13",
-                        lake: "Kerr",
-                        lakeID: "kerr",
-                        ramp: "Flemingtown",
-                        state: "NC",
-                        txDetail: "Piedmont Bass Classic",
-                        resultsLink: "http://piedmontbassclassics.com/613-20MainResults.html",
+                        resultsLink: "http://piedmontbassclassics.com/718-20MainResults.html",
                         entryLink: "http://piedmontbassclassics.com/2020PBC10KMainPage.html"
                     }
 
@@ -3494,33 +3575,33 @@ module.exports = [
                         entryLink: "http://piedmontbassclassics.com/2020MiniTrailMainPage.html"
                     },
                     {
-                        date: "2020-04-25",
-                        lake: "Jordan",
-                        lakeID: "jordan",
-                        ramp: "Farrington",
-                        state: "NC",
-                        txDetail: "Piedmont Bass Classic",
-                        resultsLink: "http://piedmontbassclassics.com/425-20MiniResults.html",
-                        entryLink: "http://piedmontbassclassics.com/2020MiniTrailMainPage.html"
-                    },
-                    {
-                        date: "2020-05-02",
+                        date: "2020-08-01",
                         lake: "Kerr",
                         lakeID: "kerr",
                         ramp: "Flemingtown",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
-                        resultsLink: "http://piedmontbassclassics.com/502-20MiniResults.html",
+                        resultsLink: "http://piedmontbassclassics.com/801-20MiniResults.html",
                         entryLink: "http://piedmontbassclassics.com/2020MiniTrailMainPage.html"
                     },
                     {
-                        date: "2020-05-16",
+                        date: "2020-08-08",
+                        lake: "Falls",
+                        lakeID: "falls",
+                        ramp: "Ledge Rock",
+                        state: "NC",
+                        txDetail: "Piedmont Bass Classic",
+                        resultsLink: "http://piedmontbassclassics.com/808-20MiniResults.html",
+                        entryLink: "http://piedmontbassclassics.com/2020MiniTrailMainPage.html"
+                    },
+                    {
+                        date: "2020-08-15",
                         lake: "Kerr",
                         lakeID: "kerr",
                         ramp: "Flemingtown",
                         state: "NC",
                         txDetail: "Piedmont Bass Classic",
-                        resultsLink: "http://piedmontbassclassics.com/516-20MiniResults.html",
+                        resultsLink: "http://piedmontbassclassics.com/815-20MiniResults.html",
                         entryLink: "http://piedmontbassclassics.com/2020MiniTrailMainPage.html"
                     }
 
