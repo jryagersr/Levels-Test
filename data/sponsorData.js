@@ -212,6 +212,15 @@ module.exports = [
         endDate: "2021-01-01T00:00:00.0Z"
     },
     {
+        sponsor: "Platinum Painting",
+        href: "",
+        src: "/static/assets/img/sponsor-banners/platinumpainting banner.png",
+        location: ["kerr", "jordan", "falls", "gaston", "shearonharris"],
+        type: "logo",
+        startDate: "2019-01-01T00:00:00.0Z",
+        endDate: "2029-01-01T00:00:00.0Z"
+    },
+    {
         sponsor: "Redeem Roofing",
         href: "http://www.redeemnc.com/",
         src: "/static/assets/img/sponsor-banners/redeem banner.png",
