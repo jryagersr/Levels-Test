@@ -2767,7 +2767,7 @@ module.exports = [
         normalPool: 243.0,
         lat: 43.997063,
         long: -76.474127,
-        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04220259&period=Pt168H&parameterCd=72214&siteType=LK&siteStatus=all",
+        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=04260535&period=Pt168H&parameterCd=72214&siteType=ST&siteStatus=all",
         flowURL: "",
         href: "/lakes/thousandislands",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data

@@ -2567,7 +2567,7 @@ module.exports = [
                     state: "NC",
                     txDetail: "Bass For Cash Series",
                     resultsLink: "https://bassforcash.com/2020/03/09/adams-fritts-dominate-with-35-05lb-win-at-jordan/",
-                    entryLink: "http://bassforcash.com/schedule/"
+                    entryLink: "http://bassforcash.com/"
                 },
                 {
                     date: "2020-06-07",
@@ -2576,7 +2576,7 @@ module.exports = [
                     ramp: "Plymouth",
                     state: "NC",
                     txDetail: "Bass For Cash Series",
-                    resultsLink: "http://bassforcash.com/schedule/",
+                    resultsLink: "http://bassforcash.com",
                     entryLink: "http://bassforcash.com/schedule/"
                 },
                 {
@@ -2586,7 +2586,7 @@ module.exports = [
                     ramp: "Ledge Rock",
                     state: "NC",
                     txDetail: "Bass For Cash Series",
-                    resultsLink: "http://bassforcash.com/schedule/",
+                    resultsLink: "http://bassforcash.com",
                     entryLink: "http://bassforcash.com/schedule/"
                 },
                 {
@@ -2596,7 +2596,7 @@ module.exports = [
                     ramp: "Nutbush",
                     state: "NC",
                     txDetail: "Bass For Cash Series",
-                    resultsLink: "http://bassforcash.com/schedule/",
+                    resultsLink: "http://bassforcash.com/",
                     entryLink: "http://bassforcash.com/schedule/"
                 },
                 {
@@ -2606,7 +2606,7 @@ module.exports = [
                     ramp: "Pembroke",
                     state: "NC",
                     txDetail: "Bass For Cash Series",
-                    resultsLink: "http://bassforcash.com/schedule/",
+                    resultsLink: "http://bassforcash.com/",
                     entryLink: "http://bassforcash.com/schedule/"
                 },
                 {
@@ -2616,7 +2616,7 @@ module.exports = [
                     ramp: "Summit",
                     state: "NC",
                     txDetail: "Bass For Cash Series",
-                    resultsLink: "http://bassforcash.com/schedule/",
+                    resultsLink: "http://bassforcash.com/",
                     entryLink: "http://bassforcash.com/schedule/"
                 },
                 {
@@ -2625,7 +2625,7 @@ module.exports = [
                     ramp: "TBD",
                     state: "NC",
                     txDetail: "Bass For Cash Series",
-                    resultsLink: "http://bassforcash.com/schedule/",
+                    resultsLink: "http://bassforcash.com/",
                     entryLink: "http://bassforcash.com/schedule/"
                 },
                 {
@@ -2634,7 +2634,7 @@ module.exports = [
                     ramp: "TBD",
                     state: "NC",
                     txDetail: "Bass For Cash Series",
-                    resultsLink: "http://bassforcash.com/schedule/",
+                    resultsLink: "http://bassforcash.com/",
                     entryLink: "http://bassforcash.com/schedule/"
                 },
             ]
