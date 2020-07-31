@@ -213,7 +213,7 @@ module.exports = [
     },
     {
         sponsor: "Platinum Painting",
-        href: "",
+        href: "http://www.platinumpaintingnc.com/",
         src: "/static/assets/img/sponsor-banners/platinumpainting banner.png",
         location: ["kerr", "jordan", "falls", "gaston", "shearonharris"],
         type: "logo",
