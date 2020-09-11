@@ -25,7 +25,7 @@ module.exports = {
       if (error) {
         callback(true, error, body);
       } else {
-
+console.log(`${bodyOfWater} ${body.substring(0,50)}}`)
         let dataErrorTrue = false;
         try {
           data = JSON.parse(body);

@@ -27,6 +27,7 @@ module.exports = {
         callback(error);
         return;
       };
+      console.log(`${bodyOfWater} ${body.substring(0,50)}`)
 
 
       // clear displayBatch

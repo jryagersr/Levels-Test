@@ -99,7 +99,7 @@ module.exports = {
             flowEntries.reverse();
             for (i = 0; i < elevEntries.length; i++) {
               let elevTime = new Date(elevEntries[i].time);
-              elev = elevEntries[i].value;
+              elev = elevEntries[i].value + currentLake.seaLevelDelta;
               let flowTime = new Date();
               for (j = 0; j < flowEntries.length; j++) {
                 if (flowData == true) {
