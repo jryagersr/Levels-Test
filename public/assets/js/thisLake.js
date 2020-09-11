@@ -116,7 +116,7 @@ function buildElevChart(data, lake) {
 
     //check the final day's values for Min and MaxLimit
     if ((sumOfElevs / divisor) > chartMaxElev) // if value is greater than max, replace max
-        chartMaxElev =  Math.ceil(sumOfElevs / divisor); // update Max Elev average
+        chartMaxElev = Math.ceil(sumOfElevs / divisor); // update Max Elev average
     if ((sumOfElevs / divisor) < chartMinElev) // if value is less thank min, replace min
         chartMinElev = Math.floor(sumOfElevs / divisor); // update Min Elev average
 
@@ -124,7 +124,7 @@ function buildElevChart(data, lake) {
         chartMinElev = lake.normalPool;
 
     if (lake.normalPool > chartMaxElev)
-    chartMaxElev = lake.normalPool;
+        chartMaxElev = lake.normalPool;
 
     labelBatch.reverse();
     dataElevBatch.reverse();
@@ -244,7 +244,7 @@ function buildFlowChart(data) {
 
         if (data[k].date !== checkDate) {
             avgFlow = Number((sumOfFlows / divisor).toFixed(2))
-            labelBatch.push(data[k-1].date);
+            labelBatch.push(data[k - 1].date);
             dataFlowBatch.push(avgFlow);
             sumOfFlows = 0;
             divisor = 0;
@@ -390,9 +390,9 @@ function buildRiverChart(data, lake) {
     if (chartGap < 1)
         chartGap = .05;
 
-    chartMaxRiverLimit = Math.ceil((Number(chartMaxRiver) + chartGap)*10)/10; // set the chart upper limit
+    chartMaxRiverLimit = Math.ceil((Number(chartMaxRiver) + chartGap) * 10) / 10; // set the chart upper limit
 
-    chartMinRiverLimit = Math.floor((Number(chartMinRiver) - chartGap)*10)/10; // set the chart lower limit
+    chartMinRiverLimit = Math.floor((Number(chartMinRiver) - chartGap) * 10) / 10; // set the chart lower limit
 
 
     var ctx = document.getElementById('myRiverChart').getContext('2d');
@@ -635,8 +635,8 @@ function buildTempChart(tempData) {
     // Set y axis limits for Temp Chart
     let minMaxDiff = chartMaxTemp - chartMinTemp;
     if (minMaxDiff < 1) chartGap = minMaxDiff / 2;
-    chartMinTempLimit = Math.floor(chartMinTemp)-1; // set the chart lower limit 2' below min
-    chartMaxTempLimit = Math.ceil(chartMaxTemp)+1; // set the chart upper limit 2' below max
+    chartMinTempLimit = Math.floor(chartMinTemp) - 1; // set the chart lower limit 2' below min
+    chartMaxTempLimit = Math.ceil(chartMaxTemp) + 1; // set the chart upper limit 2' below max
 
     var ctx = document.getElementById('myTempChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
@@ -1191,63 +1191,6 @@ function buildGuideList(sponsorData) {
 } // end of buildGuideList
 
 
-/******************************************************************************************************************/
-// function to flatten the nested data
-function flattenData(data, type, callback) {
-    flatBatch = [];
-    data.forEach(function (element) {
-        for (k = 0; k < element.trails.length; k++) {
-
-            for (l = 0; l < element.trails[k].tournaments.length; l++) {
-
-                // Format the tx date to check against today's date
-                let txDate = new Date(element.trails[k].tournaments[l].date);
-                let todaysDate = new Date();
-
-                // check which page we're on
-                if (type == 0) {
-
-                    // If tx date is in the future (exclude all past dates)
-                    if (Date.parse(txDate) + 60000000 >= Date.parse(todaysDate)) {
-
-                        // Push our data into a flat array for easier sort later
-                        flatBatch.push({
-                            organizer: element.organization,
-                            trail: element.trails[k].trail,
-                            date: element.trails[k].tournaments[l].date,
-                            lake: element.trails[k].tournaments[l].lake,
-                            lakeID: element.trails[k].tournaments[l].lakeID,
-                            ramp: element.trails[k].tournaments[l].ramp,
-                            state: element.trails[k].tournaments[l].state,
-                            entryLink: element.trails[k].tournaments[l].entryLink,
-                            resultsLink: element.trails[k].tournaments[l].resultsLink
-                        });
-                    };
-                } else {
-
-                    // If tx date is in the past (exclude all future dates)
-                    if (Date.parse(txDate) < Date.parse(todaysDate)) {
-
-                        // Push our data into a flat array for easier sort later
-                        flatBatch.push({
-                            organizer: element.organization,
-                            trail: element.trails[k].trail,
-                            date: element.trails[k].tournaments[l].date,
-                            lake: element.trails[k].tournaments[l].lake,
-                            lakeID: element.trails[k].tournaments[l].lakeID,
-                            ramp: element.trails[k].tournaments[l].ramp,
-                            state: element.trails[k].tournaments[l].state,
-                            entryLink: element.trails[k].tournaments[l].entryLink,
-                            resultsLink: element.trails[k].tournaments[l].resultsLink
-                        });
-                    };
-                };
-            };
-        };
-    });
-    callback(flatBatch);
-};
-
 
 // Function to sort data by asc/desc
 var sort_by = function (field, reverse, primer) {
@@ -1265,18 +1208,18 @@ var sort_by = function (field, reverse, primer) {
 };
 
 
-
-
-
 /******************************************************************************************************************/
-//
+/******************************************************************************************************************/
+/******************************************************************************************************************/
+/******************************************************************************************************************/
 //
 //
 //      Process the PAGE
 //
 //
-//
-//
+/******************************************************************************************************************/
+/******************************************************************************************************************/
+/******************************************************************************************************************/
 /******************************************************************************************************************/
 
 // Get current lake from database
@@ -1373,10 +1316,19 @@ $.ajax({
         //Ramp Tab
         /***************************************************************************** */
 
-        // API call for ramp data for Ramps
+        // API call for ramp data for Ramps (function found in apiRoutes.js)
+        //
+        // Optimized 9/09/20 JRY
+        // If a lakeName is specified, the ajax call will return only the ramps for that lake.
+        // If lakeName is not specified, the ajax call will return all ramps for all lakes. 
+        // This moves some processing to the server side.
+
         $.ajax({
                 url: "/api/ramps",
                 method: "GET",
+                data: {
+                    lakeName: lakeRoute
+                }
             })
             .then(function (data) {
                 rampData = data;
@@ -1589,6 +1541,9 @@ $.ajax({
         $.ajax({
                 url: "/api/tournaments",
                 method: "GET",
+                data: {
+                    lakeName: lakeRoute
+                }
             })
             .then(function (data) {
                 lakeTxData = data;
@@ -1600,62 +1555,38 @@ $.ajax({
                 //Tx Tab
                 /***************************************************************************** */
 
-                // Flatten our data so it's easier to work with
-                flattenData(lakeTxData, sortType, function () {
+                // Data was flattened by the ajax call to the server
+                // Simply need to display the data
 
-                    // sort by date when page loads (needs to be changed to be variable);
-                    var newBatch = flatBatch.sort(sort_by('date', sortType, function (a) {
-                        return a.toUpperCase()
-                    }));
+               
+                // display our newly flattened data for the first time (sorted by date);
+                lakeTxData.forEach(function (txOrg, i) {
 
-                    // display our newly flattened data for the first time (sorted by date);
-                    let txBatch = newBatch;
+                    if ((txOrg.type == 0)) {
 
-                    txBatch.forEach(function (txOrg, i) {
+                        // Create the HTML Well (Section) and Add the table content for each reserved table
+                        var txSection = $("<tr>");
+                        txSection.addClass("well");
+                        txSection.attr("id", "txWell-" + tableRow + 1);
 
-                        if ((txOrg.lakeID == lakeRoute)) {
+                        // Set href as entryLink
+                        txSection.attr("data-url", txOrg.entryLink); // Add data attribute to the row with entryLink url
+                        txSection.addClass("clickable-row"); // Add clickable row css styles
 
-                            // Create the HTML Well (Section) and Add the table content for each reserved table
-                            var txSection = $("<tr>");
-                            txSection.addClass("well");
-                            txSection.attr("id", "txWell-" + tableRow + 1);
+                        $("#txSection").append(txSection);
 
-                            // Set href as entryLink
-                            txSection.attr("data-url", txOrg.entryLink); // Add data attribute to the row with entryLink url
-                            txSection.addClass("clickable-row"); // Add clickable row css styles
+                        // Append the data values to the table row
+                        $("#txWell-" + tableRow + 1).append("<td>" + txOrg.organizer + "</td>");
+                        $("#txWell-" + tableRow + 1).append("<td>" + txOrg.trail + "</td>");
+                        $("#txWell-" + tableRow + 1).append("<td>" + txOrg.date + "</td>");
+                        $("#txWell-" + tableRow + 1).append("<td>" + txOrg.ramp + "</td>");
 
-                            $("#txSection").append(txSection);
+                        tableRow++;
+                    } else
 
-                            // Append the data values to the table row
-                            $("#txWell-" + tableRow + 1).append("<td>" + txOrg.organizer + "</td>");
-                            $("#txWell-" + tableRow + 1).append("<td>" + txOrg.trail + "</td>");
-                            $("#txWell-" + tableRow + 1).append("<td>" + txOrg.date + "</td>");
-                            $("#txWell-" + tableRow + 1).append("<td>" + txOrg.ramp + "</td>");
-
-                            tableRow++;
-                        }
-                    });
-
-                });
-
-                /***************************************************************************** */
-                //TxResults Tab
-                /***************************************************************************** */
-
-                sortType = 1;
-
-                // Flatten our data so it's easier to work with
-                flattenData(lakeTxResultsData, sortType, function () {
-
-                    // sort by date when page loads (needs to be changed to be variable);
-                    var newBatch = flatBatch.sort(sort_by('date', sortType, function (a) {
-                        return a.toUpperCase()
-                    }));
-
-                    // display our newly flattened data for the first time (sorted by date);
-                    let txBatch = newBatch;
-
-                    txBatch.forEach(function (txOrg, i) {
+                        /***************************************************************************** */
+                        //TxResults Tab
+                        /***************************************************************************** */
 
                         if ((txOrg.lakeID == lakeRoute)) {
 
@@ -1678,9 +1609,8 @@ $.ajax({
 
                             tableRow++;
                         }
-                    });
-
                 });
+
             });
 
 
