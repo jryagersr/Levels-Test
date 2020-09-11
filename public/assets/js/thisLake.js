@@ -1229,7 +1229,15 @@ var currentLake = {};
 var rampData = {};
 var noDataSource = false;
 var sensorDown = true;
+// Set lake title on page
+if (currentLake.bodyOfWater.includes("(")) {
+    $("#lakeTitle").append(currentLake.bodyOfWater.substr(0, currentLake.bodyOfWater.indexOf("(")));
+    $("#lakeSubTitle").append(currentLake.bodyOfWater.substr(currentLake.bodyOfWater.indexOf("("), currentLake.bodyOfWater.length));
+} else {
 
+    $("#lakeTitle").append(currentLake.bodyOfWater);
+    $("#lakeSubTitle").append(" ");
+}
 $.ajax({
         url: "/api/find-one-lake",
         method: "GET",
