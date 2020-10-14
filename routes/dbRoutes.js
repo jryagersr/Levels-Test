@@ -26,16 +26,18 @@ var update = require('./updateFunctions');
 // // Connect to the Mondo DB
 const databaseUri = 'mongodb://localhost/BassSavvyTestDb';
 
+console.log("Mongoose attempting to connect with " process.env.MONGODB_URI)
+
 if (process.env.MONGODB_URI) {
   db.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true
   });
-  console.log("MongoDB connection successful");
+  console.log("MongoDB remote connection successful");
 } else {
   db.connect(databaseUri, {
     useNewUrlParser: true
   });
-  console.log("MongoDB connection successful");
+  console.log("MongoDB local connection successful");
 }
 
 // ===============================================================================
