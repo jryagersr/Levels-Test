@@ -273,7 +273,7 @@ buildElevChartData: function (data, lake) {
   // Loop through our data for 24 data points if we have it
   for (k = 0; k < elevData.length; k++) {
 
-    checkDateIsValid = elevData[k].time.toLocaleDateString();
+    checkDateIsValid = new Date(elevData[k].time).toLocaleDateString();
 
     if (checkDateIsValid !== 'Invalid Date') {
 
@@ -311,7 +311,7 @@ buildElevChartData: function (data, lake) {
 
     } else {
       if (k < elevData.length - 1) {
-        checkDate = elevData[k + 1].time.toLocaleDateString();
+        checkDate = new Date(elevData[k + 1].time).toLocaleDateString();
         checkDate = checkDate.substr(0, checkDate.length - 5, );
       }
     }
@@ -404,7 +404,7 @@ buildFlowChartData: function (data, lake) {
   let divisor = 0;
   let k = 0; // our iterator after starting flow
   let avgFlow = 0;
-  let checkDate = data[0].time.toLocaleDateString();
+  let checkDate = new Date(data[0].time).toLocaleDateString();
 
   checkDate = checkDate.substr(0, checkDate.length - 5, );
 
@@ -419,7 +419,7 @@ buildFlowChartData: function (data, lake) {
       divisor++
 
     }
-    let currentDate = data[k].time.toLocaleDateString();
+    let currentDate = new Date(data[k].time).toLocaleDateString();
     currentDate = currentDate.substr(0, currentDate.length - 5, )
 
     if (currentDate !== checkDate) {
