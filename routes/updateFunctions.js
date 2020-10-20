@@ -143,31 +143,6 @@ module.exports = {
 
                   }
                 })
-              // log that the lake was updated and return it
-              //console.log(`UPDATE COMPLETE for ${updateData.bodyOfWater} (${updateData.dataSource[0]})`);
-
-              // The function calls below are for building the data for each of the charts on the chart tab. This data 
-              // processing was previously done in thisLake.js on the client side.
-              // moving this to the server side should provide better performance as the app grows.
-
-              // Building the data for the Elev charts on the back end for performance
-              buildElevChartData(updateData.data, currentLake); // build data for elev chart tab (performance)
-              // Building the data for the Flow charts on the back end for performance
-              buildFlowChartData(updateData.data, currentLake); // build data for flow chart tab (performance)
-              // Building the data for the River charts on the back end for performance
-              buildRiverChartData(updateData.data, currentLake); // build data for river chart tab (performance)
-              // Building the data for the flow hourly charts on the back end for performance
-              buildHourlyFlowChartData(updateData.data, currentLake); // build data for hourly flow chart tab (performance)
-              // Building the data for the temperature charts on the back end for performance
-              buildTempChartData(updateData.ccWxData, currentLake); // build data for temp chart tab (performance)
-              // Building the data for the barometric charts on the back end for performance
-              buildBaroChartData(updateData.ccWxData, currentLake); // build data for baro chart tab (performance)
-              // Building the data for the wind speed charts on the back end for performance
-              buildWindChartData(updateData.ccWxData, currentLake); // build data for wind speed chart tab (performance)
-              // Building the data for the wind direction charts on the back end for performance
-              buildWindDirectionChartData(updateData.ccWxData, currentLake); // build data for wind direction chart tab (performance)
-              // Building the data for the humidity charts on the back end for performance
-              buildHumidityChartData(updateData.ccWxData, currentLake); // build data for humidity chart tab (performance)
             }
           });
 
@@ -205,6 +180,8 @@ module.exports = {
         // push the current conditions into ccWxData[] and update the LastRefresh
         let timeStamp = newLakeCC.ccWxDataLastRefresh;
 
+        processChartWxData(currentLake, currentLake);
+
         db.model("Lake").updateOne({
             'bodyOfWater': bodyOfWater
           }, {
@@ -221,7 +198,7 @@ module.exports = {
               return true;
             }
           });
-      }
+        }
 
     })
   },
@@ -264,16 +241,15 @@ module.exports = {
       }
     });
 
-  }
+  },
 
-}
 
 /******************************************************************************************************************/
 // Function to build data for Elev on page
 // Moved to server side for performance
 /******************************************************************************************************************/
 // Function to prepare chart data
-function buildElevChartData(data, lake) {
+buildElevChartData: function (data, lake) {
   // Our data must be parsed into separate flat arrays for the chart
   var elevData = data;
   let chartElevObject = {
@@ -403,7 +379,7 @@ function buildElevChartData(data, lake) {
         console.log(error);
 
     })
-}
+},
 
 
 /******************************************************************************************************************/
@@ -413,7 +389,7 @@ function buildElevChartData(data, lake) {
 // Function to prepare chart data
 /******************************************************************************************************************/
 // Function to build daily flow chart data
-function buildFlowChartData(data, lake) {
+buildFlowChartData: function (data, lake) {
 
   let chartFlowObject = {
     type: "Flow",
@@ -518,13 +494,13 @@ function buildFlowChartData(data, lake) {
         console.log(error);
 
     })
-};
+},
 
 
 /******************************************************************************************************************/
 // Function to build chart data
 // Actually Hourly Elevation but called River because it can show daily tides on a River
-function buildRiverChartData(data, lake) {
+buildRiverChartData: function (data, lake) {
 
   let chartRiverObject = {
     type: "River",
@@ -619,12 +595,12 @@ function buildRiverChartData(data, lake) {
         console.log(error);
 
     })
-};
+},
 
 
 /******************************************************************************************************************/
 // Function to build hourly chart data
-function buildHourlyFlowChartData(data, lake) {
+buildHourlyFlowChartData: function (data, lake) {
   // Our data must be parsed into separate flat arrays for the chart
 
   let chartFlowHourlyObject = {
@@ -710,6 +686,7 @@ function buildHourlyFlowChartData(data, lake) {
 
     })
 
+}
 };
 
 /******************************************************************************************************************/
@@ -824,7 +801,7 @@ function buildTempChartData(tempData, lake) {
 
 /******************************************************************************************************************/
 // Function to build baro chart data
-function buildBaroChartData(baroData, lake) {
+ function buildBaroChartData(baroData, lake) {
   // Our data must be parsed into separate flat arrays for the chart
 
   let chartBaroObject = {
@@ -1092,8 +1069,7 @@ function buildHumidityChartData(humidityData, lake) {
         console.log(error);
 
     })
-};
-
+  };
 
 /******************************************************************************************************************/
 // Function to build wind direction chart data
@@ -1185,4 +1161,18 @@ function buildWindDirectionChartData(windData, lake) {
 
     })
 
+};
+
+
+function processChartWxData(data, currentLake) {
+  // Building the data for the temperature charts on the back end for performance
+  buildTempChartData(data.ccWxData, currentLake); // build data for temp chart tab (performance)
+  // Building the data for the barometric charts on the back end for performance
+  buildBaroChartData(data.ccWxData, currentLake); // build data for baro chart tab (performance)
+  // Building the data for the wind speed charts on the back end for performance
+  buildWindChartData(data.ccWxData, currentLake); // build data for wind speed chart tab (performance)
+  // Building the data for the wind direction charts on the back end for performance
+  buildWindDirectionChartData(data.ccWxData, currentLake); // build data for wind direction chart tab (performance)
+  // Building the data for the humidity charts on the back end for performance
+  buildHumidityChartData(data.ccWxData, currentLake); // build data for humidity chart tab (performance)
 }

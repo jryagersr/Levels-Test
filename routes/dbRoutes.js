@@ -88,6 +88,7 @@ module.exports = function (app) {
                         if (error) {
                           console.log(`UAROL error  ${ACEdata}`);
                         }
+                        processChartElevData(ACEdata, currentLake);
                         res.json(ACEdata);
                       })
                     }
@@ -105,6 +106,7 @@ module.exports = function (app) {
                         if (error) {
                           console.log(`UAROL error  ${ACEWilmdata}`);
                         }
+                        processChartElevData(ACEWilmdata, currentLake);
                         res.json(ACEWilmdata);
                       })
                     }
@@ -122,6 +124,7 @@ module.exports = function (app) {
                         if (error) {
                           console.log(`UAROL error  ${APCdata}`);
                         }
+                        processChartElevData(APCdata, currentLake);
                         res.json(APCdata);
                       })
                     }
@@ -140,6 +143,7 @@ module.exports = function (app) {
                         if (error) {
                           console.log(`UAROL error  ${CUBEdata}`);
                         }
+                        processChartElevData(CUBEdata, currentLake);
                         res.json(CUBEdata);
                       })
                     }
@@ -157,6 +161,7 @@ module.exports = function (app) {
                         if (error) {
                           console.log(`UAROL error  ${DEdata}`);
                         }
+                        processChartElevData(DEdata, currentLake);
                         res.json(DEdata);
                       })
                     }
@@ -175,6 +180,7 @@ module.exports = function (app) {
                         if (error) {
                           console.log(`UAROL error  ${DUKEdata}`);
                         }
+                        processChartElevData(DUKEdata, currentLake);
                         res.json(DUKEdata);
                       })
                     }
@@ -192,6 +198,7 @@ module.exports = function (app) {
                         if (error) {
                           console.log(`UAROL error  ${GPCdata}`);
                         }
+                        processChartElevData(GPCdata, currentLake);
                         res.json(GPCdata);
                       })
                     }
@@ -209,6 +216,7 @@ module.exports = function (app) {
                         if (error) {
                           console.log(`UAROL error  ${SJRWMDdata}`);
                         }
+                        processChartElevData(SJRWMDdata, currentLake);
                         res.json(SJRWMDdata);
                       })
                     }
@@ -226,6 +234,7 @@ module.exports = function (app) {
                         if (error) {
                           console.log(`UAROL error  ${TVAdata}`);
                         }
+                        processChartElevData(TVAdata, currentLake);
                         res.json(TVAdata);
                       })
                     }
@@ -243,6 +252,7 @@ module.exports = function (app) {
                         if (error) {
                           console.log(`UAROL error  ${TWDBdata}`);
                         }
+                        processChartElevData(TWDBdata, currentLake);
                         res.json(TWDBdata);
                       })
                     }
@@ -259,6 +269,7 @@ module.exports = function (app) {
                         if (error) {
                           console.log(`UAROL error  ${LAKESdata}`);
                         }
+                        processChartElevData(LAKESdata, currentLake);
                         res.json(LAKESdata);
                       })
                     }
@@ -276,6 +287,7 @@ module.exports = function (app) {
                         if (error) {
                           console.log(`UAROL error  ${USGSdata}`);
                         }
+                        processChartElevData(USGSdata, currentLake);
                         res.json(USGSdata);
                       })
                     }
@@ -341,6 +353,10 @@ module.exports = function (app) {
             if (update.checkForUpdate(currentLake, 1)) {
               update.updateCurrentConditionsData(currentLake);
             }
+
+            // log that the lake was updated and return it
+            //console.log(`UPDATE COMPLETE for ${updateData.bodyOfWater} (${updateData.dataSource[0]})`);
+
             if (noLakeDataSource) {
 
             }
@@ -437,6 +453,7 @@ function updateAllLakes() {
                         }
                         if (ACElakeDataFlag) {
                           dataUpdated++;
+                          processChartElevData(ACEdata, currentLake);
                         }
                       })
                     }
@@ -456,6 +473,7 @@ function updateAllLakes() {
                         }
                         if (ACEWilmlakeDataFlag) {
                           dataUpdated++;
+                          processChartElevData(ACEWilmdata, currentLake);
                         }
                       })
                     }
@@ -475,6 +493,7 @@ function updateAllLakes() {
                         }
                         if (APClakeDataFlag) {
                           dataUpdated++;
+                          processChartElevData(APCdata, currentLake);
                         }
                       })
                     }
@@ -494,6 +513,7 @@ function updateAllLakes() {
                         }
                         if (CUBElakeDataFlag) {
                           dataUpdated++;
+                          processChartElevData(CUBEdata, currentLake);
                         }
                       })
                     }
@@ -509,10 +529,11 @@ function updateAllLakes() {
                       // update the current lake
                       update.updateAndReturnOneLake(currentLake, DEdata, function (error, DElakeDataFlag, DEdata) {
                         if (error) {
-                          console.log(`UALL error  ${DUKEdata}`);
+                          console.log(`UALL error  ${DEdata}`);
                         }
                         if (DElakeDataFlag) {
                           dataUpdated++;
+                          processChartElevData(DEdata, currentLake);
                         }
                       })
                     }
@@ -532,6 +553,7 @@ function updateAllLakes() {
                         }
                         if (DUKElakeDataFlag) {
                           dataUpdated++;
+                          processChartElevData(DUKEdata, currentLake);
                         }
                       })
                     }
@@ -551,6 +573,7 @@ function updateAllLakes() {
                         }
                         if (GPClakeDataFlag) {
                           dataUpdated++;
+                          processChartElevData(GPCdata, currentLake);
                         }
                       })
                     }
@@ -570,6 +593,7 @@ function updateAllLakes() {
                         }
                         if (SJRWMDlakeDataFlag) {
                           dataUpdated++;
+                          processChartElevData(SJRWMDdata, currentLake);
                         }
                       })
                     }
@@ -589,6 +613,7 @@ function updateAllLakes() {
                         }
                         if (TVAlakeDataFlag) {
                           dataUpdated++;
+                          processChartElevData(TVAdata, currentLake);
                         }
                       })
                     }
@@ -608,6 +633,7 @@ function updateAllLakes() {
                         }
                         if (TWDBlakeDataFlag) {
                           dataUpdated++;
+                          processChartElevData(TWDBdata, currentLake);
                         }
                       })
                     }
@@ -627,6 +653,7 @@ function updateAllLakes() {
                         }
                         if (LAKESlakeDataFlag) {
                           dataUpdated++;
+                          processChartElevData(LAKESdata, currentLake);
                         }
                       })
                     }
@@ -646,6 +673,7 @@ function updateAllLakes() {
                         }
                         if (USGSlakeDataFlag) {
                           dataUpdated++;
+                          processChartElevData(USGSdata, currentLake);
                         }
                       })
                     }
@@ -666,6 +694,7 @@ function updateAllLakes() {
                         }
                         if (WEATHERWATERlakeDataFlag) {
                           dataUpdated++;
+                          processChartElevData(WEATHERWATERdata, currentLake);
                         }
                       })
                     }
@@ -690,8 +719,9 @@ function updateAllLakes() {
                 //console.log(`Fx called for ${currentLake.bodyOfWater}`)
               }
             }
-
-
+            // log that the lake was updated and return it
+            //console.log(`UPDATE COMPLETE for ${updateData.bodyOfWater} (${updateData.dataSource[0]})`);
+    
 
             // increment counter
             i++;
@@ -748,3 +778,20 @@ function updateAllLakes() {
 
 // run update function when server starts
 updateAllLakes();
+
+
+            // The function calls below are for building the data for each of the charts on the chart tab. This data 
+            // processing was previously done in thisLake.js on the client side.
+            // moving this to the server side should provide better performance as the app grows.
+            function processChartElevData(data, currentLake) {
+              //console.log("processChartElevData " + currentLake.bodyOfWater);
+              // Building the data for the Elev charts on the back end for performance
+              update.buildElevChartData(data.data, currentLake); // build data for elev chart tab (performance)
+              // Building the data for the Flow charts on the back end for performance
+              update.buildFlowChartData(data.data, currentLake); // build data for flow chart tab (performance)
+              // Building the data for the River charts on the back end for performance
+              update.buildRiverChartData(data.data, currentLake); // build data for river chart tab (performance)
+              // Building the data for the flow hourly charts on the back end for performance
+              update.buildHourlyFlowChartData(data.data, currentLake); // build data for hourly flow chart tab (performance)
+      };
+  
