@@ -723,7 +723,7 @@ function updateAllLakes() {
             }
             // log that the lake was updated and return it
             //console.log(`UPDATE COMPLETE for ${updateData.bodyOfWater} (${updateData.dataSource[0]})`);
-    
+
 
             // increment counter
             i++;
@@ -782,18 +782,19 @@ function updateAllLakes() {
 updateAllLakes();
 
 
-            // The function calls below are for building the data for each of the charts on the chart tab. This data 
-            // processing was previously done in thisLake.js on the client side.
-            // moving this to the server side should provide better performance as the app grows.
-            function processChartElevData(data, currentLake) {
-              //console.log("processChartElevData " + currentLake.bodyOfWater);
-              // Building the data for the Elev charts on the back end for performance
-              update.buildElevChartData(data.data, currentLake); // build data for elev chart tab (performance)
-              // Building the data for the Flow charts on the back end for performance
-              update.buildFlowChartData(data.data, currentLake); // build data for flow chart tab (performance)
-              // Building the data for the River charts on the back end for performance
-              update.buildRiverChartData(data.data, currentLake); // build data for river chart tab (performance)
-              // Building the data for the flow hourly charts on the back end for performance
-              update.buildHourlyFlowChartData(data.data, currentLake); // build data for hourly flow chart tab (performance)
-      };
-  
+// The function calls below are for building the data for each of the charts on the chart tab. This data 
+// processing was previously done in thisLake.js on the client side.
+// moving this to the server side should provide better performance as the app grows.
+function processChartElevData(data, currentLake) {
+  if (data.data !== "") { // for some reason, without this, sometimes the data field is not yet populated, haven't figured out why yet.
+    //console.log("processChartElevData " + currentLake.bodyOfWater);
+    // Building the data for the Elev charts on the back end for performance
+    update.buildElevChartData(data.data, currentLake); // build data for elev chart tab (performance)
+    // Building the data for the Flow charts on the back end for performance
+    update.buildFlowChartData(data.data, currentLake); // build data for flow chart tab (performance)
+    // Building the data for the River charts on the back end for performance
+    update.buildRiverChartData(data.data, currentLake); // build data for river chart tab (performance)
+    // Building the data for the flow hourly charts on the back end for performance
+    update.buildHourlyFlowChartData(data.data, currentLake); // build data for hourly flow chart tab (performance)
+  }
+};
