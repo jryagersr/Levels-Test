@@ -843,7 +843,7 @@ function buildWindDirectionChart(windData, lake) {
     let windIndex = 0;
     for (i = 0; i < windData.length; i++) {
 
-        if (windData[i].type == "Wind") {
+        if (windData[i].type == "WindDirection") {
             windExists = true;
             windIndex = i;
             break;

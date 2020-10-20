@@ -146,31 +146,31 @@ module.exports = {
               // log that the lake was updated and return it
               //console.log(`UPDATE COMPLETE for ${updateData.bodyOfWater} (${updateData.dataSource[0]})`);
 
+              // The function calls below are for building the data for each of the charts on the chart tab. This data 
+              // processing was previously done in thisLake.js on the client side.
+              // moving this to the server side should provide better performance as the app grows.
+
+              // Building the data for the Elev charts on the back end for performance
+              buildElevChartData(updateData.data, currentLake); // build data for elev chart tab (performance)
+              // Building the data for the Flow charts on the back end for performance
+              buildFlowChartData(updateData.data, currentLake); // build data for flow chart tab (performance)
+              // Building the data for the River charts on the back end for performance
+              buildRiverChartData(updateData.data, currentLake); // build data for river chart tab (performance)
+              // Building the data for the flow hourly charts on the back end for performance
+              buildHourlyFlowChartData(updateData.data, currentLake); // build data for hourly flow chart tab (performance)
+              // Building the data for the temperature charts on the back end for performance
+              buildTempChartData(updateData.ccWxData, currentLake); // build data for temp chart tab (performance)
+              // Building the data for the barometric charts on the back end for performance
+              buildBaroChartData(updateData.ccWxData, currentLake); // build data for baro chart tab (performance)
+              // Building the data for the wind speed charts on the back end for performance
+              buildWindChartData(updateData.ccWxData, currentLake); // build data for wind speed chart tab (performance)
+              // Building the data for the wind direction charts on the back end for performance
+              buildWindDirectionChartData(updateData.ccWxData, currentLake); // build data for wind direction chart tab (performance)
+              // Building the data for the humidity charts on the back end for performance
+              buildHumidityChartData(updateData.ccWxData, currentLake); // build data for humidity chart tab (performance)
             }
           });
 
-        // The function calls below are for building the data for each of the charts on the chart tab. This data 
-        // processing was previously done in thisLake.js on the client side.
-        // moving this to the server side should provide better performance as the app grows.
-
-        // Building the data for the Elev charts on the back end for performance
-        buildElevChartData(currentLake.data, currentLake); // build data for elev chart tab (performance)
-        // Building the data for the Flow charts on the back end for performance
-        buildFlowChartData(currentLake.data, currentLake); // build data for flow chart tab (performance)
-        // Building the data for the River charts on the back end for performance
-        buildRiverChartData(currentLake.data, currentLake); // build data for river chart tab (performance)
-        // Building the data for the flow hourly charts on the back end for performance
-        buildHourlyFlowChartData(currentLake.data, currentLake); // build data for hourly flow chart tab (performance)
-        // Building the data for the temperature charts on the back end for performance
-        buildTempChartData(currentLake.ccWxData, currentLake); // build data for temp chart tab (performance)
-        // Building the data for the barometric charts on the back end for performance
-        buildBaroChartData(currentLake.ccWxData, currentLake); // build data for baro chart tab (performance)
-        // Building the data for the wind speed charts on the back end for performance
-        buildWindChartData(currentLake.ccWxData, currentLake); // build data for wind speed chart tab (performance)
-        // Building the data for the wind direction charts on the back end for performance
-        buildWindDirectionChartData(currentLake.ccWxData, currentLake); // build data for wind direction chart tab (performance)
-        // Building the data for the humidity charts on the back end for performance
-        buildHumidityChartData(currentLake.ccWxData, currentLake); // build data for humidity chart tab (performance)
       }
     }
   },
@@ -1113,7 +1113,7 @@ function buildWindDirectionChartData(windData, lake) {
   let k = 0; // our iterator after starting data
   let compassSector = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
   let displayCompassSector = ["N", " ", "NE", " ", "E", " ", "SE", " ", "S", " ", "SW", " ", "W", " ", "NW", " "];
-
+  chartWindDirectionObject.displayCompassSector.push(displayCompassSector);
   // Loop through our data for 24 data points if we have it
   for (k; k < windData.length; k++) {
 
@@ -1166,6 +1166,8 @@ function buildWindDirectionChartData(windData, lake) {
     lake.chartData[windDirectionIndex].dataWindDirectionBatch = chartWindDirectionObject.dataWindDirectionBatch;
     lake.chartData[windDirectionIndex].chartMinWindDirectionLimit = chartWindDirectionObject.chartMinWindDirectionLimit;
     lake.chartData[windDirectionIndex].chartMaxWindDirectionLimit = chartWindDirectionObject.chartMaxWindDirectionLimit;
+    lake.chartData[windDirectionIndex].displayCompassSector = chartWindDirectionObject.displayCompassSector;
+
   } else
     lake.chartData.push(chartWindDirectionObject);
 
