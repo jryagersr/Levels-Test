@@ -265,8 +265,7 @@ buildElevChartData: function (data, lake) {
   let sumOfElevs = 0;
   let divisor = 0;
   let k = 0; // our iterator after starting elevation
-console.log(data)
-  let checkDate = elevData[0].time.toLocaleDateString();
+  let checkDate = new Date(elevData[0].time).toLocaleDateString();
   checkDate = checkDate.substr(0, checkDate.length - 5, );
 
 
