@@ -52,7 +52,7 @@ module.exports = {
     if (diffMins >= refreshInterval || currentLake.lastRefresh == "Invalid Date") {
       status = true;
     } else {
-      status = true;
+      status = false;
     }
     return status;
   },
