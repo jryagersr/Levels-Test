@@ -305,6 +305,7 @@ module.exports = function (app) {
                         if (error) {
                           console.log(`UAROL error  ${WEATHERWATERdata}`);
                         }
+                        processChartElevData(WEATHERWATERdata, currentLake);
                         res.json(WEATHERWATERdata);
                       })
                     }

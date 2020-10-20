@@ -507,7 +507,7 @@ buildRiverChartData: function (data, lake) {
     labelBatch: [],
     dataRiverBatch: [],
     chartMinRiverLimit: 10000, // y-axis Min Flow value
-    chartMaxRiverLimit: 0, // y-axis Max Flow value
+    chartMaxRiverLimit: -200, // y-axis Max Flow value
     minMaxDiff: 0
 
   }
@@ -519,23 +519,23 @@ buildRiverChartData: function (data, lake) {
 
   // Loop through our data for 48 data points if we have it
   // two days worth of data may show the tides in tidal rivers 
-  for (k = 1; k < data.length; k++) {
+  for (k = 0; k < data.length; k++) {
 
     // Set hourlyElev
-    if (k < 2)
+    /*if (k < 2)
       hourlyElev = Number((data[k - 1].elev + data[k].elev) / 2);
     else
-      hourlyElev = Number((data[k - 2].elev + data[k - 1].elev + data[k].elev) / 3);
+      hourlyElev = Number((data[k - 2].elev + data[k - 1].elev + data[k].elev) / 3);*/
 
 
     chartRiverObject.labelBatch.push(data[k].time);
-    chartRiverObject.dataRiverBatch.push(hourlyElev.toFixed(2)); // push elev
+    chartRiverObject.dataRiverBatch.push(parseFloat(Number(data[k].elev).toFixed(2))); // push elev
 
     // need the parseFloat for comparing negative numbers. 
-    if (parseFloat(hourlyElev.toFixed(2)) > parseFloat(chartRiverObject.chartMaxRiverLimit)) // if value is greater than max, replace max
-      chartRiverObject.chartMaxRiverLimit = hourlyElev.toFixed(2); // update Max Elev average
-    if (parseFloat(hourlyElev.toFixed(2)) < parseFloat(chartRiverObject.chartMinRiverLimit)) // if value is less thank min, replace min
-      chartRiverObject.chartMinRiverLimit = hourlyElev.toFixed(2); // update Min Elev average
+    if (parseFloat(Number(data[k].elev).toFixed(2)) > parseFloat(chartRiverObject.chartMaxRiverLimit)) // if value is greater than max, replace max
+      chartRiverObject.chartMaxRiverLimit = parseFloat(Number(data[k].elev).toFixed(2)); // update Max Elev average
+    if (parseFloat(Number(data[k].elev).toFixed(2)) < parseFloat(chartRiverObject.chartMinRiverLimit)) // if value is less thank min, replace min
+      chartRiverObject.chartMinRiverLimit = parseFloat(Number(data[k].elev).toFixed(2)); // update Min Elev average
 
 
     // when a week of data has been reached stop
@@ -830,16 +830,16 @@ function buildTempChartData(tempData, lake) {
       hour = ((hour + 11) % 12 + 1);
 
       // Convert millibars to inches
-      baroData[k].baro = baroData[k].baro * 0.0295301
+      let currentBaro = parseFloat(baroData[k].baro * 0.0295301);
 
       chartBaroObject.labelBatch.push(hour); // push time
       //labelBatch.push(hour + suffix);
-      chartBaroObject.dataBaroBatch.push(baroData[k].baro); // push elev
+      chartBaroObject.dataBaroBatch.push(baroData[k].baro * 0.0295301); // push elev convert to inches
 
-      if (baroData[k].baro > chartBaroObject.chartMaxBaroLimit) // if value is greater than max, replace max
-        chartBaroObject.chartMaxBaroLimit = baroData[k].baro; // update Max Elev average
-      if (baroData[k].baro < chartBaroObject.chartMinBaroLimit) // if value is less thank min, replace min
-        chartBaroObject.chartMinBaroLimit = baroData[k].baro; // update Min Elev average
+      if (currentBaro > chartBaroObject.chartMaxBaroLimit) // if value is greater than max, replace max
+        chartBaroObject.chartMaxBaroLimit = currentBaro; // update Max Elev average
+      if (currentBaro < chartBaroObject.chartMinBaroLimit) // if value is less thank min, replace min
+        chartBaroObject.chartMinBaroLimit = currentBaro; // update Min Elev average
 
     }
 
