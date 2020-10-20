@@ -473,6 +473,7 @@ function updateAllLakes() {
                         }
                         if (ACEWilmlakeDataFlag) {
                           dataUpdated++;
+                          console.log(ACEWilmdata);
                           processChartElevData(ACEWilmdata, currentLake);
                         }
                       })

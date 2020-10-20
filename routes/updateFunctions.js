@@ -414,7 +414,7 @@ buildFlowChartData: function (data, lake) {
 
 
     if (data[k].flow == "Missing" || data[k].flow < 0) {
-      console.log("Missing Flow - " + lake.bodyOfWater)
+      //console.log("Missing Flow - " + lake.bodyOfWater)
     } else {
       sumOfFlows += data[k].flow
       divisor++
