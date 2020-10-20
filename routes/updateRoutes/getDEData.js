@@ -50,30 +50,26 @@ module.exports = {
 
           // With cheerio, find each <td> on the page
           // (i: iterator. element: the current element)
-          $(`.dom-alt-rows`).each(function (i, element) {
-            var value = $(`.dom-alt-rows`).text();
-            splitData = value.split('\n');
-            deDate = splitData[10].trim();
-            deElev = splitData[12].trim();
-            deDate = deDate.split("/");
+          $('td').each(function (i, element) {
+            var value = $(element).text();
+            if (i == 0) {
+              splitData = value.split('/');
 
 
+              //get the date/time
 
-            //get the date/time
+              // format timestamp for database
+              let year = splitData[2].trim();
+              let month = parseInt(splitData[0].trim() - 1); //JS counts numbers from 0-11 (ex. 0 = January)
+              let day = splitData[1].trim();
+              let hour = "8"; // Always 8 AM
 
-            // format timestamp for database
-            let year = deDate[2];
-            let month = parseInt(deDate[0]) - 1; //JS counts numbers from 0-11 (ex. 0 = January)
-            let day = deDate[1];
-            let hour = "8"; // Always 8 AM
-
-            deTime = new Date(year, month, day, hour);
-
-            //Calculate the average water level
-            deElev = deElev.split("-");
-            deElev = (Number(deElev[0].trim()));
-            deElev = deElev.toFixed(2);
-
+              deTime = new Date(year, month, day, hour);
+            }
+            //Get the average water level
+            if (i == 2) {
+              deElev = value;
+            }
           });
           if (deElev !== 0) // If elev not 0 (ie, unposted data)
             data.push({

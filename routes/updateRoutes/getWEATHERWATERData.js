@@ -69,8 +69,33 @@ module.exports = {
               case "Lake Mead":
                 switch (jsonData.Series[i].DataTypeName) {
                   case "reservoir ws elevation, end of period primary reading":
-                    time = jsonData.Series[i].Data[jsonData.Series[i].Data.length - 2].t;
-                    elev = Number(jsonData.Series[i].Data[jsonData.Series[i].Data.length - 2].v).toFixed(2);
+                    for (j = jsonData.Series[i].Data.length - 2; j >= 0; j--) {
+
+                      time = jsonData.Series[i].Data[j].t; // format timestamp for database
+                      let splitTime = time.split(" ");
+                      let splitDate = jsonData.Series[i].Data[j].t.split(" ");
+                      splitHour = splitDate[1].split(":"); //split the time
+                      let hour = splitHour[0]; // get the hour
+                      splitDate = splitDate[0].split("/");
+                      let year = splitDate[2];
+                      let month = parseInt(splitDate[0]) - 1; //JS counts numbers from 0-11 (ex. 0 = January)
+                      let day = splitDate[1];
+
+                      if (splitTime[0] === "Midnight") {
+                        hour = 0;
+                      } else if (splitTime[0] == "Noon") {
+                        hour = 12;
+                      } else if (splitTime[2] === "PM")
+                        hour = parseInt(hour) + 12;
+
+                      time = new Date(year, month, day, hour);
+                      elev = Number(jsonData.Series[i].Data[jsonData.Series[i].Data.length - 2].v).toFixed(2);
+                      data.push({
+                        elev: elev,
+                        time: time,
+                        flow: flow
+                      });
+                    }
                     break;
                   case "average total release (sum of all average reservoir release methods)":
                     flow = Number(jsonData.Series[i].Data[jsonData.Series[i].Data.length - 2].v).toFixed(2);
@@ -79,11 +104,6 @@ module.exports = {
                 default:
             }
           }
-          data.push({
-            elev: elev,
-            time: time,
-            flow: flow
-          });
 
         } else {
 
@@ -167,24 +187,47 @@ module.exports = {
               } else if (i < 1) {
                 var value = $(element).children().text();
                 if (bodyOfWater == "Erie (Sandusky)") {
-                  date = value.substring(110, 114) + "/" + new Date().getFullYear();
-                  time = new Date(date + " 13:00");
-                  elev = value.substring(123, 127);
-                  flow = "N/A";
+                  // loop through the data and push it on the list.
+                  // first data is at [10], Save the minutes of the time to find the next 1hr interval
+                  let splitData = value.split("\n");
+                  let minutes = splitData[9].slice(-2);
+
+                  for (k = 9; k < splitData.length; k = k + 4) {
+                    if (minutes == splitData[k].slice(-2)) {
+
+                      time = splitData[k].slice(0, 5) + "/" + new Date().getFullYear() + " " + splitData[k].slice(6);
+                      time = new Date(time);
+                      elev = splitData[k + 1].substring(0, splitData[k + 1].length - 2);
+                      flow = "N/A";
+                      data.push({
+                        elev: elev,
+                        time: time,
+                        flow: "N/A"
+                      });
+                    };
+                  }
 
                 } else {
-                  date = value.substring(97, 101) + "/" + new Date().getFullYear();
-                  time = new Date(date + " 13:00");
-                  let test = value.split("\n")
-                  elev = test[11].substring(0, test[11].length - 2)
-                  //elev = value.substring(110, 116);
-                  flow = "N/A";
+                  // loop through the data and push it on the list.
+                  // first data is at [10], Save the minutes of the time to find the next 1hr interval
+                  let splitData = value.split("\n");
+                  let minutes = splitData[10].slice(-2);
+
+                  for (k = 10; k < splitData.length; k = k + 5) {
+                    if (minutes == splitData[k].slice(-2)) {
+
+                      time = splitData[k].slice(0, 5) + "/" + new Date().getFullYear() + " " + splitData[k].slice(6);
+                      time = new Date(time);
+                      elev = splitData[k + 1].substring(0, splitData[k + 1].length - 2);
+                      flow = "N/A";
+                      data.push({
+                        elev: elev,
+                        time: time,
+                        flow: "N/A"
+                      });
+                    };
+                  }
                 }
-                data.push({
-                  elev: elev,
-                  time: time,
-                  flow: "N/A"
-                });
               }
             });
           } else

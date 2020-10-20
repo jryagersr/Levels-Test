@@ -27,7 +27,8 @@ module.exports = {
         callback(error);
         return;
       };
-      console.log(`${bodyOfWater} ${body.substring(0,50)}`)
+      // following console.log was trying to catch a timing problem with USGS Get. Never Trapped it.
+      //console.log(`${bodyOfWater} ${body.substring(0,50)}`)
 
 
       // clear displayBatch

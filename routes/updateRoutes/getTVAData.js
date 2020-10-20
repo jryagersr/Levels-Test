@@ -25,7 +25,8 @@ module.exports = {
       if (error) {
         callback(true, error, body);
       } else {
-console.log(`${bodyOfWater} ${body.substring(0,50)}}`)
+        //console.log below put in to trap a timing bug in TVA Get. unable to trap
+        //console.log(`${bodyOfWater} ${body.substring(0,50)}}`)
         let dataErrorTrue = false;
         try {
           data = JSON.parse(body);

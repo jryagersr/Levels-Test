@@ -47,41 +47,50 @@ module.exports = function (app) {
     var lakeTxData = require("../data/tournamentData");
     var flatLakeTx = [];
 
+    // If this call is from the Upcoming Tournaments or Tournament Results pages
+    // Then do not flatten the data (right now do not want to modify the filtering code on those pages)
+    // If this call is from the Tx or TxR tabs on a lake page, flatten the data
+    // and return only the tournaments for that lake. 
+    // Performance improvement off-loading the flattening and selecting only this lake from the client
 
-    flattenData(lakeTxData, function () {
-      // sort by date when page loads (needs to be changed to be variable);
+    if (typeof lakeName !== 'undefined') {
 
-      // sort by date when page loads (needs to be changed to be variable);
-      //var newBatch = flatBatch.sort(sort_by('date', sortType, function (a) {
-      //    return a.toUpperCase()
-      //}));
+      flattenData(lakeTxData, function () {
+        // sort by date when page loads (needs to be changed to be variable);
 
-      // sort by date when page loads (needs to be changed to be variable);
-      var flatTxData = flatBatch.sort(function (a, b) {
-        var nameA = a.date.toUpperCase(); // ignore upper and lowercase
-        var nameB = b.date.toUpperCase(); // ignore upper and lowercase
-        if (nameA < nameB) {
-          return -1;
-        }
-        if (nameA > nameB) {
-          return 1;
-        }
+        // sort by date when page loads (needs to be changed to be variable);
+        //var newBatch = flatBatch.sort(sort_by('date', sortType, function (a) {
+        //    return a.toUpperCase()
+        //}));
 
-        // names must be equal
-        return 0;
+        // sort by date when page loads (needs to be changed to be variable);
+        var flatTxData = flatBatch.sort(function (a, b) {
+          var nameA = a.date.toUpperCase(); // ignore upper and lowercase
+          var nameB = b.date.toUpperCase(); // ignore upper and lowercase
+          if (nameA < nameB) {
+            return -1;
+          }
+          if (nameA > nameB) {
+            return 1;
+          }
+
+          // names must be equal
+          return 0;
+        });
+
+        // Take flattened data and retrieve only this lake's Txs
+        flatTxData.forEach(function (tourney, i) {
+          // Is it for this lake?
+          if ((tourney.lakeID == lakeName)) { // if lake matches for lake Tx 
+            flatLakeTx.push(tourney); // Push onto data to be returned
+          }
+        });
+
       });
 
-      // Take flattened data and retrieve only this lake's Txs
-      flatTxData.forEach(function (tourney, i) {
-        // Is it for this lake?
-        if ((tourney.lakeID == lakeName)) {
-          flatLakeTx.push(tourney); // Push onto data to be returned
-        }
-      });
-
-    });
-
-    response.json(flatLakeTx); // return this lake's tournaments
+      response.json(flatLakeTx); // return this lake's tournaments
+    } else
+    response.json(lakeTxData); // return all lakes tournaments
   });
 
   // This reads the ramp file for the thisLake Page
@@ -92,7 +101,7 @@ module.exports = function (app) {
     var rampData = require("../data/rampData");
     var thisLakeRampData = [];
 
-    // If no lakename specified, only return ramps for that lake, else return all ramps
+    // If a lakename specified, only return ramps for that lake, else return all ramps
     if (lakeName) {
       rampData.forEach(function (ramp, i) {
 
@@ -131,8 +140,9 @@ module.exports = function (app) {
     response.json(sponsorData);
   });
 
+
   /******************************************************************************************************************/
-  // function to flatten the nested data
+  // function to flatten the nested tournament data (dataRoute Tournaments)
   function flattenData(data, callback) {
     flatBatch = [];
     data.forEach(function (element) {

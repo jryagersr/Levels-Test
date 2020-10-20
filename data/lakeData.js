@@ -6,6 +6,7 @@ module.exports = [
         bodyOfWater: "Aliceville", // lake name
         state: ["Alabama"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -26,6 +27,7 @@ module.exports = [
         bodyOfWater: "Bankhead", // lake name
         state: ["Alabama"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -46,6 +48,7 @@ module.exports = [
         bodyOfWater: "Bouldin", // lake name
         state: ["Alabama"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -66,6 +69,7 @@ module.exports = [
         bodyOfWater: "Cedar Creek (AL)", // lake name
         state: ["Alabama"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -85,6 +89,7 @@ module.exports = [
         bodyOfWater: "Eufaula (AL)", // lake name
         state: ["Alabama", "Georgia"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -105,6 +110,7 @@ module.exports = [
         bodyOfWater: "Guntersville", // lake name
         state: ["Alabama"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -125,6 +131,7 @@ module.exports = [
         bodyOfWater: "Harris", // lake name
         state: ["Alabama"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -145,6 +152,7 @@ module.exports = [
         bodyOfWater: "Holt", // lake name
         state: ["Alabama"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -165,6 +173,7 @@ module.exports = [
         bodyOfWater: "Jordan (AL)", // lake name
         state: ["Alabama"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -185,6 +194,7 @@ module.exports = [
         bodyOfWater: "Lay", // lake name
         state: ["Alabama"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -205,6 +215,7 @@ module.exports = [
         bodyOfWater: "Logan Martin", // lake name
         state: ["Alabama"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -225,6 +236,7 @@ module.exports = [
         bodyOfWater: "Mitchell", // lake name
         state: ["Alabama"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -245,6 +257,7 @@ module.exports = [
         bodyOfWater: "Neely Henry", // lake name
         state: ["Alabama"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -265,6 +278,7 @@ module.exports = [
         bodyOfWater: "Martin", // lake name
         state: ["Alabama"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -285,6 +299,7 @@ module.exports = [
         bodyOfWater: "Pickwick", // lake name
         state: ["Alabama", "Mississippi", "Tennessee"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -305,6 +320,7 @@ module.exports = [
         bodyOfWater: "Smith", // lake name
         state: ["Alabama"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -325,6 +341,7 @@ module.exports = [
         bodyOfWater: "Thurlow", // lake name
         state: ["Alabama"],
         data: [],
+chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -345,6 +362,7 @@ module.exports = [
         bodyOfWater: "Upper Bear Creek", // lake name
         state: ["Alabama"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -365,6 +383,7 @@ module.exports = [
         bodyOfWater: "Weiss", // lake name
         state: ["Alabama"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -385,6 +404,7 @@ module.exports = [
         bodyOfWater: "Wheeler", // lake name
         state: ["Alabama"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -405,6 +425,7 @@ module.exports = [
         bodyOfWater: "Wilson", // lake name
         state: ["Alabama"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -425,6 +446,7 @@ module.exports = [
         bodyOfWater: "Yates", // lake name
         state: ["Alabama"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -446,6 +468,7 @@ module.exports = [
         bodyOfWater: "Alamo", // lake name
         state: ["Arizona"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -465,6 +488,7 @@ module.exports = [
         bodyOfWater: "Mead", // lake name
         state: ["Arizona", "Nevada"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -484,6 +508,7 @@ module.exports = [
         bodyOfWater: "Havasu", // lake name
         state: ["Arizona", "California"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -503,6 +528,7 @@ module.exports = [
                 {
                     bodyOfWater: "Roosevelt", // lake name
                     data: [],
+chartData: [],
         ccWxData: [],
         wxForecastData: [],
                     refreshInterval: 60, //minutes
@@ -522,6 +548,7 @@ module.exports = [
         bodyOfWater: "Arkansas River (Pine Bluff)", // lake name
         state: ["Arkansas"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -541,6 +568,7 @@ module.exports = [
         bodyOfWater: "Beaver", // lake name
         state: ["Arkansas"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -560,6 +588,7 @@ module.exports = [
         bodyOfWater: "Dardanelle", // lake name
         state: ["Arkansas"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -581,6 +610,7 @@ module.exports = [
         bodyOfWater: "Greers Ferry", // lake name
         state: ["Arkansas"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -600,6 +630,7 @@ module.exports = [
         bodyOfWater: "Hamilton", // lake name
         state: ["Arkansas"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -619,6 +650,7 @@ module.exports = [
         bodyOfWater: "Ouachita", // lake name
         state: ["Arkansas"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -641,6 +673,7 @@ module.exports = [
         bodyOfWater: "Camanche", // lake name
         state: ["California"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -661,6 +694,7 @@ module.exports = [
         bodyOfWater: "Canyon", // lake name
         state: ["California"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -680,6 +714,7 @@ module.exports = [
         bodyOfWater: "Clear", // lake name
         state: ["California"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -699,6 +734,7 @@ module.exports = [
         bodyOfWater: "Don Pedro", // lake name
         state: ["California"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -718,6 +754,7 @@ module.exports = [
         bodyOfWater: "Folsom", // lake name
         state: ["California"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -737,6 +774,7 @@ module.exports = [
         bodyOfWater: "Iron Gate", // lake name
         state: ["California", "Oregon"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -756,6 +794,7 @@ module.exports = [
         bodyOfWater: "Mendocino", // lake name
         state: ["California"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -775,6 +814,7 @@ module.exports = [
         bodyOfWater: "New Hogan", // lake name
         state: ["California"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -794,6 +834,7 @@ module.exports = [
         bodyOfWater: "Pine Flat", // lake name
         state: ["California"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -816,6 +857,7 @@ module.exports = [
         bodyOfWater: "Sonoma", // lake name
         state: ["California"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -835,6 +877,7 @@ module.exports = [
         bodyOfWater: "Success", // lake name
         state: ["California"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -856,6 +899,7 @@ module.exports = [
         bodyOfWater: "Rifle Gap", // lake name
         state: ["Colorado"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -876,6 +920,7 @@ module.exports = [
         bodyOfWater: "Trinidad", // lake name
         state: ["Colorado"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -896,6 +941,7 @@ module.exports = [
         bodyOfWater: "Big Harris (HC)", // lake name
         state: ["Florida"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -915,6 +961,7 @@ module.exports = [
         bodyOfWater: "Dora (HC)", // lake name
         state: ["Florida"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -934,6 +981,7 @@ module.exports = [
         bodyOfWater: "Eustis (HC)", // lake name
         state: ["Florida"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -954,6 +1002,7 @@ module.exports = [
         bodyOfWater: "Garcia (Fellsmere)", // lake name
         state: ["Florida"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -973,6 +1022,7 @@ module.exports = [
         bodyOfWater: "Griffin (HC)", // lake name
         state: ["Florida"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -992,6 +1042,7 @@ module.exports = [
         bodyOfWater: "Hatchineha", // lake name
         state: ["Florida"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1011,6 +1062,7 @@ module.exports = [
         bodyOfWater: "Istokpoga", // lake name
         state: ["Florida"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1030,6 +1082,7 @@ module.exports = [
         bodyOfWater: "Kenansville", // lake name
         state: ["Florida"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1049,6 +1102,7 @@ module.exports = [
         bodyOfWater: "Kissimmee", // lake name
         state: ["Florida"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1068,6 +1122,7 @@ module.exports = [
         bodyOfWater: "Minnehaha", // lake name
         state: ["Florida"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1087,6 +1142,7 @@ module.exports = [
         bodyOfWater: "Minneola", // lake name
         state: ["Florida"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1106,6 +1162,7 @@ module.exports = [
         bodyOfWater: "Okeechobee", // lake name
         state: ["Florida"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1125,6 +1182,7 @@ module.exports = [
         bodyOfWater: "Seminole", // lake name
         state: ["Florida", "Georgia"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1144,6 +1202,7 @@ module.exports = [
         bodyOfWater: "Stick Marsh (Farm 13)", // lake name
         state: ["Florida"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1163,6 +1222,7 @@ module.exports = [
         bodyOfWater: "Talquin", // lake name
         state: ["Florida"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1182,6 +1242,7 @@ module.exports = [
         bodyOfWater: "East Toho", // lake name
         state: ["Florida"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1201,6 +1262,7 @@ module.exports = [
         bodyOfWater: "Toho", // lake name
         state: ["Florida"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1222,6 +1284,7 @@ module.exports = [
         bodyOfWater: "Allatoona", // lake name 'Allatoona'
         state: ["Georgia"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1241,6 +1304,7 @@ module.exports = [
         bodyOfWater: "Lanier", // lake name
         state: ["Georgia"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1260,6 +1324,7 @@ module.exports = [
         bodyOfWater: "Oconee", // lake name
         state: ["Georgia"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1279,6 +1344,7 @@ module.exports = [
         bodyOfWater: "Sinclair", // lake name
         state: ["Georgia"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1298,6 +1364,7 @@ module.exports = [
         bodyOfWater: "West Point", // lake name
         state: ["Alabama", "Georgia"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1319,6 +1386,7 @@ module.exports = [
         bodyOfWater: "Carlyle", // lake name
         state: ["Illinois"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1338,6 +1406,7 @@ module.exports = [
         bodyOfWater: "Clinton (IL)", // lake name
         state: ["Illinois"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1357,6 +1426,7 @@ module.exports = [
         bodyOfWater: "Rend", // lake name
         state: ["Illinois"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1379,6 +1449,7 @@ module.exports = [
         bodyOfWater: "Brookville", // lake name
         state: ["Indiana"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1399,6 +1470,7 @@ module.exports = [
         bodyOfWater: "Eagle Creek", // lake name
         state: ["Indiana"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1419,6 +1491,7 @@ module.exports = [
         bodyOfWater: "Mississinewa", // lake name
         state: ["Indiana"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1439,6 +1512,7 @@ module.exports = [
         bodyOfWater: "Monroe", // lake name
         state: ["Indiana"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1460,6 +1534,7 @@ module.exports = [
         bodyOfWater: "Ohio River (Evansville)", // lake name
         state: ["Indiana"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1480,6 +1555,7 @@ module.exports = [
         bodyOfWater: "Patoka", // lake name
         state: ["Indiana"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1500,6 +1576,7 @@ module.exports = [
         bodyOfWater: "Raccoon", // lake name
         state: ["Indiana"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1520,6 +1597,7 @@ module.exports = [
         bodyOfWater: "Salmonie", // lake name
         state: ["Indiana"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1542,6 +1620,7 @@ module.exports = [
         bodyOfWater: "Red Rock", // lake name
         state: ["Iowa"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1561,6 +1640,7 @@ module.exports = [
         bodyOfWater: "West Okoboji", // lake name
         state: ["Iowa"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1582,6 +1662,7 @@ module.exports = [
         bodyOfWater: "Clinton (KS)", // lake name
         state: ["Kansas"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1602,6 +1683,7 @@ module.exports = [
         bodyOfWater: "Melvern", // lake name
         state: ["Kansas"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1622,6 +1704,7 @@ module.exports = [
         bodyOfWater: "Perry", // lake name
         state: ["Kansas"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1642,6 +1725,7 @@ module.exports = [
         bodyOfWater: "Pomona", // lake name
         state: ["Kansas"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1662,6 +1746,7 @@ module.exports = [
         bodyOfWater: "Wilson (KS)", // lake name
         state: ["Kansas"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1686,6 +1771,7 @@ module.exports = [
         bodyOfWater: "Barkley", // lake name
         state: ["Kentucky", "Tennessee"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1705,6 +1791,7 @@ module.exports = [
         bodyOfWater: "Barren", // lake name
         state: ["Kentucky"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1726,6 +1813,7 @@ module.exports = [
         bodyOfWater: "Cedar Creek", // lake name
         state: ["Kentucky"],
         data: [],
+chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1747,6 +1835,7 @@ module.exports = [
         bodyOfWater: "Cumberland", // lake name
         state: ["Kentucky"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1768,6 +1857,7 @@ module.exports = [
         bodyOfWater: "Kentucky", // lake name
         state: ["Kentucky", "Tennessee"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1787,6 +1877,7 @@ module.exports = [
         bodyOfWater: "Green", // lake name
         state: ["Kentucky"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1808,6 +1899,7 @@ module.exports = [
         bodyOfWater: "Laurel", // lake name
         state: ["Kentucky"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1829,6 +1921,7 @@ module.exports = [
         bodyOfWater: "Nolin", // lake name
         state: ["Kentucky"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1850,6 +1943,7 @@ module.exports = [
         bodyOfWater: "Rough", // lake name
         state: ["Kentucky"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1871,6 +1965,7 @@ module.exports = [
         bodyOfWater: "Taylorsville", // lake name
         state: ["Kentucky"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1893,6 +1988,7 @@ module.exports = [
         bodyOfWater: "Atchafalaya River Basin", // lake name
         state: ["Louisiana"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1912,6 +2008,7 @@ module.exports = [
         bodyOfWater: "Fausse Point", // lake name
         state: ["Louisiana"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1931,6 +2028,7 @@ module.exports = [
         bodyOfWater: "Mississippi River (Btn Rge)", // lake name
         state: ["Louisiana"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1950,6 +2048,7 @@ module.exports = [
         bodyOfWater: "Mississippi River (Nawluns)", // lake name
         state: ["Louisiana"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1972,6 +2071,7 @@ module.exports = [
         bodyOfWater: "Sebago", // lake name
         state: ["Maine"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -1995,6 +2095,7 @@ module.exports = [
         bodyOfWater: "Austin", // lake name
         state: ["Michigan"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2015,6 +2116,7 @@ module.exports = [
         bodyOfWater: "Higgins", // lake name
         state: ["Michigan"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2035,6 +2137,7 @@ module.exports = [
         bodyOfWater: "Houghton", // lake name
         state: ["Michigan"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2055,6 +2158,7 @@ module.exports = [
         bodyOfWater: "Intermediate", // lake name
         state: ["Michigan"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2075,6 +2179,7 @@ module.exports = [
         bodyOfWater: "Mullet", // lake name
         state: ["Michigan"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2095,6 +2200,7 @@ module.exports = [
         bodyOfWater: "St Clair", // lake name
         state: ["Michigan"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2114,6 +2220,7 @@ module.exports = [
         bodyOfWater: "St Helen", // lake name
         state: ["Michigan"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2136,6 +2243,7 @@ module.exports = [
         bodyOfWater: "Mille Lacs", // lake name
         state: ["Minnesota"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2155,6 +2263,7 @@ module.exports = [
         bodyOfWater: "Minnetonka", // lake name
         state: ["Minnesota"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2176,6 +2285,7 @@ module.exports = [
         bodyOfWater: "Bull Shoals", // lake name
         state: ["Missouri", "Arkansas"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2196,6 +2306,7 @@ module.exports = [
         bodyOfWater: "Lake of the Ozarks", // lake name
         state: ["Missouri"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2216,6 +2327,7 @@ module.exports = [
         bodyOfWater: "Norfork", // lake name
         state: ["Missouri"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2236,6 +2348,7 @@ module.exports = [
         bodyOfWater: "Pomme De Terre", // lake name
         state: ["Missouri"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2256,6 +2369,7 @@ module.exports = [
         bodyOfWater: "Table Rock", // lake name
         state: ["Missouri", "Arkansas"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2275,6 +2389,7 @@ module.exports = [
         bodyOfWater: "Truman", // lake name
         state: ["Missouri"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2295,6 +2410,7 @@ module.exports = [
         bodyOfWater: "Mark Twain", // lake name
         state: ["Missouri"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2315,6 +2431,7 @@ module.exports = [
         bodyOfWater: "Stockton", // lake name
         state: ["Missouri"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2337,6 +2454,7 @@ module.exports = [
         bodyOfWater: "Aberdeen", // lake name
         state: ["Mississippi"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2356,6 +2474,7 @@ module.exports = [
         bodyOfWater: "Amory", // lake name
         state: ["Mississippi"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2377,6 +2496,7 @@ module.exports = [
         bodyOfWater: "Bay Springs", // lake name
         state: ["Mississippi"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2398,6 +2518,7 @@ module.exports = [
         bodyOfWater: "Beaver Lake (MS)", // lake name
         state: ["Mississippi"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2417,6 +2538,7 @@ module.exports = [
         bodyOfWater: "Columbus", // lake name
         state: ["Mississippi"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2436,6 +2558,7 @@ module.exports = [
         bodyOfWater: "Mississippi River (Vicks)", // lake name
         state: ["Mississippi"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2455,6 +2578,7 @@ module.exports = [
         bodyOfWater: "Missouri River (STL)", // lake name
         state: ["Missouri"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2474,6 +2598,7 @@ module.exports = [
         bodyOfWater: "Pool B", // lake name
         state: ["Mississippi"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2495,6 +2620,7 @@ module.exports = [
         bodyOfWater: "Queen", // lake name
         state: ["Mississippi"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2514,6 +2640,7 @@ module.exports = [
         bodyOfWater: "Ross Barnett", // lake name
         state: ["Mississippi"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2533,6 +2660,7 @@ module.exports = [
         bodyOfWater: "Saucer Creek", // lake name
         state: ["Mississippi"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2554,6 +2682,7 @@ module.exports = [
          bodyOfWater: "McConaughy", // lake name
          state: ["Nebraska"],
          data: [],
+chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2575,6 +2704,7 @@ module.exports = [
         bodyOfWater: "Mojave", // lake name
         state: ["Nevada"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2594,6 +2724,7 @@ module.exports = [
         bodyOfWater: "Wild Horse", // lake name
         state: ["Nevada"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2616,6 +2747,7 @@ module.exports = [
         bodyOfWater: "Spruce Run", // lake name
         state: ["New Jersey"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2638,6 +2770,7 @@ module.exports = [
         bodyOfWater: "Brantley", // lake name
         state: ["New Mexico"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2657,6 +2790,7 @@ module.exports = [
         bodyOfWater: "Conchas", // lake name
         state: ["New Mexico"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2677,6 +2811,7 @@ module.exports = [
         bodyOfWater: "Elephant Butte", // lake name
         state: ["New Mexico"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2698,6 +2833,7 @@ module.exports = [
         bodyOfWater: "Sumner", // lake name
         state: ["New Mexico"],
         data: [],
+        chartData: [],
         ccWxData: [],
         wxForecastData: [],
         refreshInterval: 180, //minutes
@@ -2716,6 +2852,7 @@ module.exports = [
         bodyOfWater: "Santa Rosa", // lake name
         state: ["New Mexico"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2735,6 +2872,7 @@ module.exports = [
         bodyOfWater: "Ute", // lake name
         state: ["New Mexico"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2757,6 +2895,7 @@ module.exports = [
         bodyOfWater: "1000 Islands", // lake name
         state: ["New York"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2776,6 +2915,7 @@ module.exports = [
         bodyOfWater: "Champlain", // lake name
         state: ["New York", "Vermont"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2795,6 +2935,7 @@ module.exports = [
         bodyOfWater: "Chautaugua", // lake name
         state: ["New York"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2814,6 +2955,7 @@ module.exports = [
         bodyOfWater: "Oneida", // lake name
         state: ["New York"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2833,6 +2975,7 @@ module.exports = [
         bodyOfWater: "Otsego", // lake name
         state: ["Otsego"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2855,6 +2998,7 @@ module.exports = [
         bodyOfWater: "Badin", // lake name
         state: ["North Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2875,6 +3019,7 @@ module.exports = [
         bodyOfWater: "Belews", // lake name
         state: ["North Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2894,11 +3039,12 @@ module.exports = [
         bodyOfWater: "Belhaven (Pungo River)", // lake name
         state: ["North Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 180, //minutes
+        refreshInterval: 60, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 0.0,
@@ -2913,6 +3059,7 @@ module.exports = [
         bodyOfWater: "Blewitt Falls", // lake name
         state: ["North Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2933,6 +3080,7 @@ module.exports = [
         bodyOfWater: "Cape Fear River (Fayett)", // lake name
         state: ["North Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2952,11 +3100,12 @@ module.exports = [
         bodyOfWater: "Chowan (Waterfront)", // lake name
         state: ["North Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 180, //minutes
+        refreshInterval: 60, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 0.0,
@@ -2971,6 +3120,7 @@ module.exports = [
         bodyOfWater: "Falls", // lake name
         state: ["North Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -2994,6 +3144,7 @@ module.exports = [
         bodyOfWater: "Fontana", // lake name
         state: ["North Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -3013,6 +3164,7 @@ module.exports = [
         bodyOfWater: "Gaston", // lake name
         state: ["North Carolina", "Virginia"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -3032,6 +3184,7 @@ module.exports = [
         bodyOfWater: "Hickory", // lake name
         state: ["North Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -3051,6 +3204,7 @@ module.exports = [
         bodyOfWater: "High Rock", // lake name
         state: ["North Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -3070,6 +3224,7 @@ module.exports = [
         bodyOfWater: "Hyco", // lake name
         state: ["North Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -3089,6 +3244,7 @@ module.exports = [
         bodyOfWater: "James", // lake name
         state: ["North Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -3108,6 +3264,7 @@ module.exports = [
         bodyOfWater: "Jocassee", // lake name
         state: ["North Carolina", "South Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -3127,6 +3284,7 @@ module.exports = [
         bodyOfWater: "Jordan", // lake name
         state: ["North Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -3151,6 +3309,7 @@ module.exports = [
         bodyOfWater: "Kerr", // lake name
         state: ["North Carolina", "Virginia"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -3175,11 +3334,12 @@ module.exports = [
         bodyOfWater: "Little River (Woodville)", // lake name
         state: ["North Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 180, //minutes
+        refreshInterval: 60, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 0.0,
@@ -3194,6 +3354,7 @@ module.exports = [
         bodyOfWater: "Mayo", // lake name
         state: ["North Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -3214,6 +3375,7 @@ module.exports = [
         bodyOfWater: "Mtn Island", // lake name
         state: ["North Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -3233,6 +3395,7 @@ module.exports = [
         bodyOfWater: "Neuse River (Kinston)", // lake name
         state: ["North Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -3252,6 +3415,7 @@ module.exports = [
         bodyOfWater: "Neuse River (Smithfield)", // lake name
         state: ["North Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -3271,6 +3435,7 @@ module.exports = [
         bodyOfWater: "Norman", // lake name
         state: ["North Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -3290,11 +3455,12 @@ module.exports = [
         bodyOfWater: "Pamlico (Washington)", // lake name
         state: ["North Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 180, //minutes
+        refreshInterval: 60, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 0.0,
@@ -3309,11 +3475,12 @@ module.exports = [
         bodyOfWater: "Pasquotank (Mariners Wharf)", // lake name
         state: ["North Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 180, //minutes
+        refreshInterval: 60, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 0.0,
@@ -3328,11 +3495,12 @@ module.exports = [
         bodyOfWater: "Perquimans (Hertford)", // lake name
         state: ["North Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 180, //minutes
+        refreshInterval: 60, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 0.0,
@@ -3347,6 +3515,7 @@ module.exports = [
         bodyOfWater: "Randleman", // lake name
         state: ["North Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         wxForecastData: [],
         refreshInterval: 180, //minutes
@@ -3364,6 +3533,7 @@ module.exports = [
         bodyOfWater: "Rhodhiss", // lake name
         state: ["North Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -3383,6 +3553,7 @@ module.exports = [
         bodyOfWater: "Roanoke Rapids", // lake name
         state: ["North Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -3403,6 +3574,7 @@ module.exports = [
         bodyOfWater: "Roanoke River (Halifax)", // lake name
         state: ["North Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -3422,6 +3594,7 @@ module.exports = [
         bodyOfWater: "Roanoke River (Hwy 45)", // lake name
         state: ["North Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -3441,6 +3614,7 @@ module.exports = [
         bodyOfWater: "Roanoke River (Roanoke Rapids)", // lake name
         state: ["North Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -3460,6 +3634,7 @@ module.exports = [
         bodyOfWater: "Roanoke River (Scotland Neck)", // lake name
         state: ["North Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -3479,6 +3654,7 @@ module.exports = [
         bodyOfWater: "Roanoke River (Williamston)", // lake name
         state: ["North Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -3498,11 +3674,12 @@ module.exports = [
         bodyOfWater: "Scuppernong (Columbia)", // lake name
         state: ["North Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 180, //minutes
+        refreshInterval: 60, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 0.0,
@@ -3517,11 +3694,12 @@ module.exports = [
         bodyOfWater: "Scuppernong (Woodley)", // lake name
         state: ["North Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 180, //minutes
+        refreshInterval: 60, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 0.0,
@@ -3536,6 +3714,7 @@ module.exports = [
         bodyOfWater: "Shearon Harris", // lake name
         state: ["North Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -3555,11 +3734,12 @@ module.exports = [
         bodyOfWater: "Tar (Washington)", // lake name
         state: ["North Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
         wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 180, //minutes
+        refreshInterval: 60, //minutes
         lastRefresh: "12/31/18", // a Date 
         seaLevelDelta: 0,
         normalPool: 0.0,
@@ -3574,6 +3754,7 @@ module.exports = [
         bodyOfWater: "Tillery", // lake name
         state: ["North Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -3593,6 +3774,7 @@ module.exports = [
         bodyOfWater: "Tuckertown", // lake name
         state: ["North Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -3612,6 +3794,7 @@ module.exports = [
         bodyOfWater: "W Scott Kerr", // lake name
         state: ["North Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -3633,6 +3816,7 @@ module.exports = [
         bodyOfWater: "Wylie", // lake name
         state: ["North Carolina", "South Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -3657,6 +3841,7 @@ module.exports = [
         bodyOfWater: "Alum Creek", // lake name
         state: ["Ohio"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -3676,6 +3861,7 @@ module.exports = [
         bodyOfWater: "Buckeye", // lake name
         state: ["Ohio"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -3695,6 +3881,7 @@ module.exports = [
         bodyOfWater: "Detroit River", // lake name
         state: ["Ohio"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -3714,6 +3901,7 @@ module.exports = [
         bodyOfWater: "Erie (Sandusky)", // lake name
         state: ["Ohio"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -3733,6 +3921,7 @@ module.exports = [
         bodyOfWater: "Grand (OH)", // lake name
         state: ["Ohio"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -3752,6 +3941,7 @@ module.exports = [
         bodyOfWater: "Indian Lake", // lake name
         state: ["Ohio"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -3771,6 +3961,7 @@ module.exports = [
         bodyOfWater: "Milton", // lake name
         state: ["Ohio"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -3790,6 +3981,7 @@ module.exports = [
         bodyOfWater: "Portage", // lake name
         state: ["Ohio"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -3809,6 +4001,7 @@ module.exports = [
         bodyOfWater: "Mosquito Lake", // lake name
         state: ["Ohio"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -3828,6 +4021,7 @@ module.exports = [
         bodyOfWater: "Ohio River (Cincy)", // lake name
         state: ["Ohio"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -3848,6 +4042,7 @@ module.exports = [
         bodyOfWater: "Ohio River (Tanners)", // lake name
         state: ["Ohio"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -3867,6 +4062,7 @@ module.exports = [
         bodyOfWater: "Rocky Fork", // lake name
         state: ["Ohio"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -3889,6 +4085,7 @@ module.exports = [
         bodyOfWater: "Copan", // lake name
         state: ["Oklahoma"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -3910,6 +4107,7 @@ module.exports = [
         bodyOfWater: "Ellsworth", // lake name
         state: ["Oklahoma"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -3930,6 +4128,7 @@ module.exports = [
         bodyOfWater: "Eufaula (OK)", // lake name
         state: ["Oklahoma"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -3950,6 +4149,7 @@ module.exports = [
         bodyOfWater: "Eucha", // lake name
         state: ["Oklahoma"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -3971,6 +4171,7 @@ module.exports = [
         bodyOfWater: "Ft Gibson", // lake name
         state: ["Oklahoma"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -3991,6 +4192,7 @@ module.exports = [
         bodyOfWater: "Grand", // lake name
         state: ["Oklahoma"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4011,6 +4213,7 @@ module.exports = [
         bodyOfWater: "Hudson", // lake name
         state: ["Oklahoma"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4032,6 +4235,7 @@ module.exports = [
         bodyOfWater: "Hulah", // lake name
         state: ["Oklahoma"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4052,6 +4256,7 @@ module.exports = [
         bodyOfWater: "Kaw", // lake name
         state: ["Oklahoma"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4072,6 +4277,7 @@ module.exports = [
         bodyOfWater: "Keystone", // lake name
         state: ["Oklahoma"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4093,6 +4299,7 @@ module.exports = [
         bodyOfWater: "Lawtonka", // lake name
         state: ["Oklahoma"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4113,6 +4320,7 @@ module.exports = [
         bodyOfWater: "McGee Creek", // lake name
         state: ["Oklahoma"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4133,6 +4341,7 @@ module.exports = [
         bodyOfWater: "Oologah", // lake name
         state: ["Oklahoma"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4153,6 +4362,7 @@ module.exports = [
         bodyOfWater: "Robert S Kerr", // lake name
         state: ["Oklahoma"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4173,6 +4383,7 @@ module.exports = [
         bodyOfWater: "Skiatook", // lake name
         state: ["Oklahoma"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4193,6 +4404,7 @@ module.exports = [
         bodyOfWater: "Tenkiller", // lake name
         state: ["Oklahoma"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4215,6 +4427,7 @@ module.exports = [
         bodyOfWater: "Lost Creek", // lake name
         state: ["Oregon"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4235,6 +4448,7 @@ module.exports = [
         bodyOfWater: "Klamath", // lake name
         state: ["Oregon"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4255,6 +4469,7 @@ module.exports = [
         bodyOfWater: "Curwensville", // lake name
         state: ["Pennsylvania"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4274,6 +4489,7 @@ module.exports = [
         bodyOfWater: "Raystown", // lake name
         state: ["Pennsylvania"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4293,6 +4509,7 @@ module.exports = [
         bodyOfWater: "Shenango", // lake name
         state: ["Pennsylvania"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4314,6 +4531,7 @@ module.exports = [
         bodyOfWater: "Clarks Hill", // lake name
         state: ["South Carolina", "Georgia"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4333,6 +4551,7 @@ module.exports = [
         bodyOfWater: "Cooper River", // lake name
         state: ["South Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4352,6 +4571,7 @@ module.exports = [
         bodyOfWater: "Hartwell", // lake name
         state: ["South Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4371,6 +4591,7 @@ module.exports = [
         bodyOfWater: "Keowee", // lake name
         state: ["South Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4390,6 +4611,7 @@ module.exports = [
         bodyOfWater: "Murray", // lake name
         state: ["South Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4409,6 +4631,7 @@ module.exports = [
         bodyOfWater: "Santee (Marion)", // lake name
         state: ["South Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4428,6 +4651,7 @@ module.exports = [
         bodyOfWater: "Santee (Moultrie)", // lake name
         state: ["South Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4447,6 +4671,7 @@ module.exports = [
         bodyOfWater: "Wateree", // lake name
         state: ["South Carolina"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4468,6 +4693,7 @@ module.exports = [
         bodyOfWater: "Belle Fouche", // lake name
         state: ["South Dakota"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4492,6 +4718,7 @@ module.exports = [
         bodyOfWater: "Big Bear", // lake name
         state: ["Tennessee"],
         data: [],
+chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4511,6 +4738,7 @@ module.exports = [
         bodyOfWater: "Center Hill", // lake name
         state: ["Tennessee"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4532,6 +4760,7 @@ module.exports = [
         bodyOfWater: "Cherokee", // lake name
         state: ["Tennessee"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4551,6 +4780,7 @@ module.exports = [
         bodyOfWater: "Chickamauga", // lake name
         state: ["Tennessee"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4570,6 +4800,7 @@ module.exports = [
         bodyOfWater: "Douglas", // lake name
         state: ["Tennessee"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4589,6 +4820,7 @@ module.exports = [
         bodyOfWater: "Dale Hollow", // lake name
         state: ["Tennessee"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4609,6 +4841,7 @@ module.exports = [
         bodyOfWater: "Little Bear", // lake name
         state: ["Tennessee"],
         data: [],
+chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4628,6 +4861,7 @@ module.exports = [
         bodyOfWater: "Mississippi River (Knox)", // lake name
         state: ["Tennessee"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4647,6 +4881,7 @@ module.exports = [
         bodyOfWater: "Nickajack", // lake name
         state: ["Tennessee"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4666,6 +4901,7 @@ module.exports = [
         bodyOfWater: "Norris", // lake name
         state: ["Tennessee"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4685,6 +4921,7 @@ module.exports = [
         bodyOfWater: "Old Hickory", // lake name
         state: ["Tennessee"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4704,6 +4941,7 @@ module.exports = [
         bodyOfWater: "Percy Priest", // lake name
         state: ["Tennessee"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4723,6 +4961,7 @@ module.exports = [
         bodyOfWater: "South Holston", // lake name
         state: ["Tennessee"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4742,6 +4981,7 @@ module.exports = [
         bodyOfWater: "Tellico", // lake name
         state: ["Tennessee"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4761,6 +5001,7 @@ module.exports = [
         bodyOfWater: "Tims Ford", // lake name
         state: ["Tennessee"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4780,6 +5021,7 @@ module.exports = [
         bodyOfWater: "Watts Bar", // lake name
         state: ["Tennessee"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4799,6 +5041,7 @@ module.exports = [
         bodyOfWater: "Watauga", // lake name
         state: ["Tennessee"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4820,6 +5063,7 @@ module.exports = [
         bodyOfWater: "Amistad", // lake name
         state: ["Texas"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4839,6 +5083,7 @@ module.exports = [
         bodyOfWater: "Cedar Creek", // lake name
         state: ["Texas"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4858,6 +5103,7 @@ module.exports = [
         bodyOfWater: "Choke Canyon", // lake name
         state: ["Texas"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4877,6 +5123,7 @@ module.exports = [
         bodyOfWater: "Corpus Christi", // lake name
         state: ["Texas"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4896,6 +5143,7 @@ module.exports = [
         bodyOfWater: "Conroe", // lake name
         state: ["Texas"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4915,6 +5163,7 @@ module.exports = [
         bodyOfWater: "Falcon", // lake name
         state: ["Texas"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4934,6 +5183,7 @@ module.exports = [
         bodyOfWater: "Fork", // lake name
         state: ["Texas"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4953,6 +5203,7 @@ module.exports = [
         bodyOfWater: "LBJ", // lake name
         state: ["Texas"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4972,6 +5223,7 @@ module.exports = [
         bodyOfWater: "Livingston", // lake name
         state: ["Texas"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -4991,6 +5243,7 @@ module.exports = [
         bodyOfWater: "Palestine", // lake name
         state: ["Texas"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -5010,6 +5263,7 @@ module.exports = [
         bodyOfWater: "Ray Hubbard", // lake name
         state: ["Texas"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -5029,6 +5283,7 @@ module.exports = [
         bodyOfWater: "Ray Roberts", // lake name
         state: ["Texas"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -5048,6 +5303,7 @@ module.exports = [
         bodyOfWater: "Rayburn", // lake name
         state: ["Texas"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -5067,6 +5323,7 @@ module.exports = [
         bodyOfWater: "Richland Chambers", // lake name
         state: ["Texas"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -5077,7 +5334,7 @@ module.exports = [
         normalPool: 315.0,
         lat: 31.962934,
         long: -96.138668,
-        
+
         elevURL: "http://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=2298048&p_parameter_type=Flow%3AStor%3APrecip%3AStage%3AElev&p_last=5&p_last_unit=days&p_unit_system=EN&p_format=JSON",
         flowURL: "",
         href: "/lakes/richlandchambers",
@@ -5087,6 +5344,7 @@ module.exports = [
         bodyOfWater: "Tawakoni", // lake name
         state: ["Texas"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -5106,6 +5364,7 @@ module.exports = [
         bodyOfWater: "Toledo Bend", // lake name
         state: ["Texas", "Louisiana"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -5125,6 +5384,7 @@ module.exports = [
         bodyOfWater: "Texoma", // lake name
         state: ["Texas", "Oklahoma"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -5145,6 +5405,7 @@ module.exports = [
         bodyOfWater: "Travis", // lake name
         state: ["Texas"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -5164,6 +5425,7 @@ module.exports = [
         bodyOfWater: "Whitney", // lake name
         state: ["Texas"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -5185,6 +5447,7 @@ module.exports = [
         bodyOfWater: "Deer Creek", // lake name
         state: ["Utah"],
         data: [],
+chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -5204,6 +5467,7 @@ module.exports = [
         bodyOfWater: "Flaming Gorge", // lake name
         state: ["Utah", "Wyoming"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -5223,6 +5487,7 @@ module.exports = [
         bodyOfWater: "Powell", // lake name
         state: ["Utah", "Arizona"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -5245,6 +5510,7 @@ module.exports = [
         bodyOfWater: "Memphremagog", // lake name
         state: ["Vermont"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -5264,6 +5530,7 @@ module.exports = [
         bodyOfWater: "Waterbury", // lake name
         state: ["Vermont"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -5287,6 +5554,7 @@ module.exports = [
         bodyOfWater: "Anna", // lake name
         state: ["Virginia"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -5306,6 +5574,7 @@ module.exports = [
         bodyOfWater: "James River (Jamestown Ferry Pier)", // lake name
         state: ["Virginia"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -5325,6 +5594,7 @@ module.exports = [
         bodyOfWater: "Leesville", // lake name
         state: ["Virginia"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -5344,6 +5614,7 @@ module.exports = [
         bodyOfWater: "Philpott", // lake name
         state: ["Virginia"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -5364,6 +5635,7 @@ module.exports = [
         bodyOfWater: "Potomac River (Alexandria)", // lake name
         state: ["Virginia"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -5383,6 +5655,7 @@ module.exports = [
         bodyOfWater: "Smith Mountain", // lake name
         state: ["Virginia"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -5405,6 +5678,7 @@ module.exports = [
         bodyOfWater: "Bluestone", // lake name
         state: ["West Virginia"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -5424,6 +5698,7 @@ module.exports = [
         bodyOfWater: "Burnsville", // lake name
         state: ["West Virginia"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -5443,6 +5718,7 @@ module.exports = [
         bodyOfWater: "Stonewall Jackson", // lake name
         state: ["West Virginia"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -5462,6 +5738,7 @@ module.exports = [
         bodyOfWater: "Summersville", // lake name
         state: ["West Virginia"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -5481,6 +5758,7 @@ module.exports = [
         bodyOfWater: "Sutton", // lake name
         state: ["West Virginia"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -5502,6 +5780,7 @@ module.exports = [
         bodyOfWater: "Geneva", // lake name
         state: ["Wisconsin"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -5521,6 +5800,7 @@ module.exports = [
         bodyOfWater: "Green (WI)", // lake name
         state: ["Wisconsin"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
@@ -5540,6 +5820,7 @@ module.exports = [
         bodyOfWater: "Winnebago", // lake name
         state: ["Wisconsin"],
         data: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
