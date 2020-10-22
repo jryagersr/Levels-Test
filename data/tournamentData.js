@@ -2132,7 +2132,7 @@ module.exports = [
                         ramp: "Flemingtown",
                         state: "NC-VA",
                         txDetail: "Qualifier 1",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-old-north-kerr-lake-nc-march-14-2020/",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-old-north",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
                     },
                     {
@@ -2142,7 +2142,7 @@ module.exports = [
                         ramp: "Farrington",
                         state: "NC",
                         txDetail: "Qualifier 2",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-old-north-jordan-lake-nc-open-mar-28-2020/",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-old-north",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
                     },
                     {
@@ -2152,7 +2152,7 @@ module.exports = [
                         ramp: "Ledge Rock",
                         state: "NC",
                         txDetail: "Qualifier 3",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-old-north-falls-lake-nc-open-apr-04-2020/",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-old-north",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
                     },
                     {
@@ -2162,7 +2162,7 @@ module.exports = [
                         ramp: "Farrington",
                         state: "NC",
                         txDetail: "Qualifier 4",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-old-north-jordan-lake-nc-open-apr-18-2020/",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-old-north",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
                     },
                     {
@@ -2172,7 +2172,7 @@ module.exports = [
                         ramp: "Flemingtown",
                         state: "NC-VA",
                         txDetail: "Qualifier 5",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-old-north-kerr-lake-nc-open-may-17-2020/",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-old-north",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
                     },
                     {
@@ -2182,7 +2182,7 @@ module.exports = [
                         ramp: "Ledge Rock",
                         state: "NC",
                         txDetail: "Qualifier 6",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-old-north-harris-lake-nc-open-may-30-2020/",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-old-north",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
                     },
                     {
@@ -2192,7 +2192,7 @@ module.exports = [
                         ramp: "Farrington",
                         state: "NC",
                         txDetail: "Final",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-old-north-falls-lake-nc-open-jun-20-2020/",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-old-north",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
                     },
                 ]

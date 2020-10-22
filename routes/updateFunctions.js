@@ -606,7 +606,7 @@ buildHourlyFlowChartData: function (data, lake) {
     type: "FlowHourly",
     labelBatch: [],
     dataFlowHourlyBatch: [],
-    chartMinFlowHourlyLimit: 10000, // y-axis Min Flow value
+    chartMinFlowHourlyLimit: 100000000, // y-axis Min Flow value
     chartMaxFlowHourlyLimit: 0, // y-axis Max Flow value
     chartGap: 0
   }
@@ -619,16 +619,19 @@ buildHourlyFlowChartData: function (data, lake) {
     // if we're past the first entry
     //if (k > 0) {
     chartFlowHourlyObject.labelBatch.push(data[k].time); // Remove minutes
-    if (data[k].flow !== "Missing" && data[k].flow !== "N/A" && data.refreshInterval !== 180) {
-      if (data[k].flow == '')
+    let dataFlow = data[k].flow;
+    if (dataFlow !== "Missing" && dataFlow !== "N/A" && data.refreshInterval !== 180) {
+      if (dataFlow == '' || dataFlow == 'N/A') {
         chartFlowHourlyObject.dataFlowHourlyBatch.push(-99);
+        //dataFlow = 0;
+      }
       else
-        chartFlowHourlyObject.dataFlowHourlyBatch.push((Number(data[k].flow)).toFixed(2)); // push elev
+        chartFlowHourlyObject.dataFlowHourlyBatch.push((Number(data[k].flow)).toFixed(0)); // push elev
 
-      if (data[k].flow > chartFlowHourlyObject.chartMaxFlowLimit) // if value is greater than max, replace max
-        chartFlowHourlyObject.chartMaxFlowLimit = data[k].flow; // update Max Elev average
-      if (data[k].flow < chartFlowHourlyObject.chartMinFlowHourlyLimit) // if value is less thank min, replace min
-        chartFlowHourlyObject.chartMinFlowHourlyLimit = data[k].flow; // update Min Elev average
+      if (dataFlow > chartFlowHourlyObject.chartMaxFlowHourlyLimit) // if value is greater than max, replace max
+        chartFlowHourlyObject.chartMaxFlowHourlyLimit = dataFlow; // update Max Elev average
+      if (dataFlow < chartFlowHourlyObject.chartMinFlowHourlyLimit) // if value is less thank min, replace min
+        chartFlowHourlyObject.chartMinFlowHourlyLimit = dataFlow; // update Min Elev average
 
     } else chartFlowHourlyObject.dataFlowHourlyBatch.push(-99); // push elev
     //}
@@ -647,8 +650,8 @@ buildHourlyFlowChartData: function (data, lake) {
   chartFlowHourlyObject.chartGap = Math.ceil((chartFlowHourlyObject.chartGap / 1000).toFixed(0)) * 1000;
   //let minMaxDiff = chartMaxFlow - chartMinFlow;
   //if (minMaxDiff < 1 && minMaxDiff !== 0) chartGap = minMaxDiff * 2;
-  chartFlowHourlyObject.chartMinFlowHourlyLimit = 0; // set the chart lower limit
-  chartFlowHourlyObject.chartMaxFlowHourlyLimit = ((Math.ceil(chartFlowHourlyObject.chartMaxFlowLimit / 1000) * 1000) + Math.round(chartFlowHourlyObject.chartGap)); // set the chart upper limit
+  //chartFlowHourlyObject.chartMinFlowHourlyLimit = 0; // set the chart lower limit
+  chartFlowHourlyObject.chartMaxFlowHourlyLimit = ((Math.ceil(chartFlowHourlyObject.chartMaxFlowHourlyLimit / 1000) * 1000) + Math.round(chartFlowHourlyObject.chartGap)); // set the chart upper limit
 
 
   // need to check to see if there is already flow data in chartData field, if there is, just update it
