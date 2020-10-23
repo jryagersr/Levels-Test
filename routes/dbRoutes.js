@@ -24,7 +24,7 @@ var update = require('./updateFunctions');
 
 
 // // Connect to the Mondo DB
-const databaseUri = 'mongodb://localhost/BassSavvyTestDb';
+const databaseUri = 'mongodb+srv://ncfatboy:Fat03boy.@basssavvy.jtbbl.mongodb.net/<dbname>?retryWrites=true&w=majority';
 
 
 if (process.env.MONGODB_URI) {
