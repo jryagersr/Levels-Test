@@ -414,11 +414,12 @@ buildFlowChartData: function (data, lake) {
 
     if (data[k].flow == "Missing" || data[k].flow < 0) {
       //console.log("Missing Flow - " + lake.bodyOfWater)
-    } else {
+      data[k].flow = -1;
+    }
       sumOfFlows += data[k].flow
       divisor++
 
-    }
+    
     let currentDate = new Date(data[k].time).toLocaleDateString();
     currentDate = currentDate.substr(0, currentDate.length - 5, )
 
@@ -428,7 +429,9 @@ buildFlowChartData: function (data, lake) {
       chartFlowObject.dataFlowBatch.push(avgFlow);
       sumOfFlows = 0;
       divisor = 0;
-      checkDate = data[k].time;
+      checkDate = new Date(data[k].time).toLocaleDateString();
+      checkDate = checkDate.substr(0, checkDate.length - 5, );
+
       if (avgFlow >= chartFlowObject.chartMaxFlowLimit) // if value is greater than max, replace max
         chartFlowObject.chartMaxFlowLimit = avgFlow; // flow for calculating Chart y-axis Max later
 

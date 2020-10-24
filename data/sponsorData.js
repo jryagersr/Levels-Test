@@ -96,7 +96,7 @@ module.exports = [
     },
     {
         sponsor: "Design Center",
-        href: "http://thedesigncorner.biz/",
+        href: "http://thedesigncornernc.com/",
         src: "/static/assets/img/sponsor-banners/tdc banner.png",
         location: ["all"],
         type: "logo",
