@@ -94,6 +94,11 @@ function buildElevChart(data, lake) {
 
     chartElevObject = data[elevIndex];
 
+    for (i = 0; i < chartElevObject.labelBatch.length; i++) {
+        let thisDate = new Date(chartElevObject.labelBatch[i]);
+        thisDate = thisDate.toLocaleDateString();
+        chartElevObject.labelBatch[i] = thisDate.substr(0, thisDate.length - 5, );
+    }
 
     // build elev chart
     var ctx = document.getElementById('myElevChart').getContext('2d');
@@ -275,8 +280,6 @@ function buildRiverChart(data, lake) {
         chartMaxRiverLimit: 0, // y-axis Max Flow value
         minMaxDiff: 0
     }
-
-
 
     let riverIndex = 0;
     for (i = 0; i < data.length; i++) {
@@ -497,6 +500,21 @@ function buildTempChart(tempData) {
     };
 
     chartTempObject = tempData[tempIndex];
+    
+    for (i = 0; i < chartTempObject.labelBatch.length; i++) {
+       let thisTime = new Date(chartTempObject.labelBatch[i]);
+       thisTime = thisTime.toLocaleTimeString();
+       thisTime = thisTime.split(":");
+       hour = thisTime[0];
+       chartTempObject.labelBatch[i] = hour;
+   }
+
+     //calculate the time as 12 hour AM PM.
+     //hour = timeStamp.getHours();
+     //let suffix = "PM";
+     //if (hour < 12)
+     //  suffix = "AM";
+     //hour = ((hour + 11) % 12 + 1);
 
     var ctx = document.getElementById('myTempChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
@@ -681,6 +699,14 @@ function buildBaroChart(baroData) {
     };
 
     chartBaroObject = baroData[baroIndex];
+    
+    for (i = 0; i < chartBaroObject.labelBatch.length; i++) {
+        let thisTime = new Date(chartBaroObject.labelBatch[i]);
+        thisTime = thisTime.toLocaleTimeString();
+        thisTime = thisTime.split(":");
+        hour = thisTime[0];
+        chartBaroObject.labelBatch[i] = hour;
+    }
 
     var ctx = document.getElementById('myBaroChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
@@ -766,6 +792,14 @@ function buildWindChart(windData) {
     };
 
     chartWindObject = windData[windIndex]
+    
+    for (i = 0; i < chartWindObject.labelBatch.length; i++) {
+        let thisTime = new Date(chartWindObject.labelBatch[i]);
+        thisTime = thisTime.toLocaleTimeString();
+        thisTime = thisTime.split(":");
+        hour = thisTime[0];
+        chartWindObject.labelBatch[i] = hour;
+    }
 
     var ctx = document.getElementById('myWindChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
@@ -850,7 +884,15 @@ function buildWindDirectionChart(windData, lake) {
         }
     };
 
-    chartWindDirectionObject = windData[windIndex];
+    chartWindDirectionObject = windData[windIndex];  
+
+    for (i = 0; i < chartWindDirectionObject.labelBatch.length; i++) {
+        let thisTime = new Date(chartWindDirectionObject.labelBatch[i]);
+        thisTime = thisTime.toLocaleTimeString();
+        thisTime = thisTime.split(":");
+        hour = thisTime[0];
+        chartWindDirectionObject.labelBatch[i] = hour;
+    }
 
     var ctx = document.getElementById('myWindDirectionChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);

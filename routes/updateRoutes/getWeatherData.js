@@ -61,7 +61,7 @@ module.exports = {
             let conditionsString = wxData.weather[0].description.charAt(0).toUpperCase() + wxData.weather[0].description.slice(1);
 
             // if there are more than one day of entries, pop one off the array.
-            while (lakeWeather.ccWxData.length > 23)
+            while (lakeWeather.ccWxData.length > 47)
               lakeWeather.ccWxData.shift();
 
             if (typeof wxData == "undefined") {

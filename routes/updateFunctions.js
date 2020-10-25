@@ -175,7 +175,7 @@ module.exports = {
           console.log(`Data error for weather ${bodyOfWater}`);
         }
 
-        // if there are 24 in ccWxData, pop one off
+        // if there are 48 in ccWxData, pop one off
 
         // push the current conditions into ccWxData[] and update the LastRefresh
         let timeStamp = newLakeCC.ccWxDataLastRefresh;
@@ -298,7 +298,7 @@ buildElevChartData: function (data, lake) {
           chartElevObject.chartMaxElevLimit = sumOfElevs / divisor; // update Max Elev average
         if ((sumOfElevs / divisor) < chartElevObject.chartMinElevLimit) // if value is less thank min, replace min
           chartElevObject.chartMinElevLimit = sumOfElevs / divisor; // update Min Elev average
-        chartElevObject.labelBatch.push(checkDate);
+        chartElevObject.labelBatch.push(elevData[k].time);
         chartElevObject.dataElevBatch.push((sumOfElevs / divisor).toFixed(2)); // calculate average
         chartElevObject.dataNPBatch.push(lake.normalPool); // Normal Pool line batch 
         chartElevObject.dataFCBatch.push(lake.topOfFloodControl); // Top of Flood Control Pool line batch
@@ -425,7 +425,7 @@ buildFlowChartData: function (data, lake) {
 
     if (currentDate !== checkDate) {
       avgFlow = Number((sumOfFlows / divisor).toFixed(2))
-      chartFlowObject.labelBatch.push(currentDate);
+      chartFlowObject.labelBatch.push(data[k].time);
       chartFlowObject.dataFlowBatch.push(avgFlow);
       sumOfFlows = 0;
       divisor = 0;
@@ -713,19 +713,12 @@ function buildTempChartData(tempData, lake) {
 
   let k = 0; // our iterator after starting Temp
 
-  // Loop through our data for 24 data points if we have it
+  // Loop through our data for 48 data points if we have it
   for (k; k < tempData.length; k++) {
     if (typeof tempData[k].temp == "number") {
 
       //calculate the time as 12 hour AM PM.
       let timeStamp = new Date(tempData[k].date);
-
-      //calculate the time as 12 hour AM PM.
-      hour = timeStamp.getHours();
-      let suffix = "PM";
-      if (hour < 12)
-        suffix = "AM";
-      hour = ((hour + 11) % 12 + 1);
 
       // Calculate Dewpoint (Tdp = Tf - 9/25(100-RH))
       let dewPoint = tempData[k].temp - (.36 * (100 - tempData[k].humidity));
@@ -733,7 +726,7 @@ function buildTempChartData(tempData, lake) {
       chartTempObject.feelsLikeBatch.push(tempData[k].feelslike);
       chartTempObject.dewPointBatch.push(dewPoint); // push dew point
       //labelBatch.push(hour + suffix); // push time
-      chartTempObject.labelBatch.push(hour); // push time
+      chartTempObject.labelBatch.push(tempData[k].date); // push time
       chartTempObject.dataTempBatch.push(tempData[k].temp); // push Temp
 
       if (tempData[k].temp > chartTempObject.chartMaxTempLimit) // if temp value is greater than max, replace max
@@ -754,7 +747,7 @@ function buildTempChartData(tempData, lake) {
     }
 
     // when two days of data has been reached stop
-    if (chartTempObject.labelBatch.length > 23 || k > tempData.length - 1) {
+    if (chartTempObject.labelBatch.length > 47 || k > tempData.length - 1) {
       break;
     }
   }
@@ -820,24 +813,17 @@ function buildTempChartData(tempData, lake) {
 
   let k = 0; // our iterator after starting elevation
 
-  // Loop through our data for 24 data points if we have it
+  // Loop through our data for 48 data points if we have it
   for (k; k < baroData.length; k++) {
 
     if (typeof baroData[k].baro == "number") {
 
       let timeStamp = new Date(baroData[k].date);
 
-      //calculate the time as 12 hour AM PM.
-      hour = timeStamp.getHours();
-      let suffix = "PM";
-      if (hour < 12)
-        suffix = "AM";
-      hour = ((hour + 11) % 12 + 1);
-
       // Convert millibars to inches
       let currentBaro = parseFloat(baroData[k].baro * 0.0295301);
 
-      chartBaroObject.labelBatch.push(hour); // push time
+      chartBaroObject.labelBatch.push(baroData[k].date); // push time
       //labelBatch.push(hour + suffix);
       chartBaroObject.dataBaroBatch.push(baroData[k].baro * 0.0295301); // push elev convert to inches
 
@@ -912,21 +898,13 @@ function buildWindChartData(windData, lake) {
 
   let k = 0; // our iterator after starting wind speed
 
-  // Loop through our data for 24 data points if we have it
+  // Loop through our data for 48 data points if we have it
   for (k; k < windData.length; k++) {
 
     if (typeof windData[k].windspeed == "number") {
 
-      let timeStamp = new Date(windData[k].date);
 
-      //calculate the time as 12 hour AM PM.
-      hour = timeStamp.getHours();
-      let suffix = "PM";
-      if (hour < 12)
-        suffix = "AM";
-      hour = ((hour + 11) % 12 + 1);
-
-      chartWindObject.labelBatch.push(hour); // push time
+      chartWindObject.labelBatch.push(new Date(windData[k].date)); // push time
       //labelBatch.push(hour + suffix);
       chartWindObject.dataWindBatch.push(windData[k].windspeed); // push wind speeed
 
@@ -938,7 +916,7 @@ function buildWindChartData(windData, lake) {
     };
 
     // when 2 days of data has been reached stop
-    if (chartWindObject.labelBatch.length > 23 || k > windData.length - 2) {
+    if (chartWindObject.labelBatch.length > 47 || k > windData.length - 2) {
       break;
     };
   };
@@ -1004,7 +982,7 @@ function buildHumidityChartData(humidityData, lake) {
   // Our data must be parsed into separate flat arrays for the chart
   let k = 0; // our iterator after starting elevation
 
-  // Loop through our data for 24 data points if we have it
+  // Loop through our data for 48 data points if we have it
   for (k; k < humidityData.length; k++) {
 
     if (typeof humidityData[k].humidity == "number") { //calculate the time as 12 hour AM PM.
@@ -1031,7 +1009,7 @@ function buildHumidityChartData(humidityData, lake) {
     }
 
     // when 2 days of data has been reached stop
-    if (chartHumidityObject.labelBatch.length > 23 || k > humidityData.length - 1) {
+    if (chartHumidityObject.labelBatch.length > 47 || k > humidityData.length - 1) {
       break;
     }
   }
@@ -1100,16 +1078,8 @@ function buildWindDirectionChartData(windData, lake) {
 
     if (typeof windData[k].winddirection == "string") {
 
-      let timeStamp = new Date(windData[k].date);
 
-      //calculate the time as 12 hour AM PM.
-      hour = timeStamp.getHours();
-      let suffix = "PM";
-      if (hour < 12)
-        suffix = "AM";
-      hour = ((hour + 11) % 12 + 1);
-
-      chartWindDirectionObject.labelBatch.push(hour); // push time
+      chartWindDirectionObject.labelBatch.push(new Date(windData[k].date)); // push time
       //labelBatch.push(hour + suffix);
 
       // check to see if wind direction reported is null
