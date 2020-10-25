@@ -620,6 +620,14 @@ function buildHumidityChart(humidityData, lake) {
     };
     chartHumidityObject = humidityData[humidityIndex];
 
+    for (i = 0; i < chartHumidityObject.labelBatch.length; i++) {
+        let thisTime = new Date(chartHumidityObject.labelBatch[i]);
+        thisTime = thisTime.toLocaleTimeString();
+        thisTime = thisTime.split(":");
+        hour = thisTime[0];
+        chartHumidityObject.labelBatch[i] = hour;
+    }
+
     var ctx = document.getElementById('myHumidityChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
     grd.addColorStop(0, 'rgb(0,140,255)');

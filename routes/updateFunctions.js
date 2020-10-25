@@ -997,7 +997,7 @@ function buildHumidityChartData(humidityData, lake) {
       hour = ((hour + 11) % 12 + 1);
 
       //labelBatch.push(hour + suffix)
-      chartHumidityObject.labelBatch.push(hour); // push time
+      chartHumidityObject.labelBatch.push(new Date(humidityData[k].date)); // push time
       chartHumidityObject.dataHumidityBatch.push(humidityData[k].humidity); // push elev
 
       if (chartHumidityObject.chartMaxHumidityLimit < humidityData[k].humidity)
@@ -1009,10 +1009,13 @@ function buildHumidityChartData(humidityData, lake) {
     }
 
     // when 2 days of data has been reached stop
-    if (chartHumidityObject.labelBatch.length > 47 || k > humidityData.length - 1) {
+    if (chartHumidityObject.labelBatch.length > 36 || k > humidityData.length - 1) {
       break;
     }
   }
+
+  chartHumidityObject.labelBatch.reverse();
+  chartHumidityObject.dataHumidityBatch.reverse();
 
   // Set axis limits for Humidity Chart
   chartHumidityObject.chartMinHumidityLimit = chartHumidityObject.chartMinHumidityLimit - 10; // set the chart lower limit
@@ -1099,7 +1102,7 @@ function buildWindDirectionChartData(windData, lake) {
     };
   };
 
-  console.log (lake.bodyOfWater + " Wind Direction")
+  //console.log (lake.bodyOfWater + " Wind Direction")
 
 
 
