@@ -69,14 +69,14 @@ module.exports = {
             }
 
             // push the current conditions into ccWxData[] and update the LastRefresh
-            let wxTimeStamp = Date(wxData.dt);
+            let wxTimeStamp = new Date(wxData.dt).toUTCString();
             //set timestamp for current conditions to 0 minutes, 0 seconds
             wxTimeStamp = wxTimeStamp.substring(0, wxTimeStamp.indexOf(":")) + ":00:00 " + wxTimeStamp.substring(wxTimeStamp.indexOf(":") + 7, wxTimeStamp.length);
 
             lakeWeather.ccWxDataLastRefresh = wxTimeStamp
             lakeWeather.ccWxData.push({
               conditions: conditionsString,
-              date: new Date(),
+              date: new Date(wxData.dt).toUTCString(),
               time: today.toLocaleTimeString('en-US'),
               location: wxData.name, // for current Conditions Well
               baro: wxData.main.pressure,

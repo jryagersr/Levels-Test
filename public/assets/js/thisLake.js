@@ -209,6 +209,12 @@ function buildFlowChart(data) {
 
     chartFlowObject = data[flowIndex];
 
+    for (i = 0; i < chartFlowObject.labelBatch.length; i++) {
+        let thisDate = new Date(chartFlowObject.labelBatch[i]);
+        thisDate = thisDate.toLocaleDateString();
+        chartFlowObject.labelBatch[i] = thisDate.substr(0, thisDate.length - 5, );
+    }
+
     var ctx = document.getElementById('myFlowChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
     grd.addColorStop(0, 'rgb(0,140,255)');
@@ -500,21 +506,21 @@ function buildTempChart(tempData) {
     };
 
     chartTempObject = tempData[tempIndex];
-    
-    for (i = 0; i < chartTempObject.labelBatch.length; i++) {
-       let thisTime = new Date(chartTempObject.labelBatch[i]);
-       thisTime = thisTime.toLocaleTimeString();
-       thisTime = thisTime.split(":");
-       hour = thisTime[0];
-       chartTempObject.labelBatch[i] = hour;
-   }
 
-     //calculate the time as 12 hour AM PM.
-     //hour = timeStamp.getHours();
-     //let suffix = "PM";
-     //if (hour < 12)
-     //  suffix = "AM";
-     //hour = ((hour + 11) % 12 + 1);
+    for (i = 0; i < chartTempObject.labelBatch.length; i++) {
+        let thisTime = new Date(chartTempObject.labelBatch[i]);
+        thisTime = thisTime.toLocaleTimeString();
+        thisTime = thisTime.split(":");
+        hour = thisTime[0];
+        chartTempObject.labelBatch[i] = hour;
+    }
+
+    //calculate the time as 12 hour AM PM.
+    //hour = timeStamp.getHours();
+    //let suffix = "PM";
+    //if (hour < 12)
+    //  suffix = "AM";
+    //hour = ((hour + 11) % 12 + 1);
 
     var ctx = document.getElementById('myTempChart').getContext('2d');
     var grd = ctx.createLinearGradient(0, 0, 170, 0);
@@ -699,7 +705,7 @@ function buildBaroChart(baroData) {
     };
 
     chartBaroObject = baroData[baroIndex];
-    
+
     for (i = 0; i < chartBaroObject.labelBatch.length; i++) {
         let thisTime = new Date(chartBaroObject.labelBatch[i]);
         thisTime = thisTime.toLocaleTimeString();
@@ -792,7 +798,7 @@ function buildWindChart(windData) {
     };
 
     chartWindObject = windData[windIndex]
-    
+
     for (i = 0; i < chartWindObject.labelBatch.length; i++) {
         let thisTime = new Date(chartWindObject.labelBatch[i]);
         thisTime = thisTime.toLocaleTimeString();
@@ -884,7 +890,7 @@ function buildWindDirectionChart(windData, lake) {
         }
     };
 
-    chartWindDirectionObject = windData[windIndex];  
+    chartWindDirectionObject = windData[windIndex];
 
     for (i = 0; i < chartWindDirectionObject.labelBatch.length; i++) {
         let thisTime = new Date(chartWindDirectionObject.labelBatch[i]);

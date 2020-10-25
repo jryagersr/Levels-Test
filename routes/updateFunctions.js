@@ -1099,6 +1099,9 @@ function buildWindDirectionChartData(windData, lake) {
     };
   };
 
+  console.log (lake.bodyOfWater + " Wind Direction")
+
+
 
   // need to check to see if there is already flow data in chartData field, if there is, just update it
   // otherwise create it.
