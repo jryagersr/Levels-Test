@@ -726,7 +726,7 @@ function buildTempChartData(tempData, lake) {
       chartTempObject.feelsLikeBatch.push(tempData[k].feelslike);
       chartTempObject.dewPointBatch.push(dewPoint); // push dew point
       //labelBatch.push(hour + suffix); // push time
-      chartTempObject.labelBatch.push(tempData[k].date); // push time
+      chartTempObject.labelBatch.push(new Date(tempData[k].date).toUTCString()); // push time
       chartTempObject.dataTempBatch.push(tempData[k].temp); // push Temp
 
       if (tempData[k].temp > chartTempObject.chartMaxTempLimit) // if temp value is greater than max, replace max
@@ -823,7 +823,7 @@ function buildTempChartData(tempData, lake) {
       // Convert millibars to inches
       let currentBaro = parseFloat(baroData[k].baro * 0.0295301);
 
-      chartBaroObject.labelBatch.push(baroData[k].date); // push time
+      chartBaroObject.labelBatch.push(new Date(baroData[k].date).toUTCString()); // push time
       //labelBatch.push(hour + suffix);
       chartBaroObject.dataBaroBatch.push(baroData[k].baro * 0.0295301); // push elev convert to inches
 
@@ -904,7 +904,7 @@ function buildWindChartData(windData, lake) {
     if (typeof windData[k].windspeed == "number") {
 
 
-      chartWindObject.labelBatch.push(new Date(windData[k].date)); // push time
+      chartWindObject.labelBatch.push(new Date(windData[k].date).toUTCString()); // push time
       //labelBatch.push(hour + suffix);
       chartWindObject.dataWindBatch.push(windData[k].windspeed); // push wind speeed
 
@@ -997,7 +997,7 @@ function buildHumidityChartData(humidityData, lake) {
       hour = ((hour + 11) % 12 + 1);
 
       //labelBatch.push(hour + suffix)
-      chartHumidityObject.labelBatch.push(new Date(humidityData[k].date)); // push time
+      chartHumidityObject.labelBatch.push(new Date(humidityData[k].date).toUTCString()); // push time
       chartHumidityObject.dataHumidityBatch.push(humidityData[k].humidity); // push elev
 
       if (chartHumidityObject.chartMaxHumidityLimit < humidityData[k].humidity)
@@ -1009,13 +1009,13 @@ function buildHumidityChartData(humidityData, lake) {
     }
 
     // when 2 days of data has been reached stop
-    if (chartHumidityObject.labelBatch.length > 36 || k > humidityData.length - 1) {
+    if (chartHumidityObject.labelBatch.length > 47 || k > humidityData.length - 1) {
       break;
     }
   }
 
-  chartHumidityObject.labelBatch.reverse();
-  chartHumidityObject.dataHumidityBatch.reverse();
+  //chartHumidityObject.labelBatch.reverse();
+  //chartHumidityObject.dataHumidityBatch.reverse();
 
   // Set axis limits for Humidity Chart
   chartHumidityObject.chartMinHumidityLimit = chartHumidityObject.chartMinHumidityLimit - 10; // set the chart lower limit
@@ -1076,13 +1076,13 @@ function buildWindDirectionChartData(windData, lake) {
   let compassSector = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
   let displayCompassSector = ["N", " ", "NE", " ", "E", " ", "SE", " ", "S", " ", "SW", " ", "W", " ", "NW", " "];
   chartWindDirectionObject.displayCompassSector.push(displayCompassSector);
-  // Loop through our data for 24 data points if we have it
+  // Loop through our data for 48 data points if we have it
   for (k; k < windData.length; k++) {
 
     if (typeof windData[k].winddirection == "string") {
 
 
-      chartWindDirectionObject.labelBatch.push(new Date(windData[k].date)); // push time
+      chartWindDirectionObject.labelBatch.push(new Date(windData[k].date).toUTCString()); // push time
       //labelBatch.push(hour + suffix);
 
       // check to see if wind direction reported is null
@@ -1097,7 +1097,7 @@ function buildWindDirectionChartData(windData, lake) {
     };
 
     // when 2 days of data has been reached stop
-    if (chartWindDirectionObject.labelBatch.length > 23 || k > windData.length - 2) {
+    if (chartWindDirectionObject.labelBatch.length > 47 || k > windData.length - 2) {
       break;
     };
   };
