@@ -298,7 +298,7 @@ buildElevChartData: function (data, lake) {
           chartElevObject.chartMaxElevLimit = sumOfElevs / divisor; // update Max Elev average
         if ((sumOfElevs / divisor) < chartElevObject.chartMinElevLimit) // if value is less thank min, replace min
           chartElevObject.chartMinElevLimit = sumOfElevs / divisor; // update Min Elev average
-        chartElevObject.labelBatch.push(elevData[k].time);
+        chartElevObject.labelBatch.push(elevData[k-1].time);
         chartElevObject.dataElevBatch.push((sumOfElevs / divisor).toFixed(2)); // calculate average
         chartElevObject.dataNPBatch.push(lake.normalPool); // Normal Pool line batch 
         chartElevObject.dataFCBatch.push(lake.topOfFloodControl); // Top of Flood Control Pool line batch
@@ -322,7 +322,7 @@ buildElevChartData: function (data, lake) {
   }
 
   //push the final day's values after looping
-  chartElevObject.labelBatch.push(entryDate); // put final day date value in array
+  chartElevObject.labelBatch.push(elevData[k-1].time); // put final day date value in array
   chartElevObject.dataElevBatch.push((sumOfElevs / divisor).toFixed(2)); // calculate average final day and push
   chartElevObject.dataNPBatch.push(lake.normalPool); // Normal Pool line batch 
   chartElevObject.dataFCBatch.push(lake.topOfFloodControl); // Normal Pool line batch 
@@ -425,7 +425,7 @@ buildFlowChartData: function (data, lake) {
 
     if (currentDate !== checkDate) {
       avgFlow = Number((sumOfFlows / divisor).toFixed(2))
-      chartFlowObject.labelBatch.push(data[k].time);
+      chartFlowObject.labelBatch.push(data[k-1].time);
       chartFlowObject.dataFlowBatch.push(avgFlow);
       sumOfFlows = 0;
       divisor = 0;
@@ -438,7 +438,7 @@ buildFlowChartData: function (data, lake) {
     }
 
     // when a week of data has been reached stop
-    if (chartFlowObject.labelBatch.length > 14) {
+    if (chartFlowObject.labelBatch.length > 13) {
       break;
     }
 
