@@ -761,7 +761,7 @@ function updateAllLakes() {
                 } else startServerCount++;
                 //*/
                 updateAllLakes();
-              }, 29 * 60000);
+              }, 25 * 60000);
               // wait 24 minutes (plus 5 minutes @1 second interval to cycle through 275 lakes)
               // This and the inteval below need to be adjusted when a significane # of lakes 
               // Have been added. Would like to have the interval ~30 min as possible
