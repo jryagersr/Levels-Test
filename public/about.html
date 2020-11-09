@@ -3,14 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>BassSavvy</title>
+    <title>BassSavvy - Home</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-77195420-4"></script>
     <script type="text/javascript">
         if (document.location.hostname.search("basssavvy.com") !== -1) {
             window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
             gtag('js', new Date());
             gtag('config', 'UA-77195420-4');
         } else {
@@ -18,14 +21,6 @@
         }
     </script>
 
-    <!-- Google Adsense
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({
-            google_ad_client: "ca-pub-1075035015384602",
-            enable_page_level_ads: true
-        });
-    </script> -->
 
 
     <!-- Latest compiled and minified CSS -->
@@ -34,11 +29,11 @@
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="stylesheet" href="/static/assets/css/main.css" type="text/css">
-    <link rel="stylesheet" href="/static/assets/css/about.css" type="text/css">
+    <link href="/static/assets/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="/static/assets/css/gif-loader.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body>
+<body style="background: rgb(249,249,249);">
     <div class="nav-color-splash"></div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <a class="navbar-brand" href="/">
@@ -61,6 +56,11 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown">
+                    
+                        <a class="dropdown-item" href="/prostaff.html">ProStaff</a>
+                    
+                </li>
+                <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="tournaments" href="#" role="button"
                         aria-haspopup="true" aria-expanded="false">
                         Tournaments
@@ -70,6 +70,16 @@
                         <a class="dropdown-item" href="/tournament-results">Tournament Results</a>
                     </div>
                 </li>
+                <!--<li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="clubs" href="#" role="button"
+                        aria-haspopup="true" aria-expanded="false">
+                        Clubs
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="clubs">
+                        <a class="dropdown-item" href="/club-list">Club List</a>
+                        <a class="dropdown-item" href="/clubs-submit">Submit Your Club</a>
+                    </div>
+                </li>-->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="tournaments" href="#" role="button"
                         aria-haspopup="true" aria-expanded="false">
@@ -87,94 +97,149 @@
                     <i class="fab fa-facebook fa-lg"></i>
                 </a>
             </div>
+            <!-- <div class="nav-item">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" data-toggle="modal" data-target="#loginModal">Login</button>
+            </div> -->
         </div>
     </nav>
 
-        <section id='hero'>
-        </section>
+    <!-- Login Modal -->
+    <!-- Small modal -->
+
+    <div id="loginModal" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog"
+        aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div id="formWell">
+                    <h2>Login</h2>
+                    <form onsubmit="validateAndSubmitForm('login', event)">
+                        <div>
+                            <label>Username:</label>
+                            <input id='username' type="text" name="username" />
+                        </div>
+                        <div>
+                            <label>Password:</label>
+                            <input id='password' type="password" name="password" />
+                        </div>
+                        <div>
+                            <span id='validationMsg'></span>
+                            <input type="submit" value="Log In" />
+                        </div>
+                    </form>
+                </div>
+                <span id="loginMsg"></span>
+                <button id="switch">Register</button>
+            </div>
+        </div>
+    </div>
+    <section>
         <div class="container text-center">
-            <h3><b>THE ULTIMATE TOURNAMENT BASS FISHERMAN'S RESOURCE</b></h3>
-            <h1>Bass<span class="brand-savvy">Savvy</span></h1>
-            <h3 class="text-center">Have you told your fishing friends about Bass<span class="brand-savvy">Savvy</span>? Why not???
-                <h3 class="text-center">Does your product target anglers? Advertise with Bass<span class="brand-savvy">Savvy</span>!!
-            </h3>
-            <br>
-            <br>
-            <br>
-            <p class="text-left"> Do you watch water levels during the week? You should, it provides clues to what Bass
-                are doing and where they are doing it.Water level outflows do the same, outflow creates current in the
-                lake and
-                current can turn on the bite and position Bass differently.
+            <h5>Bass<span class="brand-savvy">Savvy</span> Notice:</h5>
+            <p> For 2020 tournaments and trails will be listed by request, be it by
+                 tournament owner or by a fisherman. Also, if there is a lake you would like to see added, please request
+                it. Both requests can be made via the <b>Contact Form</b>. Thanks for your assistance.
             </p>
-            <p class="text-left"> Do you ever do <b>POST ANALYSIS</b> of a days fishing? Let's say they were biting
-                until 1pm and then the bite shut down. Why? Could it be barometric pressure change? Wind Speed change?
-                Wind Direction?
-                Outflow? Bass<span class="brand-savvy">Savvy</span> provides the data to do a detailed analysis of the
-                conditions during your day on the water.
-            </p>
+        </div>
+    </section>
+    <section id='home-hero' class="container-fluid home-container text-center">
+        <div class="locate-container">
+            <div class="locate-box">
+                <h3 style="font-weight:bold;">Find Lakes</h3>
 
-            <p class="text-left"> For tournaments and trails will be listed by request, be it by
-                tournament owner or by a fisherman. Also, if there is a lake you would like to see added, please
-                request it. Both requests can be made via the <b>Contact Form</b>. Thanks for your assistance.
-            </p>
-            <p class="text-left">We have had various responses that Bass<span class="brand-savvy">Savvy</span> is really
-                great if you live in North Carolina. <b>This is very true, because NC Fishermen</b> have requested<b>
-                    LAKES</b>
-                and<b> TOURNAMENTS</b> and <b>TOURNAMENT TRAILS</b> to be added to Bass<span
-                    class="brand-savvy">Savvy</span></b>.
-                Not everyone knows every tournament in their area, if more fishermen participate, the tournament
-                list becomes better and better. Tournament information is local knowledge and we have no way of gathering this 
-                information other than from fishermen.
-            </p>
-            <p class="text-left">If you see a <b>RAMP</b> missing, please submit it as well, it helps traveling
-                fishermen on new lakes
-            </p>
-            <p class="text-left">One of the main features of Bass<span class="brand-savvy">Savvy</span> is it's
-                <b>TOURNAMENT FILTERING CAPABILITY</b>. Here in NC, we have multiple trails that overlap. Some have a required
-                number of tournaments (qualifiers) like CATT Team Trail in order to qualify for the Final Championship of the
-                trail. The tournament filtering allows you to filter the whole list of tournaments down to only the
-                trails/tournaments you are interested in fishing. Clicking on the Date column header will sort them by
-                date allowing you to see date conflicts easily and plan your season of fishing. <b>This was the main reason 
-                    for creating Bass<span class="brand-savvy">Savvy</span>
-                </b>.
-            </p>
-            <p class="text-left">If you are a tournament director <b>Please</b> submit your tournament to Bass<span
-                    class="brand-savvy">Savvy</span>, it has improved participation for many tournaments and trails.
-            </p>
-            <p class="text-left">If you know a tournament director, spread the word. <b>Charity Tournaments</b> get free banner
-                listings on the lakes they are planned for for months in advance.
-            </p>
+                <div class="left">
+                    <button class="btn btn-success locate-btn" id='locateBtn'>Use My Location</button>
+                </div>
+                <div class="right">
+                    <form>
+                        <input id="zipInput" type="text" pattern="[0-9]*" placeholder="Zipcode"></input>
+                        <button class="btn btn-success locate-btn" id="zipBtn">Submit</button>
+                        <p id="validationMessage"></p>
+                    </form>
+                </div>
+                <div class="middle">
+                    <a class="btn btn-success" href="/search-lakes" style="text-shadow: none">
+                        Search by State
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <div id="adLogoWell"></div>
 
+    <section id='home-nearby'>
+        <div id="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
-    <div class="container text-center">
-        <h1 class="header-title">About Us</h1>
-        <p>BassSavvy was designed <b>by fishermen for fishermen</b> to provide Tournament fishermen with a tool for planning a tournament season, the information to fish tournaments and the post-tournament information to evaluate tournaments.</p>
-        <div class="block-container">
-        <div class="text-block">
-        <h5>Planning the Season</h5>
-        <p>All tournaments in BassSavvy are by request, preferrably from a website. BassSavvy’s tournament list is sortable by column header and filterable by Organization, Trail, Date, Lake, and Ramp. Sorting allows you to sort what is on the page, filtering lets you control what is on the page. Filtering the tournament trails puts only those trails on the page. Sorting those by Date allows easy identification of date conflicts between trails. Upcoming tournaments are found on the upcoming tournaments page and if possible are linked to the associated website to enter with blue text. After the tournament has been held, the listing can be found on the tournament results page, linked to the tournament website if possible with red text.</p> 
+        <div id="lakeContainer">
         </div>
-        <div class="text-block">
-        <h5>Fishing Tournaments</h5>
-        <p>Fishing tournaments - BassSavvy provides a list of tournaments to assist in finding a local tournament to fish. It also provides water elevations for over 150 lakes across the USA and flows from reservoir dams when available. Graphs of water levels and flows as well and weather. More data such as barometric pressure, weather forecaste, and sunrise times are coming soon.</p>     
+
+        <div id="noLocation"></div>
+    </section>
+
+    <section id='club-body'>
+        <!--<div class="club-container">
+                <div class="locate-box">
+                    <h3 style="font-weight:bold;">Bass Clubs</h3>
+    
+                    <div class="left">
+                        <button class="btn btn-success locate-btn" id='locateBtn'>Find a Club</button>
+                    </div>
+                    <div class="middle">
+                        <h4>or</h4>
+                    </div>
+                    <div class="right">
+                        <form>
+                            <button class="btn btn-success locate-btn" id="clubBtn">Submit a Club</button>
+                            <p id="clubValidationMessage"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>-->
+        <div class="home-tile" id="tournamentTile">
+            <a class="tile-anchor" href="/tournaments">
+                <h3>Tournaments</h3>
+            </a>
         </div>
-        <div class="text-block">
-        <h5>After the Tournament</h5>
-        <p>Post Tournament - evaluating the days events. Why did the bite stop at 10am, could it be barometric pressure? Current (dam flows)? Or tidal (River)? The tournament results are linked in red when possible to quickly check the results.</p>
+        <!--<div class="home-tile" id="allLakes">
+            <h2>Welcome to<br>BassSavvy!</h2>
+            <a class="btn btn-success" href="/search-lakes" style="text-shadow: none">
+                Search All Lakes
+            </a>
+        </div>-->
+        <div class="home-tile" id="tournamentResultsTile">
+            <a class="tile-anchor" href="/tournament-results">
+                <h3>Tournament Results</h3>
+            </a>
         </div>
-    </div>
-    </div>
+        <div class="home-tile" id="contactTile">
+            <a class="tile-anchor" href="/contact">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>to provide feedback</li>
+                    <li>to request a tournament/trail add</li>
+                    <li>to request a lake/river add</li>
+                </ul>
+            </a>
+        </div>
+    </section>
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
-    <script type="text/javascript" src="/static/assets/js/main.js"></script>
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="/static/assets/js/home.js"></script>
+    <script type="text/javascript" src="/static/assets/js/sponsor.js"></script>
+    <!-- <script type="text/javascript" src="/static/assets/js/login.js"></script> -->
+
 </body>
 
 </html>
