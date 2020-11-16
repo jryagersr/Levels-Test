@@ -3036,6 +3036,26 @@ chartData: [],
         dataSource: ["loadAds"], // array of calls to make to retrieve data
     },
     {
+        bodyOfWater: "Belhaven (Pungo River)", // lake name
+        state: ["North Carolina"],
+        data: [],
+        chartData: [],
+        ccWxData: [],
+        ccWxDataLastRefresh: "12/31/18",
+        wxForecastData: [],
+        wxForecastDataLastRefresh: "12/31/18",
+        refreshInterval: 60, //minutes
+        lastRefresh: "12/31/18", // a Date 
+        seaLevelDelta: 0,
+        normalPool: 0.0,
+        lat: 35.537222,
+        long: -76.622778,
+        elevURL: "https://water.weather.gov/ahps2/hydrograph_to_xml.php?gage=blhn7&output=tabular&time_zone=est",
+        flowURL: "",
+        href: "/lakes/belhaven",
+        dataSource: ["WEATHERWATER", "loadAds"], // array of calls to make to retrieve data
+    },
+    {
         bodyOfWater: "Blewitt Falls", // lake name
         state: ["North Carolina"],
         data: [],
@@ -3489,26 +3509,6 @@ chartData: [],
         elevURL: "https://water.weather.gov/ahps2/hydrograph_to_xml.php?gage=htfn7&output=tabular&time_zone=est",
         flowURL: "",
         href: "/lakes/perquimans",
-        dataSource: ["WEATHERWATER", "loadAds"], // array of calls to make to retrieve data
-    },
-    {
-        bodyOfWater: "Belhaven (Pungo River)", // lake name
-        state: ["North Carolina"],
-        data: [],
-        chartData: [],
-        ccWxData: [],
-        ccWxDataLastRefresh: "12/31/18",
-        wxForecastData: [],
-        wxForecastDataLastRefresh: "12/31/18",
-        refreshInterval: 60, //minutes
-        lastRefresh: "12/31/18", // a Date 
-        seaLevelDelta: 0,
-        normalPool: 0.0,
-        lat: 35.537222,
-        long: -76.622778,
-        elevURL: "https://water.weather.gov/ahps2/hydrograph_to_xml.php?gage=blhn7&output=tabular&time_zone=est",
-        flowURL: "",
-        href: "/lakes/belhaven",
         dataSource: ["WEATHERWATER", "loadAds"], // array of calls to make to retrieve data
     },
     {
