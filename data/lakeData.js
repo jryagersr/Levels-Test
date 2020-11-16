@@ -3492,7 +3492,7 @@ chartData: [],
         dataSource: ["WEATHERWATER", "loadAds"], // array of calls to make to retrieve data
     },
     {
-        bodyOfWater: "Pungo River (Belhaven)", // lake name
+        bodyOfWater: "Belhaven (Pungo River)", // lake name
         state: ["North Carolina"],
         data: [],
         chartData: [],
