@@ -1680,7 +1680,7 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/phantom-outdoors-invitational/"
                     },
                     {
-                        date: "2020-0x-xx",
+                        date: "2020-01-01",
                         lake: "James Rvr",
                         lakeID: "jamesriver",
                         ramp: "Osbourne",
@@ -2004,55 +2004,65 @@ module.exports = [
                 tournaments: [
 
                     {
-                        date: "2020-02-08",
+                        date: "2020-09-27",
                         lake: "Kerr",
                         lakeID: "kerr",
                         ramp: "Occonneechee",
                         state: "NC-VA",
                         txDetail: "Qualifier 1",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-kerr-lake-va-feb-8-2020/",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-kerr-lake-va-sept-27-2020/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
                     },
                     {
-                        date: "2020-02-29",
+                        date: "2020-10-18",
                         lake: "Kerr",
                         lakeID: "kerr",
                         ramp: "Occonneechee",
                         state: "NC-VA",
                         txDetail: "Qualifier 1",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-kerr-lake-va-feb-29-2020/",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-kerr-lake-va-oct-18-2020/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
                     },
                     {
-                        date: "2020-03-15",
+                        date: "2020-10-25",
                         lake: "Kerr",
                         lakeID: "kerr",
                         ramp: "Occonneechee",
                         state: "NC-VA",
                         txDetail: "Qualifier 1",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-kerr-lake-va-mar-15-2020/",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-kerr-lake-va-oct-25-2020/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
                     },
                     {
-                        date: "2020-06-13",
+                        date: "2020-11-14",
                         lake: "Kerr",
                         lakeID: "kerr",
                         ramp: "Occonneechee",
                         state: "NC-VA",
                         txDetail: "Qualifier 1",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-kerr-lake-va-apr-19-2020/",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-kerr-lake-va-nov-14-2020/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
                     },
                     {
-                        date: "2020-06-27",
+                        date: "2020-11-29",
                         lake: "Kerr",
                         lakeID: "kerr",
                         ramp: "Occonneechee",
                         state: "NC-VA",
                         txDetail: "Qualifier 1",
-                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-kerr-lake-va-apr-16-2020/",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-kerr-lake-va-nov-29-2020/",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
                     },
+                    {
+                        date: "2020-12-05",
+                        lake: "Kerr",
+                        lakeID: "kerr",
+                        ramp: "Occonneechee",
+                        state: "NC-VA",
+                        txDetail: "Qualifier 1",
+                        resultsLink: "https://www.cattteamtrail.com/news/tournament-results-kerr-lake-va-dec 05-2020/",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-kerr-lake/"
+                    }
                 ]
             },
             {
@@ -2126,7 +2136,7 @@ module.exports = [
                 tournaments: [
 
                     {
-                        date: "2020-03-14",
+                        date: "2021-02-27",
                         lake: "Kerr",
                         lakeID: "kerr",
                         ramp: "Flemingtown",
@@ -2136,7 +2146,7 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
                     },
                     {
-                        date: "2020-06-14",
+                        date: "2021-03-13",
                         lake: "Jordan",
                         lakeID: "jordan",
                         ramp: "Farrington",
@@ -2146,7 +2156,7 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
                     },
                     {
-                        date: "2020-07-12",
+                        date: "2021-03-27",
                         lake: "Falls",
                         lakeID: "falls",
                         ramp: "Ledge Rock",
@@ -2156,17 +2166,7 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
                     },
                     {
-                        date: "2020-08-02",
-                        lake: "Jordan",
-                        lakeID: "jordan",
-                        ramp: "Farrington",
-                        state: "NC",
-                        txDetail: "Qualifier 4",
-                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-old-north",
-                        entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
-                    },
-                    {
-                        date: "2020-09-19",
+                        date: "2021-04-10",
                         lake: "Kerr",
                         lakeID: "kerr",
                         ramp: "Flemingtown",
@@ -2176,7 +2176,7 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
                     },
                     {
-                        date: "2020-10-03",
+                        date: "2021-04-17",
                         lake: "Falls",
                         lakeID: "falls",
                         ramp: "Ledge Rock",
@@ -2186,12 +2186,22 @@ module.exports = [
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
                     },
                     {
-                        date: "2020-10-17",
+                        date: "2021-05-08",
                         lake: "Jordan",
                         lakeID: "jordan",
                         ramp: "Farrington",
                         state: "NC",
-                        txDetail: "Final",
+                        txDetail: "Qualifier 4",
+                        resultsLink: "https://www.cattteamtrail.com/divisions/catt-old-north",
+                        entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
+                    },
+                    {
+                        date: "2021-10-17",
+                        lake: "Harris",
+                        lakeID: "shearonharris",
+                        ramp: "CrossPoint",
+                        state: "NC",
+                        txDetail: "Qualifier 5",
                         resultsLink: "https://www.cattteamtrail.com/divisions/catt-old-north",
                         entryLink: "https://www.cattteamtrail.com/divisions/catt-old-north/"
                     },
@@ -2560,47 +2570,47 @@ module.exports = [
             tournaments: [
 
                 {
-                    date: "2020-03-07",
+                    date: "2021-03-27",
                     lake: "Jordan",
                     lakeID: "jordan",
                     ramp: "Farrington",
                     state: "NC",
                     txDetail: "Bass For Cash Series",
-                    resultsLink: "https://bassforcash.com/2020/03/09/adams-fritts-dominate-with-35-05lb-win-at-jordan/",
-                    entryLink: "http://bassforcash.com/"
+                    resultsLink: "https://bassforcash.com/",
+                    entryLink: "https://www.collinsbassforcash.com/shop/jordon-lake-entry-fee-march-27/"
                 },
                 {
-                    date: "2020-06-07",
-                    lake: "Roanoke River (Wil)",
-                    lakeID: "roanokewill",
-                    ramp: "Plymouth",
-                    state: "NC",
-                    txDetail: "Bass For Cash Series",
-                    resultsLink: "http://bassforcash.com",
-                    entryLink: "http://bassforcash.com/schedule/"
-                },
-                {
-                    date: "2020-07-25",
-                    lake: "Falls",
-                    lakeID: "falls",
-                    ramp: "Ledge Rock",
-                    state: "NC",
-                    txDetail: "Bass For Cash Series",
-                    resultsLink: "http://bassforcash.com",
-                    entryLink: "http://bassforcash.com/schedule/"
-                },
-                {
-                    date: "2020-08-22",
+                    date: "2021-04-03",
                     lake: "Kerr",
                     lakeID: "kerr",
                     ramp: "Nutbush",
                     state: "NC",
                     txDetail: "Bass For Cash Series",
-                    resultsLink: "http://bassforcash.com/",
-                    entryLink: "http://bassforcash.com/schedule/"
+                    resultsLink: "http://bassforcash.com",
+                    entryLink: "https://www.collinsbassforcash.com/shop/kerr-lake-entry-fee-april-3/"
                 },
                 {
-                    date: "2020-08-29",
+                    date: "2021-04-10",
+                    lake: "Gaston",
+                    lakeID: "gaston",
+                    ramp: "Summit Landing",
+                    state: "NC",
+                    txDetail: "Bass For Cash Series",
+                    resultsLink: "http://bassforcash.com",
+                    entryLink: "https://www.collinsbassforcash.com/shop/lake-gaston-top-gun-entry-fee-april-10/"
+                },
+                {
+                    date: "2020-05-01",
+                    lake: "Chowan",
+                    lakeID: "chowan",
+                    ramp: "Bayside Marina",
+                    state: "NC",
+                    txDetail: "Bass For Cash Series",
+                    resultsLink: "http://bassforcash.com/",
+                    entryLink: "https://www.collinsbassforcash.com/shop/chowan-river-entry-fee-may-1/"
+                },
+                {
+                    date: "2021-08-29",
                     lake: "Cypress Landing",
                     lakeID: "chowanWF",
                     ramp: "Pembroke",
@@ -2610,33 +2620,55 @@ module.exports = [
                     entryLink: "http://bassforcash.com/schedule/"
                 },
                 {
-                    date: "2020-09-05",
+                    date: "2021-06-19",
                     lake: "Gaston",
                     lakeID: "gaston",
-                    ramp: "Summit",
+                    ramp: "Summit Landing",
                     state: "NC",
                     txDetail: "Bass For Cash Series",
                     resultsLink: "http://bassforcash.com/",
-                    entryLink: "http://bassforcash.com/schedule/"
+                    entryLink: "https://www.collinsbassforcash.com/shop/lake-gaston-entry-fee-june-19/"
                 },
                 {
-                    date: "2020-09-26",
-                    lake: "TBD",
-                    ramp: "TBD",
+                    date: "2021-07-24",
+                    lake: "Falls",
+                    lakeID: "falls",
+                    ramp: "LedgeRock",
                     state: "NC",
                     txDetail: "Bass For Cash Series",
                     resultsLink: "http://bassforcash.com/",
-                    entryLink: "http://bassforcash.com/schedule/"
+                    entryLink: "https://www.collinsbassforcash.com/shop/falls-lake-entry-fee-july-24/"
                 },
                 {
-                    date: "2020-09-27",
-                    lake: "TBD",
-                    ramp: "TBD",
+                    date: "2021-08-21",
+                    lake: "Chowan",
+                    lakeID: "chowan",
+                    ramp: "Bayside Marina",
                     state: "NC",
                     txDetail: "Bass For Cash Series",
                     resultsLink: "http://bassforcash.com/",
-                    entryLink: "http://bassforcash.com/schedule/"
+                    entryLink: "https://www.collinsbassforcash.com/shop/roanoke-river-entry-fee-august-21/"
                 },
+                {
+                    date: "2021-09-25",
+                    lake: "TBD",
+                    lakeID: "TBD",
+                    ramp: "TBD",
+                    state: "NC",
+                    txDetail: "Day 1 of 2 Day Championship",
+                    resultsLink: "http://bassforcash.com/",
+                    entryLink: "https://www.collinsbassforcash.com/"
+                },
+                {
+                    date: "2021-09-26",
+                    lake: "TBD",
+                    lakeID: "TBD",
+                    ramp: "TBD",
+                    state: "NC",
+                    txDetail: "Day 2 of 2 Day Championship",
+                    resultsLink: "http://bassforcash.com/",
+                    entryLink: "https://www.collinsbassforcash.com/"
+                }
             ]
         }, ]
     },
