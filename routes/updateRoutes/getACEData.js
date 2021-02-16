@@ -58,7 +58,7 @@ module.exports = {
           })
           if (elevTempEntries.length == 0) {
             // send empty array to front end
-            console.log(currentLake.bodyOfWater + " No Elev data from ACE")
+            //console.log(currentLake.bodyOfWater + " No Elev data from ACE")
             callback(true, " No Elev data from ACE");
           } else {
 
