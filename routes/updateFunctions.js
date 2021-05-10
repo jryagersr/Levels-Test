@@ -759,7 +759,7 @@ function buildTempChartData(tempData, lake) {
   chartTempObject.chartMaxTempLimit = Math.ceil(chartTempObject.chartMaxTempLimit) + 1; // set the chart upper limit 2' below max
 
 
-  // need to check to see if there is already flow data in chartData field, if there is, just update it
+  // Need to check to see if there is already flow data in chartData field, if there is, just update it
   // otherwise create it.
   let tempExists = false;
   let tempIndex = 0;
