@@ -8,7 +8,7 @@ module.exports = {
 
   // APC UPDATE FUNCTION
   // ===============================================================================
-  // function to get APC data
+  // function to get Alabama Power Company data
   getAPCData: function (currentLake, callback) {
     let apcURL = currentLake.elevURL;
     var options = {
