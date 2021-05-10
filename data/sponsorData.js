@@ -227,7 +227,7 @@ module.exports = [
         location: ["kerr", "jordan", "falls", "belews", "hyco", "mayo","randleman","tuckertown", "tillery", "badin", "highrock", "shearonharris"],
         type: "logo",
         startDate: "2019-01-01T00:00:00.0Z",
-        endDate: "2021-01-01T00:00:00.0Z"
+        endDate: "2022-01-01T00:00:00.0Z"
     },
     {
         sponsor: "Triangle CRC",
