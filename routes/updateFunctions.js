@@ -50,11 +50,12 @@ module.exports = {
     }
     //If time for an update or the refreshInterval is corrupted
     if (diffMins >= refreshInterval || currentLake.lastRefresh == "Invalid Date") {
+    console.log(`${currentLake.bodyOfWater} ${currentLake.lastRefresh} checkForUpdate`)
       status = true;
     } else {
+      console.log(`${currentLake.bodyOfWater} ${currentLake.lastRefresh} checkForUpdate`)
       status = false;
     }
-    console.log(`${currentLake.bodyOfWater} ${status} checkForUpdate`)
     return status;
   },
 
