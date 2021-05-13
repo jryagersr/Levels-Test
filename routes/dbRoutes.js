@@ -114,6 +114,7 @@ module.exports = function (app) {
                   break;
 
                 case "APC":
+                  console.log(`${currentLake.bodyOfWater} dbRoutes`)
                   apc.getAPCData(currentLake, function (error, APCdata) {
                     if (error) {
                       console.log(currentLake.bodyOfWater + "- APCData error " + APCdata);
