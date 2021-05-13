@@ -19,6 +19,7 @@ module.exports = {
     let refreshInterval = cLake.refreshInterval; // default to lake data refresh check
     let dataLength = cLake.data.length;
     let status = false;
+    console.log(`${currentLake.bodyOfWater} checkForUpdate`)
 
     if (type == 1) { // check current conditions weather refresh interval
       lastRefresh = cLake.ccWxDataLastRefresh; // Set to current conditions lastRefresh
