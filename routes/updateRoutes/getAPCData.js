@@ -46,6 +46,7 @@ module.exports = {
           let apcDate = "";
           let year = "";
 
+          console.log("Here");
           // With cheerio, find each <td> on the page
           // (i: iterator. element: the current element)
           $(".lake-specs-level,.lake-message-wrapper,.flow").each(function (i, element) {
@@ -69,6 +70,7 @@ module.exports = {
             }
 
           });
+        console.log(`${apcElev} APC Elev`)
           if (apcElev !== 0) // If elev not 0 (ie, unposted data)
             data.push({
               elev: apcElev,
