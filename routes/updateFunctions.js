@@ -53,7 +53,8 @@ module.exports = {
     console.log(`${currentLake.bodyOfWater} ${currentLake.lastRefresh} checkForUpdate`)
       status = true;
     } else {
-      console.log(`${currentLake.bodyOfWater} ${currentLake.lastRefresh} checkForUpdate`)
+      console.log(`${currentLake.bodyOfWater} ${currentLake.lastRefresh} checkForUpdate1
+      `)
       status = false;
     }
     return status;
