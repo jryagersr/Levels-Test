@@ -72,10 +72,10 @@ module.exports = function (app) {
 
             //check to see if update is needed (function returns true if update is needed)
             //if not retrieve data and update the db, then return the retrieved data
-                  console.log(`${currentLake.bodyOfWater} dbRoutes`)
             if (update.checkForUpdate(currentLake, 0)) {
               // update current lake
               // determine which data source and run function
+                  console.log(`${currentLake.bodyOfWater} dbRoutes`)
               switch (currentLake.dataSource[0]) {
 
                 case "ACE":

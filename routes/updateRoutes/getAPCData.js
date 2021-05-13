@@ -30,6 +30,7 @@ module.exports = {
       if (error) {
         callback(error);
       } else {
+        console.log(`${currentLake.bodyOfWater} apcdata`)
         let dataErrorTrue = false;
         try {
           var $ = cheerio.load(localHTML);
