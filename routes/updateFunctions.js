@@ -50,11 +50,10 @@ module.exports = {
     }
     //If time for an update or the refreshInterval is corrupted
     if (diffMins >= refreshInterval || currentLake.lastRefresh == "Invalid Date") {
-    console.log(`${currentLake.bodyOfWater} ${currentLake.lastRefresh} checkForUpdate`)
+      //console.log(`${currentLake.bodyOfWater} ${currentLake.lastRefresh} DB Refresh True`)
       status = true;
     } else {
-      console.log(`${currentLake.bodyOfWater} ${currentLake.lastRefresh} checkForUpdate1
-      `)
+      //console.log(`${currentLake.bodyOfWater} ${currentLake.lastRefresh} DB Refresh False`)
       status = false;
     }
     return status;
@@ -201,7 +200,7 @@ module.exports = {
               return true;
             }
           });
-        }
+      }
 
     })
   },
@@ -247,454 +246,453 @@ module.exports = {
   },
 
 
-/******************************************************************************************************************/
-// Function to build data for Elev on page
-// Moved to server side for performance
-/******************************************************************************************************************/
-// Function to prepare chart data
-buildElevChartData: function (data, lake) {
-  // Our data must be parsed into separate flat arrays for the chart
-  var elevData = data;
-  let chartElevObject = {
-    type: "Elev",
-    dataNPBatch: [],
-    dataFCBatch: [],
-    labelBatch: [],
-    dataElevBatch: [],
-    chartMinElevLimit: 10000,
-    chartMaxElevLimit: 0
-  }
+  /******************************************************************************************************************/
+  // Function to build data for Elev on page
+  // Moved to server side for performance
+  /******************************************************************************************************************/
+  // Function to prepare chart data
+  buildElevChartData: function (data, lake) {
+    // Our data must be parsed into separate flat arrays for the chart
+    var elevData = data;
+    let chartElevObject = {
+      type: "Elev",
+      dataNPBatch: [],
+      dataFCBatch: [],
+      labelBatch: [],
+      dataElevBatch: [],
+      chartMinElevLimit: 10000,
+      chartMaxElevLimit: 0
+    }
 
-  let sumOfElevs = 0;
-  let divisor = 0;
-  let k = 0; // our iterator after starting elevation
-  let checkDate = new Date(elevData[0].time).toLocaleDateString();
-  checkDate = checkDate.substr(0, checkDate.length - 5, );
-
-
-
-  // Loop through our data for 24 data points if we have it
-  for (k = 0; k < elevData.length; k++) {
-
-    checkDateIsValid = new Date(elevData[k].time).toLocaleDateString();
-
-    if (checkDateIsValid !== 'Invalid Date') {
-
-      let timestamp = new Date(elevData[k].time);
-      entryDate = timestamp.toLocaleDateString();
-
-      //remove year from date
-      entryDate = entryDate.substr(0, entryDate.length - 5, );
+    let sumOfElevs = 0;
+    let divisor = 0;
+    let k = 0; // our iterator after starting elevation
+    let checkDate = new Date(elevData[0].time).toLocaleDateString();
+    checkDate = checkDate.substr(0, checkDate.length - 5, );
 
 
 
-      // if we're still on the same day and not on the last entry
-      if (entryDate === checkDate) {
+    // Loop through our data for 24 data points if we have it
+    for (k = 0; k < elevData.length; k++) {
 
-        // add to our average variables
-        sumOfElevs += Number(elevData[k].elev);
-        divisor++
+      checkDateIsValid = new Date(elevData[k].time).toLocaleDateString();
+
+      if (checkDateIsValid !== 'Invalid Date') {
+
+        let timestamp = new Date(elevData[k].time);
+        entryDate = timestamp.toLocaleDateString();
+
+        //remove year from date
+        entryDate = entryDate.substr(0, entryDate.length - 5, );
+
+
+
+        // if we're still on the same day and not on the last entry
+        if (entryDate === checkDate) {
+
+          // add to our average variables
+          sumOfElevs += Number(elevData[k].elev);
+          divisor++
+        } else {
+
+          // push data and reset averages
+          if ((sumOfElevs / divisor) > chartElevObject.chartMaxElevLimit) // if value is greater than max, replace max
+            chartElevObject.chartMaxElevLimit = sumOfElevs / divisor; // update Max Elev average
+          if ((sumOfElevs / divisor) < chartElevObject.chartMinElevLimit) // if value is less thank min, replace min
+            chartElevObject.chartMinElevLimit = sumOfElevs / divisor; // update Min Elev average
+          chartElevObject.labelBatch.push(elevData[k - 1].time);
+          chartElevObject.dataElevBatch.push((sumOfElevs / divisor).toFixed(2)); // calculate average
+          chartElevObject.dataNPBatch.push(lake.normalPool); // Normal Pool line batch 
+          chartElevObject.dataFCBatch.push(lake.topOfFloodControl); // Top of Flood Control Pool line batch
+          //dataTDBatch.push(lake.topOfDam); // Top of Dam line batch
+
+          sumOfElevs = Number(elevData[k].elev);
+          divisor = 1;
+          checkDate = entryDate;
+        }
+
       } else {
-
-        // push data and reset averages
-        if ((sumOfElevs / divisor) > chartElevObject.chartMaxElevLimit) // if value is greater than max, replace max
-          chartElevObject.chartMaxElevLimit = sumOfElevs / divisor; // update Max Elev average
-        if ((sumOfElevs / divisor) < chartElevObject.chartMinElevLimit) // if value is less thank min, replace min
-          chartElevObject.chartMinElevLimit = sumOfElevs / divisor; // update Min Elev average
-        chartElevObject.labelBatch.push(elevData[k-1].time);
-        chartElevObject.dataElevBatch.push((sumOfElevs / divisor).toFixed(2)); // calculate average
-        chartElevObject.dataNPBatch.push(lake.normalPool); // Normal Pool line batch 
-        chartElevObject.dataFCBatch.push(lake.topOfFloodControl); // Top of Flood Control Pool line batch
-        //dataTDBatch.push(lake.topOfDam); // Top of Dam line batch
-
-        sumOfElevs = Number(elevData[k].elev);
-        divisor = 1;
-        checkDate = entryDate;
+        if (k < elevData.length - 1) {
+          checkDate = new Date(elevData[k + 1].time).toLocaleDateString();
+          checkDate = checkDate.substr(0, checkDate.length - 5, );
+        }
       }
-
-    } else {
-      if (k < elevData.length - 1) {
-        checkDate = new Date(elevData[k + 1].time).toLocaleDateString();
-        checkDate = checkDate.substr(0, checkDate.length - 5, );
+      // when a week of data has been reached stop
+      if (chartElevObject.labelBatch.length > 13) {
+        break;
       }
     }
-    // when a week of data has been reached stop
-    if (chartElevObject.labelBatch.length > 13) {
-      break;
-    }
-  }
 
-  //push the final day's values after looping
-  chartElevObject.labelBatch.push(elevData[k-1].time); // put final day date value in array
-  chartElevObject.dataElevBatch.push((sumOfElevs / divisor).toFixed(2)); // calculate average final day and push
-  chartElevObject.dataNPBatch.push(lake.normalPool); // Normal Pool line batch 
-  chartElevObject.dataFCBatch.push(lake.topOfFloodControl); // Normal Pool line batch 
-  //dataTDBatch.push(lake.topOfDam); // Top of Dam line batch 
+    //push the final day's values after looping
+    chartElevObject.labelBatch.push(elevData[k - 1].time); // put final day date value in array
+    chartElevObject.dataElevBatch.push((sumOfElevs / divisor).toFixed(2)); // calculate average final day and push
+    chartElevObject.dataNPBatch.push(lake.normalPool); // Normal Pool line batch 
+    chartElevObject.dataFCBatch.push(lake.topOfFloodControl); // Normal Pool line batch 
+    //dataTDBatch.push(lake.topOfDam); // Top of Dam line batch 
 
-  //check the final day's values for Min and MaxLimit
-  if ((sumOfElevs / divisor) >= chartElevObject.chartMaxElevLimit) // if value is greater than max, replace max
-    chartElevObject.chartMaxElevLimit = Math.ceil(sumOfElevs / divisor); // update Max Elev average
-  if ((sumOfElevs / divisor) <= chartElevObject.chartMinElevLimit) // if value is less thank min, replace min
-    chartElevObject.chartMinElevLimit = Math.floor(sumOfElevs / divisor); // update Min Elev average
+    //check the final day's values for Min and MaxLimit
+    if ((sumOfElevs / divisor) >= chartElevObject.chartMaxElevLimit) // if value is greater than max, replace max
+      chartElevObject.chartMaxElevLimit = Math.ceil(sumOfElevs / divisor); // update Max Elev average
+    if ((sumOfElevs / divisor) <= chartElevObject.chartMinElevLimit) // if value is less thank min, replace min
+      chartElevObject.chartMinElevLimit = Math.floor(sumOfElevs / divisor); // update Min Elev average
 
-  if (lake.normalPool < chartElevObject.chartMinElevLimit)
-    chartElevObject.chartMinElevLimit = lake.normalPool;
+    if (lake.normalPool < chartElevObject.chartMinElevLimit)
+      chartElevObject.chartMinElevLimit = lake.normalPool;
 
-  //if (lake.normalPool > chartMaxElev)
-  //chartMaxElev = lake.normalPool;
+    //if (lake.normalPool > chartMaxElev)
+    //chartMaxElev = lake.normalPool;
 
-  chartElevObject.labelBatch.reverse();
-  chartElevObject.dataElevBatch.reverse();
+    chartElevObject.labelBatch.reverse();
+    chartElevObject.dataElevBatch.reverse();
 
-  // need to check to see if there is already elev data in chartData field, if there is, just update it
-  // otherwise create it.
-  let elevExists = false;
-  let elevIndex = 0;
-  for (i = 0; i < lake.chartData.length; i++) {
+    // need to check to see if there is already elev data in chartData field, if there is, just update it
+    // otherwise create it.
+    let elevExists = false;
+    let elevIndex = 0;
+    for (i = 0; i < lake.chartData.length; i++) {
 
-    if (lake.chartData[i].type == "Elev") {
-      elevExists = true;
-      elevIndex = i;
-      break;
-    }
-  };
-  if (elevExists) { // update the data in the current chartData
-    lake.chartData[elevIndex].dataNPBatch = chartElevObject.dataNPBatch;
-    lake.chartData[elevIndex].dataFCBatch = chartElevObject.dataFCBatch;
-    lake.chartData[elevIndex].labelBatch = chartElevObject.labelBatch;
-    lake.chartData[elevIndex].dataElevBatch = chartElevObject.dataElevBatch;
-    lake.chartData[elevIndex].chartMinElevLimit = chartElevObject.chartMinElevLimit;
-    lake.chartData[elevIndex].chartMaxElevLimit = chartElevObject.chartMaxElevLimit;
-  } else
-    lake.chartData.push(chartElevObject);
-
-  // update the database with the 'Elev' data
-  db.model("Lake").updateOne({
-      'bodyOfWater': lake.bodyOfWater
-    }, {
-      $set: {
-        "chartData": lake.chartData
+      if (lake.chartData[i].type == "Elev") {
+        elevExists = true;
+        elevIndex = i;
+        break;
       }
-    })
-    .exec(function (err) {
-      if (err)
-        console.log(error);
+    };
+    if (elevExists) { // update the data in the current chartData
+      lake.chartData[elevIndex].dataNPBatch = chartElevObject.dataNPBatch;
+      lake.chartData[elevIndex].dataFCBatch = chartElevObject.dataFCBatch;
+      lake.chartData[elevIndex].labelBatch = chartElevObject.labelBatch;
+      lake.chartData[elevIndex].dataElevBatch = chartElevObject.dataElevBatch;
+      lake.chartData[elevIndex].chartMinElevLimit = chartElevObject.chartMinElevLimit;
+      lake.chartData[elevIndex].chartMaxElevLimit = chartElevObject.chartMaxElevLimit;
+    } else
+      lake.chartData.push(chartElevObject);
 
-    })
-},
+    // update the database with the 'Elev' data
+    db.model("Lake").updateOne({
+        'bodyOfWater': lake.bodyOfWater
+      }, {
+        $set: {
+          "chartData": lake.chartData
+        }
+      })
+      .exec(function (err) {
+        if (err)
+          console.log(error);
 
-
-/******************************************************************************************************************/
-// Function to build data for Elev on page
-// Moved to server side for performance
-/******************************************************************************************************************/
-// Function to prepare chart data
-/******************************************************************************************************************/
-// Function to build daily flow chart data
-buildFlowChartData: function (data, lake) {
-
-  let chartFlowObject = {
-    type: "Flow",
-    labelBatch: [],
-    dataFlowBatch: [],
-    chartMinFlowLimit: 0, // y-axis Min Flow value
-    chartMaxFlowLimit: 0 // y-axis Max Flow value
-
-  }
-
-  // Our data must be parsed into separate flat arrays for the chart
-  let sumOfFlows = 0;
-  let divisor = 0;
-  let k = 0; // our iterator after starting flow
-  let avgFlow = 0;
-  let checkDate = new Date(data[0].time).toLocaleDateString();
-
-  checkDate = checkDate.substr(0, checkDate.length - 5, );
-
-  // Loop through our data for 24 data points if we have it
-  for (k = 0; k < data.length; k++) {
+      })
+  },
 
 
-    if (data[k].flow == "Missing" || data[k].flow < 0) {
-      //console.log("Missing Flow - " + lake.bodyOfWater)
-      data[k].flow = -1;
+  /******************************************************************************************************************/
+  // Function to build data for Elev on page
+  // Moved to server side for performance
+  /******************************************************************************************************************/
+  // Function to prepare chart data
+  /******************************************************************************************************************/
+  // Function to build daily flow chart data
+  buildFlowChartData: function (data, lake) {
+
+    let chartFlowObject = {
+      type: "Flow",
+      labelBatch: [],
+      dataFlowBatch: [],
+      chartMinFlowLimit: 0, // y-axis Min Flow value
+      chartMaxFlowLimit: 0 // y-axis Max Flow value
+
     }
+
+    // Our data must be parsed into separate flat arrays for the chart
+    let sumOfFlows = 0;
+    let divisor = 0;
+    let k = 0; // our iterator after starting flow
+    let avgFlow = 0;
+    let checkDate = new Date(data[0].time).toLocaleDateString();
+
+    checkDate = checkDate.substr(0, checkDate.length - 5, );
+
+    // Loop through our data for 24 data points if we have it
+    for (k = 0; k < data.length; k++) {
+
+
+      if (data[k].flow == "Missing" || data[k].flow < 0) {
+        //console.log("Missing Flow - " + lake.bodyOfWater)
+        data[k].flow = -1;
+      }
       sumOfFlows += data[k].flow
       divisor++
 
-    
-    let currentDate = new Date(data[k].time).toLocaleDateString();
-    currentDate = currentDate.substr(0, currentDate.length - 5, )
 
-    if (currentDate !== checkDate) {
-      avgFlow = Number((sumOfFlows / divisor).toFixed(2))
-      chartFlowObject.labelBatch.push(data[k-1].time);
-      chartFlowObject.dataFlowBatch.push(avgFlow);
-      sumOfFlows = 0;
-      divisor = 0;
-      checkDate = new Date(data[k].time).toLocaleDateString();
-      checkDate = checkDate.substr(0, checkDate.length - 5, );
+      let currentDate = new Date(data[k].time).toLocaleDateString();
+      currentDate = currentDate.substr(0, currentDate.length - 5, )
 
-      if (avgFlow >= chartFlowObject.chartMaxFlowLimit) // if value is greater than max, replace max
-        chartFlowObject.chartMaxFlowLimit = avgFlow; // flow for calculating Chart y-axis Max later
+      if (currentDate !== checkDate) {
+        avgFlow = Number((sumOfFlows / divisor).toFixed(2))
+        chartFlowObject.labelBatch.push(data[k - 1].time);
+        chartFlowObject.dataFlowBatch.push(avgFlow);
+        sumOfFlows = 0;
+        divisor = 0;
+        checkDate = new Date(data[k].time).toLocaleDateString();
+        checkDate = checkDate.substr(0, checkDate.length - 5, );
 
-    }
+        if (avgFlow >= chartFlowObject.chartMaxFlowLimit) // if value is greater than max, replace max
+          chartFlowObject.chartMaxFlowLimit = avgFlow; // flow for calculating Chart y-axis Max later
 
-    // when a week of data has been reached stop
-    if (chartFlowObject.labelBatch.length > 13) {
-      break;
-    }
-
-  }
-
-  //check the final day's values for Min and MaxLimit
-  //if ((sumOfFlows / divisor) <= chartMinFlow)
-  //chartMinFlow = (sumOfFlows / divisor);
-  if ((sumOfFlows / divisor) >= chartFlowObject.chartMaxFlowLimit)
-    chartFlowObject.chartMaxFlowLimit = Number((sumOfFlows / divisor).toFixed(2));;
-
-  chartFlowObject.labelBatch.reverse();
-  chartFlowObject.dataFlowBatch.reverse();
-
-  // Set y axis limits for Flow Chart
-  chartFlowObject.chartMinFlowLimit = 0; // set lower chart limit
-  chartFlowObject.chartMaxFlowLimit = Math.round(((((chartFlowObject.chartMaxFlowLimit - (chartFlowObject.chartMaxFlowLimit % 1000)) / 1000) * 1.25) * 1000) / 1000) * 1000; // set the chart upper limit
-
-  //if (chartMinFlowLimit < 1000) chartMinFlowLimit = 0; // Flow Min limit should just be set to 0
-
-  if (chartFlowObject.chartMaxFlowLimit < 4000)
-    chartFlowObject.chartMaxFlowLimit = (Math.ceil(chartFlowObject.chartMaxFlowLimit / 1000) * 1000) + 1000;
-
-
-  // need to check to see if there is already flow data in chartData field, if there is, just update it
-  // otherwise create it.
-  let flowExists = false;
-  let flowIndex = 0;
-  for (i = 0; i < lake.chartData.length; i++) {
-
-    if (lake.chartData[i].type == "Flow") {
-      flowExists = true;
-      flowIndex = i;
-      break;
-    }
-  };
-  if (flowExists) { // update the data in the current chartData
-    lake.chartData[flowIndex].labelBatch = chartFlowObject.labelBatch;
-    lake.chartData[flowIndex].dataFlowBatch = chartFlowObject.dataFlowBatch;
-    lake.chartData[flowIndex].chartMinFlowLimit = chartFlowObject.chartMinFlowLimit;
-    lake.chartData[flowIndex].chartMaxFlowLimit = chartFlowObject.chartMaxFlowLimit;
-  } else
-    lake.chartData.push(chartFlowObject);
-
-  // update the database with the 'Elev' data
-  db.model("Lake").updateOne({
-      'bodyOfWater': lake.bodyOfWater
-    }, {
-      $set: {
-        "chartData": lake.chartData
       }
-    })
-    .exec(function (err) {
-      if (err)
-        console.log(error);
 
-    })
-},
-
-
-/******************************************************************************************************************/
-// Function to build chart data
-// Actually Hourly Elevation but called River because it can show daily tides on a River
-buildRiverChartData: function (data, lake) {
-
-  let chartRiverObject = {
-    type: "River",
-    labelBatch: [],
-    dataRiverBatch: [],
-    chartMinRiverLimit: 10000, // y-axis Min Flow value
-    chartMaxRiverLimit: -200, // y-axis Max Flow value
-    minMaxDiff: 0
-
-  }
-
-  // Our data must be parsed into separate flat arrays for the chart
-  let k = 0; // our iterator after starting elevation
-  let hourlyElev = 0;
-
-
-  // Loop through our data for 48 data points if we have it
-  // two days worth of data may show the tides in tidal rivers 
-  for (k = 0; k < data.length; k++) {
-
-    // Set hourlyElev
-    /*if (k < 2)
-      hourlyElev = Number((data[k - 1].elev + data[k].elev) / 2);
-    else
-      hourlyElev = Number((data[k - 2].elev + data[k - 1].elev + data[k].elev) / 3);*/
-
-
-    chartRiverObject.labelBatch.push(data[k].time);
-    chartRiverObject.dataRiverBatch.push(parseFloat(Number(data[k].elev).toFixed(2))); // push elev
-
-    // need the parseFloat for comparing negative numbers. 
-    if (parseFloat(Number(data[k].elev).toFixed(2)) > parseFloat(chartRiverObject.chartMaxRiverLimit)) // if value is greater than max, replace max
-      chartRiverObject.chartMaxRiverLimit = parseFloat(Number(data[k].elev).toFixed(2)); // update Max Elev average
-    if (parseFloat(Number(data[k].elev).toFixed(2)) < parseFloat(chartRiverObject.chartMinRiverLimit)) // if value is less thank min, replace min
-      chartRiverObject.chartMinRiverLimit = parseFloat(Number(data[k].elev).toFixed(2)); // update Min Elev average
-
-
-    // when a week of data has been reached stop
-    if (chartRiverObject.labelBatch.length > 47) {
-      break;
-    }
-  }
-
-  chartRiverObject.labelBatch.reverse();
-  chartRiverObject.dataRiverBatch.reverse();
-
-  // Set axis limits for River Chart
-  chartRiverObject.minMaxDiff = Number((chartRiverObject.chartMaxRiverLimit - chartRiverObject.chartMinRiverLimit).toFixed(2));
-  let chartGap = Number(chartRiverObject.minMaxDiff);
-
-  if (chartRiverObject.minMaxDiff > 20)
-    chartGap = Number((chartRiverObject.minMaxDiff * .1).toFixed(0));
-  if (chartGap < 1)
-    chartGap = .05;
-
-  chartRiverObject.chartMaxRiverLimit = Math.ceil((Number(chartRiverObject.chartMaxRiverLimit) + chartGap) * 10) / 10; // set the chart upper limit
-
-  chartRiverObject.chartMinRiverLimit = Math.floor((Number(chartRiverObject.chartMinRiverLimit) - chartGap) * 10) / 10; // set the chart lower limit
-
-
-
-  // need to check to see if there is already flow data in chartData field, if there is, just update it
-  // otherwise create it.
-  let riverExists = false;
-  let riverIndex = 0;
-  for (i = 0; i < lake.chartData.length; i++) {
-
-    if (lake.chartData[i].type == "River") {
-      riverExists = true;
-      riverIndex = i;
-      break;
-    }
-  };
-  if (riverExists) { // update the data in the current chartData
-    lake.chartData[riverIndex].labelBatch = chartRiverObject.labelBatch;
-    lake.chartData[riverIndex].dataRiverBatch = chartRiverObject.dataRiverBatch;
-    lake.chartData[riverIndex].chartMinRiverLimit = chartRiverObject.chartMinRiverLimit;
-    lake.chartData[riverIndex].chartMaxRiverLimit = chartRiverObject.chartMaxRiverLimit;
-  } else
-    lake.chartData.push(chartRiverObject);
-
-  // update the database with the 'Elev' data
-  db.model("Lake").updateOne({
-      'bodyOfWater': lake.bodyOfWater
-    }, {
-      $set: {
-        "chartData": lake.chartData
+      // when a week of data has been reached stop
+      if (chartFlowObject.labelBatch.length > 13) {
+        break;
       }
-    })
-    .exec(function (err) {
-      if (err)
-        console.log(error);
 
-    })
-},
+    }
+
+    //check the final day's values for Min and MaxLimit
+    //if ((sumOfFlows / divisor) <= chartMinFlow)
+    //chartMinFlow = (sumOfFlows / divisor);
+    if ((sumOfFlows / divisor) >= chartFlowObject.chartMaxFlowLimit)
+      chartFlowObject.chartMaxFlowLimit = Number((sumOfFlows / divisor).toFixed(2));;
+
+    chartFlowObject.labelBatch.reverse();
+    chartFlowObject.dataFlowBatch.reverse();
+
+    // Set y axis limits for Flow Chart
+    chartFlowObject.chartMinFlowLimit = 0; // set lower chart limit
+    chartFlowObject.chartMaxFlowLimit = Math.round(((((chartFlowObject.chartMaxFlowLimit - (chartFlowObject.chartMaxFlowLimit % 1000)) / 1000) * 1.25) * 1000) / 1000) * 1000; // set the chart upper limit
+
+    //if (chartMinFlowLimit < 1000) chartMinFlowLimit = 0; // Flow Min limit should just be set to 0
+
+    if (chartFlowObject.chartMaxFlowLimit < 4000)
+      chartFlowObject.chartMaxFlowLimit = (Math.ceil(chartFlowObject.chartMaxFlowLimit / 1000) * 1000) + 1000;
 
 
-/******************************************************************************************************************/
-// Function to build hourly chart data
-buildHourlyFlowChartData: function (data, lake) {
-  // Our data must be parsed into separate flat arrays for the chart
+    // need to check to see if there is already flow data in chartData field, if there is, just update it
+    // otherwise create it.
+    let flowExists = false;
+    let flowIndex = 0;
+    for (i = 0; i < lake.chartData.length; i++) {
 
-  let chartFlowHourlyObject = {
-    type: "FlowHourly",
-    labelBatch: [],
-    dataFlowHourlyBatch: [],
-    chartMinFlowHourlyLimit: 100000000, // y-axis Min Flow value
-    chartMaxFlowHourlyLimit: 0, // y-axis Max Flow value
-    chartGap: 0
-  }
-
-  let k = 0; // our iterator after starting elevation
-
-  // Loop through our data for 24 data points if we have it
-  for (k = 0; k < data.length; k++) {
-
-    // if we're past the first entry
-    //if (k > 0) {
-    chartFlowHourlyObject.labelBatch.push(data[k].time); // Remove minutes
-    let dataFlow = data[k].flow;
-    if (dataFlow !== "Missing" && dataFlow !== "N/A" && data.refreshInterval !== 180) {
-      if (dataFlow == '' || dataFlow == 'N/A') {
-        chartFlowHourlyObject.dataFlowHourlyBatch.push(-99);
-        //dataFlow = 0;
+      if (lake.chartData[i].type == "Flow") {
+        flowExists = true;
+        flowIndex = i;
+        break;
       }
+    };
+    if (flowExists) { // update the data in the current chartData
+      lake.chartData[flowIndex].labelBatch = chartFlowObject.labelBatch;
+      lake.chartData[flowIndex].dataFlowBatch = chartFlowObject.dataFlowBatch;
+      lake.chartData[flowIndex].chartMinFlowLimit = chartFlowObject.chartMinFlowLimit;
+      lake.chartData[flowIndex].chartMaxFlowLimit = chartFlowObject.chartMaxFlowLimit;
+    } else
+      lake.chartData.push(chartFlowObject);
+
+    // update the database with the 'Elev' data
+    db.model("Lake").updateOne({
+        'bodyOfWater': lake.bodyOfWater
+      }, {
+        $set: {
+          "chartData": lake.chartData
+        }
+      })
+      .exec(function (err) {
+        if (err)
+          console.log(error);
+
+      })
+  },
+
+
+  /******************************************************************************************************************/
+  // Function to build chart data
+  // Actually Hourly Elevation but called River because it can show daily tides on a River
+  buildRiverChartData: function (data, lake) {
+
+    let chartRiverObject = {
+      type: "River",
+      labelBatch: [],
+      dataRiverBatch: [],
+      chartMinRiverLimit: 10000, // y-axis Min Flow value
+      chartMaxRiverLimit: -200, // y-axis Max Flow value
+      minMaxDiff: 0
+
+    }
+
+    // Our data must be parsed into separate flat arrays for the chart
+    let k = 0; // our iterator after starting elevation
+    let hourlyElev = 0;
+
+
+    // Loop through our data for 48 data points if we have it
+    // two days worth of data may show the tides in tidal rivers 
+    for (k = 0; k < data.length; k++) {
+
+      // Set hourlyElev
+      /*if (k < 2)
+        hourlyElev = Number((data[k - 1].elev + data[k].elev) / 2);
       else
-        chartFlowHourlyObject.dataFlowHourlyBatch.push((Number(data[k].flow)).toFixed(0)); // push elev
-
-      if (dataFlow > chartFlowHourlyObject.chartMaxFlowHourlyLimit) // if value is greater than max, replace max
-        chartFlowHourlyObject.chartMaxFlowHourlyLimit = dataFlow; // update Max Elev average
-      if (dataFlow < chartFlowHourlyObject.chartMinFlowHourlyLimit) // if value is less thank min, replace min
-        chartFlowHourlyObject.chartMinFlowHourlyLimit = dataFlow; // update Min Elev average
-
-    } else chartFlowHourlyObject.dataFlowHourlyBatch.push(-99); // push elev
-    //}
-
-    // when a week of data has been reached stop
-    if (chartFlowHourlyObject.labelBatch.length > 47) {
-      break;
-    }
-  }
-
-  chartFlowHourlyObject.labelBatch.reverse();
-  chartFlowHourlyObject.dataFlowHourlyBatch.reverse();
-
-  // Set y axis limits for hourly Flow Chart
-  chartFlowHourlyObject.chartGap = chartFlowHourlyObject.chartMaxFlowHourlyLimit / 5;
-  chartFlowHourlyObject.chartGap = Math.ceil((chartFlowHourlyObject.chartGap / 1000).toFixed(0)) * 1000;
-  //let minMaxDiff = chartMaxFlow - chartMinFlow;
-  //if (minMaxDiff < 1 && minMaxDiff !== 0) chartGap = minMaxDiff * 2;
-  //chartFlowHourlyObject.chartMinFlowHourlyLimit = 0; // set the chart lower limit
-  chartFlowHourlyObject.chartMaxFlowHourlyLimit = ((Math.ceil(chartFlowHourlyObject.chartMaxFlowHourlyLimit / 1000) * 1000) + Math.round(chartFlowHourlyObject.chartGap)); // set the chart upper limit
+        hourlyElev = Number((data[k - 2].elev + data[k - 1].elev + data[k].elev) / 3);*/
 
 
-  // need to check to see if there is already flow data in chartData field, if there is, just update it
-  // otherwise create it.
-  let flowHourlyExists = false;
-  let flowHourlyIndex = 0;
-  for (i = 0; i < lake.chartData.length; i++) {
+      chartRiverObject.labelBatch.push(data[k].time);
+      chartRiverObject.dataRiverBatch.push(parseFloat(Number(data[k].elev).toFixed(2))); // push elev
 
-    if (lake.chartData[i].type == "FlowHourly") {
-      flowHourlyExists = true;
-      flowHourlyIndex = i;
-      break;
-    }
-  };
-  if (flowHourlyExists) { // update the data in the current chartData
-    lake.chartData[flowHourlyIndex].labelBatch = chartFlowHourlyObject.labelBatch;
-    lake.chartData[flowHourlyIndex].dataFlowHourlyBatch = chartFlowHourlyObject.dataFlowHourlyBatch;
-    lake.chartData[flowHourlyIndex].chartMinFlowHourlyLimit = chartFlowHourlyObject.chartMinFlowHourlyLimit;
-    lake.chartData[flowHourlyIndex].chartMaxFlowHourlyLimit = chartFlowHourlyObject.chartMaxFlowHourlyLimit;
-  } else
-    lake.chartData.push(chartFlowHourlyObject);
+      // need the parseFloat for comparing negative numbers. 
+      if (parseFloat(Number(data[k].elev).toFixed(2)) > parseFloat(chartRiverObject.chartMaxRiverLimit)) // if value is greater than max, replace max
+        chartRiverObject.chartMaxRiverLimit = parseFloat(Number(data[k].elev).toFixed(2)); // update Max Elev average
+      if (parseFloat(Number(data[k].elev).toFixed(2)) < parseFloat(chartRiverObject.chartMinRiverLimit)) // if value is less thank min, replace min
+        chartRiverObject.chartMinRiverLimit = parseFloat(Number(data[k].elev).toFixed(2)); // update Min Elev average
 
-  // update the database with the 'Elev' data
-  db.model("Lake").updateOne({
-      'bodyOfWater': lake.bodyOfWater
-    }, {
-      $set: {
-        "chartData": lake.chartData
+
+      // when a week of data has been reached stop
+      if (chartRiverObject.labelBatch.length > 47) {
+        break;
       }
-    })
-    .exec(function (err) {
-      if (err)
-        console.log(error);
+    }
 
-    })
+    chartRiverObject.labelBatch.reverse();
+    chartRiverObject.dataRiverBatch.reverse();
 
-}
+    // Set axis limits for River Chart
+    chartRiverObject.minMaxDiff = Number((chartRiverObject.chartMaxRiverLimit - chartRiverObject.chartMinRiverLimit).toFixed(2));
+    let chartGap = Number(chartRiverObject.minMaxDiff);
+
+    if (chartRiverObject.minMaxDiff > 20)
+      chartGap = Number((chartRiverObject.minMaxDiff * .1).toFixed(0));
+    if (chartGap < 1)
+      chartGap = .05;
+
+    chartRiverObject.chartMaxRiverLimit = Math.ceil((Number(chartRiverObject.chartMaxRiverLimit) + chartGap) * 10) / 10; // set the chart upper limit
+
+    chartRiverObject.chartMinRiverLimit = Math.floor((Number(chartRiverObject.chartMinRiverLimit) - chartGap) * 10) / 10; // set the chart lower limit
+
+
+
+    // need to check to see if there is already flow data in chartData field, if there is, just update it
+    // otherwise create it.
+    let riverExists = false;
+    let riverIndex = 0;
+    for (i = 0; i < lake.chartData.length; i++) {
+
+      if (lake.chartData[i].type == "River") {
+        riverExists = true;
+        riverIndex = i;
+        break;
+      }
+    };
+    if (riverExists) { // update the data in the current chartData
+      lake.chartData[riverIndex].labelBatch = chartRiverObject.labelBatch;
+      lake.chartData[riverIndex].dataRiverBatch = chartRiverObject.dataRiverBatch;
+      lake.chartData[riverIndex].chartMinRiverLimit = chartRiverObject.chartMinRiverLimit;
+      lake.chartData[riverIndex].chartMaxRiverLimit = chartRiverObject.chartMaxRiverLimit;
+    } else
+      lake.chartData.push(chartRiverObject);
+
+    // update the database with the 'Elev' data
+    db.model("Lake").updateOne({
+        'bodyOfWater': lake.bodyOfWater
+      }, {
+        $set: {
+          "chartData": lake.chartData
+        }
+      })
+      .exec(function (err) {
+        if (err)
+          console.log(error);
+
+      })
+  },
+
+
+  /******************************************************************************************************************/
+  // Function to build hourly chart data
+  buildHourlyFlowChartData: function (data, lake) {
+    // Our data must be parsed into separate flat arrays for the chart
+
+    let chartFlowHourlyObject = {
+      type: "FlowHourly",
+      labelBatch: [],
+      dataFlowHourlyBatch: [],
+      chartMinFlowHourlyLimit: 100000000, // y-axis Min Flow value
+      chartMaxFlowHourlyLimit: 0, // y-axis Max Flow value
+      chartGap: 0
+    }
+
+    let k = 0; // our iterator after starting elevation
+
+    // Loop through our data for 24 data points if we have it
+    for (k = 0; k < data.length; k++) {
+
+      // if we're past the first entry
+      //if (k > 0) {
+      chartFlowHourlyObject.labelBatch.push(data[k].time); // Remove minutes
+      let dataFlow = data[k].flow;
+      if (dataFlow !== "Missing" && dataFlow !== "N/A" && data.refreshInterval !== 180) {
+        if (dataFlow == '' || dataFlow == 'N/A') {
+          chartFlowHourlyObject.dataFlowHourlyBatch.push(-99);
+          //dataFlow = 0;
+        } else
+          chartFlowHourlyObject.dataFlowHourlyBatch.push((Number(data[k].flow)).toFixed(0)); // push elev
+
+        if (dataFlow > chartFlowHourlyObject.chartMaxFlowHourlyLimit) // if value is greater than max, replace max
+          chartFlowHourlyObject.chartMaxFlowHourlyLimit = dataFlow; // update Max Elev average
+        if (dataFlow < chartFlowHourlyObject.chartMinFlowHourlyLimit) // if value is less thank min, replace min
+          chartFlowHourlyObject.chartMinFlowHourlyLimit = dataFlow; // update Min Elev average
+
+      } else chartFlowHourlyObject.dataFlowHourlyBatch.push(-99); // push elev
+      //}
+
+      // when a week of data has been reached stop
+      if (chartFlowHourlyObject.labelBatch.length > 47) {
+        break;
+      }
+    }
+
+    chartFlowHourlyObject.labelBatch.reverse();
+    chartFlowHourlyObject.dataFlowHourlyBatch.reverse();
+
+    // Set y axis limits for hourly Flow Chart
+    chartFlowHourlyObject.chartGap = chartFlowHourlyObject.chartMaxFlowHourlyLimit / 5;
+    chartFlowHourlyObject.chartGap = Math.ceil((chartFlowHourlyObject.chartGap / 1000).toFixed(0)) * 1000;
+    //let minMaxDiff = chartMaxFlow - chartMinFlow;
+    //if (minMaxDiff < 1 && minMaxDiff !== 0) chartGap = minMaxDiff * 2;
+    //chartFlowHourlyObject.chartMinFlowHourlyLimit = 0; // set the chart lower limit
+    chartFlowHourlyObject.chartMaxFlowHourlyLimit = ((Math.ceil(chartFlowHourlyObject.chartMaxFlowHourlyLimit / 1000) * 1000) + Math.round(chartFlowHourlyObject.chartGap)); // set the chart upper limit
+
+
+    // need to check to see if there is already flow data in chartData field, if there is, just update it
+    // otherwise create it.
+    let flowHourlyExists = false;
+    let flowHourlyIndex = 0;
+    for (i = 0; i < lake.chartData.length; i++) {
+
+      if (lake.chartData[i].type == "FlowHourly") {
+        flowHourlyExists = true;
+        flowHourlyIndex = i;
+        break;
+      }
+    };
+    if (flowHourlyExists) { // update the data in the current chartData
+      lake.chartData[flowHourlyIndex].labelBatch = chartFlowHourlyObject.labelBatch;
+      lake.chartData[flowHourlyIndex].dataFlowHourlyBatch = chartFlowHourlyObject.dataFlowHourlyBatch;
+      lake.chartData[flowHourlyIndex].chartMinFlowHourlyLimit = chartFlowHourlyObject.chartMinFlowHourlyLimit;
+      lake.chartData[flowHourlyIndex].chartMaxFlowHourlyLimit = chartFlowHourlyObject.chartMaxFlowHourlyLimit;
+    } else
+      lake.chartData.push(chartFlowHourlyObject);
+
+    // update the database with the 'Elev' data
+    db.model("Lake").updateOne({
+        'bodyOfWater': lake.bodyOfWater
+      }, {
+        $set: {
+          "chartData": lake.chartData
+        }
+      })
+      .exec(function (err) {
+        if (err)
+          console.log(error);
+
+      })
+
+  }
 };
 
 /******************************************************************************************************************/
@@ -802,7 +800,7 @@ function buildTempChartData(tempData, lake) {
 
 /******************************************************************************************************************/
 // Function to build baro chart data
- function buildBaroChartData(baroData, lake) {
+function buildBaroChartData(baroData, lake) {
   // Our data must be parsed into separate flat arrays for the chart
 
   let chartBaroObject = {
@@ -1058,7 +1056,7 @@ function buildHumidityChartData(humidityData, lake) {
         console.log(error);
 
     })
-  };
+};
 
 /******************************************************************************************************************/
 // Function to build wind direction chart data

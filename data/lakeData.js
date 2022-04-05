@@ -23,7 +23,7 @@ module.exports = [
         href: "/lakes/aliceville",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
     },
-    {
+    /*{
         bodyOfWater: "Bankhead", // lake name
         state: ["Alabama"],
         data: [],
@@ -43,7 +43,7 @@ module.exports = [
         flowURL: "",
         href: "/lakes/bankhead",
         dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
-    },
+    },*/
     {
         bodyOfWater: "Bouldin", // lake name
         state: ["Alabama"],
@@ -127,7 +127,7 @@ module.exports = [
         href: "/lakes/guntersville",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
     },
-    {
+    /*{
         bodyOfWater: "Harris", // lake name
         state: ["Alabama"],
         data: [],
@@ -294,7 +294,7 @@ module.exports = [
         flowURL: "",
         href: "/lakes/martin",
         dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
-    },
+    },*/
     {
         bodyOfWater: "Pickwick", // lake name
         state: ["Alabama", "Mississippi", "Tennessee"],
@@ -316,7 +316,7 @@ module.exports = [
         href: "/lakes/pickwick",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
     },
-    {
+    /*{
         bodyOfWater: "Smith", // lake name
         state: ["Alabama"],
         data: [],
@@ -336,7 +336,7 @@ module.exports = [
         flowURL: "",
         href: "/lakes/smith",
         dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
-    },
+    },*/
     /*{
         bodyOfWater: "Thurlow", // lake name
         state: ["Alabama"],
@@ -379,7 +379,7 @@ chartData: [],
         href: "/lakes/upperbear",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
     },
-    {
+    /*{
         bodyOfWater: "Weiss", // lake name
         state: ["Alabama"],
         data: [],
@@ -399,7 +399,7 @@ chartData: [],
         flowURL: "",
         href: "/lakes/weiss",
         dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
-    },
+    },*/
     {
         bodyOfWater: "Wheeler", // lake name
         state: ["Alabama"],
@@ -442,7 +442,7 @@ chartData: [],
         href: "/lakes/wilson",
         dataSource: ["TVA", "loadAds"], // array of calls to make to retrieve data
     },
-    {
+    /*{
         bodyOfWater: "Yates", // lake name
         state: ["Alabama"],
         data: [],
@@ -462,7 +462,7 @@ chartData: [],
         flowURL: "",
         href: "/lakes/yates",
         dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
-    },
+    },*/
     // Arizona  ---------------------------------------------------------------------------------------------------------
     {
         bodyOfWater: "Alamo", // lake name
@@ -952,7 +952,8 @@ chartData: [],
         normalPool: 62.0,
         lat: 28.762634,
         long: -81.816544,
-        elevURL: "http://webapub.sjrwmd.com/agws10/hdsnew/data.aspx?tp=3&stn=30053040_NAVD1988_POR&des=Lake%20Harris%20at%20Leesburg%20(WL)$284837.19$814855.96$Lake%20Harris%20Unit$Lake$Lake$Water%20Level%20(WL)",
+        elevURL: "http://webapub.sjrwmd.com/agws10/hdsnew/data.aspx?tp=903&stn=30053040_NAVD1988_POR&des=Lake%20Harris%20at%20Leesburg%20%20HW%20(WL)$284836.778$814855.954$Lake%20Harris%20Unit$Lake$Lake$Water%20Level%20(WL)",
+        /*elevURL: "http://webapub.sjrwmd.com/agws10/hdsnew/data.aspx?tp=3&stn=30053040_NAVD1988_POR&des=Lake%20Harris%20at%20Leesburg%20(WL)$284837.19$814855.96$Lake%20Harris%20Unit$Lake$Lake$Water%20Level%20(WL)",*/
         flowURL: "",
         href: "/lakes/bigharris",
         dataSource: ["SJRWMD", "loadAds"], // array of calls to make to retrieve data
@@ -972,7 +973,8 @@ chartData: [],
         normalPool: 62.0,
         lat: 28.786919,
         long: -81.680107,
-        elevURL: "http://webapub.sjrwmd.com/agws10/hdsnew/data.aspx?tp=3&stn=30013010_NAVD1988_POR&des=Lake%20Dora%20at%20Mount%20Dora%20(WL)$284746.67$813838.67$Lake%20Harris%20Unit$Lake$Lake$Water%20Level%20(WL)",
+        elevURL: "http://webapub.sjrwmd.com/agws10/hdsnew/data.aspx?tp=903&stn=30013010_NAVD1988_POR&des=Lake%20Dora%20at%20Mount%20Dora%20(WL)$284746.666$813838.751$Lake%20Harris%20Unit$Lake$Lake$Water%20Level%20(WL)",
+        /*elevURL: "http://webapub.sjrwmd.com/agws10/hdsnew/data.aspx?tp=3&stn=30013010_NAVD1988_POR&des=Lake%20Dora%20at%20Mount%20Dora%20(WL)$284746.67$813838.67$Lake%20Harris%20Unit$Lake$Lake$Water%20Level%20(WL)",*/
         flowURL: "",
         href: "/lakes/dora",
         dataSource: ["SJRWMD"], // array of calls to make to retrieve data
@@ -992,7 +994,8 @@ chartData: [],
         normalPool: 62.0,
         lat: 28.848252,
         long: -81.721496,
-        elevURL: "http://webapub.sjrwmd.com/agws10/hdsnew/data.aspx?tp=3&stn=30083018_NAVD1988_POR&des=Lake%20Eustis%20at%20Eustis%20(WL)$285105.3$814126.02$Lake%20Harris%20Unit$Lake$Lake$Water%20Level%20(WL)",
+        elevURL: "http://webapub.sjrwmd.com/agws10/hdsnew/data.aspx?tp=903&stn=30083018_NAVD1988_POR&des=Lake%20Eustis%20at%20Eustis%20(WL)$285106.477$814127.2000000001$Lake%20Harris%20Unit$Lake$Lake$Water%20Level%20(WL)",
+        /*elevURL: "http://webapub.sjrwmd.com/agws10/hdsnew/data.aspx?tp=3&stn=30083018_NAVD1988_POR&des=Lake%20Eustis%20at%20Eustis%20(WL)$285105.3$814126.02$Lake%20Harris%20Unit$Lake$Lake$Water%20Level%20(WL)",*/
         flowURL: "",
         href: "/lakes/eustis",
         dataSource: ["SJRWMD", "loadAds"], // array of calls to make to retrieve data
@@ -1013,7 +1016,8 @@ chartData: [],
         normalPool: 19.5,
         lat: 27.677598,
         long: -80.659658,
-        elevURL: "http://webapub.sjrwmd.com/agws10/hdsnew/data.aspx?tp=3&stn=01120520_NAVD1988_POR&des=S-254%20West%20at%20Fellsmere%20(WL)$274139.6$804029.959$Blue%20Cypress%20Creek%20Unit$Indian%20River$Surface%20Water$Water%20Level%20(WL)",
+        elevURL: "http://webapub.sjrwmd.com/agws10/hdsnew/data.aspx?tp=903&stn=01120520_NAVD1988_POR&des=S-254%20West%20at%20Fellsmere%20(WL)$274139.6$804029.959$Blue%20Cypress%20Creek%20Unit$Indian%20River$Surface%20Water$Water%20Level%20(WL)",
+        /*elevURL: "http://webapub.sjrwmd.com/agws10/hdsnew/data.aspx?tp=3&stn=01120520_NAVD1988_POR&des=S-254%20West%20at%20Fellsmere%20(WL)$274139.6$804029.959$Blue%20Cypress%20Creek%20Unit$Indian%20River$Surface%20Water$Water%20Level%20(WL)",*/
         flowURL: "",
         href: "/lakes/garcia",
         dataSource: ["SJRWMD", "loadAds"], // array of calls to make to retrieve data
@@ -1033,7 +1037,8 @@ chartData: [],
         normalPool: 62.0,
         lat: 28.856153,
         long: -81.845419,
-        elevURL: "http://webapub.sjrwmd.com/agws10/hdsnew/data.aspx?tp=3&stn=30013010_NAVD1988_POR&des=Lake%20Dora%20at%20Mount%20Dora%20(WL)$284746.67$813838.67$Lake%20Harris%20Unit$Lake$Lake$Water%20Level%20(WL)",
+        elevURL: "http://webapub.sjrwmd.com/agws10/hdsnew/data.aspx?tp=903&stn=39215415_NAVD1988_POR&des=Lk%20Griffin%20at%20Emeralda%20(WL)$285619.677$814941.696$Lake%20Griffin%20Unit$Lake$Lake$Water%20Level%20(WL)",
+        /*elevURL: "http://webapub.sjrwmd.com/agws10/hdsnew/data.aspx?tp=3&stn=30013010_NAVD1988_POR&des=Lake%20Dora%20at%20Mount%20Dora%20(WL)$284746.67$813838.67$Lake%20Harris%20Unit$Lake$Lake$Water%20Level%20(WL)",*/
         flowURL: "",
         href: "/lakes/griffin",
         dataSource: ["SJRWMD"], // array of calls to make to retrieve data
@@ -1093,7 +1098,8 @@ chartData: [],
         normalPool: 20.0,
         lat: 27.812593,
         long: -80.785047,
-        elevURL: "http://webapub.sjrwmd.com/agws10/hdsnew/data.aspx?tp=3&stn=01310555_NAVD1988_POR&des=S-250D%20South%20at%20Fellsmere%20(WL)$274921.142$804749.182$St.%20Johns%20Marsh%20Unit$Indian%20River$Surface%20Water$Water%20Level%20(WL)",
+        elevURL: "http://webapub.sjrwmd.com/agws10/hdsnew/data.aspx?tp=903&stn=01310555_NAVD1988_POR&des=S-250D%20South%20at%20Fellsmere%20(WL)$274921.169$804749.265$St.%20Johns%20Marsh%20Unit$Indian%20River$Surface%20Water$Water%20Level%20(WL)",
+        /*elevURL: "http://webapub.sjrwmd.com/agws10/hdsnew/data.aspx?tp=3&stn=01310555_NAVD1988_POR&des=S-250D%20South%20at%20Fellsmere%20(WL)$274921.142$804749.182$St.%20Johns%20Marsh%20Unit$Indian%20River$Surface%20Water$Water%20Level%20(WL)", */
         flowURL: "",
         href: "/lakes/kenansville",
         dataSource: ["SJRWMD", "loadAds"], // array of calls to make to retrieve data
@@ -1169,11 +1175,11 @@ chartData: [],
         wxForecastDataLastRefresh: "12/31/18",
         refreshInterval: 60, //minutes
         lastRefresh: "12/31/18", // a Date 
-        seaLevelDelta: 12,
+        seaLevelDelta: 0,
         normalPool: 12.0,
         lat: 26.959730,
         long: -80.790181,
-        elevURL: "https://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=5142030&p_parameter_type=Elev:Flow:Precip:Stage&p_last=7&p_last_unit=days&p_unit_system=EN&p_format=JSON",
+        elevURL: "https://water.usace.army.mil/a2w/CWMS_CRREL.cwms_data_api.get_report_json?p_location_id=1839038&p_parameter_type=Elev:Flow:Precip:Stage&p_last=7&p_last_unit=days&p_unit_system=EN&p_format=JSON",
         flowURL: "",
         href: "/lakes/okeechobee",
         dataSource: ["ACE", "loadAds"], // array of calls to make to retrieve data
@@ -1213,7 +1219,8 @@ chartData: [],
         normalPool: 19.6,
         lat: 27.792952,
         long: -80.727619,
-        elevURL: "http://webapub.sjrwmd.com/agws10/hdsnew/data.aspx?tp=3&stn=00960391_NAVD1988_POR&des=S-96B%20West%20at%20Fellsmere%20(WL)$274931.099$804428.589$Fellsmere$Brevard$Surface%20Water$Water%20Level%20(WL)",
+        elevURL: "http://webapub.sjrwmd.com/agws10/hdsnew/data.aspx?tp=903&stn=00960390_NAVD1988_POR&des=S-96B%20East%20at%20Fellsmere%20(WL)$274931.055$804428.835$$Brevard$Surface%20Water$Water%20Level%20(WL)",
+        /*  elevURL: "http://webapub.sjrwmd.com/agws10/hdsnew/data.aspx?tp=3&stn=00960391_NAVD1988_POR&des=S-96B%20West%20at%20Fellsmere%20(WL)$274931.099$804428.589$Fellsmere$Brevard$Surface%20Water$Water%20Level%20(WL)", */
         flowURL: "",
         href: "/lakes/stickmarsh",
         dataSource: ["SJRWMD", "loadAds"], // array of calls to make to retrieve data
@@ -4622,7 +4629,7 @@ chartData: [],
         normalPool: 360.0,
         lat: 34.06,
         long: -81.29,
-        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02168500&period=PT168H&parameterCd=00062&siteType=ST&siteStatus=all",
+        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02168500&period=PT168H&parameterCd=00062&siteType=LK&siteStatus=all",
         flowURL: "", // Until I can fix it "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02168504&period=PT168H&parameterCd=00060&siteType=ST&siteStatus=all",
         href: "/lakes/murray",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data
@@ -4642,7 +4649,7 @@ chartData: [],
         normalPool: 76.8,
         lat: 33.52,
         long: -80.45,
-        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02171000&period=PT168H&parameterCd=00062&siteType=ST&siteStatus=all",
+        elevURL: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=02171000&period=PT168H&parameterCd=00062&siteType=LK&siteStatus=all",
         flowURL: "",
         href: "/lakes/santee1",
         dataSource: ["USGS", "loadAds"], // array of calls to make to retrieve data

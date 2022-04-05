@@ -72,10 +72,11 @@ module.exports = function (app) {
 
             //check to see if update is needed (function returns true if update is needed)
             //if not retrieve data and update the db, then return the retrieved data
+            //console.log(`${currentLake.bodyOfWater} UPDATE CHECK0 1 Lake Level`)
             if (update.checkForUpdate(currentLake, 0)) {
               // update current lake
               // determine which data source and run function
-                  console.log(`${currentLake.bodyOfWater} dbRoutes`)
+              console.log(`${currentLake.bodyOfWater} Update 1 Lake Level ${currentLake.lastRefresh}`)
               switch (currentLake.dataSource[0]) {
 
                 case "ACE":
@@ -322,6 +323,7 @@ module.exports = function (app) {
                   // We must still check for update of the current conditions
 
                   // Check to see if Current Conditions needs to be updated
+                  //console.log(`${currentLake.bodyOfWater} UPDATE CHECK1 Current Conditions`)
                   if (update.checkForUpdate(currentLake, 1)) {
                     //update the current conditions
                     update.updateCurrentConditionsData(currentLake);
@@ -335,6 +337,7 @@ module.exports = function (app) {
               // Need to update the current conditions for this lake
 
               // Check to see if Current Conditions needs to be updated
+              //console.log(`${currentLake.bodyOfWater} UPDATE CHECK2 Current Conditions`)
               if (update.checkForUpdate(currentLake, 1)) {
                 // Update the current conditions 
                 update.updateCurrentConditionsData(currentLake);
@@ -352,6 +355,7 @@ module.exports = function (app) {
             // need to update the current conditions and forecast for this lake since the elev data did not need an update
 
             // Check to see if Current Conditions needs to be updated
+            //console.log(`${currentLake.bodyOfWater} UPDATE CHECK3 Current Conditions`)
             if (update.checkForUpdate(currentLake, 1)) {
               update.updateCurrentConditionsData(currentLake);
             }
@@ -435,6 +439,10 @@ function updateAllLakes() {
 
             //check to see if update is needed for lake elevation level 
             //(function returns true if update is needed)
+            //console.log(`${currentLake.bodyOfWater} UPDATE CHECK4 Lake Level`)
+            if ((currentLake.lastRefresh == '12/31/18'))
+              console.log(`***${currentLake.bodyOfWater} Update All Lake Level ${currentLake.lastRefresh}`)
+            //else console.log(`${currentLake.bodyOfWater} Update All Lake Level ${currentLake.lastRefresh}`)
             if (update.checkForUpdate(currentLake, 0)) {
               // update current lake
               // determine which data source and run function
@@ -710,19 +718,24 @@ function updateAllLakes() {
             }
             // Check to see if Current Conditions needs to be updated
             if (!globalError) {
+              //console.log(`${currentLake.bodyOfWater} UPDATE CHECK5 Current Conditons`)
               if (update.checkForUpdate(currentLake, 1)) {
                 update.updateCurrentConditionsData(currentLake);
                 //console.log(`Wx called for ${currentLake.bodyOfWater}`)
               }
 
               // Check to see if Weather Forecast needs to be updated
+              //console.log(`${currentLake.bodyOfWater} UPDATE CHECK6 Wx Forecast`)
               if (update.checkForUpdate(currentLake, 2)) {
                 update.updateForecastData(currentLake);
                 //console.log(`Fx called for ${currentLake.bodyOfWater}`)
               }
             }
             // log that the lake was updated and return it
-            //console.log(`UPDATE COMPLETE for ${updateData.bodyOfWater} (${updateData.dataSource[0]})`);
+            if (currentLake.data.length !== 0)
+              console.log(`Update Complete for ${currentLake.bodyOfWater} (${currentLake.data[0].elev})`);
+            else
+              console.log(`NO Update for ${currentLake.bodyOfWater} (no data)`);
 
 
             // increment counter

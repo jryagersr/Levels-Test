@@ -34,7 +34,7 @@ module.exports = {
         let dataErrorTrue = false;
         try {
           var $ = cheerio.load(localHTML);
-        console.log(`${localHTML} apcdata`)
+        console.log(`${localHTML} ${error} localHTML`)
         } catch (error) {
           console.error(error);
           dataErrorTrue = true;

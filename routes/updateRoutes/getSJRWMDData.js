@@ -22,17 +22,17 @@ module.exports = {
                 callback(error);
             }
             if (typeof body == 'string') {
-                if (body.substring(129, 24) !== "Data file not accessible") {
-                    let j = body.length - 15;
+                if (body.substring(101, 125) !== "Data File not accessible") {
+                    let j = body.length - 39;
                     j++;
                     // Get the most recent 30 days data
                     for (i = 0; i < 30; i++) {
                         // find next end of row
-                        for (j = j - 5; body.substr(j, 5) !== "</tr>" && j > 0; j--) {}
+                        for (j = j - 5; body.substring(j, j + 5) !== "</tr>" && j > 0; j--) {}
 
                         // set timeStamp for db
-                        let timeStamp = new Date(body.substr(j - 116, 10) + " " + body.substr(j - 97, 8));
-                        let elev = Number(body.substr(j - 77, 5));
+                        let timeStamp = new Date(body.substring(j-116, j-106) + " " + body.substring(j-97, j-89));
+                        let elev = Number(body.substring(j-80, j-72));
 
                         if (elev !== 0) // If elev not 0 (ie, unposted data)
                             data.push({
@@ -46,7 +46,7 @@ module.exports = {
                     callback(false, data);
                 } else {
                     console.log(`Data file not accessible ${bodyOfWater}`)
-                    callback(true, html)
+                    callback(true, body)
                 }
             } else {
                 console.log(`SJRWMD Invalid data returned`)
