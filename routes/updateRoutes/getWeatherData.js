@@ -46,7 +46,7 @@ module.exports = {
           if (typeof wxData.weather !== 'object') // check for valid object
             console.log(`${body}`)
 
-          if ((typeof wxData == "undefined") || (wxData.weather[0] == 'undefined')) {
+          if ((typeof wxData == "undefined") || (typeof wxData.weather[0] == "undefined")) {
             console.log(`No Wx data for ${wxData.bodyOfWater}`);
             // send empty array to front end
           } else {
