@@ -46,48 +46,52 @@ module.exports = {
           if (typeof wxData.weather !== 'object') // check for valid object
             console.log(`${body}`)
 
-          if ((typeof wxData == "undefined") || (typeof wxData.weather[0] == "undefined")) {
+          if ((typeof wxData == "undefined")) {
             console.log(`No Wx data for ${wxData.bodyOfWater}`);
             // send empty array to front end
           } else {
+            if (typeof wxData.weather[0] == "undefined") {
+              console.log(`No Wx data0 for ${wxData.bodyOfWater}`);
 
-            // Set weather
-            let today = new Date() // Set today's date
+            } else {
+              // Set weather
+              let today = new Date() // Set today's date
 
-            // array of the 12 wind direction descriptors
-            let compassSector = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
-            if (typeof (wxData.weather[0].description == "String"))
-              dataErrorTrue = dataErrorTrue;
-            let conditionsString = wxData.weather[0].description.charAt(0).toUpperCase() + wxData.weather[0].description.slice(1);
+              // array of the 12 wind direction descriptors
+              let compassSector = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
+              if (typeof (wxData.weather[0].description == "String"))
+                dataErrorTrue = dataErrorTrue;
+              let conditionsString = wxData.weather[0].description.charAt(0).toUpperCase() + wxData.weather[0].description.slice(1);
 
-            // if there are more than one day of entries, pop one off the array.
-            while (lakeWeather.ccWxData.length > 47)
-              lakeWeather.ccWxData.shift();
+              // if there are more than one day of entries, pop one off the array.
+              while (lakeWeather.ccWxData.length > 47)
+                lakeWeather.ccWxData.shift();
 
-            if (typeof wxData == "undefined") {
-              console.log(`No Wx data for ${wxData.bodyOfWater}`);
-            }
+              if (typeof wxData == "undefined") {
+                console.log(`No Wx data for ${wxData.bodyOfWater}`);
+              }
 
-            // push the current conditions into ccWxData[] and update the LastRefresh
-            let wxTimeStamp = new Date(wxData.dt * 1000).toUTCString();
-            //set timestamp for current conditions to 0 minutes, 0 seconds
-            wxTimeStamp = wxTimeStamp.substring(0, wxTimeStamp.indexOf(":")) + ":00:00 " + wxTimeStamp.substring(wxTimeStamp.indexOf(":") + 7, wxTimeStamp.length);
+              // push the current conditions into ccWxData[] and update the LastRefresh
+              let wxTimeStamp = new Date(wxData.dt * 1000).toUTCString();
+              //set timestamp for current conditions to 0 minutes, 0 seconds
+              wxTimeStamp = wxTimeStamp.substring(0, wxTimeStamp.indexOf(":")) + ":00:00 " + wxTimeStamp.substring(wxTimeStamp.indexOf(":") + 7, wxTimeStamp.length);
 
-            lakeWeather.ccWxDataLastRefresh = wxTimeStamp
-            lakeWeather.ccWxData.push({
-              conditions: conditionsString,
-              date: new Date(wxData.dt * 1000).toUTCString(),
-              time: today.toLocaleTimeString('en-US'),
-              location: wxData.name, // for current Conditions Well
-              baro: wxData.main.pressure,
-              temp: wxData.main.temp,
-              feelslike: wxData.main.feels_like,
-              humidity: wxData.main.humidity,
-              sunrise: wxData.sys.sunrise,
-              sunset: wxData.sys.sunset,
-              windspeed: wxData.wind.speed,
-              winddirection: compassSector[(wxData.wind.deg / 22.5).toFixed(0)]
-            });
+              lakeWeather.ccWxDataLastRefresh = wxTimeStamp
+              lakeWeather.ccWxData.push({
+                conditions: conditionsString,
+                date: new Date(wxData.dt * 1000).toUTCString(),
+                time: today.toLocaleTimeString('en-US'),
+                location: wxData.name, // for current Conditions Well
+                baro: wxData.main.pressure,
+                temp: wxData.main.temp,
+                feelslike: wxData.main.feels_like,
+                humidity: wxData.main.humidity,
+                sunrise: wxData.sys.sunrise,
+                sunset: wxData.sys.sunset,
+                windspeed: wxData.wind.speed,
+                winddirection: compassSector[(wxData.wind.deg / 22.5).toFixed(0)]
+              });
+            };
 
             callback(false, lakeWeather);
           }
