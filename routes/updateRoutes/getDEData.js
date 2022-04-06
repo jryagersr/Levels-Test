@@ -30,6 +30,7 @@ module.exports = {
       // '$' becomes a shorthand for cheerio's selector commands, much like jQuery's '$'
 
       if (error) {
+        console.log ( 'Error DEData ', html)
         callback(true, error, html);
       } else {
         let dataErrorTrue = false;
