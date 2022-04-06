@@ -43,7 +43,7 @@ module.exports = [
         flowURL: "",
         href: "/lakes/bankhead",
         dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
-    },*/
+    },
     {
         bodyOfWater: "Bouldin", // lake name
         state: ["Alabama"],
@@ -64,7 +64,7 @@ module.exports = [
         flowURL: "",
         href: "/lakes/bouldin",
         dataSource: ["APC", "loadAds"], // array of calls to make to retrieve data
-    },
+    },*/
     {
         bodyOfWater: "Cedar Creek (AL)", // lake name
         state: ["Alabama"],
@@ -341,7 +341,7 @@ module.exports = [
         bodyOfWater: "Thurlow", // lake name
         state: ["Alabama"],
         data: [],
-chartData: [],
+        chartData: [],
         ccWxData: [],
         ccWxDataLastRefresh: "12/31/18",
         wxForecastData: [],
