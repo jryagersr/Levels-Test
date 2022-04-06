@@ -50,7 +50,7 @@ module.exports = {
             console.log(`No Wx data for ${wxData.bodyOfWater}`);
             // send empty array to front end
           } else {
-            if (typeof wxData.weather[0] == "undefined") {
+            if (typeof wxData.weather == "undefined") {
               console.log(`No Wx data0 for ${wxData.bodyOfWater}`);
 
             } else {
