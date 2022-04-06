@@ -80,6 +80,7 @@ module.exports = {
             });
           callback(false, data);
         } else {
+          console.log ( 'Error DEData0 ', html)
           callback(true, html)
         }
       }
