@@ -155,7 +155,7 @@ module.exports = function (app) {
                 case "DE":
                   de.getDEData(currentLake, function (error, DEdata) {
                     if (error) {
-                      console.log(currentLake.bodyOfWater + "- DEData error " + DEEdata);
+                      console.log(currentLake.bodyOfWater + "- DEData error " + DEdata);
                       // if successful return the data
                     } else {
                       // update the current lake
