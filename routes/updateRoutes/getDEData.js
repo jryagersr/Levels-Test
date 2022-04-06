@@ -31,7 +31,7 @@ module.exports = {
         console.log ( 'DE Data ', html)
 
       if (error) {
-        console.log ( 'Error DEData ', html)
+        console.log ( 'Error DEData ', html, error)
         callback(true, error, html);
       } else {
         let dataErrorTrue = false;
